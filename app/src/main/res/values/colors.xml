@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nova_bg_top">@color/nova_space_top</color>
+    <color name="nova_space_top">#FF0B0620</color>
+    <color name="nova_space_bottom">#FF130A2E</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

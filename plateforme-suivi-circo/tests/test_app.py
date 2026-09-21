@@ -219,3 +219,139 @@ def test_import_excel_puis_export(admin):
     ws_ecole = wb[wb.sheetnames[2]]
     valeurs = [c.value for row in ws_ecole.iter_rows() for c in row if c.value]
     assert "ALPHA Une" in valeurs and "DELTA Quatre" in valeurs
+
+
+# ----------------------------------------------------------- carte scolaire ---
+
+def test_carte_scolaire_montee_pedagogique(admin):
+    """Le constat vient des fiches école ; les prévisions montent d'un niveau."""
+    mat = creer_ecole(admin, "Maternelle Test", type="Maternelle", rne="9760100A", nb_classes=2)
+    elem = creer_ecole(admin, "Élémentaire Test", type="Élémentaire", rne="9760101B", nb_classes=2)
+    creer_personnel(admin, mat, "MATA", eff_ps="20", eff_ms="5")
+    creer_personnel(admin, mat, "MATB", eff_gs="24")
+    creer_personnel(admin, elem, "ELEMA", eff_cp="18")
+    creer_personnel(admin, elem, "ELEMB", eff_ce1="22", eff_ce2="3")
+
+    page = admin.get("/carte/").get_data(as_text=True)
+    assert "Carte scolaire" in page
+    assert "Maternelle Test" in page and "Élémentaire Test" in page
+    assert "GS ratt." not in page  # pas de secteur commun reconnu sur ces noms
+    assert "Prévisions incomplètes" in page  # PS / CP prévus non saisis
+
+    from app.carte import calculer, carte_ecole, lignes_ecole
+    from app.db import get_db
+    with admin.client.application.app_context():
+        db = get_db()
+        campagne = admin.client.get("/carte/") and None
+    # Saisie : 30 PS prévus en maternelle, 25 CP prévus en élémentaire, 1 ouverture
+    from app.views.carte import campagne_courante
+    with admin.client.application.app_context():
+        camp = campagne_courante()
+    r = admin.post(f"/carte/{camp}/enregistrer", data={
+        "ecole_id": str(mat), f"ps_prevus_{mat}": "30", f"ouverture_{mat}": "1",
+        f"cp_prevus_{mat}": "0", f"fermeture_{mat}": "0"})
+    assert r.status_code == 302
+    r = admin.post(f"/carte/{camp}/enregistrer", data={
+        "ecole_id": str(elem), f"cp_prevus_{elem}": "25", f"ps_prevus_{elem}": "0",
+        f"ouverture_{elem}": "0", f"fermeture_{elem}": "0"})
+    assert r.status_code == 302
+
+    with admin.client.application.app_context():
+        ecole_mat = get_db().execute("SELECT * FROM ecoles WHERE id = ?", (mat,)).fetchone()
+        l = calculer(ecole_mat, carte_ecole(ecole_mat, camp), lignes_ecole(mat))
+        # constat : PS 20, MS 5, GS 24 = 49 ; 2 divisions
+        assert l["constat"] == {"ps": 20, "ms": 5, "gs": 24, "cp": 0, "ce1": 0, "ce2": 0, "cm1": 0, "cm2": 0}
+        assert l["total_c"] == 49 and l["div"] == 2 and l["ed"] == 24.5
+        # prévisions : PS 30 saisis, MS = PS constat 20, GS = MS constat 5 -> 55
+        assert l["prev"]["ms"] == 20 and l["prev"]["gs"] == 5
+        assert l["total_p"] == 55
+        assert l["div_apres"] == 3 and l["ed_apres"] == round(55 / 3, 1)
+        assert l["evolution"] == 6
+
+        ecole_elem = get_db().execute("SELECT * FROM ecoles WHERE id = ?", (elem,)).fetchone()
+        le = calculer(ecole_elem, carte_ecole(ecole_elem, camp), lignes_ecole(elem))
+        # CE1 prévu = CP constat 18, CE2 prévu = CE1 constat 22, CM1 prévu = CE2 constat 3
+        assert le["prev"]["ce1"] == 18 and le["prev"]["ce2"] == 22 and le["prev"]["cm1"] == 3
+        assert le["total_p"] == 25 + 18 + 22 + 3
+
+
+def test_carte_constat_manuel_et_salles(admin):
+    eid = creer_ecole(admin, "Primaire Test", type="Primaire", rne="9760102C", nb_classes=3, nb_salles=2)
+    creer_personnel(admin, eid, "PRIMA", eff_ps="10", eff_cp="12")
+    from app.views.carte import campagne_courante
+    with admin.client.application.app_context():
+        camp = campagne_courante()
+    # constat saisi à la main, qui remplace les effectifs des fiches
+    admin.post(f"/carte/{camp}/enregistrer", data={
+        "ecole_id": str(eid), f"constat_manuel_{eid}": "1", f"c_ps_{eid}": "40", f"c_gs_{eid}": "30",
+        f"ps_prevus_{eid}": "35", f"ouverture_{eid}": "2", f"nb_salles_{eid}": "5"})
+    from app.carte import calculer, carte_ecole, lignes_ecole
+    from app.db import get_db
+    with admin.client.application.app_context():
+        e = get_db().execute("SELECT * FROM ecoles WHERE id = ?", (eid,)).fetchone()
+        l = calculer(e, carte_ecole(e, camp), lignes_ecole(eid))
+        assert l["manuel"] and l["constat"]["ps"] == 40 and l["constat"]["cp"] == 0
+        assert l["total_c"] == 70
+        # primaire : MS = PS constat, CP = GS constat
+        assert l["prev"]["ms"] == 40 and l["prev"]["cp"] == 30
+        assert l["div"] == 1 and l["div_apres"] == 3
+        assert l["salles"] == 5 and l["salles_necessaires"] == 3 and l["ecart_salles"] == 2
+
+
+def test_carte_gs_rattaches_par_secteur(admin):
+    mat = creer_ecole(admin, "EMPU KANGANI", type="Maternelle", rne="9760150J")
+    elem = creer_ecole(admin, "EEPU KANGANI", type="Élémentaire", rne="9760060L")
+    creer_personnel(admin, mat, "GSA", eff_gs="27")
+    creer_personnel(admin, elem, "CPA", eff_cp="20")
+    page = admin.get("/carte/").get_data(as_text=True)
+    assert "GS ratt. 27" in page
+
+
+def test_postes_hors_classe(admin):
+    from app.views.carte import campagne_courante
+    with admin.client.application.app_context():
+        camp = campagne_courante()
+    page = admin.get("/carte/").get_data(as_text=True)
+    assert "TR-ZIL brigade de remplacement" in page and "Postes de professeurs hors de la classe" in page
+    from app.carte import postes
+    with admin.client.application.app_context():
+        lignes = postes(camp)
+    pid = lignes[0]["id"]
+    r = admin.post(f"/carte/{camp}/postes", data={"poste_id": str(pid), f"supports_{pid}": "3",
+                                                  f"affectations_{pid}": "2", f"ouverture_{pid}": "1",
+                                                  f"fermeture_{pid}": "0"})
+    assert r.status_code == 302
+    page = admin.get("/carte/").get_data(as_text=True)
+    assert 'value="3"' in page
+
+
+def test_export_carte_scolaire_xlsx(admin):
+    eid = creer_ecole(admin, "EMPU TREVANI", type="Maternelle", rne="9760156R")
+    creer_personnel(admin, eid, "TREV", eff_ps="22", eff_gs="20")
+    from app.views.carte import campagne_courante
+    with admin.client.application.app_context():
+        camp = campagne_courante()
+    admin.post(f"/carte/{camp}/enregistrer", data={"ecole_id": str(eid), f"ps_prevus_{eid}": "24"})
+    r = admin.get("/exports/carte-scolaire.xlsx")
+    assert r.status_code == 200
+    wb = load_workbook(io.BytesIO(r.data))
+    assert wb.sheetnames == ["Synthèse circo", "Maternelle", "Élémentaire", "Primaire", "Postes hors classe"]
+    valeurs = [c.value for row in wb["Maternelle"].iter_rows() for c in row if c.value is not None]
+    assert "EMPU TREVANI" in valeurs and 24 in valeurs
+    synth = [c.value for row in wb["Synthèse circo"].iter_rows() for c in row if c.value is not None]
+    assert "Écoles maternelles" in synth and "TOTAL CIRCONSCRIPTION" in synth
+
+
+def test_carte_lecture_seule(admin, client):
+    creer_ecole(admin, "Lecture", type="Maternelle")
+    admin.post("/utilisateurs/nouveau", data={"login": "lect2", "nom": "L", "role": "lecture",
+                                               "mot_de_passe": "motdepasse", "actif": "1"})
+    client.post("/logout", data={"_csrf": admin._csrf()})
+    s = Session(client)
+    s.login("lect2", "motdepasse")
+    page = s.get("/carte/").get_data(as_text=True)
+    assert "Carte scolaire" in page and "Enregistrer écoles maternelles" not in page
+    from app.views.carte import campagne_courante
+    with client.application.app_context():
+        camp = campagne_courante()
+    assert s.post(f"/carte/{camp}/enregistrer", data={"ecole_id": "1"}).status_code == 403

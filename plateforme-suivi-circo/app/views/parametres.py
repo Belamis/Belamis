@@ -11,6 +11,8 @@ CLES = [
     ("circonscription", "Circonscription", "Circonscription de …"),
     ("annee_scolaire", "Année scolaire", "2026/2027"),
     ("ien", "IEN", "Nom de l'inspecteur·rice"),
+    ("campagne_carte", "Campagne de carte scolaire", "R2027"),
+    ("seuil_ed", "Seuil d'alerte E/D", "26"),
 ]
 
 

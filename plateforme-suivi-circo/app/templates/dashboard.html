@@ -6,6 +6,7 @@
   <h1>Tableau de bord — {{ params.get('annee_scolaire') or annee_scolaire.libelle }}</h1>
   <div class="barre__actions">
     <a class="btn btn--secondaire" href="{{ url_for('exports.classeur') }}">⬇ Classeur Excel complet</a>
+    <a class="btn" href="{{ url_for('carte.tableau') }}">Carte scolaire</a>
     <a class="btn" href="{{ url_for('effectifs.tableau') }}">Effectifs par école</a>
   </div>
 </div>

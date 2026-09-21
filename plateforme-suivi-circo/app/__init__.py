@@ -84,8 +84,8 @@ def create_app(test_config=None):
         }
 
     # --- Vues ------------------------------------------------------------------
-    from .views import (auth, dashboard, ecoles, effectifs, eleves, enseignants, exports, importer,
-                        parametres, suivis, utilisateurs)
+    from .views import (auth, carte, dashboard, ecoles, effectifs, eleves, enseignants, exports,
+                        importer, parametres, suivis, utilisateurs)
 
     app.register_blueprint(auth.bp)
     app.register_blueprint(dashboard.bp)
@@ -96,6 +96,7 @@ def create_app(test_config=None):
     app.register_blueprint(exports.bp)
     app.register_blueprint(utilisateurs.bp)
     app.register_blueprint(effectifs.bp)
+    app.register_blueprint(carte.bp)
     app.register_blueprint(parametres.bp)
     app.register_blueprint(importer.bp)
     app.cli.add_command(importer.import_excel_command)

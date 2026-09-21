@@ -24,6 +24,7 @@
     <a href="{{ url_for('ecoles.liste') }}" class="{{ 'actif' if request.blueprint == 'ecoles' }}">Écoles</a>
     <a href="{{ url_for('enseignants.liste') }}" class="{{ 'actif' if request.blueprint == 'enseignants' }}">Personnels</a>
     <a href="{{ url_for('eleves.liste') }}" class="{{ 'actif' if request.blueprint == 'eleves' }}">Élèves suivis</a>
+    <a href="{{ url_for('carte.tableau') }}" class="{{ 'actif' if request.blueprint == 'carte' }}">Carte scolaire</a>
     <a href="{{ url_for('suivis.journal') }}" class="{{ 'actif' if request.blueprint == 'suivis' }}">Journal</a>
     {% if g.user.role == 'admin' %}
     <a href="{{ url_for('utilisateurs.liste') }}" class="{{ 'actif' if request.blueprint in ('utilisateurs', 'parametres', 'importer') }}">Administration</a>

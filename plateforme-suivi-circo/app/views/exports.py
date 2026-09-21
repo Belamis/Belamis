@@ -3,10 +3,10 @@ import csv
 import io
 from datetime import date
 
-from flask import Blueprint, Response, send_file
+from flask import Blueprint, Response, request, send_file
 
 from ..db import get_db, lire_parametres
-from ..excel import construire_classeur
+from ..excel import construire_classeur, construire_carte_scolaire
 from ..stats import COLS_EFF
 from .helpers import login_required
 
@@ -32,6 +32,18 @@ def classeur():
     """Classeur complet : tableau de bord, effectifs par niveaux, une feuille par école."""
     tampon = construire_classeur(lire_parametres())
     nom = f"tableau_de_bord_circonscription_{date.today().isoformat()}.xlsx"
+    return send_file(tampon, as_attachment=True, download_name=nom,
+                     mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+
+
+@bp.route("/carte-scolaire.xlsx")
+@login_required
+def carte_scolaire():
+    """Classeur de carte scolaire au format du dialogue de gestion."""
+    from .carte import campagne_courante
+    campagne = request.args.get("campagne") or campagne_courante()
+    tampon = construire_carte_scolaire(lire_parametres(), campagne)
+    nom = f"carte_scolaire_{campagne}_{date.today().isoformat()}.xlsx"
     return send_file(tampon, as_attachment=True, download_name=nom,
                      mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 

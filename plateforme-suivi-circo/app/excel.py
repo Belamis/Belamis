@@ -250,3 +250,173 @@ def construire_classeur(params):
     wb.save(tampon)
     tampon.seek(0)
     return tampon
+
+
+# ---------------------------------------------------------------- carte scolaire ---
+
+def _feuille_synthese_carte(wb, params, campagne, groupes, general):
+    ws = wb.active
+    ws.title = "Synthèse circo"
+    ws.column_dimensions["A"].width = 34
+    for col in "BCDEFG":
+        ws.column_dimensions[col].width = 17
+    ac = params.get("campagne_constat") or "Constat"
+    _titre(ws, 1, f"CARTE SCOLAIRE {campagne} — SYNTHÈSE DE CIRCONSCRIPTION", 7)
+    _titre(ws, 2, f"{params.get('circonscription', '')} — IEN : {params.get('ien', '')}", 7, BLEU_CLAIR, GRAS)
+    ws.cell(row=3, column=1,
+            value=f"Constat de rentrée → prévisions {campagne} (avant / après mesures de carte scolaire)").font = Font(italic=True, size=9)
+
+    r = 5
+    _titre(ws, r, "EFFECTIFS", 7, GRIS, GRAS)
+    r += 1
+    _entetes(ws, r, ["", f"{ac}", f"Prévisions {campagne}", "Évolution", "Évolution %"])
+    for g in groupes:
+        r += 1
+        t = g["totaux"]
+        _ligne(ws, r, [g["titre"], t["total_c"], t["total_p"], t["evolution"],
+                       (t["pct"] / 100) if t["pct"] is not None else ""])
+        ws.cell(row=r, column=5).number_format = "0.0%"
+    r += 1
+    _ligne(ws, r, ["TOTAL CIRCONSCRIPTION", general["total_c"], general["total_p"], general["evolution"],
+                   (general["pct"] / 100) if general["pct"] is not None else ""], gras=True, fill=VERT)
+    ws.cell(row=r, column=5).number_format = "0.0%"
+
+    r += 2
+    _titre(ws, r, "DIVISIONS (CLASSES)", 7, GRIS, GRAS)
+    r += 1
+    _entetes(ws, r, ["", "Constat", "Après mesures", "Ouvertures", "Fermetures", "Solde"])
+    for g in groupes:
+        r += 1
+        t = g["totaux"]
+        _ligne(ws, r, [g["titre"], t["div"], t["div_apres"], t["ouverture"], t["fermeture"],
+                       t["ouverture"] - t["fermeture"]])
+    r += 1
+    _ligne(ws, r, ["TOTAL CIRCONSCRIPTION", general["div"], general["div_apres"], general["ouverture"],
+                   general["fermeture"], general["ouverture"] - general["fermeture"]], gras=True, fill=VERT)
+
+    r += 2
+    _titre(ws, r, "E/D MOYEN (effectifs / divisions)", 7, GRIS, GRAS)
+    r += 1
+    _entetes(ws, r, ["", "E/D constat", "E/D projeté avant mesures", "E/D après mesures"])
+    for g in groupes:
+        r += 1
+        t = g["totaux"]
+        _ligne(ws, r, [g["titre"], t["ed"] or "—", t["ed_avant"] or "—", t["ed_apres"] or "—"])
+    r += 1
+    _ligne(ws, r, ["TOTAL CIRCONSCRIPTION", general["ed"] or "—", general["ed_avant"] or "—",
+                   general["ed_apres"] or "—"], gras=True, fill=VERT)
+
+    r += 2
+    _titre(ws, r, "SALLES DE CLASSE", 7, GRIS, GRAS)
+    r += 1
+    _entetes(ws, r, ["", "Salles disponibles", f"Salles nécessaires {campagne}", "Écart"])
+    for g in groupes:
+        r += 1
+        t = g["totaux"]
+        _ligne(ws, r, [g["titre"], t["salles"], t["salles_necessaires"], t["ecart_salles"]],
+               fill=None if t["ecart_salles"] >= 0 else JAUNE)
+    r += 1
+    _ligne(ws, r, ["TOTAL CIRCONSCRIPTION", general["salles"], general["salles_necessaires"],
+                   general["ecart_salles"]], gras=True, fill=VERT)
+
+    r += 2
+    for texte in [
+        "Mode d'emploi",
+        "1. Le constat de rentrée est repris des fiches école (organisation pédagogique). Il peut être saisi à la main école par école.",
+        "2. Les prévisions se calculent par montée pédagogique (MS = PS, GS = MS, CE1 = CP…).",
+        "   Seuls les PS prévus (maternelles et primaires) et les CP prévus (élémentaires, selon les GS des maternelles de rattachement) sont saisis.",
+        "3. Les ouvertures / fermetures proposées recalculent les divisions après mesures, les E/D et les besoins en salles.",
+        "4. Cette synthèse peut être transmise en l'état pour le dialogue de carte scolaire.",
+    ]:
+        ws.cell(row=r, column=1, value=texte).font = Font(italic=(texte != "Mode d'emploi"), size=9,
+                                                          bold=(texte == "Mode d'emploi"))
+        r += 1
+
+
+def _feuille_type_carte(wb, params, campagne, groupe):
+    from .carte import niveaux_du_type
+    ws = wb.create_sheet(groupe["type"][:28])
+    lignes, t = groupe["lignes"], groupe["totaux"]
+    niveaux = niveaux_du_type(groupe["type"])
+    libelles = {n: lib for n, lib in [("ps", "PS"), ("ms", "MS"), ("gs", "GS"), ("cp", "CP"),
+                                      ("ce1", "CE1"), ("ce2", "CE2"), ("cm1", "CM1"), ("cm2", "CM2")]}
+    sup = (["Div. CP-CE1", "Div. CE2-CM1-CM2", "dont rotation / duo"] if groupe["type"] == "Élémentaire"
+           else ["Div. mat.", "Div. élém."] if groupe["type"] == "Primaire" else [])
+    cles_sup = (["div_cp_ce1", "div_ce2_cm1_cm2", "div_rotation"] if groupe["type"] == "Élémentaire"
+                else ["div_mat", "div_elem"] if groupe["type"] == "Primaire" else [])
+    entetes = (["École", "RNE"] + [libelles[n] for n in niveaux] + ["Effectif total", "Divisions"] + sup
+               + [f"{libelles[n]} prévus" for n in niveaux]
+               + ["Effectif total prévu", "E/D projeté avant mesures", "Ouverture", "Fermeture",
+                  "Divisions après mesures", "E/D après mesures", "Évolution effectifs",
+                  "Nb de salles", "Salles nécessaires", "Écart salles", "Observations"])
+    ws.column_dimensions["A"].width = 34
+    ws.column_dimensions["B"].width = 12
+    for i in range(3, len(entetes) + 1):
+        ws.column_dimensions[get_column_letter(i)].width = 11
+    ws.column_dimensions[get_column_letter(len(entetes))].width = 30
+
+    _titre(ws, 1, f"CARTE SCOLAIRE {campagne} — {groupe['titre'].upper()}", len(entetes))
+    _titre(ws, 2, f"{params.get('circonscription', '')} — constat de rentrée → prévisions {campagne}",
+           len(entetes), BLEU_CLAIR, GRAS)
+    _entetes(ws, 4, entetes)
+    r = 4
+    for l in lignes:
+        r += 1
+        _ligne(ws, r, [l["ecole"]["nom"], l["ecole"]["rne"]]
+               + [l["constat"][n] for n in niveaux] + [l["total_c"], l["div"]]
+               + [l[c] for c in cles_sup]
+               + [l["prev"][n] for n in niveaux]
+               + [l["total_p"], l["ed_avant"] or "—", l["ouverture"] or "", l["fermeture"] or "",
+                  l["div_apres"], l["ed_apres"] or "—", l["evolution"], l["salles"],
+                  l["salles_necessaires"], l["ecart_salles"], l["carte"]["observations"]])
+    r += 1
+    _ligne(ws, r, [f"TOTAL {groupe['titre'].upper()}", ""]
+           + [t["constat"][n] for n in niveaux] + [t["total_c"], t["div"]]
+           + [t[c] for c in cles_sup]
+           + [t["prev"][n] for n in niveaux]
+           + [t["total_p"], t["ed_avant"] or "—", t["ouverture"], t["fermeture"], t["div_apres"],
+              t["ed_apres"] or "—", t["evolution"], t["salles"], t["salles_necessaires"],
+              t["ecart_salles"], ""], gras=True, fill=VERT)
+    ws.freeze_panes = ws.cell(row=5, column=3)
+
+
+def _feuille_postes(wb, params, campagne, lignes, totaux_p):
+    ws = wb.create_sheet("Postes hors classe")
+    ws.column_dimensions["A"].width = 42
+    ws.column_dimensions["B"].width = 18
+    for col in "CDEFG":
+        ws.column_dimensions[col].width = 16
+    _titre(ws, 1, "POSTES DE PROFESSEURS — HORS DE LA CLASSE", 7)
+    _titre(ws, 2, f"{params.get('circonscription', '')} — campagne carte scolaire {campagne}", 7, BLEU_CLAIR, GRAS)
+    _entetes(ws, 4, ["Poste", "Spécialité", "Supports (constat)", "Affectations (constat)",
+                     "Ouverture", "Fermeture", f"Supports {campagne}"])
+    r = 4
+    for l in lignes:
+        r += 1
+        _ligne(ws, r, [l["poste"], l["specialite"], l["supports"], l["affectations"],
+                       l["ouverture"] or "", l["fermeture"] or "", l["apres"]])
+    r += 1
+    _ligne(ws, r, ["TOTAL", "", totaux_p["supports"], totaux_p["affectations"], totaux_p["ouverture"],
+                   totaux_p["fermeture"], totaux_p["apres"]], gras=True, fill=VERT)
+
+
+def construire_carte_scolaire(params, campagne):
+    """Classeur de carte scolaire : synthèse, une feuille par type d'école, postes hors classe."""
+    from .carte import lignes_campagne, postes, totaux, totaux_postes
+    groupes = []
+    for type_ecole, titre in [("Maternelle", "Écoles maternelles"), ("Élémentaire", "Écoles élémentaires"),
+                              ("Primaire", "Écoles primaires")]:
+        lignes = lignes_campagne(campagne, type_ecole)
+        groupes.append({"type": type_ecole, "titre": titre, "lignes": lignes, "totaux": totaux(lignes)})
+    general = totaux([l for g in groupes for l in g["lignes"]])
+
+    wb = Workbook()
+    _feuille_synthese_carte(wb, params, campagne, groupes, general)
+    for g in groupes:
+        _feuille_type_carte(wb, params, campagne, g)
+    lignes_postes = postes(campagne)
+    _feuille_postes(wb, params, campagne, lignes_postes, totaux_postes(lignes_postes))
+    tampon = io.BytesIO()
+    wb.save(tampon)
+    tampon.seek(0)
+    return tampon

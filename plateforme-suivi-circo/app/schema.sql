@@ -139,3 +139,49 @@ CREATE INDEX IF NOT EXISTS idx_eleves_ecole ON eleves(ecole_id);
 CREATE INDEX IF NOT EXISTS idx_eleves_enseignant ON eleves(enseignant_id);
 CREATE INDEX IF NOT EXISTS idx_suivis_ens ON suivis_enseignants(enseignant_id, date);
 CREATE INDEX IF NOT EXISTS idx_suivis_elv ON suivis_eleves(eleve_id, date);
+
+-- Carte scolaire : une ligne par école et par campagne (constat R n → prévisions R n+1).
+CREATE TABLE IF NOT EXISTS carte_scolaire (
+    id               INTEGER PRIMARY KEY AUTOINCREMENT,
+    ecole_id         INTEGER NOT NULL REFERENCES ecoles(id) ON DELETE CASCADE,
+    campagne         TEXT NOT NULL,
+    constat_manuel   INTEGER NOT NULL DEFAULT 0,
+    c_ps             INTEGER NOT NULL DEFAULT 0,
+    c_ms             INTEGER NOT NULL DEFAULT 0,
+    c_gs             INTEGER NOT NULL DEFAULT 0,
+    c_cp             INTEGER NOT NULL DEFAULT 0,
+    c_ce1            INTEGER NOT NULL DEFAULT 0,
+    c_ce2            INTEGER NOT NULL DEFAULT 0,
+    c_cm1            INTEGER NOT NULL DEFAULT 0,
+    c_cm2            INTEGER NOT NULL DEFAULT 0,
+    div_constat      INTEGER,
+    div_cp_ce1       INTEGER,
+    div_ce2_cm1_cm2  INTEGER,
+    div_rotation     INTEGER,
+    div_mat          INTEGER,
+    div_elem         INTEGER,
+    ps_prevus        INTEGER NOT NULL DEFAULT 0,
+    cp_prevus        INTEGER NOT NULL DEFAULT 0,
+    ouverture        INTEGER NOT NULL DEFAULT 0,
+    fermeture        INTEGER NOT NULL DEFAULT 0,
+    nb_salles        INTEGER,
+    observations     TEXT NOT NULL DEFAULT '',
+    modifie_le       TEXT NOT NULL DEFAULT (datetime('now')),
+    UNIQUE (ecole_id, campagne)
+);
+
+-- Postes de professeurs hors de la classe (par campagne).
+CREATE TABLE IF NOT EXISTS postes_hors_classe (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    campagne      TEXT NOT NULL,
+    rang          INTEGER NOT NULL DEFAULT 0,
+    poste         TEXT NOT NULL,
+    specialite    TEXT NOT NULL DEFAULT '',
+    supports      REAL NOT NULL DEFAULT 0,
+    affectations  REAL NOT NULL DEFAULT 0,
+    ouverture     REAL NOT NULL DEFAULT 0,
+    fermeture     REAL NOT NULL DEFAULT 0
+);
+
+CREATE INDEX IF NOT EXISTS idx_carte_campagne ON carte_scolaire(campagne, ecole_id);
+CREATE INDEX IF NOT EXISTS idx_postes_campagne ON postes_hors_classe(campagne, rang);

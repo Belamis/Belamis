@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}{{ titre }}{% endblock %}
+{% block contenu %}
+<h1>{{ titre }}</h1>
+<form method="post" class="formulaire" style="max-width:640px">
+  {{ m.csrf() }}
+  <div class="champs">
+    {{ m.texte('login', 'Identifiant', user.login, obligatoire=true, aide='Minuscules, sans espace (ex. : prenom.nom)') }}
+    {{ m.texte('nom', 'Nom affiché', user.nom, obligatoire=true) }}
+    {{ m.texte('fonction', 'Fonction', user.fonction, placeholder='IEN, CPC, secrétaire, ERUN…') }}
+    {{ m.choix('role', 'Rôle', ref.ROLES.items() | list, user.role or 'saisie') }}
+    {{ m.texte('mot_de_passe', 'Mot de passe' if nouveau else 'Nouveau mot de passe (laisser vide pour conserver)', '', type='password', obligatoire=nouveau, aide='8 caractères minimum') }}
+    {{ m.case('actif', 'Compte actif', user.actif) }}
+  </div>
+  <div class="formulaire__actions">
+    <button type="submit" class="btn btn--primaire">Enregistrer</button>
+    <a class="btn" href="{{ url_for('utilisateurs.liste') }}">Annuler</a>
+  </div>
+</form>
+{% endblock %}

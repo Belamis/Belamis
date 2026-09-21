@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block titre %}Écoles{% endblock %}
+{% block contenu %}
+<div class="barre">
+  <h1>Écoles</h1>
+  <div class="barre__actions">
+    {% if g.user.role in ('admin', 'saisie') %}<a class="btn btn--primaire" href="{{ url_for('ecoles.creer') }}">+ Nouvelle école</a>{% endif %}
+    <a class="btn" href="{{ url_for('exports.ecoles') }}">⬇ CSV</a>
+  </div>
+</div>
+<form method="get" class="filtres">
+  <div class="champ"><label>Recherche</label><input type="search" name="q" value="{{ q }}" placeholder="Nom, commune, RNE, direction"></div>
+  <div class="champ"><label>Type</label><select name="type"><option value="">Tous</option>{% for t in ref.TYPES_ECOLE %}<option {{ 'selected' if t == type_ }}>{{ t }}</option>{% endfor %}</select></div>
+  <div class="champ"><label>Éducation prioritaire</label><select name="ep"><option value="">Toutes</option>{% for t in ref.EDUCATION_PRIORITAIRE %}<option {{ 'selected' if t == ep }}>{{ t }}</option>{% endfor %}</select></div>
+  <button class="btn" type="submit">Filtrer</button>
+</form>
+<div class="tableau-wrap"><table class="tableau">
+  <thead><tr><th>École</th><th>Type</th><th>RNE</th><th>Commune</th><th>Direction</th><th>EP</th><th class="num">Classes</th><th class="num">Enseignants</th><th class="num">Élèves</th><th class="num">Élèves suivis</th><th>Mise à jour</th></tr></thead>
+  <tbody>
+  {% for e in ecoles %}
+  <tr>
+    <td><a href="{{ url_for('ecoles.fiche', ident=e.id) }}"><strong>{{ e.nom }}</strong></a></td>
+    <td>{{ e.type }}</td><td>{{ e.rne }}</td><td>{{ e.commune }}</td><td>{{ e.directeur }}</td>
+    <td>{% if e.education_prioritaire != 'Hors EP' %}<span class="badge badge--orange">{{ e.education_prioritaire }}</span>{% endif %}</td>
+    <td class="num">{{ e.nb_classes }}</td><td class="num">{{ e.nb_enseignants }}</td><td class="num">{{ e.nb_eleves }}</td><td class="num">{{ e.nb_eleves_suivis }}</td>
+    <td>{{ e.date_maj | datefr }}</td>
+  </tr>
+  {% else %}<tr><td colspan="11" class="discret">Aucune école.</td></tr>{% endfor %}
+  </tbody>
+</table></div>
+{% endblock %}

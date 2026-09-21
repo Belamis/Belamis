@@ -84,3 +84,14 @@ Ou ouvrez le dossier dans **Android Studio** et lancez ▶.
 | targetSdk     | 35 |
 | Langage       | Kotlin 2.0 |
 | AGP / Gradle  | 8.7.3 / 8.14.3 |
+
+---
+
+## 🏫 Plateforme de suivi de circonscription
+
+Ce dépôt contient aussi, dans [`plateforme-suivi-circo/`](plateforme-suivi-circo/), une
+application web (Python / Flask / SQLite) de saisie et de suivi des écoles, des
+enseignants et des élèves d'une circonscription du premier degré : tableau de bord,
+fiches école avec organisation pédagogique et effectifs par niveau, suivi des
+personnels et des élèves à besoins particuliers, import/export du classeur Excel de
+la circonscription. Voir son [README](plateforme-suivi-circo/README.md).

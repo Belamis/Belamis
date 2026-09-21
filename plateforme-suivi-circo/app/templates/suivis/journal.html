@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}Journal des suivis{% endblock %}
+{% block contenu %}
+<div class="barre">
+  <h1>Journal des suivis</h1>
+  <div class="barre__actions"><a class="btn" href="{{ url_for('exports.suivis') }}">⬇ CSV</a></div>
+</div>
+<form method="get" class="filtres">
+  <div class="champ"><label>Recherche</label><input type="search" name="q" value="{{ q }}" placeholder="Personne, objet, type"></div>
+  <div class="champ"><label>Cible</label><select name="cible"><option value="">Tous</option><option value="enseignant" {{ 'selected' if cible == 'enseignant' }}>Enseignants</option><option value="eleve" {{ 'selected' if cible == 'eleve' }}>Élèves</option></select></div>
+  <div class="champ"><label>École</label><select name="ecole"><option value="">Toutes</option>{% for e in ecoles %}<option value="{{ e.id }}" {{ 'selected' if ecole_id == e.id|string }}>{{ e.nom }}</option>{% endfor %}</select></div>
+  <div class="champ"><label>Statut</label><select name="statut"><option value="">Tous</option>{% for s in statuts %}<option {{ 'selected' if statut == s }}>{{ s }}</option>{% endfor %}</select></div>
+  <div class="champ"><label>Du</label><input type="date" name="du" value="{{ du }}"></div>
+  <div class="champ"><label>Au</label><input type="date" name="au" value="{{ au }}"></div>
+  <button class="btn" type="submit">Filtrer</button>
+</form>
+<p class="discret">{{ suivis | length }} suivi(s){% if suivis | length == 500 %} — affichage limité aux 500 plus récents, affinez les filtres{% endif %}.</p>
+<div class="tableau-wrap"><table class="tableau">
+  <thead><tr><th>Date</th><th>Cible</th><th>Personne</th><th>École</th><th>Type</th><th>Objet</th><th>Échéance</th><th>Statut</th><th>Saisi par</th></tr></thead>
+  <tbody>
+  {% for s in suivis %}
+  <tr>
+    <td>{{ s.date | datefr }}</td>
+    <td>{{ '👩‍🏫 Enseignant' if s.cible == 'enseignant' else '🧒 Élève' }}</td>
+    <td>{% if s.cible == 'enseignant' %}<a href="{{ url_for('enseignants.fiche', ident=s.cible_id) }}">{{ s.personne }}</a>{% else %}<a href="{{ url_for('eleves.fiche', ident=s.cible_id) }}">{{ s.personne }}</a>{% endif %}</td>
+    <td>{{ s.ecole or '' }}</td><td>{{ s.type }}</td><td>{{ s.objet }}</td>
+    <td>{{ s.echeance | datefr }}</td><td>{{ m.badge_statut_suivi(s.statut) }}</td><td>{{ s.auteur or '' }}</td>
+  </tr>
+  {% else %}<tr><td colspan="9" class="discret">Aucun suivi.</td></tr>{% endfor %}
+  </tbody>
+</table></div>
+{% endblock %}

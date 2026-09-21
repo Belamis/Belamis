@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titre %}Mon compte{% endblock %}
+{% block contenu %}
+<h1>Mon compte</h1>
+<div class="carte carte--etroite">
+  <p><strong>{{ g.user.nom }}</strong> — {{ g.user.fonction or '' }}<br><span class="discret">Identifiant : {{ g.user.login }} · Rôle : {{ ref.ROLES[g.user.role] }}</span></p>
+  <h2>Changer de mot de passe</h2>
+  <form method="post">
+    <input type="hidden" name="_csrf" value="{{ csrf_token() }}">
+    <div class="champ"><label for="actuel">Mot de passe actuel</label><input type="password" id="actuel" name="actuel" required autocomplete="current-password"></div>
+    <div class="champ"><label for="nouveau">Nouveau mot de passe</label><input type="password" id="nouveau" name="nouveau" required minlength="8" autocomplete="new-password"></div>
+    <div class="champ"><label for="confirmation">Confirmation</label><input type="password" id="confirmation" name="confirmation" required minlength="8" autocomplete="new-password"></div>
+    <button type="submit" class="btn btn--primaire">Enregistrer</button>
+  </form>
+</div>
+{% endblock %}

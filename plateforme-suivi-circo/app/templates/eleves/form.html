@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}{{ titre }}{% endblock %}
+{% block contenu %}
+<h1>{{ titre }}</h1>
+{% set e = el or {} %}
+<form method="post" class="formulaire">
+  {{ m.csrf() }}
+  <fieldset><legend>Identité</legend>
+    <div class="champs">
+      {{ m.texte('nom', 'Nom', e.nom, obligatoire=true) }}
+      {{ m.texte('prenom', 'Prénom', e.prenom) }}
+      {{ m.texte('date_naissance', 'Date de naissance', e.date_naissance, type='date') }}
+      {{ m.choix('sexe', 'Sexe', ref.SEXES_ELEVE, e.sexe) }}
+    </div>
+  </fieldset>
+  <fieldset><legend>Scolarisation</legend>
+    <div class="champs">
+      <div class="champ"><label for="ecole_id">École</label>
+        <select id="ecole_id" name="ecole_id"><option value="">—</option>{% for ec in ecoles %}<option value="{{ ec.id }}" {{ 'selected' if e.ecole_id == ec.id }}>{{ ec.nom }}</option>{% endfor %}</select></div>
+      <div class="champ"><label for="enseignant_id">Enseignant·e</label>
+        <select id="enseignant_id" name="enseignant_id"><option value="">—</option>{% for en in enseignants %}<option value="{{ en.id }}" {{ 'selected' if e.enseignant_id == en.id }}>{{ en.nom }} {{ en.prenom }}{% if en.salle %} (salle {{ en.salle }}){% endif %}</option>{% endfor %}</select>
+        <small class="aide">Doit exercer dans l'école choisie.</small></div>
+      {{ m.choix('niveau', 'Niveau', ref.NIVEAUX, e.niveau, vide='—') }}
+    </div>
+  </fieldset>
+  <fieldset><legend>Dispositifs et besoins</legend>
+    <div class="champs">
+      {% for cle, lib in ref.DISPOSITIFS_ELEVE %}{{ m.case(cle, lib, e[cle]) }}{% endfor %}
+      {{ m.choix('aesh', 'AESH', ref.AESH, e.aesh or 'Non') }}
+      {{ m.choix('mdph', 'Dossier MDPH', ref.MDPH, e.mdph or 'Aucun dossier') }}
+      {{ m.texte('situation', 'Situation particulière', e.situation, classe='champ--large', placeholder='Ex. : trouble du langage, allophone, absentéisme, situation familiale…') }}
+      {{ m.zone('notes', 'Notes', e.notes) }}
+      {% if e.id %}<div class="champ"><label for="actif">État</label><select id="actif" name="actif"><option value="1" {{ 'selected' if e.actif != 0 }}>Actif</option><option value="0" {{ 'selected' if e.actif == 0 }}>Archivé (départ, fin de scolarité)</option></select></div>{% endif %}
+    </div>
+  </fieldset>
+  <div class="formulaire__actions">
+    <button type="submit" class="btn btn--primaire">Enregistrer</button>
+    <a class="btn" href="{{ url_for('eleves.fiche', ident=e.id) if e.id else url_for('eleves.liste') }}">Annuler</a>
+  </div>
+</form>
+{% endblock %}

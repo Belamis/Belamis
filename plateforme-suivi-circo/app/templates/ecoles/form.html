@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}{{ titre }}{% endblock %}
+{% block contenu %}
+<h1>{{ titre }}</h1>
+{% set e = ecole or {} %}
+<form method="post" class="formulaire">
+  {{ m.csrf() }}
+  <fieldset><legend>Identité</legend>
+    <div class="champs">
+      {{ m.texte('nom', "Nom de l'école", e.nom, obligatoire=true) }}
+      {{ m.choix('type', "Type d'école", ref.TYPES_ECOLE, e.type or 'Primaire') }}
+      {{ m.texte('rne', 'RNE (UAI)', e.rne, placeholder='9760061M') }}
+      {{ m.texte('commune', 'Commune', e.commune) }}
+      {{ m.choix('education_prioritaire', 'Éducation prioritaire', ref.EDUCATION_PRIORITAIRE, e.education_prioritaire or 'Hors EP') }}
+    </div>
+  </fieldset>
+  <fieldset><legend>Fiche signalétique</legend>
+    <div class="champs">
+      {{ m.texte('adresse', 'Adresse géographique', e.adresse, classe='champ--large') }}
+      {{ m.texte('telephone', 'Téléphone(s)', e.telephone, placeholder='02 69 … / 06 39 …') }}
+      {{ m.texte('email', 'Courriel', e.email, placeholder='ce.9760061m@ac-…') }}
+      {{ m.texte('horaires', 'Horaires', e.horaires, placeholder='Matin : 6h50 à 12h15 / Après-midi : 12h20 à 17h45') }}
+      {{ m.texte('apc', 'APC & horaires', e.apc, aide='Activités pédagogiques complémentaires') }}
+      {{ m.texte('directeur', 'Directeur / Directrice', e.directeur) }}
+      {{ m.texte('secretaire', 'Secrétaire', e.secretaire) }}
+      {{ m.texte('ots', 'Organisation (OTS)', e.ots, aide='Organisation du temps scolaire, rotation…', classe='champ--large') }}
+    </div>
+  </fieldset>
+  <fieldset><legend>FAEX</legend>
+    <div class="champs">
+      {{ m.texte('faex_nom', 'FAEX', e.faex_nom) }}
+      {{ m.texte('faex_telephone', 'Tél. FAEX', e.faex_telephone) }}
+      {{ m.texte('faex_email', 'Courriel FAEX', e.faex_email) }}
+      {{ m.texte('faex_pct', '% intervention FAEX', e.faex_pct, aide="Temps de présence dans l'école") }}
+    </div>
+  </fieldset>
+  <fieldset><legend>Informations générales</legend>
+    <div class="champs">
+      {{ m.texte('nb_salles', 'Nombre de salles', e.nb_salles or 0, type='number', min=0) }}
+      {{ m.texte('nb_classes', 'Nombre total de classes', e.nb_classes or 0, type='number', min=0, aide='Comparé automatiquement aux lignes de classe saisies') }}
+      {{ m.texte('decharge_direction', '% décharge de direction', e.decharge_direction or 0, type='number', min=0, max=100) }}
+      {{ m.texte('date_maj', 'Date de mise à jour', e.date_maj, type='date') }}
+      {{ m.zone('notes', 'Notes', e.notes) }}
+    </div>
+  </fieldset>
+  <div class="formulaire__actions">
+    <button type="submit" class="btn btn--primaire">Enregistrer</button>
+    <a class="btn" href="{{ url_for('ecoles.fiche', ident=e.id) if e.id else url_for('ecoles.liste') }}">Annuler</a>
+  </div>
+</form>
+{% endblock %}

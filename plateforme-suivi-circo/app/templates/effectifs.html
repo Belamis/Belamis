@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block titre %}Effectifs par niveaux{% endblock %}
+{% block contenu %}
+<div class="barre">
+  <h1>Effectifs par école et par niveau</h1>
+  <div class="barre__actions">
+    <a class="btn btn--secondaire" href="{{ url_for('exports.classeur') }}">⬇ Classeur Excel</a>
+    <a class="btn" href="{{ url_for('exports.ecoles') }}">⬇ CSV écoles</a>
+  </div>
+</div>
+<p class="discret">Sommes des lignes de classe saisies dans chaque fiche école (source ONDE). Les élèves ULIS sont déjà comptés dans leur classe ordinaire.</p>
+<div class="tableau-wrap"><table class="tableau tableau--fixe">
+  <thead>
+    <tr><th rowspan="2">École</th><th rowspan="2">Type</th>
+      <th colspan="3" class="cycle1">Cycle 1</th><th colspan="3" class="cycle2">Cycle 2</th><th colspan="2" class="cycle3">Cycle 3</th>
+      <th rowspan="2" class="num">ULIS</th><th colspan="3">Totaux</th><th rowspan="2" class="num">Total école</th><th rowspan="2" class="num">Classes</th><th rowspan="2" class="num">Ens.</th></tr>
+    <tr><th class="num cycle1">PS</th><th class="num cycle1">MS</th><th class="num cycle1">GS</th>
+      <th class="num cycle2">CP</th><th class="num cycle2">CE1</th><th class="num cycle2">CE2</th>
+      <th class="num cycle3">CM1</th><th class="num cycle3">CM2</th>
+      <th class="num cycle1">C1</th><th class="num cycle2">C2</th><th class="num cycle3">C3</th></tr>
+  </thead>
+  <tbody>
+  {% for e in ecoles %}
+  <tr>
+    <td><a href="{{ url_for('ecoles.fiche', ident=e.id) }}">{{ e.nom }}</a></td><td>{{ e.type }}</td>
+    {% for c in ['eff_ps','eff_ms','eff_gs'] %}<td class="num cycle1">{{ e[c] or '' }}</td>{% endfor %}
+    {% for c in ['eff_cp','eff_ce1','eff_ce2'] %}<td class="num cycle2">{{ e[c] or '' }}</td>{% endfor %}
+    {% for c in ['eff_cm1','eff_cm2'] %}<td class="num cycle3">{{ e[c] or '' }}</td>{% endfor %}
+    <td class="num">{{ e.eff_ulis or '' }}</td>
+    <td class="num cycle1">{{ e.cycle1 or '' }}</td><td class="num cycle2">{{ e.cycle2 or '' }}</td><td class="num cycle3">{{ e.cycle3 or '' }}</td>
+    <td class="num"><strong>{{ e.total }}</strong></td>
+    <td class="num">{{ e.nb_classes_calc }}{% if e.nb_classes != e.nb_classes_calc %} <span class="ko" title="Déclaré : {{ e.nb_classes }}">⚠</span>{% endif %}</td>
+    <td class="num">{{ e.nb_enseignants }}</td>
+  </tr>
+  {% else %}<tr><td colspan="17" class="discret">Aucune école saisie.</td></tr>{% endfor %}
+  </tbody>
+  <tfoot>
+  <tr class="total"><td>TOTAL CIRCONSCRIPTION</td><td></td>
+    {% for c in ['eff_ps','eff_ms','eff_gs','eff_cp','eff_ce1','eff_ce2','eff_cm1','eff_cm2','eff_ulis'] %}<td class="num">{{ totaux[c] }}</td>{% endfor %}
+    <td class="num">{{ totaux.cycle1 }}</td><td class="num">{{ totaux.cycle2 }}</td><td class="num">{{ totaux.cycle3 }}</td>
+    <td class="num">{{ totaux.total }}</td><td class="num">{{ totaux.nb_classes_calc }}</td><td class="num">{{ totaux.nb_enseignants }}</td></tr>
+  <tr class="sous-total"><td>Classes par niveau</td><td></td>
+    {% for c in ['eff_ps','eff_ms','eff_gs','eff_cp','eff_ce1','eff_ce2','eff_cm1','eff_cm2','eff_ulis'] %}<td class="num">{{ totaux['cl_' ~ c] }}</td>{% endfor %}
+    <td colspan="6"></td></tr>
+  <tr class="sous-total"><td>Élèves par classe</td><td></td>
+    {% for c in ['eff_ps','eff_ms','eff_gs','eff_cp','eff_ce1','eff_ce2','eff_cm1','eff_cm2','eff_ulis'] %}<td class="num">{{ (totaux[c] / totaux['cl_' ~ c]) | round(1) if totaux['cl_' ~ c] else '—' }}</td>{% endfor %}
+    <td colspan="6"></td></tr>
+  </tfoot>
+</table></div>
+{% endblock %}

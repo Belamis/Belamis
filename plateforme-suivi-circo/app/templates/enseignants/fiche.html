@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}{{ ens.nom }} {{ ens.prenom }}{% endblock %}
+{% block contenu %}
+{% set saisie = g.user.role in ('admin', 'saisie') %}
+<div class="barre">
+  <div>
+    <h1>{{ ens.nom }} {{ ens.prenom }} <span class="badge badge--statut">{{ ens.statut }}</span>{% if not ens.actif %} <span class="badge badge--gris">archivé</span>{% endif %}{% if ens.accompagnement %} <span class="badge badge--orange">accompagnement renforcé</span>{% endif %}</h1>
+    <span class="discret">{{ ens.statut | statut }}{% if ens.fonction %} · {{ ens.fonction }}{% endif %}{% if ens.ecole_nom %} · <a href="{{ url_for('ecoles.fiche', ident=ens.ecole_id) }}">{{ ens.ecole_nom }}</a>{% endif %}</span>
+  </div>
+  <div class="barre__actions">
+    {% if saisie %}
+    <a class="btn btn--primaire" href="{{ url_for('enseignants.suivi_creer', ident=ens.id) }}">+ Nouveau suivi</a>
+    <a class="btn" href="{{ url_for('enseignants.modifier', ident=ens.id) }}">Modifier</a>
+    <form method="post" action="{{ url_for('enseignants.archiver', ident=ens.id) }}" class="inline" data-confirm="{{ 'Restaurer cette fiche ?' if not ens.actif else 'Archiver cette fiche ? Elle ne comptera plus dans les effectifs.' }}">{{ m.csrf() }}{% if not ens.actif %}<input type="hidden" name="restaurer" value="1">{% endif %}<button class="btn {{ 'btn--danger' if ens.actif }}">{{ 'Restaurer' if not ens.actif else 'Archiver' }}</button></form>
+    {% endif %}
+  </div>
+</div>
+<div class="grille grille--2">
+  <div class="carte">
+    <h2>Fiche</h2>
+    <div class="fiche">
+      <dl>
+        <dt>Sexe</dt><dd>{{ {'F': 'Femme', 'H': 'Homme'}.get(ens.sexe, '') }}</dd>
+        <dt>Courriel</dt><dd>{{ ens.email }}</dd>
+        <dt>Téléphone</dt><dd>{{ ens.telephone }}</dd>
+        <dt>Ancienneté</dt><dd>{% if ens.anciennete is not none %}{{ ens.anciennete }} an{{ 's' if ens.anciennete > 1 }}{% endif %}</dd>
+      </dl>
+      <dl>
+        <dt>Organisation pédagogique</dt><dd>{{ 'Devant classe' if ens.dans_organisation else 'Hors organisation (sans classe)' }}</dd>
+        {% if ens.dans_organisation %}
+        <dt>Classe</dt><dd>{% for lib, n in niveaux %}{{ lib }} : {{ n }}{{ ' · ' if not loop.last }}{% else %}Effectifs non saisis{% endfor %}{% if niveaux %} — <strong>{{ ens.total_eleves }} élèves</strong>{% endif %}</dd>
+        <dt>Dispositif / salle</dt><dd>{{ ens.dispositif }}{% if ens.salle %} · salle {{ ens.salle }}{% endif %}</dd>
+        {% endif %}
+        <dt>Observations</dt><dd class="bloc-texte">{{ ens.observations }}</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="carte">
+    <h2>Élèves suivis dans sa classe <small>({{ eleves | length }})</small></h2>
+    <ul class="liste-simple">
+      {% for el in eleves %}<li><a href="{{ url_for('eleves.fiche', ident=el.id) }}">{{ el.nom }} {{ el.prenom }}</a> <span class="puces"><small>{{ el.niveau }}</small>{% for cle, lib in ref.DISPOSITIFS_ELEVE if el[cle] %}<span class="badge badge--bleu">{{ lib }}</span>{% endfor %}{% if el.aesh != 'Non' %}<span class="badge badge--vert">AESH</span>{% endif %}</span></li>
+      {% else %}<li class="discret">Aucun élève suivi nominativement.</li>{% endfor %}
+    </ul>
+  </div>
+</div>
+
+<h2>Historique des suivis <small>({{ suivis | length }})</small></h2>
+{% for s in suivis %}
+<article class="suivi">
+  <div class="suivi__tete">
+    <span><strong>{{ s.date | datefr }}</strong> — {{ s.type }}{% if s.objet %} : {{ s.objet }}{% endif %}</span>
+    <span>{{ m.badge_statut_suivi(s.statut) }}{% if s.echeance %} <small>échéance {{ s.echeance | datefr }}</small>{% endif %}
+      {% if saisie %} <a class="btn btn--petit" href="{{ url_for('enseignants.suivi_modifier', sid=s.id) }}">Modifier</a> {{ m.bouton_supprimer(url_for('enseignants.suivi_supprimer', sid=s.id), '✕', 'Supprimer ce suivi ?') }}{% endif %}</span>
+  </div>
+  <dl>
+    {% if s.compte_rendu %}<dt>Compte rendu</dt><dd>{{ s.compte_rendu }}</dd>{% endif %}
+    {% if s.points_forts %}<dt>Points forts</dt><dd>{{ s.points_forts }}</dd>{% endif %}
+    {% if s.axes_progres %}<dt>Axes de progrès</dt><dd>{{ s.axes_progres }}</dd>{% endif %}
+    {% if s.actions_prevues %}<dt>Actions prévues</dt><dd>{{ s.actions_prevues }}</dd>{% endif %}
+    <dt>Saisi par</dt><dd><small>{{ s.auteur or '—' }} le {{ s.cree_le | datetimefr }}</small></dd>
+  </dl>
+</article>
+{% else %}<p class="discret">Aucun suivi enregistré.{% if saisie %} <a href="{{ url_for('enseignants.suivi_creer', ident=ens.id) }}">Saisir le premier</a>.{% endif %}</p>{% endfor %}
+{% endblock %}

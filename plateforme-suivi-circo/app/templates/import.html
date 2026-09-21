@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}Import Excel{% endblock %}
+{% block contenu %}
+<h1>Importer un classeur « fiches école »</h1>
+<div class="grille grille--2">
+  <form method="post" enctype="multipart/form-data" class="formulaire">
+    {{ m.csrf() }}
+    <p>Le classeur doit contenir une feuille par école au format habituel de la circonscription : fiche signalétique (RNE, adresse, direction…), tableau <em>Organisation pédagogique</em> (enseignant·e, statut, sexe, dispositif, salle, effectifs PS → CM2, ULIS) et tableau des personnels non comptabilisés. Les feuilles de synthèse (« BORD », « EFFECTIFS PAR NIVEAUX ») sont ignorées : elles sont recalculées automatiquement.</p>
+    <div class="champ"><label for="classeur">Fichier .xlsx</label><input type="file" id="classeur" name="classeur" accept=".xlsx,.xlsm" required></div>
+    <p class="discret">Les écoles sont reconnues par leur RNE (sinon par leur nom) et les personnels par nom + prénom dans l'école : un nouvel import met à jour les fiches existantes sans créer de doublons. Les suivis déjà saisis sont conservés.</p>
+    <div class="formulaire__actions"><button type="submit" class="btn btn--primaire">Importer</button><a class="btn" href="{{ url_for('utilisateurs.liste') }}">Retour</a></div>
+  </form>
+  {% if rapport %}
+  <div class="carte">
+    <h2>Rapport d'import</h2>
+    <div class="tuiles">
+      <div class="tuile"><div class="tuile__valeur">{{ rapport.ecoles_creees }}</div><div class="tuile__libelle">Écoles créées</div></div>
+      <div class="tuile"><div class="tuile__valeur">{{ rapport.ecoles_maj }}</div><div class="tuile__libelle">Écoles mises à jour</div></div>
+      <div class="tuile"><div class="tuile__valeur">{{ rapport.personnels_crees }}</div><div class="tuile__libelle">Personnels créés</div></div>
+      <div class="tuile"><div class="tuile__valeur">{{ rapport.personnels_maj }}</div><div class="tuile__libelle">Personnels mis à jour</div></div>
+    </div>
+    <table class="tableau tableau--compact">
+      <thead><tr><th>Feuille</th><th>École</th><th>Type</th><th class="num">Personnels</th></tr></thead>
+      <tbody>{% for d in rapport.details %}<tr><td>{{ d.feuille }}</td><td>{{ d.ecole }}</td><td>{{ d.type }}</td><td class="num">{{ d.personnels }}</td></tr>{% endfor %}</tbody>
+    </table>
+    {% if rapport.feuilles_ignorees %}<p class="discret">Feuilles ignorées : {{ rapport.feuilles_ignorees | join(', ') }}</p>{% endif %}
+    <p><a class="btn btn--primaire" href="{{ url_for('dashboard.index') }}">Voir le tableau de bord</a></p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

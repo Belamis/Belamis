@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}{{ titre }}{% endblock %}
+{% block contenu %}
+<h1>{{ titre }} — <a href="{{ url_for('enseignants.fiche', ident=ens.id) }}">{{ ens.nom }} {{ ens.prenom }}</a></h1>
+{% set s = suivi or {} %}
+<form method="post" class="formulaire">
+  {{ m.csrf() }}
+  <div class="champs">
+    {{ m.texte('date', 'Date', s.date or aujourdhui, type='date', obligatoire=true) }}
+    {{ m.choix('type', 'Type de suivi', ref.TYPES_SUIVI_ENSEIGNANT, s.type or 'Visite conseil', obligatoire=true) }}
+    {{ m.choix('statut', 'Statut', ref.STATUTS_SUIVI, s.statut or 'Réalisé') }}
+    {{ m.texte('echeance', 'Échéance / prochaine étape', s.echeance, type='date', aide='Rappelée sur le tableau de bord tant que le suivi est « À planifier » ou « À suivre ».') }}
+    {{ m.texte('objet', 'Objet', s.objet, classe='champ--large', placeholder='Ex. : visite de classe en CP, séance de mathématiques') }}
+    {{ m.zone('compte_rendu', 'Compte rendu / observations', s.compte_rendu, lignes=6) }}
+    {{ m.zone('points_forts', 'Points forts', s.points_forts) }}
+    {{ m.zone('axes_progres', 'Axes de progrès', s.axes_progres) }}
+    {{ m.zone('actions_prevues', 'Actions prévues (formation, nouvelle visite…)', s.actions_prevues) }}
+  </div>
+  <div class="formulaire__actions">
+    <button type="submit" class="btn btn--primaire">Enregistrer</button>
+    <a class="btn" href="{{ url_for('enseignants.fiche', ident=ens.id) }}">Annuler</a>
+  </div>
+</form>
+{% endblock %}

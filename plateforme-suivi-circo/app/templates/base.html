@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titre %}Suivi circo{% endblock %} — {{ params.get('circonscription') or 'Circonscription' }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% if g.user %}
+<header class="entete">
+  <div class="entete__marque">
+    <a href="{{ url_for('dashboard.index') }}" class="entete__titre">
+      <span class="entete__logo">◆</span>
+      <span>
+        <strong>{{ params.get('circonscription') or 'Suivi de circonscription' }}</strong>
+        <small>{{ params.get('academie') or '' }}{% if params.get('annee_scolaire') %} · {{ params.annee_scolaire }}{% endif %}</small>
+      </span>
+    </a>
+  </div>
+  <nav class="entete__nav">
+    <a href="{{ url_for('dashboard.index') }}" class="{{ 'actif' if request.endpoint == 'dashboard.index' }}">Tableau de bord</a>
+    <a href="{{ url_for('effectifs.tableau') }}" class="{{ 'actif' if request.blueprint == 'effectifs' }}">Effectifs</a>
+    <a href="{{ url_for('ecoles.liste') }}" class="{{ 'actif' if request.blueprint == 'ecoles' }}">Écoles</a>
+    <a href="{{ url_for('enseignants.liste') }}" class="{{ 'actif' if request.blueprint == 'enseignants' }}">Personnels</a>
+    <a href="{{ url_for('eleves.liste') }}" class="{{ 'actif' if request.blueprint == 'eleves' }}">Élèves suivis</a>
+    <a href="{{ url_for('suivis.journal') }}" class="{{ 'actif' if request.blueprint == 'suivis' }}">Journal</a>
+    {% if g.user.role == 'admin' %}
+    <a href="{{ url_for('utilisateurs.liste') }}" class="{{ 'actif' if request.blueprint in ('utilisateurs', 'parametres', 'importer') }}">Administration</a>
+    {% endif %}
+  </nav>
+  <div class="entete__user">
+    <a href="{{ url_for('auth.mon_compte') }}" title="Mon compte">{{ g.user.nom }} <small>({{ ref.ROLES[g.user.role].split(' ')[0] }})</small></a>
+    <form method="post" action="{{ url_for('auth.logout') }}">
+      <input type="hidden" name="_csrf" value="{{ csrf_token() }}">
+      <button type="submit" class="btn btn--lien">Déconnexion</button>
+    </form>
+  </div>
+</header>
+{% endif %}
+
+<main class="contenu {% block classe_contenu %}{% endblock %}">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flashs">
+      {% for cat, msg in messages %}<div class="flash flash--{{ cat }}">{{ msg }}</div>{% endfor %}
+    </div>
+    {% endif %}
+  {% endwith %}
+  {% block contenu %}{% endblock %}
+</main>
+
+<footer class="pied">
+  Plateforme de suivi des enseignants et des élèves · données à caractère personnel : accès réservé aux personnels habilités de la circonscription.
+</footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

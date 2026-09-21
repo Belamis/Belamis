@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}Paramètres{% endblock %}
+{% block contenu %}
+<h1>Paramètres de la circonscription</h1>
+<form method="post" class="formulaire" style="max-width:640px">
+  {{ m.csrf() }}
+  <div class="champs">
+    {% for cle, lib, exemple in cles %}{{ m.texte(cle, lib, valeurs.get(cle, ''), placeholder=exemple) }}{% endfor %}
+  </div>
+  <p class="discret">Ces informations apparaissent dans l'en-tête des pages, des fiches école et du classeur Excel exporté.</p>
+  <div class="formulaire__actions">
+    <button type="submit" class="btn btn--primaire">Enregistrer</button>
+    <a class="btn" href="{{ url_for('utilisateurs.liste') }}">Retour</a>
+  </div>
+</form>
+{% endblock %}

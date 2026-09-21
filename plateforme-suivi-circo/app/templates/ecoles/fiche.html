@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}{{ ecole.nom }}{% endblock %}
+{% block contenu %}
+{% set saisie = g.user.role in ('admin', 'saisie') %}
+{% set NIV = ref.NIVEAUX_EFFECTIFS %}
+<div class="barre">
+  <div>
+    <h1>{{ ecole.nom }} <small class="discret">· {{ ecole.type }}{% if ecole.rne %} · RNE {{ ecole.rne }}{% endif %}</small></h1>
+    <span class="discret">{{ params.get('academie', '') }} — {{ params.get('circonscription', '') }} · Année scolaire {{ params.get('annee_scolaire') or annee_scolaire.libelle }}{% if ecole.date_maj %} · mise à jour le {{ ecole.date_maj | datefr }}{% endif %}</span>
+  </div>
+  <div class="barre__actions">
+    {% if saisie %}
+    <a class="btn btn--primaire" href="{{ url_for('enseignants.effectifs', ecole_id=ecole.id) }}">✎ Saisir les effectifs</a>
+    <a class="btn" href="{{ url_for('enseignants.creer', ecole=ecole.id) }}">+ Personnel</a>
+    <a class="btn" href="{{ url_for('eleves.creer', ecole=ecole.id) }}">+ Élève suivi</a>
+    <a class="btn" href="{{ url_for('ecoles.modifier', ident=ecole.id) }}">Modifier la fiche</a>
+    {% endif %}
+    <a class="btn" href="{{ url_for('exports.classeur') }}" title="Classeur Excel de toutes les écoles">⬇ Excel</a>
+    <button class="btn" onclick="window.print()">🖨 Imprimer</button>
+  </div>
+</div>
+
+<div class="grille grille--2">
+  <div class="carte">
+    <h2>📋 Fiche signalétique</h2>
+    <div class="fiche">
+      <dl>
+        <dt>Adresse</dt><dd>{{ ecole.adresse }}</dd>
+        <dt>Téléphone</dt><dd>{{ ecole.telephone }}</dd>
+        <dt>Courriel</dt><dd>{{ ecole.email }}</dd>
+        <dt>Horaires</dt><dd>{{ ecole.horaires }}</dd>
+        <dt>APC & horaires</dt><dd>{{ ecole.apc }}</dd>
+        <dt>Organisation (OTS)</dt><dd>{{ ecole.ots }}</dd>
+      </dl>
+      <dl>
+        <dt>Directeur / Directrice</dt><dd>{{ ecole.directeur }}</dd>
+        <dt>Secrétaire</dt><dd>{{ ecole.secretaire }}</dd>
+        <dt>FAEX</dt><dd>{{ ecole.faex_nom }}{% if ecole.faex_telephone %} · {{ ecole.faex_telephone }}{% endif %}{% if ecole.faex_email %} · {{ ecole.faex_email }}{% endif %}{% if ecole.faex_pct %} · {{ ecole.faex_pct }} %{% endif %}</dd>
+        <dt>AESH</dt><dd>{% for p in hors_org if p.statut == 'AESH' %}<a href="{{ url_for('enseignants.fiche', ident=p.id) }}">{{ p.nom }} {{ p.prenom }}</a>{% if p.telephone %} ({{ p.telephone }}){% endif %}{{ ', ' if not loop.last }}{% endfor %}</dd>
+        <dt>Éducation prioritaire</dt><dd>{{ ecole.education_prioritaire }}</dd>
+        <dt>Commune</dt><dd>{{ ecole.commune }}</dd>
+      </dl>
+    </div>
+    {% if ecole.notes %}<p class="bloc-texte discret" style="margin-top:.75rem">{{ ecole.notes }}</p>{% endif %}
+  </div>
+
+  <div class="carte">
+    <h2>🏫 Informations générales</h2>
+    <div class="tuiles">
+      <div class="tuile"><div class="tuile__valeur">{{ ecole.nb_salles }}</div><div class="tuile__libelle">Salles</div></div>
+      <div class="tuile"><div class="tuile__valeur">{{ ecole.nb_classes }}</div><div class="tuile__libelle">Classes déclarées</div></div>
+      <div class="tuile"><div class="tuile__valeur">{{ ecole.decharge_direction }} %</div><div class="tuile__libelle">Décharge de direction</div></div>
+      <div class="tuile tuile--vert"><div class="tuile__valeur">{{ stats.total_eleves }}</div><div class="tuile__libelle">Élèves (hors ULIS)</div></div>
+      <div class="tuile tuile--vert"><div class="tuile__valeur">{{ stats.total_ulis }}</div><div class="tuile__libelle">Élèves ULIS</div></div>
+      <div class="tuile"><div class="tuile__valeur">{{ stats.nb_enseignants }}</div><div class="tuile__libelle">Enseignants devant classe</div></div>
+      <div class="tuile"><div class="tuile__valeur">{{ stats.eleves_par_classe if stats.eleves_par_classe is not none else '—' }}</div><div class="tuile__libelle">Élèves / classe</div></div>
+    </div>
+    <div class="tableau-wrap"><table class="tableau tableau--compact">
+      <thead><tr><th class="cycle1">{{ ref.CYCLES[1] }}</th><th class="cycle2">{{ ref.CYCLES[2] }}</th><th class="cycle3">{{ ref.CYCLES[3] }}</th><th>ULIS</th></tr></thead>
+      <tbody><tr><td class="num cycle1">{{ stats.cycles[1] }}</td><td class="num cycle2">{{ stats.cycles[2] }}</td><td class="num cycle3">{{ stats.cycles[3] }}</td><td class="num">{{ stats.total_ulis }}</td></tr></tbody>
+    </table></div>
+  </div>
+</div>
+
+<div class="carte">
+  <div class="section-tete">
+    <h2>👩‍🏫 Organisation pédagogique</h2>
+    {% if saisie %}<a class="btn btn--petit btn--secondaire" href="{{ url_for('enseignants.effectifs', ecole_id=ecole.id) }}">✎ Grille de saisie des effectifs</a>{% endif %}
+  </div>
+  <div class="tableau-wrap"><table class="tableau tableau--compact">
+    <thead><tr><th>Enseignant(e)</th><th>Statut</th><th>Sexe</th><th>Dispositif</th><th>Salle</th>
+      {% for c, lib, cy in NIV %}<th class="num cycle{{ cy }}">{{ lib }}</th>{% endfor %}<th class="num">TOTAL*</th><th class="num">Suivi</th>{% if saisie %}<th></th>{% endif %}</tr></thead>
+    <tbody>
+    {% for p in dans_org %}
+    <tr>
+      <td><a href="{{ url_for('enseignants.fiche', ident=p.id) }}">{{ p.nom }} {{ p.prenom }}</a>{% if p.accompagnement %} <span class="badge badge--orange" title="Accompagnement renforcé">acc.</span>{% endif %}</td>
+      <td><span class="badge badge--statut" title="{{ p.statut | statut }}">{{ p.statut }}</span></td>
+      <td class="num">{{ p.sexe }}</td><td>{{ p.dispositif }}</td><td class="num">{{ p.salle }}</td>
+      {% for c, lib, cy in NIV %}<td class="num cycle{{ cy }}">{{ p[c] or '' }}</td>{% endfor %}
+      <td class="num"><strong>{{ p.eff_ps + p.eff_ms + p.eff_gs + p.eff_cp + p.eff_ce1 + p.eff_ce2 + p.eff_cm1 + p.eff_cm2 }}</strong></td>
+      <td class="num">{% if p.anciennete is not none %}<small title="Ancienneté">{{ p.anciennete }} an{{ 's' if p.anciennete > 1 }}</small>{% endif %}</td>
+      {% if saisie %}<td class="actions"><a class="btn btn--petit" href="{{ url_for('enseignants.modifier', ident=p.id) }}">Modifier</a></td>{% endif %}
+    </tr>
+    {% else %}<tr><td colspan="{{ 17 if saisie else 16 }}" class="discret">Aucune ligne de classe. {% if saisie %}<a href="{{ url_for('enseignants.creer', ecole=ecole.id) }}">Ajouter un·e enseignant·e</a>.{% endif %}</td></tr>{% endfor %}
+    </tbody>
+    <tfoot>
+      <tr class="total"><td colspan="5">EFFECTIFS TOTAUX PAR NIVEAU — source ONDE</td>
+        {% for c, lib, cy in NIV %}<td class="num">{{ stats.effectifs[c] }}</td>{% endfor %}<td class="num">{{ stats.total_eleves }}</td><td></td>{% if saisie %}<td></td>{% endif %}</tr>
+      <tr class="sous-total"><td colspan="5">Nombre de classes par niveau</td>
+        {% for c, lib, cy in NIV %}<td class="num">{{ stats.classes[c] }}</td>{% endfor %}<td class="num">{{ stats.total_classes }}</td><td></td>{% if saisie %}<td></td>{% endif %}</tr>
+    </tfoot>
+  </table></div>
+  <p class="discret"><small>(*) TOTAL : effectifs hors ULIS (élèves ULIS déjà comptabilisés dans leur classe ordinaire). CP/CE1 à effectif réduit en « Duo » : chaque enseignant·e compte pour une classe.</small></p>
+</div>
+
+<div class="carte">
+  <div class="section-tete">
+    <h2>👨‍🏫 Personnels non comptabilisés dans l'organisation pédagogique <small>(TR-ZIL, BGS, AESH…)</small></h2>
+    {% if saisie %}<a class="btn btn--petit" href="{{ url_for('enseignants.creer', ecole=ecole.id) }}">+ Ajouter</a>{% endif %}
+  </div>
+  <div class="tableau-wrap"><table class="tableau tableau--compact">
+    <thead><tr><th>N°</th><th>Nom et prénom</th><th>Statut</th><th>Sexe</th><th class="num">Anc. (ans)</th><th>Fonction</th><th>Téléphone</th><th>Observations</th>{% if saisie %}<th></th>{% endif %}</tr></thead>
+    <tbody>
+    {% for p in hors_org %}
+    <tr><td class="num">{{ loop.index }}</td><td><a href="{{ url_for('enseignants.fiche', ident=p.id) }}">{{ p.nom }} {{ p.prenom }}</a></td>
+      <td><span class="badge badge--statut">{{ p.statut }}</span></td><td class="num">{{ p.sexe }}</td>
+      <td class="num">{{ p.anciennete if p.anciennete is not none else '' }}</td><td>{{ p.fonction }}</td><td>{{ p.telephone }}</td><td>{{ p.observations }}</td>
+      {% if saisie %}<td class="actions"><a class="btn btn--petit" href="{{ url_for('enseignants.modifier', ident=p.id) }}">Modifier</a></td>{% endif %}</tr>
+    {% else %}<tr><td colspan="9" class="discret">Aucun.</td></tr>{% endfor %}
+    </tbody>
+  </table></div>
+</div>
+
+<div class="carte">
+  <h2>📊 Statistiques — calculées automatiquement</h2>
+  <div class="grille grille--3">
+    <div>
+      <h3>Répartition par statut et par sexe</h3>
+      <table class="tableau tableau--compact">
+        <thead><tr><th>Statut</th><th class="num">Hommes</th><th class="num">Femmes</th><th class="num">Total</th></tr></thead>
+        <tbody>{% for s in stats.statuts %}<tr><td><span class="badge badge--statut">{{ s.statut }}</span> <small>{{ (s.statut | statut).split(' — ')[1] if ' — ' in (s.statut | statut) else '' }}</small></td><td class="num">{{ s.hommes }}</td><td class="num">{{ s.femmes }}</td><td class="num">{{ s.total }}</td></tr>{% endfor %}
+        <tr class="total"><td>TOTAL</td><td class="num">{{ stats.total_hommes }}</td><td class="num">{{ stats.total_femmes }}</td><td class="num">{{ stats.nb_enseignants }}</td></tr></tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Ancienneté <small class="discret">(moyenne : {{ stats.anciennete_moyenne if stats.anciennete_moyenne is not none else '—' }} ans)</small></h3>
+      <table class="tableau tableau--compact">
+        <thead><tr><th>Tranche</th><th class="num">Nb</th></tr></thead>
+        <tbody>{% for lib, n in stats.tranches %}<tr><td>{{ lib }}</td><td class="num">{{ n }}</td></tr>{% endfor %}
+        <tr class="total"><td>Renseignés</td><td class="num">{{ stats.tranches | map(attribute=1) | sum }}</td></tr></tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Répartition par dispositif</h3>
+      <table class="tableau tableau--compact">
+        <thead><tr><th>Dispositif</th><th class="num">Nb enseignants</th><th class="num">Cl. CP</th><th class="num">Cl. CE1</th></tr></thead>
+        <tbody>{% for d in stats.dispositifs %}<tr><td>{{ d.dispositif }}</td><td class="num">{{ d.nb }}</td><td class="num">{{ d.cp if d.dispositif == 'Duo' else '—' }}</td><td class="num">{{ d.ce1 if d.dispositif == 'Duo' else '—' }}</td></tr>{% endfor %}</tbody>
+      </table>
+      <h3>✅ Contrôles de cohérence</h3>
+      <table class="tableau tableau--compact">
+        <thead><tr><th>Contrôle</th><th>Résultat</th><th class="num">A</th><th class="num">B</th></tr></thead>
+        <tbody>{% for c in stats.controles %}<tr class="{{ '' if c.ok else 'controle-ko' }}"><td>{{ c.libelle }}</td><td>{% if c.ok %}<span class="ok">✔ OK</span>{% else %}<span class="ko">⚠ Écart</span>{% endif %}</td><td class="num">{{ c.a }}</td><td class="num">{{ c.b }}</td></tr>{% endfor %}</tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="carte">
+  <div class="section-tete">
+    <h2>🧒 Élèves à besoins particuliers suivis <small>({{ eleves | length }})</small></h2>
+    {% if saisie %}<a class="btn btn--petit" href="{{ url_for('eleves.creer', ecole=ecole.id) }}">+ Ajouter</a>{% endif %}
+  </div>
+  <div class="tableau-wrap"><table class="tableau tableau--compact">
+    <thead><tr><th>Élève</th><th>Niveau</th><th>Enseignant·e</th><th>Dispositifs</th><th>AESH</th><th>MDPH</th></tr></thead>
+    <tbody>{% for el in eleves %}
+    <tr><td><a href="{{ url_for('eleves.fiche', ident=el.id) }}">{{ el.nom }} {{ el.prenom }}</a></td><td>{{ el.niveau }}</td><td>{{ el.ens_nom or '' }} {{ el.ens_prenom or '' }}</td>
+      <td class="puces">{% for cle, lib in ref.DISPOSITIFS_ELEVE if el[cle] %}<span class="badge badge--bleu">{{ lib }}</span>{% endfor %}</td>
+      <td>{{ el.aesh if el.aesh != 'Non' else '' }}</td><td>{{ el.mdph if el.mdph != 'Aucun dossier' else '' }}</td></tr>
+    {% else %}<tr><td colspan="6" class="discret">Aucun élève suivi nominativement dans cette école.</td></tr>{% endfor %}</tbody>
+  </table></div>
+</div>
+
+{% if g.user.role == 'admin' and not dans_org and not hors_org and not eleves %}
+<div class="carte"><h2>Zone de danger</h2>{{ m.bouton_supprimer(url_for('ecoles.supprimer', ident=ecole.id), "Supprimer l'école", "Supprimer définitivement cette école ?") }}</div>
+{% endif %}
+{% endblock %}

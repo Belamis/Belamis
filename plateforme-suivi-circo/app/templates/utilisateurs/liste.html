@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block titre %}Administration{% endblock %}
+{% block contenu %}
+<div class="barre">
+  <h1>Administration</h1>
+  <div class="barre__actions">
+    <a class="btn" href="{{ url_for('parametres.editer') }}">⚙ Paramètres de la circonscription</a>
+    <a class="btn" href="{{ url_for('importer.page') }}">⬆ Importer un classeur Excel</a>
+    <a class="btn" href="{{ url_for('exports.classeur') }}">⬇ Exporter le classeur Excel</a>
+  </div>
+</div>
+<div class="barre"><h2>Comptes utilisateurs</h2><a class="btn btn--primaire" href="{{ url_for('utilisateurs.creer') }}">+ Nouveau compte</a></div>
+<div class="tableau-wrap"><table class="tableau">
+  <thead><tr><th>Identifiant</th><th>Nom</th><th>Fonction</th><th>Rôle</th><th>État</th><th>Créé le</th><th></th></tr></thead>
+  <tbody>
+  {% for u in users %}
+  <tr><td><code>{{ u.login }}</code></td><td>{{ u.nom }}</td><td>{{ u.fonction }}</td><td>{{ ref.ROLES[u.role] }}</td>
+    <td>{% if u.actif %}<span class="badge badge--vert">actif</span>{% else %}<span class="badge badge--gris">désactivé</span>{% endif %}</td>
+    <td>{{ u.cree_le | datetimefr }}</td>
+    <td class="actions"><a class="btn btn--petit" href="{{ url_for('utilisateurs.modifier', ident=u.id) }}">Modifier</a></td></tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+<p class="discret">Rôles : <strong>Administrateur</strong> gère les comptes, les paramètres et les imports ; <strong>Saisie</strong> crée et modifie écoles, personnels, élèves et suivis ; <strong>Consultation</strong> lit et exporte.</p>
+{% endblock %}

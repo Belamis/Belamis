@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}Tableau de bord{% endblock %}
+{% block contenu %}
+<div class="barre">
+  <h1>Tableau de bord — {{ params.get('annee_scolaire') or annee_scolaire.libelle }}</h1>
+  <div class="barre__actions">
+    <a class="btn btn--secondaire" href="{{ url_for('exports.classeur') }}">⬇ Classeur Excel complet</a>
+    <a class="btn" href="{{ url_for('carte.tableau') }}">Carte scolaire</a>
+    <a class="btn" href="{{ url_for('effectifs.tableau') }}">Effectifs par école</a>
+  </div>
+</div>
+
+<div class="tuiles">
+  <a class="tuile" href="{{ url_for('ecoles.liste') }}"><div class="tuile__valeur">{{ s.nb_ecoles }}</div><div class="tuile__libelle">Écoles</div></a>
+  <a class="tuile" href="{{ url_for('effectifs.tableau') }}"><div class="tuile__valeur">{{ s.eleves_hors_ulis }}</div><div class="tuile__libelle">Élèves (hors ULIS)</div></a>
+  <a class="tuile" href="{{ url_for('effectifs.tableau') }}"><div class="tuile__valeur">{{ s.eleves_ulis }}</div><div class="tuile__libelle">Élèves ULIS</div></a>
+  <a class="tuile" href="{{ url_for('effectifs.tableau') }}"><div class="tuile__valeur">{{ s.classes }}</div><div class="tuile__libelle">Classes</div></a>
+  <a class="tuile" href="{{ url_for('enseignants.liste', org=1) }}"><div class="tuile__valeur">{{ s.enseignants }}</div><div class="tuile__libelle">Enseignants devant classe</div></a>
+  <a class="tuile" href="{{ url_for('enseignants.liste') }}"><div class="tuile__valeur">{{ s.personnels }}</div><div class="tuile__libelle">Personnels (hors AESH)</div></a>
+  <a class="tuile tuile--vert" href="{{ url_for('eleves.liste', dispositif='tous') }}"><div class="tuile__valeur">{{ eleves_suivis }}</div><div class="tuile__libelle">Élèves à besoins particuliers suivis</div></a>
+  <a class="tuile tuile--vert" href="{{ url_for('suivis.journal') }}"><div class="tuile__valeur">{{ suivis_annee }}</div><div class="tuile__libelle">Suivis saisis cette année</div></a>
+</div>
+
+<div class="grille grille--2">
+  <div class="carte">
+    <h2>Par cycle</h2>
+    <div class="tableau-wrap"><table class="tableau tableau--compact">
+      <thead><tr><th class="cycle1">{{ ref.CYCLES[1] }}</th><th class="cycle2">{{ ref.CYCLES[2] }}</th><th class="cycle3">{{ ref.CYCLES[3] }}</th><th>ULIS</th><th>Total</th></tr></thead>
+      <tbody><tr><td class="num cycle1">{{ s.cycles[1] }}</td><td class="num cycle2">{{ s.cycles[2] }}</td><td class="num cycle3">{{ s.cycles[3] }}</td><td class="num">{{ s.eleves_ulis }}</td><td class="num total">{{ s.eleves_hors_ulis }}</td></tr></tbody>
+    </table></div>
+    <h2>Par niveau</h2>
+    <div class="tableau-wrap"><table class="tableau tableau--compact">
+      <thead><tr><th>Niveau</th><th class="num">Élèves</th><th class="num">Classes</th><th class="num">Élèves / classe</th><th>Répartition</th></tr></thead>
+      <tbody>
+      {% set maxi = (s.par_niveau | map(attribute='eleves') | max) or 1 %}
+      {% for n in s.par_niveau %}
+      <tr>
+        <td class="cycle{{ n.cycle }}"><strong>{{ n.niveau }}</strong></td>
+        <td class="num">{{ n.eleves }}</td><td class="num">{{ n.classes }}</td>
+        <td class="num">{% if n.ratio is not none %}{{ n.ratio }}{% else %}<span class="vide">—</span>{% endif %}</td>
+        <td><div class="barre-h__fond"><div class="barre-h__val" style="width: {{ (100 * n.eleves / maxi) | round(1) }}%"></div></div></td>
+      </tr>
+      {% endfor %}
+      <tr class="total"><td>Total</td><td class="num">{{ s.eleves_hors_ulis }}</td><td class="num">{{ s.classes }}</td>
+        <td class="num">{{ (s.eleves_hors_ulis / s.classes) | round(1) if s.classes else '—' }}</td><td></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="carte">
+    <h2>Écoles</h2>
+    <div class="tableau-wrap"><table class="tableau tableau--compact">
+      <thead><tr><th>École</th><th>Type</th><th class="num">Élèves</th><th class="num">Classes</th><th class="num">Ens.</th><th>Mise à jour</th></tr></thead>
+      <tbody>
+      {% for e in s.ecoles %}
+      <tr>
+        <td><a href="{{ url_for('ecoles.fiche', ident=e.id) }}">{{ e.nom }}</a></td>
+        <td>{{ e.type }}</td>
+        <td class="num">{{ e.total }}{% if e.eff_ulis %} <small>+{{ e.eff_ulis }} ULIS</small>{% endif %}</td>
+        <td class="num">{{ e.nb_classes_calc }}{% if e.nb_classes != e.nb_classes_calc %} <span class="ko" title="Nombre déclaré dans la fiche : {{ e.nb_classes }}">⚠</span>{% endif %}</td>
+        <td class="num">{{ e.nb_enseignants }}</td>
+        <td>{{ e.date_maj | datefr or '—' }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="6" class="discret">Aucune école. <a href="{{ url_for('ecoles.creer') }}">Créer la première école</a>{% if g.user.role == 'admin' %} ou <a href="{{ url_for('importer.page') }}">importer votre classeur Excel</a>{% endif %}.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table></div>
+    {% if ecoles_incoherentes %}
+    <p class="discret" style="margin-top:.5rem">⚠ {{ ecoles_incoherentes | length }} école(s) avec un écart entre le nombre de classes déclaré et les lignes saisies, ou sans effectif.</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="grille grille--3">
+  <div class="carte">
+    <h2>Personnels par statut</h2>
+    <div class="tableau-wrap"><table class="tableau tableau--compact">
+      <thead><tr><th>Statut</th><th class="num">H</th><th class="num">F</th><th class="num">Total</th></tr></thead>
+      <tbody>{% for st in statuts %}
+      <tr><td><span class="badge badge--statut">{{ st.statut }}</span> <small>{{ st.statut | statut | replace(st.statut ~ ' — ', '') }}</small></td>
+        <td class="num">{{ st.hommes }}</td><td class="num">{{ st.femmes }}</td><td class="num"><a href="{{ url_for('enseignants.liste', statut=st.statut) }}">{{ st.nb }}</a></td></tr>
+      {% else %}<tr><td colspan="4" class="discret">Aucun personnel saisi.</td></tr>{% endfor %}</tbody>
+    </table></div>
+  </div>
+
+  <div class="carte">
+    <h2>À accompagner sans visite cette année <small>({{ a_visiter | length }})</small></h2>
+    <p class="discret">Contractuels, stagiaires et personnels signalés « accompagnement renforcé » sans suivi réalisé depuis le {{ annee_scolaire.debut | datefr }}.</p>
+    <ul class="liste-simple">
+      {% for e in a_visiter[:12] %}
+      <li><a href="{{ url_for('enseignants.fiche', ident=e.id) }}">{{ e.nom }} {{ e.prenom }}</a> <small>{{ e.statut }} · {{ e.ecole or 'sans école' }}</small></li>
+      {% else %}<li class="discret">Tout le monde a été vu. 👍</li>{% endfor %}
+      {% if a_visiter | length > 12 %}<li><a href="{{ url_for('enseignants.liste', accompagnement=1) }}">Voir tout…</a></li>{% endif %}
+    </ul>
+  </div>
+
+  <div class="carte">
+    <h2>Échéances à 30 jours <small>({{ echeances | length }})</small></h2>
+    <ul class="liste-simple">
+      {% for s_ in echeances %}
+      <li>
+        <span>{% if s_.cible == 'enseignant' %}<a href="{{ url_for('enseignants.fiche', ident=s_.cible_id) }}">{{ s_.personne }}</a>{% else %}<a href="{{ url_for('eleves.fiche', ident=s_.cible_id) }}">{{ s_.personne }}</a>{% endif %}<br><small>{{ s_.type }}{% if s_.objet %} — {{ s_.objet }}{% endif %}</small></span>
+        <span class="{{ 'ko' if s_.echeance < aujourdhui }}">{{ s_.echeance | datefr }}</span>
+      </li>
+      {% else %}<li class="discret">Aucune échéance proche.</li>{% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="carte">
+  <div class="section-tete"><h2>Derniers suivis saisis</h2><a href="{{ url_for('suivis.journal') }}">Journal complet ›</a></div>
+  <div class="tableau-wrap"><table class="tableau tableau--compact">
+    <thead><tr><th>Date</th><th>Personne</th><th>Type</th><th>Objet</th><th>Saisi par</th></tr></thead>
+    <tbody>{% for s_ in recents %}
+    <tr><td>{{ s_.date | datefr }}</td>
+      <td>{% if s_.cible == 'enseignant' %}👩‍🏫 <a href="{{ url_for('enseignants.fiche', ident=s_.cible_id) }}">{{ s_.personne }}</a>{% else %}🧒 <a href="{{ url_for('eleves.fiche', ident=s_.cible_id) }}">{{ s_.personne }}</a>{% endif %}</td>
+      <td>{{ s_.type }}</td><td>{{ s_.objet }}</td><td>{{ s_.auteur or '' }}</td></tr>
+    {% else %}<tr><td colspan="5" class="discret">Aucun suivi saisi pour le moment.</td></tr>{% endfor %}</tbody>
+  </table></div>
+</div>
+{% endblock %}

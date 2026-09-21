@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}Carte scolaire {{ campagne }}{% endblock %}
+{% block contenu %}
+{% set saisie = g.user.role in ('admin', 'saisie') %}
+{% macro num(nom, ident, valeur, titre='') %}
+  {%- if saisie -%}<input type="number" min="0" max="999" name="{{ nom }}_{{ ident }}" value="{{ valeur if valeur is not none else '' }}"{% if titre %} title="{{ titre }}"{% endif %}>
+  {%- else -%}{{ valeur if valeur is not none else '' }}{%- endif -%}
+{% endmacro %}
+{% macro evol(v) %}<span class="{{ 'ok' if v > 0 else ('ko' if v < 0 else '') }}">{{ '+' if v > 0 }}{{ v }}</span>{% endmacro %}
+
+<div class="barre">
+  <div>
+    <h1>Carte scolaire {{ campagne }}</h1>
+    <span class="discret">Constat de rentrée → prévisions {{ campagne }}, avant et après mesures. Le constat est repris des fiches école ; la montée pédagogique est automatique.</span>
+  </div>
+  <div class="barre__actions">
+    <a class="btn btn--secondaire" href="{{ url_for('exports.carte_scolaire', campagne=campagne) }}">⬇ Classeur carte scolaire</a>
+    <button class="btn" onclick="window.print()">🖨 Imprimer</button>
+  </div>
+</div>
+
+{% if manquants %}
+<div class="flash flash--erreur">Prévisions incomplètes : les <strong>PS prévus</strong> (maternelles et primaires) ou <strong>CP prévus</strong> (élémentaires) ne sont pas encore saisis pour {{ manquants | length }} école(s). Tant qu'ils valent 0, l'évolution affichée est faussée à la baisse du niveau d'entrée.</div>
+{% endif %}
+
+<div class="carte">
+  <h2>Synthèse de circonscription</h2>
+  <div class="tableau-wrap"><table class="tableau tableau--compact">
+    <thead><tr><th>Effectifs</th><th class="num">Constat</th><th class="num">Prévisions {{ campagne }}</th><th class="num">Évolution</th><th class="num">Évolution %</th></tr></thead>
+    <tbody>
+    {% for gr in groupes %}<tr><td>{{ gr.titre }}</td><td class="num">{{ gr.totaux.total_c }}</td><td class="num">{{ gr.totaux.total_p }}</td><td class="num">{{ evol(gr.totaux.evolution) }}</td><td class="num">{% if gr.totaux.pct is not none %}{{ evol(gr.totaux.pct) }} %{% else %}—{% endif %}</td></tr>{% endfor %}
+    <tr class="total"><td>TOTAL CIRCONSCRIPTION</td><td class="num">{{ general.total_c }}</td><td class="num">{{ general.total_p }}</td><td class="num">{{ evol(general.evolution) }}</td><td class="num">{% if general.pct is not none %}{{ evol(general.pct) }} %{% else %}—{% endif %}</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grille grille--2" style="margin-top:1rem">
+    <div>
+      <h3>Divisions (classes)</h3>
+      <table class="tableau tableau--compact">
+        <thead><tr><th></th><th class="num">Constat</th><th class="num">Après mesures</th><th class="num">Ouv.</th><th class="num">Ferm.</th><th class="num">Solde</th></tr></thead>
+        <tbody>{% for gr in groupes %}<tr><td>{{ gr.titre }}</td><td class="num">{{ gr.totaux.div }}</td><td class="num">{{ gr.totaux.div_apres }}</td><td class="num">{{ gr.totaux.ouverture or '' }}</td><td class="num">{{ gr.totaux.fermeture or '' }}</td><td class="num">{{ evol(gr.totaux.ouverture - gr.totaux.fermeture) }}</td></tr>{% endfor %}
+        <tr class="total"><td>TOTAL</td><td class="num">{{ general.div }}</td><td class="num">{{ general.div_apres }}</td><td class="num">{{ general.ouverture }}</td><td class="num">{{ general.fermeture }}</td><td class="num">{{ evol(general.ouverture - general.fermeture) }}</td></tr></tbody>
+      </table>
+      <h3>Salles de classe <small class="discret">(une salle par division, hors rotation)</small></h3>
+      <table class="tableau tableau--compact">
+        <thead><tr><th></th><th class="num">Disponibles</th><th class="num">Nécessaires {{ campagne }}</th><th class="num">Écart</th></tr></thead>
+        <tbody>{% for gr in groupes %}<tr><td>{{ gr.titre }}</td><td class="num">{{ gr.totaux.salles }}</td><td class="num">{{ gr.totaux.salles_necessaires }}</td><td class="num">{{ evol(gr.totaux.ecart_salles) }}</td></tr>{% endfor %}
+        <tr class="total"><td>TOTAL</td><td class="num">{{ general.salles }}</td><td class="num">{{ general.salles_necessaires }}</td><td class="num">{{ evol(general.ecart_salles) }}</td></tr></tbody>
+      </table>
+    </div>
+    <div>
+      <h3>E/D moyen <small class="discret">(effectifs / divisions)</small></h3>
+      <table class="tableau tableau--compact">
+        <thead><tr><th></th><th class="num">Constat</th><th class="num">Projeté avant mesures</th><th class="num">Après mesures</th></tr></thead>
+        <tbody>{% for gr in groupes %}<tr><td>{{ gr.titre }}</td><td class="num">{{ gr.totaux.ed or '—' }}</td><td class="num">{{ gr.totaux.ed_avant or '—' }}</td><td class="num {{ 'ko' if gr.totaux.ed_apres and gr.totaux.ed_apres > seuil_ed }}">{{ gr.totaux.ed_apres or '—' }}</td></tr>{% endfor %}
+        <tr class="total"><td>TOTAL</td><td class="num">{{ general.ed or '—' }}</td><td class="num">{{ general.ed_avant or '—' }}</td><td class="num">{{ general.ed_apres or '—' }}</td></tr></tbody>
+      </table>
+      <p class="discret"><small>Seuil d'alerte E/D : {{ seuil_ed }} (modifiable dans les paramètres). Les E/D après mesures au-dessus du seuil sont signalés.</small></p>
+    </div>
+  </div>
+</div>
+
+{% for gr in groupes %}
+{% set niveaux_type = gr.lignes[0].niveaux if gr.lignes else [] %}
+{% set libelles = {'ps':'PS','ms':'MS','gs':'GS','cp':'CP','ce1':'CE1','ce2':'CE2','cm1':'CM1','cm2':'CM2'} %}
+{% set cycle = {'ps':1,'ms':1,'gs':1,'cp':2,'ce1':2,'ce2':2,'cm1':3,'cm2':3} %}
+{% set a_saisir = 'cp' if gr.type == 'Élémentaire' else 'ps' %}
+{% set champ_saisi = 'cp_prevus' if gr.type == 'Élémentaire' else 'ps_prevus' %}
+{% set sup = [('div_cp_ce1','Div. CP-CE1'),('div_ce2_cm1_cm2','Div. CE2-CM1-CM2'),('div_rotation','dont rotation / duo')] if gr.type == 'Élémentaire' else ([('div_mat','Div. mat.'),('div_elem','Div. élém.')] if gr.type == 'Primaire' else []) %}
+<div class="carte">
+  <h2>{{ gr.titre }} <small class="discret">— constat → prévisions {{ campagne }}</small></h2>
+  <form method="post" action="{{ url_for('carte.enregistrer', campagne=campagne) }}">
+    {{ m.csrf() }}
+    <div class="tableau-wrap"><table class="tableau tableau--compact">
+      <thead>
+        <tr><th rowspan="2">École</th><th rowspan="2">RNE</th>
+          <th colspan="{{ niveaux_type | length + 2 + sup | length }}">Constat</th>
+          <th colspan="{{ niveaux_type | length + 2 }}">Prévisions {{ campagne }}</th>
+          <th colspan="4">Mesures</th><th colspan="3">Salles</th><th rowspan="2">Observations</th></tr>
+        <tr>
+          {% for n in niveaux_type %}<th class="num">{{ libelles[n] }}</th>{% endfor %}<th class="num">Total</th><th class="num">Divisions</th>
+          {% for _, lib in sup %}<th class="num">{{ lib }}</th>{% endfor %}
+          {% for n in niveaux_type %}<th class="num">{{ libelles[n] }}{{ ' *' if n == a_saisir }}</th>{% endfor %}<th class="num">Total prévu</th><th class="num">E/D avant</th>
+          <th class="num">Ouv.</th><th class="num">Ferm.</th><th class="num">Div. après</th><th class="num">E/D après</th>
+          <th class="num">Salles</th><th class="num">Nécessaires</th><th class="num">Écart</th></tr>
+      </thead>
+      <tbody>
+      {% for l in gr.lignes %}
+      {% set eid = l.ecole.id %}
+      <tr>
+        <td style="min-width:11rem">
+          <input type="hidden" name="ecole_id" value="{{ eid }}">
+          <a href="{{ url_for('ecoles.fiche', ident=eid) }}">{{ l.ecole.nom }}</a>
+          <label class="discret" title="Cocher pour saisir le constat à la main au lieu de le reprendre de la fiche école" style="white-space:nowrap"><input type="checkbox" name="constat_manuel_{{ eid }}" {{ 'checked' if l.manuel }} {{ '' if saisie else 'disabled' }}> <small>manuel</small></label>
+        </td>
+        <td><small>{{ l.ecole.rne }}</small></td>
+        {% for n in niveaux_type %}
+        <td class="num cycle{{ cycle[n] }}">{% if l.manuel and saisie %}{{ num('c_' ~ n, eid, l.constat[n]) }}{% else %}{{ l.constat[n] }}<input type="hidden" name="c_{{ n }}_{{ eid }}" value="{{ l.carte['c_' ~ n] }}">{% endif %}</td>
+        {% endfor %}
+        <td class="num"><strong>{{ l.total_c }}</strong></td>
+        <td class="num">{{ num('div_constat', eid, l.carte.div_constat if l.carte.div_constat is not none else l.div_auto, "Nombre d'enseignants devant classe") }}</td>
+        {% for cle, _ in sup %}<td class="num">{{ num(cle, eid, l.carte[cle] if l.carte[cle] is not none else l[cle]) }}</td>{% endfor %}
+        {% for n in niveaux_type %}
+          {% if n == a_saisir %}
+          <td class="num cycle{{ cycle[n] }}">{{ num(champ_saisi, eid, l.carte[champ_saisi]) }}
+            {% if gr.type == 'Élémentaire' and l.gs_rattaches.noms %}<br><small class="discret" title="GS du constat de {{ l.gs_rattaches.noms | join(', ') }}">GS ratt. {{ l.gs_rattaches.nb }}</small>{% endif %}</td>
+          {% else %}<td class="num">{{ l.prev[n] }}</td>{% endif %}
+        {% endfor %}
+        <td class="num"><strong>{{ l.total_p }}</strong></td><td class="num">{{ l.ed_avant or '—' }}</td>
+        <td class="num">{{ num('ouverture', eid, l.carte.ouverture) }}</td>
+        <td class="num">{{ num('fermeture', eid, l.carte.fermeture) }}</td>
+        <td class="num">{{ l.div_apres }}</td>
+        <td class="num {{ 'ko' if l.ed_apres and l.ed_apres > seuil_ed }}">{{ l.ed_apres or '—' }}</td>
+        <td class="num">{{ num('nb_salles', eid, l.carte.nb_salles if l.carte.nb_salles is not none else l.ecole.nb_salles) }}</td>
+        <td class="num">{{ l.salles_necessaires }}</td><td class="num">{{ evol(l.ecart_salles) }}</td>
+        <td>{% if saisie %}<input type="text" name="observations_{{ eid }}" value="{{ l.carte.observations }}" placeholder="rotation, modulaires…">{% else %}{{ l.carte.observations }}{% endif %}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="20" class="discret">Aucune école de ce type.</td></tr>
+      {% endfor %}
+      </tbody>
+      <tfoot><tr class="total">
+        <td colspan="2">TOTAL {{ gr.titre | upper }}</td>
+        {% for n in niveaux_type %}<td class="num">{{ gr.totaux.constat[n] }}</td>{% endfor %}<td class="num">{{ gr.totaux.total_c }}</td><td class="num">{{ gr.totaux.div }}</td>
+        {% for cle, _ in sup %}<td class="num">{{ gr.totaux[cle] }}</td>{% endfor %}
+        {% for n in niveaux_type %}<td class="num">{{ gr.totaux.prev[n] }}</td>{% endfor %}<td class="num">{{ gr.totaux.total_p }}</td><td class="num">{{ gr.totaux.ed_avant or '—' }}</td>
+        <td class="num">{{ gr.totaux.ouverture }}</td><td class="num">{{ gr.totaux.fermeture }}</td><td class="num">{{ gr.totaux.div_apres }}</td><td class="num">{{ gr.totaux.ed_apres or '—' }}</td>
+        <td class="num">{{ gr.totaux.salles }}</td><td class="num">{{ gr.totaux.salles_necessaires }}</td><td class="num">{{ evol(gr.totaux.ecart_salles) }}</td><td></td>
+      </tr></tfoot>
+    </table></div>
+    {% if saisie and gr.lignes %}
+    <div class="formulaire__actions">
+      <button type="submit" class="btn btn--primaire">Enregistrer {{ gr.titre | lower }}</button>
+      <span class="discret"><small>* colonne à saisir : {{ 'CP prévus' if gr.type == 'Élémentaire' else 'PS prévus' }}. Les autres niveaux prévus sont calculés par montée pédagogique.</small></span>
+    </div>
+    {% endif %}
+  </form>
+</div>
+{% endfor %}
+
+<div class="carte">
+  <h2>Postes de professeurs hors de la classe</h2>
+  <form method="post" action="{{ url_for('carte.enregistrer_postes', campagne=campagne) }}">
+    {{ m.csrf() }}
+    <div class="tableau-wrap"><table class="tableau tableau--compact">
+      <thead><tr><th>Poste</th><th>Spécialité</th><th class="num">Supports (constat)</th><th class="num">Affectations</th><th class="num">Ouverture</th><th class="num">Fermeture</th><th class="num">Supports {{ campagne }}</th></tr></thead>
+      <tbody>
+      {% for p in postes %}
+      <tr>
+        <td>{{ p.poste }}<input type="hidden" name="poste_id" value="{{ p.id }}"></td><td>{{ p.specialite }}</td>
+        {% for cle in ['supports', 'affectations', 'ouverture', 'fermeture'] %}
+        <td class="num">{% if saisie %}<input type="number" min="0" step="0.5" name="{{ cle }}_{{ p.id }}" value="{{ p[cle] or '' }}">{% else %}{{ p[cle] }}{% endif %}</td>
+        {% endfor %}
+        <td class="num"><strong>{{ p.apres }}</strong></td>
+      </tr>
+      {% endfor %}
+      </tbody>
+      <tfoot><tr class="total"><td colspan="2">TOTAL</td><td class="num">{{ totaux_postes.supports }}</td><td class="num">{{ totaux_postes.affectations }}</td><td class="num">{{ totaux_postes.ouverture }}</td><td class="num">{{ totaux_postes.fermeture }}</td><td class="num">{{ totaux_postes.apres }}</td></tr></tfoot>
+    </table></div>
+    {% if saisie %}<div class="formulaire__actions"><button type="submit" class="btn btn--primaire">Enregistrer les postes</button></div>{% endif %}
+  </form>
+</div>
+
+<p class="discret"><small>Mode d'emploi : le constat de rentrée est repris des fiches école (cochez « manuel » pour le saisir ici). Saisissez ensuite les <strong>PS prévus</strong> en maternelle et primaire, les <strong>CP prévus</strong> en élémentaire, puis les ouvertures et fermetures proposées. Tout le reste se calcule : montée pédagogique, effectifs prévus, E/D, divisions après mesures, salles nécessaires. Les élèves d'ULIS ne sont pas comptés séparément : ils figurent dans leur classe ordinaire.</small></p>
+{% endblock %}

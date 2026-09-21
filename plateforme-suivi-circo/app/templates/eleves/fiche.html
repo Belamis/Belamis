@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}{{ el.nom }} {{ el.prenom }}{% endblock %}
+{% block contenu %}
+{% set saisie = g.user.role in ('admin', 'saisie') %}
+<div class="barre">
+  <div>
+    <h1>{{ el.nom }} {{ el.prenom }}{% if not el.actif %} <span class="badge badge--gris">archivé</span>{% endif %}</h1>
+    <span class="discret">{{ el.niveau }}{% if el.ecole_nom %} · <a href="{{ url_for('ecoles.fiche', ident=el.ecole_id) }}">{{ el.ecole_nom }}</a>{% endif %}{% if el.ens_nom %} · classe de <a href="{{ url_for('enseignants.fiche', ident=el.enseignant_id) }}">{{ el.ens_nom }} {{ el.ens_prenom }}</a>{% endif %}</span>
+  </div>
+  <div class="barre__actions">
+    {% if saisie %}
+    <a class="btn btn--primaire" href="{{ url_for('eleves.suivi_creer', ident=el.id) }}">+ Nouveau suivi</a>
+    <a class="btn" href="{{ url_for('eleves.modifier', ident=el.id) }}">Modifier</a>
+    <form method="post" action="{{ url_for('eleves.archiver', ident=el.id) }}" class="inline" data-confirm="{{ 'Restaurer cette fiche ?' if not el.actif else 'Archiver cette fiche ?' }}">{{ m.csrf() }}{% if not el.actif %}<input type="hidden" name="restaurer" value="1">{% endif %}<button class="btn {{ 'btn--danger' if el.actif }}">{{ 'Restaurer' if not el.actif else 'Archiver' }}</button></form>
+    {% endif %}
+  </div>
+</div>
+<div class="carte">
+  <h2>Fiche</h2>
+  <div class="fiche">
+    <dl>
+      <dt>Date de naissance</dt><dd>{{ el.date_naissance | datefr }}</dd>
+      <dt>Sexe</dt><dd>{{ el.sexe }}</dd>
+      <dt>Dispositifs</dt><dd class="puces">{% for cle, lib in ref.DISPOSITIFS_ELEVE if el[cle] %}<span class="badge badge--bleu">{{ lib }}</span>{% else %}—{% endfor %}</dd>
+      <dt>AESH</dt><dd>{{ el.aesh }}</dd>
+      <dt>MDPH</dt><dd>{{ el.mdph }}</dd>
+    </dl>
+    <dl>
+      <dt>Situation particulière</dt><dd class="bloc-texte">{{ el.situation }}</dd>
+      <dt>Notes</dt><dd class="bloc-texte">{{ el.notes }}</dd>
+    </dl>
+  </div>
+</div>
+<h2>Historique des suivis <small>({{ suivis | length }})</small></h2>
+{% for s in suivis %}
+<article class="suivi">
+  <div class="suivi__tete">
+    <span><strong>{{ s.date | datefr }}</strong> — {{ s.type }}{% if s.objet %} : {{ s.objet }}{% endif %}</span>
+    <span>{{ m.badge_statut_suivi(s.statut) }}{% if s.echeance %} <small>échéance {{ s.echeance | datefr }}</small>{% endif %}
+      {% if saisie %} <a class="btn btn--petit" href="{{ url_for('eleves.suivi_modifier', sid=s.id) }}">Modifier</a> {{ m.bouton_supprimer(url_for('eleves.suivi_supprimer', sid=s.id), '✕', 'Supprimer ce suivi ?') }}{% endif %}</span>
+  </div>
+  <dl>
+    {% if s.participants %}<dt>Participants</dt><dd>{{ s.participants }}</dd>{% endif %}
+    {% if s.compte_rendu %}<dt>Compte rendu</dt><dd>{{ s.compte_rendu }}</dd>{% endif %}
+    {% if s.decisions %}<dt>Décisions</dt><dd>{{ s.decisions }}</dd>{% endif %}
+    <dt>Saisi par</dt><dd><small>{{ s.auteur or '—' }} le {{ s.cree_le | datetimefr }}</small></dd>
+  </dl>
+</article>
+{% else %}<p class="discret">Aucun suivi enregistré.{% if saisie %} <a href="{{ url_for('eleves.suivi_creer', ident=el.id) }}">Saisir le premier</a>.{% endif %}</p>{% endfor %}
+{% endblock %}

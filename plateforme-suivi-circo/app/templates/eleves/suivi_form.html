@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}{{ titre }}{% endblock %}
+{% block contenu %}
+<h1>{{ titre }} — <a href="{{ url_for('eleves.fiche', ident=el.id) }}">{{ el.nom }} {{ el.prenom }}</a></h1>
+{% set s = suivi or {} %}
+<form method="post" class="formulaire">
+  {{ m.csrf() }}
+  <div class="champs">
+    {{ m.texte('date', 'Date', s.date or aujourdhui, type='date', obligatoire=true) }}
+    {{ m.choix('type', 'Type de suivi', ref.TYPES_SUIVI_ELEVE, s.type or 'Équipe éducative', obligatoire=true) }}
+    {{ m.choix('statut', 'Statut', ref.STATUTS_SUIVI, s.statut or 'Réalisé') }}
+    {{ m.texte('echeance', 'Échéance / prochaine étape', s.echeance, type='date') }}
+    {{ m.texte('objet', 'Objet', s.objet, classe='champ--large') }}
+    {{ m.texte('participants', 'Participants', s.participants, classe='champ--large', placeholder='Famille, enseignant·e, directeur·rice, psy EN, RASED, AESH…') }}
+    {{ m.zone('compte_rendu', 'Compte rendu', s.compte_rendu, lignes=6) }}
+    {{ m.zone('decisions', 'Décisions / actions', s.decisions) }}
+  </div>
+  <div class="formulaire__actions">
+    <button type="submit" class="btn btn--primaire">Enregistrer</button>
+    <a class="btn" href="{{ url_for('eleves.fiche', ident=el.id) }}">Annuler</a>
+  </div>
+</form>
+{% endblock %}

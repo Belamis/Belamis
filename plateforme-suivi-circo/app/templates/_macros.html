@@ -1,0 +1,69 @@
+{% macro csrf() -%}
+<input type="hidden" name="_csrf" value="{{ csrf_token() }}">
+{%- endmacro %}
+
+{% macro texte(nom, libelle, valeur='', type='text', obligatoire=false, aide='', placeholder='', min=none, max=none, classe='') -%}
+<div class="champ {{ classe }}">
+  <label for="{{ nom }}">{{ libelle }}{% if obligatoire %} <span class="obligatoire">*</span>{% endif %}</label>
+  <input type="{{ type }}" id="{{ nom }}" name="{{ nom }}" value="{{ valeur if valeur is not none else '' }}"
+         {% if obligatoire %}required{% endif %} {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
+         {% if min is not none %}min="{{ min }}"{% endif %} {% if max is not none %}max="{{ max }}"{% endif %}>
+  {% if aide %}<small class="aide">{{ aide }}</small>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro zone(nom, libelle, valeur='', lignes=3, aide='', classe='') -%}
+<div class="champ champ--large {{ classe }}">
+  <label for="{{ nom }}">{{ libelle }}</label>
+  <textarea id="{{ nom }}" name="{{ nom }}" rows="{{ lignes }}">{{ valeur or '' }}</textarea>
+  {% if aide %}<small class="aide">{{ aide }}</small>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro choix(nom, libelle, options, valeur='', vide=none, obligatoire=false, aide='', classe='') -%}
+<div class="champ {{ classe }}">
+  <label for="{{ nom }}">{{ libelle }}{% if obligatoire %} <span class="obligatoire">*</span>{% endif %}</label>
+  <select id="{{ nom }}" name="{{ nom }}">
+    {% if vide is not none %}<option value="">{{ vide }}</option>{% endif %}
+    {% for opt in options %}
+      {% if opt is string or opt is number %}
+        <option value="{{ opt }}" {{ 'selected' if (valeur|string) == (opt|string) }}>{{ opt if opt != '' else '—' }}</option>
+      {% else %}
+        <option value="{{ opt[0] }}" {{ 'selected' if (valeur|string) == (opt[0]|string) }}>{{ opt[1] }}</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+  {% if aide %}<small class="aide">{{ aide }}</small>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro case(nom, libelle, coche=false, aide='') -%}
+<div class="champ champ--case">
+  <label><input type="checkbox" name="{{ nom }}" value="1" {{ 'checked' if coche }}> {{ libelle }}</label>
+  {% if aide %}<small class="aide">{{ aide }}</small>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro badge_statut_suivi(statut) -%}
+<span class="badge badge--{{ {'À planifier': 'orange', 'Réalisé': 'vert', 'À suivre': 'bleu', 'Clos': 'gris'}.get(statut, 'gris') }}">{{ statut }}</span>
+{%- endmacro %}
+
+{% macro pagination(pag) -%}
+{% if pag.nb_pages > 1 %}
+<nav class="pagination">
+  {% set args = request.args.to_dict() %}
+  {% if pag.page > 1 %}{% set _ = args.update({'page': pag.page - 1}) %}<a href="{{ url_for(request.endpoint, **args) }}">‹ Précédent</a>{% endif %}
+  <span>Page {{ pag.page }} / {{ pag.nb_pages }} — {{ pag.total }} résultat(s)</span>
+  {% if pag.page < pag.nb_pages %}{% set _ = args.update({'page': pag.page + 1}) %}<a href="{{ url_for(request.endpoint, **args) }}">Suivant ›</a>{% endif %}
+</nav>
+{% else %}
+<p class="discret">{{ pag.total }} résultat(s)</p>
+{% endif %}
+{%- endmacro %}
+
+{% macro bouton_supprimer(action, libelle='Supprimer', confirmation='Confirmer la suppression ?') -%}
+<form method="post" action="{{ action }}" class="inline" data-confirm="{{ confirmation }}">
+  {{ csrf() }}
+  <button type="submit" class="btn btn--danger btn--petit">{{ libelle }}</button>
+</form>
+{%- endmacro %}

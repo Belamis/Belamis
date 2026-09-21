@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}{{ titre }}{% endblock %}
+{% block contenu %}
+<h1>{{ titre }}</h1>
+{% set e = ens or {} %}
+<form method="post" class="formulaire">
+  {{ m.csrf() }}
+  <input type="hidden" name="retour" value="{{ request.args.get('retour', '') }}">
+  <fieldset><legend>Identité</legend>
+    <div class="champs">
+      {{ m.texte('nom', 'Nom', e.nom, obligatoire=true) }}
+      {{ m.texte('prenom', 'Prénom', e.prenom) }}
+      {{ m.choix('sexe', 'Sexe', ref.SEXES, e.sexe) }}
+      {{ m.texte('email', 'Courriel', e.email, type='email') }}
+      {{ m.texte('telephone', 'Téléphone', e.telephone) }}
+    </div>
+  </fieldset>
+  <fieldset><legend>Affectation</legend>
+    <div class="champs">
+      <div class="champ"><label for="ecole_id">École</label>
+        <select id="ecole_id" name="ecole_id"><option value="">— Sans école / circonscription —</option>
+        {% for ec in ecoles %}<option value="{{ ec.id }}" {{ 'selected' if e.ecole_id == ec.id }}>{{ ec.nom }}</option>{% endfor %}</select></div>
+      {{ m.choix('statut', 'Statut', ref.STATUTS_ENSEIGNANT, e.statut or 'PE', obligatoire=true) }}
+      {{ m.texte('fonction', 'Fonction / précision', e.fonction, placeholder='TR-ZIL, BGS, AESH-m, maître E…') }}
+      {{ m.texte('anciennete', 'Ancienneté (années de service)', e.anciennete if e.anciennete is not none else '', type='number', min=0, max=45) }}
+      {{ m.case('dans_organisation', "Comptabilisé·e dans l'organisation pédagogique (a une classe)", e.dans_organisation if e.dans_organisation is not none else true, aide='Décochez pour les TR-ZIL, brigades, AESH, personnels sans classe.') }}
+      {{ m.case('accompagnement', 'Accompagnement renforcé', e.accompagnement, aide="Signalé dans le tableau de bord tant qu'aucune visite n'est réalisée dans l'année.") }}
+    </div>
+  </fieldset>
+  <fieldset id="bloc-classe"><legend>Classe et effectifs (source ONDE)</legend>
+    <div class="champs">
+      {{ m.choix('dispositif', 'Dispositif', ref.DISPOSITIFS_CLASSE, e.dispositif, aide='Duo : CP/CE1 à effectif réduit, deux enseignant·es dans la même salle.') }}
+      {{ m.texte('salle', 'Salle', e.salle) }}
+    </div>
+    <p class="discret" style="margin:.75rem 0 .25rem">Effectifs par niveau (laisser vide ou 0 si le niveau n'est pas dans la classe) :</p>
+    <div class="effectifs-saisie">
+      {% for c, lib, cy in ref.NIVEAUX_EFFECTIFS %}
+      <div class="champ"><label for="{{ c }}">{{ lib }}</label><input type="number" id="{{ c }}" name="{{ c }}" min="0" max="60" value="{{ e[c] or '' }}"></div>
+      {% endfor %}
+    </div>
+  </fieldset>
+  <fieldset><legend>Observations</legend>
+    <div class="champs">
+      {{ m.zone('observations', 'Observations', e.observations) }}
+      {% if e.id %}<div class="champ"><label for="actif">État</label><select id="actif" name="actif"><option value="1" {{ 'selected' if e.actif != 0 }}>Actif</option><option value="0" {{ 'selected' if e.actif == 0 }}>Archivé (ne compte plus dans les effectifs)</option></select></div>{% endif %}
+    </div>
+  </fieldset>
+  <div class="formulaire__actions">
+    <button type="submit" class="btn btn--primaire">Enregistrer</button>
+    {% if not e.id %}<button type="submit" name="puis_nouveau" value="1" class="btn btn--secondaire">Enregistrer et saisir un autre</button>{% endif %}
+    <a class="btn" href="{{ url_for('enseignants.fiche', ident=e.id) if e.id else (url_for('ecoles.fiche', ident=e.ecole_id) if e.ecole_id else url_for('enseignants.liste')) }}">Annuler</a>
+  </div>
+</form>
+{% endblock %}

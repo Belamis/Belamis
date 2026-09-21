@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}Effectifs — {{ ecole.nom }}{% endblock %}
+{% block contenu %}
+<div class="barre">
+  <h1>Saisie des effectifs — {{ ecole.nom }}</h1>
+  <div class="barre__actions"><a class="btn" href="{{ url_for('enseignants.creer', ecole=ecole.id) }}">+ Ajouter un·e enseignant·e</a></div>
+</div>
+<p class="discret">Une ligne par enseignant·e devant classe. Saisissez l'effectif de chaque niveau présent dans la classe (source ONDE / Arena). Les totaux se recalculent en direct ; la date de mise à jour de l'école sera renseignée automatiquement.</p>
+<form method="post" class="formulaire">
+  {{ m.csrf() }}
+  <div class="tableau-wrap"><table class="tableau tableau--compact" id="grille-effectifs">
+    <thead><tr><th>Enseignant(e)</th><th>Statut</th><th>Dispositif</th><th>Salle</th>{% for c, lib, cy in ref.NIVEAUX_EFFECTIFS %}<th class="num cycle{{ cy }}">{{ lib }}</th>{% endfor %}<th class="num">TOTAL*</th></tr></thead>
+    <tbody>
+    {% for l in lignes %}
+    <tr data-ligne="{{ l.id }}">
+      <td><a href="{{ url_for('enseignants.fiche', ident=l.id) }}">{{ l.nom }} {{ l.prenom }}</a></td>
+      <td><span class="badge badge--statut">{{ l.statut }}</span></td>
+      <td><select name="dispositif_{{ l.id }}">{% for d in ref.DISPOSITIFS_CLASSE %}<option value="{{ d }}" {{ 'selected' if l.dispositif == d }}>{{ d or '—' }}</option>{% endfor %}</select></td>
+      <td><input type="text" name="salle_{{ l.id }}" value="{{ l.salle }}" size="4"></td>
+      {% for c, lib, cy in ref.NIVEAUX_EFFECTIFS %}<td class="cycle{{ cy }}"><input type="number" min="0" max="60" name="{{ c }}_{{ l.id }}" data-niveau="{{ c }}" value="{{ l[c] or '' }}"></td>{% endfor %}
+      <td class="num"><strong class="total-ligne">0</strong></td>
+    </tr>
+    {% else %}<tr><td colspan="14" class="discret">Aucun·e enseignant·e devant classe dans cette école. <a href="{{ url_for('enseignants.creer', ecole=ecole.id) }}">En ajouter</a>.</td></tr>{% endfor %}
+    </tbody>
+    <tfoot><tr class="total"><td colspan="4">EFFECTIFS TOTAUX PAR NIVEAU</td>{% for c, lib, cy in ref.NIVEAUX_EFFECTIFS %}<td class="num total-col" data-niveau="{{ c }}">0</td>{% endfor %}<td class="num total-general">0</td></tr></tfoot>
+  </table></div>
+  <div class="formulaire__actions">
+    <button type="submit" class="btn btn--primaire">Enregistrer les effectifs</button>
+    <a class="btn" href="{{ url_for('ecoles.fiche', ident=ecole.id) }}">Retour à la fiche école</a>
+  </div>
+</form>
+{% endblock %}

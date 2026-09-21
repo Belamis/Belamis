@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}Élèves suivis{% endblock %}
+{% block contenu %}
+<div class="barre">
+  <div><h1>Élèves à besoins particuliers {% if archives %}<small class="discret">(archivés)</small>{% endif %}</h1>
+  <span class="discret">Suivi nominatif (PPRE, PAP, PAI, PPS, RASED, AESH, MDPH, équipes éducatives…). Les effectifs globaux sont saisis dans les fiches école.</span></div>
+  <div class="barre__actions">
+    {% if g.user.role in ('admin', 'saisie') %}<a class="btn btn--primaire" href="{{ url_for('eleves.creer') }}">+ Nouvel élève</a>{% endif %}
+    <a class="btn" href="{{ url_for('exports.eleves') }}">⬇ CSV</a>
+    <a class="btn" href="{{ url_for('eleves.liste', archives=0 if archives else 1) }}">{{ 'Voir les actifs' if archives else 'Voir les archivés' }}</a>
+  </div>
+</div>
+<form method="get" class="filtres">
+  {% if archives %}<input type="hidden" name="archives" value="1">{% endif %}
+  <div class="champ"><label>Recherche</label><input type="search" name="q" value="{{ q }}" placeholder="Nom, prénom"></div>
+  <div class="champ"><label>École</label><select name="ecole"><option value="">Toutes</option>{% for e in ecoles %}<option value="{{ e.id }}" {{ 'selected' if ecole_id == e.id|string }}>{{ e.nom }}</option>{% endfor %}</select></div>
+  <div class="champ"><label>Niveau</label><select name="niveau"><option value="">Tous</option>{% for n in ref.NIVEAUX %}<option {{ 'selected' if niveau == n }}>{{ n }}</option>{% endfor %}</select></div>
+  <div class="champ"><label>Dispositif</label><select name="dispositif">
+    <option value="">Tous</option><option value="tous" {{ 'selected' if dispositif == 'tous' }}>Au moins un dispositif</option>
+    {% for cle, lib in ref.DISPOSITIFS_ELEVE %}<option value="{{ cle }}" {{ 'selected' if dispositif == cle }}>{{ lib }}</option>{% endfor %}
+    <option value="aesh" {{ 'selected' if dispositif == 'aesh' }}>AESH</option><option value="mdph" {{ 'selected' if dispositif == 'mdph' }}>Dossier MDPH</option>
+    <option value="aucun" {{ 'selected' if dispositif == 'aucun' }}>Aucun dispositif</option></select></div>
+  <button class="btn" type="submit">Filtrer</button>
+</form>
+{{ m.pagination(pag) }}
+<div class="tableau-wrap"><table class="tableau">
+  <thead><tr><th>Élève</th><th>Né·e le</th><th>École</th><th>Niveau</th><th>Enseignant·e</th><th>Dispositifs</th><th>AESH</th><th>MDPH</th><th>Dernier suivi</th><th class="num">Suivis</th></tr></thead>
+  <tbody>
+  {% for el in eleves %}
+  <tr>
+    <td><a href="{{ url_for('eleves.fiche', ident=el.id) }}"><strong>{{ el.nom }}</strong> {{ el.prenom }}</a></td>
+    <td>{{ el.date_naissance | datefr }}</td><td>{{ el.ecole_nom or '' }}</td><td>{{ el.niveau }}</td>
+    <td>{{ el.ens_nom or '' }} {{ el.ens_prenom or '' }}</td>
+    <td class="puces">{% for cle, lib in ref.DISPOSITIFS_ELEVE if el[cle] %}<span class="badge badge--bleu">{{ lib }}</span>{% endfor %}</td>
+    <td>{{ el.aesh if el.aesh != 'Non' else '' }}</td><td>{{ el.mdph if el.mdph != 'Aucun dossier' else '' }}</td>
+    <td>{{ el.dernier_suivi | datefr or '—' }}</td><td class="num">{{ el.nb_suivis }}</td>
+  </tr>
+  {% else %}<tr><td colspan="10" class="discret">Aucun élève trouvé.</td></tr>{% endfor %}
+  </tbody>
+</table></div>
+{{ m.pagination(pag) }}
+{% endblock %}

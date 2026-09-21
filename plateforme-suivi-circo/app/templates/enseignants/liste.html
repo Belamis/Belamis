@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block titre %}Personnels{% endblock %}
+{% block contenu %}
+<div class="barre">
+  <h1>Personnels {% if archives %}<small class="discret">(archivés)</small>{% endif %}</h1>
+  <div class="barre__actions">
+    {% if g.user.role in ('admin', 'saisie') %}<a class="btn btn--primaire" href="{{ url_for('enseignants.creer') }}">+ Nouveau personnel</a>{% endif %}
+    <a class="btn" href="{{ url_for('exports.enseignants') }}">⬇ CSV</a>
+    <a class="btn" href="{{ url_for('enseignants.liste', archives=0 if archives else 1) }}">{{ 'Voir les actifs' if archives else 'Voir les archivés' }}</a>
+  </div>
+</div>
+<form method="get" class="filtres">
+  {% if archives %}<input type="hidden" name="archives" value="1">{% endif %}
+  <div class="champ"><label>Recherche</label><input type="search" name="q" value="{{ q }}" placeholder="Nom, prénom, courriel"></div>
+  <div class="champ"><label>École</label><select name="ecole"><option value="">Toutes</option>{% for e in ecoles %}<option value="{{ e.id }}" {{ 'selected' if ecole_id == e.id|string }}>{{ e.nom }}</option>{% endfor %}</select></div>
+  <div class="champ"><label>Statut</label><select name="statut"><option value="">Tous</option>{% for c, lib in ref.STATUTS_ENSEIGNANT %}<option value="{{ c }}" {{ 'selected' if statut == c }}>{{ lib }}</option>{% endfor %}</select></div>
+  <div class="champ"><label>Organisation pédagogique</label><select name="org"><option value="">Tous</option><option value="1" {{ 'selected' if org == '1' }}>Devant classe</option><option value="0" {{ 'selected' if org == '0' }}>Hors organisation</option></select></div>
+  <div class="champ"><label>Accompagnement</label><select name="accompagnement"><option value="">Tous</option><option value="1" {{ 'selected' if accompagnement == '1' }}>Renforcé uniquement</option></select></div>
+  <button class="btn" type="submit">Filtrer</button>
+</form>
+{{ m.pagination(pag) }}
+<div class="tableau-wrap"><table class="tableau">
+  <thead><tr><th>Nom</th><th>Statut</th><th>École</th><th>Classe</th><th class="num">Élèves</th><th class="num">Anc.</th><th>Dernière visite</th><th class="num">Suivis</th><th></th></tr></thead>
+  <tbody>
+  {% for e in enseignants %}
+  <tr>
+    <td><a href="{{ url_for('enseignants.fiche', ident=e.id) }}"><strong>{{ e.nom }}</strong> {{ e.prenom }}</a>{% if e.accompagnement %} <span class="badge badge--orange">acc. renforcé</span>{% endif %}</td>
+    <td><span class="badge badge--statut" title="{{ e.statut | statut }}">{{ e.statut }}</span>{% if e.fonction %} <small>{{ e.fonction }}</small>{% endif %}</td>
+    <td>{{ e.ecole_nom or '' }}</td>
+    <td>{% if e.dans_organisation %}{% for c, lib, cy in ref.NIVEAUX_EFFECTIFS if e[c] %}{{ lib }}{{ '/' if not loop.last }}{% endfor %}{% if e.dispositif %} <small>({{ e.dispositif }}{% if e.salle %}, salle {{ e.salle }}{% endif %})</small>{% endif %}{% else %}<small class="discret">hors organisation</small>{% endif %}</td>
+    <td class="num">{{ e.total_eleves or '' }}</td>
+    <td class="num">{{ e.anciennete if e.anciennete is not none else '' }}</td>
+    <td>{{ e.derniere_visite | datefr or '—' }}</td><td class="num">{{ e.nb_suivis }}</td>
+    <td class="actions">{% if g.user.role in ('admin', 'saisie') %}<a class="btn btn--petit" href="{{ url_for('enseignants.suivi_creer', ident=e.id) }}">+ Suivi</a>{% endif %}</td>
+  </tr>
+  {% else %}<tr><td colspan="9" class="discret">Aucun personnel trouvé.</td></tr>{% endfor %}
+  </tbody>
+</table></div>
+{{ m.pagination(pag) }}
+{% endblock %}

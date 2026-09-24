@@ -201,6 +201,40 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .now-empty{color:var(--side-muted);font-style:italic;margin:0;font-size:13px}
 .side-foot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:4px 8px;border-top:1px solid var(--side-line);padding-top:14px}
 .side-foot .me{flex:1 1 100%}
+.logout-row{flex:1 1 100%;display:flex;align-items:center;gap:10px;margin-top:6px;padding:10px 12px;border-radius:12px;border:1px solid color-mix(in srgb,var(--danger) 55%,transparent);background:color-mix(in srgb,var(--danger) 18%,transparent);color:var(--side-ink);font-weight:800;font-size:14px;transition:background .15s,transform .15s}
+.logout-row:hover{background:color-mix(in srgb,var(--danger) 34%,transparent)}
+.logout-row:active{transform:scale(.98)}
+.logout-row .lo-ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--danger);color:#fff;flex:none}
+.logout-row .lo-ic svg{width:18px;height:18px}
+.logout-row small{margin-left:auto;font-size:11px;font-weight:700;color:var(--side-muted)}
+.sheet-list button.danger{color:var(--danger);font-weight:800}
+.sheet-list button.danger span{background:var(--danger);color:#fff;border-radius:8px;width:28px;height:28px;display:inline-grid;place-items:center}
+.w-logout{border-color:color-mix(in srgb,var(--danger) 50%,var(--line))!important;color:var(--danger)!important;margin-right:auto}
+/* Papillons de l'accueil */
+.bfly-zone{flex:1 1 auto;min-height:150px;position:relative;margin:-6px -8px;pointer-events:none}
+.bfly{position:absolute;left:0;top:0;width:56px;height:46px;pointer-events:auto;cursor:pointer;will-change:transform}
+.bfly svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 3px 6px rgba(0,0,0,.25))}
+.bfly .wgl,.bfly .wgr{transform-box:fill-box;animation:flap var(--fs,.28s) ease-in-out infinite alternate}
+.bfly .wgl{transform-origin:right center}
+.bfly .wgr{transform-origin:left center}
+@keyframes flap{from{transform:scaleX(1)}to{transform:scaleX(.4)}}
+.week-card{position:absolute;left:8px;bottom:8px;right:8px;max-width:360px;background:var(--side-card);border:1px solid var(--side-line);border-radius:14px;padding:12px 14px;color:var(--side-ink);backdrop-filter:blur(4px);pointer-events:auto}
+.week-card small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--side-muted);margin-bottom:6px}
+.week-card .wk-n{display:flex;gap:18px;flex-wrap:wrap}
+.week-card .wk-n b{font:800 22px/1 var(--display)}
+.week-card .wk-n span{display:block;font-size:11.5px;color:var(--side-muted);font-weight:700;margin-top:3px}
+.week-card p{margin:8px 0 0;font-size:12.5px;font-weight:700;color:var(--side-ink)}
+/* Au revoir */
+.bye{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:radial-gradient(120% 90% at 50% 20%,var(--side-2),var(--side));color:var(--side-ink);text-align:center;padding:24px;animation:byein .35s ease both;overflow:hidden}
+@keyframes byein{from{opacity:0}to{opacity:1}}
+.bye-in{display:flex;flex-direction:column;align-items:center;gap:14px;position:relative;z-index:2}
+.bye .hand{font-size:72px;line-height:1;display:inline-block;transform-origin:70% 80%;animation:wave 1.1s ease-in-out 2}
+@keyframes wave{0%,100%{transform:rotate(0)}15%{transform:rotate(18deg)}30%{transform:rotate(-10deg)}45%{transform:rotate(16deg)}60%{transform:rotate(-6deg)}75%{transform:rotate(10deg)}}
+.bye h2{font:800 clamp(28px,5vw,44px)/1.1 var(--display);margin:0;letter-spacing:-.02em}
+.bye p{margin:0;color:var(--side-muted);font-weight:700;max-width:40ch}
+.bye .bye-ok{display:inline-flex;align-items:center;gap:8px;background:var(--st-on);color:#fff;border-radius:999px;padding:6px 14px;font-weight:800;font-size:13px}
+.bye .bfly-zone{position:absolute;inset:0;margin:0;z-index:1}
+@media (prefers-reduced-motion:reduce){.bfly .wgl,.bfly .wgr,.bye .hand,.bye{animation:none}}
 .me{flex:1;min-width:0;display:flex;align-items:center;gap:10px;border:0;background:transparent;color:var(--side-ink);border-radius:12px;padding:6px;text-align:left}
 .me:hover{background:var(--side-card)}
 .me .av{background:var(--side-ink);color:var(--side)}
@@ -940,6 +974,7 @@ window.QEO_PAL = (() => {
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><div><b>Le calendrier scolaire intégré</b><span>Rotations A et B, vacances et jours fériés de l'année 2026-2027.</span></div></li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><div><b>Un créneau en quelques secondes</b><span>Matin, après-midi ou journée, répété sur la semaine si besoin.</span></div></li>
     </ul>
+    <div class="bfly-zone" id="bfly-zone" aria-hidden="true"></div>
     <div class="wl-cal" id="wl-cal"></div>
   </div>
   <form class="wr" id="aform" hidden>
@@ -1011,6 +1046,7 @@ window.QEO_PAL = (() => {
       <div class="already" id="w-already" hidden></div>
       <p class="err" id="w-err" hidden></p>
       <div class="actions">
+        <button type="button" class="btn round w-logout" id="w-logout" hidden>⎋ Se déconnecter</button>
         <button type="button" class="btn round" id="w-cancel" hidden>Annuler</button>
         <button type="submit" class="btn primary round" id="w-save">Entrer dans le planning →</button>
       </div>
@@ -1067,9 +1103,9 @@ window.QEO_PAL = (() => {
       <button type="button" class="sbtn" id="colorbtn" aria-label="Couleurs de l'affichage" title="Couleurs de l'affichage">🎨</button>
       <button type="button" class="sbtn" id="soundbtn" aria-label="Sons activés" title="Couper les sons">🔊</button>
       <button type="button" class="sbtn" id="introbtn" aria-label="Revoir l'animation d'accueil" title="Revoir l'animation d'accueil">▶</button>
-      <button type="button" class="sbtn" id="logoutbtn" aria-label="Se déconnecter" title="Se déconnecter" hidden>⏻</button>
       <button type="button" class="sbtn" data-privacy aria-label="Données personnelles" title="Données personnelles et confidentialité">i</button>
       <button type="button" class="sbtn" id="keysbtn" aria-label="Raccourcis clavier" title="Raccourcis clavier">?</button>
+      <button type="button" class="logout-row" id="logoutbtn" hidden><span class="lo-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg></span>Se déconnecter</button>
     </div>
   </aside>
 
@@ -1330,9 +1366,14 @@ window.QEO_PAL = (() => {
       <button type="button" data-m="sound"><span id="more-sound">🔊</span>Sons</button>
       <button type="button" data-m="intro"><span>▶</span>Revoir l'animation d'accueil</button>
       <button type="button" data-m="privacy"><span>ℹ</span>Données personnelles</button>
-      <button type="button" data-m="logout"><span>⏻</span>Se déconnecter</button>
+      <button type="button" data-m="logout" class="danger"><span aria-hidden="true">⎋</span>Se déconnecter</button>
     </div>
   </div>
+</div>
+
+<div class="bye" id="bye" hidden role="status" aria-live="assertive">
+  <div class="bfly-zone" id="bye-bfly" aria-hidden="true"></div>
+  <div class="bye-in"><span class="hand" aria-hidden="true">👋</span><h2 id="bye-title">À bientôt !</h2><p id="bye-text">Vous êtes bien déconnecté(e). Vos créneaux restent visibles par l'équipe.</p><span class="bye-ok">✓ Déconnexion réussie</span></div>
 </div>
 
 <div class="overlay" id="chat" hidden>
@@ -2030,6 +2071,7 @@ window.QEO_PAL = (() => {
   const SOUNDS = {
     open:    (c,t) => { [523.25, 659.25, 783.99, 1046.5].forEach((f,i) => bell(c, t + i*0.11, f, 1.4 - i*0.15, 0.09)); },
     success: (c,t) => { bell(c, t, 880, 0.5, 0.07); bell(c, t + 0.09, 1318.5, 0.6, 0.06); },
+    bye:     (c,t) => { [1046.5, 783.99, 659.25, 523.25].forEach((f,i) => bell(c, t + i*0.12, f, 1.1, 0.07)); },
     pick:    (c,t) => { bell(c, t, 659.25, 0.35, 0.06); bell(c, t + 0.07, 987.77, 0.4, 0.05); bell(c, t + 0.14, 1318.5, 0.6, 0.045); },
     notify:  (c,t) => { bell(c, t, 987.77, 0.7, 0.07); bell(c, t + 0.14, 1318.5, 0.9, 0.06); },
     remove:  (c,t) => { tone(c, t, 440, 0.25, 0.06, "sine"); tone(c, t + 0.08, 330, 0.3, 0.05, "sine"); },
@@ -2886,8 +2928,58 @@ window.QEO_PAL = (() => {
   function openWelcomePage(withIntro, focusId){
     hideLoader();
     renderWelcomeExtras();
-    $("app").hidden = true; $("welcome").hidden = false; greet();
+    $("app").hidden = true; $("welcome").hidden = false; greet(); butterflies($("bfly-zone"), 7); weekCard();
     if (withIntro || !introPlayed) { introPlayed = true; playIntro(focusId); } else { finishIntro(); enterAnim(); $(focusId).focus(); }
+  }
+  // Papillons : volent librement dans la zone ; un clic les fait s'envoler plus vite.
+  const BF = new Map();
+  function butterflies(zone, n){
+    if (!zone) return; if (BF.has(zone)) return;
+    const cols = ["var(--p-visite)","var(--p-animation)","var(--p-formation)","var(--p-reunion)","var(--vac)","var(--p-bureau)","var(--accent)"];
+    const still = reduced(), list = [];
+    for (let i = 0; i < n; i++) {
+      const b = el("span","bfly"), c = cols[i % cols.length], sc = 0.75 + Math.random()*0.55;
+      b.innerHTML = '<svg viewBox="-20 -16 40 32"><g class="wgl"><path d="M0 -1 C-5 -15 -21 -17 -19 -5 C-18 2 -8 3 0 -1Z" fill="'+c+'"/><path d="M0 1 C-4 6 -13 15 -9 16 C-4 17 -1 8 0 1Z" fill="'+c+'" opacity=".8"/><circle cx="-12" cy="-7" r="2.4" fill="#fff" opacity=".55"/></g><g class="wgr"><path d="M0 -1 C5 -15 21 -17 19 -5 C18 2 8 3 0 -1Z" fill="'+c+'"/><path d="M0 1 C4 6 13 15 9 16 C4 17 1 8 0 1Z" fill="'+c+'" opacity=".8"/><circle cx="12" cy="-7" r="2.4" fill="#fff" opacity=".55"/></g><ellipse rx="1.6" ry="8" fill="#1c1c28"/><path d="M-1 -8 C-3 -12 -5 -13 -6 -14 M1 -8 C3 -12 5 -13 6 -14" stroke="#1c1c28" stroke-width=".8" fill="none"/></svg>';
+      b.style.setProperty("--fs", (0.32 + Math.random()*0.2).toFixed(2)+"s");
+      const o = { el: b, x: Math.random(), y: Math.random(), a: Math.random()*Math.PI*2, v: 0.5 + Math.random()*0.5, sc, boost: 0, t: Math.random()*100 };
+      b.onclick = () => { o.boost = 60; o.a += Math.PI*(0.5 + Math.random()); sfx("pick"); };
+      zone.append(b); list.push(o);
+    }
+    let W = 0, H = 0, first = true;
+    const place = o => { o.el.style.transform = "translate("+(o.x - 28)+"px,"+(o.y - 23)+"px) rotate("+(o.a*180/Math.PI + 90)+"deg) scale("+o.sc+")"; };
+    const tick = () => {
+      if (!zone.isConnected) { BF.delete(zone); return; }
+      requestAnimationFrame(tick);
+      if (document.hidden || !zone.offsetParent) return;
+      const w = zone.clientWidth, h = zone.clientHeight; if (!w || !h) return;
+      if (first || w!==W || h!==H) { list.forEach(o => { if (o.x <= 1) { o.x *= w; o.y *= h; } }); W = w; H = h; first = false; if (still) { list.forEach(place); return; } }
+      if (still) return;
+      list.forEach(o => {
+        o.t += 0.02; o.a += Math.sin(o.t*1.7 + o.sc*9)*0.035 + (Math.random()-0.5)*0.08;
+        const m = 36;
+        if (o.x < m || o.x > W - m || o.y < m || o.y > H - m) { const ta = Math.atan2(H/2 - o.y, W/2 - o.x); let d = ta - o.a; d = Math.atan2(Math.sin(d), Math.cos(d)); o.a += d*0.08; }
+        const sp = o.v * (o.boost > 0 ? 3.2 : 1) * (0.75 + 0.35*Math.sin(o.t*6)); if (o.boost > 0) o.boost--;
+        o.x = Math.min(W, Math.max(0, o.x + Math.cos(o.a)*sp)); o.y = Math.min(H, Math.max(0, o.y + Math.sin(o.a)*sp));
+        place(o);
+      });
+    };
+    BF.set(zone, list); requestAnimationFrame(tick);
+  }
+  function weekCard(){
+    const zone = $("bfly-zone"); if (!zone) return;
+    let card = $("week-card"); if (card) card.remove();
+    if (!welcomeEdit || !S.me) return;
+    const mon = monday(new Date()), sun = iso(addDays(mon,6)), from = iso(mon), now = new Date(), nowK = iso(now), nowM = now.getHours()*60 + now.getMinutes();
+    const mine = S.shifts.filter(x => x.uid===S.me && x.date >= from && x.date <= sun);
+    const act = mine.filter(isAct), h = act.reduce((t,x) => t + dur(x), 0);
+    const next = S.shifts.filter(x => x.uid===S.me && isAct(x) && (x.date > nowK || (x.date===nowK && x.start && toMin(x.start) >= nowM))).sort((a,b) => a.date.localeCompare(b.date) || (a.start||"").localeCompare(b.start||""))[0];
+    card = el("div","week-card"); card.id = "week-card";
+    card.append(el("small",null,"Votre semaine"));
+    const n = el("div","wk-n");
+    [[fmtH(h),"planifiées"],[String(act.length),"créneau"+(act.length>1?"x":"")],[String(totalUnread()),"message"+(totalUnread()>1?"s":"")+" non lu"+(totalUnread()>1?"s":"")]].forEach(([v,l]) => { const d = el("div"); d.append(el("b",null,v), el("span",null,l)); n.append(d); });
+    card.append(n);
+    if (next) { const d = new Date(next.date+"T12:00"); card.append(el("p",null,"Prochain : "+cap(DOW_L[(d.getDay()+6)%7])+" "+d.getDate()+(next.start ? " à "+next.start : "")+" · "+posteOf(next.poste).name+(next.lieu ? " · "+next.lieu : ""))); }
+    zone.append(card);
   }
   function enterAnim(){ const w = document.querySelector(".welcome"); w.classList.remove("enter"); void w.offsetWidth; w.classList.add("enter"); }
   let photoData = "";
@@ -2954,7 +3046,7 @@ window.QEO_PAL = (() => {
     $("w-title").textContent = edit ? "Vos informations" : "Faisons connaissance";
     $("w-sub").textContent = edit ? "Modifiez votre nom ou votre photo. Le changement s'applique partout sur le planning." : "Votre nom apparaîtra sur le planning de l'équipe, et vos créneaux seront rattachés à votre compte.";
     $("w-save").textContent = edit ? "Enregistrer" : "Entrer dans le planning →";
-    $("w-cancel").hidden = !edit; $("w-err").hidden = true; $("w-role-say").textContent = ""; greet();
+    $("w-cancel").hidden = !edit; $("w-logout").hidden = !edit || S.demo; $("w-err").hidden = true; $("w-role-say").textContent = ""; greet();
     $("w-code-box").hidden = !!edit || S.demo; $("w-code").value = "";
     $("w-danger").hidden = !edit; $("w-delete-box").hidden = true; $("w-delete").hidden = false; $("w-delpass").value = ""; $("w-del-err").hidden = true;
     openWelcomePage(!!withIntro || (!edit && !introPlayed), "w-first");
@@ -3219,7 +3311,16 @@ window.QEO_PAL = (() => {
   $("a-resend").onclick = () => { const u = auth.currentUser; if (u) sendVerify(u, false); };
   const signOut = async () => { try { await auth.signOut(); } catch(_) {} location.reload(); };
   $("a-out").onclick = signOut;
-  $("logoutbtn").onclick = signOut;
+  async function logout(){
+    if (!(await confirmBox("Se déconnecter ?", "Vous pourrez revenir à tout moment avec votre adresse e-mail et votre mot de passe.", "Oui, me déconnecter"))) return;
+    const p = person(S.me);
+    $("bye-title").textContent = "À bientôt" + (p.firstName ? ", " + p.firstName : "") + " !";
+    $("welcome").hidden = true; $("chat").hidden = true; $("bye").hidden = false; butterflies($("bye-bfly"), 10); sfx("bye");
+    try { stopPresence(); if (db && S.me) await db.doc("presence/"+S.me).set({ at: Date.now(), on: false }); } catch(_) {}
+    setTimeout(signOut, reduced() ? 1200 : 2600);
+  }
+  $("logoutbtn").onclick = logout;
+  $("w-logout").onclick = logout;
 
   // ---------- données (Cloud Firestore, temps réel) ----------
   let started = false;

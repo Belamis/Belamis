@@ -77,7 +77,7 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .btn.primary:hover{filter:brightness(1.07)}
 .btn.link{border:0;background:transparent;color:var(--accent);padding:4px 0;font-weight:800}
 .btn.danger{border-color:transparent;background:transparent;color:var(--danger)}
-.btn.icon{width:38px;height:38px;padding:0;font-size:18px;line-height:1}
+.btn.icon{width:38px;height:38px;padding:0;font-size:18px;line-height:1;flex:none}
 .btn.round{border-radius:999px;padding:10px 20px}
 .btn:disabled{opacity:.55;cursor:default}
 
@@ -92,6 +92,12 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
   .side-top{flex-wrap:wrap}
   .now-list{flex-direction:row!important;overflow-x:auto;padding-bottom:4px}
   .now-row{min-width:240px;flex:none;width:auto}
+  .side{display:grid;grid-template-columns:1fr 1fr;gap:12px 12px}
+  .side > *{grid-column:1/-1}
+  .side > .newbtn,.side > .chatbtn{grid-column:auto;height:100%}
+  .side-foot{flex-wrap:nowrap;padding-top:12px}
+  .side-foot .me{flex:1 1 auto}
+  .logout-row{flex:none;margin-top:0;padding:8px 12px}
 }
 .side-top{display:flex;align-items:center;gap:12px}
 .side-brand{display:flex;align-items:center;gap:11px;margin-right:auto}
@@ -201,6 +207,7 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .now-empty{color:var(--side-muted);font-style:italic;margin:0;font-size:13px}
 .side-foot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:4px 8px;border-top:1px solid var(--side-line);padding-top:14px}
 .side-foot .me{flex:1 1 100%}
+@media (min-width:1101px){.side-foot{position:sticky;bottom:-18px;z-index:2;margin:0 -18px -18px;padding:12px 18px 18px;background:var(--side);box-shadow:0 -10px 18px -12px rgba(0,0,0,.45)}}
 .logout-row{flex:1 1 100%;display:flex;align-items:center;gap:10px;margin-top:6px;padding:10px 12px;border-radius:12px;border:1px solid color-mix(in srgb,var(--danger) 55%,transparent);background:color-mix(in srgb,var(--danger) 18%,transparent);color:var(--side-ink);font-weight:800;font-size:14px;transition:background .15s,transform .15s}
 .logout-row:hover{background:color-mix(in srgb,var(--danger) 34%,transparent)}
 .logout-row:active{transform:scale(.98)}
@@ -568,7 +575,7 @@ input[type=number]{width:90px}
 .intro-name small{display:block;font:700 13px/1.5 var(--font);color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:6px}
 .logo-mini{background:#FFFEFC;padding:3px;width:46px;height:46px;border-radius:12px}
 .logo-mini img{width:100%;height:100%;object-fit:contain;display:block}
-@media (max-width:900px){.welcome{grid-template-columns:1fr}}
+@media (max-width:900px){.welcome{grid-template-columns:1fr}.welcome .wl{order:2}.welcome .wr{order:1}}
 .wl{background:var(--side);background-image:radial-gradient(120% 80% at 100% 0%,var(--side-2) 0%,transparent 65%);color:var(--side-ink);padding:36px 40px;display:flex;flex-direction:column;gap:26px}
 @media (max-width:560px){.wl{padding:26px 22px}}
 .wl .side-brand small{color:var(--side-muted)}
@@ -779,7 +786,7 @@ fieldset.field{border:0;margin:0;padding:0}
 #we-wrap:has(input:checked){background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
 @media (max-width:1100px){.filters{flex-wrap:wrap}.filters .chips{flex-basis:100%}}
 .ann-more{border:0;background:transparent;color:var(--accent);font-weight:800;font-size:12.5px;padding:2px 0;align-self:flex-start}
-@media (min-width:901px){
+@media (min-width:1101px){
   body{padding-block:16px}
   .shell{height:calc(100vh - 32px)}
   .main{height:100%;min-height:0}
@@ -876,6 +883,9 @@ details.more[open]>summary::before{transform:rotate(90deg)}
   .overlay{padding:0;align-items:end}
   .overlay .modal{width:100%;max-height:92vh;border-radius:20px 20px 0 0}
   .toast{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+  .btn.link,.legal-link{min-height:40px;display:inline-flex;align-items:center}
+  .daybanner > span:not([class]){display:none}
+  .status{padding-right:76px}
 }
 
 /* ===== Toast ===== */
@@ -983,7 +993,7 @@ window.QEO_PAL = (() => {
       <div>
         <span class="eyebrow" id="a-eyebrow">Connexion</span>
         <h2 id="a-title">Connectez-vous</h2>
-        <p class="lead" id="a-sub">Utilisez votre adresse e-mail professionnelle et votre mot de passe.</p>
+        <p class="lead" id="a-sub">Utilisez l'adresse e-mail et le mot de passe de votre compte.</p>
       </div>
       <div id="a-fields" style="display:flex;flex-direction:column;gap:14px">
         <div class="field"><label for="a-email">Adresse e-mail</label><input type="email" id="a-email" autocomplete="email" required></div>
@@ -1297,7 +1307,7 @@ window.QEO_PAL = (() => {
       <p>Il sert uniquement à l'organisation de l'équipe de la circonscription de Koungou Nord : savoir qui est où, préparer les visites et les réunions.</p>
       <h3>Données enregistrées</h3>
       <ul>
-        <li>Votre adresse e-mail professionnelle (pour la connexion) ;</li>
+        <li>Votre adresse e-mail (pour la connexion) ;</li>
         <li>vos prénom, nom et fonction, et votre photo de profil si vous en choisissez une ;</li>
         <li>vos créneaux : date, horaires, activité, lieu ou école, motif ;</li>
         <li>vos absences, les annonces que vous publiez.</li>
@@ -1378,7 +1388,7 @@ window.QEO_PAL = (() => {
 
 <div class="overlay" id="chat" hidden>
   <div class="modal chat-modal" role="dialog" aria-modal="true" aria-labelledby="chat-title">
-    <div class="modal-h"><div><h2 id="chat-title">Messages</h2><p>Le fil de l'équipe est lu par tous ; un message à un collègue n'est lu que par lui et vous.</p></div><button type="button" class="btn icon" id="chat-x" aria-label="Fermer">✕</button></div>
+    <div class="modal-h"><div><h2 id="chat-title">Messages</h2><p>Le fil de l'équipe est lu par tous ; un message individuel n'est lu que par vous deux.</p></div><button type="button" class="btn icon" id="chat-x" aria-label="Fermer">✕</button></div>
     <div class="chat-body" id="chat-body">
       <nav class="chat-list" id="chat-list" aria-label="Conversations"></nav>
       <section class="chat-conv" aria-label="Conversation">
@@ -1442,7 +1452,7 @@ window.QEO_PAL = (() => {
     const c = String(x.color||"").toUpperCase(), i = OLD_SW.findIndex(l => l.includes(c));
     return i >= 0 ? "var(--x"+i+")" : /^#[0-9A-F]{6}$/.test(c) ? c : "var(--x8)";
   }
-  const ABS = [["conge","Congé"],["maladie","Arrêt maladie"],["recup","Récupération"],["stage","Stage / formation hors circo"],["autre","Autre absence"]];
+  const ABS = [["conge","Congé"],["maladie","Arrêt maladie"],["recup","Récupération"],["stage","Stage ou formation hors circonscription"],["autre","Autre absence"]];
   // fonction : [clé, libellé, abréviation, libellé de groupe] ; l'ordre donne l'ordre d'affichage
   const ROLE_LIST = [
     ["ien","IEN","IEN","IEN"],
@@ -2152,7 +2162,7 @@ window.QEO_PAL = (() => {
     else { const t = el("div"); t.append(el("b",null,fullName(CH.with)), el("small",null, isOnline(CH.with) ? "● En ligne" : ROLES[person(CH.with).role]||"")); head.append(avatarFor(CH.with), t); }
     const box = $("chat-msgs"), atBottom = box.scrollHeight - box.scrollTop - box.clientHeight < 60; box.textContent = "";
     const list = convMsgs(CH.with);
-    if (!list.length) { const e = el("div","chat-empty"); e.append(el("b",null,"👋"), CH.with==="equipe" ? "Aucun message pour l'instant. Écrivez le premier à toute l'équipe !" : "Écrivez à "+(person(CH.with).firstName||"votre collègue")+" : seul(e) il ou elle pourra lire ce message."); box.append(e); }
+    if (!list.length) { const e = el("div","chat-empty"); e.append(el("b",null,"👋"), CH.with==="equipe" ? "Aucun message pour l'instant. Écrivez le premier à toute l'équipe !" : "Écrivez à "+(person(CH.with).firstName||"votre collègue")+" : vous serez seuls, tous les deux, à lire ces messages."); box.append(e); }
     let day = "", prev = null;
     list.forEach(m => {
       const dl = dayLabel(m.at); if (dl!==day) { day = dl; box.append(el("div","chat-day",dl)); prev = null; }
@@ -2319,7 +2329,7 @@ window.QEO_PAL = (() => {
     if (S.readOnly || !S.me) return;
     if (annOpen) {
       const f = el("form","ann-form"); f.autocomplete = "off";
-      const ta = el("textarea"); ta.id = "ann-text"; ta.maxLength = 280; ta.placeholder = "Ex. Réunion d'équipe lundi 9h à la circonscription"; ta.setAttribute("aria-label","Texte de l'annonce");
+      const ta = el("textarea"); ta.id = "ann-text"; ta.maxLength = 280; ta.placeholder = "Ex. Réunion d'équipe lundi à 9 h à la circonscription"; ta.setAttribute("aria-label","Texte de l'annonce");
       const row = el("div","inline"); const lab = el("label",null,"Visible jusqu'au"); lab.htmlFor = "ann-until";
       const dt = el("input"); dt.type = "date"; dt.id = "ann-until"; dt.value = iso(addDays(new Date(),7)); dt.min = iso(new Date());
       const ok = el("button","btn primary","Publier"); ok.type = "submit";
@@ -2616,7 +2626,7 @@ window.QEO_PAL = (() => {
     $("row-poste").hidden = !act; $("row-lieu").hidden = !act; $("row-pause").hidden = !act; $("row-with").hidden = !act || !$("ed-with").children.length;
     $("row-abs").hidden = !abs; $("row-allday").hidden = !abs; $("ed-presets").hidden = abs;
     $("ed-note-lab").textContent = act ? "Motif" : "Précision";
-    $("ed-note").placeholder = abs ? "Facultatif. Ex. joignable par mail" : dis ? "Ex. disponible pour une visite ou une réunion" : "Ex. visite T1, animation maths cycle 2…";
+    $("ed-note").placeholder = abs ? "Facultatif. Ex. joignable par e-mail" : dis ? "Ex. disponible pour une visite ou une réunion" : "Ex. visite T1, animation maths cycle 2…";
     const parts = [act ? "pause" : "", act && $("ed-with").children.length ? "binôme" : "", !ed.id ? "répétition" : ""].filter(Boolean);
     $("ed-more").hidden = !parts.length;
     $("ed-more-sum").textContent = "Plus d'options : " + parts.join(", ");
@@ -3119,7 +3129,7 @@ window.QEO_PAL = (() => {
       delete data.code;
       S.people.set(S.me, data);
       if (!S.demo) startData();
-      hideWelcome(); sfx("success"); toast(welcomeEdit ? "Profil mis à jour" : "Bienvenue "+firstName+" ! Ajoutez votre premier créneau avec « Nouveau créneau ».");
+      hideWelcome(); sfx("success"); toast(welcomeEdit ? "Profil mis à jour" : "Bienvenue, "+firstName+" ! Ajoutez votre premier créneau avec « Nouveau créneau ».");
     } catch(e2) {
       err(e2 && (e2.code==="invalid_argument" || e2.code==="permission-denied") ? (isNew ? "Code d'équipe incorrect. Vérifiez-le ou demandez-le à l'administrateur du planning." : "Enregistrement refusé. Reconnectez-vous puis réessayez.") : "L'enregistrement a échoué. Vérifiez votre connexion et réessayez.");
     } finally { $("w-save").disabled = false; }

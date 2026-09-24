@@ -501,6 +501,8 @@ fieldset.field{border:0;margin:0;padding:0}
 .roles label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)}
 .roles label:has(input:checked) small{color:var(--accent)}
 .roles label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.roles.locked label{cursor:default}
+.roles.locked label:not(:has(input:checked)){display:none}
 .already{display:flex;align-items:center;gap:12px;color:var(--muted);font-weight:700;font-size:13px}
 .stack{display:flex}
 .stack .av{width:30px;height:30px;font-size:10.5px;border:2px solid var(--surface);margin-left:-8px}
@@ -789,6 +791,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
       <fieldset class="field">
         <legend>Votre fonction</legend>
         <div class="roles" id="w-roles"></div>
+        <p class="hint" id="w-role-hint">Choisissez bien : la fonction ne pourra plus être modifiée ensuite.</p>
       </fieldset>
       <div class="field" id="w-code-box">
         <label for="w-code">Code d'équipe</label>
@@ -2420,12 +2423,14 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     $("aform").hidden = true; $("wform").hidden = false;
     const p = person(S.me);
     $("w-first").value = edit ? p.firstName||"" : ""; $("w-last").value = edit ? p.lastName||"" : "";
-    document.querySelectorAll('input[name="role"]').forEach(r => r.checked = edit && r.value===p.role);
+    document.querySelectorAll('input[name="role"]').forEach(r => { r.checked = edit && r.value===p.role; r.disabled = !!edit && !!p.role; });
+    $("w-roles").classList.toggle("locked", !!edit && !!p.role);
+    $("w-role-hint").textContent = edit && p.role ? "La fonction est définitive. En cas d'erreur, contactez l'administrateur du planning." : "Choisissez bien : la fonction ne pourra plus être modifiée ensuite.";
     buildAvatarPicker(edit ? (p.avatar || "") : AVATARS[Math.floor(Math.random()*AVATARS.length)], edit ? (p.photo || "") : "");
     $("w-photo-msg").textContent = "Votre photo est recadrée et allégée avant l'envoi.";
     $("w-eyebrow").textContent = edit ? "Mon profil" : "Première connexion";
     $("w-title").textContent = edit ? "Vos informations" : "Faisons connaissance";
-    $("w-sub").textContent = edit ? "Modifiez votre nom ou votre fonction. Le changement s'applique partout sur le planning." : "Votre nom apparaîtra sur le planning de l'équipe, et vos créneaux seront rattachés à votre compte.";
+    $("w-sub").textContent = edit ? "Modifiez votre nom ou votre photo. Le changement s'applique partout sur le planning." : "Votre nom apparaîtra sur le planning de l'équipe, et vos créneaux seront rattachés à votre compte.";
     $("w-save").textContent = edit ? "Enregistrer" : "Entrer dans le planning →";
     $("w-cancel").hidden = !edit; $("w-err").hidden = true;
     $("w-code-box").hidden = !!edit || S.demo; $("w-code").value = "";
@@ -2474,7 +2479,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
   $("wform").addEventListener("submit", async e => {
     e.preventDefault();
     const firstName = $("w-first").value.trim().replace(/\s+/g," "), lastName = $("w-last").value.trim().replace(/\s+/g," ");
-    const role = document.querySelector('input[name="role"]:checked')?.value;
+    const role = (welcomeEdit && person(S.me).role) || document.querySelector('input[name="role"]:checked')?.value;
     const err = t => { $("w-err").textContent = t; $("w-err").hidden = false; };
     if (!firstName || !lastName) return err("Renseignez votre prénom et votre nom.");
     if (!role) return err("Choisissez votre fonction.");

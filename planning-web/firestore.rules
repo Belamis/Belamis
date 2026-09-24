@@ -6,6 +6,7 @@ rules_version = '2';
 // - Toutes les adresses e-mail sont acceptées (Gmail, Outlook, La Poste...), une fois confirmées.
 // - Pour entrer, il faut créer son profil avec le CODE D'ÉQUIPE, rangé dans config/acces (champ « code »),
 //   que personne ne peut lire depuis le site. Sans profil, rien n'est lisible.
+// - La fonction choisie à l'inscription est définitive (seul l'administrateur la change, depuis la console).
 // - Chacun ne peut créer, modifier ou supprimer QUE son propre profil, SES créneaux et SES annonces.
 // - Le motif exact d'une absence (ex. arrêt maladie) est rangé dans « prive » : lisible par la seule personne concernée.
 // - Les activités et motifs créés sont partagés : tout membre peut en ajouter, personne ne peut les effacer.
@@ -37,6 +38,7 @@ service cloud.firestore {
         && request.resource.data.code == get(/databases/$(database)/documents/config/acces).data.code
         && validProfile();
       allow update: if isMe(uid) && validProfile()
+        && request.resource.data.role == resource.data.role
         && (!('code' in request.resource.data) || request.resource.data.code == resource.data.code);
       allow delete: if isMe(uid);
     }

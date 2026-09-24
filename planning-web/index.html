@@ -2151,7 +2151,12 @@ window.QEO_PAL = (() => {
     const msg = { from: S.me, text, at: Date.now() }; if (CH.with!=="equipe") msg.to = CH.with;
     inp.value = ""; inp.style.height = "auto"; $("chat-send").disabled = true;
     try {
-      if (S.demo) { const id = "m"+Date.now(); if (msg.to) CH.dm.set(id, { id, ...msg }); else CH.group.push({ id, ...msg }); renderConv.seen = false; renderConv(); renderChatList(); }
+      if (S.demo) {
+        const id = "m"+Date.now(); if (msg.to) CH.dm.set(id, { id, ...msg }); else CH.group.push({ id, ...msg }); renderConv.seen = false; renderConv(); renderChatList();
+        // Aperçu : un collègue fictif répond quelques secondes plus tard.
+        const who = msg.to || "d2", conv = msg.to || "equipe";
+        setTimeout(() => { const r = { id:"r"+Date.now(), from: who, text: "Bien reçu, merci ! 👍", at: Date.now() }; if (msg.to) { r.to = S.me; CH.dm.set(r.id, r); } else CH.group.push(r); incoming(r, conv); chatChanged(); }, 3000);
+      }
       else await db.collection(msg.to ? "dms" : "chat").add(msg);
     } catch(err) { inp.value = text; toast("Message non envoyé. Vérifiez votre connexion puis réessayez."); }
     finally { $("chat-send").disabled = false; inp.focus(); }
@@ -2215,6 +2220,8 @@ window.QEO_PAL = (() => {
     CH.dm.set("p1", { id:"p1", from:"d2", to:"d0", text:"Tu peux passer à l'école Kangani mardi matin avec moi ?", at: t - 15*60000 });
     ["d1","d2","d7"].forEach(u => CH.online.set(u, { on:true, at: t }));
     CH.lus.chat = t - 30*3600000; syncBadges();
+    // Aperçu : une collègue se connecte peu après l'arrivée sur le planning.
+    const arrive = setInterval(() => { if ($("app").hidden) return; clearInterval(arrive); setTimeout(() => { CH.online.set("d5", { on:true, at: Date.now() }); sfx("connexion"); toast("🟢 "+fullName("d5")+" vient de se connecter", "Écrire", () => openChat("d5")); syncBadges(); if (CH.open) renderChatList(); }, 8000); }, 1000);
   }
   let prefsSynced = false;
   function buildColors(){

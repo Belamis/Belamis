@@ -601,6 +601,105 @@ fieldset.field{border:0;margin:0;padding:0}
 .repweeks label{font-weight:700;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
 .btngroup{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 
+/* ===== Ergonomie : mise en page « application » ===== */
+.viewopts{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.iconbtn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:7px 11px;font-weight:700;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.iconbtn:hover{color:var(--ink);border-color:var(--muted)}
+.iconbtn[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;max-width:100%;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.fchip{flex:none}
+.filters{flex-wrap:nowrap}
+.filters .chips{flex:1 1 auto;min-width:0}
+.filters .fspacer{display:none}
+.viewopts{flex-wrap:nowrap;flex:none}
+.search input{width:150px}
+#we-wrap input{accent-color:var(--accent);margin:0}
+#we-wrap:has(input:checked){background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+@media (max-width:1100px){.filters{flex-wrap:wrap}.filters .chips{flex-basis:100%}}
+.ann-more{border:0;background:transparent;color:var(--accent);font-weight:800;font-size:12.5px;padding:2px 0;align-self:flex-start}
+@media (min-width:901px){
+  body{padding-block:16px}
+  .shell{height:calc(100vh - 32px)}
+  .main{height:100%;min-height:0}
+  .panel{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
+  .panel>.scroller{flex:1 1 auto;min-height:0;overflow:auto}
+  .panel>.legend{flex:none}
+  .week thead th{position:sticky;top:0;z-index:3}
+  .week thead th.who-h{z-index:4}
+  .week tfoot th,.week tfoot td{position:sticky;bottom:0;z-index:3}
+  .week tfoot th.person{z-index:4}
+  .day-head{position:sticky;top:0;z-index:3;background:var(--surface)}
+  .daybanner{position:sticky;left:0}
+}
+/* Densité compacte */
+.dense .card{padding:3px 7px 4px 9px;font-size:12px;display:flex;flex-wrap:wrap;column-gap:6px;align-items:baseline}
+.dense .card .l,.dense .card .n,.dense .card .w{display:none}
+.dense .card .h{font-size:11px}
+.dense .card .p{display:inline}
+.dense .cell{min-height:38px;gap:3px;padding:4px}
+.dense .week .person{padding:6px 12px}
+.dense .week .person .av{width:28px;height:28px;font-size:10.5px}
+.dense .who-txt small{display:none}
+.dense .tot small{display:none}
+.dense .week td.tot{padding:6px 12px}
+/* Fenêtre de saisie : options repliables */
+details.more{border-top:1px solid var(--line-2);margin-top:4px}
+details.more>summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:8px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"›";display:inline-block;transition:transform .15s;font-size:18px;line-height:1}
+details.more[open]>summary::before{transform:rotate(90deg)}
+/* Téléphone */
+.bottomnav,.fab{display:none}
+#app[hidden] ~ .bottomnav,#app[hidden] ~ .fab{display:none!important}
+.agenda{display:flex;flex-direction:column}
+.ag-day{border-bottom:1px solid var(--line)}
+.ag-day:last-child{border-bottom:0}
+.ag-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:10px 14px;background:var(--surface-2);position:sticky;top:0;z-index:2}
+.ag-h b{font:800 16px/1.2 var(--display)}
+.ag-h .cnt{margin-left:auto;color:var(--muted);font-weight:700;font-size:12px}
+.ag-day.today .ag-h{box-shadow:inset 4px 0 0 var(--accent)}
+.ag-day.today .ag-h b{color:var(--accent)}
+.ag-day.is-vac .ag-h{background:color-mix(in srgb,var(--vac) 14%,var(--surface))}
+.ag-day.is-ferie .ag-h{background:color-mix(in srgb,var(--ferie) 12%,var(--surface))}
+.ag-row{display:grid;grid-template-columns:118px minmax(0,1fr);gap:10px;padding:10px 14px;border-top:1px solid var(--line-2);align-items:start}
+.ag-row.mine{background:var(--mine);box-shadow:inset 3px 0 0 var(--accent)}
+.ag-who{display:flex;align-items:center;gap:8px;min-width:0}
+.ag-who .av{width:28px;height:28px;font-size:10.5px}
+.ag-who b{font-size:12.5px;font-weight:800;line-height:1.2;overflow-wrap:anywhere}
+.ag-cards{display:flex;flex-direction:column;gap:5px;min-width:0}
+.ag-empty{padding:12px 14px;color:var(--muted);font-weight:600;font-size:13px;border-top:1px solid var(--line-2)}
+.ag-add{border:1px dashed var(--line);background:transparent;border-radius:9px;color:var(--muted);font-weight:800;font-size:12.5px;padding:7px}
+.sheet-list{display:flex;flex-direction:column;gap:2px}
+.sheet-list button{border:0;background:transparent;text-align:left;padding:13px 12px;border-radius:10px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:12px}
+.sheet-list button:hover{background:var(--surface-2)}
+.sheet-list button span{width:24px;text-align:center}
+@media (max-width:700px){
+  body{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+  .side{padding:14px;gap:12px;border-radius:18px}
+  .side .newbtn,.side .counts,.side-foot,.mini{display:none!important}
+  .side .todaytags{margin-bottom:6px}
+  .mhead{gap:10px}
+  .mtitle h2{font-size:24px}
+  .controls .tabs,.controls .menuwrap{display:none}
+  .controls,.navgroup{width:100%}
+  .navgroup{justify-content:space-between}
+  .navgroup #todaybtn{flex:1}
+  .search{flex:1 1 auto;min-width:0}
+  .search input{width:100%}
+  .viewopts{flex:1 1 100%;flex-wrap:nowrap}
+  #densebtn,#annbtn{display:none!important}
+  .status span:last-child{display:none}
+  .bottomnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--surface);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 20px rgba(0,0,0,.06)}
+  .bottomnav button{flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 2px;border-radius:10px;font-size:11.5px;font-weight:800;color:var(--muted)}
+  .bottomnav button i{font-style:normal;font-size:19px;line-height:1}
+  .bottomnav button[aria-pressed="true"]{color:var(--accent);background:var(--accent-soft)}
+  .fab{display:grid;place-items:center;position:fixed;right:16px;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:26;width:56px;height:56px;border-radius:18px;border:0;background:var(--accent);color:var(--accent-ink);font-size:30px;font-weight:500;box-shadow:0 10px 24px rgba(47,91,234,.35)}
+  .overlay{padding:0;align-items:end}
+  .overlay .modal{width:100%;max-height:92vh;border-radius:20px 20px 0 0}
+  .toast{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+}
+
 /* ===== Toast ===== */
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 12px 10px 16px;border-radius:12px;font-weight:700;z-index:40;max-width:calc(100% - 32px);display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-lg)}
 .toast button{border:0;background:transparent;color:inherit;font-weight:800;text-decoration:underline;padding:4px}
@@ -750,7 +849,7 @@ fieldset.field{border:0;margin:0;padding:0}
       </div>
       <div class="controls">
         <div class="menuwrap">
-          <button type="button" class="btn" id="exportbtn" aria-haspopup="true" aria-expanded="false">Exporter ▾</button>
+          <button type="button" class="btn" id="exportbtn" aria-haspopup="true" aria-expanded="false">⤓ Exporter</button>
           <div class="menu" id="exportmenu" hidden>
             <button type="button" data-x="print">Imprimer ou PDF<small>La vue affichée, prête à imprimer</small></button>
             <button type="button" data-x="xlsx">Fichier Excel<small>Créneaux et synthèse de la période affichée</small></button>
@@ -776,18 +875,22 @@ fieldset.field{border:0;margin:0;padding:0}
     <div class="filters" id="filters">
       <div class="chips" id="rolechips" role="group" aria-label="Filtrer par fonction"></div>
       <div class="fspacer"></div>
+      <div class="viewopts">
       <label class="search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="search" placeholder="Rechercher…" aria-label="Chercher un collègue"></label>
+      <button type="button" class="iconbtn" id="densebtn" aria-pressed="false" title="Afficher plus de collègues à l'écran">▤ Compact</button>
+      <button type="button" class="iconbtn" id="annbtn" title="Publier une annonce pour l'équipe">📣 Annonce</button>
+      <label class="iconbtn" id="we-wrap" title="Afficher le samedi et le dimanche"><input type="checkbox" id="weekend"> Sam. dim.</label>
       <div class="btngroup" id="weektools" hidden>
-        <button type="button" class="btn" id="copyweek">↻ Semaine précédente</button>
         <div class="menuwrap">
-          <button type="button" class="btn" id="tplbtn" aria-haspopup="true" aria-expanded="false">★ Ma semaine type ▾</button>
+          <button type="button" class="iconbtn" id="tplbtn" aria-haspopup="true" aria-expanded="false">★ Ma semaine ▾</button>
           <div class="menu" id="tplmenu" hidden>
-            <button type="button" data-t="apply">Appliquer ma semaine type<small>Remplit la semaine affichée</small></button>
+            <button type="button" id="copyweek" data-t="prev">↻ Reprendre la semaine précédente<small>Copie vos créneaux de la semaine d'avant</small></button>
+            <button type="button" data-t="apply">★ Appliquer ma semaine type<small>Remplit la semaine affichée</small></button>
             <button type="button" data-t="save">Enregistrer cette semaine comme semaine type<small>Vos activités et disponibilités de la semaine affichée</small></button>
           </div>
         </div>
       </div>
-      <label class="switch" id="we-wrap"><input type="checkbox" id="weekend"> Week-end</label>
+      </div>
     </div>
 
     <div class="banner" id="banner" hidden></div>
@@ -833,13 +936,9 @@ fieldset.field{border:0;margin:0;padding:0}
             <button type="button" class="preset" data-s="13:30" data-e="16:30" data-p="0">Après-midi</button>
             <button type="button" class="preset" data-s="08:30" data-e="16:30" data-p="60">Journée</button>
           </div>
-          <p class="hint" id="free-hint">Horaires libres : saisissez ceux qui vous conviennent. Sans horaire, le créneau compte pour la journée.</p>
+          <p class="hint" id="free-hint">Horaires libres. Sans horaire, le créneau vaut pour la journée.</p>
           <label class="inline" id="row-allday" hidden style="margin-top:10px;font-weight:700"><input type="checkbox" id="ed-allday"> Toute la journée</label>
         </div>
-      </div>
-      <div class="frow" id="row-pause">
-        <label for="ed-pause">Pause (min.)</label>
-        <input type="number" id="ed-pause" min="0" step="1" value="0">
       </div>
       <div class="frow" id="row-poste">
         <span class="lab">Activité</span>
@@ -865,13 +964,6 @@ fieldset.field{border:0;margin:0;padding:0}
           <p class="hint lock">🔒 Pour un arrêt maladie, vos collègues voient seulement « Absent ». Le motif exact et la précision d'une absence ne sont visibles que par vous.</p>
         </div>
       </div>
-      <div class="frow" id="row-with">
-        <span class="lab">Avec</span>
-        <div>
-          <div class="withlist" id="ed-with" role="group" aria-label="Collègues associés au créneau"></div>
-          <p class="hint">Visite en binôme ou co-animation : le créneau apparaît aussi sur la ligne des collègues choisis.</p>
-        </div>
-      </div>
       <div class="frow" id="row-lieu">
         <label for="ed-lieu">Lieu / école</label>
         <input type="text" id="ed-lieu" maxlength="80" list="lieux" placeholder="Ex. École Jules Ferry">
@@ -881,6 +973,19 @@ fieldset.field{border:0;margin:0;padding:0}
         <div>
           <input type="text" id="ed-note" maxlength="140" list="motifs-list" placeholder="Ex. visite T1, animation maths cycle 2…">
           <p class="hint">Écrivez librement, ou reprenez un motif déjà utilisé.</p>
+        </div>
+      </div>
+      <details class="more" id="ed-more">
+      <summary id="ed-more-sum">Plus d'options</summary>
+      <div class="frow" id="row-pause">
+        <label for="ed-pause">Pause (min.)</label>
+        <input type="number" id="ed-pause" min="0" step="1" value="0">
+      </div>
+      <div class="frow" id="row-with">
+        <span class="lab">Avec</span>
+        <div>
+          <div class="withlist" id="ed-with" role="group" aria-label="Collègues associés au créneau"></div>
+          <p class="hint">Visite en binôme ou co-animation : le créneau apparaît aussi sur la ligne des collègues choisis.</p>
         </div>
       </div>
       <div class="frow" id="row-repeat">
@@ -900,6 +1005,7 @@ fieldset.field{border:0;margin:0;padding:0}
           <p class="hint">Les jours fériés et de vacances sont grisés, et sautés automatiquement pour les semaines suivantes.</p>
         </div>
       </div>
+      </details>
       <datalist id="lieux"></datalist>
       <datalist id="motifs-list"></datalist>
     </div>
@@ -960,6 +1066,33 @@ fieldset.field{border:0;margin:0;padding:0}
         <li>Chercher un collègue <kbd>/</kbd></li>
         <li>Fermer une fenêtre <kbd>Échap</kbd></li>
       </ul>
+    </div>
+  </div>
+</div>
+
+<nav class="bottomnav" id="bottomnav" aria-label="Affichage">
+  <button type="button" data-view="day" aria-pressed="false"><i aria-hidden="true">◷</i>Jour</button>
+  <button type="button" data-view="week" aria-pressed="true"><i aria-hidden="true">▦</i>Semaine</button>
+  <button type="button" data-view="month" aria-pressed="false"><i aria-hidden="true">▤</i>Mois</button>
+  <button type="button" data-view="synth" aria-pressed="false"><i aria-hidden="true">◔</i>Synthèse</button>
+  <button type="button" id="morebtn" aria-pressed="false"><i aria-hidden="true">☰</i>Plus</button>
+</nav>
+<button type="button" class="fab" id="fab" aria-label="Nouveau créneau">+</button>
+<div class="overlay" id="moresheet" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="more-title">
+    <div class="modal-h"><div><h2 id="more-title">Plus</h2></div><button type="button" class="btn icon" id="more-x" aria-label="Fermer">✕</button></div>
+    <div class="modal-b sheet-list">
+      <button type="button" data-m="year"><span>🗓</span>Année scolaire (rotations, vacances)</button>
+      <button type="button" data-m="ecoles"><span>🏫</span>Écoles et lieux</button>
+      <button type="button" data-m="annonce"><span>📣</span>Publier une annonce</button>
+      <button type="button" data-m="print"><span>🖨</span>Imprimer ou PDF</button>
+      <button type="button" data-m="xlsx"><span>📊</span>Exporter en Excel</button>
+      <button type="button" data-m="ics"><span>📅</span>Mes créneaux dans mon agenda</button>
+      <button type="button" data-m="profile"><span>👤</span>Mon profil</button>
+      <button type="button" data-m="sound"><span id="more-sound">🔊</span>Sons</button>
+      <button type="button" data-m="intro"><span>▶</span>Revoir l'animation d'accueil</button>
+      <button type="button" data-m="privacy"><span>ℹ</span>Données personnelles</button>
+      <button type="button" data-m="logout"><span>⏻</span>Se déconnecter</button>
     </div>
   </div>
 </div>
@@ -1075,7 +1208,7 @@ fieldset.field{border:0;margin:0;padding:0}
   let prefs = {}; try { prefs = JSON.parse(localStorage.getItem("qeo3")||"{}"); } catch(e) {}
   const savePrefs = () => { try { localStorage.setItem("qeo3", JSON.stringify(prefs)); } catch(e) {} };
   const S = {
-    view: "week", anchor: new Date(), mini: new Date(), filter: "all", q: "", weekend: !!prefs.weekend, synth: "month", open: new Set(), prive: new Map(), ann: [], lieu: null, lieuQ: "",
+    view: "week", anchor: new Date(), mini: new Date(), filter: "all", q: "", weekend: !!prefs.weekend, dense: !!prefs.dense, synth: "month", open: new Set(), prive: new Map(), ann: [], lieu: null, lieuQ: "",
     people: new Map(), shifts: [], today: [], postes: new Map(), motifs: new Map(),
     me: null, readOnly: false, demo: false, peopleReady: false,
   };
@@ -1146,7 +1279,12 @@ fieldset.field{border:0;margin:0;padding:0}
 
   // ---------- rendu ----------
   function render(){
-    document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.view===S.view)));
+    document.querySelectorAll(".tabs button, .bottomnav button[data-view]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.view===S.view)));
+    $("morebtn").setAttribute("aria-pressed", String(S.view==="year" || S.view==="ecoles"));
+    document.body.classList.toggle("dense", S.dense); $("densebtn").setAttribute("aria-pressed", String(S.dense));
+    $("densebtn").hidden = !["week","day","month"].includes(S.view);
+    $("annbtn").hidden = S.readOnly || !S.me;
+    $("fab").hidden = S.readOnly || !S.me;
     const a = S.anchor, [from,to] = range(), yr = S.view==="year";
     let title, sub;
     if (S.view==="day") { title = longDate(a); sub = "Semaine "+isoWeek(a)+" · "+a.getFullYear(); }
@@ -1299,7 +1437,37 @@ fieldset.field{border:0;margin:0;padding:0}
     return e;
   }
 
+  const phoneMQ = matchMedia("(max-width:700px)");
+  phoneMQ.addEventListener && phoneMQ.addEventListener("change", () => { if ($("welcome").hidden) render(); });
+  function agendaWeek(mon){
+    const n = S.weekend ? 7 : 5, todayK = iso(new Date()), idx = index(S.shifts), ids = rows();
+    const box = el("div","agenda");
+    if (!ids.length) { box.append(emptyState()); return box; }
+    for (let i = 0; i < n; i++) {
+      const d = addDays(mon,i), k = iso(d), inf = dayInfo(d);
+      const sec = el("section","ag-day"+(k===todayK?" today":"")+(inf.ferie?" is-ferie":inf.vac?" is-vac":""));
+      const h = el("div","ag-h"); h.append(el("b",null,cap(DOW_L[i])+" "+d.getDate()+" "+MON[d.getMonth()]), ...tagsFor(inf,true));
+      if (inf.rot) h.append(el("span","tag "+inf.rot,inf.rot));
+      const who = ids.filter(id => (idx[id+"|"+k]||[]).length);
+      h.append(el("span","cnt", who.length ? who.length+" pers." : ""));
+      sec.append(h);
+      const list = [...who]; if (S.me && canEdit(S.me) && !list.includes(S.me) && ids.includes(S.me) && !inf.off && !inf.we) list.unshift(S.me);
+      list.sort((a,b) => (a===S.me?-1:b===S.me?1:0));
+      for (const uid of list) {
+        const row = el("div","ag-row"+(uid===S.me?" mine":""));
+        const w = el("div","ag-who"); w.append(avatar(uid,true), el("b",null, uid===S.me ? "Vous" : fullName(uid))); row.append(w);
+        const cards = el("div","ag-cards");
+        for (const s of (idx[uid+"|"+k]||[])) cards.append(card(s, canEdit(uid)));
+        if (canEdit(uid)) { const b = el("button","ag-add","+ Ajouter"); b.type = "button"; b.onclick = () => openEditor({ uid, date:k }); cards.append(b); }
+        row.append(cards); sec.append(row);
+      }
+      if (!list.length) sec.append(el("div","ag-empty", inf.off || inf.we ? (inf.ferie ? "Jour férié" : inf.vac ? "Vacances scolaires" : "Week-end") : "Aucun créneau ce jour-là."));
+      box.append(sec);
+    }
+    return box;
+  }
   function weekView(mon){
+    if (phoneMQ.matches) return agendaWeek(mon);
     const n = S.weekend ? 7 : 5;
     const ds = Array.from({length:n},(_,i)=>addDays(mon,i)), todayK = iso(new Date());
     const idx = index(S.shifts), ids = rows();
@@ -1597,7 +1765,8 @@ fieldset.field{border:0;margin:0;padding:0}
     const prevTxt = $("ann-text")?.value || "", prevDt = $("ann-until")?.value || "", hadFocus = document.activeElement?.id==="ann-text";
     box.textContent = "";
     const k = iso(new Date());
-    const list = S.ann.filter(a => a.until >= k).sort((a,b) => (b.createdAt||0)-(a.createdAt||0)).slice(0,3);
+    const all = S.ann.filter(a => a.until >= k).sort((a,b) => (b.createdAt||0)-(a.createdAt||0));
+    const list = annAll ? all.slice(0,6) : all.slice(0,1);
     for (const a of list) {
       const c = el("div","ann"); c.append(avatar(a.author, true));
       const t = el("div","ann-txt");
@@ -1608,6 +1777,8 @@ fieldset.field{border:0;margin:0;padding:0}
       if (a.author===S.me) { const x = el("button","btn icon","✕"); x.type = "button"; x.title = "Retirer l'annonce"; x.setAttribute("aria-label","Retirer mon annonce"); x.onclick = () => removeAnnonce(a); c.append(x); }
       box.append(c);
     }
+    if (all.length > 1) { const m = el("button","ann-more", annAll ? "Masquer les autres annonces" : "+ "+(all.length-1)+" autre"+(all.length>2?"s":"")+" annonce"+(all.length>2?"s":"")); m.type = "button"; m.onclick = () => { annAll = !annAll; renderAnnonces(); }; box.append(m); }
+    box.hidden = !all.length && !annOpen;
     if (S.readOnly || !S.me) return;
     if (annOpen) {
       const f = el("form","ann-form"); f.autocomplete = "off";
@@ -1621,13 +1792,9 @@ fieldset.field{border:0;margin:0;padding:0}
       f.onsubmit = e => { e.preventDefault(); addAnnonce(ta.value.trim(), dt.value || iso(addDays(new Date(),7))); };
       box.append(f);
       if (!annFocused || hadFocus) { annFocused = true; setTimeout(() => { ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); }, 0); }
-    } else {
-      annFocused = false;
-      const bar = el("div","ann-bar"); const b = el("button","btn link","📣 Publier une annonce pour l'équipe"); b.type = "button";
-      b.onclick = () => { annOpen = true; renderAnnonces(); }; bar.append(b); box.append(bar);
-    }
+    } else annFocused = false;
   }
-  let annFocused = false;
+  let annFocused = false, annAll = false;
   async function addAnnonce(text, until){
     if (!text) return toast("Écrivez le texte de l'annonce.");
     const a = { author: S.me, text: text.slice(0,280), until, createdAt: Date.now() };
@@ -1817,7 +1984,27 @@ fieldset.field{border:0;margin:0;padding:0}
       errBox(e && (e.code==="auth/wrong-password" || e.code==="auth/invalid-credential" || e.code==="auth/invalid-login-credentials") ? "Mot de passe incorrect." : "La suppression a échoué. Réessayez. " + (e && e.code ? "("+e.code+")" : ""));
     } finally { const g = $("w-delete-go"); if (g) g.disabled = false; }
   };
-  $("copyweek").onclick = copyPreviousWeek;
+  $("densebtn").onclick = () => { S.dense = !S.dense; prefs.dense = S.dense; savePrefs(); render(); };
+  $("annbtn").onclick = () => { annOpen = true; annFocused = false; renderAnnonces(); };
+  document.querySelectorAll(".bottomnav button[data-view]").forEach(b => b.onclick = () => setView(b.dataset.view));
+  $("fab").onclick = () => newShift();
+  const closeMore = () => { $("moresheet").hidden = true; };
+  $("morebtn").onclick = () => { $("more-sound").textContent = soundOn ? "🔊" : "🔇"; $("moresheet").hidden = false; $("more-x").focus(); };
+  $("more-x").onclick = closeMore;
+  $("moresheet").addEventListener("mousedown", e => { if (e.target.id==="moresheet") closeMore(); });
+  $("moresheet").querySelectorAll("[data-m]").forEach(b => b.onclick = () => {
+    const m = b.dataset.m; closeMore();
+    if (m==="year" || m==="ecoles") setView(m);
+    else if (m==="annonce") { if (S.readOnly || !S.me) return; $("annbtn").click(); $("annonces").scrollIntoView({ block: "center" }); }
+    else if (m==="print") window.print();
+    else if (m==="xlsx") exportXlsx();
+    else if (m==="ics") exportIcs();
+    else if (m==="profile") $("mebtn").click();
+    else if (m==="sound") $("soundbtn").click();
+    else if (m==="intro") $("introbtn").click();
+    else if (m==="privacy") document.querySelector("[data-privacy]").click();
+    else if (m==="logout") { if (S.demo) toast("En mode démonstration, il n'y a pas de compte."); else $("logoutbtn").click(); }
+  });
   // ---------- semaine type ----------
   const TPL_ID = "semaine-type";
   const tplGet = () => S.demo ? S.demoTpl : S.prive.get(TPL_ID);
@@ -1857,7 +2044,7 @@ fieldset.field{border:0;margin:0;padding:0}
   const closeTpl = () => { $("tplmenu").hidden = true; $("tplbtn").setAttribute("aria-expanded","false"); };
   $("tplbtn").onclick = e => { e.stopPropagation(); const m = $("tplmenu"); m.hidden = !m.hidden; $("tplbtn").setAttribute("aria-expanded", String(!m.hidden)); if (!m.hidden) m.querySelector("button").focus(); };
   document.addEventListener("click", e => { if (!$("tplmenu").hidden && !e.target.closest("#weektools .menuwrap")) closeTpl(); });
-  $("tplmenu").querySelectorAll("button").forEach(b => b.onclick = () => { closeTpl(); if (b.dataset.t==="apply") applyTemplate(); else saveTemplate(); });
+  $("tplmenu").querySelectorAll("button").forEach(b => b.onclick = () => { closeTpl(); if (b.dataset.t==="prev") copyPreviousWeek(); else if (b.dataset.t==="apply") applyTemplate(); else saveTemplate(); });
 
 
   // ---------- éditeur ----------
@@ -1888,6 +2075,9 @@ fieldset.field{border:0;margin:0;padding:0}
     $("row-abs").hidden = !abs; $("row-allday").hidden = !abs; $("ed-presets").hidden = abs;
     $("ed-note-lab").textContent = act ? "Motif" : "Précision";
     $("ed-note").placeholder = abs ? "Facultatif. Ex. joignable par mail" : dis ? "Ex. disponible pour une visite ou une réunion" : "Ex. visite T1, animation maths cycle 2…";
+    const parts = [act ? "pause" : "", act && $("ed-with").children.length ? "binôme" : "", !ed.id ? "répétition" : ""].filter(Boolean);
+    $("ed-more").hidden = !parts.length;
+    $("ed-more-sum").textContent = "Plus d'options : " + parts.join(", ");
     resetWarn(); syncAllDay(); syncDur();
   }
   function syncAllDay(){ const off = ed.kind==="absence" && $("ed-allday").checked; $("ed-start").disabled = off; $("ed-end").disabled = off; }
@@ -1920,6 +2110,7 @@ fieldset.field{border:0;margin:0;padding:0}
     $("row-date").hidden = !isNew; $("ed-day").value = s.date;
     fillPostes(s.poste); fillMotifs(s.absence); fillWith(s.with);
     $("ed-freq").value = "0"; $("ed-until").value = ""; $("ed-until-wrap").hidden = true;
+    $("ed-more").open = !!((+s.pause||0) > 0 || (Array.isArray(s.with) && s.with.length));
     $("ed-start").value = s.start || ""; $("ed-end").value = s.end || "";
     $("ed-pause").value = s.pause || 0; $("ed-lieu").value = s.lieu || ""; $("ed-note").value = s.note || "";
     $("ed-allday").checked = s.kind==="absence" ? !s.start : true;
@@ -2272,7 +2463,7 @@ fieldset.field{border:0;margin:0;padding:0}
   $("keys-x").onclick = () => $("keys").hidden = true;
   $("keys").addEventListener("mousedown", e => { if (e.target.id==="keys") $("keys").hidden = true; });
   document.addEventListener("keydown", e => {
-    if (e.key==="Escape") { if (!$("tplmenu").hidden) closeTpl(); else if (!$("exportmenu").hidden) closeMenu(); else if (!$("confirm").hidden) $("confirm-no").click(); else if (!$("privacy").hidden) $("privacy").hidden = true; else if (!$("ed").hidden) closeEditor(); else if (!$("keys").hidden) $("keys").hidden = true; else if (document.activeElement===$("search")) $("search").blur(); return; }
+    if (e.key==="Escape") { if (!$("moresheet").hidden) closeMore(); else if (!$("tplmenu").hidden) closeTpl(); else if (!$("exportmenu").hidden) closeMenu(); else if (!$("confirm").hidden) $("confirm-no").click(); else if (!$("privacy").hidden) $("privacy").hidden = true; else if (!$("ed").hidden) closeEditor(); else if (!$("keys").hidden) $("keys").hidden = true; else if (document.activeElement===$("search")) $("search").blur(); return; }
     if (!$("ed").hidden || !$("keys").hidden || !$("welcome").hidden || !$("privacy").hidden || !$("confirm").hidden) return;
     if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
     const k = e.key.toLowerCase();

@@ -7,6 +7,7 @@ rules_version = '2';
 // - Pour entrer, il faut créer son profil avec le CODE D'ÉQUIPE, rangé dans config/acces (champ « code »),
 //   que personne ne peut lire depuis le site. Sans profil, rien n'est lisible.
 // - La fonction choisie à l'inscription est définitive (seul l'administrateur la change, depuis la console).
+// - Chacun choisit ses couleurs d'affichage (palette, clair/sombre), enregistrées dans son profil.
 // - Chacun ne peut créer, modifier ou supprimer QUE son propre profil, SES créneaux et SES annonces.
 // - Le motif exact d'une absence (ex. arrêt maladie) est rangé dans « prive » : lisible par la seule personne concernée.
 // - Les activités et motifs créés sont partagés : tout membre peut en ajouter, personne ne peut les effacer.
@@ -47,6 +48,7 @@ service cloud.firestore {
         && request.resource.data.lastName is string && request.resource.data.lastName.size() <= 40
         && request.resource.data.role is string && request.resource.data.role.size() <= 20
         && shortText('avatar', 8)
+        && shortText('palette', 16) && shortText('theme', 8)
         && (!('photo' in request.resource.data)
             || (request.resource.data.photo is string
                 && request.resource.data.photo.size() <= 70000

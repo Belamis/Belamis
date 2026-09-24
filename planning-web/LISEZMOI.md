@@ -2,7 +2,7 @@
 
 Planning partagé de l'équipe : IEN, conseillers pédagogiques, ERUN, Maîtres E, E EREH nord, UPE2A, secrétariat, psychologues.
 
-- Chacun se connecte avec son e-mail et un mot de passe, puis saisit son nom et sa fonction.
+- Chacun se connecte avec **l'adresse e-mail de son choix** (Gmail, Outlook, Hotmail, La Poste, académique…) et un mot de passe, confirme son adresse, puis saisit son nom, sa fonction et le **code d'équipe**.
 - Chacun remplit **son propre** planning. Personne ne peut modifier celui d'un collègue : c'est le serveur qui le refuse, pas seulement l'affichage.
 - Tout le monde voit tout, **en temps réel** : une saisie apparaît en une seconde chez les autres.
 - Ergonomie : sur ordinateur, planning plein écran avec jours, noms et totaux fixes et mode Compact ; sur téléphone, semaine en liste jour par jour, barre de navigation en bas et bouton « + ».
@@ -33,6 +33,7 @@ Le site est un simple dossier de fichiers. Les données sont stockées dans **Fi
 1. Menu **Firestore Database**, puis **Créer une base de données**.
 2. Choisissez un emplacement européen (par exemple `europe-west1` ou `europe-west9 (Paris)`), puis **mode production**.
 3. Onglet **Règles** : effacez tout, collez le contenu du fichier `firestore.rules`, puis **Publier**.
+4. Créez le **code d'équipe** (voir plus bas, « Code d'équipe »).
 
 ### 4. Relier le site à votre projet
 
@@ -70,22 +71,35 @@ Firebase, **Authentication > Settings > Domaines autorisés > Ajouter un domaine
 Envoyez simplement l'adresse du site à vos collègues, par e-mail ou messagerie. À la première visite :
 1. une animation présente le logo de la circonscription ;
 2. ils cliquent sur **Créer un compte** (e-mail + mot de passe) ;
-3. ils indiquent leur prénom, leur nom et leur fonction ;
-4. ils arrivent sur le planning.
+3. ils confirment leur adresse en cliquant sur le lien reçu par e-mail ;
+4. ils indiquent leur prénom, leur nom, leur fonction et le **code d'équipe** (à leur donner de vive voix ou par message, pas dans un lieu public) ;
+5. ils arrivent sur le planning.
 
 Sur téléphone, le site s'utilise dans le navigateur. On peut l'ajouter à l'écran d'accueil : dans Safari, *Partager > Sur l'écran d'accueil* ; dans Chrome, *⋮ > Ajouter à l'écran d'accueil*.
 
 ---
 
-## Accès réservé aux adresses académiques
+## Code d'équipe (qui peut entrer)
 
-Le planning n'accepte que les adresses **@ac-mayotte.fr**, et chacun doit confirmer son adresse en cliquant sur le lien reçu par e-mail. Ce réglage est appliqué à deux endroits :
-- dans `config.js`, la ligne `allowedDomain: "ac-mayotte.fr"`, qui gère le message à l'écran ;
-- dans `firestore.rules`, la fonction `member()`, que le serveur applique vraiment.
+Toutes les adresses e-mail sont acceptées, une fois confirmées par le lien reçu. Pour entrer dans le planning, il faut en plus le **code d'équipe** : sans lui, on ne peut ni créer de profil ni voir quoi que ce soit (le serveur le refuse).
 
-Pour changer de domaine, modifiez les deux, puis republiez les règles.
+**Créer ou changer le code** (console Firebase, *Firestore Database > Données*) :
+1. **+ Commencer une collection**, identifiant `config`, puis **Suivant**.
+2. Identifiant du document : `acces`.
+3. Champ `code`, type **string**, valeur en MAJUSCULES, par exemple `KOUNGOU2026`. **Enregistrer**.
 
-Conseil : dans Firebase, ouvrez *Authentication > Templates* et passez la langue en **français**. Prévenez aussi l'équipe que l'e-mail de confirmation peut arriver dans les indésirables.
+Le site met automatiquement en majuscules ce que tape la personne. Changer le code plus tard n'exclut pas ceux déjà inscrits : il bloque seulement les nouvelles inscriptions avec l'ancien code. Ce document n'est lisible par personne depuis le site.
+
+Pour réserver de nouveau le planning à un seul domaine (ex. `ac-mayotte.fr`), renseignez `allowedDomain` dans `config.js` (message à l'écran uniquement ; le serveur, lui, s'appuie sur le code d'équipe).
+
+Conseil : dans *Authentication > Templates*, passez la langue des e-mails en **français**, et prévenez l'équipe que l'e-mail de confirmation peut arriver dans les indésirables.
+
+## Tout remettre à zéro
+
+1. *Authentication > Users* : cochez tous les comptes (case en haut de la liste), puis **Supprimer les comptes**.
+2. *Firestore Database > Données* : pour chaque collection `people`, `planning`, `annonces`, `postes`, `motifs`, cliquez sur les **⋮** à côté de son nom, puis **Supprimer la collection** (tapez son nom pour confirmer). Conservez `config`.
+
+Le planning repart alors d'une page blanche : chacun recrée son compte.
 
 ## Données personnelles (RGPD)
 

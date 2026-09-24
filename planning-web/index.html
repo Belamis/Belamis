@@ -790,6 +790,11 @@ details.more[open]>summary::before{transform:rotate(90deg)}
         <legend>Votre fonction</legend>
         <div class="roles" id="w-roles"></div>
       </fieldset>
+      <div class="field" id="w-code-box">
+        <label for="w-code">Code d'équipe</label>
+        <input type="text" id="w-code" maxlength="40" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Donné par l'administrateur du planning">
+        <p class="hint">Ce code protège le planning : sans lui, personne d'extérieur à l'équipe ne peut y entrer.</p>
+      </div>
       <div class="already" id="w-already" hidden></div>
       <p class="err" id="w-err" hidden></p>
       <div class="actions">
@@ -1047,7 +1052,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
         <li>vos absences, les annonces que vous publiez.</li>
       </ul>
       <h3>Qui peut les voir ?</h3>
-      <p>Uniquement les membres de l'équipe connectés avec une adresse académique. Chacun voit le planning de tous, mais ne peut modifier que le sien. Pour un <b>arrêt maladie</b>, les collègues voient seulement « Absent » : le motif exact et les précisions d'absence ne sont visibles que par vous.</p>
+      <p>Uniquement les membres de l'équipe : une adresse e-mail confirmée et le code d'équipe sont nécessaires pour entrer. Chacun voit le planning de tous, mais ne peut modifier que le sien. Pour un <b>arrêt maladie</b>, les collègues voient seulement « Absent » : le motif exact et les précisions d'absence ne sont visibles que par vous.</p>
       <h3>Où sont-elles stockées ?</h3>
       <p>Dans Google Firebase, sur des serveurs situés dans l'Union européenne (Belgique). Aucune donnée n'est vendue ni utilisée à d'autres fins.</p>
       <h3>Combien de temps ?</h3>
@@ -2423,6 +2428,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     $("w-sub").textContent = edit ? "Modifiez votre nom ou votre fonction. Le changement s'applique partout sur le planning." : "Votre nom apparaîtra sur le planning de l'équipe, et vos créneaux seront rattachés à votre compte.";
     $("w-save").textContent = edit ? "Enregistrer" : "Entrer dans le planning →";
     $("w-cancel").hidden = !edit; $("w-err").hidden = true;
+    $("w-code-box").hidden = !!edit || S.demo; $("w-code").value = "";
     $("w-danger").hidden = !edit; $("w-delete-box").hidden = true; $("w-delete").hidden = false; $("w-delpass").value = ""; $("w-del-err").hidden = true;
     openWelcomePage(!!withIntro || (!edit && !introPlayed), "w-first");
   }
@@ -2472,16 +2478,21 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     const err = t => { $("w-err").textContent = t; $("w-err").hidden = false; };
     if (!firstName || !lastName) return err("Renseignez votre prénom et votre nom.");
     if (!role) return err("Choisissez votre fonction.");
+    const isNew = !welcomeEdit, code = $("w-code").value.trim().toUpperCase();
+    if (isNew && !S.demo && !code) { $("w-code").focus(); return err("Saisissez le code d'équipe donné par l'administrateur du planning."); }
     const avatarChoice = document.querySelector('input[name="avatar"]:checked')?.value || "";
     const data = { firstName, lastName, role, avatar: AVATARS.includes(avatarChoice) || (avatarChoice==="photo" && photoData) ? avatarChoice : "", updatedAt: Date.now() };
     if (data.avatar==="photo") data.photo = photoData;
+    if (isNew && !S.demo) data.code = code;
     $("w-save").disabled = true;
     try {
       if (!S.demo) await db.doc("people/"+S.me).set(data);
+      delete data.code;
       S.people.set(S.me, data);
+      if (!S.demo) startData();
       hideWelcome(); sfx("success"); toast(welcomeEdit ? "Profil mis à jour" : "Bienvenue "+firstName+" ! Ajoutez votre premier créneau avec « Nouveau créneau ».");
     } catch(e2) {
-      err(e2 && (e2.code==="invalid_argument" || e2.code==="permission-denied") ? "Enregistrement refusé. Reconnectez-vous puis réessayez." : "L'enregistrement a échoué. Vérifiez votre connexion et réessayez.");
+      err(e2 && (e2.code==="invalid_argument" || e2.code==="permission-denied") ? (isNew ? "Code d'équipe incorrect. Vérifiez-le ou demandez-le à l'administrateur du planning." : "Enregistrement refusé. Reconnectez-vous puis réessayez.") : "L'enregistrement a échoué. Vérifiez votre connexion et réessayez.");
     } finally { $("w-save").disabled = false; }
   });
 
@@ -2588,7 +2599,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     signup = on;
     $("a-eyebrow").textContent = on ? "Nouveau compte" : "Connexion";
     $("a-title").textContent = on ? "Créez votre compte" : "Connectez-vous";
-    $("a-sub").textContent = on ? "Choisissez un mot de passe d'au moins 6 caractères." + (DOMAIN ? " Utilisez votre adresse @" + DOMAIN + "." : "") : "Utilisez votre adresse e-mail professionnelle et votre mot de passe.";
+    $("a-sub").textContent = on ? "Utilisez l'adresse e-mail de votre choix (Gmail, Outlook, Hotmail, La Poste…) et un mot de passe d'au moins 6 caractères." + (DOMAIN ? " Adresse @" + DOMAIN + " uniquement." : "") : "Utilisez l'adresse e-mail et le mot de passe de votre compte.";
     $("a-go").textContent = on ? "Créer mon compte →" : "Se connecter →";
     $("a-q").textContent = on ? "Déjà un compte ?" : "Pas encore de compte ?";
     $("a-toggle").textContent = on ? "Se connecter" : "Créer un compte";
@@ -2619,7 +2630,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     try {
       if (signup) {
         const cred = await auth.createUserWithEmailAndPassword(email, pass);
-        if (DOMAIN) await sendVerify(cred.user, true);
+        await sendVerify(cred.user, true);
       } else await auth.signInWithEmailAndPassword(email, pass);
     } catch(err) { aMsg("err", authMsg(err)); }
     finally { $("a-go").disabled = false; }
@@ -2646,7 +2657,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     const hh = t ? pad(new Date(t).getHours())+":"+pad(new Date(t).getMinutes()) : "";
     $("a-verify-msg").textContent = (t ? "Un e-mail de confirmation a été envoyé à "+u.email+" à "+hh+". " : "")
       + "Cliquez sur le lien qu'il contient, puis revenez ici et appuyez sur « J'ai confirmé mon adresse ». "
-      + "L'e-mail vient de "+SENDER+" : s'il n'arrive pas dans les minutes qui suivent, regardez dans les indésirables, le spam ou la quarantaine de votre messagerie académique.";
+      + "L'e-mail vient de "+SENDER+" : s'il n'arrive pas dans les minutes qui suivent, regardez dans les indésirables, le spam ou la quarantaine de votre messagerie.";
   }
   function startCooldown(){
     const b = $("a-resend"); let left = 60; b.disabled = true;
@@ -2686,7 +2697,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
         hideWelcome();
       }
       refresh();
-    }, err => { if (err && err.code==="permission-denied") banner("Votre compte n'a pas accès au planning. Vérifiez que vous utilisez la bonne adresse e-mail, ou contactez l'administrateur du planning.", "Se déconnecter", signOut); });
+    }, err => { if (err && err.code==="permission-denied") banner("Votre compte n'a pas accès au planning. Déconnectez-vous puis reconnectez-vous, ou contactez l'administrateur du planning.", "Se déconnecter", signOut); });
     db.collection("postes").onSnapshot(snap => {
       BASE_POSTES.forEach(([id,name,color]) => S.postes.set(id,{name,color}));
       snap.docs.forEach(d => { const x = d.data(); if (x && x.name) S.postes.set(d.id,{ name:String(x.name), color: /^#[0-9a-fA-F]{6}$/.test(x.color) ? x.color : "#6A7A90" }); });
@@ -2707,11 +2718,17 @@ details.more[open]>summary::before{transform:rotate(90deg)}
   function onUser(u){
     if (!u) { showAuth(false); return; }
     if (DOMAIN && !String(u.email||"").toLowerCase().endsWith("@" + DOMAIN)) { showAuth(false); aMsg("err", "Ce planning est réservé aux adresses @" + DOMAIN + "."); auth.signOut(); return; }
-    if (DOMAIN && !u.emailVerified) { showAuth(false, u); return; }
+    if (!u.emailVerified) { showAuth(false, u); return; }
     S.me = u.uid;
     $("logoutbtn").hidden = false;
     if (S.peopleReady) { if (S.people.has(S.me)) hideWelcome(); else showWelcome(false); }
-    startData();
+    if (started) return;
+    // Sans profil (donc sans code d'équipe validé), le serveur refuse la lecture du planning :
+    // on vérifie d'abord son propre profil, seul document lisible à ce stade.
+    db.doc("people/"+u.uid).get().then(d => {
+      if (d.exists) startData();
+      else { S.peopleReady = true; showWelcome(false); }
+    }, () => banner("Impossible de joindre le planning. Vérifiez votre connexion internet, puis rechargez la page.", "Recharger", () => location.reload()));
   }
   function loadDemoUser(){ showWelcome(false); }
 

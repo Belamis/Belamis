@@ -1,15 +1,14 @@
-// Configuration du planning « Qui est où ».
-// Remplacez les valeurs ci-dessous par celles de VOTRE projet Firebase
-// (Console Firebase > Paramètres du projet > Vos applications > Configuration du SDK).
-// Tant que ces valeurs ne sont pas remplies, le site s'ouvre en mode démonstration.
+// Configuration du planning « Qui est où » — projet Firebase planning-koungou-nord.
+// Ces valeurs identifient le projet ; elles ne sont pas secrètes. La protection des
+// données est assurée par les règles de sécurité (firestore.rules).
 window.PLANNING_CONFIG = {
   firebase: {
-    apiKey: "A_REMPLACER",
-    authDomain: "A_REMPLACER.firebaseapp.com",
-    projectId: "A_REMPLACER",
-    storageBucket: "A_REMPLACER.appspot.com",
-    messagingSenderId: "A_REMPLACER",
-    appId: "A_REMPLACER",
+    apiKey: "AIzaSyA5fKAu-GXdNLwYgiB1A0AEPPwQfqrJjrw",
+    authDomain: "planning-koungou-nord.firebaseapp.com",
+    projectId: "planning-koungou-nord",
+    storageBucket: "planning-koungou-nord.firebasestorage.app",
+    messagingSenderId: "520616849068",
+    appId: "1:520616849068:web:24d82d665d7a7d3251f909",
   },
   // Facultatif : réserver le planning à une adresse e-mail précise, par exemple "ac-mayotte.fr".
   // Laissez "" pour accepter toutes les adresses. Si vous le remplissez, chaque collègue

@@ -8,6 +8,9 @@ rules_version = '2';
 //   que personne ne peut lire depuis le site. Sans profil, rien n'est lisible.
 // - La fonction choisie à l'inscription est définitive (seul l'administrateur la change, depuis la console).
 // - Chacun choisit ses couleurs d'affichage (palette, clair/sombre), enregistrées dans son profil.
+// - Messages : le fil « chat » est lu par toute l'équipe ; un message individuel (« dms ») n'est lu
+//   que par son expéditeur et son destinataire. Chacun n'efface que ses propres messages.
+// - Présence : chacun signale lui-même qu'il est en ligne (« presence »).
 // - Chacun ne peut créer, modifier ou supprimer QUE son propre profil, SES créneaux et SES annonces.
 // - Le motif exact d'une absence (ex. arrêt maladie) est rangé dans « prive » : lisible par la seule personne concernée.
 // - Les activités et motifs créés sont partagés : tout membre peut en ajouter, personne ne peut les effacer.
@@ -97,6 +100,39 @@ service cloud.firestore {
       allow read: if member();
       allow create: if member() && request.resource.data.name is string && request.resource.data.name.size() <= 50;
       allow update, delete: if false;
+    }
+
+    // Messages : texte de 1 à 1000 caractères, daté de l'instant de l'envoi, signé par son auteur
+    function okMsg() {
+      return request.resource.data.from == request.auth.uid
+        && request.resource.data.text is string
+        && request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 1000
+        && request.resource.data.at is number
+        && request.resource.data.at > request.time.toMillis() - 600000
+        && request.resource.data.at < request.time.toMillis() + 600000;
+    }
+    match /chat/{id} {
+      allow read: if member();
+      allow create: if member() && okMsg() && request.resource.data.keys().hasOnly(['from', 'text', 'at']);
+      allow delete: if member() && resource.data.from == request.auth.uid;
+      allow update: if false;
+    }
+    match /dms/{id} {
+      allow read: if member() && (resource.data.to == request.auth.uid || resource.data.from == request.auth.uid);
+      allow create: if member() && okMsg()
+        && request.resource.data.keys().hasOnly(['from', 'to', 'text', 'at'])
+        && request.resource.data.to is string && request.resource.data.to != request.auth.uid
+        && exists(/databases/$(database)/documents/people/$(request.resource.data.to));
+      allow delete: if member() && resource.data.from == request.auth.uid;
+      allow update: if false;
+    }
+
+    // Présence en ligne
+    match /presence/{uid} {
+      allow read: if member();
+      allow create, update: if isMe(uid) && request.resource.data.keys().hasOnly(['at', 'on'])
+        && request.resource.data.at is number && request.resource.data.on is bool;
+      allow delete: if isMe(uid);
     }
 
     // Code d'équipe : modifiable seulement depuis la console Firebase.

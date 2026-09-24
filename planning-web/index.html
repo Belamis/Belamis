@@ -98,6 +98,64 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .side-brand b{display:block;font:800 19px/1.1 var(--display)}
 .side-brand small{display:block;color:var(--side-muted);font-size:12px;font-weight:700}
 .newbtn{width:100%;padding:12px 14px;border-radius:12px;font-size:14.5px;justify-content:space-between}
+.chatbtn{width:100%;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:1px solid var(--side-line);background:var(--side-card);color:var(--side-ink);font-weight:800;font-size:14px}
+.chatbtn:hover{background:rgba(255,255,255,.1)}
+.chatbtn .on-n{margin-left:auto;font-size:11.5px;font-weight:700;color:var(--side-muted);display:inline-flex;align-items:center;gap:5px}
+.chatbtn .on-n i{width:7px;height:7px;border-radius:50%;background:var(--st-on)}
+.nbadge{min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--danger);color:#fff;font-size:11px;font-weight:800;display:inline-grid;place-items:center;line-height:1}
+.nbadge.pulse{animation:badgepop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes badgepop{0%{transform:scale(.4)}100%{transform:scale(1)}}
+.bottomnav #morebtn{position:relative}
+.bottomnav #morebtn .nbadge{position:absolute;top:0;right:calc(50% - 22px)}
+/* ===== Messages ===== */
+.chat-modal{width:min(920px,100%)!important;height:min(680px,calc(100% - 24px))}
+.chat-body{flex:1;min-height:0;display:grid;grid-template-columns:270px minmax(0,1fr);border-top:1px solid var(--line)}
+.chat-list{overflow:auto;border-right:1px solid var(--line);padding:8px;display:flex;flex-direction:column;gap:2px;background:var(--surface-2)}
+.chat-list .cl-h{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);padding:10px 10px 4px}
+.chat-item{border:0;background:transparent;border-radius:12px;padding:8px 10px;display:flex;align-items:center;gap:10px;text-align:left;color:var(--ink);width:100%}
+.chat-item:hover{background:color-mix(in srgb,var(--accent) 7%,transparent)}
+.chat-item[aria-current="true"]{background:var(--accent-soft)}
+.chat-item .avw{position:relative;flex:none}
+.chat-item .av{width:36px;height:36px}
+.chat-item .team{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);font-size:17px}
+.dot-on{position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;background:var(--st-on);border:2px solid var(--surface-2)}
+.chat-item .ct{min-width:0;flex:1;display:flex;flex-direction:column}
+.chat-item b{font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chat-item small{font-size:12px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chat-item.unread b,.chat-item.unread small{color:var(--ink);font-weight:800}
+.chat-conv{display:flex;flex-direction:column;min-height:0;min-width:0}
+.chat-head{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line-2)}
+.chat-head .av{width:34px;height:34px}
+.chat-head b{display:block;font-size:14.5px}
+.chat-head small{color:var(--muted);font-size:12px;font-weight:700}
+.chat-back{display:none;border:0;background:transparent;font-size:24px;line-height:1;padding:2px 8px 4px;color:var(--accent)}
+.chat-msgs{flex:1;overflow:auto;padding:14px 16px;display:flex;flex-direction:column;gap:4px;background:var(--bg)}
+.chat-day{align-self:center;font-size:11px;font-weight:800;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin:10px 0 6px}
+.msg{max-width:78%;display:flex;flex-direction:column;align-self:flex-start;animation:msgin .25s ease both}
+.msg.mine{align-self:flex-end;align-items:flex-end}
+.msg .who{font-size:11.5px;font-weight:800;color:var(--muted);margin:6px 0 2px 12px}
+.msg .bub{background:var(--surface);border:1px solid var(--line);border-radius:16px 16px 16px 5px;padding:8px 12px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;line-height:1.4;position:relative}
+.msg.mine .bub{background:var(--accent);color:var(--accent-ink);border-color:transparent;border-radius:16px 16px 5px 16px}
+.msg .meta{font-size:10.5px;color:var(--faint);margin:2px 8px 0;display:flex;gap:8px;align-items:center}
+.msg .meta button{border:0;background:transparent;color:var(--faint);font-size:10.5px;font-weight:800;padding:0;text-decoration:underline;opacity:0}
+.msg:hover .meta button,.msg .meta button:focus-visible{opacity:1}
+@keyframes msgin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.chat-empty{margin:auto;text-align:center;color:var(--muted);font-weight:700;max-width:34ch}
+.chat-empty b{display:block;font-size:30px;margin-bottom:6px}
+.chat-form{display:flex;gap:8px;align-items:flex-end;padding:10px 12px;border-top:1px solid var(--line-2);background:var(--surface)}
+.chat-form textarea{flex:1;resize:none;border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface-2);font:inherit;font-weight:600;max-height:120px;min-height:42px;color:var(--ink)}
+.chat-form .btn{height:42px}
+@media (max-width:700px){
+  .chat-modal{height:100%!important;max-height:100%!important;border-radius:0!important}
+  #chat.overlay{align-items:stretch}
+  .chat-body{grid-template-columns:1fr}
+  .chat-body .chat-conv{display:none}
+  .chat-body.in-conv .chat-list{display:none}
+  .chat-body.in-conv .chat-conv{display:flex}
+  .chat-back{display:block}
+  .chat-list{border-right:0}
+}
+@media (prefers-reduced-motion:reduce){.msg,.nbadge.pulse{animation:none}}
 .newbtn span{display:inline-flex;align-items:center;gap:8px}
 .newbtn .plus{font-size:20px;line-height:1;font-weight:600}
 .side .sec-h{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
@@ -982,6 +1040,7 @@ window.QEO_PAL = (() => {
       </div>
     </div>
     <button type="button" class="btn primary newbtn" id="newbtn"><span><span class="plus">+</span> Nouveau créneau</span><kbd>N</kbd></button>
+    <button type="button" class="chatbtn" id="chatbtn" title="Messages de l'équipe (touche D)"><span aria-hidden="true">💬</span>Messages<span class="nbadge" id="chat-badge" hidden></span><span class="on-n" id="on-n" hidden><i></i><span id="on-count">0</span> en ligne</span></button>
 
     <section class="mini" aria-label="Calendrier">
       <div class="sec-h">
@@ -1209,6 +1268,8 @@ window.QEO_PAL = (() => {
       </ul>
       <h3>Qui peut les voir ?</h3>
       <p>Uniquement les membres de l'équipe : une adresse e-mail confirmée et le code d'équipe sont nécessaires pour entrer. Chacun voit le planning de tous, mais ne peut modifier que le sien. Pour un <b>arrêt maladie</b>, les collègues voient seulement « Absent » : le motif exact et les précisions d'absence ne sont visibles que par vous.</p>
+      <h3>Messages et présence</h3>
+      <p>Les messages du fil « Toute l'équipe » sont lus par tous les membres. Un message envoyé à un collègue n'est lisible que par vous deux. Chacun peut effacer ses propres messages. Quand vous avez le planning ouvert, vos collègues voient que vous êtes « en ligne ».</p>
       <h3>Où sont-elles stockées ?</h3>
       <p>Dans Google Firebase, sur des serveurs situés dans l'Union européenne (Belgique). Aucune donnée n'est vendue ni utilisée à d'autres fins.</p>
       <h3>Combien de temps ?</h3>
@@ -1232,6 +1293,7 @@ window.QEO_PAL = (() => {
     <div class="modal-b">
       <ul class="keys">
         <li>Nouveau créneau <kbd>N</kbd></li>
+        <li>Messages <kbd>D</kbd></li>
         <li>Revenir à aujourd'hui <kbd>T</kbd></li>
         <li>Période précédente / suivante <span><kbd>←</kbd> <kbd>→</kbd></span></li>
         <li>Vue Jour, Semaine, Mois, Année <span><kbd>J</kbd> <kbd>S</kbd> <kbd>M</kbd> <kbd>A</kbd></span></li>
@@ -1249,13 +1311,14 @@ window.QEO_PAL = (() => {
   <button type="button" data-view="week" aria-pressed="true"><i aria-hidden="true">▦</i>Semaine</button>
   <button type="button" data-view="month" aria-pressed="false"><i aria-hidden="true">▤</i>Mois</button>
   <button type="button" data-view="synth" aria-pressed="false"><i aria-hidden="true">◔</i>Synthèse</button>
-  <button type="button" id="morebtn" aria-pressed="false"><i aria-hidden="true">☰</i>Plus</button>
+  <button type="button" id="morebtn" aria-pressed="false"><i aria-hidden="true">☰</i>Plus<span class="nbadge" id="more-badge" hidden></span></button>
 </nav>
 <button type="button" class="fab" id="fab" aria-label="Nouveau créneau">+</button>
 <div class="overlay" id="moresheet" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="more-title">
     <div class="modal-h"><div><h2 id="more-title">Plus</h2></div><button type="button" class="btn icon" id="more-x" aria-label="Fermer">✕</button></div>
     <div class="modal-b sheet-list">
+      <button type="button" data-m="chat"><span>💬</span>Messages<span class="nbadge" id="more-chat-badge" hidden style="margin-left:auto"></span></button>
       <button type="button" data-m="year"><span>🗓</span>Année scolaire (rotations, vacances)</button>
       <button type="button" data-m="ecoles"><span>🏫</span>Écoles et lieux</button>
       <button type="button" data-m="annonce"><span>📣</span>Publier une annonce</button>
@@ -1268,6 +1331,24 @@ window.QEO_PAL = (() => {
       <button type="button" data-m="intro"><span>▶</span>Revoir l'animation d'accueil</button>
       <button type="button" data-m="privacy"><span>ℹ</span>Données personnelles</button>
       <button type="button" data-m="logout"><span>⏻</span>Se déconnecter</button>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="chat" hidden>
+  <div class="modal chat-modal" role="dialog" aria-modal="true" aria-labelledby="chat-title">
+    <div class="modal-h"><div><h2 id="chat-title">Messages</h2><p>Le fil de l'équipe est lu par tous ; un message à un collègue n'est lu que par lui et vous.</p></div><button type="button" class="btn icon" id="chat-x" aria-label="Fermer">✕</button></div>
+    <div class="chat-body" id="chat-body">
+      <nav class="chat-list" id="chat-list" aria-label="Conversations"></nav>
+      <section class="chat-conv" aria-label="Conversation">
+        <header class="chat-head"><button type="button" class="chat-back" id="chat-back" aria-label="Retour aux conversations">‹</button><div id="chat-with" style="display:flex;align-items:center;gap:10px;min-width:0"></div></header>
+        <div class="chat-msgs" id="chat-msgs" aria-live="polite"></div>
+        <form class="chat-form" id="chat-form">
+          <label for="chat-input" class="sr-only" style="position:absolute;left:-9999px">Votre message</label>
+          <textarea id="chat-input" rows="1" maxlength="1000" placeholder="Écrire un message…"></textarea>
+          <button type="submit" class="btn primary round" id="chat-send">Envoyer</button>
+        </form>
+      </section>
     </div>
   </div>
 </div>
@@ -1953,7 +2034,11 @@ window.QEO_PAL = (() => {
     notify:  (c,t) => { bell(c, t, 987.77, 0.7, 0.07); bell(c, t + 0.14, 1318.5, 0.9, 0.06); },
     remove:  (c,t) => { tone(c, t, 440, 0.25, 0.06, "sine"); tone(c, t + 0.08, 330, 0.3, 0.05, "sine"); },
   };
+  // Sons enregistrés (dossier « sons ») : réunion enregistrée, collègue connecté, message ou annonce reçus.
+  const MP3 = {};
+  ["reunion","connexion","notification"].forEach(n => { try { const a = new Audio("sons/"+n+".mp3"); a.preload = "auto"; a.volume = 0.8; MP3[n] = a; } catch(e) {} });
   function sfx(name){
+    if (MP3[name]) { if (!soundOn) return; const a = MP3[name]; try { a.currentTime = 0; const pr = a.play(); if (pr) pr.catch(() => {}); } catch(e) {} return; }
     if (!soundOn || matchMedia("(prefers-reduced-motion: reduce)").matches && name==="open") return;
     if (name==="open") { if (openPlayed) return; }
     const c = ac(); if (!c) return;
@@ -1965,7 +2050,172 @@ window.QEO_PAL = (() => {
   const unlock = () => { const c = ac(); if (!c) return; c.resume().then(() => { if (pendingOpen && !openPlayed && soundOn) { pendingOpen = false; openPlayed = true; SOUNDS.open(c, c.currentTime + 0.02); } }).catch(() => {}); };
   ["pointerdown","keydown","touchstart"].forEach(ev => window.addEventListener(ev, unlock, { capture: true, passive: true }));
   function syncSoundBtn(){ const b = $("soundbtn"); b.textContent = soundOn ? "🔊" : "🔇"; b.title = soundOn ? "Couper les sons" : "Activer les sons"; b.setAttribute("aria-label", soundOn ? "Sons activés" : "Sons coupés"); b.setAttribute("aria-pressed", String(soundOn)); }
-  // ---------- couleurs de l'affichage (propres à chaque personne) ----------
+  // ---------- messages (fil d'équipe + messages individuels) et présence en ligne ----------
+  const CH = { group: [], dm: new Map(), online: new Map(), with: "equipe", lus: { chat: 0, dm: {} }, lusLoaded: false, start: Date.now(), open: false };
+  const ONLINE_MS = 150000;
+  const isOnline = uid => { const p = CH.online.get(uid); return !!(p && p.on && Date.now() - p.at < ONLINE_MS); };
+  const hhmm = t => { const d = new Date(t); return pad(d.getHours())+":"+pad(d.getMinutes()); };
+  const dayLabel = t => { const d = new Date(t), k = iso(d), today = iso(new Date()), y = iso(addDays(new Date(),-1)); return k===today ? "Aujourd'hui" : k===y ? "Hier" : cap(DOW_L[(d.getDay()+6)%7])+" "+d.getDate()+" "+MON_L[d.getMonth()]; };
+  const dmWith = m => m.from===S.me ? m.to : m.from;
+  function convMsgs(w){ return (w==="equipe" ? CH.group : [...CH.dm.values()].filter(m => dmWith(m)===w)).slice().sort((a,b) => a.at-b.at); }
+  function unreadOf(w){
+    if (w==="equipe") return CH.group.filter(m => m.from!==S.me && m.at > (CH.lus.chat||0)).length;
+    const t = CH.lus.dm[w] || 0; return [...CH.dm.values()].filter(m => m.from===w && m.to===S.me && m.at > t).length;
+  }
+  function totalUnread(){ let n = unreadOf("equipe"); new Set([...CH.dm.values()].map(dmWith)).forEach(w => n += unreadOf(w)); return n; }
+  function syncBadges(pulse){
+    const n = totalUnread();
+    [["chat-badge"],["more-badge"],["more-chat-badge"]].forEach(([id]) => { const b = $(id); if (!b) return; b.hidden = !n; b.textContent = n > 99 ? "99+" : n; if (pulse && n) { b.classList.remove("pulse"); void b.offsetWidth; b.classList.add("pulse"); } });
+    const on = [...S.people.keys()].filter(u => u!==S.me && isOnline(u)).length;
+    $("on-n").hidden = !on || !!n; $("on-count").textContent = on;
+    document.title = (n ? "("+n+") " : "") + "Qui est où · Koungou Nord";
+  }
+  let lusTimer = null;
+  function markRead(){
+    if (!CH.open || document.hidden) return;
+    const last = convMsgs(CH.with).filter(m => m.from!==S.me).pop(); if (!last) return;
+    if (CH.with==="equipe") { if ((CH.lus.chat||0) >= last.at) return; CH.lus.chat = last.at; }
+    else { if ((CH.lus.dm[CH.with]||0) >= last.at) return; CH.lus.dm[CH.with] = last.at; }
+    syncBadges(); renderChatList();
+    try { localStorage.setItem("qeo-lus-"+S.me, JSON.stringify(CH.lus)); } catch(e) {}
+    clearTimeout(lusTimer);
+    if (!S.demo && db) lusTimer = setTimeout(() => privee(S.me).doc("lus").set({ chat: CH.lus.chat||0, dm: CH.lus.dm }, { merge: true }).catch(() => {}), 1500);
+  }
+  function loadLus(fromServer){
+    if (fromServer) { CH.lus.chat = Math.max(CH.lus.chat||0, +fromServer.chat||0); const d = fromServer.dm || {}; Object.keys(d).forEach(k => CH.lus.dm[k] = Math.max(CH.lus.dm[k]||0, +d[k]||0)); }
+    else { try { const x = JSON.parse(localStorage.getItem("qeo-lus-"+S.me)||"null"); if (x) { CH.lus.chat = +x.chat||0; CH.lus.dm = x.dm||{}; } } catch(e) {} if (!CH.lus.chat) CH.lus.chat = Date.now() - 7*86400000; }
+    syncBadges(); if (CH.open) renderChatList();
+  }
+  function avatarFor(uid){ const w = el("span","avw"); w.append(avatar(uid)); if (isOnline(uid)) w.append(el("i","dot-on")); return w; }
+  function renderChatList(){
+    const box = $("chat-list"); if (!box) return; box.textContent = "";
+    const item = (w, avEl, name, last) => {
+      const b = el("button","chat-item"+(unreadOf(w)?" unread":"")); b.type = "button"; b.setAttribute("aria-current", String(CH.with===w));
+      const t = el("span","ct"); t.append(el("b",null,name), el("small",null, last ? (last.from===S.me ? "Vous : " : w==="equipe" ? person(last.from).firstName+" : " : "")+last.text : (w==="equipe" ? "Fil de toute l'équipe" : isOnline(w) ? "En ligne" : ROLES[person(w).role]||"")));
+      b.append(avEl, t); const n = unreadOf(w); if (n) b.append(el("span","nbadge",String(n)));
+      b.onclick = () => selectConv(w); box.append(b);
+    };
+    const g = convMsgs("equipe"); const tm = el("span","avw"); tm.append(el("span","team","👥"));
+    item("equipe", tm, "Toute l'équipe", g[g.length-1]);
+    box.append(el("div","cl-h","Collègues"));
+    const others = allIds([]).filter(u => u!==S.me && S.people.has(u));
+    const lastOf = u => { const c = convMsgs(u); return c[c.length-1]; };
+    others.sort((a,b) => ((lastOf(b)||{}).at||0) - ((lastOf(a)||{}).at||0) || (isOnline(b)-isOnline(a)));
+    others.forEach(u => item(u, avatarFor(u), fullName(u), lastOf(u)));
+    if (!others.length) box.append(el("p","chat-empty","Vos collègues apparaîtront ici dès leur inscription."));
+  }
+  function renderConv(){
+    const head = $("chat-with"); head.textContent = "";
+    if (CH.with==="equipe") { const tm = el("span","team","👥"); tm.style.cssText = "width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink)"; const t = el("div"); t.append(el("b",null,"Toute l'équipe"), el("small",null, S.people.size+" membres")); head.append(tm, t); }
+    else { const t = el("div"); t.append(el("b",null,fullName(CH.with)), el("small",null, isOnline(CH.with) ? "● En ligne" : ROLES[person(CH.with).role]||"")); head.append(avatarFor(CH.with), t); }
+    const box = $("chat-msgs"), atBottom = box.scrollHeight - box.scrollTop - box.clientHeight < 60; box.textContent = "";
+    const list = convMsgs(CH.with);
+    if (!list.length) { const e = el("div","chat-empty"); e.append(el("b",null,"👋"), CH.with==="equipe" ? "Aucun message pour l'instant. Écrivez le premier à toute l'équipe !" : "Écrivez à "+(person(CH.with).firstName||"votre collègue")+" : seul(e) il ou elle pourra lire ce message."); box.append(e); }
+    let day = "", prev = null;
+    list.forEach(m => {
+      const dl = dayLabel(m.at); if (dl!==day) { day = dl; box.append(el("div","chat-day",dl)); prev = null; }
+      const mine = m.from===S.me, x = el("div","msg"+(mine?" mine":""));
+      if (!mine && CH.with==="equipe" && (!prev || prev.from!==m.from)) x.append(el("span","who",fullName(m.from)));
+      x.append(el("div","bub",m.text));
+      const meta = el("span","meta",hhmm(m.at));
+      if (mine) { const del = el("button",null,"Effacer"); del.type = "button"; del.onclick = () => deleteMsg(m); meta.append(del); }
+      x.append(meta); box.append(x); prev = m;
+    });
+    if (atBottom || !renderConv.seen) box.scrollTop = box.scrollHeight; renderConv.seen = true;
+    markRead();
+  }
+  function selectConv(w){ CH.with = w; renderConv.seen = false; $("chat-body").classList.add("in-conv"); renderChatList(); renderConv(); $("chat-input").focus(); }
+  function openChat(w){
+    if (!S.me) return; CH.open = true; $("moresheet").hidden = true;
+    if (w) CH.with = w; renderConv.seen = false;
+    $("chat").hidden = false; if (!phoneMQ.matches || w) $("chat-body").classList.add("in-conv"); else $("chat-body").classList.remove("in-conv");
+    renderChatList(); renderConv(); if (!phoneMQ.matches || w) $("chat-input").focus();
+  }
+  function closeChat(){ CH.open = false; $("chat").hidden = true; }
+  async function deleteMsg(m){
+    try {
+      if (S.demo) { if (m.to) CH.dm.delete(m.id); else CH.group = CH.group.filter(x => x.id!==m.id); }
+      else await db.doc((m.to ? "dms/" : "chat/")+m.id).delete();
+      renderConv(); renderChatList(); toast("Message effacé");
+    } catch(e) { toast("Impossible d'effacer ce message. Vérifiez votre connexion."); }
+  }
+  $("chatbtn").onclick = () => openChat();
+  $("chat-x").onclick = closeChat;
+  $("chat-back").onclick = () => { $("chat-body").classList.remove("in-conv"); renderChatList(); };
+  $("chat").addEventListener("mousedown", e => { if (e.target.id==="chat") closeChat(); });
+  $("chat-input").addEventListener("input", e => { const t = e.target; t.style.height = "auto"; t.style.height = Math.min(120, t.scrollHeight)+"px"; });
+  $("chat-input").addEventListener("keydown", e => { if (e.key==="Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); $("chat-form").requestSubmit(); } });
+  $("chat-form").addEventListener("submit", async e => {
+    e.preventDefault();
+    const inp = $("chat-input"), text = inp.value.trim().slice(0,1000); if (!text) return;
+    const msg = { from: S.me, text, at: Date.now() }; if (CH.with!=="equipe") msg.to = CH.with;
+    inp.value = ""; inp.style.height = "auto"; $("chat-send").disabled = true;
+    try {
+      if (S.demo) { const id = "m"+Date.now(); if (msg.to) CH.dm.set(id, { id, ...msg }); else CH.group.push({ id, ...msg }); renderConv.seen = false; renderConv(); renderChatList(); }
+      else await db.collection(msg.to ? "dms" : "chat").add(msg);
+    } catch(err) { inp.value = text; toast("Message non envoyé. Vérifiez votre connexion puis réessayez."); }
+    finally { $("chat-send").disabled = false; inp.focus(); }
+  });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) { markRead(); beat(); } });
+  function incoming(m, where){
+    if (m.from===S.me || m.at < CH.start - 5000) return;
+    const viewing = CH.open && !document.hidden && CH.with===where;
+    if (!viewing) { sfx("notification"); toast("💬 "+(where==="equipe" ? fullName(m.from)+" (équipe)" : fullName(m.from))+" : "+(m.text.length > 60 ? m.text.slice(0,60)+"…" : m.text), "Ouvrir", () => openChat(where)); }
+    syncBadges(true);
+  }
+  function chatChanged(){ syncBadges(); if (CH.open) { renderChatList(); renderConv(); } }
+  // Présence : chacun signale toutes les minutes qu'il a le planning ouvert.
+  let beatTimer = null, presFirst = true;
+  const seenOnline = new Map();
+  function beat(){ if (S.demo || !db || !S.me || !started) return; db.doc("presence/"+S.me).set({ at: Date.now(), on: true }).catch(() => {}); }
+  function stopPresence(){ clearInterval(beatTimer); beatTimer = null; }
+  window.addEventListener("pagehide", () => { if (!S.demo && db && S.me && beatTimer) db.doc("presence/"+S.me).set({ at: Date.now(), on: false }).catch(() => {}); });
+  function presenceChanged(){
+    if (!S.people.size || !CH.gotPres) return;
+    S.people.forEach((_, u) => {
+      if (u===S.me) return;
+      const now = isOnline(u), was = seenOnline.get(u);
+      if (!presFirst && now && was!==true) { sfx("connexion"); toast("🟢 "+fullName(u)+" vient de se connecter", "Écrire", () => openChat(u)); }
+      seenOnline.set(u, now);
+    });
+    presFirst = false; syncBadges(); if (CH.open) renderChatList();
+  }
+  function startChat(){
+    loadLus();
+    db.collection("chat").orderBy("at","desc").limit(200).onSnapshot(snap => {
+      const first = !CH.gotGroup; CH.gotGroup = true;
+      CH.group = snap.docs.map(d => ({ id: d.id, ...d.data() })).filter(m => typeof m.text==="string");
+      if (!first) snap.docChanges().forEach(ch => { if (ch.type==="added") incoming(ch.doc.data(), "equipe"); });
+      chatChanged();
+    }, () => {});
+    ["to","from"].forEach(f => {
+      let first = true;
+      db.collection("dms").where(f, "==", S.me).onSnapshot(snap => {
+        snap.docChanges().forEach(ch => {
+          const m = { id: ch.doc.id, ...ch.doc.data() };
+          if (ch.type==="removed") CH.dm.delete(m.id); else CH.dm.set(m.id, m);
+          if (!first && f==="to" && ch.type==="added") incoming(m, m.from);
+        });
+        first = false; chatChanged();
+      }, () => {});
+    });
+    db.collection("presence").onSnapshot(snap => {
+      snap.docs.forEach(d => CH.online.set(d.id, d.data())); CH.gotPres = true; presenceChanged();
+    }, () => {});
+    beat(); stopPresence(); beatTimer = setInterval(beat, 60000);
+    setInterval(presenceChanged, 30000);
+  }
+  function demoChat(){
+    const t = Date.now();
+    CH.group = [
+      { id:"g1", from:"d1", text:"Bonjour à tous ! Réunion de circonscription jeudi à 9 h, salle du conseil.", at: t - 26*3600000 },
+      { id:"g2", from:"d2", text:"Bien noté, je serai là.", at: t - 25*3600000 },
+      { id:"g3", from:"d7", text:"Je prépare les tablettes pour l'animation de vendredi 🙂", at: t - 40*60000 },
+    ];
+    CH.dm.set("p1", { id:"p1", from:"d2", to:"d0", text:"Tu peux passer à l'école Kangani mardi matin avec moi ?", at: t - 15*60000 });
+    ["d1","d2","d7"].forEach(u => CH.online.set(u, { on:true, at: t }));
+    CH.lus.chat = t - 30*3600000; syncBadges();
+  }
   let prefsSynced = false;
   function buildColors(){
     const cur = QEO_PAL.current, g = $("pal-grid"); g.textContent = "";
@@ -2213,6 +2463,9 @@ window.QEO_PAL = (() => {
       (await planning(S.me).get()).docs.forEach(d => refs.push(d.ref));
       (await privee(S.me).get()).docs.forEach(d => refs.push(d.ref));
       (await db.collection("annonces").where("author","==",S.me).get()).docs.forEach(d => refs.push(d.ref));
+      (await db.collection("chat").where("from","==",S.me).get()).docs.forEach(d => refs.push(d.ref));
+      (await db.collection("dms").where("from","==",S.me).get()).docs.forEach(d => refs.push(d.ref));
+      refs.push(db.doc("presence/"+S.me)); stopPresence();
       for (let i = 0; i < refs.length; i += 400) { const b = db.batch(); refs.slice(i,i+400).forEach(x => b.delete(x)); await b.commit(); }
       await db.doc("people/"+S.me).delete();
       await u.delete();
@@ -2240,6 +2493,7 @@ window.QEO_PAL = (() => {
     else if (m==="profile") $("mebtn").click();
     else if (m==="sound") $("soundbtn").click();
     else if (m==="colors") openColors();
+    else if (m==="chat") openChat();
     else if (m==="intro") $("introbtn").click();
     else if (m==="privacy") document.querySelector("[data-privacy]").click();
     else if (m==="logout") { if (S.demo) toast("En mode démonstration, il n'y a pas de compte."); else $("logoutbtn").click(); }
@@ -2473,7 +2727,7 @@ window.QEO_PAL = (() => {
       if (ed.id) await putShift(ed.id, { ...body, date: ed.date });
       else for (const date of dates) await putShift(null, { ...body, date });
       const n = dates.length;
-      closeEditor(); sfx("success"); toast(n > 1 ? n+" créneaux enregistrés" : "Créneau enregistré");
+      closeEditor(); sfx(body.kind==="shift" && body.poste==="reunion" ? "reunion" : "success"); toast(n > 1 ? n+" créneaux enregistrés" : body.poste==="reunion" && body.kind==="shift" ? "Réunion enregistrée" : "Créneau enregistré");
     } catch(err) { writeError(err); }
     finally { btn.disabled = false; }
   });
@@ -2808,20 +3062,20 @@ window.QEO_PAL = (() => {
   $("keys-x").onclick = () => $("keys").hidden = true;
   $("keys").addEventListener("mousedown", e => { if (e.target.id==="keys") $("keys").hidden = true; });
   document.addEventListener("keydown", e => {
-    if (e.key==="Escape") { if (!$("colors").hidden) { $("colors").hidden = true; return; } if (!$("moresheet").hidden) closeMore(); else if (!$("tplmenu").hidden) closeTpl(); else if (!$("exportmenu").hidden) closeMenu(); else if (!$("confirm").hidden) $("confirm-no").click(); else if (!$("privacy").hidden) $("privacy").hidden = true; else if (!$("ed").hidden) closeEditor(); else if (!$("keys").hidden) $("keys").hidden = true; else if (document.activeElement===$("search")) $("search").blur(); return; }
-    if (!$("ed").hidden || !$("keys").hidden || !$("welcome").hidden || !$("privacy").hidden || !$("confirm").hidden || !$("colors").hidden) return;
+    if (e.key==="Escape") { if (!$("chat").hidden) { closeChat(); return; } if (!$("colors").hidden) { $("colors").hidden = true; return; } if (!$("moresheet").hidden) closeMore(); else if (!$("tplmenu").hidden) closeTpl(); else if (!$("exportmenu").hidden) closeMenu(); else if (!$("confirm").hidden) $("confirm-no").click(); else if (!$("privacy").hidden) $("privacy").hidden = true; else if (!$("ed").hidden) closeEditor(); else if (!$("keys").hidden) $("keys").hidden = true; else if (document.activeElement===$("search")) $("search").blur(); return; }
+    if (!$("ed").hidden || !$("keys").hidden || !$("welcome").hidden || !$("privacy").hidden || !$("confirm").hidden || !$("colors").hidden || !$("chat").hidden) return;
     if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
     const k = e.key.toLowerCase();
     if (k==="arrowleft") step(-1); else if (k==="arrowright") step(1);
     else if (k==="t") goToday(); else if (k==="n") { e.preventDefault(); newShift(); }
-    else if (k==="j") setView("day"); else if (k==="s") setView("week"); else if (k==="m") setView("month"); else if (k==="a") setView("year"); else if (k==="r") setView("synth"); else if (k==="e") setView("ecoles");
+    else if (k==="j") setView("day"); else if (k==="s") setView("week"); else if (k==="m") setView("month"); else if (k==="a") setView("year"); else if (k==="r") setView("synth"); else if (k==="e") setView("ecoles"); else if (k==="d") { e.preventDefault(); openChat(); }
     else if (k==="/") { e.preventDefault(); $("search").focus(); }
     else if (k==="?") $("keys").hidden = false;
   });
 
   // ---------- démo (aperçu hors plateforme) ----------
   function loadDemo(){
-    S.demo = true; S.me = "d0";
+    S.demo = true; S.me = "d0"; setTimeout(demoChat, 0);
     [["d0","Camille","Durand · exemple","cp"],["d1","Claire","Morel · exemple","ien"],["d2","Julien","Bertin · exemple","cp"],["d7","Hugo","Petit · exemple","erun"],["d3","Sonia","Haddad · exemple","maitree"],["d4","Marc","Lefèvre · exemple","upe2a"],["d5","Nadia","Roux · exemple","psy"],["d6","Élise","Garnier · exemple","secretaire"]]
       .forEach(([id,f,l,r], i) => S.people.set(id,{ firstName:f, lastName:l, role:r, avatar: AVATARS[(i*5+3)%AVATARS.length] }));
     const m = monday(new Date()), t = dowIdx(new Date()) > 4 ? 0 : dowIdx(new Date()), sh = [];
@@ -2966,7 +3220,7 @@ window.QEO_PAL = (() => {
     if (started) return; started = true;
     db.collection("people").onSnapshot(snap => {
       S.people = new Map(snap.docs.map(d => [d.id, d.data()]));
-      syncPrefs(); syncSubs();
+      syncPrefs(); syncSubs(); if (started && !S.demo) presenceChanged();
       if (!S.peopleReady && !(snap.metadata.fromCache && !S.people.has(S.me))) {
         S.peopleReady = true;
         if (S.me && !S.people.has(S.me)) { showWelcome(false); return; }
@@ -2983,11 +3237,15 @@ window.QEO_PAL = (() => {
       S.motifs = new Map(snap.docs.filter(d => d.data()?.name).map(d => [d.id, String(d.data().name)]));
       refresh();
     }, () => {});
-    privee(S.me).onSnapshot(snap => { S.prive = new Map(snap.docs.map(d => [d.id, d.data()])); rebuild(); refresh(); }, () => {});
+    privee(S.me).onSnapshot(snap => { S.prive = new Map(snap.docs.map(d => [d.id, d.data()])); if (S.prive.has("lus")) loadLus(S.prive.get("lus")); rebuild(); refresh(); }, () => {});
+    let annFirst = true;
     db.collection("annonces").where("until", ">=", iso(new Date())).onSnapshot(snap => {
+      if (!annFirst) snap.docChanges().forEach(ch => { const a = ch.doc.data(); if (ch.type==="added" && a.author!==S.me && !ch.doc.metadata.hasPendingWrites) { sfx("notification"); toast("📣 Nouvelle annonce de "+fullName(a.author)); } });
+      annFirst = false;
       S.ann = snap.docs.map(d => ({ id: d.id, ...d.data() }));
       refresh();
     }, () => {});
+    startChat();
     subscribeToday();
     subscribe();
   }

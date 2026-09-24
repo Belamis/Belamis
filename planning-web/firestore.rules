@@ -25,14 +25,18 @@ service cloud.firestore {
         || (request.resource.data[field] is string && request.resource.data[field].size() <= max);
     }
 
-    // Profils : prénom, nom, fonction
+    // Profils : prénom, nom, fonction, illustration ou photo (petite image JPEG)
     match /people/{uid} {
       allow read: if member();
       allow create, update: if isMe(uid)
         && request.resource.data.firstName is string && request.resource.data.firstName.size() <= 40
         && request.resource.data.lastName is string && request.resource.data.lastName.size() <= 40
         && request.resource.data.role is string && request.resource.data.role.size() <= 20
-        && shortText('avatar', 8);
+        && shortText('avatar', 8)
+        && (!('photo' in request.resource.data)
+            || (request.resource.data.photo is string
+                && request.resource.data.photo.size() <= 70000
+                && request.resource.data.photo.matches('^data:image/jpeg;base64,[A-Za-z0-9+/=]+$')));
       allow delete: if isMe(uid);
     }
 

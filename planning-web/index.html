@@ -194,6 +194,9 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .avatars input{position:absolute;opacity:0;pointer-events:none}
 .avatars label:has(input:checked){border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .avatars label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.avatars .photo-tile{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:800;font-size:10.5px;text-align:center;line-height:1.1;border:1.5px dashed var(--accent);overflow:hidden}
+.avatars .photo-tile img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.photo-actions{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:8px;font-size:12.5px;color:var(--muted);font-weight:600}
 .avatars .ini{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;background:var(--avatar-bg);color:var(--avatar-ink);font-weight:800;font-size:12px}
 .wpreview{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--muted);font-size:13px}
 .wpreview .av{width:48px;height:48px;font-size:15px}
@@ -605,6 +608,7 @@ fieldset.field{border:0;margin:0;padding:0}
 .viewopts{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .iconbtn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:7px 11px;font-weight:700;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
 .iconbtn:hover{color:var(--ink);border-color:var(--muted)}
+.iconbtn{white-space:nowrap;flex:none}
 .iconbtn[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
 .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;max-width:100%;padding-bottom:2px}
 .chips::-webkit-scrollbar{display:none}
@@ -689,6 +693,9 @@ details.more[open]>summary::before{transform:rotate(90deg)}
   .search input{width:100%}
   .viewopts{flex:1 1 100%;flex-wrap:nowrap}
   #densebtn,#annbtn{display:none!important}
+  .viewopts .iconbtn{padding:7px 10px;font-size:12.5px;flex:1 1 auto;justify-content:center}
+  .viewopts{gap:6px;flex-wrap:wrap}
+  .viewopts .search{flex:1 1 100%}
   .status span:last-child{display:none}
   .bottomnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--surface);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 20px rgba(0,0,0,.06)}
   .bottomnav button{flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 2px;border-radius:10px;font-size:11.5px;font-weight:800;color:var(--muted)}
@@ -770,8 +777,14 @@ details.more[open]>summary::before{transform:rotate(90deg)}
         <div class="field"><label for="w-last">Nom</label><input type="text" id="w-last" maxlength="40" autocomplete="family-name" required></div>
       </div>
       <fieldset class="field">
-        <legend>Votre illustration de profil</legend>
-        <div class="avatars" id="w-avatars" role="radiogroup" aria-label="Illustration de profil"></div>
+        <legend>Votre photo ou illustration de profil</legend>
+        <div class="avatars" id="w-avatars" role="radiogroup" aria-label="Photo ou illustration de profil"></div>
+        <div class="photo-actions">
+          <input type="file" id="w-photo" accept="image/*" hidden>
+          <button type="button" class="btn link" id="w-photo-btn">📷 Choisir une photo</button>
+          <button type="button" class="btn link" id="w-photo-del" hidden>Retirer ma photo</button>
+          <span id="w-photo-msg">Votre photo est recadrée et allégée avant l'envoi.</span>
+        </div>
       </fieldset>
       <fieldset class="field">
         <legend>Votre fonction</legend>
@@ -1029,7 +1042,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
       <h3>Données enregistrées</h3>
       <ul>
         <li>Votre adresse e-mail professionnelle (pour la connexion) ;</li>
-        <li>vos prénom, nom et fonction ;</li>
+        <li>vos prénom, nom et fonction, et votre photo de profil si vous en choisissez une ;</li>
         <li>vos créneaux : date, horaires, activité, lieu ou école, motif ;</li>
         <li>vos absences, les annonces que vous publiez.</li>
       </ul>
@@ -1229,10 +1242,13 @@ details.more[open]>summary::before{transform:rotate(90deg)}
   const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
   const AVATARS = Array.from({length:24}, (_,i) => "a"+String(i+1).padStart(2,"0"));
   const avatarSrc = id => "avatars/"+id+".svg";
+  // Photo de profil : petite image JPEG enregistrée dans le profil (jamais d'autre format accepté)
+  const PHOTO_RE = /^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/;
+  const validPhoto = v => typeof v==="string" && v.length <= 70000 && PHOTO_RE.test(v);
   function avatar(uid, sm){
-    const p = person(uid), ill = AVATARS.includes(p.avatar);
-    const a = el("div","av"+(sm?" sm":"")+(p.role==="ien"?" ien":"")+(ill?" av-img":""), ill ? null : initials(uid));
-    if (ill) { const im = el("img"); im.src = avatarSrc(p.avatar); im.alt = ""; im.loading = "lazy"; a.append(im); }
+    const p = person(uid), ph = p.avatar==="photo" && validPhoto(p.photo), ill = !ph && AVATARS.includes(p.avatar);
+    const a = el("div","av"+(sm?" sm":"")+(p.role==="ien"?" ien":"")+(ph||ill?" av-img":""), ph||ill ? null : initials(uid));
+    if (ph || ill) { const im = el("img"); im.src = ph ? p.photo : avatarSrc(p.avatar); im.alt = ""; im.loading = "lazy"; if (ph) im.style.objectFit = "cover"; a.append(im); }
     a.setAttribute("aria-hidden","true"); return a;
   }
   function allIds(extra){
@@ -2345,22 +2361,63 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     $("app").hidden = true; $("welcome").hidden = false;
     if (withIntro || !introPlayed) { introPlayed = true; playIntro(focusId); } else { finishIntro(); $(focusId).focus(); }
   }
-  function buildAvatarPicker(current){
+  let photoData = "";
+  function buildAvatarPicker(current, photo){
+    if (photo !== undefined) photoData = validPhoto(photo) ? photo : "";
     const box = $("w-avatars"); box.textContent = "";
     const mk = (val, content, label) => {
       const l = el("label"); l.title = label; const r = el("input"); r.type = "radio"; r.name = "avatar"; r.value = val; r.id = "av-"+(val||"ini"); r.setAttribute("aria-label", label);
       r.checked = val===current; l.append(r, content); box.append(l);
     };
+    const tile = el("span","photo-tile");
+    if (photoData) { const im = el("img"); im.src = photoData; im.alt = ""; tile.append(im); } else tile.append("📷", el("br"), "Ma photo");
+    mk("photo", tile, photoData ? "Ma photo" : "Choisir une photo");
+    const pr = $("av-photo"); pr.addEventListener("click", e => { if (!photoData) { e.preventDefault(); $("w-photo").click(); } });
+    $("w-photo-del").hidden = !photoData;
+    $("w-photo-btn").textContent = photoData ? "📷 Changer de photo" : "📷 Choisir une photo";
     AVATARS.forEach((id,i) => { const im = el("img"); im.src = avatarSrc(id); im.alt = ""; mk(id, im, "Illustration "+(i+1)); });
     const ini = el("span","ini","AB"); mk("", ini, "Mes initiales, sans illustration");
   }
+  function loadImage(file){
+    return new Promise((ok, ko) => { const url = URL.createObjectURL(file); const im = new Image();
+      im.onload = () => { URL.revokeObjectURL(url); ok(im); }; im.onerror = () => { URL.revokeObjectURL(url); ko(new Error("image")); }; im.src = url; });
+  }
+  async function makePhoto(file){
+    const im = await loadImage(file);
+    const side = Math.min(im.naturalWidth, im.naturalHeight); if (!side) throw new Error("image");
+    const sx = (im.naturalWidth - side) / 2, sy = (im.naturalHeight - side) * 0.35;
+    for (const [size, q] of [[192,0.82],[160,0.75],[128,0.7],[112,0.6]]) {
+      const c = document.createElement("canvas"); c.width = c.height = size;
+      const g = c.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0,0,size,size);
+      g.drawImage(im, sx, Math.max(0,sy), side, side, 0, 0, size, size);
+      const url = c.toDataURL("image/jpeg", q);
+      if (validPhoto(url)) return url;
+    }
+    throw new Error("taille");
+  }
+  $("w-photo-btn").onclick = () => $("w-photo").click();
+  $("w-photo").onchange = async e => {
+    const f = e.target.files && e.target.files[0]; e.target.value = "";
+    if (!f) return;
+    if (!/^image\//.test(f.type) && !/\.(jpe?g|png|webp|heic|heif|gif)$/i.test(f.name)) { $("w-photo-msg").textContent = "Ce fichier n'est pas une image."; return; }
+    $("w-photo-msg").textContent = "Préparation de la photo…";
+    try {
+      const url = await makePhoto(f);
+      buildAvatarPicker("photo", url);
+      $("w-photo-msg").textContent = "Photo prête. Elle sera enregistrée avec votre profil.";
+    } catch(err) {
+      $("w-photo-msg").textContent = "Impossible de lire cette photo. Essayez une photo au format JPEG ou PNG (sur iPhone : partager la photo, puis « Enregistrer dans Fichiers » en JPEG).";
+    }
+  };
+  $("w-photo-del").onclick = () => { photoData = ""; buildAvatarPicker(AVATARS[0], ""); $("w-photo-msg").textContent = "Photo retirée. Choisissez une illustration ou vos initiales."; };
   function showWelcome(edit, withIntro){
     welcomeEdit = !!edit;
     $("aform").hidden = true; $("wform").hidden = false;
     const p = person(S.me);
     $("w-first").value = edit ? p.firstName||"" : ""; $("w-last").value = edit ? p.lastName||"" : "";
     document.querySelectorAll('input[name="role"]').forEach(r => r.checked = edit && r.value===p.role);
-    buildAvatarPicker(edit ? (p.avatar || "") : AVATARS[Math.floor(Math.random()*AVATARS.length)]);
+    buildAvatarPicker(edit ? (p.avatar || "") : AVATARS[Math.floor(Math.random()*AVATARS.length)], edit ? (p.photo || "") : "");
+    $("w-photo-msg").textContent = "Votre photo est recadrée et allégée avant l'envoi.";
     $("w-eyebrow").textContent = edit ? "Mon profil" : "Première connexion";
     $("w-title").textContent = edit ? "Vos informations" : "Faisons connaissance";
     $("w-sub").textContent = edit ? "Modifiez votre nom ou votre fonction. Le changement s'applique partout sur le planning." : "Votre nom apparaîtra sur le planning de l'équipe, et vos créneaux seront rattachés à votre compte.";
@@ -2416,7 +2473,8 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     if (!firstName || !lastName) return err("Renseignez votre prénom et votre nom.");
     if (!role) return err("Choisissez votre fonction.");
     const avatarChoice = document.querySelector('input[name="avatar"]:checked')?.value || "";
-    const data = { firstName, lastName, role, avatar: AVATARS.includes(avatarChoice) ? avatarChoice : "", updatedAt: Date.now() };
+    const data = { firstName, lastName, role, avatar: AVATARS.includes(avatarChoice) || (avatarChoice==="photo" && photoData) ? avatarChoice : "", updatedAt: Date.now() };
+    if (data.avatar==="photo") data.photo = photoData;
     $("w-save").disabled = true;
     try {
       if (!S.demo) await db.doc("people/"+S.me).set(data);

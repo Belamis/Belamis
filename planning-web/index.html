@@ -582,6 +582,25 @@ fieldset.field{border:0;margin:0;padding:0}
   tr,.card,.mday,.sy-card{break-inside:avoid}
 }
 
+/* ===== Disponibilités, binômes, alertes ===== */
+.card.dispo{--c:var(--st-on);background:transparent;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--st-on) 55%,transparent);border-left:0}
+.card.dispo .p{color:color-mix(in srgb,var(--st-on) 70%,var(--ink))}
+.card.linked{opacity:.9;background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--c) 11%,var(--surface)) 0 7px,color-mix(in srgb,var(--c) 6%,var(--surface)) 7px 14px)}
+.card .w{display:block;font-size:11.5px;font-weight:700;color:var(--muted)}
+.chip.dispo{--c:var(--st-on);background:transparent;box-shadow:inset 0 0 0 1px var(--st-on)}
+.withlist{display:flex;flex-wrap:wrap;gap:6px}
+.withlist label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 3px;font-size:12.5px;font-weight:700;cursor:pointer}
+.withlist label .av{width:24px;height:24px;font-size:9.5px}
+.withlist input{position:absolute;opacity:0;pointer-events:none}
+.withlist label:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.withlist label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.warn{border:1px solid color-mix(in srgb,var(--st-off) 60%,transparent);background:color-mix(in srgb,var(--st-off) 12%,var(--surface));border-radius:12px;padding:10px 14px;margin:0 22px 12px}
+.warn b{display:block;margin-bottom:4px}
+.warn ul{margin:0;padding-left:18px;font-weight:600;font-size:13px}
+.repweeks{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.repweeks label{font-weight:700;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.btngroup{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+
 /* ===== Toast ===== */
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 12px 10px 16px;border-radius:12px;font-weight:700;z-index:40;max-width:calc(100% - 32px);display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-lg)}
 .toast button{border:0;background:transparent;color:inherit;font-weight:800;text-decoration:underline;padding:4px}
@@ -758,7 +777,16 @@ fieldset.field{border:0;margin:0;padding:0}
       <div class="chips" id="rolechips" role="group" aria-label="Filtrer par fonction"></div>
       <div class="fspacer"></div>
       <label class="search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="search" placeholder="Rechercher…" aria-label="Chercher un collègue"></label>
-      <button type="button" class="btn" id="copyweek" hidden>↻ Reprendre ma semaine précédente</button>
+      <div class="btngroup" id="weektools" hidden>
+        <button type="button" class="btn" id="copyweek">↻ Semaine précédente</button>
+        <div class="menuwrap">
+          <button type="button" class="btn" id="tplbtn" aria-haspopup="true" aria-expanded="false">★ Ma semaine type ▾</button>
+          <div class="menu" id="tplmenu" hidden>
+            <button type="button" data-t="apply">Appliquer ma semaine type<small>Remplit la semaine affichée</small></button>
+            <button type="button" data-t="save">Enregistrer cette semaine comme semaine type<small>Vos activités et disponibilités de la semaine affichée</small></button>
+          </div>
+        </div>
+      </div>
       <label class="switch" id="we-wrap"><input type="checkbox" id="weekend"> Week-end</label>
     </div>
 
@@ -783,7 +811,9 @@ fieldset.field{border:0;margin:0;padding:0}
     <div class="mtabs" role="tablist">
       <button type="button" role="tab" id="tab-shift" aria-selected="true">Activité</button>
       <button type="button" role="tab" id="tab-abs" aria-selected="false">Absence</button>
+      <button type="button" role="tab" id="tab-dispo" aria-selected="false">Disponible</button>
     </div>
+    <div class="warn" id="ed-warn" hidden role="alert"><b>À vérifier avant d'enregistrer</b><ul id="ed-warn-list"></ul></div>
     <div class="modal-b">
       <div class="frow" id="row-date">
         <label for="ed-day">Date</label>
@@ -835,6 +865,13 @@ fieldset.field{border:0;margin:0;padding:0}
           <p class="hint lock">🔒 Pour un arrêt maladie, vos collègues voient seulement « Absent ». Le motif exact et la précision d'une absence ne sont visibles que par vous.</p>
         </div>
       </div>
+      <div class="frow" id="row-with">
+        <span class="lab">Avec</span>
+        <div>
+          <div class="withlist" id="ed-with" role="group" aria-label="Collègues associés au créneau"></div>
+          <p class="hint">Visite en binôme ou co-animation : le créneau apparaît aussi sur la ligne des collègues choisis.</p>
+        </div>
+      </div>
       <div class="frow" id="row-lieu">
         <label for="ed-lieu">Lieu / école</label>
         <input type="text" id="ed-lieu" maxlength="80" list="lieux" placeholder="Ex. École Jules Ferry">
@@ -850,7 +887,17 @@ fieldset.field{border:0;margin:0;padding:0}
         <span class="lab">Répéter</span>
         <div>
           <div class="days" id="ed-days"></div>
-          <p class="hint">Les jours fériés et de vacances sont signalés en grisé.</p>
+          <div class="repweeks">
+            <select id="ed-freq" aria-label="Répéter sur plusieurs semaines">
+              <option value="0">Cette semaine seulement</option>
+              <option value="1">Chaque semaine</option>
+              <option value="2">Toutes les 2 semaines</option>
+              <option value="A">Les semaines A</option>
+              <option value="B">Les semaines B</option>
+            </select>
+            <label id="ed-until-wrap" hidden>jusqu'au <input type="date" id="ed-until"></label>
+          </div>
+          <p class="hint">Les jours fériés et de vacances sont grisés, et sautés automatiquement pour les semaines suivantes.</p>
         </div>
       </div>
       <datalist id="lieux"></datalist>
@@ -993,7 +1040,9 @@ fieldset.field{border:0;margin:0;padding:0}
   const fmtH = m => Math.floor(m/60)+"h"+pad(m%60);
   const cap = s => s.charAt(0).toUpperCase()+s.slice(1);
   const endMin = s => { const a = toMin(s.start), b = toMin(s.end); return b <= a ? b + 1440 : b; };
-  const dur = s => (s.kind==="absence" || !s.start || !s.end) ? 0 : Math.max(0, endMin(s)-toMin(s.start)-(+s.pause||0));
+  // Types de créneaux : "shift" (activité), "absence", "dispo" (disponibilité, sans heures comptées)
+  const isAct = s => s.kind!=="absence" && s.kind!=="dispo";
+  const dur = s => (!isAct(s) || !s.start || !s.end) ? 0 : Math.max(0, endMin(s)-toMin(s.start)-(+s.pause||0));
   const nowMin = () => { const n = new Date(); return n.getHours()*60+n.getMinutes(); };
   const longDate = d => cap(DOW_L[dowIdx(d)])+" "+d.getDate()+" "+MON_L[d.getMonth()];
 
@@ -1072,7 +1121,16 @@ fieldset.field{border:0;margin:0;padding:0}
     t.append(uid===S.me ? el("small","you","Vous · "+(ROLE_SHORT[person(uid).role]||"Équipe")) : el("small",null,ROLES[person(uid).role]||"Équipe"));
     w.append(t); c.append(w); return c;
   }
-  const byStart = (a,b) => (a.kind==="absence"?-1:0)-(b.kind==="absence"?-1:0) || (a.start||"").localeCompare(b.start||"");
+  const byStart = (a,b) => (a.kind==="absence"?-1:0)-(b.kind==="absence"?-1:0) || (a.start||"").localeCompare(b.start||"") || (a.kind==="dispo"?1:0)-(b.kind==="dispo"?1:0);
+  // Un créneau « avec » des collègues est aussi affiché sur leur ligne (copie en lecture seule).
+  function expand(list){
+    const out = [];
+    for (const s of list) {
+      out.push(s);
+      if (isAct(s) && Array.isArray(s.with)) for (const w of s.with) if (w && w!==s.uid) out.push({ ...s, id: s.id+"~"+w, uid: w, linked: s.uid });
+    }
+    return out;
+  }
   function index(list){ const m = {}; for (const s of list) (m[s.uid+"|"+s.date] ||= []).push(s); for (const k in m) m[k].sort(byStart); return m; }
 
   function range(){
@@ -1104,7 +1162,7 @@ fieldset.field{border:0;margin:0;padding:0}
     const sy = S.view==="synth", ec = S.view==="ecoles";
     $("filters").hidden = yr; $("legend").hidden = yr || sy || ec;
     $("we-wrap").hidden = S.view==="day" || sy || ec;
-    $("copyweek").hidden = S.view!=="week" || S.readOnly || !S.me;
+    $("weektools").hidden = S.view!=="week" || S.readOnly || !S.me;
     $("prev").disabled = $("next").disabled = yr || ec || (sy && S.synth==="year");
     $("newbtn").hidden = S.readOnly || !S.me;
     renderChips(); renderMe(); renderMini(); renderNow();
@@ -1160,7 +1218,8 @@ fieldset.field{border:0;margin:0;padding:0}
   }
   function statusOf(uid, list, m){
     const absNow = list.find(s => s.kind==="absence" && (!s.start || (toMin(s.start)<=m && m<toMin(s.end))));
-    const acts = list.filter(s => s.kind!=="absence");
+    const acts = list.filter(isAct);
+    const dispoNow = list.find(s => s.kind==="dispo" && (!s.start || !s.end || (toMin(s.start)<=m && m<endMin(s))));
     const timed = acts.filter(s => s.start && s.end);
     const cur = acts.find(s => !s.start || !s.end) || timed.find(s => toMin(s.start)<=m && m<endMin(s));
     const next = timed.find(s => toMin(s.start)>m);
@@ -1169,6 +1228,7 @@ fieldset.field{border:0;margin:0;padding:0}
     if (absNow) return { st, ring:"var(--st-off)", what: absLabel(absNow.absence), pre:"Absent · ", where: "" };
     if (cur) return { st, ring:"var(--st-on)", what: posteOf(cur.poste).name, pre:"", where: (cur.lieu ? " · "+cur.lieu : "")+(cur.end ? " · jusqu'à "+cur.end : "") };
     if (next) return { st, ring:"var(--st-on)", what: posteOf(next.poste).name, pre:"À "+next.start+" · ", where: next.lieu ? " · "+next.lieu : "" };
+    if (dispoNow) return { st, ring:"var(--st-on)", what: "Disponible", pre:"", where: dispoNow.end ? " jusqu'à "+dispoNow.end : "" };
     if (last) return { st, ring:"var(--st-none)", what: posteOf(last.poste).name, pre:"Terminé · ", where: "" };
     return { st, ring:"var(--st-none)", what:"", pre:"Pas de créneau aujourd'hui", where:"" };
   }
@@ -1199,6 +1259,7 @@ fieldset.field{border:0;margin:0;padding:0}
     const lg = $("legend"); lg.textContent = "";
     for (const [,p] of S.postes){ const s = el("span"); const d = el("i","dot"); d.style.setProperty("--c",p.color); s.append(d,p.name); lg.append(s); }
     const s = el("span"); const d = el("i","dot"); d.style.setProperty("--c","var(--absence)"); s.append(d,"Absence"); lg.append(s);
+    const s2 = el("span"); const d2 = el("i","dot"); d2.style.setProperty("--c","var(--st-on)"); s2.append(d2,"Disponible"); lg.append(s2);
     lg.append(el("span","sep"));
     [["var(--vac)","Vacances"],["var(--ferie)","Jour férié"]].forEach(([c,t]) => { const x = el("span"); const i = el("i","dot"); i.style.setProperty("--c",c); x.append(i,t); lg.append(x); });
   }
@@ -1210,18 +1271,25 @@ fieldset.field{border:0;margin:0;padding:0}
   }
 
   function card(s, editable, compact){
-    const c = el(editable?"button":"div","card"+(s.kind==="absence"?" abs":""));
+    editable = editable && !s.linked;
+    const c = el(editable?"button":"div","card"+(s.kind==="absence"?" abs":s.kind==="dispo"?" dispo":"")+(s.linked?" linked":""));
     if (editable) { c.type = "button"; c.onclick = e => { e.stopPropagation(); openEditor({ ...s }); }; c.title = "Modifier ce créneau"; }
     if (s.kind==="absence") {
       c.append(el("span","p",absLabel(s.absence)));
+      c.append(el("span","h", s.start && s.end ? s.start+" – "+s.end : "Journée"));
+    } else if (s.kind==="dispo") {
+      c.append(el("span","p","Disponible"));
       c.append(el("span","h", s.start && s.end ? s.start+" – "+s.end : "Journée"));
     } else {
       const p = posteOf(s.poste); c.style.setProperty("--c",p.color);
       c.append(el("span","h", s.start && s.end ? s.start+" – "+s.end : s.start ? "Dès "+s.start : s.end ? "Jusqu'à "+s.end : "Journée"));
       c.append(el("span","p",p.name));
       if (s.lieu) c.append(el("span","l",s.lieu));
+      if (s.linked) c.append(el("span","w","avec "+fullName(s.linked)+(Array.isArray(s.with) && s.with.length>1 ? " et "+(s.with.length-1)+" autre"+(s.with.length>2?"s":"") : "")));
+      else if (Array.isArray(s.with) && s.with.length && !compact) c.append(el("span","w","avec "+s.with.map(fullName).join(", ")));
     }
     if (s.note && !compact) c.append(el("span","n",s.note));
+    if (s.linked) c.title = "Planning de "+fullName(s.linked)+" : vous y êtes associé(e)";
     return c;
   }
   function emptyState(){
@@ -1264,7 +1332,7 @@ fieldset.field{border:0;margin:0;padding:0}
         if (k===todayK) td.classList.add("today");
         if (inf.ferie) td.classList.add("is-ferie"); else if (inf.vac) td.classList.add("is-vac");
         const cell = el("div","cell"), list = idx[uid+"|"+k]||[];
-        for (const s of list) { cell.append(card(s, canEdit(uid))); const m = dur(s); tot += m; if (s.kind!=="absence") { nb++; perDay[i].n.add(uid); perDay[i].m += m; } }
+        for (const s of list) { cell.append(card(s, canEdit(uid))); const m = dur(s); tot += m; if (isAct(s)) { nb++; perDay[i].n.add(uid); perDay[i].m += m; } }
         if (canEdit(uid)) {
           if (!list.length && uid===S.me && !inf.off && !inf.we) cell.classList.add("empty-mine");
           const b = el("button","add","+ Ajouter"); b.type="button"; b.setAttribute("aria-label","Ajouter un créneau pour "+fullName(uid)+" le "+DOW_L[i]+" "+d.getDate()); b.onclick = () => openEditor({ uid, date:k }); cell.append(b);
@@ -1309,8 +1377,8 @@ fieldset.field{border:0;margin:0;padding:0}
         const c = card(s, canEdit(uid), true); c.classList.add("bar-shift");
         const a = s.start ? toMin(s.start) : lo, b = s.start && s.end ? endMin(s) : s.end ? toMin(s.end) : hi;
         c.style.left = pos(a)+"%"; c.style.width = Math.max(2,pos(b)-pos(a))+"%";
-        c.title = [s.start&&s.end?s.start+" – "+s.end:"Toute la journée", s.kind==="absence"?absLabel(s.absence):posteOf(s.poste).name, s.lieu, s.note].filter(Boolean).join(" · ");
-        tr.append(c); tot += dur(s); if (s.kind!=="absence") here = true;
+        c.title = [s.start&&s.end?s.start+" – "+s.end:"Toute la journée", s.kind==="absence"?absLabel(s.absence):s.kind==="dispo"?"Disponible":posteOf(s.poste).name, s.lieu, s.note].filter(Boolean).join(" · ");
+        tr.append(c); tot += dur(s); if (isAct(s)) here = true;
       }
       if (isToday && nm>lo && nm<hi) { const n = el("div","nowline"); n.style.left = pos(nm)+"%"; tr.append(n); }
       if (canEdit(uid)) {
@@ -1348,9 +1416,9 @@ fieldset.field{border:0;margin:0;padding:0}
       else if (inf.key) b.append(el("span","tag key",inf.key));
       else if (inf.vac && (dowIdx(d)===0 || CAL.vac.some(x=>x[0]===k))) b.append(el("span","tag vac","Vacances"));
       list.slice(0,4).forEach(s => {
-        const c = el("span","chip"+(s.kind==="absence"?" abs":""));
-        if (s.kind!=="absence") c.style.setProperty("--c",posteOf(s.poste).color);
-        const lab = s.kind==="absence" ? absLabel(s.absence) : posteOf(s.poste).name;
+        const c = el("span","chip"+(s.kind==="absence"?" abs":s.kind==="dispo"?" dispo":""));
+        if (isAct(s)) c.style.setProperty("--c",posteOf(s.poste).color);
+        const lab = s.kind==="absence" ? absLabel(s.absence) : s.kind==="dispo" ? "Disponible" : posteOf(s.poste).name;
         c.append(el("b",null,initials(s.uid)), document.createTextNode(lab));
         c.title = fullName(s.uid)+" · "+lab+(s.lieu?" · "+s.lieu:"")+(s.start?" · "+s.start+"–"+s.end:"")+(s.note?" · "+s.note:"");
         b.append(c);
@@ -1423,6 +1491,7 @@ fieldset.field{border:0;margin:0;padding:0}
     for (const s of data) {
       const p = P[s.uid]; if (!p) continue;
       if (s.kind==="absence") { p.abs.add(s.date); p.absList.push(s); const m = absLabel(s.absence); G.motifs[m] = (G.motifs[m]||0)+1; continue; }
+      if (s.kind==="dispo") continue;
       const m = dur(s); p.h += m; p.n++; p.days.add(s.date);
       p.act[s.poste] = (p.act[s.poste]||0)+m; p.actN[s.poste] = (p.actN[s.poste]||0)+1;
       G.h += m; G.n++; G.act[s.poste] = (G.act[s.poste]||0)+m; G.actN[s.poste] = (G.actN[s.poste]||0)+1;
@@ -1586,7 +1655,7 @@ fieldset.field{border:0;margin:0;padding:0}
   // ---------- reprendre la semaine précédente ----------
   async function myShiftsBetween(from, to){
     const F = iso(from), T = iso(to);
-    if (S.demo) return S.shifts.filter(s => s.uid===S.me && s.date>=F && s.date<=T);
+    if (S.demo) return S.demoBase.filter(s => s.uid===S.me && s.date>=F && s.date<=T);
     const snap = await planning(S.me).where("date",">=",F).where("date","<=",T).get();
     return snap.docs.map(d => { const x = { ...d.data(), id: d.id, uid: S.me }; return S.prive.has(d.id) ? { ...x, ...S.prive.get(d.id) } : x; });
   }
@@ -1594,7 +1663,7 @@ fieldset.field{border:0;margin:0;padding:0}
     const mon = monday(S.anchor), prev = addDays(mon,-7);
     try {
       const src = await myShiftsBetween(prev, addDays(prev,6));
-      const have = S.shifts.filter(s => s.uid===S.me && s.date>=iso(mon) && s.date<=iso(addDays(mon,6)));
+      const have = S.shifts.filter(s => s.uid===S.me && !s.linked && s.date>=iso(mon) && s.date<=iso(addDays(mon,6)));
       const sig = s => [s.date,s.kind,s.start||"",s.end||"",s.poste||"",s.absence||""].join("|");
       const exist = new Set(have.map(sig));
       let skippedOff = 0;
@@ -1627,11 +1696,11 @@ fieldset.field{border:0;margin:0;padding:0}
     const list = shiftRows();
     const head = ["Date","Jour","Semaine","Rotation","Personne","Fonction","Type","Activité ou motif","Début","Fin","Pause (min)","Durée (h)","Lieu / école","Motif / précision"];
     const data = [head].concat(list.map(s => { const d = parse(s.date), inf = dayInfo(d);
-      return [s.date, cap(DOW_L[dowIdx(d)]), isoWeek(d), inf.rot||"", fullName(s.uid), ROLES[person(s.uid).role]||"", s.kind==="absence"?"Absence":"Activité", s.kind==="absence"?absLabel(s.absence):posteOf(s.poste).name, s.start||"", s.end||"", +s.pause||0, Math.round(dur(s)/60*100)/100, s.lieu||"", s.note||""]; }));
+      return [s.date, cap(DOW_L[dowIdx(d)]), isoWeek(d), inf.rot||"", fullName(s.uid), ROLES[person(s.uid).role]||"", s.kind==="absence"?"Absence":s.kind==="dispo"?"Disponibilité":"Activité", s.kind==="absence"?absLabel(s.absence):s.kind==="dispo"?"Disponible":posteOf(s.poste).name, s.start||"", s.end||"", +s.pause||0, Math.round(dur(s)/60*100)/100, s.lieu||"", s.note||""]; }));
     const per = [["Personne","Fonction","Heures","Créneaux","Jours présents","Jours d'absence"]];
-    rows().forEach(id => { const mine = list.filter(s => s.uid===id), act = mine.filter(s => s.kind!=="absence");
+    rows().forEach(id => { const mine = list.filter(s => s.uid===id), act = mine.filter(isAct);
       per.push([fullName(id), ROLES[person(id).role]||"", Math.round(act.reduce((a,s)=>a+dur(s),0)/60*100)/100, act.length, new Set(act.map(s=>s.date)).size, new Set(mine.filter(s=>s.kind==="absence").map(s=>s.date)).size]); });
-    const acts = {}; list.filter(s => s.kind!=="absence").forEach(s => { const n = posteOf(s.poste).name; acts[n] = acts[n] || [0,0]; acts[n][0] += dur(s); acts[n][1]++; });
+    const acts = {}; list.filter(isAct).forEach(s => { const n = posteOf(s.poste).name; acts[n] = acts[n] || [0,0]; acts[n][0] += dur(s); acts[n][1]++; });
     const pa = [["Activité","Heures","Créneaux"]].concat(Object.entries(acts).sort((a,b)=>b[1][0]-a[1][0]).map(([n,[m,c]]) => [n, Math.round(m/60*100)/100, c]));
     const wb = XLSX.utils.book_new();
     const add = (aoa, name, widths) => { const ws = XLSX.utils.aoa_to_sheet(aoa); ws["!cols"] = widths.map(w => ({ wch: w })); XLSX.utils.book_append_sheet(wb, ws, name); };
@@ -1650,7 +1719,7 @@ fieldset.field{border:0;margin:0;padding:0}
     const stamp = new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d+/,"");
     const L = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Circonscription de Koungou Nord//Qui est ou//FR","CALSCALE:GREGORIAN","X-WR-CALNAME:Mon planning Koungou Nord"];
     for (const s of list) {
-      const d = s.date.replace(/-/g,""), title = s.kind==="absence" ? "Absence · "+absLabel(s.absence) : posteOf(s.poste).name;
+      const d = s.date.replace(/-/g,""), title = s.kind==="absence" ? "Absence · "+absLabel(s.absence) : s.kind==="dispo" ? "Disponible" : posteOf(s.poste).name;
       L.push("BEGIN:VEVENT","UID:"+s.id+"@planning-koungou-nord","DTSTAMP:"+stamp);
       if (s.start && s.end) { const nd = endMin(s) > 1440 ? addDays(parse(s.date),1) : parse(s.date); L.push("DTSTART:"+d+"T"+s.start.replace(":","")+"00", "DTEND:"+iso(nd).replace(/-/g,"")+"T"+s.end.replace(":","")+"00"); }
       else L.push("DTSTART;VALUE=DATE:"+d, "DTEND;VALUE=DATE:"+iso(addDays(parse(s.date),1)).replace(/-/g,""));
@@ -1673,7 +1742,7 @@ fieldset.field{border:0;margin:0;padding:0}
     const wrap = el("div","ecoles"), F = iso(from), T = iso(to), todayK = iso(new Date()), ids = new Set(rows());
     const groups = new Map();
     for (const s of S.shifts) {
-      if (!s.lieu || s.kind==="absence" || !ids.has(s.uid) || s.date<F || s.date>T) continue;
+      if (!s.lieu || !isAct(s) || !ids.has(s.uid) || s.date<F || s.date>T) continue;
       const k = lieuKey(s.lieu); if (!k) continue;
       const g = groups.get(k) || { key:k, names:{}, list:[] };
       g.names[s.lieu] = (g.names[s.lieu]||0)+1; g.list.push(s); groups.set(k, g);
@@ -1749,6 +1818,46 @@ fieldset.field{border:0;margin:0;padding:0}
     } finally { const g = $("w-delete-go"); if (g) g.disabled = false; }
   };
   $("copyweek").onclick = copyPreviousWeek;
+  // ---------- semaine type ----------
+  const TPL_ID = "semaine-type";
+  const tplGet = () => S.demo ? S.demoTpl : S.prive.get(TPL_ID);
+  async function saveTemplate(){
+    const mon = monday(S.anchor), F = iso(mon), T = iso(addDays(mon,6));
+    const items = S.shifts.filter(s => s.uid===S.me && !s.linked && s.kind!=="absence" && s.date>=F && s.date<=T)
+      .map(s => { const it = { dow: dowIdx(parse(s.date)), kind: s.kind, start: s.start||"", end: s.end||"", note: s.note||"" };
+        if (s.kind==="shift") { it.poste = s.poste||""; it.lieu = s.lieu||""; it.pause = +s.pause||0; if (Array.isArray(s.with) && s.with.length) it.with = s.with; }
+        return it; });
+    if (!items.length) return toast("Ajoutez d'abord vos activités de la semaine, puis enregistrez-la comme semaine type.");
+    const had = tplGet();
+    if (!await confirmBox("Enregistrer comme semaine type ?", items.length+" créneau"+(items.length>1?"x":"")+" de la semaine "+isoWeek(mon)+" deviendront votre semaine type"+(had ? " (elle remplacera la précédente)" : "")+". Les absences ne sont pas reprises.", "Enregistrer")) return;
+    try {
+      const doc = { items, updatedAt: Date.now() };
+      if (S.demo) S.demoTpl = doc; else { await privee(S.me).doc(TPL_ID).set(doc); S.prive.set(TPL_ID, doc); }
+      sfx("success"); toast("Semaine type enregistrée ("+items.length+" créneau"+(items.length>1?"x":"")+")");
+    } catch(e) { writeError(e); }
+  }
+  async function applyTemplate(){
+    const tpl = tplGet();
+    if (!tpl || !Array.isArray(tpl.items) || !tpl.items.length) return toast("Vous n'avez pas encore de semaine type : remplissez une semaine, puis « Enregistrer cette semaine comme semaine type ».");
+    const mon = monday(S.anchor);
+    const have = S.shifts.filter(s => s.uid===S.me && !s.linked && s.date>=iso(mon) && s.date<=iso(addDays(mon,6)));
+    const sig = s => [s.date,s.kind,s.start||"",s.end||"",s.poste||""].join("|");
+    const exist = new Set(have.map(sig));
+    let off = 0; const todo = [];
+    for (const it of tpl.items) {
+      const d = addDays(mon, +it.dow||0); if (dayInfo(d).off) { off++; continue; }
+      const { dow, ...rest } = it; const n = { ...rest, uid: S.me, date: iso(d), updatedBy: S.me, updatedAt: Date.now() };
+      if (!exist.has(sig(n))) todo.push(n);
+    }
+    if (!todo.length) return toast(off ? "Rien à ajouter : jours fériés ou de vacances, ou créneaux déjà présents." : "Votre semaine type est déjà appliquée à cette semaine.");
+    if (!await confirmBox("Appliquer votre semaine type ?", todo.length+" créneau"+(todo.length>1?"x":"")+" seront ajoutés à la semaine "+isoWeek(mon)+"."+(off ? " "+off+" créneau(x) tombant un jour férié ou de vacances seront ignorés." : ""), "Appliquer")) return;
+    try { for (const n of todo) await putShift(null, n); sfx("success"); toast("Semaine type appliquée : "+todo.length+" créneau"+(todo.length>1?"x":"")); }
+    catch(e) { writeError(e); }
+  }
+  const closeTpl = () => { $("tplmenu").hidden = true; $("tplbtn").setAttribute("aria-expanded","false"); };
+  $("tplbtn").onclick = e => { e.stopPropagation(); const m = $("tplmenu"); m.hidden = !m.hidden; $("tplbtn").setAttribute("aria-expanded", String(!m.hidden)); if (!m.hidden) m.querySelector("button").focus(); };
+  document.addEventListener("click", e => { if (!$("tplmenu").hidden && !e.target.closest("#weektools .menuwrap")) closeTpl(); });
+  $("tplmenu").querySelectorAll("button").forEach(b => b.onclick = () => { closeTpl(); if (b.dataset.t==="apply") applyTemplate(); else saveTemplate(); });
 
 
   // ---------- éditeur ----------
@@ -1773,25 +1882,28 @@ fieldset.field{border:0;margin:0;padding:0}
   }
   function syncColor(){ /* la couleur de l'activité choisie se voit sur la puce cochée */ }
   function setTab(kind){
-    ed.kind = kind; const abs = kind==="absence";
-    $("tab-shift").setAttribute("aria-selected", String(!abs)); $("tab-abs").setAttribute("aria-selected", String(abs));
-    $("row-poste").hidden = abs; $("row-lieu").hidden = abs; $("row-pause").hidden = abs;
+    ed.kind = kind; const abs = kind==="absence", dis = kind==="dispo", act = !abs && !dis;
+    $("tab-shift").setAttribute("aria-selected", String(act)); $("tab-abs").setAttribute("aria-selected", String(abs)); $("tab-dispo").setAttribute("aria-selected", String(dis));
+    $("row-poste").hidden = !act; $("row-lieu").hidden = !act; $("row-pause").hidden = !act; $("row-with").hidden = !act || !$("ed-with").children.length;
     $("row-abs").hidden = !abs; $("row-allday").hidden = !abs; $("ed-presets").hidden = abs;
-    $("ed-note-lab").textContent = abs ? "Précision" : "Motif";
-    $("ed-note").placeholder = abs ? "Facultatif. Ex. joignable par mail" : "Ex. visite T1, animation maths cycle 2…";
-    syncAllDay(); syncDur();
+    $("ed-note-lab").textContent = act ? "Motif" : "Précision";
+    $("ed-note").placeholder = abs ? "Facultatif. Ex. joignable par mail" : dis ? "Ex. disponible pour une visite ou une réunion" : "Ex. visite T1, animation maths cycle 2…";
+    resetWarn(); syncAllDay(); syncDur();
   }
   function syncAllDay(){ const off = ed.kind==="absence" && $("ed-allday").checked; $("ed-start").disabled = off; $("ed-end").disabled = off; }
   function syncDur(){
     const s = toMin($("ed-start").value); let e = toMin($("ed-end").value);
     if (s!=null && e!=null && e<=s) e += 1440;
-    $("ed-dur").textContent = (s!=null && e!=null && ed.kind!=="absence") ? "Durée "+fmtH(Math.max(0,e-s-(+$("ed-pause").value||0)))+(e>1440?" (jusqu'au lendemain)":"") : "";
+    $("ed-dur").textContent = (s!=null && e!=null && ed.kind==="shift") ? "Durée "+fmtH(Math.max(0,e-s-(+$("ed-pause").value||0)))+(e>1440?" (jusqu'au lendemain)":"") : "";
   }
   function syncDate(){
     const d = parse(ed.date), inf = dayInfo(d);
     $("ed-date").textContent = longDate(d)+" "+d.getFullYear()+(inf.text ? " · "+inf.text : "");
     const dz = $("ed-days"); dz.textContent = "";
+    resetWarn();
     if (ed.id) return;
+    $("ed-until").min = ed.date;
+    if (!$("ed-until").value || $("ed-until").value < ed.date) { const nv = CAL.vac.find(v => v[0] > ed.date); $("ed-until").value = nv ? iso(addDays(parse(nv[0]),-1)) : iso(new Date(CAL.last[0],CAL.last[1]+1,0)); }
     const m = monday(d), n = S.weekend || dowIdx(d) > 4 ? 7 : 5;
     for (let i = 0; i < n; i++) {
       const x = addDays(m,i), k = iso(x), xi = dayInfo(x);
@@ -1806,7 +1918,8 @@ fieldset.field{border:0;margin:0;padding:0}
     const isNew = !s.id;
     $("ed-title").textContent = isNew ? (s.uid===S.me ? "Nouveau créneau" : "Nouveau créneau pour "+fullName(s.uid)) : (s.uid===S.me ? "Modifier mon créneau" : "Modifier le créneau de "+fullName(s.uid));
     $("row-date").hidden = !isNew; $("ed-day").value = s.date;
-    fillPostes(s.poste); fillMotifs(s.absence);
+    fillPostes(s.poste); fillMotifs(s.absence); fillWith(s.with);
+    $("ed-freq").value = "0"; $("ed-until").value = ""; $("ed-until-wrap").hidden = true;
     $("ed-start").value = s.start || ""; $("ed-end").value = s.end || "";
     $("ed-pause").value = s.pause || 0; $("ed-lieu").value = s.lieu || ""; $("ed-note").value = s.note || "";
     $("ed-allday").checked = s.kind==="absence" ? !s.start : true;
@@ -1822,7 +1935,60 @@ fieldset.field{border:0;margin:0;padding:0}
   function closeEditor(){ $("ed").hidden = true; ed = null; if (pendingRender) { pendingRender = false; render(); } }
   $("ed-x").onclick = closeEditor; $("ed-cancel").onclick = closeEditor;
   $("ed").addEventListener("mousedown", e => { if (e.target.id==="ed") closeEditor(); });
-  $("tab-shift").onclick = () => setTab("shift"); $("tab-abs").onclick = () => setTab("absence");
+  $("tab-shift").onclick = () => setTab("shift"); $("tab-abs").onclick = () => setTab("absence"); $("tab-dispo").onclick = () => setTab("dispo");
+  $("ed-freq").onchange = () => { $("ed-until-wrap").hidden = $("ed-freq").value==="0"; resetWarn(); };
+  ["ed-start","ed-end","ed-day","ed-until"].forEach(id => $(id).addEventListener("change", resetWarn));
+  function fillWith(sel){
+    const box = $("ed-with"); box.textContent = "";
+    const chosen = new Set(Array.isArray(sel) ? sel : []);
+    allIds().filter(id => id!==S.me && S.people.has(id)).forEach((id,i) => {
+      const l = el("label"); const c = el("input"); c.type = "checkbox"; c.value = id; c.id = "with-"+i; c.checked = chosen.has(id);
+      l.append(c, avatar(id,true), fullName(id)); box.append(l);
+    });
+  }
+  const withVal = () => [...$("ed-with").querySelectorAll("input:checked")].map(c => c.value).slice(0,6);
+  function resetWarn(){ if (!ed) return; ed.forced = false; $("ed-warn").hidden = true; $("ed-save").textContent = ed.id ? "Enregistrer" : "Créer le créneau"; }
+  // Dates concernées par l'enregistrement (jours cochés, éventuellement répétés sur plusieurs semaines)
+  function targetDates(){
+    if (ed.id) return [ed.date];
+    const base = [...$("ed-days").querySelectorAll("input:checked")].map(c => c.value);
+    if (!base.includes(ed.date)) base.unshift(ed.date);
+    const f = $("ed-freq").value, until = $("ed-until").value;
+    if (f==="0" || !until) return base;
+    const out = [...base], mon0 = monday(parse(ed.date));
+    for (let w = 1; w < 60; w++) {
+      const mon = addDays(mon0, 7*w); if (iso(mon) > until) break;
+      if (f==="2" && w%2) continue;
+      if ((f==="A" || f==="B") && CAL.weeks[iso(mon)]!==f) continue;
+      for (const d of base) { const nd = addDays(parse(d), 7*w); if (iso(nd) <= until && !dayInfo(nd).off) out.push(iso(nd)); }
+      if (out.length >= 120) break;
+    }
+    return out.slice(0,120);
+  }
+  // Alertes : chevauchement, journée trop longue, jour férié ou de vacances, absence le même jour
+  function conflicts(body, dates){
+    const out = [];
+    const a0 = toMin(body.start), b0 = body.start && body.end ? (toMin(body.end) <= a0 ? toMin(body.end)+1440 : toMin(body.end)) : null;
+    const fmtD = d => { const x = parse(d); return DOW[dowIdx(x)]+" "+x.getDate()+" "+MON[x.getMonth()]; };
+    for (const d of dates) {
+      const inf = dayInfo(parse(d));
+      if (body.kind!=="absence" && inf.off) out.push(fmtD(d)+" : "+(inf.ferie ? "jour férié ("+inf.ferie+")" : inf.vac)+".");
+      const same = S.shifts.filter(s => s.uid===S.me && s.date===d && s.id!==ed.id && !(s.id||"").startsWith((ed.id||"#")+"~"));
+      if (body.kind!=="absence" && same.some(s => s.kind==="absence")) out.push(fmtD(d)+" : vous avez déjà une absence ce jour-là.");
+      if (body.kind!=="absence") for (const s of same.filter(x => x.kind!=="absence")) {
+        if (body.kind==="dispo" && s.kind==="dispo") continue;
+        const a1 = toMin(s.start), b1 = s.start && s.end ? endMin(s) : null;
+        const overlap = (a0==null || a1==null || b0==null || b1==null) ? true : (a0 < b1 && a1 < b0);
+        if (overlap) out.push(fmtD(d)+" : chevauche « "+(s.kind==="dispo" ? "Disponible" : posteOf(s.poste).name)+" »"+(s.start ? " ("+s.start+(s.end ? " – "+s.end : "")+")" : "")+(s.linked ? " de "+fullName(s.linked) : "")+".");
+      }
+      if (body.kind==="shift") {
+        const tot = same.filter(isAct).reduce((m,s) => m+dur(s), 0) + dur(body);
+        if (tot > 600) out.push(fmtD(d)+" : journée de "+fmtH(tot)+" (plus de 10 h).");
+      }
+      if (out.length > 6) break;
+    }
+    return out;
+  }
   $("ed-allday").onchange = syncAllDay;
   ["ed-start","ed-end","ed-pause"].forEach(id => $(id).addEventListener("input", syncDur));
   $("ed-day").addEventListener("change", e => { if (ed && e.target.value) { ed.date = e.target.value; syncDate(); } });
@@ -1859,12 +2025,20 @@ fieldset.field{border:0;margin:0;padding:0}
     const start = allDay ? "" : $("ed-start").value, end = allDay ? "" : $("ed-end").value;
     const body = { uid: ed.uid, kind: ed.kind, start, end, note: $("ed-note").value.trim().slice(0,140), updatedBy: S.me, updatedAt: Date.now() };
     if (abs) body.absence = $("ed-abs").value;
-    else { body.poste = posteVal(); body.lieu = $("ed-lieu").value.trim().slice(0,80); body.pause = Math.max(0, Math.round(+$("ed-pause").value || 0)); }
+    else if (ed.kind==="shift") { body.poste = posteVal(); body.lieu = $("ed-lieu").value.trim().slice(0,80); body.pause = Math.max(0, Math.round(+$("ed-pause").value || 0)); const w = withVal(); if (w.length) body.with = w; }
+    const dates = targetDates();
+    if (!ed.forced) {
+      const warns = conflicts(body, dates);
+      if (warns.length) {
+        const ul = $("ed-warn-list"); ul.textContent = ""; warns.slice(0,6).forEach(t => ul.append(el("li",null,t)));
+        $("ed-warn").hidden = false; ed.forced = true; $("ed-save").textContent = "Enregistrer quand même"; $("ed-save").focus(); return;
+      }
+    }
     const btn = $("ed-save"); btn.disabled = true;
     try {
       if (ed.id) await putShift(ed.id, { ...body, date: ed.date });
-      else { const dates = [...$("ed-days").querySelectorAll("input:checked")].map(c => c.value); if (!dates.includes(ed.date)) dates.unshift(ed.date); for (const date of dates) await putShift(null, { ...body, date }); }
-      const n = ed.id ? 1 : $("ed-days").querySelectorAll("input:checked").length || 1;
+      else for (const date of dates) await putShift(null, { ...body, date });
+      const n = dates.length;
       closeEditor(); sfx("success"); toast(n > 1 ? n+" créneaux enregistrés" : "Créneau enregistré");
     } catch(err) { writeError(err); }
     finally { btn.disabled = false; }
@@ -1876,7 +2050,7 @@ fieldset.field{border:0;margin:0;padding:0}
   // Une absence est enregistrée en deux parties : la partie visible par l'équipe (motif « Absent »
   // pour un arrêt maladie, sans précision) et la partie privée, lisible par la seule personne concernée.
   async function putShift(id, data){
-    if (S.demo) { const ex = id && S.shifts.find(s=>s.id===id); if (ex) Object.assign(ex, data); else S.shifts.push({ id: id || "x"+Math.random().toString(36).slice(2), ...data }); demoToday(); render(); return; }
+    if (S.demo) { const ex = id && S.demoBase.find(s=>s.id===id); if (ex) { Object.keys(ex).forEach(k => { if (k!=="id") delete ex[k]; }); Object.assign(ex, data); } else S.demoBase.push({ id: id || "x"+Math.random().toString(36).slice(2), ...data }); demoToday(); render(); return; }
     if (data.uid !== S.me) throw { code: "invalid_argument" };
     const ref = id ? planning(data.uid).doc(id) : planning(data.uid).doc();
     if (data.kind==="absence") {
@@ -1891,7 +2065,7 @@ fieldset.field{border:0;margin:0;padding:0}
   async function removeShift(s){
     const { id, ...data } = s;
     try {
-      if (S.demo) { S.shifts = S.shifts.filter(x=>x.id!==id); demoToday(); render(); }
+      if (S.demo) { S.demoBase = S.demoBase.filter(x=>x.id!==id); demoToday(); render(); }
       else { await planning(s.uid).doc(id).delete(); if (S.prive.has(id)) await privee(s.uid).doc(id).delete(); }
       closeEditor();
       sfx("remove"); toast("Créneau supprimé", "Annuler", async () => { try { await putShift(id, data); toast("Créneau rétabli"); } catch(e) { writeError(e); } });
@@ -1911,7 +2085,7 @@ fieldset.field{border:0;margin:0;padding:0}
   // sur la période affichée, élargie à aujourd'hui pour « En ce moment ».
   function rebuild(){
     const k = iso(new Date());
-    const all = Object.values(byUid).flat().map(s => s.uid===S.me && S.prive.has(s.id) ? { ...s, ...S.prive.get(s.id) } : s);
+    const all = expand(Object.values(byUid).flat().map(s => s.uid===S.me && S.prive.has(s.id) ? { ...s, ...S.prive.get(s.id) } : s));
     S.shifts = all; S.today = all.filter(s => s.date===k);
   }
   function syncSubs(){
@@ -1943,7 +2117,7 @@ fieldset.field{border:0;margin:0;padding:0}
     render();
   }
   function subscribeToday(){ if (S.demo) demoToday(); else syncSubs(); }
-  function demoToday(){ const k = iso(new Date()); S.today = S.shifts.filter(s => s.date===k); }
+  function demoToday(){ const k = iso(new Date()); S.shifts = expand(S.demoBase || []); S.today = S.shifts.filter(s => s.date===k); }
 
   // ---------- accueil ----------
   let welcomeEdit = false;
@@ -2098,7 +2272,7 @@ fieldset.field{border:0;margin:0;padding:0}
   $("keys-x").onclick = () => $("keys").hidden = true;
   $("keys").addEventListener("mousedown", e => { if (e.target.id==="keys") $("keys").hidden = true; });
   document.addEventListener("keydown", e => {
-    if (e.key==="Escape") { if (!$("exportmenu").hidden) closeMenu(); else if (!$("confirm").hidden) $("confirm-no").click(); else if (!$("privacy").hidden) $("privacy").hidden = true; else if (!$("ed").hidden) closeEditor(); else if (!$("keys").hidden) $("keys").hidden = true; else if (document.activeElement===$("search")) $("search").blur(); return; }
+    if (e.key==="Escape") { if (!$("tplmenu").hidden) closeTpl(); else if (!$("exportmenu").hidden) closeMenu(); else if (!$("confirm").hidden) $("confirm-no").click(); else if (!$("privacy").hidden) $("privacy").hidden = true; else if (!$("ed").hidden) closeEditor(); else if (!$("keys").hidden) $("keys").hidden = true; else if (document.activeElement===$("search")) $("search").blur(); return; }
     if (!$("ed").hidden || !$("keys").hidden || !$("welcome").hidden || !$("privacy").hidden || !$("confirm").hidden) return;
     if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
     const k = e.key.toLowerCase();
@@ -2119,7 +2293,8 @@ fieldset.field{border:0;margin:0;padding:0}
     const other = d => (t + d) % 5;
     put("d0",t,"shift",{start:"08:30",end:"12:00",poste:"visite",lieu:"École Jules Ferry",note:"Visite T1"});
     put("d0",t,"shift",{start:"14:00",end:"17:00",poste:"bureau",lieu:"Circonscription"});
-    put("d0",other(2),"shift",{start:"13:30",end:"16:30",poste:"animation",lieu:"École Pasteur",note:"Maths cycle 2"});
+    put("d0",other(2),"shift",{start:"13:30",end:"16:30",poste:"animation",lieu:"École Pasteur",note:"Maths cycle 2",with:["d2"]});
+    put("d0",other(3),"dispo",{start:"14:00",end:"16:30",note:"Pour une visite ou une réunion"});
     put("d1",t,"shift",{start:"08:00",end:"18:00",poste:"inspection",lieu:"École Victor Hugo",pause:60,note:"Inspection PE"});
     put("d1",other(1),"shift",{start:"09:00",end:"11:00",poste:"reunion",lieu:"Circonscription",note:"Réunion d'équipe"});
     put("d2",other(1),"shift",{start:"09:00",end:"11:00",poste:"reunion",lieu:"Circonscription",note:"Réunion d'équipe"});
@@ -2132,7 +2307,7 @@ fieldset.field{border:0;margin:0;padding:0}
     put("d4",t,"shift",{start:"08:30",end:"16:00",poste:"accompagnement",lieu:"École Pasteur",pause:60,note:"Élèves allophones"});
     put("d5",t,"absence",{absence:"prive",start:"",end:""});
     put("d6",t,"shift",{start:"08:30",end:"17:00",poste:"bureau",lieu:"Circonscription",pause:60});
-    S.shifts = sh; demoToday();
+    S.demoBase = sh; demoToday();
     S.ann = [{ id:"a1", author:"d1", text:"Réunion d'équipe lundi à 9h à la circonscription. Pensez à apporter vos plannings de visites. (exemple)", until: iso(addDays(new Date(),5)), createdAt: Date.now()-3600e3 }];
     banner("Mode démonstration : Firebase n'est pas encore configuré (voir le fichier LISEZMOI.md). Les personnes et créneaux affichés sont des exemples, rien n'est enregistré.", "Voir l'écran de connexion", () => showAuth(true));
   }

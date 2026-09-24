@@ -42,15 +42,19 @@ service cloud.firestore {
       allow create, update: if isMe(uid)
         && request.resource.data.uid == uid
         && request.resource.data.date is string && request.resource.data.date.size() == 10
-        && request.resource.data.kind in ['shift', 'absence']
-        && shortText('note', 140) && shortText('lieu', 80);
+        && request.resource.data.kind in ['shift', 'absence', 'dispo']
+        && shortText('note', 140) && shortText('lieu', 80)
+        && (!('with' in request.resource.data)
+            || (request.resource.data.with is list && request.resource.data.with.size() <= 6));
       allow delete: if isMe(uid);
     }
 
-    // Partie privée des absences (motif exact, précision) : la personne seule
-    match /planning/{uid}/prive/{shiftId} {
+    // Partie privée (motif exact et précision des absences, semaine type) : la personne seule
+    match /planning/{uid}/prive/{docId} {
       allow read, delete: if isMe(uid);
-      allow create, update: if isMe(uid) && shortText('absence', 40) && shortText('note', 140);
+      allow create, update: if isMe(uid) && shortText('absence', 40) && shortText('note', 140)
+        && (!('items' in request.resource.data)
+            || (request.resource.data.items is list && request.resource.data.items.size() <= 60));
     }
 
     // Annonces de l'équipe

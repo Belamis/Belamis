@@ -6,6 +6,8 @@ Planning partagé de l'équipe : IEN, conseillers pédagogiques, ERUN, Maîtres 
 - Chacun remplit **son propre** planning. Personne ne peut modifier celui d'un collègue : c'est le serveur qui le refuse, pas seulement l'affichage.
 - Tout le monde voit tout, **en temps réel** : une saisie apparaît en une seconde chez les autres.
 - Ergonomie : sur ordinateur, planning plein écran avec jours, noms et totaux fixes et mode Compact ; sur téléphone, semaine en liste jour par jour, barre de navigation en bas et bouton « + ».
+- Couleurs « Lagon » (bleu-vert, mode sombre automatique). Tableau de la semaine : lignes alternées, pictogramme par activité, nombre de collègues en activité et absents sous chaque date, heures de la semaine avec jauge sous chaque nom.
+- La **fonction** choisie à l'inscription est définitive. En cas d'erreur, l'administrateur la corrige dans Firebase (*Firestore > people >* la personne *> role*), avec l'une des valeurs : `ien`, `cp`, `erun`, `maitree`, `ereh`, `upe2a`, `secretaire`, `psy`, `autre`.
 - Vues Jour, Semaine, Mois, Année (rotations A/B, vacances, jours fériés 2026-2027), Synthèse et Écoles.
 - Annonces d'équipe, reprise de la semaine précédente, impression ou PDF, export Excel et export vers son agenda (.ics).
 - Saisie : disponibilités (onglet « Disponible »), visite en binôme (« Avec »), répétition chaque semaine, toutes les 2 semaines ou en semaines A/B jusqu'à une date, « Ma semaine type » à enregistrer puis appliquer, alertes avant d'enregistrer (chevauchement, journée de plus de 10 h, jour férié ou de vacances, absence le même jour).

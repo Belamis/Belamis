@@ -11,43 +11,44 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
 <style>
 :root{
-  --bg:#EDF0F5; --surface:#FFFFFF; --surface-2:#F6F8FB; --line:#DFE4ED; --line-2:#EBEEF4;
-  --ink:#17203A; --muted:#646E87; --faint:#98A0B3; --accent:#2F5BEA; --accent-ink:#FFFFFF; --accent-soft:#E7EDFD;
-  --side:#14203F; --side-2:#1D2B52; --side-ink:#F2F5FF; --side-muted:#A7B2D4; --side-line:rgba(255,255,255,.09); --side-card:rgba(255,255,255,.055);
-  --avatar-bg:#E2E9FB; --avatar-ink:#2F4DB0; --today:#F3F6FF; --mine:#F7F9FF; --danger:#C8372D;
-  --st-on:#2BB673; --st-off:#E0A23A; --st-none:#8D96B0;
-  --absence:#8B90A6; --scrim:rgba(14,20,38,.52);
-  --p-visite:#22A565; --p-animation:#2F5BEA; --p-formation:#E08A1E; --p-reunion:#8756D6; --p-accomp:#13A3B5; --p-inspection:#D2453B; --p-bureau:#A0409F; --p-deplacement:#B8930C;
-  --rotA:#1F6FD1; --rotB:#E0342B; --vac:#F2B705; --vac-ink:#3A2A00; --ferie:#7A3FB0; --prer:#1C2B4F;
-  --shadow:0 1px 2px rgba(23,32,58,.05),0 8px 24px rgba(23,32,58,.06);
-  --shadow-lg:0 24px 70px rgba(10,16,34,.28);
+  /* Palette « Lagon » : bleu-vert du lagon de Mayotte */
+  --bg:#E9F1F1; --surface:#FFFFFF; --surface-2:#F3F8F8; --line:#D3E2E3; --line-2:#E4EEEE;
+  --ink:#0F272C; --muted:#56706F; --faint:#8FA5A6; --accent:#0B8793; --accent-ink:#FFFFFF; --accent-soft:#E0F2F3;
+  --side:#0A3A44; --side-2:#0F4A56; --side-ink:#EAFBFB; --side-muted:#9CC3C6; --side-line:rgba(255,255,255,.09); --side-card:rgba(255,255,255,.06);
+  --avatar-bg:#D6EEEF; --avatar-ink:#07636C; --today:#F0F8F8; --mine:#F4FAFA; --zebra:#F1F7F7; --danger:#C8372D;
+  --st-on:#1E9E62; --st-off:#E0A23A; --st-none:#879597;
+  --absence:#879597; --scrim:rgba(6,26,30,.52);
+  --p-visite:#1E9E62; --p-animation:#2667D8; --p-formation:#E5892A; --p-reunion:#7B52C9; --p-accomp:#0B8793; --p-inspection:#D8453E; --p-bureau:#C0428E; --p-deplacement:#B08A12;
+  --rotA:#2667D8; --rotB:#E0453B; --vac:#F4B81C; --vac-ink:#3A2A00; --ferie:#7B52C9; --prer:#0A3A44;
+  --shadow:0 1px 2px rgba(10,40,46,.05),0 8px 24px rgba(10,40,46,.07);
+  --shadow-lg:0 24px 70px rgba(4,24,28,.28);
   --font:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
   --display:"Bricolage Grotesque","Manrope",ui-sans-serif,system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --bg:#0B0F18; --surface:#141925; --surface-2:#191F2D; --line:#262E41; --line-2:#1E2535;
-    --ink:#E8EBF4; --muted:#9AA3B8; --faint:#6E778C; --accent:#7098FF; --accent-ink:#0B1020; --accent-soft:#1C2744;
-    --side:#101729; --side-2:#18223F; --side-ink:#EEF2FF; --side-muted:#9CA8CB; --side-line:rgba(255,255,255,.07); --side-card:rgba(255,255,255,.045);
-    --avatar-bg:#233052; --avatar-ink:#B2C4FF; --today:#151D33; --mine:#161D2E; --danger:#FF8378;
-    --st-on:#4FD18F; --st-off:#F2B955; --st-none:#8D96B0;
-    --absence:#9DA2B8; --scrim:rgba(0,0,0,.62);
-    --p-formation:#C97A1A; --p-deplacement:#A6860A;
-    --rotA:#4F8EEA; --rotB:#F0584F; --vac:#F2C231; --vac-ink:#2E2200; --ferie:#A57BDC; --prer:#5D74B5;
+    --bg:#07171B; --surface:#0E2226; --surface-2:#12292E; --line:#1E3A40; --line-2:#173036;
+    --ink:#E3F1F1; --muted:#93AEAF; --faint:#63807F; --accent:#3CC2CC; --accent-ink:#04181B; --accent-soft:#0F3439;
+    --side:#051C21; --side-2:#0A2B31; --side-ink:#E6F8F8; --side-muted:#8FB8BB; --side-line:rgba(255,255,255,.07); --side-card:rgba(255,255,255,.045);
+    --avatar-bg:#123A40; --avatar-ink:#8FE0E6; --today:#0F2B30; --mine:#10272B; --zebra:#10262A; --danger:#FF8378;
+    --st-on:#44C98A; --st-off:#F2B955; --st-none:#8A9FA0;
+    --absence:#98AAAB; --scrim:rgba(0,0,0,.62);
+    --p-visite:#35B878; --p-animation:#5B8DEB; --p-formation:#D7842F; --p-reunion:#9A7BE0; --p-accomp:#27A8B3; --p-inspection:#EC6A5F; --p-bureau:#D767A8; --p-deplacement:#BE9B2A;
+    --rotA:#5B8DEB; --rotB:#F0584F; --vac:#F2C231; --vac-ink:#2E2200; --ferie:#9A7BE0; --prer:#2E6C76;
     --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#0B0F18; --surface:#141925; --surface-2:#191F2D; --line:#262E41; --line-2:#1E2535;
-  --ink:#E8EBF4; --muted:#9AA3B8; --faint:#6E778C; --accent:#7098FF; --accent-ink:#0B1020; --accent-soft:#1C2744;
-  --side:#101729; --side-2:#18223F; --side-ink:#EEF2FF; --side-muted:#9CA8CB; --side-line:rgba(255,255,255,.07); --side-card:rgba(255,255,255,.045);
-  --avatar-bg:#233052; --avatar-ink:#B2C4FF; --today:#151D33; --mine:#161D2E; --danger:#FF8378;
-  --st-on:#4FD18F; --st-off:#F2B955; --st-none:#8D96B0;
-  --absence:#9DA2B8; --scrim:rgba(0,0,0,.62);
-  --p-formation:#C97A1A; --p-deplacement:#A6860A;
-  --rotA:#4F8EEA; --rotB:#F0584F; --vac:#F2C231; --vac-ink:#2E2200; --ferie:#A57BDC; --prer:#5D74B5;
+  --bg:#07171B; --surface:#0E2226; --surface-2:#12292E; --line:#1E3A40; --line-2:#173036;
+  --ink:#E3F1F1; --muted:#93AEAF; --faint:#63807F; --accent:#3CC2CC; --accent-ink:#04181B; --accent-soft:#0F3439;
+  --side:#051C21; --side-2:#0A2B31; --side-ink:#E6F8F8; --side-muted:#8FB8BB; --side-line:rgba(255,255,255,.07); --side-card:rgba(255,255,255,.045);
+  --avatar-bg:#123A40; --avatar-ink:#8FE0E6; --today:#0F2B30; --mine:#10272B; --zebra:#10262A; --danger:#FF8378;
+  --st-on:#44C98A; --st-off:#F2B955; --st-none:#8A9FA0;
+  --absence:#98AAAB; --scrim:rgba(0,0,0,.62);
+  --p-visite:#35B878; --p-animation:#5B8DEB; --p-formation:#D7842F; --p-reunion:#9A7BE0; --p-accomp:#27A8B3; --p-inspection:#EC6A5F; --p-bureau:#D767A8; --p-deplacement:#BE9B2A;
+  --rotA:#5B8DEB; --rotB:#F0584F; --vac:#F2C231; --vac-ink:#2E2200; --ferie:#9A7BE0; --prer:#2E6C76;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
 }
 *{box-sizing:border-box}
@@ -231,7 +232,13 @@ table.week.d7{min-width:1320px}
 .dayh .dn{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:var(--muted)}
 .dayh .dd{font:800 21px/1 var(--display)}
 .dayh .dm{font-size:12px;color:var(--muted);font-weight:700}
-.dayh .pc{flex-basis:100%;font-size:11px;font-weight:800;color:var(--faint)}
+.dayh .pc{flex-basis:100%;font-size:11px;font-weight:700;color:var(--muted);margin-top:2px}
+.dayh .pc b{color:var(--st-on);font-weight:800}
+.card .p .ic{margin-right:5px;font-size:.95em;font-weight:400}
+.week .who-txt .whrs{display:flex;align-items:center;gap:6px;margin-top:3px;font-size:10.5px;font-weight:800;color:var(--muted)}
+.week .who-txt .whrs i{position:relative;flex:1;max-width:60px;height:4px;border-radius:3px;background:var(--line);overflow:hidden}
+.week .who-txt .whrs i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--w,0%);background:var(--accent);border-radius:3px}
+.week tr.alt td:not(.today):not(.is-vac):not(.is-ferie):not(.tot),.week tr.alt:not(.mine) .person{background-color:var(--zebra)}
 .week thead th.today{box-shadow:inset 0 3px 0 var(--accent)}
 .week thead th.today .dn,.week thead th.today .dm,.week thead th.today .dd{color:var(--accent)}
 .week thead .tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
@@ -703,7 +710,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
   .bottomnav button{flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 2px;border-radius:10px;font-size:11.5px;font-weight:800;color:var(--muted)}
   .bottomnav button i{font-style:normal;font-size:19px;line-height:1}
   .bottomnav button[aria-pressed="true"]{color:var(--accent);background:var(--accent-soft)}
-  .fab{display:grid;place-items:center;position:fixed;right:16px;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:26;width:56px;height:56px;border-radius:18px;border:0;background:var(--accent);color:var(--accent-ink);font-size:30px;font-weight:500;box-shadow:0 10px 24px rgba(47,91,234,.35)}
+  .fab{display:grid;place-items:center;position:fixed;right:16px;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:26;width:56px;height:56px;border-radius:18px;border:0;background:var(--accent);color:var(--accent-ink);font-size:30px;font-weight:500;box-shadow:0 10px 24px rgba(11,135,147,.35)}
   .overlay{padding:0;align-items:end}
   .overlay .modal{width:100%;max-height:92vh;border-radius:20px 20px 0 0}
   .toast{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
@@ -1142,7 +1149,8 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     ["bureau","Travail de bureau","var(--p-bureau)"],
     ["deplacement","Déplacement","var(--p-deplacement)"],
   ];
-  const SWATCHES = ["#22A565","#2F5BEA","#E08A1E","#8756D6","#13A3B5","#D2453B","#D94F9A","#B8930C","#6A7A90","#3F8F3A"];
+  const ICONS = { visite:"🏫", animation:"🎓", formation:"📚", reunion:"👥", accompagnement:"🤝", inspection:"📋", bureau:"💻", deplacement:"🚗" };
+  const SWATCHES = ["#1E9E62","#2667D8","#E5892A","#7B52C9","#0B8793","#D8453E","#C0428E","#B08A12","#5E7A7C","#3F8F3A"];
   const ABS = [["conge","Congé"],["maladie","Arrêt maladie"],["recup","Récupération"],["stage","Stage / formation hors circo"],["autre","Autre absence"]];
   // fonction : [clé, libellé, abréviation, libellé de groupe] ; l'ordre donne l'ordre d'affichage
   const ROLE_LIST = [
@@ -1419,7 +1427,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
   }
   function renderLegend(){
     const lg = $("legend"); lg.textContent = "";
-    for (const [,p] of S.postes){ const s = el("span"); const d = el("i","dot"); d.style.setProperty("--c",p.color); s.append(d,p.name); lg.append(s); }
+    for (const [id,p] of S.postes){ const s = el("span"); const d = el("i","dot"); d.style.setProperty("--c",p.color); s.append(d,(ICONS[id] ? ICONS[id]+" " : "")+p.name); lg.append(s); }
     const s = el("span"); const d = el("i","dot"); d.style.setProperty("--c","var(--absence)"); s.append(d,"Absence"); lg.append(s);
     const s2 = el("span"); const d2 = el("i","dot"); d2.style.setProperty("--c","var(--st-on)"); s2.append(d2,"Disponible"); lg.append(s2);
     lg.append(el("span","sep"));
@@ -1445,7 +1453,7 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     } else {
       const p = posteOf(s.poste); c.style.setProperty("--c",p.color);
       c.append(el("span","h", s.start && s.end ? s.start+" – "+s.end : s.start ? "Dès "+s.start : s.end ? "Jusqu'à "+s.end : "Journée"));
-      c.append(el("span","p",p.name));
+      const pn = el("span","p"); if (ICONS[s.poste]) pn.append(el("span","ic",ICONS[s.poste])); pn.append(p.name); c.append(pn);
       if (s.lieu) c.append(el("span","l",s.lieu));
       if (s.linked) c.append(el("span","w","avec "+fullName(s.linked)+(Array.isArray(s.with) && s.with.length>1 ? " et "+(s.with.length-1)+" autre"+(s.with.length>2?"s":"") : "")));
       else if (Array.isArray(s.with) && s.with.length && !compact) c.append(el("span","w","avec "+s.with.map(fullName).join(", ")));
@@ -1498,7 +1506,8 @@ details.more[open]>summary::before{transform:rotate(90deg)}
     if (!ids.length) return emptyState();
     const t = el("table","week"+(n===7?" d7":""));
     const cg = el("colgroup"); cg.append(el("col","who")); ds.forEach(()=>cg.append(el("col"))); cg.append(el("col","tot")); t.append(cg);
-    const perDay = ds.map(()=>({ n:new Set(), m:0 }));
+    const perDay = ds.map(()=>({ n:new Set(), a:new Set(), m:0 }));
+    const gauges = []; let maxTot = 0, alt = false;
     const hr = t.createTHead().insertRow();
     const h0 = el("th","who-h","Équipe"); h0.scope="col"; hr.append(h0);
     const heads = ds.map((d,i)=>{
@@ -1517,14 +1526,15 @@ details.more[open]>summary::before{transform:rotate(90deg)}
         group = role; const cnt = ids.filter(x => (person(x).role||"autre")===role).length;
         const gr = tb.insertRow(); gr.className = "group-row"; const gh = el("th",null,ROLE_GROUP[role]||"Équipe"); gh.append(el("small",null,cnt)); gh.colSpan = n+2; gh.scope = "colgroup"; gr.append(gh);
       }
-      const tr = tb.insertRow(); if (uid===S.me) tr.className = "mine"; tr.append(whoCell(uid));
+      const tr = tb.insertRow(); if (uid===S.me) tr.classList.add("mine"); if (alt) tr.classList.add("alt"); alt = !alt;
+      const wc = whoCell(uid); tr.append(wc);
       let tot = 0, nb = 0;
       ds.forEach((d,i)=>{
         const k = iso(d), td = tr.insertCell(), inf = dayInfo(d);
         if (k===todayK) td.classList.add("today");
         if (inf.ferie) td.classList.add("is-ferie"); else if (inf.vac) td.classList.add("is-vac");
         const cell = el("div","cell"), list = idx[uid+"|"+k]||[];
-        for (const s of list) { cell.append(card(s, canEdit(uid))); const m = dur(s); tot += m; if (isAct(s)) { nb++; perDay[i].n.add(uid); perDay[i].m += m; } }
+        for (const s of list) { cell.append(card(s, canEdit(uid))); const m = dur(s); tot += m; if (isAct(s)) { nb++; perDay[i].n.add(uid); perDay[i].m += m; } else if (s.kind==="absence") perDay[i].a.add(uid); }
         if (canEdit(uid)) {
           if (!list.length && uid===S.me && !inf.off && !inf.we) cell.classList.add("empty-mine");
           const b = el("button","add","+ Ajouter"); b.type="button"; b.setAttribute("aria-label","Ajouter un créneau pour "+fullName(uid)+" le "+DOW_L[i]+" "+d.getDate()); b.onclick = () => openEditor({ uid, date:k }); cell.append(b);
@@ -1532,8 +1542,14 @@ details.more[open]>summary::before{transform:rotate(90deg)}
         td.append(cell);
       });
       const tt = tr.insertCell(); tt.className = "tot"; tt.append(el("b",null,fmtH(tot)), el("small",null,nb+" créneau"+(nb>1?"x":"")));
+      const g = el("span","whrs"); g.title = fmtH(tot)+" planifiées cette semaine"; const bar = el("i"); g.append(el("b",null,fmtH(tot)), bar);
+      wc.querySelector(".who-txt").append(g); gauges.push([bar, tot]); maxTot = Math.max(maxTot, tot);
     }
-    heads.forEach((h,i) => { if (perDay[i].n.size) h.append(el("span","pc",perDay[i].n.size+" prés.")); });
+    gauges.forEach(([bar,m]) => bar.style.setProperty("--w", (maxTot ? Math.round(m/maxTot*100) : 0)+"%"));
+    heads.forEach((h,i) => {
+      const a = [...perDay[i].a].filter(u => !perDay[i].n.has(u)).length, n2 = perDay[i].n.size;
+      if (n2 || a) { const pc = el("span","pc"); pc.append(el("b",null,n2+" en activité")); if (a) pc.append(" · "+a+" absent"+(a>1?"s":"")); h.append(pc); }
+    });
     const fr = t.createTFoot().insertRow();
     const f0 = el("th","person","Heures planifiées"); f0.scope="row"; fr.append(f0);
     let all = 0;

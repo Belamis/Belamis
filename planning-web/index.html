@@ -486,7 +486,63 @@ input[type=number]{width:90px}
 .points svg{flex:none;margin-top:1px;color:var(--side-ink);background:var(--side-card);border:1px solid var(--side-line);border-radius:9px;padding:6px;width:32px;height:32px}
 .points b{display:block;font-weight:800}
 .points span{color:var(--side-muted);font-weight:600;font-size:13.5px}
-.wl-cal{background:var(--side-card);border:1px solid var(--side-line);border-radius:16px;padding:16px;margin-top:auto}
+.wl-cal{background:var(--side-card);border:1px solid var(--side-line);border-radius:16px;padding:16px;margin-top:auto;position:relative;z-index:1;backdrop-filter:blur(2px)}
+/* Accueil : lagon animé, reflets, salutation */
+.wl{position:relative;overflow:hidden}
+.wl > *{position:relative;z-index:1}
+.wl .waves{position:absolute;left:0;right:0;bottom:0;height:46%;z-index:0;pointer-events:none;overflow:hidden}
+.wl .waves svg{position:absolute;bottom:0;left:0;width:200%;height:100%}
+.wl .waves path{fill:var(--side-ink)}
+.wl .waves .w1{opacity:.05;animation:drift 26s linear infinite}
+.wl .waves .w2{opacity:.07;animation:drift 18s linear infinite reverse;height:78%}
+.wl .waves .w3{opacity:.09;animation:drift 12s linear infinite;height:52%}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.wl .glow{position:absolute;z-index:0;width:340px;height:340px;border-radius:50%;right:-110px;top:-120px;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 55%,transparent),transparent);opacity:.55;pointer-events:none;animation:float 14s ease-in-out infinite alternate}
+.wl .glow.g2{left:-140px;right:auto;top:38%;width:280px;height:280px;opacity:.3;animation-duration:19s}
+@keyframes float{from{transform:translate(0,0) scale(1)}to{transform:translate(-30px,40px) scale(1.12)}}
+.points li{opacity:1}
+.welcome.enter .points li{animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+.welcome.enter .points li:nth-child(2){animation-delay:.12s}
+.welcome.enter .points li:nth-child(3){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.points svg{color:var(--side-ink);background:color-mix(in srgb,var(--accent) 38%,transparent)!important;border-color:color-mix(in srgb,var(--accent) 50%,transparent)!important}
+.greet{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.greet b{font:800 15px/1.2 var(--display);color:var(--ink)}
+.greet span{font-size:12px;font-weight:800;color:var(--muted);background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.greet span.rotA{color:#fff;background:var(--rotA);border-color:transparent}
+.greet span.rotB{color:#fff;background:var(--rotB);border-color:transparent}
+/* Profil : étapes numérotées */
+.stepn{display:inline-grid;place-items:center;flex:none;width:20px;height:20px;border-radius:50%;font-style:normal;font-size:11px;font-weight:800;margin-right:8px;vertical-align:-4px;background:var(--surface-2);border:1.5px solid var(--line);color:var(--muted);transition:background .25s,border-color .25s,color .25s,transform .25s}
+.stepn.done{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-size:0}
+.stepn.done::after{content:"✓";font-size:11px}
+.step-h{margin:0 0 -4px;font-weight:800;font-size:13px}
+.step-h,.field legend:has(> .stepn),.field label:has(> .stepn){display:flex!important;flex-direction:row!important;align-items:center;gap:0}
+.wl .waves .w1{opacity:.07}.wl .waves .w2{opacity:.09}.wl .waves .w3{opacity:.12}
+/* Fonction : pictogrammes et animation au choix */
+.roles label{position:relative;overflow:visible;transition:transform .2s,border-color .2s,background .2s}
+.roles label .ri{font-size:20px;line-height:1;margin-bottom:4px;display:inline-block;transform-origin:50% 80%}
+.roles label:has(input:checked){transform:translateY(-2px)}
+.roles label.pop{animation:rolepop .55s cubic-bezier(.3,1.6,.5,1)}
+.roles label.pop .ri{animation:rolebob .7s ease-out}
+.roles label.pop::after{content:"";position:absolute;inset:-2px;border-radius:12px;border:2px solid var(--accent);animation:ring .6s ease-out forwards;pointer-events:none}
+@keyframes rolepop{0%{transform:scale(.92)}55%{transform:scale(1.06) translateY(-2px)}100%{transform:translateY(-2px)}}
+@keyframes rolebob{0%{transform:rotate(0) scale(1)}30%{transform:rotate(-14deg) scale(1.35)}60%{transform:rotate(10deg) scale(1.15)}100%{transform:none}}
+@keyframes ring{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(1.18)}}
+.spark{position:fixed;width:8px;height:8px;border-radius:2px;pointer-events:none;z-index:40;background:var(--c);animation:spark .8s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes spark{from{opacity:1;transform:translate(0,0) rotate(0)}to{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--r))}}
+.role-say{margin:2px 0 0;font-size:13px;font-weight:700;color:var(--accent);min-height:1.4em}
+.role-say.show{animation:rise .45s ease both}
+/* Aperçu de sa carte */
+.me-prev{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:var(--surface-2);border:1px dashed var(--line)}
+.me-prev .av{width:40px;height:40px}
+.me-prev .t{display:flex;flex-direction:column;min-width:0}
+.me-prev small{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.me-prev b{font-size:15px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.me-prev b.ph{color:var(--faint)}
+.me-prev .rchip{margin-left:auto;font-size:12px;font-weight:800;border-radius:999px;padding:4px 10px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.me-prev .rchip.flip{animation:flip .5s ease}
+@keyframes flip{0%{transform:rotateX(90deg);opacity:0}100%{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.wl .waves path,.wl .glow,.roles label.pop,.roles label.pop .ri,.roles label.pop::after,.me-prev .rchip.flip,.welcome.enter .points li,.role-say.show{animation:none!important}}
 .wl-cal .mini-grid{gap:4px}
 .wl-cal .md{height:32px;cursor:default}
 .wr{padding:36px 40px;display:flex;align-items:center}
@@ -813,6 +869,12 @@ window.QEO_PAL = (() => {
   <button type="button" class="btn round intro-skip" id="w-skip">Passer l'animation</button>
   <div class="welcome">
   <div class="wl">
+    <i class="glow" aria-hidden="true"></i><i class="glow g2" aria-hidden="true"></i>
+    <div class="waves" aria-hidden="true">
+      <svg class="w1" viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0 90 C150 40 300 140 450 90 S750 40 900 90 S1050 140 1200 90 V200 H0Z"/><path d="M1200 90 C1350 40 1500 140 1650 90" transform="translate(-1200 0)"/></svg>
+      <svg class="w2" viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0 110 C100 70 200 150 300 110 S500 70 600 110 S800 150 900 110 S1100 70 1200 110 V200 H0Z"/></svg>
+      <svg class="w3" viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0 120 C75 95 150 145 225 120 S375 95 450 120 S600 145 675 120 S825 95 900 120 S1050 145 1200 120 V200 H0Z"/></svg>
+    </div>
     <span class="eyebrow" style="color:var(--side-muted)">Circonscription de Koungou Nord</span>
     <h1>Toute l'équipe de la circonscription, sur un seul planning.</h1>
     <ul class="points">
@@ -824,6 +886,7 @@ window.QEO_PAL = (() => {
   </div>
   <form class="wr" id="aform" hidden>
     <div class="wr-in">
+      <div class="greet" data-greet></div>
       <div>
         <span class="eyebrow" id="a-eyebrow">Connexion</span>
         <h2 id="a-title">Connectez-vous</h2>
@@ -854,17 +917,19 @@ window.QEO_PAL = (() => {
   </form>
   <form class="wr" id="wform" autocomplete="off">
     <div class="wr-in">
+      <div class="greet" data-greet></div>
       <div>
         <span class="eyebrow" id="w-eyebrow">Première connexion</span>
         <h2 id="w-title">Faisons connaissance</h2>
         <p class="lead" id="w-sub">Votre nom apparaîtra sur le planning de l'équipe, et vos créneaux seront rattachés à votre compte.</p>
       </div>
+      <p class="step-h"><i class="stepn" id="st-1">1</i>Votre nom</p>
       <div class="two">
         <div class="field"><label for="w-first">Prénom</label><input type="text" id="w-first" maxlength="40" autocomplete="given-name" required></div>
         <div class="field"><label for="w-last">Nom</label><input type="text" id="w-last" maxlength="40" autocomplete="family-name" required></div>
       </div>
       <fieldset class="field">
-        <legend>Votre photo ou illustration de profil</legend>
+        <legend><i class="stepn" id="st-2">2</i>Votre photo ou illustration de profil</legend>
         <div class="avatars" id="w-avatars" role="radiogroup" aria-label="Photo ou illustration de profil"></div>
         <div class="photo-actions">
           <input type="file" id="w-photo" accept="image/*" hidden>
@@ -874,15 +939,17 @@ window.QEO_PAL = (() => {
         </div>
       </fieldset>
       <fieldset class="field">
-        <legend>Votre fonction</legend>
+        <legend><i class="stepn" id="st-3">3</i>Votre fonction</legend>
         <div class="roles" id="w-roles"></div>
+        <p class="role-say" id="w-role-say" aria-live="polite"></p>
         <p class="hint" id="w-role-hint">Choisissez bien : la fonction ne pourra plus être modifiée ensuite.</p>
       </fieldset>
       <div class="field" id="w-code-box">
-        <label for="w-code">Code d'équipe</label>
+        <label for="w-code"><i class="stepn" id="st-4">4</i>Code d'équipe</label>
         <input type="text" id="w-code" maxlength="40" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Donné par l'administrateur du planning">
         <p class="hint">Ce code protège le planning : sans lui, personne d'extérieur à l'équipe ne peut y entrer.</p>
       </div>
+      <div class="me-prev" id="w-prev" aria-live="polite"></div>
       <div class="already" id="w-already" hidden></div>
       <p class="err" id="w-err" hidden></p>
       <div class="actions">
@@ -1882,6 +1949,7 @@ window.QEO_PAL = (() => {
   const SOUNDS = {
     open:    (c,t) => { [523.25, 659.25, 783.99, 1046.5].forEach((f,i) => bell(c, t + i*0.11, f, 1.4 - i*0.15, 0.09)); },
     success: (c,t) => { bell(c, t, 880, 0.5, 0.07); bell(c, t + 0.09, 1318.5, 0.6, 0.06); },
+    pick:    (c,t) => { bell(c, t, 659.25, 0.35, 0.06); bell(c, t + 0.07, 987.77, 0.4, 0.05); bell(c, t + 0.14, 1318.5, 0.6, 0.045); },
     notify:  (c,t) => { bell(c, t, 987.77, 0.7, 0.07); bell(c, t + 0.14, 1318.5, 0.9, 0.06); },
     remove:  (c,t) => { tone(c, t, 440, 0.25, 0.06, "sine"); tone(c, t + 0.08, 330, 0.3, 0.05, "sine"); },
   };
@@ -2487,11 +2555,51 @@ window.QEO_PAL = (() => {
 
   // ---------- accueil ----------
   let welcomeEdit = false;
+  const ROLE_ICON = { ien:"🏛️", cp:"🧭", erun:"💻", maitree:"🧩", ereh:"🤝", upe2a:"🌍", secretaire:"🗂️", psy:"💬", autre:"👤" };
+  const ROLE_SAY = { ien:"L'inspection rejoint le planning !", cp:"Place aux visites et aux animations !", erun:"Le numérique entre dans le planning !", maitree:"L'aide aux élèves a sa place ici.", ereh:"L'équipe EREH nord au complet.", upe2a:"Bienvenue à l'UPE2A !", secretaire:"Le secrétariat, cœur de la circonscription.", psy:"Le pôle psychologie rejoint le planning !", autre:"Bienvenue dans l'équipe !" };
+  const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function sparks(from){
+    if (reduced()) return;
+    const r = from.getBoundingClientRect(), cx = r.left + r.width/2, cy = r.top + r.height/2;
+    const cols = ["var(--p-visite)","var(--p-animation)","var(--p-formation)","var(--p-reunion)","var(--accent)","var(--vac)"];
+    for (let i = 0; i < 16; i++) {
+      const sp = el("i","spark"), a = (i/16)*Math.PI*2 + Math.random()*.4, d = 50 + Math.random()*50;
+      sp.style.left = cx+"px"; sp.style.top = cy+"px"; sp.style.setProperty("--c", cols[i%cols.length]);
+      sp.style.setProperty("--dx", Math.cos(a)*d+"px"); sp.style.setProperty("--dy", Math.sin(a)*d+"px"); sp.style.setProperty("--r", (Math.random()*540-270)+"deg");
+      document.body.append(sp); setTimeout(() => sp.remove(), 900);
+    }
+  }
+  function greet(){
+    const d = new Date(), h = d.getHours(), inf = dayInfo(d);
+    document.querySelectorAll("[data-greet]").forEach(g => {
+      g.textContent = ""; g.append(el("b",null, h < 5 || h >= 18 ? "Bonsoir" : "Bonjour"));
+      g.append(el("span",null, cap(DOW_L[(d.getDay()+6)%7])+" "+d.getDate()+" "+MON_L[d.getMonth()]));
+      if (inf.rot) g.append(el("span","rot"+inf.rot,"Semaine "+inf.rot)); else if (inf.ferie) g.append(el("span",null,"Jour férié")); else if (inf.vac) g.append(el("span",null,"Vacances"));
+    });
+  }
+  function updatePreview(){
+    const box = $("w-prev"); if (!box) return;
+    const f = $("w-first").value.trim(), l = $("w-last").value.trim();
+    const role = document.querySelector('input[name="role"]:checked')?.value || "";
+    const av = document.querySelector('input[name="avatar"]:checked')?.value || "";
+    const a = el("div","av"+(av?" av-img":"")); a.setAttribute("aria-hidden","true");
+    if (av==="photo" && photoData) { const im = el("img"); im.src = photoData; im.alt = ""; im.style.objectFit = "cover"; a.append(im); }
+    else if (AVATARS.includes(av)) { const im = el("img"); im.src = avatarSrc(av); im.alt = ""; a.append(im); }
+    else { a.className = "av"; a.textContent = ((f[0]||"")+(l[0]||"")).toUpperCase() || "?"; }
+    const t = el("div","t"); t.append(el("small",null,"Votre carte sur le planning"), el("b", f||l ? null : "ph", (f+" "+l).trim() || "Prénom Nom"));
+    const old = box.querySelector(".rchip"), oldRole = old && old.dataset.r;
+    box.textContent = ""; box.append(a, t);
+    if (role) { const c = el("span","rchip",(ROLE_ICON[role]||"")+" "+(ROLE_SHORT[role]||ROLES[role])); c.dataset.r = role; if (oldRole!==role) c.classList.add("flip"); box.append(c); }
+    $("st-1").classList.toggle("done", !!(f && l));
+    $("st-2").classList.toggle("done", true);
+    $("st-3").classList.toggle("done", !!role);
+    $("st-4").classList.toggle("done", !!$("w-code").value.trim());
+  }
   (() => {
     const box = $("w-roles");
     ROLE_LIST.forEach(([k,label,short], i) => {
       const l = el("label"); const r = el("input"); r.type = "radio"; r.name = "role"; r.value = k; r.id = "role-"+i;
-      l.append(r); if (short!==label) l.append(el("small",null,short)); l.append(label); box.append(l);
+      l.append(r, el("span","ri",ROLE_ICON[k]||"👤")); if (short!==label) l.append(el("small",null,short)); l.append(label); box.append(l);
     });
   })();
   function renderWelcomeExtras(){
@@ -2517,9 +2625,10 @@ window.QEO_PAL = (() => {
   function openWelcomePage(withIntro, focusId){
     hideLoader();
     renderWelcomeExtras();
-    $("app").hidden = true; $("welcome").hidden = false;
-    if (withIntro || !introPlayed) { introPlayed = true; playIntro(focusId); } else { finishIntro(); $(focusId).focus(); }
+    $("app").hidden = true; $("welcome").hidden = false; greet();
+    if (withIntro || !introPlayed) { introPlayed = true; playIntro(focusId); } else { finishIntro(); enterAnim(); $(focusId).focus(); }
   }
+  function enterAnim(){ const w = document.querySelector(".welcome"); w.classList.remove("enter"); void w.offsetWidth; w.classList.add("enter"); }
   let photoData = "";
   function buildAvatarPicker(current, photo){
     if (photo !== undefined) photoData = validPhoto(photo) ? photo : "";
@@ -2536,6 +2645,7 @@ window.QEO_PAL = (() => {
     $("w-photo-btn").textContent = photoData ? "📷 Changer de photo" : "📷 Choisir une photo";
     AVATARS.forEach((id,i) => { const im = el("img"); im.src = avatarSrc(id); im.alt = ""; mk(id, im, "Illustration "+(i+1)); });
     const ini = el("span","ini","AB"); mk("", ini, "Mes initiales, sans illustration");
+    updatePreview();
   }
   function loadImage(file){
     return new Promise((ok, ko) => { const url = URL.createObjectURL(file); const im = new Image();
@@ -2583,7 +2693,7 @@ window.QEO_PAL = (() => {
     $("w-title").textContent = edit ? "Vos informations" : "Faisons connaissance";
     $("w-sub").textContent = edit ? "Modifiez votre nom ou votre photo. Le changement s'applique partout sur le planning." : "Votre nom apparaîtra sur le planning de l'équipe, et vos créneaux seront rattachés à votre compte.";
     $("w-save").textContent = edit ? "Enregistrer" : "Entrer dans le planning →";
-    $("w-cancel").hidden = !edit; $("w-err").hidden = true;
+    $("w-cancel").hidden = !edit; $("w-err").hidden = true; $("w-role-say").textContent = ""; greet();
     $("w-code-box").hidden = !!edit || S.demo; $("w-code").value = "";
     $("w-danger").hidden = !edit; $("w-delete-box").hidden = true; $("w-delete").hidden = false; $("w-delpass").value = ""; $("w-del-err").hidden = true;
     openWelcomePage(!!withIntro || (!edit && !introPlayed), "w-first");
@@ -2620,11 +2730,20 @@ window.QEO_PAL = (() => {
       b.classList.remove("halo"); pg.classList.remove("say");
       b.style.transition = "transform 1s cubic-bezier(.65,0,.25,1)"; b.style.transform = "none";
     }, 2500));
-    introTimers.push(setTimeout(() => { pg.classList.remove("intro"); }, 3100));
+    introTimers.push(setTimeout(() => { pg.classList.remove("intro"); enterAnim(); }, 3100));
     introTimers.push(setTimeout(() => { b.style.transition = ""; $(focusId).focus(); }, 3700));
   }
   $("w-skip").onclick = () => { finishIntro(); ($("aform").hidden ? $("w-first") : $("a-email")).focus(); };
   $("w-cancel").onclick = hideWelcome;
+  $("wform").addEventListener("input", updatePreview);
+  $("w-roles").addEventListener("change", e => {
+    const r = e.target; if (r.name!=="role" || welcomeEdit) { updatePreview(); return; }
+    const lab = r.closest("label"); lab.classList.remove("pop"); void lab.offsetWidth; lab.classList.add("pop");
+    setTimeout(() => lab.classList.remove("pop"), 800);
+    sparks(lab); sfx("pick");
+    const say = $("w-role-say"); say.textContent = ROLE_SAY[r.value] || ""; say.classList.remove("show"); void say.offsetWidth; say.classList.add("show");
+    updatePreview();
+  });
   $("mebtn").onclick = () => showWelcome(true);
   $("introbtn").onclick = () => showWelcome(!!(S.me && S.people.has(S.me)), true);
   $("wform").addEventListener("submit", async e => {

@@ -1,0 +1,66 @@
+rules_version = '2';
+
+// Règles de sécurité du planning « Qui est où ».
+// À copier dans : Console Firebase > Firestore Database > Règles > Publier.
+//
+// - Seules les personnes connectées lisent le planning.
+// - Chacun ne peut créer, modifier ou supprimer QUE son propre profil et SES propres créneaux.
+// - Les activités et motifs créés sont partagés : tout membre peut en ajouter, personne ne peut les effacer.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Qui fait partie de l'équipe ?
+    // Par défaut : toute personne connectée avec un compte du planning.
+    function member() {
+      return request.auth != null;
+    }
+    // Pour réserver le planning à une adresse académique, remplacez la fonction ci-dessus par :
+    // function member() {
+    //   return request.auth != null
+    //     && request.auth.token.email_verified == true
+    //     && request.auth.token.email.matches('.*@ac-mayotte[.]fr$');
+    // }
+
+    function isMe(uid) {
+      return member() && request.auth.uid == uid;
+    }
+    function shortText(field, max) {
+      return !(field in request.resource.data)
+        || (request.resource.data[field] is string && request.resource.data[field].size() <= max);
+    }
+
+    // Profils : prénom, nom, fonction
+    match /people/{uid} {
+      allow read: if member();
+      allow create, update: if isMe(uid)
+        && request.resource.data.firstName is string && request.resource.data.firstName.size() <= 40
+        && request.resource.data.lastName is string && request.resource.data.lastName.size() <= 40
+        && request.resource.data.role is string && request.resource.data.role.size() <= 20;
+      allow delete: if isMe(uid);
+    }
+
+    // Créneaux : un planning par personne
+    match /planning/{uid}/shifts/{shiftId} {
+      allow read: if member();
+      allow create, update: if isMe(uid)
+        && request.resource.data.uid == uid
+        && request.resource.data.date is string && request.resource.data.date.size() == 10
+        && request.resource.data.kind in ['shift', 'absence']
+        && shortText('note', 140) && shortText('lieu', 80);
+      allow delete: if isMe(uid);
+    }
+
+    // Activités et motifs d'absence ajoutés par l'équipe
+    match /postes/{id} {
+      allow read: if member();
+      allow create: if member() && request.resource.data.name is string && request.resource.data.name.size() <= 40;
+      allow update, delete: if false;
+    }
+    match /motifs/{id} {
+      allow read: if member();
+      allow create: if member() && request.resource.data.name is string && request.resource.data.name.size() <= 50;
+      allow update, delete: if false;
+    }
+  }
+}

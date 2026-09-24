@@ -7,6 +7,7 @@ Planning partagé de l'équipe : IEN, conseillers pédagogiques, ERUN, Maîtres 
 - Tout le monde voit tout, **en temps réel** : une saisie apparaît en une seconde chez les autres.
 - Vues Jour, Semaine, Mois, Année (rotations A/B, vacances, jours fériés 2026-2027), Synthèse et Écoles.
 - Annonces d'équipe, reprise de la semaine précédente, impression ou PDF, export Excel et export vers son agenda (.ics).
+- Illustration de profil au choix (24 personnages dessinés, style « Notionists » de Zoish via DiceBear, licence CC0) et sons discrets à l'ouverture et lors des actions, qu'on peut couper avec le bouton 🔊.
 
 Le site est un simple dossier de fichiers. Les données sont stockées dans **Firebase** (Google), gratuit pour une équipe de cette taille.
 

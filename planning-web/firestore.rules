@@ -31,7 +31,8 @@ service cloud.firestore {
       allow create, update: if isMe(uid)
         && request.resource.data.firstName is string && request.resource.data.firstName.size() <= 40
         && request.resource.data.lastName is string && request.resource.data.lastName.size() <= 40
-        && request.resource.data.role is string && request.resource.data.role.size() <= 20;
+        && request.resource.data.role is string && request.resource.data.role.size() <= 20
+        && shortText('avatar', 8);
       allow delete: if isMe(uid);
     }
 

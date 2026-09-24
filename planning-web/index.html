@@ -161,7 +161,8 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .tabs button kbd{font-size:9.5px;padding:1px 4px}
 .tabs button:hover{color:var(--ink)}
 .tabs button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
-@media (max-width:640px){.tabs button kbd{display:none}.tabs button{padding:7px 10px}}
+@media (max-width:640px){.tabs button kbd{display:none}.tabs button{padding:7px 10px;flex:none}.controls{width:100%}.controls .tabs{width:100%;overflow-x:auto;scrollbar-width:none}.controls .tabs::-webkit-scrollbar{display:none}}
+.tabs{max-width:100%}
 
 .filters{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:0 4px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
@@ -183,6 +184,19 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .av{width:34px;height:34px;border-radius:50%;background:var(--avatar-bg);color:var(--avatar-ink);display:grid;place-items:center;font-weight:800;font-size:12.5px;flex:none;letter-spacing:.02em}
 .av.sm{width:28px;height:28px;font-size:11px}
 .av.ien{background:var(--accent);color:var(--accent-ink)}
+.av.av-img,.now-av .av.av-img,.me .av.av-img,.now-av .av.av-img.ien{background:#fff;padding:0;overflow:hidden}
+.av.av-img img{width:100%;height:100%;display:block}
+.av.av-img.ien{box-shadow:0 0 0 2px var(--accent)}
+.avatars{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:8px}
+.avatars label{position:relative;cursor:pointer;border-radius:50%;aspect-ratio:1;display:grid;place-items:center;border:2px solid transparent;transition:transform .12s}
+.avatars label:hover{transform:scale(1.06)}
+.avatars img{width:100%;height:100%;border-radius:50%;display:block}
+.avatars input{position:absolute;opacity:0;pointer-events:none}
+.avatars label:has(input:checked){border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.avatars label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.avatars .ini{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;background:var(--avatar-bg);color:var(--avatar-ink);font-weight:800;font-size:12px}
+.wpreview{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--muted);font-size:13px}
+.wpreview .av{width:48px;height:48px;font-size:15px}
 .rot{display:inline-flex;align-items:center;gap:5px;border-radius:8px;padding:3px 9px;font-size:12px;font-weight:800;color:#fff;background:var(--c);white-space:nowrap}
 .rot.A{--c:var(--rotA)} .rot.B{--c:var(--rotB)}
 .tag{display:inline-block;font-size:11px;font-weight:800;border-radius:6px;padding:2px 7px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle}
@@ -638,6 +652,10 @@ fieldset.field{border:0;margin:0;padding:0}
         <div class="field"><label for="w-last">Nom</label><input type="text" id="w-last" maxlength="40" autocomplete="family-name" required></div>
       </div>
       <fieldset class="field">
+        <legend>Votre illustration de profil</legend>
+        <div class="avatars" id="w-avatars" role="radiogroup" aria-label="Illustration de profil"></div>
+      </fieldset>
+      <fieldset class="field">
         <legend>Votre fonction</legend>
         <div class="roles" id="w-roles"></div>
       </fieldset>
@@ -696,6 +714,7 @@ fieldset.field{border:0;margin:0;padding:0}
 
     <div class="side-foot">
       <button type="button" class="me" id="mebtn" hidden></button>
+      <button type="button" class="sbtn" id="soundbtn" aria-label="Sons activés" title="Couper les sons">🔊</button>
       <button type="button" class="sbtn" id="introbtn" aria-label="Revoir l'animation d'accueil" title="Revoir l'animation d'accueil">▶</button>
       <button type="button" class="sbtn" id="logoutbtn" aria-label="Se déconnecter" title="Se déconnecter" hidden>⏻</button>
       <button type="button" class="sbtn" data-privacy aria-label="Données personnelles" title="Données personnelles et confidentialité">i</button>
@@ -1026,7 +1045,14 @@ fieldset.field{border:0;margin:0;padding:0}
   const absLabel = k => k==="prive" ? "Absent" : (ABS.find(a=>a[0]===k)||[])[1] || S.motifs.get(k) || "Absence";
   const rank = r => { const i = ROLE_LIST.findIndex(x => x[0]===r); return i<0 ? ROLE_LIST.length : i; };
   const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
-  function avatar(uid, sm){ const a = el("div","av"+(sm?" sm":"")+(person(uid).role==="ien"?" ien":""), initials(uid)); a.setAttribute("aria-hidden","true"); return a; }
+  const AVATARS = Array.from({length:24}, (_,i) => "a"+String(i+1).padStart(2,"0"));
+  const avatarSrc = id => "avatars/"+id+".svg";
+  function avatar(uid, sm){
+    const p = person(uid), ill = AVATARS.includes(p.avatar);
+    const a = el("div","av"+(sm?" sm":"")+(p.role==="ien"?" ien":"")+(ill?" av-img":""), ill ? null : initials(uid));
+    if (ill) { const im = el("img"); im.src = avatarSrc(p.avatar); im.alt = ""; im.loading = "lazy"; a.append(im); }
+    a.setAttribute("aria-hidden","true"); return a;
+  }
   function allIds(extra){
     const ids = new Set(S.people.keys());
     for (const s of (extra||S.shifts)) ids.add(s.uid);
@@ -1461,6 +1487,40 @@ fieldset.field{border:0;margin:0;padding:0}
     return wrap;
   }
 
+  // ---------- sons (synthétisés avec Web Audio, discrets) ----------
+  // Les navigateurs n'autorisent le son qu'après un premier geste (clic, touche) : un son demandé
+  // avant ce geste est joué au premier clic, une seule fois pour le son d'ouverture.
+  let soundOn = true; try { soundOn = localStorage.getItem("qeo-sound") !== "off"; } catch(e) {}
+  let actx = null, openPlayed = false, pendingOpen = false;
+  function ac(){ if (!actx) { const C = window.AudioContext || window.webkitAudioContext; if (!C) return null; actx = new C(); } return actx; }
+  function tone(ctx, t, f, d, v, type){
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = type || "sine"; o.frequency.setValueAtTime(f, t);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v, t + 0.012); g.gain.exponentialRampToValueAtTime(0.0001, t + d);
+    o.connect(g); g.connect(ctx.destination); o.start(t); o.stop(t + d + 0.05);
+  }
+  function bell(ctx, t, f, d, v){ tone(ctx, t, f, d, v, "sine"); tone(ctx, t, f*2, d*0.6, v*0.25, "sine"); tone(ctx, t, f*3.01, d*0.35, v*0.08, "triangle"); }
+  const SOUNDS = {
+    open:    (c,t) => { [523.25, 659.25, 783.99, 1046.5].forEach((f,i) => bell(c, t + i*0.11, f, 1.4 - i*0.15, 0.09)); },
+    success: (c,t) => { bell(c, t, 880, 0.5, 0.07); bell(c, t + 0.09, 1318.5, 0.6, 0.06); },
+    notify:  (c,t) => { bell(c, t, 987.77, 0.7, 0.07); bell(c, t + 0.14, 1318.5, 0.9, 0.06); },
+    remove:  (c,t) => { tone(c, t, 440, 0.25, 0.06, "sine"); tone(c, t + 0.08, 330, 0.3, 0.05, "sine"); },
+  };
+  function sfx(name){
+    if (!soundOn || matchMedia("(prefers-reduced-motion: reduce)").matches && name==="open") return;
+    if (name==="open") { if (openPlayed) return; }
+    const c = ac(); if (!c) return;
+    const go = () => { if (name==="open") openPlayed = true; SOUNDS[name](c, c.currentTime + 0.02); };
+    if (c.state === "running") go();
+    else if (name==="open") pendingOpen = true;
+    else c.resume().then(() => { if (c.state==="running") go(); }).catch(() => {});
+  }
+  const unlock = () => { const c = ac(); if (!c) return; c.resume().then(() => { if (pendingOpen && !openPlayed && soundOn) { pendingOpen = false; openPlayed = true; SOUNDS.open(c, c.currentTime + 0.02); } }).catch(() => {}); };
+  ["pointerdown","keydown","touchstart"].forEach(ev => window.addEventListener(ev, unlock, { capture: true, passive: true }));
+  function syncSoundBtn(){ const b = $("soundbtn"); b.textContent = soundOn ? "🔊" : "🔇"; b.title = soundOn ? "Couper les sons" : "Activer les sons"; b.setAttribute("aria-label", soundOn ? "Sons activés" : "Sons coupés"); b.setAttribute("aria-pressed", String(soundOn)); }
+  $("soundbtn").onclick = () => { soundOn = !soundOn; try { localStorage.setItem("qeo-sound", soundOn ? "on" : "off"); } catch(e) {} syncSoundBtn(); if (soundOn) sfx("success"); };
+  syncSoundBtn();
+
   // ---------- annonces de l'équipe ----------
   let annOpen = false;
   function renderAnnonces(){
@@ -1504,7 +1564,7 @@ fieldset.field{border:0;margin:0;padding:0}
     const a = { author: S.me, text: text.slice(0,280), until, createdAt: Date.now() };
     try {
       if (S.demo) S.ann.push({ id: "a"+Date.now(), ...a }); else await db.collection("annonces").add(a);
-      annOpen = false; renderAnnonces(); toast("Annonce publiée pour toute l'équipe");
+      annOpen = false; renderAnnonces(); sfx("notify"); toast("Annonce publiée pour toute l'équipe");
     } catch(e) { writeError(e); }
   }
   async function removeAnnonce(a){
@@ -1805,7 +1865,7 @@ fieldset.field{border:0;margin:0;padding:0}
       if (ed.id) await putShift(ed.id, { ...body, date: ed.date });
       else { const dates = [...$("ed-days").querySelectorAll("input:checked")].map(c => c.value); if (!dates.includes(ed.date)) dates.unshift(ed.date); for (const date of dates) await putShift(null, { ...body, date }); }
       const n = ed.id ? 1 : $("ed-days").querySelectorAll("input:checked").length || 1;
-      closeEditor(); toast(n > 1 ? n+" créneaux enregistrés" : "Créneau enregistré");
+      closeEditor(); sfx("success"); toast(n > 1 ? n+" créneaux enregistrés" : "Créneau enregistré");
     } catch(err) { writeError(err); }
     finally { btn.disabled = false; }
   });
@@ -1834,7 +1894,7 @@ fieldset.field{border:0;margin:0;padding:0}
       if (S.demo) { S.shifts = S.shifts.filter(x=>x.id!==id); demoToday(); render(); }
       else { await planning(s.uid).doc(id).delete(); if (S.prive.has(id)) await privee(s.uid).doc(id).delete(); }
       closeEditor();
-      toast("Créneau supprimé", "Annuler", async () => { try { await putShift(id, data); toast("Créneau rétabli"); } catch(e) { writeError(e); } });
+      sfx("remove"); toast("Créneau supprimé", "Annuler", async () => { try { await putShift(id, data); toast("Créneau rétabli"); } catch(e) { writeError(e); } });
     } catch(e) { writeError(e); }
   }
   function writeError(err){
@@ -1920,12 +1980,22 @@ fieldset.field{border:0;margin:0;padding:0}
     $("app").hidden = true; $("welcome").hidden = false;
     if (withIntro || !introPlayed) { introPlayed = true; playIntro(focusId); } else { finishIntro(); $(focusId).focus(); }
   }
+  function buildAvatarPicker(current){
+    const box = $("w-avatars"); box.textContent = "";
+    const mk = (val, content, label) => {
+      const l = el("label"); l.title = label; const r = el("input"); r.type = "radio"; r.name = "avatar"; r.value = val; r.id = "av-"+(val||"ini"); r.setAttribute("aria-label", label);
+      r.checked = val===current; l.append(r, content); box.append(l);
+    };
+    AVATARS.forEach((id,i) => { const im = el("img"); im.src = avatarSrc(id); im.alt = ""; mk(id, im, "Illustration "+(i+1)); });
+    const ini = el("span","ini","AB"); mk("", ini, "Mes initiales, sans illustration");
+  }
   function showWelcome(edit, withIntro){
     welcomeEdit = !!edit;
     $("aform").hidden = true; $("wform").hidden = false;
     const p = person(S.me);
     $("w-first").value = edit ? p.firstName||"" : ""; $("w-last").value = edit ? p.lastName||"" : "";
     document.querySelectorAll('input[name="role"]').forEach(r => r.checked = edit && r.value===p.role);
+    buildAvatarPicker(edit ? (p.avatar || "") : AVATARS[Math.floor(Math.random()*AVATARS.length)]);
     $("w-eyebrow").textContent = edit ? "Mon profil" : "Première connexion";
     $("w-title").textContent = edit ? "Vos informations" : "Faisons connaissance";
     $("w-sub").textContent = edit ? "Modifiez votre nom ou votre fonction. Le changement s'applique partout sur le planning." : "Votre nom apparaîtra sur le planning de l'équipe, et vos créneaux seront rattachés à votre compte.";
@@ -1934,7 +2004,7 @@ fieldset.field{border:0;margin:0;padding:0}
     $("w-danger").hidden = !edit; $("w-delete-box").hidden = true; $("w-delete").hidden = false; $("w-delpass").value = ""; $("w-del-err").hidden = true;
     openWelcomePage(!!withIntro || (!edit && !introPlayed), "w-first");
   }
-  function hideWelcome(){ hideLoader(); finishIntro(); $("welcome").hidden = true; $("app").hidden = false; render(); }
+  function hideWelcome(){ hideLoader(); finishIntro(); $("welcome").hidden = true; $("app").hidden = false; render(); sfx("open"); }
   $("side-logo").src = $("logo-img").src;
 
   // Animation d'ouverture : le logo apparaît au centre, puis se range en haut et le formulaire se dévoile.
@@ -1960,6 +2030,7 @@ fieldset.field{border:0;margin:0;padding:0}
     b.getBoundingClientRect();
     b.style.transition = "transform .9s cubic-bezier(.2,.9,.25,1.12), opacity .6s ease";
     b.style.transform = "translate("+dx+"px,"+dy+"px) scale("+sc+")"; b.style.opacity = "1";
+    sfx("open");
     introTimers.push(setTimeout(() => { b.classList.add("halo"); pg.classList.add("say"); }, 700));
     introTimers.push(setTimeout(() => {
       b.classList.remove("halo"); pg.classList.remove("say");
@@ -1979,12 +2050,13 @@ fieldset.field{border:0;margin:0;padding:0}
     const err = t => { $("w-err").textContent = t; $("w-err").hidden = false; };
     if (!firstName || !lastName) return err("Renseignez votre prénom et votre nom.");
     if (!role) return err("Choisissez votre fonction.");
-    const data = { firstName, lastName, role, updatedAt: Date.now() };
+    const avatarChoice = document.querySelector('input[name="avatar"]:checked')?.value || "";
+    const data = { firstName, lastName, role, avatar: AVATARS.includes(avatarChoice) ? avatarChoice : "", updatedAt: Date.now() };
     $("w-save").disabled = true;
     try {
       if (!S.demo) await db.doc("people/"+S.me).set(data);
       S.people.set(S.me, data);
-      hideWelcome(); toast(welcomeEdit ? "Profil mis à jour" : "Bienvenue "+firstName+" ! Ajoutez votre premier créneau avec « Nouveau créneau ».");
+      hideWelcome(); sfx("success"); toast(welcomeEdit ? "Profil mis à jour" : "Bienvenue "+firstName+" ! Ajoutez votre premier créneau avec « Nouveau créneau ».");
     } catch(e2) {
       err(e2 && (e2.code==="invalid_argument" || e2.code==="permission-denied") ? "Enregistrement refusé. Reconnectez-vous puis réessayez." : "L'enregistrement a échoué. Vérifiez votre connexion et réessayez.");
     } finally { $("w-save").disabled = false; }
@@ -2041,7 +2113,7 @@ fieldset.field{border:0;margin:0;padding:0}
   function loadDemo(){
     S.demo = true; S.me = "d0";
     [["d0","Camille","Durand · exemple","cp"],["d1","Claire","Morel · exemple","ien"],["d2","Julien","Bertin · exemple","cp"],["d7","Hugo","Petit · exemple","erun"],["d3","Sonia","Haddad · exemple","maitree"],["d4","Marc","Lefèvre · exemple","upe2a"],["d5","Nadia","Roux · exemple","psy"],["d6","Élise","Garnier · exemple","secretaire"]]
-      .forEach(([id,f,l,r]) => S.people.set(id,{ firstName:f, lastName:l, role:r }));
+      .forEach(([id,f,l,r], i) => S.people.set(id,{ firstName:f, lastName:l, role:r, avatar: AVATARS[(i*5+3)%AVATARS.length] }));
     const m = monday(new Date()), t = dowIdx(new Date()) > 4 ? 0 : dowIdx(new Date()), sh = [];
     const put = (uid,day,kind,x) => sh.push({ id:"x"+sh.length, uid, date:iso(addDays(m,day)), kind, ...x });
     const other = d => (t + d) % 5;

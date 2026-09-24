@@ -2353,8 +2353,10 @@ fieldset.field{border:0;margin:0;padding:0}
     if (verifyUser) {
       $("a-eyebrow").textContent = "Dernière étape"; $("a-title").textContent = "Confirmez votre adresse";
       $("a-sub").textContent = "Pour protéger le planning de l'équipe, chaque adresse doit être confirmée.";
-      $("a-verify-msg").textContent = "Un e-mail de confirmation a été envoyé à " + verifyUser.email + ". Cliquez sur le lien qu'il contient, puis revenez ici.";
       $("a-verify-err").hidden = true;
+      // Compte créé avant la confirmation obligatoire, ou nouvelle session : on envoie l'e-mail une fois.
+      if (!verifySent[verifyUser.uid]) sendVerify(verifyUser, true);
+      else verifyText(verifyUser);
     } else setSignup(signup);
     openWelcomePage(!!withIntro, verifyUser ? "a-verified" : "a-email");
   }
@@ -2368,7 +2370,7 @@ fieldset.field{border:0;margin:0;padding:0}
     try {
       if (signup) {
         const cred = await auth.createUserWithEmailAndPassword(email, pass);
-        if (DOMAIN) { try { await cred.user.sendEmailVerification(); } catch(_) {} }
+        if (DOMAIN) await sendVerify(cred.user, true);
       } else await auth.signInWithEmailAndPassword(email, pass);
     } catch(err) { aMsg("err", authMsg(err)); }
     finally { $("a-go").disabled = false; }
@@ -2386,10 +2388,38 @@ fieldset.field{border:0;margin:0;padding:0}
     if (auth.currentUser.emailVerified) { await u.getIdToken(true); onUser(auth.currentUser); }
     else { $("a-verify-err").textContent = "L'adresse n'est pas encore confirmée. Cliquez sur le lien reçu par e-mail, puis réessayez."; $("a-verify-err").hidden = false; }
   };
-  $("a-resend").onclick = async () => {
-    try { await auth.currentUser.sendEmailVerification(); $("a-verify-err").hidden = true; toast("E-mail de confirmation renvoyé"); }
-    catch(err) { $("a-verify-err").textContent = authMsg(err); $("a-verify-err").hidden = false; }
-  };
+  // Envoi de l'e-mail de confirmation, avec délai entre deux envois (sinon Firebase bloque temporairement)
+  const verifySent = {};
+  let resendTimer = null;
+  const SENDER = "noreply@" + (FB.authDomain || "firebaseapp.com");
+  function verifyText(u){
+    const t = verifySent[u.uid];
+    const hh = t ? pad(new Date(t).getHours())+":"+pad(new Date(t).getMinutes()) : "";
+    $("a-verify-msg").textContent = (t ? "Un e-mail de confirmation a été envoyé à "+u.email+" à "+hh+". " : "")
+      + "Cliquez sur le lien qu'il contient, puis revenez ici et appuyez sur « J'ai confirmé mon adresse ». "
+      + "L'e-mail vient de "+SENDER+" : s'il n'arrive pas dans les minutes qui suivent, regardez dans les indésirables, le spam ou la quarantaine de votre messagerie académique.";
+  }
+  function startCooldown(){
+    const b = $("a-resend"); let left = 60; b.disabled = true;
+    clearInterval(resendTimer);
+    const tick = () => { b.textContent = left > 0 ? "Renvoyer l'e-mail ("+left+" s)" : "Renvoyer l'e-mail"; if (left-- <= 0) { clearInterval(resendTimer); b.disabled = false; } };
+    tick(); resendTimer = setInterval(tick, 1000);
+  }
+  async function sendVerify(u, auto){
+    const err = $("a-verify-err");
+    try {
+      await u.sendEmailVerification();
+      verifySent[u.uid] = Date.now(); err.hidden = true;
+      if (!auto) toast("E-mail de confirmation envoyé à " + u.email);
+    } catch(e) {
+      err.textContent = e && e.code==="auth/too-many-requests"
+        ? "Trop de demandes d'envoi : Firebase bloque les envois pendant quelques minutes. Attendez un peu, vérifiez vos indésirables, puis réessayez."
+        : authMsg(e);
+      err.hidden = false;
+    }
+    verifyText(u); startCooldown();
+  }
+  $("a-resend").onclick = () => { const u = auth.currentUser; if (u) sendVerify(u, false); };
   const signOut = async () => { try { await auth.signOut(); } catch(_) {} location.reload(); };
   $("a-out").onclick = signOut;
   $("logoutbtn").onclick = signOut;
@@ -2446,7 +2476,7 @@ fieldset.field{border:0;margin:0;padding:0}
     firebase.initializeApp(FB);
     auth = firebase.auth(); db = firebase.firestore();
     if (CFG.emulator) { auth.useEmulator("http://127.0.0.1:9099"); db.useEmulator("127.0.0.1", 8080); }
-    auth.useDeviceLanguage && auth.useDeviceLanguage();
+    auth.languageCode = "fr";
     $("app").hidden = true; $("loader").hidden = false;
     auth.onAuthStateChanged(onUser);
   }

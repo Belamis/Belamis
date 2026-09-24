@@ -140,7 +140,8 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .now-txt span{font-size:11.5px;color:var(--side-muted);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .now-txt span em{font-style:normal;color:var(--side-ink);font-weight:700}
 .now-empty{color:var(--side-muted);font-style:italic;margin:0;font-size:13px}
-.side-foot{margin-top:auto;display:flex;align-items:center;gap:8px;border-top:1px solid var(--side-line);padding-top:14px}
+.side-foot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:4px 8px;border-top:1px solid var(--side-line);padding-top:14px}
+.side-foot .me{flex:1 1 100%}
 .me{flex:1;min-width:0;display:flex;align-items:center;gap:10px;border:0;background:transparent;color:var(--side-ink);border-radius:12px;padding:6px;text-align:left}
 .me:hover{background:var(--side-card)}
 .me .av{background:var(--side-ink);color:var(--side)}
@@ -490,6 +491,83 @@ fieldset.field{border:0;margin:0;padding:0}
 .err{color:var(--danger);font-weight:700;font-size:13px;margin:0}
 .wr .actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
 
+/* ===== Chargement ===== */
+#loader{position:fixed;inset:0;display:grid;place-items:center;background:var(--bg);z-index:60}
+.loader-in{display:flex;flex-direction:column;align-items:center;gap:18px;color:var(--muted);font-weight:700}
+.loader-in .logo-badge{width:150px}
+.spin{width:26px;height:26px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--accent);animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== Menu Exporter ===== */
+.menuwrap{position:relative}
+.menu{position:absolute;right:0;top:calc(100% + 6px);z-index:20;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg);padding:6px;min-width:250px;display:flex;flex-direction:column}
+.menu button{border:0;background:transparent;text-align:left;padding:10px 12px;border-radius:8px;font-weight:700;display:flex;flex-direction:column;gap:2px}
+.menu button small{color:var(--muted);font-weight:600;font-size:12px}
+.menu button:hover,.menu button:focus-visible{background:var(--surface-2)}
+
+/* ===== Annonces ===== */
+.annonces{display:flex;flex-direction:column;gap:8px}
+.ann{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:10px 14px;box-shadow:var(--shadow)}
+.ann .av{width:30px;height:30px;font-size:11px}
+.ann-txt{flex:1;min-width:0}
+.ann-txt p{margin:2px 0 0;font-weight:600;white-space:pre-wrap;overflow-wrap:anywhere}
+.ann-meta{font-size:12px;color:var(--muted);font-weight:700}
+.ann-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ann-form{display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.ann-form textarea{font:inherit;border:1px solid var(--line);background:var(--surface-2);border-radius:10px;padding:9px 11px;min-height:64px;resize:vertical;width:100%}
+.ann-form .inline label{font-weight:700;font-size:13px;color:var(--muted)}
+
+/* ===== Écoles ===== */
+.ecoles{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:420px}
+@media (max-width:900px){.ecoles{grid-template-columns:1fr}}
+.ec-list{border-right:1px solid var(--line);padding:14px;display:flex;flex-direction:column;gap:8px;max-height:720px;overflow:auto;background:var(--surface-2)}
+@media (max-width:900px){.ec-list{border-right:0;border-bottom:1px solid var(--line);max-height:320px}}
+.ec-list input{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 10px;font-weight:600;width:100%}
+.ec-item{border:1px solid transparent;background:transparent;border-radius:10px;padding:8px 10px;text-align:left;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.ec-item:hover{background:var(--surface)}
+.ec-item[aria-pressed="true"]{background:var(--surface);border-color:var(--accent)}
+.ec-item b{font-weight:800;font-size:13px;overflow-wrap:anywhere}
+.ec-item small{display:block;color:var(--muted);font-weight:600;font-size:11.5px}
+.ec-item .cnt{font-weight:800;color:var(--muted);font-size:12px;white-space:nowrap}
+.ec-detail{padding:18px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.ec-detail h3{font:800 22px/1.15 var(--display)}
+.ec-table{width:100%;border-collapse:collapse;min-width:560px}
+.ec-table th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;padding:8px 10px;border-bottom:1px solid var(--line)}
+.ec-table td{padding:9px 10px;border-bottom:1px solid var(--line-2);font-weight:600;font-size:13px;vertical-align:middle}
+.ec-table tr.future td{background:color-mix(in srgb,var(--accent) 6%,var(--surface))}
+.tag.soon{background:var(--accent);color:var(--accent-ink)}
+
+/* ===== Confirmation, confidentialité ===== */
+.btn.danger-fill{background:var(--danger);border-color:var(--danger);color:#fff}
+.privacy h3{font:800 15px/1.3 var(--display);margin:16px 0 6px}
+.privacy p,.privacy li{color:var(--ink);font-weight:500;line-height:1.55}
+.privacy ul{margin:0;padding-left:20px}
+.legal-link{border:0;background:transparent;color:var(--muted);font-weight:700;font-size:12.5px;text-decoration:underline;padding:0;align-self:flex-start}
+.danger-zone{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:10px}
+.danger-zone input{background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:10px 12px;width:100%}
+.lock{margin-top:8px}
+.print-only{display:none}
+
+/* ===== Impression ===== */
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  :root{--bg:#fff;--surface:#fff}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{padding:0;background:#fff}
+  .shell{display:block;max-width:none}
+  .side,.filters,.controls,#banner,.status,.add,#annonces,.toast,.overlay,#loader,.sy-bar .tabs,.ec-list input{display:none!important}
+  .print-only{display:flex!important;align-items:center;gap:12px;margin-bottom:6px}
+  .print-only img{width:54px;height:auto}
+  .print-only b{font:800 14px var(--display)}
+  .panel{box-shadow:none;border-color:#ccc}
+  .scroller,.sy-wrap{overflow:visible}
+  table.week,table.week.d7,table.sy,.day{min-width:0!important}
+  .week .who-h,.week .person{position:static}
+  .ecoles{grid-template-columns:220px 1fr}
+  .ec-list{max-height:none}
+  tr,.card,.mday,.sy-card{break-inside:avoid}
+}
+
 /* ===== Toast ===== */
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 12px 10px 16px;border-radius:12px;font-weight:700;z-index:40;max-width:calc(100% - 32px);display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-lg)}
 .toast button{border:0;background:transparent;color:inherit;font-weight:800;text-decoration:underline;padding:4px}
@@ -497,6 +575,7 @@ fieldset.field{border:0;margin:0;padding:0}
 </style>
 </head>
 <body>
+<div id="loader" hidden><div class="loader-in"><div class="logo-badge"><img src="logo.webp" alt="Circonscription de Koungou Nord"></div><div class="spin" aria-hidden="true"></div><span>Chargement du planning…</span></div></div>
 
 <!-- ============ Accueil ============ -->
 <section class="wpage" id="welcome" hidden>
@@ -534,6 +613,7 @@ fieldset.field{border:0;margin:0;padding:0}
           <button type="submit" class="btn primary round" id="a-go">Se connecter →</button>
         </div>
         <p class="switchline"><span id="a-q">Pas encore de compte ?</span><button type="button" class="btn link" id="a-toggle">Créer un compte</button></p>
+        <button type="button" class="legal-link" data-privacy>Données personnelles et confidentialité</button>
       </div>
       <div class="verify" id="a-verify" hidden>
         <p id="a-verify-msg"></p>
@@ -566,6 +646,17 @@ fieldset.field{border:0;margin:0;padding:0}
       <div class="actions">
         <button type="button" class="btn round" id="w-cancel" hidden>Annuler</button>
         <button type="submit" class="btn primary round" id="w-save">Entrer dans le planning →</button>
+      </div>
+      <button type="button" class="legal-link" data-privacy>Données personnelles et confidentialité</button>
+      <div class="danger-zone" id="w-danger" hidden>
+        <button type="button" class="btn danger" id="w-delete" style="align-self:flex-start;padding-left:0">Supprimer mon compte et mes données</button>
+        <div id="w-delete-box" hidden style="display:flex;flex-direction:column;gap:10px">
+          <p class="err" style="margin:0">Votre compte, votre profil, tous vos créneaux et vos annonces seront effacés définitivement. Cette action est irréversible.</p>
+          <label for="w-delpass" style="font-weight:800;font-size:13px">Saisissez votre mot de passe pour confirmer</label>
+          <input type="password" id="w-delpass" autocomplete="current-password">
+          <p class="err" id="w-del-err" hidden></p>
+          <div class="inline"><button type="button" class="btn danger-fill round" id="w-delete-go">Supprimer définitivement</button><button type="button" class="btn round" id="w-delete-cancel">Annuler</button></div>
+        </div>
       </div>
     </div>
   </form>
@@ -607,6 +698,7 @@ fieldset.field{border:0;margin:0;padding:0}
       <button type="button" class="me" id="mebtn" hidden></button>
       <button type="button" class="sbtn" id="introbtn" aria-label="Revoir l'animation d'accueil" title="Revoir l'animation d'accueil">▶</button>
       <button type="button" class="sbtn" id="logoutbtn" aria-label="Se déconnecter" title="Se déconnecter" hidden>⏻</button>
+      <button type="button" class="sbtn" data-privacy aria-label="Données personnelles" title="Données personnelles et confidentialité">i</button>
       <button type="button" class="sbtn" id="keysbtn" aria-label="Raccourcis clavier" title="Raccourcis clavier">?</button>
     </div>
   </aside>
@@ -614,10 +706,19 @@ fieldset.field{border:0;margin:0;padding:0}
   <main class="main">
     <header class="mhead">
       <div class="mtitle">
+        <div class="print-only"><img src="logo.webp" alt=""><b>Circonscription de Koungou Nord · Qui est où</b></div>
         <h2 id="rangelabel"></h2>
         <div class="msub"><span id="rangesub"></span><span id="rotpill"></span></div>
       </div>
       <div class="controls">
+        <div class="menuwrap">
+          <button type="button" class="btn" id="exportbtn" aria-haspopup="true" aria-expanded="false">Exporter ▾</button>
+          <div class="menu" id="exportmenu" hidden>
+            <button type="button" data-x="print">Imprimer ou PDF<small>La vue affichée, prête à imprimer</small></button>
+            <button type="button" data-x="xlsx">Fichier Excel<small>Créneaux et synthèse de la période affichée</small></button>
+            <button type="button" data-x="ics">Mes créneaux dans mon agenda<small>Fichier .ics pour Outlook, Google, téléphone</small></button>
+          </div>
+        </div>
         <div class="navgroup" id="navgroup">
           <button type="button" id="prev" aria-label="Précédent">‹</button>
           <button type="button" id="todaybtn">Aujourd'hui</button>
@@ -629,6 +730,7 @@ fieldset.field{border:0;margin:0;padding:0}
           <button type="button" data-view="month" aria-pressed="false">Mois <kbd>M</kbd></button>
           <button type="button" data-view="year" aria-pressed="false">Année <kbd>A</kbd></button>
           <button type="button" data-view="synth" aria-pressed="false">Synthèse <kbd>R</kbd></button>
+          <button type="button" data-view="ecoles" aria-pressed="false">Écoles <kbd>E</kbd></button>
         </div>
       </div>
     </header>
@@ -637,10 +739,12 @@ fieldset.field{border:0;margin:0;padding:0}
       <div class="chips" id="rolechips" role="group" aria-label="Filtrer par fonction"></div>
       <div class="fspacer"></div>
       <label class="search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="search" placeholder="Rechercher…" aria-label="Chercher un collègue"></label>
+      <button type="button" class="btn" id="copyweek" hidden>↻ Reprendre ma semaine précédente</button>
       <label class="switch" id="we-wrap"><input type="checkbox" id="weekend"> Week-end</label>
     </div>
 
     <div class="banner" id="banner" hidden></div>
+    <section class="annonces" id="annonces" aria-label="Annonces de l'équipe"></section>
 
     <section class="panel">
       <div class="scroller" id="view"></div>
@@ -709,6 +813,7 @@ fieldset.field{border:0;margin:0;padding:0}
             <input type="text" id="nm-name" maxlength="50" placeholder="Ex. Rendez-vous médical, jury, animation départementale…" aria-label="Nouveau motif d'absence">
             <div class="inline"><button type="button" class="btn primary" id="nm-add">Ajouter</button><button type="button" class="btn" id="nm-cancel">Annuler</button></div>
           </div>
+          <p class="hint lock">🔒 Pour un arrêt maladie, vos collègues voient seulement « Absent ». Le motif exact et la précision d'une absence ne sont visibles que par vous.</p>
         </div>
       </div>
       <div class="frow" id="row-lieu">
@@ -742,6 +847,38 @@ fieldset.field{border:0;margin:0;padding:0}
   </form>
 </div>
 
+<!-- ============ Confidentialité ============ -->
+<div class="overlay" id="privacy" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" style="width:min(640px,100%)">
+    <div class="modal-h"><div><h2 id="privacy-title">Données personnelles</h2><p>Ce que le planning enregistre et qui peut le voir.</p></div><button type="button" class="btn icon" id="privacy-x" aria-label="Fermer">✕</button></div>
+    <div class="modal-b privacy">
+      <h3>Pourquoi ce planning ?</h3>
+      <p>Il sert uniquement à l'organisation de l'équipe de la circonscription de Koungou Nord : savoir qui est où, préparer les visites et les réunions.</p>
+      <h3>Données enregistrées</h3>
+      <ul>
+        <li>Votre adresse e-mail professionnelle (pour la connexion) ;</li>
+        <li>vos prénom, nom et fonction ;</li>
+        <li>vos créneaux : date, horaires, activité, lieu ou école, motif ;</li>
+        <li>vos absences, les annonces que vous publiez.</li>
+      </ul>
+      <h3>Qui peut les voir ?</h3>
+      <p>Uniquement les membres de l'équipe connectés avec une adresse académique. Chacun voit le planning de tous, mais ne peut modifier que le sien. Pour un <b>arrêt maladie</b>, les collègues voient seulement « Absent » : le motif exact et les précisions d'absence ne sont visibles que par vous.</p>
+      <h3>Où sont-elles stockées ?</h3>
+      <p>Dans Google Firebase, sur des serveurs situés dans l'Union européenne (Belgique). Aucune donnée n'est vendue ni utilisée à d'autres fins.</p>
+      <h3>Combien de temps ?</h3>
+      <p>Tant que votre compte existe. Vous pouvez tout effacer à tout moment.</p>
+      <h3>Vos droits</h3>
+      <p>Vous pouvez consulter et corriger vos informations dans « Mon profil », et <b>supprimer votre compte et toutes vos données</b> depuis ce même écran. Pour toute question : <span id="privacy-contact">l'administrateur du planning</span>. Vous pouvez aussi contacter le délégué à la protection des données de l'académie, ou la CNIL (cnil.fr).</p>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="confirm" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title" style="width:min(460px,100%)">
+    <div class="modal-h"><div><h2 id="confirm-title"></h2><p id="confirm-text"></p></div></div>
+    <div class="modal-f"><div class="right"><button type="button" class="btn round" id="confirm-no">Annuler</button><button type="button" class="btn primary round" id="confirm-yes">Confirmer</button></div></div>
+  </div>
+</div>
+
 <!-- ============ Raccourcis ============ -->
 <div class="overlay" id="keys" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="keys-title" style="width:min(420px,100%)">
@@ -753,6 +890,7 @@ fieldset.field{border:0;margin:0;padding:0}
         <li>Période précédente / suivante <span><kbd>←</kbd> <kbd>→</kbd></span></li>
         <li>Vue Jour, Semaine, Mois, Année <span><kbd>J</kbd> <kbd>S</kbd> <kbd>M</kbd> <kbd>A</kbd></span></li>
         <li>Synthèse <kbd>R</kbd></li>
+        <li>Écoles et lieux <kbd>E</kbd></li>
         <li>Chercher un collègue <kbd>/</kbd></li>
         <li>Fermer une fenêtre <kbd>Échap</kbd></li>
       </ul>
@@ -769,6 +907,7 @@ fieldset.field{border:0;margin:0;padding:0}
 <script>
 (() => {
   const $ = id => document.getElementById(id);
+  const CFG_EARLY = window.PLANNING_CONFIG || {};
   document.documentElement.lang = "fr";
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 
@@ -868,7 +1007,7 @@ fieldset.field{border:0;margin:0;padding:0}
   let prefs = {}; try { prefs = JSON.parse(localStorage.getItem("qeo3")||"{}"); } catch(e) {}
   const savePrefs = () => { try { localStorage.setItem("qeo3", JSON.stringify(prefs)); } catch(e) {} };
   const S = {
-    view: "week", anchor: new Date(), mini: new Date(), filter: "all", q: "", weekend: !!prefs.weekend, synth: "month", open: new Set(),
+    view: "week", anchor: new Date(), mini: new Date(), filter: "all", q: "", weekend: !!prefs.weekend, synth: "month", open: new Set(), prive: new Map(), ann: [], lieu: null, lieuQ: "",
     people: new Map(), shifts: [], today: [], postes: new Map(), motifs: new Map(),
     me: null, readOnly: false, demo: false, peopleReady: false,
   };
@@ -882,7 +1021,9 @@ fieldset.field{border:0;margin:0;padding:0}
   const myRole = () => person(S.me).role;
   const canEdit = uid => !S.readOnly && !!S.me && uid===S.me;
   const posteOf = id => S.postes.get(id) || { name: id || "Activité", color: "#6A7A90" };
-  const absLabel = k => (ABS.find(a=>a[0]===k)||[])[1] || S.motifs.get(k) || "Absence";
+  // Motifs d'absence dont le détail n'est visible que par la personne concernée (données de santé).
+  const PRIVATE_ABS = new Set(["maladie"]);
+  const absLabel = k => k==="prive" ? "Absent" : (ABS.find(a=>a[0]===k)||[])[1] || S.motifs.get(k) || "Absence";
   const rank = r => { const i = ROLE_LIST.findIndex(x => x[0]===r); return i<0 ? ROLE_LIST.length : i; };
   const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
   function avatar(uid, sm){ const a = el("div","av"+(sm?" sm":"")+(person(uid).role==="ien"?" ien":""), initials(uid)); a.setAttribute("aria-hidden","true"); return a; }
@@ -912,7 +1053,7 @@ fieldset.field{border:0;margin:0;padding:0}
     const a = S.anchor;
     if (S.view==="day") { const d = new Date(a.getFullYear(),a.getMonth(),a.getDate()); return [d,d]; }
     if (S.view==="week") { const m = monday(a); return [m, addDays(m,6)]; }
-    if (S.view==="year" || (S.view==="synth" && S.synth==="year")) return [new Date(CAL.first[0],CAL.first[1],1), new Date(CAL.last[0],CAL.last[1]+1,0)];
+    if (S.view==="year" || S.view==="ecoles" || (S.view==="synth" && S.synth==="year")) return [new Date(CAL.first[0],CAL.first[1],1), new Date(CAL.last[0],CAL.last[1]+1,0)];
     if (S.view==="synth" && S.synth==="week") { const m = monday(a); return [m, addDays(m,6)]; }
     if (S.view==="synth") return [new Date(a.getFullYear(),a.getMonth(),1), new Date(a.getFullYear(),a.getMonth()+1,0)];
     const first = new Date(a.getFullYear(),a.getMonth(),1), last = new Date(a.getFullYear(),a.getMonth()+1,0);
@@ -927,16 +1068,18 @@ fieldset.field{border:0;margin:0;padding:0}
     if (S.view==="day") { title = longDate(a); sub = "Semaine "+isoWeek(a)+" · "+a.getFullYear(); }
     else if (S.view==="week") { const end = S.weekend ? to : addDays(from,4); title = "Semaine "+isoWeek(from); sub = "Du "+from.getDate()+(from.getMonth()!==end.getMonth()?" "+MON[from.getMonth()]:"")+" au "+end.getDate()+" "+MON_L[end.getMonth()]+" "+end.getFullYear(); }
     else if (yr) { title = CAL.label; sub = "Rotations, vacances et jours fériés"; }
+    else if (S.view==="ecoles") { title = "Écoles et lieux"; sub = "Qui y est passé, qui y passera · "+CAL.label; }
     else if (S.view==="synth") { title = "Synthèse"; sub = S.synth==="week" ? "Semaine "+isoWeek(from)+" · du "+from.getDate()+" "+MON[from.getMonth()]+" au "+to.getDate()+" "+MON[to.getMonth()]+" "+to.getFullYear() : S.synth==="year" ? CAL.label : cap(MON_L[a.getMonth()])+" "+a.getFullYear(); }
     else { title = cap(MON_L[a.getMonth()])+" "+a.getFullYear(); sub = "Semaines "+isoWeek(from)+" à "+isoWeek(to); }
     $("rangelabel").textContent = title; $("rangesub").textContent = sub;
     const rp = $("rotpill"); rp.textContent = "";
     if (S.view==="week") { const w = weekRot(from); if (w) rp.append(w); }
     if (S.view==="day") rp.append(...tagsFor(dayInfo(a)));
-    const sy = S.view==="synth";
-    $("filters").hidden = yr; $("legend").hidden = yr || sy;
-    $("we-wrap").hidden = S.view==="day" || sy;
-    $("prev").disabled = $("next").disabled = yr || (sy && S.synth==="year");
+    const sy = S.view==="synth", ec = S.view==="ecoles";
+    $("filters").hidden = yr; $("legend").hidden = yr || sy || ec;
+    $("we-wrap").hidden = S.view==="day" || sy || ec;
+    $("copyweek").hidden = S.view!=="week" || S.readOnly || !S.me;
+    $("prev").disabled = $("next").disabled = yr || ec || (sy && S.synth==="year");
     $("newbtn").hidden = S.readOnly || !S.me;
     renderChips(); renderMe(); renderMini(); renderNow();
     const v = $("view"); v.textContent = "";
@@ -944,8 +1087,9 @@ fieldset.field{border:0;margin:0;padding:0}
     else if (S.view==="day") v.append(dayView(a));
     else if (yr) v.append(yearView());
     else if (sy) v.append(synthView(from, to));
+    else if (ec) v.append(ecolesView(from, to));
     else v.append(monthView(a, from, to));
-    renderLegend(); renderLists();
+    renderLegend(); renderLists(); renderAnnonces();
   }
 
   function renderChips(){
@@ -1317,6 +1461,236 @@ fieldset.field{border:0;margin:0;padding:0}
     return wrap;
   }
 
+  // ---------- annonces de l'équipe ----------
+  let annOpen = false;
+  function renderAnnonces(){
+    const box = $("annonces");
+    const prevTxt = $("ann-text")?.value || "", prevDt = $("ann-until")?.value || "", hadFocus = document.activeElement?.id==="ann-text";
+    box.textContent = "";
+    const k = iso(new Date());
+    const list = S.ann.filter(a => a.until >= k).sort((a,b) => (b.createdAt||0)-(a.createdAt||0)).slice(0,3);
+    for (const a of list) {
+      const c = el("div","ann"); c.append(avatar(a.author, true));
+      const t = el("div","ann-txt");
+      const d = new Date(a.createdAt||Date.now()), u = parse(a.until);
+      t.append(el("div","ann-meta", fullName(a.author)+" · "+d.getDate()+" "+MON[d.getMonth()]+" · visible jusqu'au "+u.getDate()+" "+MON[u.getMonth()]));
+      t.append(el("p",null,a.text));
+      c.append(t);
+      if (a.author===S.me) { const x = el("button","btn icon","✕"); x.type = "button"; x.title = "Retirer l'annonce"; x.setAttribute("aria-label","Retirer mon annonce"); x.onclick = () => removeAnnonce(a); c.append(x); }
+      box.append(c);
+    }
+    if (S.readOnly || !S.me) return;
+    if (annOpen) {
+      const f = el("form","ann-form"); f.autocomplete = "off";
+      const ta = el("textarea"); ta.id = "ann-text"; ta.maxLength = 280; ta.placeholder = "Ex. Réunion d'équipe lundi 9h à la circonscription"; ta.setAttribute("aria-label","Texte de l'annonce");
+      const row = el("div","inline"); const lab = el("label",null,"Visible jusqu'au"); lab.htmlFor = "ann-until";
+      const dt = el("input"); dt.type = "date"; dt.id = "ann-until"; dt.value = iso(addDays(new Date(),7)); dt.min = iso(new Date());
+      const ok = el("button","btn primary","Publier"); ok.type = "submit";
+      const no = el("button","btn","Annuler"); no.type = "button"; no.onclick = () => { annOpen = false; renderAnnonces(); };
+      ta.value = prevTxt; if (prevDt) dt.value = prevDt;
+      row.append(lab, dt, ok, no); f.append(ta, row);
+      f.onsubmit = e => { e.preventDefault(); addAnnonce(ta.value.trim(), dt.value || iso(addDays(new Date(),7))); };
+      box.append(f);
+      if (!annFocused || hadFocus) { annFocused = true; setTimeout(() => { ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); }, 0); }
+    } else {
+      annFocused = false;
+      const bar = el("div","ann-bar"); const b = el("button","btn link","📣 Publier une annonce pour l'équipe"); b.type = "button";
+      b.onclick = () => { annOpen = true; renderAnnonces(); }; bar.append(b); box.append(bar);
+    }
+  }
+  let annFocused = false;
+  async function addAnnonce(text, until){
+    if (!text) return toast("Écrivez le texte de l'annonce.");
+    const a = { author: S.me, text: text.slice(0,280), until, createdAt: Date.now() };
+    try {
+      if (S.demo) S.ann.push({ id: "a"+Date.now(), ...a }); else await db.collection("annonces").add(a);
+      annOpen = false; renderAnnonces(); toast("Annonce publiée pour toute l'équipe");
+    } catch(e) { writeError(e); }
+  }
+  async function removeAnnonce(a){
+    if (!await confirmBox("Retirer cette annonce ?", "Elle ne sera plus visible par l'équipe.", "Retirer")) return;
+    try { if (S.demo) { S.ann = S.ann.filter(x => x.id!==a.id); renderAnnonces(); } else await db.doc("annonces/"+a.id).delete(); toast("Annonce retirée"); }
+    catch(e) { writeError(e); }
+  }
+
+  // ---------- fenêtre de confirmation ----------
+  function confirmBox(title, text, yes){
+    return new Promise(res => {
+      $("confirm-title").textContent = title; $("confirm-text").textContent = text; $("confirm-yes").textContent = yes || "Confirmer";
+      $("confirm").hidden = false; $("confirm-yes").focus();
+      const done = v => { $("confirm").hidden = true; $("confirm-yes").onclick = $("confirm-no").onclick = null; res(v); };
+      $("confirm-yes").onclick = () => done(true); $("confirm-no").onclick = () => done(false);
+    });
+  }
+
+  // ---------- reprendre la semaine précédente ----------
+  async function myShiftsBetween(from, to){
+    const F = iso(from), T = iso(to);
+    if (S.demo) return S.shifts.filter(s => s.uid===S.me && s.date>=F && s.date<=T);
+    const snap = await planning(S.me).where("date",">=",F).where("date","<=",T).get();
+    return snap.docs.map(d => { const x = { ...d.data(), id: d.id, uid: S.me }; return S.prive.has(d.id) ? { ...x, ...S.prive.get(d.id) } : x; });
+  }
+  async function copyPreviousWeek(){
+    const mon = monday(S.anchor), prev = addDays(mon,-7);
+    try {
+      const src = await myShiftsBetween(prev, addDays(prev,6));
+      const have = S.shifts.filter(s => s.uid===S.me && s.date>=iso(mon) && s.date<=iso(addDays(mon,6)));
+      const sig = s => [s.date,s.kind,s.start||"",s.end||"",s.poste||"",s.absence||""].join("|");
+      const exist = new Set(have.map(sig));
+      let skippedOff = 0;
+      const todo = [];
+      for (const s of src) {
+        const nd = addDays(parse(s.date),7), inf = dayInfo(nd);
+        if (inf.off) { skippedOff++; continue; }
+        const { id, ...rest } = s; const n = { ...rest, date: iso(nd), updatedAt: Date.now(), updatedBy: S.me };
+        if (!exist.has(sig(n))) todo.push(n);
+      }
+      if (!todo.length) return toast(src.length ? "Rien à copier : ces créneaux sont déjà dans la semaine, ou tombent sur des jours fériés ou de vacances." : "Aucun créneau la semaine précédente (S"+isoWeek(prev)+").");
+      const ok = await confirmBox("Reprendre la semaine "+isoWeek(prev)+" ?", todo.length+" créneau"+(todo.length>1?"x":"")+" seront copiés sur la semaine "+isoWeek(mon)+"."+(skippedOff ? " "+skippedOff+" créneau(x) tombant un jour férié ou de vacances seront ignorés." : "")+" Vous pourrez ensuite les modifier un par un.", "Copier");
+      if (!ok) return;
+      for (const n of todo) await putShift(null, n);
+      toast(todo.length+" créneau"+(todo.length>1?"x":"")+" copié"+(todo.length>1?"s":"")+" depuis la semaine "+isoWeek(prev));
+    } catch(e) { writeError(e); }
+  }
+
+  // ---------- exports ----------
+  const fileBase = () => { const [f,t] = range(); return "planning-koungou-nord_"+iso(f)+"_"+iso(t); };
+  function shiftRows(){
+    const [from,to] = range(), F = iso(from), T = iso(to), ids = new Set(rows());
+    return S.shifts.filter(s => ids.has(s.uid) && s.date>=F && s.date<=T)
+      .sort((a,b) => a.date.localeCompare(b.date) || rank(person(a.uid).role)-rank(person(b.uid).role) || fullName(a.uid).localeCompare(fullName(b.uid),"fr") || (a.start||"").localeCompare(b.start||""));
+  }
+  function loadScript(src){ return new Promise((ok, ko) => { if (window.XLSX) return ok(); const sc = document.createElement("script"); sc.src = src; sc.onload = ok; sc.onerror = ko; document.head.append(sc); }); }
+  async function exportXlsx(){
+    try { await loadScript("https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"); }
+    catch(e) { return toast("Impossible de charger l'outil Excel. Vérifiez votre connexion."); }
+    const list = shiftRows();
+    const head = ["Date","Jour","Semaine","Rotation","Personne","Fonction","Type","Activité ou motif","Début","Fin","Pause (min)","Durée (h)","Lieu / école","Motif / précision"];
+    const data = [head].concat(list.map(s => { const d = parse(s.date), inf = dayInfo(d);
+      return [s.date, cap(DOW_L[dowIdx(d)]), isoWeek(d), inf.rot||"", fullName(s.uid), ROLES[person(s.uid).role]||"", s.kind==="absence"?"Absence":"Activité", s.kind==="absence"?absLabel(s.absence):posteOf(s.poste).name, s.start||"", s.end||"", +s.pause||0, Math.round(dur(s)/60*100)/100, s.lieu||"", s.note||""]; }));
+    const per = [["Personne","Fonction","Heures","Créneaux","Jours présents","Jours d'absence"]];
+    rows().forEach(id => { const mine = list.filter(s => s.uid===id), act = mine.filter(s => s.kind!=="absence");
+      per.push([fullName(id), ROLES[person(id).role]||"", Math.round(act.reduce((a,s)=>a+dur(s),0)/60*100)/100, act.length, new Set(act.map(s=>s.date)).size, new Set(mine.filter(s=>s.kind==="absence").map(s=>s.date)).size]); });
+    const acts = {}; list.filter(s => s.kind!=="absence").forEach(s => { const n = posteOf(s.poste).name; acts[n] = acts[n] || [0,0]; acts[n][0] += dur(s); acts[n][1]++; });
+    const pa = [["Activité","Heures","Créneaux"]].concat(Object.entries(acts).sort((a,b)=>b[1][0]-a[1][0]).map(([n,[m,c]]) => [n, Math.round(m/60*100)/100, c]));
+    const wb = XLSX.utils.book_new();
+    const add = (aoa, name, widths) => { const ws = XLSX.utils.aoa_to_sheet(aoa); ws["!cols"] = widths.map(w => ({ wch: w })); XLSX.utils.book_append_sheet(wb, ws, name); };
+    add(data, "Créneaux", [11,10,8,8,22,24,9,26,7,7,9,9,26,30]);
+    add(per, "Par personne", [24,26,9,9,14,14]);
+    add(pa, "Par activité", [28,9,9]);
+    XLSX.writeFile(wb, fileBase()+".xlsx");
+    toast("Fichier Excel téléchargé ("+list.length+" créneau"+(list.length>1?"x":"")+")");
+  }
+  async function exportIcs(){
+    if (!S.me) return toast("Connectez-vous pour exporter vos créneaux.");
+    const from = new Date(CAL.first[0],CAL.first[1],1), to = new Date(CAL.last[0],CAL.last[1]+1,0);
+    let list; try { list = await myShiftsBetween(from, to); } catch(e) { return writeError(e); }
+    if (!list.length) return toast("Vous n'avez encore aucun créneau à exporter.");
+    const esc = t => String(t||"").replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n");
+    const stamp = new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d+/,"");
+    const L = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Circonscription de Koungou Nord//Qui est ou//FR","CALSCALE:GREGORIAN","X-WR-CALNAME:Mon planning Koungou Nord"];
+    for (const s of list) {
+      const d = s.date.replace(/-/g,""), title = s.kind==="absence" ? "Absence · "+absLabel(s.absence) : posteOf(s.poste).name;
+      L.push("BEGIN:VEVENT","UID:"+s.id+"@planning-koungou-nord","DTSTAMP:"+stamp);
+      if (s.start && s.end) { const nd = endMin(s) > 1440 ? addDays(parse(s.date),1) : parse(s.date); L.push("DTSTART:"+d+"T"+s.start.replace(":","")+"00", "DTEND:"+iso(nd).replace(/-/g,"")+"T"+s.end.replace(":","")+"00"); }
+      else L.push("DTSTART;VALUE=DATE:"+d, "DTEND;VALUE=DATE:"+iso(addDays(parse(s.date),1)).replace(/-/g,""));
+      L.push("SUMMARY:"+esc(title)); if (s.lieu) L.push("LOCATION:"+esc(s.lieu)); if (s.note) L.push("DESCRIPTION:"+esc(s.note));
+      L.push("END:VEVENT");
+    }
+    L.push("END:VCALENDAR");
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([L.join("\r\n")], { type: "text/calendar;charset=utf-8" }));
+    a.download = "mon-planning-koungou-nord.ics"; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    toast(list.length+" créneau"+(list.length>1?"x":"")+" exporté"+(list.length>1?"s":"")+". Ouvrez le fichier pour l'ajouter à votre agenda.");
+  }
+  function closeMenu(){ $("exportmenu").hidden = true; $("exportbtn").setAttribute("aria-expanded","false"); }
+  $("exportbtn").onclick = e => { e.stopPropagation(); const m = $("exportmenu"); m.hidden = !m.hidden; $("exportbtn").setAttribute("aria-expanded", String(!m.hidden)); if (!m.hidden) m.querySelector("button").focus(); };
+  document.addEventListener("click", e => { if (!$("exportmenu").hidden && !e.target.closest(".menuwrap")) closeMenu(); });
+  $("exportmenu").querySelectorAll("button").forEach(b => b.onclick = () => { closeMenu(); const x = b.dataset.x; if (x==="print") window.print(); else if (x==="xlsx") exportXlsx(); else exportIcs(); });
+
+  // ---------- écoles et lieux ----------
+  const lieuKey = t => norm(String(t||"")).replace(/[^a-z0-9]+/g," ").trim();
+  function ecolesView(from, to){
+    const wrap = el("div","ecoles"), F = iso(from), T = iso(to), todayK = iso(new Date()), ids = new Set(rows());
+    const groups = new Map();
+    for (const s of S.shifts) {
+      if (!s.lieu || s.kind==="absence" || !ids.has(s.uid) || s.date<F || s.date>T) continue;
+      const k = lieuKey(s.lieu); if (!k) continue;
+      const g = groups.get(k) || { key:k, names:{}, list:[] };
+      g.names[s.lieu] = (g.names[s.lieu]||0)+1; g.list.push(s); groups.set(k, g);
+    }
+    const all = [...groups.values()].map(g => ({ ...g, name: Object.entries(g.names).sort((a,b)=>b[1]-a[1])[0][0], next: g.list.filter(s=>s.date>todayK).sort((a,b)=>a.date.localeCompare(b.date))[0] }))
+      .sort((a,b) => b.list.length-a.list.length || a.name.localeCompare(b.name,"fr"));
+    const side = el("div","ec-list");
+    const q = el("input"); q.type = "search"; q.placeholder = "Chercher une école…"; q.value = S.lieuQ; q.setAttribute("aria-label","Chercher une école ou un lieu");
+    q.oninput = () => { S.lieuQ = q.value; const pos = q.selectionStart; render(); const nq = document.querySelector(".ec-list input"); if (nq) { nq.focus(); nq.setSelectionRange(pos,pos); } };
+    side.append(q);
+    const shown = all.filter(g => !S.lieuQ || g.key.includes(lieuKey(S.lieuQ)));
+    if (!S.lieu || !groups.has(S.lieu)) S.lieu = shown[0]?.key || null;
+    for (const g of shown) {
+      const b = el("button","ec-item"); b.type = "button"; b.setAttribute("aria-pressed", String(g.key===S.lieu));
+      const nd = g.next && parse(g.next.date);
+      const t = el("div"); t.append(el("b",null,g.name), el("small",null, nd ? "Prochaine visite : "+nd.getDate()+" "+MON[nd.getMonth()] : "Pas de visite prévue"));
+      b.append(t, el("span","cnt", g.list.length+" créneau"+(g.list.length>1?"x":"")));
+      b.onclick = () => { S.lieu = g.key; render(); };
+      side.append(b);
+    }
+    if (!shown.length) side.append(el("p","hb-empty", all.length ? "Aucun lieu ne correspond." : "Aucun lieu saisi pour l'instant. Renseignez le champ « Lieu / école » de vos créneaux."));
+    const det = el("div","ec-detail"), g = groups.get(S.lieu);
+    if (!g) { const e = el("div","empty"); e.append(el("b",null,"Aucune école à afficher"), "Les écoles et lieux apparaissent ici dès qu'ils sont indiqués dans les créneaux."); det.append(e); wrap.append(side, det); return wrap; }
+    const name = all.find(x => x.key===g.key).name, past = g.list.filter(s=>s.date<=todayK), fut = g.list.filter(s=>s.date>todayK);
+    det.append(el("h3",null,name));
+    const k = el("div","kpis");
+    const kp = (v,l) => { const x = el("div","kpi"); x.append(el("b",null,v), el("span",null,l)); k.append(x); };
+    kp(String(past.length), "Créneaux passés"); kp(String(fut.length), "Créneaux à venir"); kp(String(new Set(g.list.map(s=>s.uid)).size), "Collègues différents");
+    const last = [...past].sort((a,b)=>b.date.localeCompare(a.date))[0]; kp(last ? parse(last.date).getDate()+" "+MON[parse(last.date).getMonth()] : "—", "Dernier passage");
+    det.append(k);
+    const tw = el("div","sy-wrap"), t = el("table","ec-table"), hr = t.createTHead().insertRow();
+    ["Date","Personne","Activité","Horaires","Motif"].forEach(h => { const th = el("th",null,h); th.scope = "col"; hr.append(th); });
+    const tb = t.createTBody();
+    [...g.list].sort((a,b) => b.date.localeCompare(a.date) || (a.start||"").localeCompare(b.start||"")).forEach(s => {
+      const tr = tb.insertRow(); if (s.date>todayK) tr.className = "future"; const d = parse(s.date);
+      const c0 = tr.insertCell(); c0.append(DOW[dowIdx(d)]+" "+d.getDate()+" "+MON[d.getMonth()]+" "); if (s.date>todayK) c0.append(el("span","tag soon","À venir"));
+      tr.insertCell().textContent = fullName(s.uid);
+      const c2 = tr.insertCell(); const dt = el("i","dot"); dt.style.setProperty("--c",posteOf(s.poste).color); dt.style.marginRight = "6px"; c2.append(dt, posteOf(s.poste).name);
+      tr.insertCell().textContent = s.start && s.end ? s.start+" – "+s.end : "Journée";
+      tr.insertCell().textContent = s.note || "";
+    });
+    tw.append(t); det.append(tw);
+    wrap.append(side, det);
+    return wrap;
+  }
+
+  // ---------- confidentialité et suppression du compte ----------
+  if (CFG_EARLY.contact) $("privacy-contact").textContent = CFG_EARLY.contact;
+  document.querySelectorAll("[data-privacy]").forEach(b => b.onclick = () => { $("privacy").hidden = false; $("privacy-x").focus(); });
+  $("privacy-x").onclick = () => $("privacy").hidden = true;
+  $("privacy").addEventListener("mousedown", e => { if (e.target.id==="privacy") $("privacy").hidden = true; });
+  $("w-delete").onclick = () => { $("w-delete-box").hidden = false; $("w-delete").hidden = true; $("w-delpass").focus(); };
+  $("w-delete-cancel").onclick = () => { $("w-delete-box").hidden = true; $("w-delete").hidden = false; };
+  $("w-delete-go").onclick = async () => {
+    const errBox = t => { $("w-del-err").textContent = t; $("w-del-err").hidden = false; };
+    if (S.demo) return errBox("En mode démonstration, aucun compte n'est supprimé.");
+    const u = auth.currentUser, pass = $("w-delpass").value;
+    if (!pass) return errBox("Saisissez votre mot de passe.");
+    $("w-delete-go").disabled = true;
+    try {
+      await u.reauthenticateWithCredential(firebase.auth.EmailAuthProvider.credential(u.email, pass));
+      const refs = [];
+      (await planning(S.me).get()).docs.forEach(d => refs.push(d.ref));
+      (await privee(S.me).get()).docs.forEach(d => refs.push(d.ref));
+      (await db.collection("annonces").where("author","==",S.me).get()).docs.forEach(d => refs.push(d.ref));
+      for (let i = 0; i < refs.length; i += 400) { const b = db.batch(); refs.slice(i,i+400).forEach(x => b.delete(x)); await b.commit(); }
+      await db.doc("people/"+S.me).delete();
+      await u.delete();
+      toast("Votre compte et toutes vos données ont été supprimés.");
+      setTimeout(() => location.reload(), 1500);
+    } catch(e) {
+      errBox(e && (e.code==="auth/wrong-password" || e.code==="auth/invalid-credential" || e.code==="auth/invalid-login-credentials") ? "Mot de passe incorrect." : "La suppression a échoué. Réessayez. " + (e && e.code ? "("+e.code+")" : ""));
+    } finally { const g = $("w-delete-go"); if (g) g.disabled = false; }
+  };
+  $("copyweek").onclick = copyPreviousWeek;
+
+
   // ---------- éditeur ----------
   let ed = null;
   function fillPostes(sel){
@@ -1438,15 +1812,27 @@ fieldset.field{border:0;margin:0;padding:0}
 
   // ---------- données ----------
   const planning = uid => db.collection("planning/"+uid+"/shifts");
+  const privee = uid => db.collection("planning/"+uid+"/prive");
+  // Une absence est enregistrée en deux parties : la partie visible par l'équipe (motif « Absent »
+  // pour un arrêt maladie, sans précision) et la partie privée, lisible par la seule personne concernée.
   async function putShift(id, data){
     if (S.demo) { const ex = id && S.shifts.find(s=>s.id===id); if (ex) Object.assign(ex, data); else S.shifts.push({ id: id || "x"+Math.random().toString(36).slice(2), ...data }); demoToday(); render(); return; }
     if (data.uid !== S.me) throw { code: "invalid_argument" };
-    if (id) await planning(data.uid).doc(id).set(data); else await planning(data.uid).add(data);
+    const ref = id ? planning(data.uid).doc(id) : planning(data.uid).doc();
+    if (data.kind==="absence") {
+      const pub = { ...data, absence: PRIVATE_ABS.has(data.absence) ? "prive" : data.absence, note: "" };
+      await ref.set(pub);
+      await privee(data.uid).doc(ref.id).set({ absence: data.absence, note: data.note || "" });
+    } else {
+      await ref.set(data);
+      if (id && S.prive.has(id)) await privee(data.uid).doc(id).delete();
+    }
   }
   async function removeShift(s){
     const { id, ...data } = s;
     try {
-      if (S.demo) { S.shifts = S.shifts.filter(x=>x.id!==id); demoToday(); render(); } else await planning(s.uid).doc(id).delete();
+      if (S.demo) { S.shifts = S.shifts.filter(x=>x.id!==id); demoToday(); render(); }
+      else { await planning(s.uid).doc(id).delete(); if (S.prive.has(id)) await privee(s.uid).doc(id).delete(); }
       closeEditor();
       toast("Créneau supprimé", "Annuler", async () => { try { await putShift(id, data); toast("Créneau rétabli"); } catch(e) { writeError(e); } });
     } catch(e) { writeError(e); }
@@ -1464,14 +1850,14 @@ fieldset.field{border:0;margin:0;padding:0}
   // n'autorisent l'écriture que dans le sien. On écoute le planning de chaque collègue
   // sur la période affichée, élargie à aujourd'hui pour « En ce moment ».
   function rebuild(){
-    const all = Object.values(byUid).flat(), k = iso(new Date());
+    const k = iso(new Date());
+    const all = Object.values(byUid).flat().map(s => s.uid===S.me && S.prive.has(s.id) ? { ...s, ...S.prive.get(s.id) } : s);
     S.shifts = all; S.today = all.filter(s => s.date===k);
   }
   function syncSubs(){
     if (S.demo || !db) return;
     const [from,to] = range(), t = new Date(t0());
-    const cal = S.view==="year";
-    const lo = cal || t < from ? t : from, hi = cal || t > to ? t : to;
+    const lo = t < from ? t : from, hi = t > to ? t : to;
     const key = iso(lo)+"|"+iso(hi);
     const want = new Set(S.people.keys()); if (S.me) want.add(S.me);
     for (const uid of Object.keys(subs)) if (!want.has(uid)) { subs[uid].unsub(); delete subs[uid]; delete byUid[uid]; }
@@ -1527,7 +1913,9 @@ fieldset.field{border:0;margin:0;padding:0}
     } else al.hidden = true;
   }
   let introPlayed = false;
+  const hideLoader = () => { $("loader").hidden = true; };
   function openWelcomePage(withIntro, focusId){
+    hideLoader();
     renderWelcomeExtras();
     $("app").hidden = true; $("welcome").hidden = false;
     if (withIntro || !introPlayed) { introPlayed = true; playIntro(focusId); } else { finishIntro(); $(focusId).focus(); }
@@ -1543,9 +1931,10 @@ fieldset.field{border:0;margin:0;padding:0}
     $("w-sub").textContent = edit ? "Modifiez votre nom ou votre fonction. Le changement s'applique partout sur le planning." : "Votre nom apparaîtra sur le planning de l'équipe, et vos créneaux seront rattachés à votre compte.";
     $("w-save").textContent = edit ? "Enregistrer" : "Entrer dans le planning →";
     $("w-cancel").hidden = !edit; $("w-err").hidden = true;
+    $("w-danger").hidden = !edit; $("w-delete-box").hidden = true; $("w-delete").hidden = false; $("w-delpass").value = ""; $("w-del-err").hidden = true;
     openWelcomePage(!!withIntro || (!edit && !introPlayed), "w-first");
   }
-  function hideWelcome(){ finishIntro(); $("welcome").hidden = true; $("app").hidden = false; render(); }
+  function hideWelcome(){ hideLoader(); finishIntro(); $("welcome").hidden = true; $("app").hidden = false; render(); }
   $("side-logo").src = $("logo-img").src;
 
   // Animation d'ouverture : le logo apparaît au centre, puis se range en haut et le formulaire se dévoile.
@@ -1613,7 +2002,7 @@ fieldset.field{border:0;margin:0;padding:0}
   function setView(v){ S.view = v; subscribe(); }
   document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => setView(b.dataset.view));
   const step = n => {
-    if (S.view==="year" || (S.view==="synth" && S.synth==="year")) return;
+    if (S.view==="year" || S.view==="ecoles" || (S.view==="synth" && S.synth==="year")) return;
     const a = S.anchor, wk = S.view==="week" || (S.view==="synth" && S.synth==="week");
     S.anchor = S.view==="day" ? addDays(a,n) : wk ? addDays(a,7*n) : new Date(a.getFullYear(), a.getMonth()+n, 1);
     subscribe();
@@ -1637,13 +2026,13 @@ fieldset.field{border:0;margin:0;padding:0}
   $("keys-x").onclick = () => $("keys").hidden = true;
   $("keys").addEventListener("mousedown", e => { if (e.target.id==="keys") $("keys").hidden = true; });
   document.addEventListener("keydown", e => {
-    if (e.key==="Escape") { if (!$("ed").hidden) closeEditor(); else if (!$("keys").hidden) $("keys").hidden = true; else if (document.activeElement===$("search")) $("search").blur(); return; }
-    if (!$("ed").hidden || !$("keys").hidden || !$("welcome").hidden) return;
+    if (e.key==="Escape") { if (!$("exportmenu").hidden) closeMenu(); else if (!$("confirm").hidden) $("confirm-no").click(); else if (!$("privacy").hidden) $("privacy").hidden = true; else if (!$("ed").hidden) closeEditor(); else if (!$("keys").hidden) $("keys").hidden = true; else if (document.activeElement===$("search")) $("search").blur(); return; }
+    if (!$("ed").hidden || !$("keys").hidden || !$("welcome").hidden || !$("privacy").hidden || !$("confirm").hidden) return;
     if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
     const k = e.key.toLowerCase();
     if (k==="arrowleft") step(-1); else if (k==="arrowright") step(1);
     else if (k==="t") goToday(); else if (k==="n") { e.preventDefault(); newShift(); }
-    else if (k==="j") setView("day"); else if (k==="s") setView("week"); else if (k==="m") setView("month"); else if (k==="a") setView("year"); else if (k==="r") setView("synth");
+    else if (k==="j") setView("day"); else if (k==="s") setView("week"); else if (k==="m") setView("month"); else if (k==="a") setView("year"); else if (k==="r") setView("synth"); else if (k==="e") setView("ecoles");
     else if (k==="/") { e.preventDefault(); $("search").focus(); }
     else if (k==="?") $("keys").hidden = false;
   });
@@ -1669,9 +2058,10 @@ fieldset.field{border:0;margin:0;padding:0}
     put("d3",other(2),"shift",{start:"09:00",end:"12:00",poste:"visite",lieu:"École Jean Moulin"});
     put("d4",other(1),"shift",{start:"09:00",end:"12:00",poste:"animation",lieu:"Collège Rousseau",note:"Liaison CM2-6e"});
     put("d4",t,"shift",{start:"08:30",end:"16:00",poste:"accompagnement",lieu:"École Pasteur",pause:60,note:"Élèves allophones"});
-    put("d5",t,"absence",{absence:"maladie",start:"",end:""});
+    put("d5",t,"absence",{absence:"prive",start:"",end:""});
     put("d6",t,"shift",{start:"08:30",end:"17:00",poste:"bureau",lieu:"Circonscription",pause:60});
     S.shifts = sh; demoToday();
+    S.ann = [{ id:"a1", author:"d1", text:"Réunion d'équipe lundi à 9h à la circonscription. Pensez à apporter vos plannings de visites. (exemple)", until: iso(addDays(new Date(),5)), createdAt: Date.now()-3600e3 }];
     banner("Mode démonstration : Firebase n'est pas encore configuré (voir le fichier LISEZMOI.md). Les personnes et créneaux affichés sont des exemples, rien n'est enregistré.", "Voir l'écran de connexion", () => showAuth(true));
   }
 
@@ -1780,6 +2170,11 @@ fieldset.field{border:0;margin:0;padding:0}
       S.motifs = new Map(snap.docs.filter(d => d.data()?.name).map(d => [d.id, String(d.data().name)]));
       refresh();
     }, () => {});
+    privee(S.me).onSnapshot(snap => { S.prive = new Map(snap.docs.map(d => [d.id, d.data()])); rebuild(); refresh(); }, () => {});
+    db.collection("annonces").where("until", ">=", iso(new Date())).onSnapshot(snap => {
+      S.ann = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      refresh();
+    }, () => {});
     subscribeToday();
     subscribe();
   }
@@ -1805,7 +2200,7 @@ fieldset.field{border:0;margin:0;padding:0}
     auth = firebase.auth(); db = firebase.firestore();
     if (CFG.emulator) { auth.useEmulator("http://127.0.0.1:9099"); db.useEmulator("127.0.0.1", 8080); }
     auth.useDeviceLanguage && auth.useDeviceLanguage();
-    $("app").hidden = true;
+    $("app").hidden = true; $("loader").hidden = false;
     auth.onAuthStateChanged(onUser);
   }
   setInterval(() => { subscribeToday(); refresh(); }, 60000);

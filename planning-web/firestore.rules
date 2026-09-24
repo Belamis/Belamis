@@ -1,27 +1,22 @@
 rules_version = '2';
 
-// Règles de sécurité du planning « Qui est où ».
+// Règles de sécurité du planning « Qui est où » · Circonscription de Koungou Nord.
 // À copier dans : Console Firebase > Firestore Database > Règles > Publier.
 //
-// - Seules les personnes connectées lisent le planning.
-// - Chacun ne peut créer, modifier ou supprimer QUE son propre profil et SES propres créneaux.
+// - Seules les personnes connectées avec une adresse @ac-mayotte.fr confirmée lisent le planning.
+// - Chacun ne peut créer, modifier ou supprimer QUE son propre profil, SES créneaux et SES annonces.
+// - Le motif exact d'une absence (ex. arrêt maladie) est rangé dans « prive » : lisible par la seule personne concernée.
 // - Les activités et motifs créés sont partagés : tout membre peut en ajouter, personne ne peut les effacer.
 
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Qui fait partie de l'équipe ?
-    // Par défaut : toute personne connectée avec un compte du planning.
+    // Membre de l'équipe : compte connecté, adresse académique confirmée.
     function member() {
-      return request.auth != null;
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower().matches('.*@ac-mayotte[.]fr$');
     }
-    // Pour réserver le planning à une adresse académique, remplacez la fonction ci-dessus par :
-    // function member() {
-    //   return request.auth != null
-    //     && request.auth.token.email_verified == true
-    //     && request.auth.token.email.matches('.*@ac-mayotte[.]fr$');
-    // }
-
     function isMe(uid) {
       return member() && request.auth.uid == uid;
     }
@@ -40,7 +35,7 @@ service cloud.firestore {
       allow delete: if isMe(uid);
     }
 
-    // Créneaux : un planning par personne
+    // Créneaux : un planning par personne, visible par l'équipe
     match /planning/{uid}/shifts/{shiftId} {
       allow read: if member();
       allow create, update: if isMe(uid)
@@ -49,6 +44,23 @@ service cloud.firestore {
         && request.resource.data.kind in ['shift', 'absence']
         && shortText('note', 140) && shortText('lieu', 80);
       allow delete: if isMe(uid);
+    }
+
+    // Partie privée des absences (motif exact, précision) : la personne seule
+    match /planning/{uid}/prive/{shiftId} {
+      allow read, delete: if isMe(uid);
+      allow create, update: if isMe(uid) && shortText('absence', 40) && shortText('note', 140);
+    }
+
+    // Annonces de l'équipe
+    match /annonces/{id} {
+      allow read: if member();
+      allow create: if member()
+        && request.resource.data.author == request.auth.uid
+        && request.resource.data.text is string && request.resource.data.text.size() <= 280
+        && request.resource.data.until is string && request.resource.data.until.size() == 10;
+      allow delete: if member() && resource.data.author == request.auth.uid;
+      allow update: if false;
     }
 
     // Activités et motifs d'absence ajoutés par l'équipe

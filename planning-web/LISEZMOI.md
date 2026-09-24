@@ -5,7 +5,8 @@ Planning partagé de l'équipe : IEN, conseillers pédagogiques, ERUN, Maîtres 
 - Chacun se connecte avec son e-mail et un mot de passe, puis saisit son nom et sa fonction.
 - Chacun remplit **son propre** planning. Personne ne peut modifier celui d'un collègue : c'est le serveur qui le refuse, pas seulement l'affichage.
 - Tout le monde voit tout, **en temps réel** : une saisie apparaît en une seconde chez les autres.
-- Vues Jour, Semaine, Mois, Année (rotations A/B, vacances, jours fériés 2026-2027) et Synthèse.
+- Vues Jour, Semaine, Mois, Année (rotations A/B, vacances, jours fériés 2026-2027), Synthèse et Écoles.
+- Annonces d'équipe, reprise de la semaine précédente, impression ou PDF, export Excel et export vers son agenda (.ics).
 
 Le site est un simple dossier de fichiers. Les données sont stockées dans **Firebase** (Google), gratuit pour une équipe de cette taille.
 
@@ -73,17 +74,42 @@ Sur téléphone, le site s'utilise dans le navigateur. On peut l'ajouter à l'é
 
 ---
 
-## Réserver le planning aux adresses académiques (recommandé)
+## Accès réservé aux adresses académiques
 
-Par défaut, toute personne qui connaît l'adresse du site peut créer un compte. Pour n'accepter que les adresses académiques, par exemple `@ac-mayotte.fr` :
+Le planning n'accepte que les adresses **@ac-mayotte.fr**, et chacun doit confirmer son adresse en cliquant sur le lien reçu par e-mail. Ce réglage est appliqué à deux endroits :
+- dans `config.js`, la ligne `allowedDomain: "ac-mayotte.fr"`, qui gère le message à l'écran ;
+- dans `firestore.rules`, la fonction `member()`, que le serveur applique vraiment.
 
-1. Dans `config.js`, mettez `allowedDomain: "ac-mayotte.fr"`. Le site demandera alors à chacun de confirmer son adresse par e-mail.
-2. Dans `firestore.rules`, remplacez la fonction `member()` par la version commentée juste en dessous (avec votre domaine), puis republiez les règles.
+Pour changer de domaine, modifiez les deux, puis republiez les règles.
+
+Conseil : dans Firebase, ouvrez *Authentication > Templates* et passez la langue en **français**. Prévenez aussi l'équipe que l'e-mail de confirmation peut arriver dans les indésirables.
+
+## Données personnelles (RGPD)
+
+- Une note « Données personnelles et confidentialité » est accessible depuis l'écran de connexion, le profil et le bouton **i** de la barre latérale. Indiquez la personne à contacter dans `config.js`, ligne `contact`.
+- **Arrêt maladie** : les collègues voient seulement « Absent ». Le motif exact et la précision de toute absence sont rangés à part, et le serveur ne les donne qu'à la personne concernée.
+- Chacun peut **supprimer son compte et toutes ses données** depuis *Mon profil*. Le mot de passe est redemandé pour confirmer.
+- Les données sont hébergées dans l'Union européenne (Firestore, région `europe-west1`, Belgique).
+
+## Protéger la clé Firebase (recommandé)
+
+1. Allez sur <https://console.cloud.google.com/apis/credentials> et choisissez le projet `planning-koungou-nord` en haut de la page.
+2. Cliquez sur la clé nommée **Browser key (auto created by Firebase)**.
+3. Dans **Restrictions relatives aux applications**, choisissez **Sites Web**, puis ajoutez :
+   - `https://planning-koungou-nord.netlify.app/*`
+   - `https://planning-koungou-nord.firebaseapp.com/*`, nécessaire pour les e-mails de confirmation et de mot de passe oublié.
+4. Cliquez sur **Enregistrer**. La prise en compte peut prendre quelques minutes.
+
+La clé ne pourra alors plus être utilisée depuis un autre site.
+
+## Mettre à jour le site
+
+Après une modification des fichiers, dans Netlify : ouvrez le projet, onglet **Deploys**, puis glissez-déposez à nouveau le dossier dans la zone prévue en bas de la page. Les données de l'équipe ne sont pas touchées. Si `firestore.rules` a changé, recopiez-le aussi dans Firebase (*Firestore > Règles > Publier*).
 
 ## Questions fréquentes
 
 - **Mot de passe oublié ?** Le bouton sur l'écran de connexion envoie un e-mail de réinitialisation.
 - **Changer d'année scolaire ?** Le calendrier 2026-2027 (rotations, vacances, fériés) est dans `index.html`, dans le bloc `const CAL = {...}`. Pour 2027-2028, il suffit de remplacer ce bloc.
-- **Retirer un collègue ?** Firebase, *Authentication > Users*, puis supprimer son compte. Pour effacer aussi son nom du planning, supprimez son document dans *Firestore > people*.
+- **Retirer un collègue ?** Le plus simple est qu'il utilise lui-même « Supprimer mon compte » dans son profil. Sinon : Firebase, *Authentication > Users*, supprimer son compte, puis supprimer son document dans *Firestore > people*.
 - **Coût ?** Le forfait gratuit de Firebase (Spark) suffit largement : environ 50 000 lectures et 20 000 écritures par jour.
 - **Tant que `config.js` n'est pas rempli**, le site s'ouvre en *mode démonstration* avec des collègues fictifs, et rien n'est enregistré.

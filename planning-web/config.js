@@ -10,8 +10,9 @@ window.PLANNING_CONFIG = {
     messagingSenderId: "520616849068",
     appId: "1:520616849068:web:24d82d665d7a7d3251f909",
   },
-  // Facultatif : réserver le planning à une adresse e-mail précise, par exemple "ac-mayotte.fr".
-  // Laissez "" pour accepter toutes les adresses. Si vous le remplissez, chaque collègue
-  // devra confirmer son adresse par e-mail, et pensez à faire la même chose dans firestore.rules.
-  allowedDomain: "",
+  // Seules les adresses de ce domaine peuvent créer un compte, après confirmation par e-mail.
+  // La même règle est appliquée côté serveur dans firestore.rules (fonction member()).
+  allowedDomain: "ac-mayotte.fr",
+  // Contact affiché dans la note « Données personnelles » (ex. "l'IEN de la circonscription, ce.xxx@ac-mayotte.fr").
+  contact: "",
 };

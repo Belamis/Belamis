@@ -55,19 +55,47 @@ Compte environ 20 minutes. Tout est gratuit pour démarrer.
 La clé *anon* est faite pour être publique : ce sont les règles de l'étape 2
 qui protègent les données. **Ne mets jamais la clé `service_role` dans le site.**
 
-## 5. Envoyer des mails à tout le monde (obligatoire pour d'autres élèves)
+## 5. Envoyer des mails à toutes les adresses perso (obligatoire)
+
+La connexion accepte **n'importe quelle adresse** : Gmail, Outlook, Hotmail,
+Live, Yahoo, Orange, Wanadoo, Free, SFR, La Poste, iCloud, Proton… Il n'y a
+rien à configurer par fournisseur. Deux réglages décident en revanche si le
+mail **arrive vraiment**, et pas dans les spams.
+
+### 5a. Un vrai service d'envoi (SMTP)
 
 Le service de mail fourni par Supabase est **réservé aux tests** : il n'envoie
 qu'aux adresses des membres de ton équipe Supabase, et seulement quelques mails
-par heure. Pour que n'importe quel élève reçoive son lien, branche un service
-d'envoi de mails (SMTP). Par exemple **Brevo** (français, 300 mails/jour gratuits) :
+par heure. Branche un service d'envoi, par exemple **Brevo** (français,
+300 mails/jour gratuits) :
 
 1. Crée un compte sur <https://www.brevo.com>, puis *SMTP & API* → *SMTP* :
    note le serveur, le port, l'identifiant et génère une clé SMTP.
 2. Dans Supabase : **Authentication → Emails → SMTP Settings** → *Enable custom SMTP*,
-   colle ces informations, expéditeur : ton adresse et le nom `Belamis`.
+   colle ces informations, nom d'expéditeur `Belamis`.
 3. Dans **Authentication → Rate Limits**, monte la limite d'envoi de mails
    (par exemple 100 par heure).
+
+### 5b. Une adresse d'expéditeur sur ton propre nom de domaine
+
+C'est ce qui fait la différence entre « boîte de réception » et « spams ».
+Gmail, Outlook/Hotmail, Yahoo et Orange/Wanadoo **refusent ou classent en
+indésirable** un mail qui prétend venir d'une adresse `@gmail.com`,
+`@hotmail.fr`, `@orange.fr`… mais qui est envoyé par un autre service (Brevo).
+L'expéditeur doit donc être une adresse d'un domaine à toi, par exemple
+`connexion@belamis.fr`.
+
+1. Achète un nom de domaine (environ 10 € par an chez OVH, Gandi, IONOS…).
+2. Dans Brevo : **Expéditeurs, domaines et IP dédiées → Domaines** → ajoute ton
+   domaine, puis copie les enregistrements qu'il affiche (SPF, DKIM, DMARC)
+   dans la zone DNS de ton domaine, chez ton registraire.
+3. Attends que Brevo affiche le domaine comme **authentifié** (quelques minutes
+   à quelques heures).
+4. Dans Supabase, **SMTP Settings** → *Sender email* : `connexion@ton-domaine.fr`.
+
+Côté élève, la fenêtre de connexion corrige les fautes de frappe courantes
+(« gmial.com », « hotmial.fr », « wanado.fr »…), rappelle de regarder dans les
+spams et propose de renvoyer le mail au bout d'une minute.
 
 ## 6. Tester
 

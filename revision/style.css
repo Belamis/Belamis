@@ -678,6 +678,7 @@ body.launching .footer { opacity: 0; pointer-events: none; }
 
 .auth-msg { margin: 0; min-height: 1.2em; font-size: 0.9rem; line-height: 1.45; }
 .auth-msg[data-kind="error"] { color: #ff9f8a; }
+.auth-msg[data-kind="ok"] { color: var(--lime); }
 .auth-link {
   align-self: center;
   padding: 6px 8px;
@@ -693,6 +694,33 @@ body.launching .footer { opacity: 0; pointer-events: none; }
 .auth-link:hover { color: var(--ink); }
 .auth-link:focus-visible,
 .auth-x:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; border-radius: 8px; }
+.auth-hint { margin: -2px 0 0; font-size: 0.8rem; line-height: 1.45; color: var(--ink-faint); }
+.auth-suggest { margin: -2px 0 0; font-size: 0.9rem; color: var(--ink-soft); }
+.auth-suggest button {
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(201, 242, 90, 0.45);
+  background: rgba(201, 242, 90, 0.1);
+  color: var(--lime);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  word-break: break-all;
+}
+.auth-suggest button:hover { background: rgba(201, 242, 90, 0.2); }
+.auth-spam {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-line);
+}
+.auth-spam strong { color: var(--ink); }
+.auth-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; }
+.auth-link:disabled { opacity: 0.55; cursor: default; text-decoration: none; }
 .auth-demo {
   margin: 4px 0 0;
   padding: 10px 12px;

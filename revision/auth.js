@@ -27,6 +27,59 @@
   let launchAfterLogin = false;
   let lastFocus = null;
 
+  // ---------- Adresses perso : fautes de frappe courantes ----------
+  const DOMAINS = [
+    "gmail.com", "googlemail.com", "hotmail.fr", "hotmail.com", "outlook.fr", "outlook.com", "live.fr", "live.com",
+    "msn.com", "yahoo.fr", "yahoo.com", "ymail.com", "orange.fr", "wanadoo.fr", "free.fr", "sfr.fr", "neuf.fr",
+    "laposte.net", "bbox.fr", "numericable.fr", "icloud.com", "me.com", "mac.com", "aol.com", "aol.fr", "gmx.fr",
+    "gmx.com", "protonmail.com", "proton.me", "club-internet.fr", "aliceadsl.fr", "cegetel.net", "voila.fr",
+  ];
+  // noms qui n'existent pas mais qu'on tape souvent
+  const ALIASES = { "gmail.fr": "gmail.com", "gmail.co": "gmail.com", "gmail.con": "gmail.com", "hotmail.con": "hotmail.com", "outlook.con": "outlook.com", "wanadoo.com": "wanadoo.fr", "orange.com": "orange.fr", "free.com": "free.fr", "laposte.fr": "laposte.net", "icloud.fr": "icloud.com" };
+
+  function distance(a, b) {
+    const d = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+    for (let j = 1; j <= b.length; j++) d[0][j] = j;
+    for (let i = 1; i <= a.length; i++)
+      for (let j = 1; j <= b.length; j++) {
+        d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+      }
+    return d[a.length][b.length];
+  }
+
+  function suggestEmail(email) {
+    const at = email.lastIndexOf("@");
+    if (at < 1) return null;
+    const local = email.slice(0, at), domain = email.slice(at + 1).toLowerCase();
+    if (!domain || DOMAINS.includes(domain)) return null;
+    if (ALIASES[domain]) return `${local}@${ALIASES[domain]}`;
+    let best = null, bestD = 3;
+    for (const d of DOMAINS) {
+      const dist = distance(domain, d);
+      if (dist < bestD) { best = d; bestD = dist; }
+    }
+    // « gmial.com », « hotmial.fr », « wanado.fr », « orange.f »…
+    return best && bestD <= (domain.length > 6 ? 2 : 1) ? `${local}@${best}` : null;
+  }
+
+  const suggestBox = $("auth-suggest");
+  const suggestBtn = $("auth-suggest-btn");
+  let suggestionShownFor = "";
+
+  function showSuggestion(email) {
+    const s = suggestEmail(email);
+    suggestBox.hidden = !s;
+    if (s) suggestBtn.textContent = s;
+    return s;
+  }
+
+  suggestBtn.addEventListener("click", () => {
+    mailInput.value = suggestBtn.textContent;
+    suggestBox.hidden = true;
+    mailInput.focus();
+  });
+
   // ---------- Stockage (Supabase, ou navigateur en mode démo) ----------
   const demo = {
     read() { try { return JSON.parse(localStorage.getItem(DEMO_KEY)) || {}; } catch (_) { return {}; } },
@@ -84,6 +137,8 @@
     $("auth-demo").hidden = configured;
     msg(emailForm, "");
     msg(codeForm, "");
+    suggestBox.hidden = true;
+    suggestionShownFor = "";
     modal.hidden = false;
     requestAnimationFrame(() => modal.classList.add("open"));
     showStep("email");
@@ -110,25 +165,66 @@
     return "La connexion a échoué. Réessaie dans un instant.";
   }
 
+  async function sendLink(email) {
+    if (!sb) return;
+    const { error } = await sb.auth.signInWithOtp({
+      email,
+      options: { emailRedirectTo: location.origin + location.pathname, shouldCreateUser: true },
+    });
+    if (error) throw error;
+  }
+
+  // on ne peut redemander un mail qu'une fois par minute (limite de Supabase)
+  const resendBtn = $("auth-resend");
+  let cooldownTimer = 0;
+  function startCooldown(seconds) {
+    clearInterval(cooldownTimer);
+    let left = seconds;
+    const tick = () => {
+      resendBtn.disabled = left > 0;
+      resendBtn.textContent = left > 0 ? `Renvoyer le mail (${left} s)` : "Renvoyer le mail";
+      if (left-- <= 0) clearInterval(cooldownTimer);
+    };
+    tick();
+    cooldownTimer = setInterval(tick, 1000);
+  }
+
+  resendBtn.addEventListener("click", async () => {
+    resendBtn.disabled = true;
+    try {
+      await sendLink(pendingEmail);
+      msg(codeForm, "Nouveau mail envoyé. Utilise le code du mail le plus récent.", "ok");
+      startCooldown(60);
+    } catch (err) {
+      msg(codeForm, friendlyError(err), "error");
+      startCooldown(20);
+    }
+  });
+
   emailForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const email = mailInput.value.trim();
-    if (!mailInput.checkValidity()) { msg(emailForm, "Entre une adresse mail complète, par exemple prenom.nom@exemple.fr.", "error"); return; }
+    const email = mailInput.value.trim().toLowerCase();
+    mailInput.value = email;
+    if (!mailInput.checkValidity() || !/@[^@.]+(\.[^@.]+)+$/.test(email)) {
+      msg(emailForm, "Entre une adresse mail complète, par exemple prenom.nom@gmail.com.", "error");
+      return;
+    }
+    // faute de frappe probable : on la signale une fois avant d'envoyer
+    if (suggestionShownFor !== email && showSuggestion(email)) {
+      suggestionShownFor = email;
+      msg(emailForm, "Vérifie ton adresse. Clique sur la suggestion, ou renvoie tel quel si elle est juste.", "error");
+      return;
+    }
     busy(emailForm, true);
     msg(emailForm, "");
     try {
-      if (sb) {
-        const { error } = await sb.auth.signInWithOtp({
-          email,
-          options: { emailRedirectTo: location.origin + location.pathname, shouldCreateUser: true },
-        });
-        if (error) throw error;
-      }
+      await sendLink(email);
       pendingEmail = email;
       $("auth-sent-to").textContent = email;
       otpInput.value = "";
       msg(codeForm, "");
       showStep("code");
+      startCooldown(60);
     } catch (err) {
       msg(emailForm, friendlyError(err), "error");
     } finally {
@@ -160,7 +256,8 @@
     }
   });
 
-  mailInput.addEventListener("input", () => msg(emailForm, ""));
+  mailInput.addEventListener("input", () => { msg(emailForm, ""); suggestBox.hidden = true; });
+  mailInput.addEventListener("blur", () => { if (mailInput.value.includes("@")) showSuggestion(mailInput.value.trim().toLowerCase()); });
   otpInput.addEventListener("input", () => msg(codeForm, ""));
   $("auth-back").addEventListener("click", () => showStep("email"));
   guestBtn.addEventListener("click", () => { closeAuth(); startRevision(); });

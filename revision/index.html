@@ -148,6 +148,10 @@
         <p id="auth-why" class="auth-text"></p>
         <label for="auth-mail">Adresse mail</label>
         <input id="auth-mail" name="email" type="email" autocomplete="email" required placeholder="prenom.nom@exemple.fr" />
+        <p id="auth-suggest" class="auth-suggest" hidden>
+          Tu voulais dire <button id="auth-suggest-btn" type="button"></button> ?
+        </p>
+        <p class="auth-hint">Gmail, Outlook, Hotmail, Yahoo, Orange, Wanadoo, Free, SFR, La Poste, iCloud… toutes les adresses perso fonctionnent.</p>
         <button class="btn btn-primary" type="submit">Recevoir mon lien de connexion</button>
         <p class="auth-msg" role="status" aria-live="polite"></p>
         <button id="auth-guest" class="auth-link" type="button" hidden>Continuer sans compte</button>
@@ -162,7 +166,11 @@
         <input id="auth-otp" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="123456" />
         <button class="btn btn-primary" type="submit">Valider le code</button>
         <p class="auth-msg" role="status" aria-live="polite"></p>
-        <button id="auth-back" class="auth-link" type="button">Changer d'adresse mail</button>
+        <p class="auth-spam">Pas reçu au bout d'une minute ? Regarde dans tes <strong>spams</strong> ou ton <strong>courrier indésirable</strong>. C'est fréquent chez Hotmail, Outlook, Orange et Wanadoo. Le mail s'appelle « Ta connexion à Belamis ».</p>
+        <div class="auth-links">
+          <button id="auth-resend" class="auth-link" type="button">Renvoyer le mail</button>
+          <button id="auth-back" class="auth-link" type="button">Changer d'adresse mail</button>
+        </div>
       </form>
     </div>
   </div>

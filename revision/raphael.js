@@ -722,7 +722,7 @@
     } else {
       begin();
     }
-    if (location.hash !== "#revision") history.replaceState(null, "", "#revision");
+    try { if (location.hash !== "#revision") history.replaceState(null, "", "#revision"); } catch (_) { /* cadre restreint */ }
   }
 
   function skip() {
@@ -745,7 +745,7 @@
     layer.classList.remove("born");
     document.body.classList.remove("launching");
     window.__belamisPaused = false;
-    history.replaceState(null, "", location.pathname + location.search);
+    try { history.replaceState(null, "", location.pathname + location.search); } catch (_) { /* cadre restreint */ }
   }
 
   skipBtn.addEventListener("click", skip);

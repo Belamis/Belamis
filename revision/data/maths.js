@@ -345,7 +345,7 @@ window.BELAMIS_MATHS = {
      "short": "Ex. 3",
      "titre": "Un spectacle d’ombres chinoises",
      "points": 1.5,
-     "intro": "<p>Un objet [DE] de 20 cm doit avoir une ombre [BC] de 1,2 m sur l’écran. La source lumineuse A est à 9 m de l’écran (figure non à l’échelle).</p><figure class=\"fig\"><svg viewBox=\"0 0 520 245\" role=\"img\" aria-label=\"Source lumineuse en A, objet [DE] de 0,2 m, écran [BC] de 1,2 m à 9 m de A ; figure non à l’échelle\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,200 460,200 460,40\" class=\"stroke\"/><line x1=\"180\" y1=\"200\" x2=\"180\" y2=\"160\" class=\"thick\"/><line x1=\"460\" y1=\"200\" x2=\"460\" y2=\"40\" class=\"thick\"/><rect x=\"180\" y=\"190\" width=\"10\" height=\"10\" class=\"stroke\"/><rect x=\"450\" y=\"190\" width=\"10\" height=\"10\" class=\"stroke\"/><text x=\"40\" y=\"218\" text-anchor=\"middle\" font-size=\"13\" class=\"\">A</text><text x=\"180\" y=\"218\" text-anchor=\"middle\" font-size=\"13\" class=\"\">D</text><text x=\"460\" y=\"218\" text-anchor=\"middle\" font-size=\"13\" class=\"\">B</text><text x=\"170\" y=\"156\" text-anchor=\"middle\" font-size=\"13\" class=\"\">E</text><text x=\"472\" y=\"40\" text-anchor=\"middle\" font-size=\"13\" class=\"\">C</text><text x=\"210\" y=\"186\" text-anchor=\"middle\" font-size=\"12\" class=\"\">0,2 m</text><text x=\"496\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" class=\"\">1,2 m</text><text x=\"250.0\" y=\"234\" text-anchor=\"middle\" font-size=\"12\" class=\"\">9 m</text><line x1=\"40\" y1=\"222\" x2=\"460\" y2=\"222\" class=\"stroke\" marker-end=\"url(#ar)\" marker-start=\"url(#ar)\"/><defs><marker id=\"ar\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"fillink\"/></marker></defs></svg></figure>",
+     "intro": "<p>Un objet [DE] de 20 cm doit avoir une ombre [BC] de 1,2 m sur l’écran. La source lumineuse A est à 9 m de l’écran (figure non à l’échelle).</p><figure class=\"fig\"><svg viewBox=\"0 0 520 245\" role=\"img\" aria-label=\"Source lumineuse en A, objet [DE] de 0,2 m, écran [BC] de 1,2 m à 9 m de A ; figure non à l’échelle\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,200 460,200 460,40\" class=\"stroke\"/><line x1=\"110.0\" y1=\"200\" x2=\"110.0\" y2=\"173.33333333333334\" class=\"thick\"/><line x1=\"460\" y1=\"200\" x2=\"460\" y2=\"40\" class=\"thick\"/><rect x=\"110.0\" y=\"190\" width=\"10\" height=\"10\" class=\"stroke\"/><rect x=\"450\" y=\"190\" width=\"10\" height=\"10\" class=\"stroke\"/><text x=\"40\" y=\"218\" text-anchor=\"middle\" font-size=\"13\" class=\"\">A</text><text x=\"110.0\" y=\"218\" text-anchor=\"middle\" font-size=\"13\" class=\"\">D</text><text x=\"460\" y=\"218\" text-anchor=\"middle\" font-size=\"13\" class=\"\">B</text><text x=\"100.0\" y=\"169.33333333333334\" text-anchor=\"middle\" font-size=\"13\" class=\"\">E</text><text x=\"472\" y=\"40\" text-anchor=\"middle\" font-size=\"13\" class=\"\">C</text><text x=\"140.0\" y=\"196\" text-anchor=\"middle\" font-size=\"12\" class=\"\">0,2 m</text><text x=\"496\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" class=\"\">1,2 m</text><text x=\"250.0\" y=\"234\" text-anchor=\"middle\" font-size=\"12\" class=\"\">9 m</text><line x1=\"40\" y1=\"222\" x2=\"460\" y2=\"222\" class=\"stroke\" marker-end=\"url(#ar)\" marker-start=\"url(#ar)\"/><defs><marker id=\"ar\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"fillink\"/></marker></defs></svg></figure>",
      "questions": [
       {
        "id": "1",
@@ -379,7 +379,7 @@ window.BELAMIS_MATHS = {
      "short": "Ex. 4",
      "titre": "Les Jeux olympiques de Paris 2024",
      "points": 1.75,
-     "intro": "<p><strong>Partie A.</strong> 63 pays ont reçu au moins une médaille d’or.</p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Médailles d’or</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>8</th><th>9</th><th>10</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>18</th><th>20</th><th>40</th></tr></thead><tbody><tr><th>Nombre de pays</th><td>23</td><td>12</td><td>9</td><td>4</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td></tr></tbody></table></div><p><strong>Partie B.</strong> Une médaille d’or pèse 529 g ; elle est en argent recouvert d’or pur, qui représente 1,13 % de sa masse.</p><p><strong>Partie C.</strong> L’insert de la médaille est un hexagone régulier, que l’on veut tracer avec Scratch (côté 50 pas). Nina a écrit ce script, qui ne trace pas l’hexagone :</p><div class=\"scratch\" aria-label=\"Script Scratch\"><div class=\"sb sb-event\">quand le drapeau est cliqué</div><div class=\"sb sb-pen\">stylo en position d’écriture</div><div class=\"sb sb-move\">s’orienter à <span class=\"sb-v\">60</span></div><div class=\"sb sb-ctrl sb-c\"><div class=\"sb-h\">répéter <span class=\"sb-v\">6</span> fois</div><div class=\"sb-in\"><div class=\"sb sb-move\">avancer de <span class=\"sb-v\">50</span> pas</div><div class=\"sb sb-move\">tourner ↺ de <span class=\"sb-v\">120</span> degrés</div></div><div class=\"sb-f\"></div></div><div class=\"sb sb-pen\">relever le stylo</div></div><figure class=\"fig\"><svg viewBox=\"0 0 240 220\" role=\"img\" aria-label=\"Hexagone régulier de côté 50 pas\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120.0,30.0 50.7,70.0 50.7,150.0 120.0,190.0 189.3,150.0 189.3,70.0\" class=\"stroke\"/><text x=\"120\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" class=\"\">côté : 50 pas</text></svg></figure>",
+     "intro": "<p><strong>Partie A.</strong> 63 pays ont reçu au moins une médaille d’or.</p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Médailles d’or</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>8</th><th>9</th><th>10</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>18</th><th>20</th><th>40</th></tr></thead><tbody><tr><th>Nombre de pays</th><td>23</td><td>12</td><td>9</td><td>4</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td></tr></tbody></table></div><p><strong>Partie B.</strong> Une médaille d’or pèse 529 g ; elle est en argent recouvert d’or pur, qui représente 1,13 % de sa masse.</p><p><strong>Partie C.</strong> L’insert de la médaille est un hexagone régulier, que l’on veut tracer avec Scratch (côté 50 pas). Nina a écrit ce script, qui ne trace pas l’hexagone. On rappelle que l’instruction « s’orienter à 0 » oriente le stylo vers le haut.</p><div class=\"scratch\" aria-label=\"Script Scratch\"><div class=\"sb sb-event\">quand le drapeau est cliqué</div><div class=\"sb sb-pen\">stylo en position d’écriture</div><div class=\"sb sb-move\">s’orienter à <span class=\"sb-v\">60</span></div><div class=\"sb sb-ctrl sb-c\"><div class=\"sb-h\">répéter <span class=\"sb-v\">6</span> fois</div><div class=\"sb-in\"><div class=\"sb sb-move\">avancer de <span class=\"sb-v\">50</span> pas</div><div class=\"sb sb-move\">tourner ↺ de <span class=\"sb-v\">120</span> degrés</div></div><div class=\"sb-f\"></div></div><div class=\"sb sb-pen\">relever le stylo</div></div><figure class=\"fig\"><svg viewBox=\"0 0 240 220\" role=\"img\" aria-label=\"Hexagone régulier de côté 50 pas\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120.0,30.0 50.7,70.0 50.7,150.0 120.0,190.0 189.3,150.0 189.3,70.0\" class=\"stroke\"/><text x=\"120\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" class=\"\">côté : 50 pas</text></svg></figure>",
      "questions": [
       {
        "id": "A1",
@@ -584,7 +584,7 @@ window.BELAMIS_MATHS = {
        "type": "geometrie",
        "points": 0.6,
        "enonce": "Justifier que l’angle DOC mesure 72°.",
-       "corrige": "<p>Les 5 angles au centre AOB, BOC, COD, DOE, EOA interceptent des côtés de même longueur : ils sont égaux et leur somme fait un tour complet.</p><p class='answer'>360° ÷ 5 = 72°</p>",
+       "corrige": "<p>Les triangles OAB, OBC, OCD, ODE et OEA ont leurs côtés égaux deux à deux (OA = OB = OC = OD = OE, rayons du cercle, et les côtés du pentagone ont la même longueur). Ils sont donc superposables, et leurs angles en O sont égaux. Ces 5 angles font un tour complet.</p><p class='answer'>360° ÷ 5 = 72°</p>",
        "niveau": "c4"
       },
       {
@@ -775,11 +775,19 @@ window.BELAMIS_MATHS = {
        "niveau": "c4"
       },
       {
-       "id": "4",
+       "id": "4a",
        "type": "proportionnalite",
-       "points": 1.5,
-       "enonce": "L’an dernier, le carnet coûtait 10 € ; il a augmenté de 20 %. L’an prochain, il baissera de 20 %. Reviendra-t-il à 10 € ? Quel pourcentage de baisse faudrait-il pour revenir exactement à 10 € ?",
-       "corrige": "<p>12 × 0,8 = 9,60 € : non, il sera moins cher qu’il y a deux ans (évolution globale 1,2 × 0,8 = 0,96, soit −4 %).</p><p>Pour revenir de 12 € à 10 € : coefficient 10 ÷ 12 ≈ 0,833, soit une baisse d’environ 16,7 %.</p><p class='answer'>Non (9,60 €) ; il faudrait une baisse d’environ 16,7 %.</p>",
+       "points": 1,
+       "enonce": "L’an dernier, le carnet coûtait 10 € ; il a augmenté de 20 % pour atteindre 12 €. L’an prochain, il baissera de 20 %. Reviendra-t-il à 10 € ?",
+       "corrige": "<p>12 × 0,8 = 9,60 € : non, il sera moins cher qu’il y a deux ans (évolution globale 1,2 × 0,8 = 0,96, soit −4 %).</p><p class='answer'>Non : 9,60 €.</p><p>Une hausse puis une baisse du même pourcentage ne se compensent pas.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "4b",
+       "type": "proportionnalite",
+       "points": 0.5,
+       "enonce": "Quel pourcentage de baisse faudrait-il pour revenir exactement de 12 € à 10 € ?",
+       "corrige": "<p>Coefficient : 10 ÷ 12 ≈ 0,833, soit une baisse d’environ 16,7 % (taux d’évolution réciproque).</p><p class='answer'>≈ 16,7 %</p>",
        "niveau": "lycee"
       }
      ]
@@ -790,7 +798,7 @@ window.BELAMIS_MATHS = {
      "short": "Ex. 3",
      "titre": "Le mât des fanions",
      "points": 4,
-     "intro": "<p>Un mât vertical [MH] de 6 m est tenu par une corde [MS] fixée au sol en S, à 8 m du pied H du mât. Un fanion F est accroché sur la corde à 4 m de S ; K est le point du sol situé à la verticale de F.</p><figure class=\"fig\"><svg viewBox=\"0 0 420 235\" role=\"img\" aria-label=\"Mât vertical [MH] de 6 m, point d’ancrage S au sol à 8 m de H, fanion F sur la corde [MS] et K son projeté au sol\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"80,200 80,50 380,200\" class=\"stroke\"/><line x1=\"260.0\" y1=\"140.0\" x2=\"260.0\" y2=\"200\" class=\"stroke dash\"/><rect x=\"80\" y=\"190\" width=\"10\" height=\"10\" class=\"stroke\"/><rect x=\"260.0\" y=\"190\" width=\"10\" height=\"10\" class=\"stroke\"/><text x=\"68\" y=\"204\" text-anchor=\"middle\" font-size=\"13\" class=\"\">H</text><text x=\"68\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" class=\"\">M</text><text x=\"392\" y=\"204\" text-anchor=\"middle\" font-size=\"13\" class=\"\">S</text><text x=\"260.0\" y=\"218\" text-anchor=\"middle\" font-size=\"13\" class=\"\">K</text><text x=\"264.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"13\" class=\"\">F</text><text x=\"50\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" class=\"\">6 m</text><text x=\"155\" y=\"220\" text-anchor=\"middle\" font-size=\"12\" class=\"\">8 m</text></svg></figure>",
+     "intro": "<p>Un mât vertical [MH] de 6 m est tenu par une corde [MS] fixée au sol en S, à 8 m du pied H du mât. Un fanion F est accroché sur la corde à 4 m de S ; K est le point du sol situé à la verticale de F.</p><figure class=\"fig\"><svg viewBox=\"0 0 420 235\" role=\"img\" aria-label=\"Mât vertical [MH] de 6 m, point d’ancrage S au sol à 8 m de H, fanion F sur la corde [MS] et K son projeté au sol\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"80,200 80,50 380,200\" class=\"stroke\"/><line x1=\"260.0\" y1=\"140.0\" x2=\"260.0\" y2=\"200\" class=\"stroke dash\"/><rect x=\"80\" y=\"190\" width=\"10\" height=\"10\" class=\"stroke\"/><rect x=\"260.0\" y=\"190\" width=\"10\" height=\"10\" class=\"stroke\"/><text x=\"68\" y=\"204\" text-anchor=\"middle\" font-size=\"13\" class=\"\">H</text><text x=\"68\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" class=\"\">M</text><text x=\"392\" y=\"204\" text-anchor=\"middle\" font-size=\"13\" class=\"\">S</text><text x=\"260.0\" y=\"218\" text-anchor=\"middle\" font-size=\"13\" class=\"\">K</text><text x=\"264.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"13\" class=\"\">F</text><text x=\"50\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" class=\"\">6 m</text><text x=\"230.0\" y=\"228\" text-anchor=\"middle\" font-size=\"12\" class=\"\">HS = 8 m</text></svg></figure>",
      "questions": [
       {
        "id": "1",
@@ -1420,7 +1428,7 @@ window.BELAMIS_MATHS = {
        "points": 0.5,
        "enonce": "Calculer l’aire de l’enclos pour <em>x</em> = 3.",
        "corrige": "<p>Longueur : 20 − 2 × 3 = 14 m ; aire : 3 × 14.</p><p class='answer'>42 m²</p>",
-       "niveau": "lycee"
+       "niveau": "c4"
       },
       {
        "id": "2",
@@ -1504,7 +1512,7 @@ window.BELAMIS_MATHS = {
        "points": 1,
        "enonce": "Calculer l’effectif en 2022.",
        "corrige": "<p>500 × 1,08 = 540 ; 540 × 0,95 = 513.</p><p class='answer'>513 élèves</p>",
-       "niveau": "lycee"
+       "niveau": "c4"
       },
       {
        "id": "2",
@@ -1512,7 +1520,7 @@ window.BELAMIS_MATHS = {
        "points": 1,
        "enonce": "Quel est le taux d’évolution global entre 2020 et 2022 ?",
        "corrige": "<p>Coefficient global : 1,08 × 0,95 = 1,026.</p><p class='answer'>+2,6 %</p>",
-       "niveau": "lycee"
+       "niveau": "c4"
       },
       {
        "id": "3",

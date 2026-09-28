@@ -81,14 +81,16 @@ def fig_demi_cercles():
     return svg(240, 220, body, "Carré de 8 cm dans lequel sont inscrits deux demi-cercles ; la zone grisée est le reste du carré")
 
 def fig_ombre():
-    A, D, B = (40, 200), (180, 200), (460, 200)
-    E, C = (180, 160), (460, 40)
+    A, B, C = (40, 200), (460, 200), (460, 40)
+    # D et E tels que AD/AB = DE/BC = 0,2/1,2 = 1/6, E sur [AC]
+    D = (A[0] + (B[0] - A[0]) / 6, 200)
+    E = (D[0], A[1] - (A[1] - C[1]) / 6)
     b = (f'<polygon points="{A[0]},{A[1]} {B[0]},{B[1]} {C[0]},{C[1]}" class="stroke"/>'
          f'<line x1="{D[0]}" y1="{D[1]}" x2="{E[0]}" y2="{E[1]}" class="thick"/>'
          f'<line x1="{B[0]}" y1="{B[1]}" x2="{C[0]}" y2="{C[1]}" class="thick"/>'
          f'<rect x="{D[0]}" y="{D[1]-10}" width="10" height="10" class="stroke"/><rect x="{B[0]-10}" y="{B[1]-10}" width="10" height="10" class="stroke"/>'
          + txt(A[0], A[1] + 18, "A") + txt(D[0], D[1] + 18, "D") + txt(B[0], B[1] + 18, "B") + txt(E[0] - 10, E[1] - 4, "E") + txt(C[0] + 12, C[1], "C")
-         + txt(D[0] + 30, 186, "0,2 m", size=12) + txt(B[0] + 36, 124, "1,2 m", size=12) + txt((A[0] + B[0]) / 2, 234, "9 m", size=12)
+         + txt(D[0] + 30, 196, "0,2 m", size=12) + txt(B[0] + 36, 124, "1,2 m", size=12) + txt((A[0] + B[0]) / 2, 234, "9 m", size=12)
          + f'<line x1="{A[0]}" y1="222" x2="{B[0]}" y2="222" class="stroke" marker-end="url(#ar)" marker-start="url(#ar)"/>'
          + '<defs><marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fillink"/></marker></defs>')
     return svg(520, 245, b, "Source lumineuse en A, objet [DE] de 0,2 m, écran [BC] de 1,2 m à 9 m de A ; figure non à l’échelle")
@@ -170,7 +172,7 @@ def fig_mat():
          f'<line x1="{Fp[0]}" y1="{Fp[1]}" x2="{K[0]}" y2="{K[1]}" class="stroke dash"/>'
          f'<rect x="{H[0]}" y="{H[1]-10}" width="10" height="10" class="stroke"/><rect x="{K[0]}" y="{K[1]-10}" width="10" height="10" class="stroke"/>'
          + txt(H[0] - 12, H[1] + 4, "H") + txt(M[0] - 12, M[1], "M") + txt(S[0] + 12, S[1] + 4, "S") + txt(K[0], K[1] + 18, "K") + txt(Fp[0] + 4, Fp[1] - 8, "F")
-         + txt(H[0] - 30, 130, "6 m", size=12) + txt(155, 220, "8 m", size=12))
+         + txt(H[0] - 30, 130, "6 m", size=12) + txt((H[0] + S[0]) / 2, 228, "HS = 8 m", size=12))
     return svg(420, 235, b, "Mât vertical [MH] de 6 m, point d’ancrage S au sol à 8 m de H, fanion F sur la corde [MS] et K son projeté au sol")
 
 def fig_potager():
@@ -371,7 +373,7 @@ SUJETS.append({
   EX(4, 1.75, "Les Jeux olympiques de Paris 2024",
      "<p><strong>Partie A.</strong> 63 pays ont reçu au moins une médaille d’or.</p>" + tab_med
      + "<p><strong>Partie B.</strong> Une médaille d’or pèse 529 g ; elle est en argent recouvert d’or pur, qui représente 1,13 % de sa masse.</p>"
-     + "<p><strong>Partie C.</strong> L’insert de la médaille est un hexagone régulier, que l’on veut tracer avec Scratch (côté 50 pas). Nina a écrit ce script, qui ne trace pas l’hexagone :</p>"
+     + "<p><strong>Partie C.</strong> L’insert de la médaille est un hexagone régulier, que l’on veut tracer avec Scratch (côté 50 pas). Nina a écrit ce script, qui ne trace pas l’hexagone. On rappelle que l’instruction « s’orienter à 0 » oriente le stylo vers le haut.</p>"
      + scratch(sb("event", "quand le drapeau est cliqué"), sb("pen", "stylo en position d’écriture"), sb("move", f"s’orienter à {val('60')}"), sb("ctrl", f"répéter {val('6')} fois", [sb("move", f"avancer de {val('50')} pas"), sb("move", f"tourner ↺ de {val('120')} degrés")]), sb("pen", "relever le stylo")) + fig_hexagone(),
      [Q("A1", "stats", 0.5, "Calculer le nombre moyen de médailles d’or par pays, arrondi au dixième.", f"<p>Somme des médailles : 1 × 23 + 2 × 12 + 3 × 9 + … + 40 × 2 = {total_med}. Moyenne : {total_med} ÷ 63 ≈ {n(total_med/63, 3)}.</p><p class='answer'>≈ 5,2 médailles d’or par pays</p>"),
       Q("A2", "stats", 0.5, "Le Canada a obtenu 9 médailles d’or. Ce nombre est-il supérieur à la médiane ?", "<p>63 valeurs : la médiane est la 32e valeur de la série rangée. Les 23 premières valent 1, les 12 suivantes (24e à 35e) valent 2 : la médiane vaut 2.</p><p class='answer'>Oui : 9 &gt; 2.</p><p>La moyenne (5,2) est bien plus grande que la médiane : quelques pays ont beaucoup de médailles.</p>"),
@@ -418,7 +420,7 @@ SUJETS.append({
      ]),
   EX(3, 2.5, "Des pentagones",
      "<p>Un pentagone régulier ABCDE est inscrit dans un cercle de centre O. <em>Rappel : un polygone régulier a tous ses côtés de même longueur et tous ses angles de même mesure.</em></p>" + fig_pentagone(),
-     [Q("a", "geometrie", 0.6, "Justifier que l’angle DOC mesure 72°.", "<p>Les 5 angles au centre AOB, BOC, COD, DOE, EOA interceptent des côtés de même longueur : ils sont égaux et leur somme fait un tour complet.</p><p class='answer'>360° ÷ 5 = 72°</p>"),
+     [Q("a", "geometrie", 0.6, "Justifier que l’angle DOC mesure 72°.", "<p>Les triangles OAB, OBC, OCD, ODE et OEA ont leurs côtés égaux deux à deux (OA = OB = OC = OD = OE, rayons du cercle, et les côtés du pentagone ont la même longueur). Ils sont donc superposables, et leurs angles en O sont égaux. Ces 5 angles font un tour complet.</p><p class='answer'>360° ÷ 5 = 72°</p>"),
       Q("b", "geometrie", 0.6, "Quelle est la nature du triangle OCD ?", "<p>OC = OD (rayons du cercle).</p><p class='answer'>OCD est isocèle en O.</p>"),
       Q("c", "geometrie", 0.7, "Déterminer la mesure de l’angle DCB.", "<p>Dans OCD isocèle en O, les angles à la base mesurent (180° − 72°) ÷ 2 = 54°. De même dans OCB : angle OCB = 54°.</p><p class='answer'>DCB = 54° + 54° = 108°</p>"),
       Q("d", "geometrie", 0.6, "Déterminer la somme des angles de ce pentagone.", "<p>5 angles de 108°.</p><p class='answer'>5 × 108° = 540°</p><p>Formule générale : (n − 2) × 180° pour un polygone à n côtés.</p>"),
@@ -470,8 +472,10 @@ SUJETS.append({
      [Q("1", "proportionnalite", 0.5, "Combien économise-t-on en achetant un carnet plutôt que 10 tickets à l’unité ?", "<p>10 × 1,50 = 15 € ; 15 − 12 = 3.</p><p class='answer'>3 €</p>"),
       Q("2", "proportionnalite", 1, "Quel pourcentage de réduction le carnet représente-t-il ?", "<p>3 ÷ 15 = 0,2.</p><p class='answer'>20 %</p>"),
       Q("3", "proportionnalite", 1, "Léa veut exactement 24 tickets. Quelle est la dépense minimale ?", "<p>2 carnets + 4 tickets : 24 + 6 = 30 €. 3 carnets (30 tickets) coûteraient 36 €.</p><p class='answer'>30 €</p>"),
-      Q("4", "proportionnalite", 1.5, "L’an dernier, le carnet coûtait 10 € ; il a augmenté de 20 %. L’an prochain, il baissera de 20 %. Reviendra-t-il à 10 € ? Quel pourcentage de baisse faudrait-il pour revenir exactement à 10 € ?",
-        "<p>12 × 0,8 = 9,60 € : non, il sera moins cher qu’il y a deux ans (évolution globale 1,2 × 0,8 = 0,96, soit −4 %).</p><p>Pour revenir de 12 € à 10 € : coefficient 10 ÷ 12 ≈ 0,833, soit une baisse d’environ 16,7 %.</p><p class='answer'>Non (9,60 €) ; il faudrait une baisse d’environ 16,7 %.</p>", "lycee"),
+      Q("4a", "proportionnalite", 1, "L’an dernier, le carnet coûtait 10 € ; il a augmenté de 20 % pour atteindre 12 €. L’an prochain, il baissera de 20 %. Reviendra-t-il à 10 € ?",
+        "<p>12 × 0,8 = 9,60 € : non, il sera moins cher qu’il y a deux ans (évolution globale 1,2 × 0,8 = 0,96, soit −4 %).</p><p class='answer'>Non : 9,60 €.</p><p>Une hausse puis une baisse du même pourcentage ne se compensent pas.</p>"),
+      Q("4b", "proportionnalite", 0.5, "Quel pourcentage de baisse faudrait-il pour revenir exactement de 12 € à 10 € ?",
+        "<p>Coefficient : 10 ÷ 12 ≈ 0,833, soit une baisse d’environ 16,7 % (taux d’évolution réciproque).</p><p class='answer'>≈ 16,7 %</p>", "lycee"),
      ]),
   EX(3, 4, "Le mât des fanions",
      "<p>Un mât vertical [MH] de 6 m est tenu par une corde [MS] fixée au sol en S, à 8 m du pied H du mât. Un fanion F est accroché sur la corde à 4 m de S ; K est le point du sol situé à la verticale de F.</p>" + fig_mat(),
@@ -623,7 +627,7 @@ SUJETS.append({
      ]),
   EX(2, 4, "L’enclos des poules",
      "<p>On construit un enclos rectangulaire le long d’un mur avec 20 m de grillage (le mur forme le quatrième côté). On note <em>x</em> la largeur (en m) des deux côtés perpendiculaires au mur.</p>",
-     [Q("1", "fonctions", 0.5, "Calculer l’aire de l’enclos pour <em>x</em> = 3.", "<p>Longueur : 20 − 2 × 3 = 14 m ; aire : 3 × 14.</p><p class='answer'>42 m²</p>", "lycee"),
+     [Q("1", "fonctions", 0.5, "Calculer l’aire de l’enclos pour <em>x</em> = 3.", "<p>Longueur : 20 − 2 × 3 = 14 m ; aire : 3 × 14.</p><p class='answer'>42 m²</p>"),
       Q("2", "fonctions", 1, "Exprimer l’aire <em>A</em>(<em>x</em>) et préciser les valeurs possibles de <em>x</em>.", "<p class='answer'><em>A</em>(<em>x</em>) = <em>x</em>(20 − 2<em>x</em>) = −2<em>x</em>² + 20<em>x</em>, pour 0 &lt; <em>x</em> &lt; 10.</p>", "lycee"),
       Q("3", "fonctions", 1.5, "Vérifier que <em>A</em>(<em>x</em>) = −2(<em>x</em> − 5)² + 50. En déduire l’aire maximale et les dimensions correspondantes.", "<p>−2(<em>x</em>² − 10<em>x</em> + 25) + 50 = −2<em>x</em>² + 20<em>x</em>. Comme −2(<em>x</em> − 5)² ≤ 0, <em>A</em>(<em>x</em>) ≤ 50, avec égalité pour <em>x</em> = 5.</p><p class='answer'>Aire maximale 50 m², pour un enclos de 5 m sur 10 m.</p>", "lycee"),
       Q("4", "litteral", 1, "Pour quelles valeurs de <em>x</em> l’aire vaut-elle 32 m² ?", "<p>−2<em>x</em>² + 20<em>x</em> = 32 ⇔ <em>x</em>² − 10<em>x</em> + 16 = 0 ⇔ (<em>x</em> − 2)(<em>x</em> − 8) = 0. (Discriminant : 100 − 64 = 36.)</p><p class='answer'><em>x</em> = 2 ou <em>x</em> = 8</p>", "lycee"),
@@ -637,8 +641,8 @@ SUJETS.append({
      ]),
   EX(4, 4, "L’évolution des effectifs",
      "<p>Une école comptait 500 élèves en 2020. L’effectif a augmenté de 8 % en 2021, puis baissé de 5 % en 2022.</p>",
-     [Q("1", "proportionnalite", 1, "Calculer l’effectif en 2022.", "<p>500 × 1,08 = 540 ; 540 × 0,95 = 513.</p><p class='answer'>513 élèves</p>", "lycee"),
-      Q("2", "proportionnalite", 1, "Quel est le taux d’évolution global entre 2020 et 2022 ?", "<p>Coefficient global : 1,08 × 0,95 = 1,026.</p><p class='answer'>+2,6 %</p>", "lycee"),
+     [Q("1", "proportionnalite", 1, "Calculer l’effectif en 2022.", "<p>500 × 1,08 = 540 ; 540 × 0,95 = 513.</p><p class='answer'>513 élèves</p>"),
+      Q("2", "proportionnalite", 1, "Quel est le taux d’évolution global entre 2020 et 2022 ?", "<p>Coefficient global : 1,08 × 0,95 = 1,026.</p><p class='answer'>+2,6 %</p>"),
       Q("3", "proportionnalite", 1, "Quel taux d’évolution faudrait-il en 2023 pour revenir à 500 élèves ?", f"<p>Coefficient : 500 ÷ 513 ≈ {n(500/513, 4)}.</p><p class='answer'>≈ −2,5 %</p>", "lycee"),
       Q("4", "proportionnalite", 1, "Quel est le taux d’évolution annuel moyen entre 2020 et 2022 ?", f"<p>On cherche <em>t</em> tel que (1 + <em>t</em>)² = 1,026 : 1 + <em>t</em> = √1,026 ≈ {n(math.sqrt(1.026), 4)}.</p><p class='answer'>≈ +1,3 % par an</p><p>Ce n’est pas la moyenne de +8 % et −5 %.</p>", "lycee"),
      ]),

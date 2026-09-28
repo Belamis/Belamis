@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Belamis — Révision CRPE</title>
+  <meta name="description" content="Plateforme de révision du CRPE : un univers vivant pour apprendre, mémoriser et réussir." />
+  <meta name="theme-color" content="#03040a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Univers animé (polyèdre, cœur lumineux, rayons, fragments, nébuleuse) -->
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Belamis, accueil">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <polygon points="16,2 29,9.5 29,22.5 16,30 3,22.5 3,9.5" />
+        <polyline points="3,9.5 16,16 29,9.5" />
+        <line x1="16" y1="16" x2="16" y2="30" />
+        <polyline points="16,2 10,19 22,19 16,2" />
+        <circle cx="16" cy="16" r="2.4" />
+      </svg>
+      <span>Belamis</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#top" class="active">Accueil</a>
+      <a href="#decouvrir">Matières <small>bientôt</small></a>
+      <a href="#decouvrir">Mon suivi</a>
+    </nav>
+    <a class="btn btn-ghost btn-sm" href="#">Se connecter</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="whisper" aria-live="polite">
+        <span id="typed"></span><span class="caret" aria-hidden="true"></span>
+      </p>
+
+      <div class="hero-bottom">
+        <span class="eyebrow"><i class="pulse-dot"></i>Plateforme de révision · CRPE</span>
+        <h1>Révise dans un <em>univers</em> qui bouge avec toi.</h1>
+        <p class="lead">
+          Fiches, quiz et entraînements pour préparer le concours
+          de professeur des écoles, sans jamais t'ennuyer.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#decouvrir">
+            Commencer la révision
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a class="btn btn-ghost" href="#decouvrir">Découvrir</a>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#decouvrir" aria-label="Défiler vers la suite">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="features" id="decouvrir">
+      <header class="section-head reveal">
+        <span class="eyebrow">Ce qui t'attend</span>
+        <h2>Un seul endroit pour <em>tout</em> réviser.</h2>
+      </header>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10l4 4v12H5z" /><path d="M15 4v4h4M8 12h8M8 16h6" /></svg>
+          </div>
+          <h3>Fiches vivantes</h3>
+          <p>Des synthèses claires pour chaque matière, à lire, surligner et reprendre quand tu veux.</p>
+          <span class="tag">Bientôt</span>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5V14M12 17h.01" /></svg>
+          </div>
+          <h3>Quiz & entraînements</h3>
+          <p>Teste-toi en quelques minutes : questions ciblées, corrections détaillées, zéro pression.</p>
+          <span class="tag">Bientôt</span>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16" /><path d="M8 15l3-4 3 2 5-7" /></svg>
+          </div>
+          <h3>Suivi de progression</h3>
+          <p>Visualise ce que tu maîtrises et ce qu'il reste à consolider avant le jour J.</p>
+          <span class="tag">Bientôt</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Belamis</span>
+    <span>Fait pour réussir le CRPE ✦</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

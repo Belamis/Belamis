@@ -1,13 +1,25 @@
 /*
- * Belamis — espace de travail : sujets de français (CRPE BAC+3, 1re épreuve, partie A).
+ * Belamis — espace de travail de la 1re épreuve (CRPE BAC+3) : français (partie A) et mathématiques (partie B).
  * Liste des sujets, entraînement par type d'exercice, et page sujet :
- * texte à gauche, questions à droite, réponses sauvegardées, corrigés et auto-évaluation.
+ * texte à gauche (français), questions, réponses sauvegardées, corrigés et auto-évaluation.
  */
 (() => {
   "use strict";
 
-  const DATA = window.BELAMIS_FRANCAIS;
-  if (!DATA) return;
+  const MATIERES = {
+    francais: {
+      data: window.BELAMIS_FRANCAIS,
+      eyebrow: "Français · 1re épreuve d'admissibilité",
+      title: "Partie A : un texte, <em>trois phases</em>.",
+      intro: "Chaque sujet suit le modèle du CRPE BAC+3 : un texte de 500 mots au plus, puis l'étude de la langue (6 points), le lexique (4 points) et une réflexion rédigée d'une trentaine de lignes (10 points). Durée conseillée : 2 heures. Au concours, la partie est notée sur 10, et une note de 2,5 ou moins est éliminatoire.",
+    },
+    maths: {
+      data: window.BELAMIS_MATHS,
+      eyebrow: "Mathématiques · 1re épreuve d'admissibilité",
+      title: "Partie B : des exercices, <em>du raisonnement</em>.",
+      intro: "Le programme du concours est celui du cycle 4 (5e, 4e, 3e). Tu trouveras le sujet 0 officiel, les deux sujets de la session 2026, puis des sujets originaux inspirés des annales du CRPE et du brevet. Les questions marquées « Lycée » (programme de 2de et 1re) sont des approfondissements. Durée conseillée : 2 heures, calculatrice autorisée. La rédaction et la justification comptent dans la note.",
+    },
+  };
 
   const $ = (id) => document.getElementById(id);
   const study = $("study");
@@ -16,16 +28,23 @@
   const EVAL = { ok: 1, half: 0.5, ko: 0 };
   const EVAL_LABEL = { ok: "Tout juste", half: "À moitié", ko: "À revoir" };
 
-  let progress = {};        // progression française de l'élève, par sujet
-  let current = null;       // sujet ouvert
+  let matiere = "francais"; // matière ouverte
+  let DATA = null;
+  let progress = {};         // progression de l'élève dans la matière ouverte, par sujet
+  let current = null;        // sujet ouvert
   let saveTimer = 0;
   let chrono = { running: false, start: 0, base: 0, timer: 0 };
 
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const underline = (s) => esc(s).replace(/\[\[(.+?)\]\]/g, "<u>$1</u>");
   const fmtPts = (n) => String(Math.round(n * 100) / 100).replace(".", ",");
+  const pts = (n) => `${fmtPts(n)} pt${n > 1 ? "s" : ""}`;
   const qkey = (p, q) => `${p.id}-${q.id}`;
   const allQuestions = (s) => s.parties.flatMap((p) => p.questions.map((q) => ({ p, q })));
+  const partShort = (p) => p.short || p.id.replace("A", "A.");
+  const partLabel = (p) => p.label || `Partie ${p.id.replace("A", "A.")}`;
+  const sujetTotal = (s) => s.total || 20;
+  const sujetName = (s) => s.titre || (s.officiel ? "Sujet 0 officiel" : "Sujet " + s.num);
 
   // ---------- Progression ----------
   const store = () => window.Belamis && window.Belamis.store;
@@ -33,7 +52,7 @@
   async function loadProgress() {
     try {
       const all = (await store().read()) || {};
-      progress = all.francais || {};
+      progress = all[matiere] || {};
     } catch (_) {
       progress = {};
     }
@@ -58,13 +77,12 @@
   async function saveNow() {
     clearTimeout(saveTimer);
     if (!current) return;
-    const id = current.id;
+    const id = current.id, key = matiere;
     const snapshot = JSON.parse(JSON.stringify(entry(id)));
     snapshot.updatedAt = new Date().toISOString();
     try {
-      await store().update((all) => ({ ...all, francais: { ...(all.francais || {}), [id]: snapshot } }));
-      const u = window.Belamis.user;
-      setSaveState(u ? "Sauvegardé sur ton compte" : "Sauvegardé dans ce navigateur");
+      await store().update((all) => ({ ...all, [key]: { ...(all[key] || {}), [id]: snapshot } }));
+      setSaveState(window.Belamis.user ? "Sauvegardé sur ton compte" : "Sauvegardé dans ce navigateur");
     } catch (_) {
       setSaveState("Échec de la sauvegarde. Vérifie ta connexion internet.");
     }
@@ -82,25 +100,35 @@
   }
 
   // ---------- Vue liste ----------
+  function renderIntro() {
+    const m = MATIERES[matiere];
+    $("study-eyebrow").textContent = m.eyebrow;
+    $("study-heading").innerHTML = m.title;
+    $("study-desc").textContent = m.intro;
+    study.setAttribute("aria-label", matiere === "maths" ? "Sujets de mathématiques" : "Sujets de français");
+  }
+
+  function cardHTML(s) {
+    const sc = score(s);
+    const pct = Math.round((sc.answered / sc.total) * 100);
+    const status = sc.evaluated
+      ? `<span class="chip chip-score">${fmtPts(sc.got)} / ${fmtPts(sc.evaluated)} pts évalués</span>`
+      : sc.answered ? `<span class="chip">${sc.answered} / ${sc.total} réponses</span>` : `<span class="chip chip-new">Nouveau</span>`;
+    const top = s.texte
+      ? `<span class="sujet-num">${sujetName(s)}</span><span class="sujet-genre">${esc(s.genre)}</span>`
+      : `<span class="sujet-num">${s.officiel ? "Annale officielle" : s.lycee ? "Approfondissement" : "Sujet type"}</span><span class="sujet-genre">noté sur ${sujetTotal(s)}</span>`;
+    const body = s.texte
+      ? `<span class="sujet-title">${esc(s.oeuvre)}</span><span class="sujet-author">${esc(s.auteur)}, ${esc(s.date)}</span><span class="sujet-theme">Réflexion : ${esc(s.theme)}</span>`
+      : `<span class="sujet-title">${esc(s.titre)}</span><span class="sujet-theme">${esc(s.theme)}</span>`;
+    return `<button class="sujet-card${s.lycee ? " is-lycee" : ""}" type="button" data-open="${s.id}">
+      <span class="sujet-top">${top}</span>${body}
+      <span class="sujet-foot">${status}<span class="bar" aria-hidden="true"><i style="width:${pct}%"></i></span></span>
+    </button>`;
+  }
+
   function renderList() {
-    const cards = DATA.sujets.map((s) => {
-      const sc = score(s);
-      const pct = Math.round((sc.answered / sc.total) * 100);
-      const status = sc.evaluated
-        ? `<span class="chip chip-score">${fmtPts(sc.got)} / ${fmtPts(sc.evaluated)} pts évalués</span>`
-        : sc.answered ? `<span class="chip">${sc.answered} / ${sc.total} réponses</span>` : `<span class="chip chip-new">Nouveau</span>`;
-      return `<button class="sujet-card" type="button" data-open="${s.id}">
-        <span class="sujet-top">
-          <span class="sujet-num">${s.officiel ? "Sujet 0 officiel" : "Sujet " + s.num}</span>
-          <span class="sujet-genre">${esc(s.genre)}</span>
-        </span>
-        <span class="sujet-title">${esc(s.oeuvre)}</span>
-        <span class="sujet-author">${esc(s.auteur)}, ${esc(s.date)}</span>
-        <span class="sujet-theme">Réflexion : ${esc(s.theme)}</span>
-        <span class="sujet-foot">${status}<span class="bar" aria-hidden="true"><i style="width:${pct}%"></i></span></span>
-      </button>`;
-    }).join("");
-    $("study-sujets").innerHTML = cards;
+    renderIntro();
+    $("study-sujets").innerHTML = DATA.sujets.map(cardHTML).join("");
 
     const counts = {};
     for (const s of DATA.sujets) for (const { q } of allQuestions(s)) counts[q.type] = (counts[q.type] || 0) + 1;
@@ -119,8 +147,9 @@
     const items = [];
     for (const s of DATA.sujets) for (const { p, q } of allQuestions(s)) if (q.type === type) {
       const done = progress[s.id] && progress[s.id].evals[qkey(p, q)];
+      const where = s.texte ? `${esc(s.auteur)} · <em>${esc(s.oeuvre)}</em>` : esc(sujetName(s));
       items.push(`<li><button type="button" class="type-item" data-open="${s.id}" data-q="${qkey(p, q)}">
-        <span class="type-item-head">${esc(s.auteur)} · <em>${esc(s.oeuvre)}</em> · ${p.id} question ${esc(q.id)} (${fmtPts(q.points)} pt${q.points > 1 ? "s" : ""})</span>
+        <span class="type-item-head">${where} · ${partShort(p)} question ${esc(q.id)} (${pts(q.points)})${q.niveau === "lycee" ? ` <span class="badge-lycee">Lycée</span>` : ""}</span>
         <span class="type-item-q">${q.enonce}</span>
         ${done ? `<span class="chip chip-${done}">${EVAL_LABEL[done]}</span>` : ""}
       </button></li>`);
@@ -131,25 +160,33 @@
   // ---------- Vue sujet ----------
   function renderSujet(s) {
     const e = entry(s.id);
-    $("study-sujet-title").textContent = `${s.officiel ? "Sujet 0 officiel" : "Sujet " + s.num} · ${s.auteur}`;
+    const hasText = Boolean(s.texte);
+    sujetView.classList.toggle("no-text", !hasText);
+    $("study-sujet-title").textContent = hasText ? `${sujetName(s)} · ${s.auteur}` : sujetName(s);
 
-    const texte = s.texte.map((p, i) => `<p><span class="par-num" aria-hidden="true">§${i + 1}</span>${underline(p)}</p>`).join("");
-    $("study-text").innerHTML = `
+    $("study-text").innerHTML = hasText ? `
       <header class="text-head">
         <span class="eyebrow-sm">${esc(s.genre)} · ${s.mots} mots</span>
         <h3><em>${esc(s.oeuvre)}</em></h3>
         <p class="text-author">${esc(s.auteur)} (${esc(s.date)})</p>
         <p class="text-context">${esc(s.contexte)}</p>
       </header>
-      <div class="text-body">${texte}</div>
-      ${s.notes.map((n) => `<p class="text-note">${n}</p>`).join("")}`;
+      <div class="text-body">${s.texte.map((p, i) => `<p><span class="par-num" aria-hidden="true">§${i + 1}</span>${underline(p)}</p>`).join("")}</div>
+      ${s.notes.map((n) => `<p class="text-note">${n}</p>`).join("")}` : "";
 
-    $("study-questions").innerHTML = s.parties.map((p) => `
+    const head = hasText ? "" : `<header class="sujet-head">
+        ${s.source ? `<p class="sujet-source">${esc(s.source)}</p>` : ""}
+        <p class="sujet-meta">Calculatrice autorisée · noté sur ${sujetTotal(s)} · justifie tes réponses, sauf mention contraire.</p>
+        ${s.remarque ? `<p class="sujet-remarque">${esc(s.remarque)}</p>` : ""}
+      </header>`;
+
+    $("study-questions").innerHTML = head + s.parties.map((p) => `
       <section class="partie" aria-labelledby="partie-${p.id}">
         <header class="partie-head">
-          <h3 id="partie-${p.id}"><span>Partie ${p.id.replace("A", "A.")}</span> ${esc(p.titre)}</h3>
-          <span class="partie-pts" data-partie="${p.id}">${fmtPts(p.points)} points</span>
+          <h3 id="partie-${p.id}"><span>${esc(partLabel(p))}</span> ${esc(p.titre)}</h3>
+          <span class="partie-pts" data-partie="${p.id}">${pts(p.points)}</span>
         </header>
+        ${p.intro ? `<div class="partie-intro math">${p.intro}</div>` : ""}
         ${p.questions.map((q) => questionHTML(p, q, e)).join("")}
       </section>`).join("");
 
@@ -162,22 +199,23 @@
     const big = q.type === "expression";
     return `<article class="question" id="q-${k}" data-key="${k}">
       <header class="question-head">
-        <span class="question-num">${p.id.replace("A", "A.")} · ${esc(q.id)}</span>
+        <span class="question-num">${partShort(p)} · ${esc(q.id)}</span>
         <span class="question-type">${esc(DATA.types[q.type])}</span>
-        <span class="question-pts">${fmtPts(q.points)} pt${q.points > 1 ? "s" : ""}</span>
+        ${q.niveau === "lycee" ? `<span class="badge-lycee" title="Hors programme du concours : niveau 2de ou 1re">Lycée</span>` : ""}
+        <span class="question-pts">${pts(q.points)}</span>
       </header>
-      <p class="question-enonce">${q.enonce}</p>
+      <div class="question-enonce math">${q.enonce}</div>
       ${q.passage ? `<blockquote class="question-passage">${underline(q.passage)}</blockquote>` : ""}
       <label class="sr-only" for="a-${k}">Ta réponse</label>
       <textarea id="a-${k}" class="answer-input${big ? " big" : ""}" data-key="${k}" rows="${big ? 16 : 4}"
-        placeholder="${big ? "Rédige ton développement : introduction, deux ou trois parties, conclusion…" : "Écris ta réponse ici…"}">${esc(e.answers[k] || "")}</textarea>
+        placeholder="${big ? "Rédige ton développement : introduction, deux ou trois parties, conclusion…" : matiere === "maths" ? "Écris ta démarche et ton résultat…" : "Écris ta réponse ici…"}">${esc(e.answers[k] || "")}</textarea>
       <div class="question-actions">
         <button type="button" class="btn btn-ghost btn-sm reveal-btn" data-key="${k}" aria-expanded="${ev ? "true" : "false"}" aria-controls="c-${k}">
           ${ev ? "Masquer le corrigé" : "Voir le corrigé"}
         </button>
         ${big ? `<span class="word-count" data-count="${k}">${words(e.answers[k])} mots</span>` : ""}
       </div>
-      <div class="corrige" id="c-${k}" ${ev ? "" : "hidden"}>
+      <div class="corrige math" id="c-${k}" ${ev ? "" : "hidden"}>
         <p class="corrige-title">Corrigé</p>
         ${q.corrige}
         <div class="self-eval" role="group" aria-label="Évalue ta réponse">
@@ -194,6 +232,7 @@
     if (!current) return;
     const sc = score(current);
     const e = entry(current.id);
+    const total = sujetTotal(current);
     for (const p of current.parties) {
       let got = 0, ev = 0;
       for (const q of p.questions) {
@@ -201,12 +240,13 @@
         if (v) { ev += q.points; got += q.points * EVAL[v]; }
       }
       const el = document.querySelector(`[data-partie="${p.id}"]`);
-      if (el) el.textContent = ev ? `${fmtPts(got)} / ${fmtPts(p.points)} points` : `${fmtPts(p.points)} points`;
+      if (el) el.textContent = ev ? `${fmtPts(got)} / ${pts(p.points)}` : pts(p.points);
     }
+    const sur10 = (sc.got / total) * 10;
     $("study-score").innerHTML = sc.evaluated
-      ? `<strong>${fmtPts(sc.got)}</strong> / 20 <small>soit ${fmtPts(sc.got / 2)} / 10 au concours</small>`
+      ? `<strong>${fmtPts(sc.got)}</strong> / ${total}${total !== 10 ? ` <small>soit ${fmtPts(sur10)} / 10 au concours</small>` : ""}`
       : `<small>${sc.answered} / ${sc.total} réponses</small>`;
-    const warn = sc.evaluated === 20 && sc.got / 2 <= 2.5;
+    const warn = Math.abs(sc.evaluated - total) < 1e-9 && sur10 <= 2.5;
     $("study-score").classList.toggle("danger", warn);
     $("study-score").title = warn ? "Une note égale ou inférieure à 2,5 / 10 est éliminatoire." : "";
   }
@@ -254,11 +294,12 @@
     listView.hidden = view !== "list";
     sujetView.hidden = view !== "sujet";
     study.scrollTop = 0;
-    const scroller = view === "sujet" ? $("study-questions-wrap") : null;
-    if (scroller) scroller.scrollTop = 0;
   }
 
-  async function openStudy() {
+  async function openStudy(which) {
+    matiere = which;
+    DATA = MATIERES[which].data;
+    if (!DATA) return;
     document.body.classList.add("studying");
     study.hidden = false;
     requestAnimationFrame(() => study.classList.add("open"));
@@ -306,7 +347,7 @@
   }
 
   // ---------- Événements ----------
-  $("open-francais").addEventListener("click", openStudy);
+  document.querySelectorAll("[data-matiere]").forEach((b) => b.addEventListener("click", () => openStudy(b.dataset.matiere)));
   $("study-close").addEventListener("click", closeStudy);
   $("study-back").addEventListener("click", backToList);
   $("chrono-btn").addEventListener("click", toggleChrono);

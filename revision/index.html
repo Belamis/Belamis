@@ -130,13 +130,13 @@
         <p>Ton guide de révision est prêt. Choisis une matière pour commencer.</p>
         <p id="space-note" class="space-note"></p>
         <div class="matieres" role="group" aria-label="Matières">
-          <button id="open-francais" class="matiere" type="button">
+          <button id="open-francais" class="matiere" type="button" data-matiere="francais">
             <span class="matiere-name">Français</span>
             <span class="matiere-sub">Épreuve 1 · partie A · 6 sujets</span>
           </button>
-          <button class="matiere" type="button" disabled>
+          <button id="open-maths" class="matiere" type="button" data-matiere="maths">
             <span class="matiere-name">Mathématiques</span>
-            <span class="matiere-sub">Bientôt</span>
+            <span class="matiere-sub">Épreuve 1 · partie B · 7 sujets</span>
           </button>
           <button class="matiere" type="button" disabled>
             <span class="matiere-name">Épreuve 2</span>
@@ -158,9 +158,9 @@
         </button>
       </header>
       <div class="study-intro">
-        <span class="eyebrow gold"><i class="pulse-dot"></i>Français · 1re épreuve d'admissibilité</span>
-        <h2>Partie A : un texte, <em>trois phases</em>.</h2>
-        <p>Chaque sujet suit le modèle du CRPE BAC+3 : un texte de 500 mots au plus, puis l'étude de la langue (6 points), le lexique (4 points) et une réflexion rédigée d'une trentaine de lignes (10 points). Durée conseillée : 2 heures. Au concours, la partie est notée sur 10, et une note de 2,5 ou moins est éliminatoire.</p>
+        <span class="eyebrow gold"><i class="pulse-dot"></i><span id="study-eyebrow">Français · 1re épreuve d'admissibilité</span></span>
+        <h2 id="study-heading">Partie A : un texte, <em>trois phases</em>.</h2>
+        <p id="study-desc"></p>
       </div>
       <div class="list-tabs" role="tablist">
         <button class="list-tab" type="button" role="tab" data-panel="sujets" aria-selected="true">Sujets complets</button>
@@ -249,6 +249,7 @@
   <script src="raphael.js"></script>
   <script src="auth.js"></script>
   <script src="data/francais.js"></script>
+  <script src="data/maths.js"></script>
   <script src="revise.js"></script>
 </body>
 </html>

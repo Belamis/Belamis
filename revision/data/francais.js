@@ -25,11 +25,12 @@ window.BELAMIS_FRANCAIS = {
    "theme": "L’égalité entre les femmes et les hommes",
    "contexte": "Sujet 0 officiel du CRPE BAC+3 (juin 2025). La Barbe bleue a interdit à sa femme d’ouvrir un cabinet ; elle a désobéi et y a découvert les corps de ses précédentes épouses.",
    "texte": [
-    "Il revint de son voyage dès le soir même, et dit qu’il avait reçu des lettres dans le chemin, qui lui avaient appris que l’affaire pour laquelle il était parti venait d’être terminée à son avantage. Sa femme fit tout ce qu’elle put pour lui témoigner qu’elle était ravie de son prompt retour. Le lendemain, il lui redemanda les clefs, et elle les lui donna, mais d’une main si tremblante qu’il devina sans peine tout ce qui s’était passé. « D’où vient, lui dit-il, que la clef du cabinet n’est point avec les autres ? » – Il faut, dit-elle, que je l’ai laissée là-haut sur ma table. Ne manquez pas, dit-il, de me la donner tantôt. » Après plusieurs remises, il fallut apporter la clef. La Barbe bleue, l’ayant considérée, dit à sa femme : « Pourquoi y a-t-il du sang sur cette clef ? – Je n’en sais rien, répondit la pauvre femme, plus pâle que la mort. – Vous n’en savez rien ? reprit la Barbe bleue ; je le sais bien, moi ! Vous avez voulu entrer dans le cabinet ? Hé bien, Madame, vous y entrerez, et irez prendre votre place auprès des dames que vous y avez vues. » Elle se jeta aux pieds de son mari, en pleurant et en lui demandant pardon, avec toutes les marques d’un vrai repentir de n’avoir pas été obéissante.",
+    "Il revint de son voyage dès le soir même, et dit qu’il avait reçu des lettres dans le chemin, qui lui avaient appris que l’affaire pour laquelle il était parti venait d’être terminée à son avantage. Sa femme fit tout ce qu’elle put pour lui témoigner qu’elle était ravie de son prompt retour. Le lendemain, il lui redemanda les clefs, et elle les lui donna, mais d’une main si tremblante qu’il devina sans peine tout ce qui s’était passé. « D’où vient, lui dit-il, que la clef du cabinet n’est point avec les autres ? – Il faut, dit-elle, que je l’aie laissée là-haut sur ma table. – Ne manquez pas, dit-il, de me la donner tantôt. » Après plusieurs remises, il fallut apporter la clef. La Barbe bleue, l’ayant considérée, dit à sa femme : « Pourquoi y a-t-il du sang sur cette clef ? – Je n’en sais rien, répondit la pauvre femme, plus pâle que la mort. – Vous n’en savez rien ? reprit la Barbe bleue ; je le sais bien, moi ! Vous avez voulu entrer dans le cabinet ? Hé bien, Madame, vous y entrerez, et irez prendre votre place auprès des dames que vous y avez vues. » Elle se jeta aux pieds de son mari, en pleurant et en lui demandant pardon, avec toutes les marques d’un vrai repentir de n’avoir pas été obéissante.",
     "Elle aurait attendri un rocher, belle et affligée comme elle était ; mais la Barbe bleue avait le cœur plus dur qu’un rocher. « Il faut mourir, Madame, et tout à l’heure*. – Puisqu’il faut mourir, répondit-elle en le regardant les yeux baignés de larmes, donnez-moi un peu de temps pour prier Dieu. – Je vous donne un demi-quart d’heure, mais pas un instant davantage. » Lorsqu’elle fut seule, elle appela sa sœur et lui dit : « Ma sœur Anne (car elle s’appelait ainsi), monte, je te prie, sur le haut de la tour, pour voir si mes frères ne viennent point ; ils m’ont promis qu’ils me viendraient voir aujourd’hui, et si tu les vois, fais-leur signe de se hâter. » La sœur Anne monta sur le haut de la tour, et la pauvre affligée lui criait de temps en temps : « Anne, ma sœur Anne, ne vois-tu rien venir ? »"
    ],
    "notes": [
-    "* <em>Tout à l’heure</em> signifie <em>sur-le-champ</em> en français du XVIIe siècle."
+    "* <em>Tout à l’heure</em> signifie <em>sur-le-champ</em> en français du XVIIe siècle.",
+    "Par rapport au sujet officiel, la ponctuation du dialogue est rétablie et « que je l’ai laissée » est corrigé en « que je l’aie laissée » (subjonctif après <em>il faut que</em>)."
    ],
    "parties": [
     {
@@ -50,8 +51,8 @@ window.BELAMIS_FRANCAIS = {
        "type": "nature",
        "points": 1.5,
        "enonce": "Donner la nature des six mots soulignés. Justifier les réponses.",
-       "passage": "« Le lendemain, il [[lui]] redemanda les clefs, et elle [[les]] lui donna, mais d’une main si tremblante qu’il devina sans peine tout ce qui s’était passé. « D’où vient, lui dit-il, que [[la]] clef du cabinet n’est point avec les autres ? » – Il faut, dit-elle, que je l’ai laissée là-haut sur [[ma]] table. Ne manquez pas, dit-il, de me [[la]] donner tantôt. » […] « Pourquoi y a-t-il [[du]] sang sur cette clef ? »",
-       "corrige": "<ul>\n<li><strong>lui</strong> (il lui redemanda) : <strong>pronom personnel</strong> de 3e personne du singulier ; il remplace « à sa femme » et est complément d’objet second (COS) de <em>redemanda</em>.</li>\n<li><strong>les</strong> (elle les lui donna) : <strong>pronom personnel</strong> ; placé devant le verbe, il remplace « les clefs » (COD de <em>donna</em>).</li>\n<li><strong>la</strong> (la clef du cabinet) : <strong>déterminant</strong> (article défini) ; il introduit le nom <em>clef</em>.</li>\n<li><strong>la</strong> (me la donner) : <strong>pronom personnel</strong> ; placé devant le verbe, il remplace « la clef » (COD de <em>donner</em>).</li>\n<li><strong>ma</strong> (ma table) : <strong>déterminant possessif</strong> (1re personne du singulier) ; il introduit le nom <em>table</em>.</li>\n<li><strong>du</strong> (du sang) : <strong>déterminant (article partitif)</strong> ; il désigne une quantité indéterminée d’une réalité non comptable (<em>du sang</em> ≠ <em>le sang</em>). Ce n’est pas ici la contraction de « de + le ».</li>\n</ul>\n<p><strong>Méthode :</strong> un déterminant est toujours suivi d’un nom ; un pronom se place devant un verbe et remplace un groupe nominal.</p>"
+       "passage": "« Le lendemain, il [[lui]] redemanda les clefs, et elle [[les]] lui donna, mais d’une main si tremblante qu’il devina sans peine tout ce qui s’était passé. « D’où vient, lui dit-il, que [[la]] clef du cabinet n’est point avec les autres ? – Il faut, dit-elle, que je l’aie laissée là-haut sur [[ma]] table. – Ne manquez pas, dit-il, de me [[la]] donner tantôt. » […] « Pourquoi y a-t-il [[du]] sang sur cette clef ? »",
+       "corrige": "<ul>\n<li><strong>lui</strong> (il lui redemanda) : <strong>pronom personnel</strong> de 3e personne du singulier ; il remplace « à sa femme » et est complément d’objet second (COS) de <em>redemanda</em>.</li>\n<li><strong>les</strong> (elle les lui donna) : <strong>pronom personnel</strong> ; placé devant le verbe, il remplace « les clefs » (COD de <em>donna</em>).</li>\n<li><strong>la</strong> (la clef du cabinet) : <strong>déterminant</strong> (article défini) ; il introduit le nom <em>clef</em>.</li>\n<li><strong>la</strong> (me la donner) : <strong>pronom personnel</strong> ; placé devant le verbe, il remplace « la clef » (COD de <em>donner</em>).</li>\n<li><strong>ma</strong> (ma table) : <strong>déterminant possessif</strong> (1re personne du singulier) ; il introduit le nom <em>table</em>.</li>\n<li><strong>du</strong> (du sang) : <strong>déterminant (article partitif)</strong> ; il désigne une quantité indéterminée d’une réalité non comptable (<em>du sang</em> ≠ <em>le sang</em>). Ce n’est pas ici la contraction de « de + le ».</li>\n</ul>\n<p><strong>Méthode :</strong> un déterminant introduit un nom, avec lequel il forme un groupe nominal (un adjectif peut s’intercaler : <em>la belle clef</em>). Un pronom se substitue à un groupe nominal et en prend la fonction. Les pronoms personnels compléments se placent devant le verbe, sauf à l’impératif affirmatif (<em>donnez-la</em>).</p>"
       },
       {
        "id": "3a",
@@ -88,7 +89,7 @@ window.BELAMIS_FRANCAIS = {
        "type": "formation",
        "points": 1,
        "enonce": "Analyser la formation du verbe <em>redemander</em> et préciser, dans cet emploi, le sens du préfixe <em>re-</em>.",
-       "corrige": "<p><em>Redemander</em> est formé par <strong>dérivation préfixale</strong> : préfixe <strong>re-</strong> + base verbale <strong>demander</strong>.</p>\n<p>Dans ce contexte, le préfixe exprime le <strong>retour</strong> à une situation antérieure : la Barbe bleue avait confié les clefs à sa femme avant de partir, il les réclame à son retour (demander <em>en retour</em>). On peut y voir aussi l’idée de <strong>répétition</strong> (demander de nouveau, puisqu’elle tarde à rendre la clef du cabinet).</p>"
+       "corrige": "<p><em>Redemander</em> est formé par <strong>dérivation préfixale</strong> : préfixe <strong>re-</strong> + base verbale <strong>demander</strong>.</p>\n<p>Dans ce contexte, le préfixe exprime le <strong>retour</strong> à une situation antérieure : la Barbe bleue avait confié les clefs à sa femme avant de partir, il les réclame à son retour (demander <em>en retour</em>). <em>Redemander</em> signifie ici « demander que l’on rende ce que l’on a confié ». L’idée de simple répétition (demander une seconde fois) est moins pertinente : c’est la première fois qu’il réclame les clefs.</p>"
       },
       {
        "id": "1b",
@@ -128,7 +129,7 @@ window.BELAMIS_FRANCAIS = {
    "num": 1,
    "auteur": "Alphonse Daudet",
    "oeuvre": "La Dernière Classe (Contes du lundi)",
-   "date": "1873",
+   "date": "1872 (recueil 1873)",
    "genre": "Nouvelle",
    "theme": "L’école, la langue et l’identité",
    "contexte": "Après la défaite de 1870, l’Alsace est annexée par l’Allemagne. Le jeune Franz arrive en retard à l’école le jour où M. Hamel, son maître, donne sa dernière leçon de français.",
@@ -159,7 +160,7 @@ window.BELAMIS_FRANCAIS = {
        "points": 2,
        "enonce": "Donner la nature et la fonction des mots et groupes de mots soulignés, puis celles de l’adjectif <em>instruits</em>.",
        "passage": "« Je ne [[te]] gronderai pas, [[mon petit Franz]], tu dois être assez puni… » ; « Vos parents n’ont pas assez tenu [[à vous voir instruits]]. »",
-       "corrige": "<ul>\n<li><strong>te</strong> : pronom personnel (2e personne du singulier), <strong>COD</strong> du verbe <em>gronderai</em>.</li>\n<li><strong>mon petit Franz</strong> : groupe nominal (déterminant + adjectif + nom propre), mis en <strong>apostrophe</strong> : il désigne la personne à qui l’on parle et n’a pas de fonction dans la phrase.</li>\n<li><strong>à vous voir instruits</strong> : groupe infinitif introduit par la préposition <em>à</em>, <strong>COI</strong> du verbe <em>tenir</em> (tenir <em>à</em> quelque chose).</li>\n<li><strong>instruits</strong> : participe passé employé comme adjectif, <strong>attribut du COD</strong> <em>vous</em> (vous voir instruits → vous êtes instruits). Il s’accorde avec <em>vous</em>, masculin pluriel.</li>\n</ul>"
+       "corrige": "<ul>\n<li><strong>te</strong> : pronom personnel (2e personne du singulier), <strong>COD</strong> du verbe <em>gronderai</em>.</li>\n<li><strong>mon petit Franz</strong> : groupe nominal (déterminant + adjectif + nom propre), sa fonction est l’<strong>apostrophe</strong> : il désigne l’interlocuteur et ne dépend syntaxiquement d’aucun autre constituant de la phrase.</li>\n<li><strong>à vous voir instruits</strong> : groupe infinitif introduit par la préposition <em>à</em>, <strong>COI</strong> du verbe <em>tenir</em> (tenir <em>à</em> quelque chose).</li>\n<li><strong>instruits</strong> : participe passé employé comme adjectif, <strong>attribut du COD</strong> <em>vous</em> (vous voir instruits → vous êtes instruits). Il s’accorde avec <em>vous</em>, masculin pluriel.</li>\n</ul>"
       },
       {
        "id": "3",
@@ -217,7 +218,7 @@ window.BELAMIS_FRANCAIS = {
        "type": "expression",
        "points": 10,
        "enonce": "Écrite au lendemain de la guerre de 1870, cette page invite-t-elle encore aujourd’hui à réfléchir au rôle de l’école et de la langue dans la construction d’une identité ? Votre réponse prendra la forme d’un développement structuré et argumenté d’une trentaine de lignes.",
-       "corrige": "<p><strong>Problématique possible :</strong> au-delà du contexte patriotique de 1870, que nous dit ce texte du lien entre l’école, la maîtrise de la langue et le sentiment d’appartenance ?</p>\n<p><strong>Plan possible</strong></p>\n<ol>\n<li><strong>Un texte de circonstance, patriotique.</strong> Daudet écrit après l’annexion de l’Alsace-Moselle : la langue française devient un symbole national (« France, Alsace »). Le maître incarne la patrie qui s’en va.</li>\n<li><strong>Une réflexion toujours actuelle sur la langue et l’école.</strong> Maîtriser la langue, c’est pouvoir comprendre, s’exprimer, se défendre : c’est une condition de la liberté (« la clef de sa prison »). Le texte rappelle aussi la responsabilité partagée de l’éducation : parents, élèves et maître (« Nous avons tous notre bonne part de reproches à nous faire »).</li>\n<li><strong>Des nuances nécessaires.</strong> L’Alsace avait aussi sa langue régionale, que l’école française a longtemps combattue. Aujourd’hui, l’école valorise le plurilinguisme (langues vivantes, langues régionales, langues des familles) : une identité peut être plurielle. Le texte peut être étudié en classe pour parler d’histoire, de langue et de citoyenneté.</li>\n</ol>\n<p><strong>Ce que le jury attend (critères de réussite)</strong></p>\n<ul>\n<li>Une <strong>introduction</strong> qui présente le texte (auteur, œuvre, date, situation de l’extrait), pose la problématique et annonce le plan.</li>\n<li>Un <strong>développement structuré</strong> en deux ou trois parties, chacune avec une idée directrice, des arguments et des <strong>exemples précis tirés du texte</strong> (citations courtes) et de la culture personnelle.</li>\n<li>Une <strong>conclusion</strong> qui répond clairement à la question et peut ouvrir la réflexion (par exemple vers l’école).</li>\n<li>Une langue <strong>correcte et soignée</strong> : orthographe, syntaxe, connecteurs logiques, vocabulaire précis. Environ une trentaine de lignes.</li>\n</ul>"
+       "corrige": "<p><strong>Problématique possible :</strong> au-delà du contexte patriotique de 1870, que nous dit ce texte du lien entre l’école, la maîtrise de la langue et le sentiment d’appartenance ?</p>\n<p><strong>Plan possible</strong></p>\n<ol>\n<li><strong>Un texte de circonstance, patriotique.</strong> Daudet écrit après l’annexion de l’Alsace-Moselle : la langue française devient un symbole national (« la plus belle langue du monde » ; dans la suite de la nouvelle, les modèles d’écriture portent « France, Alsace »). Le maître incarne la patrie qui s’en va.</li>\n<li><strong>Une réflexion toujours actuelle sur la langue et l’école.</strong> Maîtriser la langue, c’est pouvoir comprendre, s’exprimer, se défendre : c’est une condition de la liberté (« la clef de sa prison »). Le texte rappelle aussi la responsabilité partagée de l’éducation : parents, élèves et maître (« Nous avons tous notre bonne part de reproches à nous faire »).</li>\n<li><strong>Des nuances nécessaires.</strong> L’Alsace avait aussi sa langue régionale, que l’école française a longtemps combattue. Aujourd’hui, l’école valorise le plurilinguisme (langues vivantes, langues régionales, langues des familles) : une identité peut être plurielle. Le texte peut être étudié en classe pour parler d’histoire, de langue et de citoyenneté.</li>\n</ol>\n<p><strong>Ce que le jury attend (critères de réussite)</strong></p>\n<ul>\n<li>Une <strong>introduction</strong> qui présente le texte (auteur, œuvre, date, situation de l’extrait), pose la problématique et annonce le plan.</li>\n<li>Un <strong>développement structuré</strong> en deux ou trois parties, chacune avec une idée directrice, des arguments et des <strong>exemples précis tirés du texte</strong> (citations courtes) et de la culture personnelle.</li>\n<li>Une <strong>conclusion</strong> qui répond clairement à la question et peut ouvrir la réflexion (par exemple vers l’école).</li>\n<li>Une langue <strong>correcte et soignée</strong> : orthographe, syntaxe, connecteurs logiques, vocabulaire précis. Environ une trentaine de lignes.</li>\n</ul>"
       }
      ]
     }
@@ -267,7 +268,7 @@ window.BELAMIS_FRANCAIS = {
        "type": "fonction",
        "points": 1.5,
        "enonce": "Donner la nature et la fonction des groupes soulignés.",
-       "passage": "« Elle regarda [[avec désespoir]] [[cette obscurité]] [[où il n’y avait plus personne]]. »",
+       "passage": "« Elle regarda [[avec désespoir]] [[cette obscurité]] [[où il n’y avait plus personne]], […] »",
        "corrige": "<ul>\n<li><strong>avec désespoir</strong> : groupe prépositionnel (préposition + nom), <strong>complément circonstanciel de manière</strong> du verbe <em>regarda</em>.</li>\n<li><strong>cette obscurité</strong> : groupe nominal, <strong>COD</strong> du verbe <em>regarda</em>.</li>\n<li><strong>où il n’y avait plus personne</strong> : proposition subordonnée <strong>relative</strong>, introduite par le pronom relatif <em>où</em> ; elle est <strong>complément de l’antécédent</strong> <em>obscurité</em> (expansion du nom). Dans la relative, <em>où</em> est complément de lieu.</li>\n</ul>"
       },
       {
@@ -276,7 +277,7 @@ window.BELAMIS_FRANCAIS = {
        "points": 1,
        "enonce": "Identifier le type des phrases suivantes et le mode des verbes. Quel est l’effet produit ?",
        "passage": "« Que faire ? que devenir ? où aller ? »",
-       "corrige": "<p>Ce sont trois <strong>phrases interrogatives partielles</strong> (introduites par <em>que</em>, <em>où</em>), construites avec des verbes à l’<strong>infinitif</strong> (infinitif délibératif).</p>\n<p><strong>Effet :</strong> le narrateur fait entendre les pensées de Cosette sans les annoncer (discours indirect libre). Le rythme ternaire, bref et haché, traduit le <strong>désarroi</strong> et l’impossibilité de choisir : l’enfant est prise entre deux peurs.</p>"
+       "corrige": "<p>Ce sont trois <strong>phrases interrogatives partielles</strong> (introduites par <em>que</em>, <em>où</em>), construites avec des verbes à l’<strong>infinitif</strong> (infinitif délibératif).</p>\n<p><strong>Effet :</strong> les pensées de Cosette sont rapportées sans verbe introducteur ni guillemets (discours indirect libre ou discours direct libre : l’infinitif, sans marque de personne ni de temps, ne permet pas de trancher). Le rythme ternaire, bref et haché, traduit le <strong>désarroi</strong> et l’impossibilité de choisir : l’enfant est prise entre deux peurs.</p>"
       }
      ]
     },
@@ -330,7 +331,7 @@ window.BELAMIS_FRANCAIS = {
    "num": 3,
    "auteur": "Guy de Maupassant",
    "oeuvre": "La Parure (Contes du jour et de la nuit)",
-   "date": "1884",
+   "date": "1884 (recueil 1885)",
    "genre": "Nouvelle",
    "theme": "Le désir, les apparences et la comparaison sociale",
    "contexte": "Début de la nouvelle : portrait de Mathilde Loisel, épouse d’un petit employé du ministère, qui rêve d’une vie de luxe.",
@@ -393,7 +394,7 @@ window.BELAMIS_FRANCAIS = {
        "type": "formation",
        "points": 1.5,
        "enonce": "Analyser la formation du mot <em>déclassée</em> et expliquer son sens dans « malheureuse comme une déclassée ».",
-       "corrige": "<p><em>déclassée</em> : préfixe <strong>dé-</strong> (qui marque la privation ou l’inversion) + base <em>classe</em> (au sens de classe sociale) + terminaison de participe passé <em>-ée</em>, employé ici comme nom.</p>\n<p><strong>Sens :</strong> une personne qui a perdu son rang social, ou qui vit dans une condition inférieure à celle à laquelle elle se croit destinée. Mathilde se vit comme « tombée » d’un monde auquel elle pense appartenir.</p>"
+       "corrige": "<p><em>déclassée</em> : participe passé du verbe <em>déclasser</em>, employé ici comme nom. <em>Déclasser</em> est formé par <strong>dérivation préfixale</strong> : préfixe <strong>dé-</strong> (privation, inversion) + verbe <em>classer</em>, lui-même dérivé du nom <em>classe</em> (au sens de classe sociale).</p>\n<p><strong>Sens :</strong> une personne qui a perdu son rang social, ou qui vit dans une condition inférieure à celle à laquelle elle se croit destinée. Mathilde se vit comme « tombée » d’un monde auquel elle pense appartenir.</p>"
       },
       {
        "id": "2",
@@ -461,7 +462,7 @@ window.BELAMIS_FRANCAIS = {
        "type": "phrase",
        "points": 1.5,
        "enonce": "a) Identifier la voix du verbe souligné. b) Récrire la phrase à l’autre voix. c) Donner la nature et la fonction de la proposition introduite par <em>comme si</em>.",
-       "passage": "« Lorsque j’arrivai, je [[fus regardé]] comme si j’avais été envoyé du ciel. »",
+       "passage": "« Lorsque j’arrivai, je [[fus regardé]] comme si j’avais été envoyé du ciel […] »",
        "corrige": "<ul>\n<li>a) <strong>Voix passive</strong> (auxiliaire <em>être</em> au passé simple + participe passé <em>regardé</em>). Le complément d’agent n’est pas exprimé.</li>\n<li>b) Voix active : « Lorsque j’arrivai, <strong>on me regarda</strong> comme si j’avais été envoyé du ciel. » Faute de complément d’agent, on utilise le pronom <em>on</em> comme sujet.</li>\n<li>c) <strong>comme si j’avais été envoyé du ciel</strong> : proposition subordonnée conjonctive <strong>circonstancielle de comparaison</strong>, avec une valeur <strong>hypothétique</strong> (une comparaison imaginaire, d’où le plus-que-parfait). Elle est complément circonstanciel de manière de <em>fus regardé</em>.</li>\n</ul>"
       },
       {
@@ -499,7 +500,7 @@ window.BELAMIS_FRANCAIS = {
        "type": "formation",
        "points": 1,
        "enonce": "Analyser la formation du mot <em>extravagance</em> et en déduire son sens.",
-       "corrige": "<p><em>extravagance</em> : préfixe <strong>extra-</strong> (« hors de ») + base <strong>vag-</strong> (du latin <em>vagari</em>, « errer », que l’on retrouve dans <em>vagabond</em> ou <em>divaguer</em>) + suffixe <strong>-ance</strong> (qui forme des noms de qualité ou d’état).</p>\n<p><strong>Sens :</strong> ce qui « erre hors » des limites de la raison, un comportement déraisonnable, excessif. Ici : une curiosité démesurée, presque folle.</p>"
+       "corrige": "<p><em>extravagance</em> : nom dérivé de l’adjectif <em>extravagant</em> par <strong>suffixation</strong> (suffixe <strong>-ance</strong>, qui forme des noms de qualité ou d’état). <em>Extravagant</em> est emprunté au latin médiéval <em>extravagans</em>, formé de <em>extra</em> (« hors de ») et <em>vagari</em> (« errer », que l’on retrouve dans <em>vagabond</em> ou <em>divaguer</em>).</p>\n<p><strong>Sens :</strong> ce qui « erre hors » des limites de la raison, un comportement déraisonnable, excessif. Ici : une curiosité démesurée, presque folle.</p>"
       },
       {
        "id": "3",
@@ -553,7 +554,7 @@ window.BELAMIS_FRANCAIS = {
        "type": "reecriture",
        "points": 2,
        "enonce": "Récrire le passage suivant en vous adressant à une seule personne que vous tutoyez (« Homme… », « Père… »). Faire toutes les modifications nécessaires.",
-       "passage": "« Hommes, soyez humains, c’est votre premier devoir ; soyez-le pour tous les états, pour tous les âges […]. Aimez l’enfance ; favorisez ses jeux, ses plaisirs, son aimable instinct. […] Pères, savez-vous le moment où la mort attend vos enfants ? Ne vous préparez pas des regrets en leur ôtant le peu d’instants que la nature leur donne. »",
+       "passage": "« Hommes, soyez humains, c’est votre premier devoir ; soyez-le pour tous les états, pour tous les âges […]. Aimez l’enfance ; favorisez ses jeux, ses plaisirs, son aimable instinct. […] Pères, savez-vous le moment où la mort attend vos enfants ? Ne vous préparez pas des regrets en leur ôtant le peu d’instants que la nature leur donne […] »",
        "corrige": "<p class=\"answer\">« <strong>Homme, sois humain</strong>, c’est <strong>ton</strong> premier devoir ; <strong>sois-le</strong> pour tous les états, pour tous les âges […]. <strong>Aime</strong> l’enfance ; <strong>favorise</strong> ses jeux, ses plaisirs, son aimable instinct. […] <strong>Père, sais-tu</strong> le moment où la mort attend <strong>tes</strong> enfants ? <strong>Ne te prépare</strong> pas des regrets en leur ôtant le peu d’instants que la nature leur donne. »</p>\n<p><strong>Points de vigilance</strong></p>\n<ul>\n<li>Impératif présent, 2e personne du singulier : les verbes du 1er groupe n’ont <strong>pas de -s</strong> : <em>aime</em>, <em>favorise</em>, <em>ne te prépare pas</em>.</li>\n<li><em>sois</em> (verbe <em>être</em>) ; accord de l’attribut : <em>humain</em> au singulier.</li>\n<li>Impératif négatif pronominal : <em>ne te prépare pas</em> (le pronom se place avant le verbe).</li>\n<li><em>leur</em> ne change pas : il désigne les enfants.</li>\n</ul>"
       },
       {
@@ -592,7 +593,7 @@ window.BELAMIS_FRANCAIS = {
        "type": "sens",
        "points": 1.5,
        "enonce": "Expliquer la différence de sens entre <em>licence</em> et <em>liberté</em> dans la dernière phrase. Citer un autre sens du mot <em>licence</em>.",
-       "corrige": "<ul>\n<li><strong>liberté</strong> : pouvoir d’agir selon sa nature et ses besoins, dans un cadre (Rousseau parle d’une liberté « bien réglée »).</li>\n<li><strong>licence</strong> : liberté <strong>excessive</strong>, sans règle ni limite, qui dégénère en désordre. Le parallèle suivant le confirme : l’enfant libre est « l’enfant qu’on rend heureux », l’enfant laissé à la licence est « l’enfant qu’on gâte ».</li>\n<li><strong>Autres sens</strong> : un diplôme universitaire (la licence), une autorisation officielle (licence de pêche, licence sportive, licence d’un logiciel).</li>\n</ul>"
+       "corrige": "<ul>\n<li><strong>liberté</strong> : pouvoir d’agir selon sa nature et ses besoins, dans un cadre (Rousseau parle d’une liberté « bien réglée »).</li>\n<li><strong>licence</strong> : liberté <strong>excessive</strong>, sans règle ni limite, qui dégénère en désordre. Le chiasme qui suit le confirme (licence / liberté, puis rend heureux / gâte) : l’enfant libre est « l’enfant qu’on rend heureux », l’enfant laissé à la licence est « l’enfant qu’on gâte ».</li>\n<li><strong>Autres sens</strong> : un diplôme universitaire (la licence), une autorisation officielle (licence de pêche, licence sportive, licence d’un logiciel).</li>\n</ul>"
       },
       {
        "id": "2",

@@ -9,7 +9,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ex = json.load(open(os.path.join(HERE, "extraits.json")))
 ex = {k: re.sub(r"[  ]{2,}", " ", v) for k, v in ex.items()}
 
-BARBE = """Il revint de son voyage dès le soir même, et dit qu’il avait reçu des lettres dans le chemin, qui lui avaient appris que l’affaire pour laquelle il était parti venait d’être terminée à son avantage. Sa femme fit tout ce qu’elle put pour lui témoigner qu’elle était ravie de son prompt retour. Le lendemain, il lui redemanda les clefs, et elle les lui donna, mais d’une main si tremblante qu’il devina sans peine tout ce qui s’était passé. « D’où vient, lui dit-il, que la clef du cabinet n’est point avec les autres ? » – Il faut, dit-elle, que je l’ai laissée là-haut sur ma table. Ne manquez pas, dit-il, de me la donner tantôt. » Après plusieurs remises, il fallut apporter la clef. La Barbe bleue, l’ayant considérée, dit à sa femme : « Pourquoi y a-t-il du sang sur cette clef ? – Je n’en sais rien, répondit la pauvre femme, plus pâle que la mort. – Vous n’en savez rien ? reprit la Barbe bleue ; je le sais bien, moi ! Vous avez voulu entrer dans le cabinet ? Hé bien, Madame, vous y entrerez, et irez prendre votre place auprès des dames que vous y avez vues. » Elle se jeta aux pieds de son mari, en pleurant et en lui demandant pardon, avec toutes les marques d’un vrai repentir de n’avoir pas été obéissante.
+BARBE = """Il revint de son voyage dès le soir même, et dit qu’il avait reçu des lettres dans le chemin, qui lui avaient appris que l’affaire pour laquelle il était parti venait d’être terminée à son avantage. Sa femme fit tout ce qu’elle put pour lui témoigner qu’elle était ravie de son prompt retour. Le lendemain, il lui redemanda les clefs, et elle les lui donna, mais d’une main si tremblante qu’il devina sans peine tout ce qui s’était passé. « D’où vient, lui dit-il, que la clef du cabinet n’est point avec les autres ? – Il faut, dit-elle, que je l’aie laissée là-haut sur ma table. – Ne manquez pas, dit-il, de me la donner tantôt. » Après plusieurs remises, il fallut apporter la clef. La Barbe bleue, l’ayant considérée, dit à sa femme : « Pourquoi y a-t-il du sang sur cette clef ? – Je n’en sais rien, répondit la pauvre femme, plus pâle que la mort. – Vous n’en savez rien ? reprit la Barbe bleue ; je le sais bien, moi ! Vous avez voulu entrer dans le cabinet ? Hé bien, Madame, vous y entrerez, et irez prendre votre place auprès des dames que vous y avez vues. » Elle se jeta aux pieds de son mari, en pleurant et en lui demandant pardon, avec toutes les marques d’un vrai repentir de n’avoir pas été obéissante.
 Elle aurait attendri un rocher, belle et affligée comme elle était ; mais la Barbe bleue avait le cœur plus dur qu’un rocher. « Il faut mourir, Madame, et tout à l’heure*. – Puisqu’il faut mourir, répondit-elle en le regardant les yeux baignés de larmes, donnez-moi un peu de temps pour prier Dieu. – Je vous donne un demi-quart d’heure, mais pas un instant davantage. » Lorsqu’elle fut seule, elle appela sa sœur et lui dit : « Ma sœur Anne (car elle s’appelait ainsi), monte, je te prie, sur le haut de la tour, pour voir si mes frères ne viennent point ; ils m’ont promis qu’ils me viendraient voir aujourd’hui, et si tu les vois, fais-leur signe de se hâter. » La sœur Anne monta sur le haut de la tour, et la pauvre affligée lui criait de temps en temps : « Anne, ma sœur Anne, ne vois-tu rien venir ? »"""
 
 def paras(s):
@@ -36,7 +36,7 @@ SUJETS.append({
  "theme": "L’égalité entre les femmes et les hommes",
  "contexte": "Sujet 0 officiel du CRPE BAC+3 (juin 2025). La Barbe bleue a interdit à sa femme d’ouvrir un cabinet ; elle a désobéi et y a découvert les corps de ses précédentes épouses.",
  "texte": paras(BARBE),
- "notes": ["* <em>Tout à l’heure</em> signifie <em>sur-le-champ</em> en français du XVIIe siècle."],
+ "notes": ["* <em>Tout à l’heure</em> signifie <em>sur-le-champ</em> en français du XVIIe siècle.", "Par rapport au sujet officiel, la ponctuation du dialogue est rétablie et « que je l’ai laissée » est corrigé en « que je l’aie laissée » (subjonctif après <em>il faut que</em>)."],
  "parties": [
   {"id": "A1", "titre": A1, "points": 6, "questions": [
    {"id": "1", "type": "reecriture", "points": 1.5,
@@ -53,7 +53,7 @@ SUJETS.append({
 </ul>"""},
    {"id": "2", "type": "nature", "points": 1.5,
     "enonce": "Donner la nature des six mots soulignés. Justifier les réponses.",
-    "passage": "« Le lendemain, il [[lui]] redemanda les clefs, et elle [[les]] lui donna, mais d’une main si tremblante qu’il devina sans peine tout ce qui s’était passé. « D’où vient, lui dit-il, que [[la]] clef du cabinet n’est point avec les autres ? » – Il faut, dit-elle, que je l’ai laissée là-haut sur [[ma]] table. Ne manquez pas, dit-il, de me [[la]] donner tantôt. » […] « Pourquoi y a-t-il [[du]] sang sur cette clef ? »",
+    "passage": "« Le lendemain, il [[lui]] redemanda les clefs, et elle [[les]] lui donna, mais d’une main si tremblante qu’il devina sans peine tout ce qui s’était passé. « D’où vient, lui dit-il, que [[la]] clef du cabinet n’est point avec les autres ? – Il faut, dit-elle, que je l’aie laissée là-haut sur [[ma]] table. – Ne manquez pas, dit-il, de me [[la]] donner tantôt. » […] « Pourquoi y a-t-il [[du]] sang sur cette clef ? »",
     "corrige": """<ul>
 <li><strong>lui</strong> (il lui redemanda) : <strong>pronom personnel</strong> de 3e personne du singulier ; il remplace « à sa femme » et est complément d’objet second (COS) de <em>redemanda</em>.</li>
 <li><strong>les</strong> (elle les lui donna) : <strong>pronom personnel</strong> ; placé devant le verbe, il remplace « les clefs » (COD de <em>donna</em>).</li>
@@ -62,7 +62,7 @@ SUJETS.append({
 <li><strong>ma</strong> (ma table) : <strong>déterminant possessif</strong> (1re personne du singulier) ; il introduit le nom <em>table</em>.</li>
 <li><strong>du</strong> (du sang) : <strong>déterminant (article partitif)</strong> ; il désigne une quantité indéterminée d’une réalité non comptable (<em>du sang</em> ≠ <em>le sang</em>). Ce n’est pas ici la contraction de « de + le ».</li>
 </ul>
-<p><strong>Méthode :</strong> un déterminant est toujours suivi d’un nom ; un pronom se place devant un verbe et remplace un groupe nominal.</p>"""},
+<p><strong>Méthode :</strong> un déterminant introduit un nom, avec lequel il forme un groupe nominal (un adjectif peut s’intercaler : <em>la belle clef</em>). Un pronom se substitue à un groupe nominal et en prend la fonction. Les pronoms personnels compléments se placent devant le verbe, sauf à l’impératif affirmatif (<em>donnez-la</em>).</p>"""},
    {"id": "3a", "type": "fonction", "points": 1,
     "enonce": "En vous fondant sur la phrase <em>Le facteur distribue le courrier tous les matins</em>, citer les deux caractéristiques syntaxiques majeures des compléments circonstanciels.",
     "corrige": """<ul>
@@ -92,7 +92,7 @@ SUJETS.append({
    {"id": "1a", "type": "formation", "points": 1,
     "enonce": "Analyser la formation du verbe <em>redemander</em> et préciser, dans cet emploi, le sens du préfixe <em>re-</em>.",
     "corrige": """<p><em>Redemander</em> est formé par <strong>dérivation préfixale</strong> : préfixe <strong>re-</strong> + base verbale <strong>demander</strong>.</p>
-<p>Dans ce contexte, le préfixe exprime le <strong>retour</strong> à une situation antérieure : la Barbe bleue avait confié les clefs à sa femme avant de partir, il les réclame à son retour (demander <em>en retour</em>). On peut y voir aussi l’idée de <strong>répétition</strong> (demander de nouveau, puisqu’elle tarde à rendre la clef du cabinet).</p>"""},
+<p>Dans ce contexte, le préfixe exprime le <strong>retour</strong> à une situation antérieure : la Barbe bleue avait confié les clefs à sa femme avant de partir, il les réclame à son retour (demander <em>en retour</em>). <em>Redemander</em> signifie ici « demander que l’on rende ce que l’on a confié ». L’idée de simple répétition (demander une seconde fois) est moins pertinente : c’est la première fois qu’il réclame les clefs.</p>"""},
    {"id": "1b", "type": "formation", "points": 1,
     "enonce": "Citer d’autres mots de votre choix présentant des orthographes différentes pour ce même préfixe.",
     "corrige": """<ul>
@@ -128,7 +128,7 @@ SUJETS.append({
 # ---------------------------------------------------------------- Sujet 1 : Daudet
 SUJETS.append({
  "id": "derniere-classe", "num": 1,
- "auteur": "Alphonse Daudet", "oeuvre": "La Dernière Classe (Contes du lundi)", "date": "1873", "genre": "Nouvelle",
+ "auteur": "Alphonse Daudet", "oeuvre": "La Dernière Classe (Contes du lundi)", "date": "1872 (recueil 1873)", "genre": "Nouvelle",
  "theme": "L’école, la langue et l’identité",
  "contexte": "Après la défaite de 1870, l’Alsace est annexée par l’Allemagne. Le jeune Franz arrive en retard à l’école le jour où M. Hamel, son maître, donne sa dernière leçon de français.",
  "texte": paras(ex["daudet"]), "notes": [],
@@ -150,7 +150,7 @@ SUJETS.append({
     "passage": "« Je ne [[te]] gronderai pas, [[mon petit Franz]], tu dois être assez puni… » ; « Vos parents n’ont pas assez tenu [[à vous voir instruits]]. »",
     "corrige": """<ul>
 <li><strong>te</strong> : pronom personnel (2e personne du singulier), <strong>COD</strong> du verbe <em>gronderai</em>.</li>
-<li><strong>mon petit Franz</strong> : groupe nominal (déterminant + adjectif + nom propre), mis en <strong>apostrophe</strong> : il désigne la personne à qui l’on parle et n’a pas de fonction dans la phrase.</li>
+<li><strong>mon petit Franz</strong> : groupe nominal (déterminant + adjectif + nom propre), sa fonction est l’<strong>apostrophe</strong> : il désigne l’interlocuteur et ne dépend syntaxiquement d’aucun autre constituant de la phrase.</li>
 <li><strong>à vous voir instruits</strong> : groupe infinitif introduit par la préposition <em>à</em>, <strong>COI</strong> du verbe <em>tenir</em> (tenir <em>à</em> quelque chose).</li>
 <li><strong>instruits</strong> : participe passé employé comme adjectif, <strong>attribut du COD</strong> <em>vous</em> (vous voir instruits → vous êtes instruits). Il s’accorde avec <em>vous</em>, masculin pluriel.</li>
 </ul>"""},
@@ -199,7 +199,7 @@ SUJETS.append({
     "corrige": """<p><strong>Problématique possible :</strong> au-delà du contexte patriotique de 1870, que nous dit ce texte du lien entre l’école, la maîtrise de la langue et le sentiment d’appartenance ?</p>
 <p><strong>Plan possible</strong></p>
 <ol>
-<li><strong>Un texte de circonstance, patriotique.</strong> Daudet écrit après l’annexion de l’Alsace-Moselle : la langue française devient un symbole national (« France, Alsace »). Le maître incarne la patrie qui s’en va.</li>
+<li><strong>Un texte de circonstance, patriotique.</strong> Daudet écrit après l’annexion de l’Alsace-Moselle : la langue française devient un symbole national (« la plus belle langue du monde » ; dans la suite de la nouvelle, les modèles d’écriture portent « France, Alsace »). Le maître incarne la patrie qui s’en va.</li>
 <li><strong>Une réflexion toujours actuelle sur la langue et l’école.</strong> Maîtriser la langue, c’est pouvoir comprendre, s’exprimer, se défendre : c’est une condition de la liberté (« la clef de sa prison »). Le texte rappelle aussi la responsabilité partagée de l’éducation : parents, élèves et maître (« Nous avons tous notre bonne part de reproches à nous faire »).</li>
 <li><strong>Des nuances nécessaires.</strong> L’Alsace avait aussi sa langue régionale, que l’école française a longtemps combattue. Aujourd’hui, l’école valorise le plurilinguisme (langues vivantes, langues régionales, langues des familles) : une identité peut être plurielle. Le texte peut être étudié en classe pour parler d’histoire, de langue et de citoyenneté.</li>
 </ol>
@@ -238,7 +238,7 @@ SUJETS.append({
 </ul>"""},
    {"id": "3", "type": "fonction", "points": 1.5,
     "enonce": "Donner la nature et la fonction des groupes soulignés.",
-    "passage": "« Elle regarda [[avec désespoir]] [[cette obscurité]] [[où il n’y avait plus personne]]. »",
+    "passage": "« Elle regarda [[avec désespoir]] [[cette obscurité]] [[où il n’y avait plus personne]], […] »",
     "corrige": """<ul>
 <li><strong>avec désespoir</strong> : groupe prépositionnel (préposition + nom), <strong>complément circonstanciel de manière</strong> du verbe <em>regarda</em>.</li>
 <li><strong>cette obscurité</strong> : groupe nominal, <strong>COD</strong> du verbe <em>regarda</em>.</li>
@@ -248,7 +248,7 @@ SUJETS.append({
     "enonce": "Identifier le type des phrases suivantes et le mode des verbes. Quel est l’effet produit ?",
     "passage": "« Que faire ? que devenir ? où aller ? »",
     "corrige": """<p>Ce sont trois <strong>phrases interrogatives partielles</strong> (introduites par <em>que</em>, <em>où</em>), construites avec des verbes à l’<strong>infinitif</strong> (infinitif délibératif).</p>
-<p><strong>Effet :</strong> le narrateur fait entendre les pensées de Cosette sans les annoncer (discours indirect libre). Le rythme ternaire, bref et haché, traduit le <strong>désarroi</strong> et l’impossibilité de choisir : l’enfant est prise entre deux peurs.</p>"""},
+<p><strong>Effet :</strong> les pensées de Cosette sont rapportées sans verbe introducteur ni guillemets (discours indirect libre ou discours direct libre : l’infinitif, sans marque de personne ni de temps, ne permet pas de trancher). Le rythme ternaire, bref et haché, traduit le <strong>désarroi</strong> et l’impossibilité de choisir : l’enfant est prise entre deux peurs.</p>"""},
   ]},
   {"id": "A2", "titre": A2, "points": 4, "questions": [
    {"id": "1", "type": "formation", "points": 1.5,
@@ -286,7 +286,7 @@ SUJETS.append({
 # ---------------------------------------------------------------- Sujet 3 : Maupassant
 SUJETS.append({
  "id": "la-parure", "num": 3,
- "auteur": "Guy de Maupassant", "oeuvre": "La Parure (Contes du jour et de la nuit)", "date": "1884", "genre": "Nouvelle",
+ "auteur": "Guy de Maupassant", "oeuvre": "La Parure (Contes du jour et de la nuit)", "date": "1884 (recueil 1885)", "genre": "Nouvelle",
  "theme": "Le désir, les apparences et la comparaison sociale",
  "contexte": "Début de la nouvelle : portrait de Mathilde Loisel, épouse d’un petit employé du ministère, qui rêve d’une vie de luxe.",
  "texte": paras(ex["maupassant"]), "notes": [],
@@ -329,7 +329,7 @@ SUJETS.append({
   {"id": "A2", "titre": A2, "points": 4, "questions": [
    {"id": "1", "type": "formation", "points": 1.5,
     "enonce": "Analyser la formation du mot <em>déclassée</em> et expliquer son sens dans « malheureuse comme une déclassée ».",
-    "corrige": """<p><em>déclassée</em> : préfixe <strong>dé-</strong> (qui marque la privation ou l’inversion) + base <em>classe</em> (au sens de classe sociale) + terminaison de participe passé <em>-ée</em>, employé ici comme nom.</p>
+    "corrige": """<p><em>déclassée</em> : participe passé du verbe <em>déclasser</em>, employé ici comme nom. <em>Déclasser</em> est formé par <strong>dérivation préfixale</strong> : préfixe <strong>dé-</strong> (privation, inversion) + verbe <em>classer</em>, lui-même dérivé du nom <em>classe</em> (au sens de classe sociale).</p>
 <p><strong>Sens :</strong> une personne qui a perdu son rang social, ou qui vit dans une condition inférieure à celle à laquelle elle se croit destinée. Mathilde se vit comme « tombée » d’un monde auquel elle pense appartenir.</p>"""},
    {"id": "2", "type": "sens", "points": 1,
     "enonce": "Expliquer le sens des mots <em>dot</em> et <em>espérances</em> dans la phrase « Elle n’avait pas de dot, pas d’espérances ».",
@@ -382,7 +382,7 @@ SUJETS.append({
 </ul>"""},
    {"id": "2", "type": "phrase", "points": 1.5,
     "enonce": "a) Identifier la voix du verbe souligné. b) Récrire la phrase à l’autre voix. c) Donner la nature et la fonction de la proposition introduite par <em>comme si</em>.",
-    "passage": "« Lorsque j’arrivai, je [[fus regardé]] comme si j’avais été envoyé du ciel. »",
+    "passage": "« Lorsque j’arrivai, je [[fus regardé]] comme si j’avais été envoyé du ciel […] »",
     "corrige": """<ul>
 <li>a) <strong>Voix passive</strong> (auxiliaire <em>être</em> au passé simple + participe passé <em>regardé</em>). Le complément d’agent n’est pas exprimé.</li>
 <li>b) Voix active : « Lorsque j’arrivai, <strong>on me regarda</strong> comme si j’avais été envoyé du ciel. » Faute de complément d’agent, on utilise le pronom <em>on</em> comme sujet.</li>
@@ -416,7 +416,7 @@ SUJETS.append({
 <p>Le même mot a deux sens (<strong>polysémie</strong>). Montesquieu joue sur ce double sens : la curiosité des Parisiens transforme Rica en « curiosité ».</p>"""},
    {"id": "2", "type": "formation", "points": 1,
     "enonce": "Analyser la formation du mot <em>extravagance</em> et en déduire son sens.",
-    "corrige": """<p><em>extravagance</em> : préfixe <strong>extra-</strong> (« hors de ») + base <strong>vag-</strong> (du latin <em>vagari</em>, « errer », que l’on retrouve dans <em>vagabond</em> ou <em>divaguer</em>) + suffixe <strong>-ance</strong> (qui forme des noms de qualité ou d’état).</p>
+    "corrige": """<p><em>extravagance</em> : nom dérivé de l’adjectif <em>extravagant</em> par <strong>suffixation</strong> (suffixe <strong>-ance</strong>, qui forme des noms de qualité ou d’état). <em>Extravagant</em> est emprunté au latin médiéval <em>extravagans</em>, formé de <em>extra</em> (« hors de ») et <em>vagari</em> (« errer », que l’on retrouve dans <em>vagabond</em> ou <em>divaguer</em>).</p>
 <p><strong>Sens :</strong> ce qui « erre hors » des limites de la raison, un comportement déraisonnable, excessif. Ici : une curiosité démesurée, presque folle.</p>"""},
    {"id": "3", "type": "commentaire-lexical", "points": 1.5,
     "enonce": "Commenter le vocabulaire du regard et de la vue dans le premier paragraphe.",
@@ -451,7 +451,7 @@ SUJETS.append({
   {"id": "A1", "titre": A1, "points": 6, "questions": [
    {"id": "1", "type": "reecriture", "points": 2,
     "enonce": "Récrire le passage suivant en vous adressant à une seule personne que vous tutoyez (« Homme… », « Père… »). Faire toutes les modifications nécessaires.",
-    "passage": "« Hommes, soyez humains, c’est votre premier devoir ; soyez-le pour tous les états, pour tous les âges […]. Aimez l’enfance ; favorisez ses jeux, ses plaisirs, son aimable instinct. […] Pères, savez-vous le moment où la mort attend vos enfants ? Ne vous préparez pas des regrets en leur ôtant le peu d’instants que la nature leur donne. »",
+    "passage": "« Hommes, soyez humains, c’est votre premier devoir ; soyez-le pour tous les états, pour tous les âges […]. Aimez l’enfance ; favorisez ses jeux, ses plaisirs, son aimable instinct. […] Pères, savez-vous le moment où la mort attend vos enfants ? Ne vous préparez pas des regrets en leur ôtant le peu d’instants que la nature leur donne […] »",
     "corrige": """<p class="answer">« <strong>Homme, sois humain</strong>, c’est <strong>ton</strong> premier devoir ; <strong>sois-le</strong> pour tous les états, pour tous les âges […]. <strong>Aime</strong> l’enfance ; <strong>favorise</strong> ses jeux, ses plaisirs, son aimable instinct. […] <strong>Père, sais-tu</strong> le moment où la mort attend <strong>tes</strong> enfants ? <strong>Ne te prépare</strong> pas des regrets en leur ôtant le peu d’instants que la nature leur donne. »</p>
 <p><strong>Points de vigilance</strong></p>
 <ul>
@@ -490,7 +490,7 @@ SUJETS.append({
     "enonce": "Expliquer la différence de sens entre <em>licence</em> et <em>liberté</em> dans la dernière phrase. Citer un autre sens du mot <em>licence</em>.",
     "corrige": """<ul>
 <li><strong>liberté</strong> : pouvoir d’agir selon sa nature et ses besoins, dans un cadre (Rousseau parle d’une liberté « bien réglée »).</li>
-<li><strong>licence</strong> : liberté <strong>excessive</strong>, sans règle ni limite, qui dégénère en désordre. Le parallèle suivant le confirme : l’enfant libre est « l’enfant qu’on rend heureux », l’enfant laissé à la licence est « l’enfant qu’on gâte ».</li>
+<li><strong>licence</strong> : liberté <strong>excessive</strong>, sans règle ni limite, qui dégénère en désordre. Le chiasme qui suit le confirme (licence / liberté, puis rend heureux / gâte) : l’enfant libre est « l’enfant qu’on rend heureux », l’enfant laissé à la licence est « l’enfant qu’on gâte ».</li>
 <li><strong>Autres sens</strong> : un diplôme universitaire (la licence), une autorisation officielle (licence de pêche, licence sportive, licence d’un logiciel).</li>
 </ul>"""},
    {"id": "2", "type": "formation", "points": 1,

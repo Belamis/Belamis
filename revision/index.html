@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#03040a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -127,11 +127,79 @@
       <div class="space-center">
         <span class="eyebrow gold"><i class="pulse-dot"></i>Espace de révision</span>
         <h2>Raphaël <em>s'éveille.</em></h2>
-        <p>Ton guide de révision est prêt. Les matières arrivent très bientôt.</p>
+        <p>Ton guide de révision est prêt. Choisis une matière pour commencer.</p>
         <p id="space-note" class="space-note"></p>
+        <div class="matieres" role="group" aria-label="Matières">
+          <button id="open-francais" class="matiere" type="button">
+            <span class="matiere-name">Français</span>
+            <span class="matiere-sub">Épreuve 1 · partie A · 6 sujets</span>
+          </button>
+          <button class="matiere" type="button" disabled>
+            <span class="matiere-name">Mathématiques</span>
+            <span class="matiere-sub">Bientôt</span>
+          </button>
+          <button class="matiere" type="button" disabled>
+            <span class="matiere-name">Épreuve 2</span>
+            <span class="matiere-sub">Bientôt</span>
+          </button>
+        </div>
       </div>
       <button id="skip" class="btn btn-ghost btn-sm skip" type="button">Passer ›</button>
     </div>
+  </div>
+
+  <!-- Espace de travail : sujets de français -->
+  <div id="study" class="study" hidden role="dialog" aria-modal="true" aria-label="Sujets de français">
+    <section id="study-list" class="study-list">
+      <header class="study-bar">
+        <button id="study-close" class="btn btn-ghost btn-sm" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+          Espace de Raphaël
+        </button>
+      </header>
+      <div class="study-intro">
+        <span class="eyebrow gold"><i class="pulse-dot"></i>Français · 1re épreuve d'admissibilité</span>
+        <h2>Partie A : un texte, <em>trois phases</em>.</h2>
+        <p>Chaque sujet suit le modèle du CRPE BAC+3 : un texte de 500 mots au plus, puis l'étude de la langue (6 points), le lexique (4 points) et une réflexion rédigée d'une trentaine de lignes (10 points). Durée conseillée : 2 heures. Au concours, la partie est notée sur 10, et une note de 2,5 ou moins est éliminatoire.</p>
+      </div>
+      <div class="list-tabs" role="tablist">
+        <button class="list-tab" type="button" role="tab" data-panel="sujets" aria-selected="true">Sujets complets</button>
+        <button class="list-tab" type="button" role="tab" data-panel="types" aria-selected="false">S'entraîner par type d'exercice</button>
+      </div>
+      <div id="panel-sujets" role="tabpanel">
+        <div id="study-sujets" class="sujets-grid"></div>
+      </div>
+      <div id="panel-types" role="tabpanel" hidden>
+        <div id="study-types" class="type-chips"></div>
+        <div id="study-type-list"></div>
+      </div>
+    </section>
+
+    <section id="study-sujet" class="study-sujet" hidden data-tab="questions">
+      <header class="study-bar">
+        <button id="study-back" class="btn btn-ghost btn-sm" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+          Sujets
+        </button>
+        <span id="study-sujet-title" class="study-title"></span>
+        <div id="chrono" class="chrono">
+          <span id="chrono-time">0:00:00</span>
+          <button id="chrono-btn" class="btn btn-ghost btn-sm" type="button">Lancer le chrono (2 h)</button>
+        </div>
+        <span id="study-score" class="study-score"></span>
+      </header>
+      <div class="mtabs" role="tablist">
+        <button class="mtab" type="button" role="tab" data-tab="text">Texte</button>
+        <button class="mtab" type="button" role="tab" data-tab="questions">Questions</button>
+      </div>
+      <div class="study-cols">
+        <article id="study-text" class="study-text"></article>
+        <div id="study-questions-wrap" class="study-questions-wrap">
+          <div id="study-questions"></div>
+          <p id="study-save" class="study-save" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- Connexion par mail (lien ou code à 6 chiffres, sans mot de passe) -->
@@ -180,5 +248,7 @@
   <script src="app.js"></script>
   <script src="raphael.js"></script>
   <script src="auth.js"></script>
+  <script src="data/francais.js"></script>
+  <script src="revise.js"></script>
 </body>
 </html>

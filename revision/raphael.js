@@ -751,7 +751,7 @@
   skipBtn.addEventListener("click", skip);
   backBtn.addEventListener("click", exit);
   window.addEventListener("keydown", (e) => {
-    if (!running) return;
+    if (!running || document.body.classList.contains("studying")) return;
     if (e.key === "Escape") uiShown ? exit() : skip();
   });
 

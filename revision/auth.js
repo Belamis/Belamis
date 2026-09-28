@@ -86,6 +86,12 @@
     write(v) { try { localStorage.setItem(DEMO_KEY, JSON.stringify(v)); } catch (_) { /* stockage bloqué */ } },
   };
 
+  const GUEST_KEY = "belamis-guest";
+  const guest = {
+    read() { try { return JSON.parse(localStorage.getItem(GUEST_KEY)) || {}; } catch (_) { return {}; } },
+    write(v) { try { localStorage.setItem(GUEST_KEY, JSON.stringify(v)); } catch (_) { /* stockage bloqué */ } },
+  };
+
   const store = {
     async load() {
       if (!user) return null;
@@ -100,7 +106,24 @@
       const { error } = await sb.from("progress").upsert({ user_id: user.id, data: progress, updated_at: new Date().toISOString() });
       if (error) throw error;
     },
+    // lecture pour tous : compte connecté, sinon ce navigateur (mode invité)
+    async read() {
+      return user ? store.load() : guest.read();
+    },
+    // modifications une par une, pour ne jamais écraser une sauvegarde plus récente
+    update(fn) {
+      queue = queue.then(async () => {
+        const current = (await store.read()) || {};
+        const next = fn(current) || current;
+        if (user) await store.save(next); else guest.write(next);
+        return next;
+      });
+      const result = queue;
+      queue = queue.catch(() => {});
+      return result;
+    },
   };
+  let queue = Promise.resolve();
 
   // ---------- Affichage de l'état connecté ----------
   function renderAccount() {
@@ -282,14 +305,12 @@
   // ---------- Lancement des révisions ----------
   async function startRevision() {
     const note = $("space-note");
-    note.textContent = user ? "Chargement de ta progression…" : "Mode invité : rien n'est sauvegardé. Connecte-toi depuis l'accueil pour garder ta progression.";
+    note.textContent = user ? "Chargement de ta progression…" : "Mode invité : tes réponses restent dans ce navigateur. Connecte-toi depuis l'accueil pour les retrouver partout.";
     window.BelamisLaunch();
     if (!user) return;
     try {
-      const p = await store.load();
       const now = new Date().toISOString();
-      const next = { ...p, sessions: (p.sessions || 0) + 1, firstVisit: p.firstVisit || now, lastVisit: now };
-      await store.save(next);
+      const next = await store.update((p) => ({ ...p, sessions: (p.sessions || 0) + 1, firstVisit: p.firstVisit || now, lastVisit: now }));
       const where = sb ? "sur ton compte" : "dans ce navigateur (mode démo)";
       note.textContent = next.sessions === 1
         ? `Première séance, bienvenue ! Ta progression est sauvegardée ${where}.`

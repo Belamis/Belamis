@@ -1,0 +1,83 @@
+# Brancher la connexion par mail (Supabase)
+
+La plateforme utilise **Supabase** pour deux choses :
+
+- **la connexion sans mot de passe** : l'élève tape son mail et reçoit un lien
+  (et un code à 6 chiffres) pour se connecter ;
+- **la sauvegarde des révisions** : une ligne par élève dans la table
+  `progress`, que lui seul peut lire et modifier.
+
+Tant que ce n'est pas branché, la page tourne en **mode démonstration** :
+aucun mail n'est envoyé et la « sauvegarde » reste dans le navigateur.
+
+Compte environ 20 minutes. Tout est gratuit pour démarrer.
+
+## 1. Créer le projet
+
+1. Va sur <https://supabase.com> et crée un compte (bouton *Start your project*).
+2. *New project* : nom `belamis`, choisis un mot de passe de base de données
+   (garde-le, mais on n'en aura pas besoin ici), région **Europe (Paris ou Francfort)**.
+3. Attends 1 à 2 minutes que le projet soit prêt.
+
+## 2. Créer la table de sauvegarde
+
+1. Menu de gauche : **SQL Editor** → *New query*.
+2. Colle tout le contenu de [`supabase/schema.sql`](supabase/schema.sql).
+3. Clique **Run**. Tu dois voir « Success. No rows returned ».
+
+## 3. Régler la connexion par mail
+
+1. **Authentication → Sign In / Providers → Email** : vérifie que *Email* est activé.
+2. **Authentication → URL Configuration** :
+   - *Site URL* : l'adresse de ton site en ligne (par exemple `https://belamis.netlify.app`) ;
+   - *Redirect URLs* : ajoute cette même adresse, et `http://localhost:8000/**`
+     pour tester sur ton ordinateur.
+3. **Authentication → Emails → Templates** : dans **Magic Link** *et* dans
+   **Confirm signup** (le premier mail d'un nouvel élève), remplace le contenu par
+   celui de [`supabase/email-connexion.html`](supabase/email-connexion.html),
+   avec comme sujet : `Ta connexion à Belamis`.
+   C'est ce modèle qui met le **code à 6 chiffres** dans le mail.
+
+## 4. Relier le site au projet
+
+1. **Project Settings → API** (ou *Data API*) : copie
+   - la **Project URL** (`https://xxxx.supabase.co`),
+   - la clé **anon / public**.
+2. Colle-les dans [`config.js`](config.js) :
+
+   ```js
+   window.BELAMIS_CONFIG = {
+     supabaseUrl: "https://xxxx.supabase.co",
+     supabaseAnonKey: "eyJhbGciOi...",
+   };
+   ```
+
+La clé *anon* est faite pour être publique : ce sont les règles de l'étape 2
+qui protègent les données. **Ne mets jamais la clé `service_role` dans le site.**
+
+## 5. Envoyer des mails à tout le monde (obligatoire pour d'autres élèves)
+
+Le service de mail fourni par Supabase est **réservé aux tests** : il n'envoie
+qu'aux adresses des membres de ton équipe Supabase, et seulement quelques mails
+par heure. Pour que n'importe quel élève reçoive son lien, branche un service
+d'envoi de mails (SMTP). Par exemple **Brevo** (français, 300 mails/jour gratuits) :
+
+1. Crée un compte sur <https://www.brevo.com>, puis *SMTP & API* → *SMTP* :
+   note le serveur, le port, l'identifiant et génère une clé SMTP.
+2. Dans Supabase : **Authentication → Emails → SMTP Settings** → *Enable custom SMTP*,
+   colle ces informations, expéditeur : ton adresse et le nom `Belamis`.
+3. Dans **Authentication → Rate Limits**, monte la limite d'envoi de mails
+   (par exemple 100 par heure).
+
+## 6. Tester
+
+Sur ton ordinateur, dans le dossier `revision/` :
+
+```bash
+python3 -m http.server 8000
+```
+
+puis ouvre <http://localhost:8000>. Clique **Se connecter**, entre ton mail,
+et utilise le lien ou le code reçu. Lance ensuite une révision : le message
+« Séance n°… » confirme que la sauvegarde fonctionne. Tu peux voir les lignes
+enregistrées dans **Table Editor → progress**.

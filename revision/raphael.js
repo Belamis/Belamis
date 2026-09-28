@@ -663,8 +663,8 @@
     if (!audio) return;
     const a = audio, start = a.volume, t = performance.now();
     const step = (now) => {
-      const k = Math.min(1, (now - t) / ms);
-      a.volume = start * (1 - k);
+      const k = clamp((now - t) / ms, 0, 1);
+      a.volume = clamp(start * (1 - k), 0, 1);
       if (k < 1) requestAnimationFrame(step); else a.pause();
     };
     requestAnimationFrame(step);
@@ -755,12 +755,8 @@
     if (e.key === "Escape") uiShown ? exit() : skip();
   });
 
-  document.querySelectorAll("[data-launch]").forEach((el) =>
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-      launch();
-    })
-  );
+  // appelé par auth.js, une fois la connexion réglée (compte ou invité)
+  window.BelamisLaunch = () => launch();
 
   let resizeTimer;
   window.addEventListener("resize", () => {

@@ -33,7 +33,14 @@
       <a href="#decouvrir">Matières <small>bientôt</small></a>
       <a href="#decouvrir">Mon suivi</a>
     </nav>
-    <a class="btn btn-ghost btn-sm" href="#">Se connecter</a>
+    <div class="nav-auth">
+      <button id="nav-login" class="btn btn-ghost btn-sm" type="button">Se connecter</button>
+      <div id="nav-account" class="account" hidden>
+        <span id="nav-avatar" class="avatar" aria-hidden="true"></span>
+        <span id="nav-email" class="account-email"></span>
+        <button id="nav-logout" class="btn btn-ghost btn-sm" type="button">Se déconnecter</button>
+      </div>
+    </div>
   </header>
 
   <main id="top">
@@ -121,12 +128,49 @@
         <span class="eyebrow gold"><i class="pulse-dot"></i>Espace de révision</span>
         <h2>Raphaël <em>s'éveille.</em></h2>
         <p>Ton guide de révision est prêt. Les matières arrivent très bientôt.</p>
+        <p id="space-note" class="space-note"></p>
       </div>
       <button id="skip" class="btn btn-ghost btn-sm skip" type="button">Passer ›</button>
     </div>
   </div>
 
+  <!-- Connexion par mail (lien ou code à 6 chiffres, sans mot de passe) -->
+  <div id="auth" class="auth" hidden role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <div class="auth-backdrop" data-close></div>
+    <div class="auth-card">
+      <button class="auth-x" type="button" data-close aria-label="Fermer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+
+      <form id="auth-email" class="auth-step" novalidate>
+        <span class="eyebrow"><i class="pulse-dot"></i>Connexion</span>
+        <h2 id="auth-title">Retrouve tes révisions <em>partout</em>.</h2>
+        <p id="auth-why" class="auth-text"></p>
+        <label for="auth-mail">Adresse mail</label>
+        <input id="auth-mail" name="email" type="email" autocomplete="email" required placeholder="prenom.nom@exemple.fr" />
+        <button class="btn btn-primary" type="submit">Recevoir mon lien de connexion</button>
+        <p class="auth-msg" role="status" aria-live="polite"></p>
+        <button id="auth-guest" class="auth-link" type="button" hidden>Continuer sans compte</button>
+        <p id="auth-demo" class="auth-demo" hidden>Mode démonstration : la connexion Supabase n'est pas encore branchée. Aucun mail n'est envoyé ; à l'étape suivante, n'importe quel code à 6 chiffres fonctionne.</p>
+      </form>
+
+      <form id="auth-code" class="auth-step" hidden novalidate>
+        <span class="eyebrow"><i class="pulse-dot"></i>Vérifie ta boîte mail</span>
+        <h2>Ton lien est <em>en route</em>.</h2>
+        <p class="auth-text">Mail envoyé à <strong id="auth-sent-to"></strong>. Clique sur le lien qu'il contient, ou entre ici le code à 6 chiffres.</p>
+        <label for="auth-otp">Code reçu par mail</label>
+        <input id="auth-otp" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="123456" />
+        <button class="btn btn-primary" type="submit">Valider le code</button>
+        <p class="auth-msg" role="status" aria-live="polite"></p>
+        <button id="auth-back" class="auth-link" type="button">Changer d'adresse mail</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+  <script src="config.js"></script>
   <script src="app.js"></script>
   <script src="raphael.js"></script>
+  <script src="auth.js"></script>
 </body>
 </html>

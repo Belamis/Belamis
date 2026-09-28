@@ -50,7 +50,7 @@
           de professeur des écoles, sans jamais t'ennuyer.
         </p>
         <div class="cta">
-          <a class="btn btn-primary" href="#decouvrir">
+          <a class="btn btn-primary" href="#revision" data-launch>
             Commencer la révision
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
@@ -103,6 +103,30 @@
     <span>Fait pour réussir le CRPE ✦</span>
   </footer>
 
+  <!-- Lancement des révisions : étoiles filantes → trou noir → explosion → Raphaël -->
+  <div id="launch-layer" class="launch-layer" hidden>
+    <canvas id="launch" aria-hidden="true"></canvas>
+    <div class="space-ui">
+      <div class="space-top">
+        <button id="back" class="btn btn-ghost btn-sm" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+          Accueil
+        </button>
+        <button id="sound" class="btn btn-ghost btn-sm sound" type="button" aria-pressed="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" /><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" /></svg>
+          <span>Son activé</span>
+        </button>
+      </div>
+      <div class="space-center">
+        <span class="eyebrow gold"><i class="pulse-dot"></i>Espace de révision</span>
+        <h2>Raphaël <em>s'éveille.</em></h2>
+        <p>Ton guide de révision est prêt. Les matières arrivent très bientôt.</p>
+      </div>
+      <button id="skip" class="btn btn-ghost btn-sm skip" type="button">Passer ›</button>
+    </div>
+  </div>
+
   <script src="app.js"></script>
+  <script src="raphael.js"></script>
 </body>
 </html>

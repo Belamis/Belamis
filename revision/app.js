@@ -369,6 +369,12 @@
   let last = start;
 
   function frame(now) {
+    // en pause pendant que l'espace de révision occupe l'écran
+    if (window.__belamisPaused) {
+      last = now;
+      requestAnimationFrame(frame);
+      return;
+    }
     const dt = Math.min((now - last) / 1000, 0.05);
     last = now;
     const t = (now - start) / 1000;

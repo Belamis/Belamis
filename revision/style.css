@@ -1044,35 +1044,6 @@ body.studying .launch-layer .space-ui { visibility: hidden; }
   font-size: 0.96rem;
 }
 .corrige em, .question-enonce em, .type-item-q em { font-family: inherit; }
-
-/* Avis de l'IA sur une réponse */
-.ia-avis {
-  margin-top: 10px;
-  padding: 14px 16px;
-  border-radius: 14px;
-  border: 1px solid color-mix(in srgb, var(--accent, #9d8cff) 45%, transparent);
-  background: color-mix(in srgb, var(--accent, #9d8cff) 8%, transparent);
-  line-height: 1.55;
-  font-size: 0.95rem;
-}
-.ia-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 6px; }
-.ia-verdict { padding: 3px 10px; border-radius: 999px; font-weight: 700; font-size: 0.85rem; border: 1px solid currentColor; }
-.ia-juste { color: var(--good); }
-.ia-partiel { color: #e0a526; }
-.ia-faux, .ia-vide { color: var(--bad); }
-.ia-note { font-weight: 700; }
-.ia-by { margin-left: auto; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
-.ia-sub { margin: 10px 0 2px; font-weight: 700; font-size: 0.88rem; }
-.ia-avis ul { margin: 0; padding-left: 20px; }
-.ia-good li::marker { color: var(--good); }
-.ia-bad li::marker { color: var(--bad); }
-.ia-conseil { margin: 10px 0 0; }
-.ia-warn { margin: 10px 0 0; font-size: 0.8rem; opacity: 0.7; }
-.ia-msg { margin: 0; }
-.ia-err { color: var(--bad); }
-.ia-wait::after { content: ""; display: inline-block; width: 1em; height: 1em; margin-left: 8px; vertical-align: -2px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: ia-spin 0.8s linear infinite; }
-@keyframes ia-spin { to { transform: rotate(360deg); } }
-html[data-motion="reduit"] .ia-wait::after { animation: none; }
 .corrige-title { margin: 0 0 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime); }
 .corrige p { margin: 0 0 10px; }
 .corrige ul, .corrige ol { margin: 0 0 10px; padding-left: 1.2em; }
@@ -1499,10 +1470,3 @@ html:is([data-theme="clair"], [data-theme="lagon"]) .study .study-bar { border-b
   .matieres .matiere { min-width: 0; width: 100%; }
 }
 @media (max-width: 600px) { .concours-rev .matiere { width: 100%; min-width: 0; } .concours-rev { width: 100%; } }
-
-/* Avis de l'IA : contraste sur les thèmes clairs */
-html[data-theme="clair"] .ia-partiel,
-html[data-theme="lagon"] .ia-partiel { color: #8a5a00; }
-html[data-theme="clair"] .ia-avis,
-html[data-theme="lagon"] .ia-avis { border-color: #b9aef0; background: #f4f1ff; }
-.no-ia .ia-btn { display: none; }

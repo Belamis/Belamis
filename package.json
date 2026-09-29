@@ -1,9 +1,0 @@
-{
-  "name": "belamis-revision",
-  "private": true,
-  "description": "Dépendances de la fonction Netlify de vérification par IA (revision/netlify/functions).",
-  "type": "module",
-  "dependencies": {
-    "@anthropic-ai/sdk": "^0.129.0"
-  }
-}

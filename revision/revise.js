@@ -597,6 +597,13 @@
   });
   try { showConcours(localStorage.getItem(CONCOURS_KEY)); } catch (_) { showConcours(null); }
 
+  // changement de compte (connexion, création, déconnexion) : on recharge la bonne progression
+  window.addEventListener("belamis:account", async () => {
+    clearTimeout(saveTimer);
+    if (current) { chrono.running = false; clearInterval(chrono.timer); stopSpeech(); current = null; }
+    if (!study.hidden && DATA) { await loadProgress(); renderList(); show("list"); }
+  });
+
   // interface utilisée par les panneaux Progression et Paramètres (panels.js)
   window.BelamisRevise = {
     MATIERES, CONCOURS,

@@ -159,7 +159,15 @@
     const cid = R() && R().concours();
     const c = cid && R().CONCOURS[cid];
     const user = window.Belamis && window.Belamis.user;
+    const acct = window.Belamis || {};
     $("settings-body").innerHTML = `
+      <section class="sheet-sec">
+        <h3>Mon compte</h3>
+        ${user ? `<div class="set-row"><div><b>${esc(user.prenom || user.email)}</b><small>${esc(user.email)} · ${acct.configured ? "révisions sauvegardées en ligne, sur tous tes appareils" : "compte enregistré sur cet appareil"}</small></div>
+            <button type="button" class="btn btn-sm btn-danger" data-logout>Se déconnecter</button></div>`
+          : `<div class="set-row"><div><b>Tu révises en invité</b><small>Crée un compte pour retrouver tes révisions à chaque connexion : ce que tu as déjà fait sur cet appareil peut y être repris.</small></div>
+            <div class="inline-btns"><button type="button" class="btn btn-ghost btn-sm" data-auth="login">Se connecter</button><button type="button" class="btn btn-primary btn-sm" data-auth="signup">Créer un compte</button></div></div>`}
+      </section>
       <section class="sheet-sec">
         <h3>Thème</h3>
         <div class="opts">${THEMES.map((t) => `<button type="button" class="opt" data-pref="theme" data-val="${t.id}" aria-pressed="${P.get("theme") === t.id}">
@@ -190,6 +198,13 @@
           <button type="button" class="btn btn-sm btn-danger" data-action="reset" ${c ? "" : "disabled"}>Effacer</button></div>
       </section>`;
   }
+
+  window.addEventListener("belamis:account", () => {
+    if (!$("panel-settings").hidden) renderSettings();
+    if (!$("panel-progress").hidden) renderProgress();
+  });
+  // la fenêtre de connexion passe au-dessus des panneaux
+  document.addEventListener("click", (e) => { if (e.target.closest("[data-auth]")) closePanels(); }, true);
 
   $("settings-body").addEventListener("click", async (e) => {
     const b = e.target.closest("[data-pref]");

@@ -35,11 +35,14 @@
       <a href="#revision" data-launch>Réviser</a>
     </nav>
     <div class="nav-auth">
-      <button id="nav-login" class="btn btn-ghost btn-sm" type="button">Se connecter</button>
+      <div id="nav-guest" class="account">
+        <button id="nav-login" class="btn btn-ghost btn-sm" type="button" data-auth="login">Se connecter</button>
+        <button id="nav-signup" class="btn btn-primary btn-sm" type="button" data-auth="signup">Créer un compte</button>
+      </div>
       <div id="nav-account" class="account" hidden>
         <span id="nav-avatar" class="avatar" aria-hidden="true"></span>
         <span id="nav-email" class="account-email"></span>
-        <button id="nav-logout" class="btn btn-ghost btn-sm" type="button">Se déconnecter</button>
+        <button id="nav-logout" class="btn btn-ghost btn-sm" type="button" data-logout>Se déconnecter</button>
       </div>
     </div>
   </header>
@@ -122,6 +125,7 @@
         </button>
         <div class="space-tools">
           <button class="btn btn-ghost btn-sm" type="button" data-open-panel="progress"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16" /><path d="M8 15l3-4 3 2 5-7" /></svg>Progression</button>
+          <button id="space-account" class="btn btn-ghost btn-sm" type="button" data-auth="signup">Créer un compte</button>
           <button class="btn btn-ghost btn-sm" type="button" data-open-panel="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" /></svg>Paramètres</button>
           <button id="sound" class="btn btn-ghost btn-sm sound" type="button" aria-pressed="true">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" /><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" /></svg>
@@ -252,36 +256,49 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
       </button>
 
-      <form id="auth-email" class="auth-step" novalidate>
-        <span class="eyebrow"><i class="pulse-dot"></i>Connexion</span>
-        <h2 id="auth-title">Retrouve tes révisions <em>partout</em>.</h2>
-        <p id="auth-why" class="auth-text"></p>
-        <label for="auth-mail">Adresse mail</label>
-        <input id="auth-mail" name="email" type="email" autocomplete="email" required placeholder="prenom.nom@exemple.fr" />
-        <p id="auth-suggest" class="auth-suggest" hidden>
-          Tu voulais dire <button id="auth-suggest-btn" type="button"></button> ?
-        </p>
-        <p class="auth-hint">Gmail, Outlook, Hotmail, Yahoo, Orange, Wanadoo, Free, SFR, La Poste, iCloud… toutes les adresses perso fonctionnent.</p>
-        <button class="btn btn-primary" type="submit">Recevoir mon lien de connexion</button>
-        <p class="auth-msg" role="status" aria-live="polite"></p>
-        <button id="auth-guest" class="auth-link" type="button" hidden>Continuer sans compte</button>
-        <p id="auth-demo" class="auth-demo" hidden>Mode démonstration : la connexion Supabase n'est pas encore branchée. Aucun mail n'est envoyé ; à l'étape suivante, n'importe quel code à 6 chiffres fonctionne.</p>
-      </form>
+      <span class="eyebrow"><i class="pulse-dot"></i>Mon compte</span>
+      <h2 id="auth-title">Garde tes révisions <em>avec toi</em>.</h2>
+      <div class="auth-tabs" role="tablist" aria-label="Connexion ou création de compte">
+        <button id="tab-login" class="auth-tab" type="button" role="tab" aria-selected="true" aria-controls="auth-login" data-tab="login">Se connecter</button>
+        <button id="tab-signup" class="auth-tab" type="button" role="tab" aria-selected="false" aria-controls="auth-signup" data-tab="signup">Créer un compte</button>
+      </div>
 
-      <form id="auth-code" class="auth-step" hidden novalidate>
-        <span class="eyebrow"><i class="pulse-dot"></i>Vérifie ta boîte mail</span>
-        <h2>Ton lien est <em>en route</em>.</h2>
-        <p class="auth-text">Mail envoyé à <strong id="auth-sent-to"></strong>. Clique sur le lien qu'il contient, ou entre ici le code à 6 chiffres.</p>
-        <label for="auth-otp">Code reçu par mail</label>
-        <input id="auth-otp" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="123456" />
-        <button class="btn btn-primary" type="submit">Valider le code</button>
+      <form id="auth-login" class="auth-step" role="tabpanel" aria-labelledby="tab-login" novalidate>
+        <label for="login-mail">Adresse mail</label>
+        <input id="login-mail" type="email" autocomplete="email" required placeholder="prenom.nom@exemple.fr" />
+        <label for="login-pass">Mot de passe</label>
+        <input id="login-pass" type="password" autocomplete="current-password" required minlength="8" />
+        <button class="btn btn-primary" type="submit">Se connecter</button>
         <p class="auth-msg" role="status" aria-live="polite"></p>
-        <p class="auth-spam">Pas reçu au bout d'une minute ? Regarde dans tes <strong>spams</strong> ou ton <strong>courrier indésirable</strong>. C'est fréquent chez Hotmail, Outlook, Orange et Wanadoo. Le mail s'appelle « Ta connexion à Belamis ».</p>
         <div class="auth-links">
-          <button id="auth-resend" class="auth-link" type="button">Renvoyer le mail</button>
-          <button id="auth-back" class="auth-link" type="button">Changer d'adresse mail</button>
+          <button id="auth-forgot" class="auth-link" type="button">Mot de passe oublié ?</button>
+          <button class="auth-link" type="button" data-tab="signup">Pas encore de compte ? Crée-le</button>
         </div>
       </form>
+
+      <form id="auth-signup" class="auth-step" role="tabpanel" aria-labelledby="tab-signup" hidden novalidate>
+        <label for="signup-name">Prénom</label>
+        <input id="signup-name" type="text" autocomplete="given-name" required maxlength="40" placeholder="Ton prénom" />
+        <label for="signup-mail">Adresse mail</label>
+        <input id="signup-mail" type="email" autocomplete="email" required placeholder="prenom.nom@exemple.fr" />
+        <p id="auth-suggest" class="auth-suggest" hidden>Tu voulais dire <button id="auth-suggest-btn" type="button"></button> ?</p>
+        <label for="signup-pass">Mot de passe <small>(8 caractères au moins)</small></label>
+        <input id="signup-pass" type="password" autocomplete="new-password" required minlength="8" />
+        <label class="auth-check"><input id="signup-import" type="checkbox" checked /> Reprendre les révisions déjà faites sur cet appareil</label>
+        <button class="btn btn-primary" type="submit">Créer mon compte</button>
+        <p class="auth-msg" role="status" aria-live="polite"></p>
+        <p class="auth-hint">Gmail, Outlook, Hotmail, Yahoo, Orange, Wanadoo, Free, SFR, La Poste, iCloud… toutes les adresses perso fonctionnent.</p>
+      </form>
+
+      <form id="auth-reset" class="auth-step" hidden novalidate>
+        <p class="auth-text">Choisis ton nouveau mot de passe.</p>
+        <label for="reset-pass">Nouveau mot de passe</label>
+        <input id="reset-pass" type="password" autocomplete="new-password" required minlength="8" />
+        <button class="btn btn-primary" type="submit">Enregistrer</button>
+        <p class="auth-msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <p id="auth-local" class="auth-demo" hidden>Ton compte est enregistré sur cet appareil : tes révisions t'y attendent à chaque connexion.</p>
     </div>
   </div>
 

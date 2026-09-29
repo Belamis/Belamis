@@ -1,8 +1,8 @@
 /*
- * Belamis — connexion par mail et sauvegarde des révisions.
- * Connexion sans mot de passe (Supabase) : l'élève reçoit un mail avec un lien
- * et un code à 6 chiffres. Sa progression est rangée dans la table `progress`,
- * une ligne par élève, que lui seul peut lire et modifier.
+ * Belamis — comptes et sauvegarde des révisions.
+ * Avec Supabase (config.js rempli) : comptes en ligne (mail + mot de passe), révisions retrouvées sur tous les appareils.
+ * Sans Supabase : comptes enregistrés sur cet appareil (mot de passe haché), révisions rangées par compte.
+ * Sans compte : mode invité, révisions dans ce navigateur.
  */
 (() => {
   "use strict";
@@ -10,21 +10,12 @@
   const cfg = window.BELAMIS_CONFIG || {};
   const configured = Boolean(cfg.supabaseUrl && cfg.supabaseAnonKey && window.supabase);
   const sb = configured ? window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey) : null;
-  const DEMO_KEY = "belamis-demo";
 
   const $ = (id) => document.getElementById(id);
   const modal = $("auth");
-  const emailForm = $("auth-email");
-  const codeForm = $("auth-code");
-  const mailInput = $("auth-mail");
-  const otpInput = $("auth-otp");
-  const guestBtn = $("auth-guest");
-  const loginBtn = $("nav-login");
-  const account = $("nav-account");
+  const forms = { login: $("auth-login"), signup: $("auth-signup"), reset: $("auth-reset") };
 
-  let user = null;
-  let pendingEmail = "";
-  let launchAfterLogin = false;
+  let user = null;          // { id, email, prenom }
   let lastFocus = null;
 
   // ---------- Adresses perso : fautes de frappe courantes ----------
@@ -63,59 +54,70 @@
     return best && bestD <= (domain.length > 6 ? 2 : 1) ? `${local}@${best}` : null;
   }
 
+
   const suggestBox = $("auth-suggest");
   const suggestBtn = $("auth-suggest-btn");
   let suggestionShownFor = "";
-
   function showSuggestion(email) {
     const s = suggestEmail(email);
     suggestBox.hidden = !s;
     if (s) suggestBtn.textContent = s;
     return s;
   }
-
   suggestBtn.addEventListener("click", () => {
-    mailInput.value = suggestBtn.textContent;
+    $("signup-mail").value = suggestBtn.textContent;
     suggestBox.hidden = true;
-    mailInput.focus();
+    $("signup-mail").focus();
   });
 
-  // ---------- Stockage (Supabase, ou navigateur en mode démo) ----------
-  const demo = {
-    read() { try { return JSON.parse(localStorage.getItem(DEMO_KEY)) || {}; } catch (_) { return {}; } },
-    write(v) { try { localStorage.setItem(DEMO_KEY, JSON.stringify(v)); } catch (_) { /* stockage bloqué */ } },
-  };
+  // ---------- Stockage local ----------
+  const jsonStore = (key) => ({
+    read() { try { return JSON.parse(localStorage.getItem(key)) || {}; } catch (_) { return {}; } },
+    write(v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (_) { /* stockage bloqué */ } },
+  });
+  const guest = jsonStore("belamis-guest");        // révisions sans compte
+  const accounts = jsonStore("belamis-accounts");  // comptes de cet appareil
+  const session = jsonStore("belamis-session");    // compte connecté sur cet appareil
 
-  const GUEST_KEY = "belamis-guest";
-  const guest = {
-    read() { try { return JSON.parse(localStorage.getItem(GUEST_KEY)) || {}; } catch (_) { return {}; } },
-    write(v) { try { localStorage.setItem(GUEST_KEY, JSON.stringify(v)); } catch (_) { /* stockage bloqué */ } },
-  };
+  async function hashPassword(password, salt) {
+    const data = new TextEncoder().encode(`${salt}:${password}`);
+    if (window.crypto && crypto.subtle) {
+      const buf = await crypto.subtle.digest("SHA-256", data);
+      return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+    }
+    let h = 0; for (const b of data) h = (h * 31 + b) >>> 0; return `x${h.toString(16)}`;
+  }
+  const newSalt = () => [...(window.crypto ? crypto.getRandomValues(new Uint8Array(12)) : [Date.now() % 255])].map((b) => b.toString(16)).join("");
 
+  // ---------- Sauvegarde des révisions ----------
   const store = {
     async load() {
-      if (!user) return null;
-      if (!sb) return demo.read().progress || {};
-      const { data, error } = await sb.from("progress").select("data").eq("user_id", user.id).maybeSingle();
-      if (error) throw error;
-      return (data && data.data) || {};
+      if (!user) return guest.read();
+      if (sb) {
+        const { data, error } = await sb.from("progress").select("data").eq("user_id", user.id).maybeSingle();
+        if (error) throw error;
+        return (data && data.data) || {};
+      }
+      const a = accounts.read()[user.email];
+      return (a && a.progress) || {};
     },
     async save(progress) {
-      if (!user) return;
-      if (!sb) { demo.write({ ...demo.read(), progress }); return; }
-      const { error } = await sb.from("progress").upsert({ user_id: user.id, data: progress, updated_at: new Date().toISOString() });
-      if (error) throw error;
+      if (!user) { guest.write(progress); return; }
+      if (sb) {
+        const { error } = await sb.from("progress").upsert({ user_id: user.id, data: progress, updated_at: new Date().toISOString() });
+        if (error) throw error;
+        return;
+      }
+      const all = accounts.read();
+      if (all[user.email]) { all[user.email].progress = progress; accounts.write(all); }
     },
-    // lecture pour tous : compte connecté, sinon ce navigateur (mode invité)
-    async read() {
-      return user ? store.load() : guest.read();
-    },
+    async read() { return store.load(); },
     // modifications une par une, pour ne jamais écraser une sauvegarde plus récente
     update(fn) {
       queue = queue.then(async () => {
-        const current = (await store.read()) || {};
+        const current = (await store.load()) || {};
         const next = fn(current) || current;
-        if (user) await store.save(next); else guest.write(next);
+        await store.save(next);
         return next;
       });
       const result = queue;
@@ -125,47 +127,50 @@
   };
   let queue = Promise.resolve();
 
-  // ---------- Affichage de l'état connecté ----------
+  // ---------- État du compte ----------
   function renderAccount() {
-    const email = user ? user.email : "";
-    // sans Supabase branché, pas de connexion à proposer : la sauvegarde se fait dans le navigateur
-    loginBtn.hidden = Boolean(user) || !configured;
-    account.hidden = !user;
-    $("nav-email").textContent = email;
-    $("nav-avatar").textContent = email ? email[0].toUpperCase() : "";
+    const name = user ? (user.prenom || user.email.split("@")[0]) : "";
+    $("nav-guest").hidden = Boolean(user);
+    $("nav-account").hidden = !user;
+    $("nav-email").textContent = user ? name : "";
+    $("nav-email").title = user ? user.email : "";
+    $("nav-avatar").textContent = name ? name[0].toUpperCase() : "";
+    const sp = $("space-account");
+    if (sp) sp.textContent = user ? name : "Créer un compte";
   }
 
   function setUser(u) {
-    user = u ? { id: u.id, email: u.email } : null;
+    const before = user && user.id;
+    user = u ? { id: u.id, email: u.email, prenom: u.prenom || (u.user_metadata && u.user_metadata.prenom) || "" } : null;
     renderAccount();
+    if (before !== (user && user.id)) window.dispatchEvent(new CustomEvent("belamis:account"));
   }
 
-  // ---------- Fenêtre de connexion ----------
+  // ---------- Fenêtre ----------
   function msg(form, text, kind) {
     const el = form.querySelector(".auth-msg");
     el.textContent = text || "";
     el.dataset.kind = kind || "";
   }
 
-  function showStep(step) {
-    emailForm.hidden = step !== "email";
-    codeForm.hidden = step !== "code";
-    (step === "email" ? mailInput : otpInput).focus();
+  function showTab(tab) {
+    for (const [k, f] of Object.entries(forms)) f.hidden = k !== tab;
+    $("tab-login").setAttribute("aria-selected", String(tab === "login"));
+    $("tab-signup").setAttribute("aria-selected", String(tab === "signup"));
+    modal.querySelector(".auth-tabs").hidden = tab === "reset";
+    const first = forms[tab].querySelector("input");
+    if (first) first.focus();
   }
 
-  function openAuth({ reason = "", fromLaunch = false } = {}) {
+  function openAuth(tab = "login") {
     lastFocus = document.activeElement;
-    launchAfterLogin = fromLaunch;
-    $("auth-why").textContent = reason || "Entre ton adresse mail : tu reçois un lien pour te connecter, sans mot de passe.";
-    guestBtn.hidden = !fromLaunch;
-    $("auth-demo").hidden = configured;
-    msg(emailForm, "");
-    msg(codeForm, "");
+    Object.values(forms).forEach((f) => msg(f, ""));
     suggestBox.hidden = true;
     suggestionShownFor = "";
+    $("auth-local").hidden = configured;
     modal.hidden = false;
     requestAnimationFrame(() => modal.classList.add("open"));
-    showStep("email");
+    showTab(tab);
   }
 
   function closeAuth() {
@@ -182,160 +187,202 @@
 
   function friendlyError(error) {
     const m = ((error && error.message) || "").toLowerCase();
-    if (error && error.status === 429 || m.includes("rate limit") || m.includes("security purposes")) return "Trop de demandes d'affilée. Attends une minute, puis redemande un lien.";
-    if (m.includes("expired") || m.includes("invalid") || m.includes("token")) return "Ce code ne marche pas ou a expiré. Vérifie-le, ou redemande un lien.";
+    if ((error && error.status === 429) || m.includes("rate limit") || m.includes("security purposes")) return "Trop de tentatives d'affilée. Attends une minute, puis réessaie.";
+    if (m.includes("invalid login") || m.includes("invalid credentials")) return "Adresse mail ou mot de passe incorrect.";
+    if (m.includes("already registered") || m.includes("already been registered")) return "Un compte existe déjà avec cette adresse : connecte-toi.";
+    if (m.includes("not confirmed")) return "Ton adresse n'est pas encore confirmée : clique sur le lien reçu par mail.";
+    if (m.includes("password")) return "Choisis un mot de passe d'au moins 8 caractères.";
     if (m.includes("email")) return "Cette adresse mail ne semble pas valide. Vérifie-la.";
     if (m.includes("fetch") || m.includes("network")) return "Impossible de joindre le serveur. Vérifie ta connexion internet.";
-    return "La connexion a échoué. Réessaie dans un instant.";
+    return "Ça n'a pas marché. Réessaie dans un instant.";
   }
 
-  async function sendLink(email) {
-    if (!sb) return;
-    const { error } = await sb.auth.signInWithOtp({
-      email,
-      options: { emailRedirectTo: location.origin + location.pathname, shouldCreateUser: true },
-    });
-    if (error) throw error;
-  }
+  const validEmail = (e) => /^[^@\s]+@[^@\s.]+(\.[^@\s.]+)+$/.test(e);
 
-  // on ne peut redemander un mail qu'une fois par minute (limite de Supabase)
-  const resendBtn = $("auth-resend");
-  let cooldownTimer = 0;
-  function startCooldown(seconds) {
-    clearInterval(cooldownTimer);
-    let left = seconds;
-    const tick = () => {
-      resendBtn.disabled = left > 0;
-      resendBtn.textContent = left > 0 ? `Renvoyer le mail (${left} s)` : "Renvoyer le mail";
-      if (left-- <= 0) clearInterval(cooldownTimer);
-    };
-    tick();
-    cooldownTimer = setInterval(tick, 1000);
-  }
-
-  resendBtn.addEventListener("click", async () => {
-    resendBtn.disabled = true;
-    try {
-      await sendLink(pendingEmail);
-      msg(codeForm, "Nouveau mail envoyé. Utilise le code du mail le plus récent.", "ok");
-      startCooldown(60);
-    } catch (err) {
-      msg(codeForm, friendlyError(err), "error");
-      startCooldown(20);
-    }
-  });
-
-  emailForm.addEventListener("submit", async (e) => {
+  // ---------- Créer un compte ----------
+  forms.signup.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const email = mailInput.value.trim().toLowerCase();
-    mailInput.value = email;
-    if (!mailInput.checkValidity() || !/@[^@.]+(\.[^@.]+)+$/.test(email)) {
-      msg(emailForm, "Entre une adresse mail complète, par exemple prenom.nom@gmail.com.", "error");
-      return;
-    }
-    // faute de frappe probable : on la signale une fois avant d'envoyer
+    const f = forms.signup;
+    const prenom = $("signup-name").value.trim();
+    const email = $("signup-mail").value.trim().toLowerCase();
+    const password = $("signup-pass").value;
+    $("signup-mail").value = email;
+    if (!prenom) { msg(f, "Indique ton prénom.", "error"); return; }
+    if (!validEmail(email)) { msg(f, "Entre une adresse mail complète, par exemple prenom.nom@gmail.com.", "error"); return; }
     if (suggestionShownFor !== email && showSuggestion(email)) {
       suggestionShownFor = email;
-      msg(emailForm, "Vérifie ton adresse. Clique sur la suggestion, ou renvoie tel quel si elle est juste.", "error");
+      msg(f, "Vérifie ton adresse. Clique sur la suggestion, ou valide tel quel si elle est juste.", "error");
       return;
     }
-    busy(emailForm, true);
-    msg(emailForm, "");
-    try {
-      await sendLink(email);
-      pendingEmail = email;
-      $("auth-sent-to").textContent = email;
-      otpInput.value = "";
-      msg(codeForm, "");
-      showStep("code");
-      startCooldown(60);
-    } catch (err) {
-      msg(emailForm, friendlyError(err), "error");
-    } finally {
-      busy(emailForm, false);
-    }
-  });
-
-  codeForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const token = otpInput.value.replace(/\D/g, "");
-    if (token.length !== 6) { msg(codeForm, "Le code contient 6 chiffres.", "error"); return; }
-    busy(codeForm, true);
+    if (password.length < 8) { msg(f, "Choisis un mot de passe d'au moins 8 caractères.", "error"); return; }
+    const carry = $("signup-import").checked ? guest.read() : {};
+    busy(f, true); msg(f, "");
     try {
       if (sb) {
-        const { data, error } = await sb.auth.verifyOtp({ email: pendingEmail, token, type: "email" });
+        const { data, error } = await sb.auth.signUp({ email, password, options: { data: { prenom }, emailRedirectTo: location.origin + location.pathname } });
         if (error) throw error;
-        setUser(data.user);
+        if (data.session) {
+          setUser(data.user);
+          if (Object.keys(carry).length) await store.save(carry);
+          closeAuth();
+        } else {
+          try { localStorage.setItem("belamis-carry", JSON.stringify(carry)); } catch (_) { /* rien */ }
+          msg(f, "Presque fini : clique sur le lien reçu par mail pour activer ton compte, puis connecte-toi.", "ok");
+        }
       } else {
-        const u = { id: "demo", email: pendingEmail };
-        demo.write({ ...demo.read(), user: u });
-        setUser(u);
+        const all = accounts.read();
+        if (all[email]) throw { message: "already registered" };
+        const salt = newSalt();
+        all[email] = { prenom, salt, hash: await hashPassword(password, salt), created: new Date().toISOString(), progress: carry };
+        accounts.write(all);
+        session.write({ email });
+        setUser({ id: `local:${email}`, email, prenom });
+        closeAuth();
       }
-      closeAuth();
-      if (launchAfterLogin) startRevision();
     } catch (err) {
-      msg(codeForm, friendlyError(err), "error");
+      msg(f, friendlyError(err), "error");
     } finally {
-      busy(codeForm, false);
+      busy(f, false);
     }
   });
 
-  mailInput.addEventListener("input", () => { msg(emailForm, ""); suggestBox.hidden = true; });
-  mailInput.addEventListener("blur", () => { if (mailInput.value.includes("@")) showSuggestion(mailInput.value.trim().toLowerCase()); });
-  otpInput.addEventListener("input", () => msg(codeForm, ""));
-  $("auth-back").addEventListener("click", () => showStep("email"));
-  guestBtn.addEventListener("click", () => { closeAuth(); startRevision(); });
+  // ---------- Se connecter ----------
+  forms.login.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const f = forms.login;
+    const email = $("login-mail").value.trim().toLowerCase();
+    const password = $("login-pass").value;
+    if (!validEmail(email) || !password) { msg(f, "Entre ton adresse mail et ton mot de passe.", "error"); return; }
+    busy(f, true); msg(f, "");
+    try {
+      if (sb) {
+        const { data, error } = await sb.auth.signInWithPassword({ email, password });
+        if (error) throw error;
+        setUser(data.user);
+        let carry = null;
+        try { carry = JSON.parse(localStorage.getItem("belamis-carry") || "null"); localStorage.removeItem("belamis-carry"); } catch (_) { /* rien */ }
+        if (carry && Object.keys(carry).length) {
+          const cur = await store.load();
+          if (!Object.keys(cur).length) await store.save(carry);
+        }
+      } else {
+        const a = accounts.read()[email];
+        if (!a || a.hash !== (await hashPassword(password, a.salt))) throw { message: "invalid login" };
+        session.write({ email });
+        setUser({ id: `local:${email}`, email, prenom: a.prenom });
+      }
+      $("login-pass").value = "";
+      closeAuth();
+    } catch (err) {
+      msg(f, friendlyError(err), "error");
+    } finally {
+      busy(f, false);
+    }
+  });
+
+  // ---------- Mot de passe oublié ----------
+  $("auth-forgot").addEventListener("click", async () => {
+    const f = forms.login;
+    const email = $("login-mail").value.trim().toLowerCase();
+    if (!validEmail(email)) { msg(f, "Entre d'abord ton adresse mail ci-dessus.", "error"); $("login-mail").focus(); return; }
+    if (!sb) {
+      msg(f, "Ton compte est enregistré sur cet appareil : le mot de passe ne peut pas être envoyé par mail. Si tu l'as oublié, crée un nouveau compte.", "error");
+      return;
+    }
+    try {
+      const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo: location.origin + location.pathname });
+      if (error) throw error;
+      msg(f, "Si un compte existe avec cette adresse, un mail vient d'être envoyé pour choisir un nouveau mot de passe. Pense à regarder dans les spams.", "ok");
+    } catch (err) {
+      msg(f, friendlyError(err), "error");
+    }
+  });
+
+  forms.reset.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const f = forms.reset;
+    const password = $("reset-pass").value;
+    if (password.length < 8) { msg(f, "Choisis un mot de passe d'au moins 8 caractères.", "error"); return; }
+    busy(f, true);
+    try {
+      const { error } = await sb.auth.updateUser({ password });
+      if (error) throw error;
+      msg(f, "Mot de passe enregistré. Tu es connecté.", "ok");
+      setTimeout(closeAuth, 1200);
+    } catch (err) {
+      msg(f, friendlyError(err), "error");
+    } finally {
+      busy(f, false);
+    }
+  });
+
+  // ---------- Se déconnecter ----------
+  async function logout() {
+    if (sb) { try { await sb.auth.signOut(); } catch (_) { /* hors ligne */ } }
+    session.write({});
+    setUser(null);
+  }
+
+  // ---------- Événements ----------
+  $("signup-mail").addEventListener("input", () => { suggestBox.hidden = true; });
+  $("signup-mail").addEventListener("blur", () => { const v = $("signup-mail").value.trim().toLowerCase(); if (v.includes("@")) showSuggestion(v); });
   modal.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeAuth));
+  modal.addEventListener("click", (e) => { const t = e.target.closest("[data-tab]"); if (t) showTab(t.dataset.tab); });
   modal.addEventListener("keydown", (e) => {
     if (e.key === "Escape") { e.stopPropagation(); closeAuth(); }
     if (e.key !== "Tab") return;
-    // garder le focus dans la fenêtre
     const f = [...modal.querySelectorAll("button, input")].filter((el) => !el.disabled && el.offsetParent !== null);
     if (!f.length) return;
     if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
     else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
   });
-
-  loginBtn.addEventListener("click", () => openAuth());
-  $("nav-logout").addEventListener("click", async () => {
-    if (sb) await sb.auth.signOut();
-    else { const d = demo.read(); delete d.user; demo.write(d); }
-    setUser(null);
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("[data-auth]");
+    if (a) {
+      e.preventDefault();
+      // connecté : le bouton « compte » de l'espace ouvre les paramètres (section Mon compte)
+      if (user && a.id === "space-account") { const s = document.querySelector('[data-open-panel="settings"]'); if (s) s.click(); return; }
+      openAuth(a.dataset.auth);
+      return;
+    }
+    if (e.target.closest("[data-logout]")) { e.preventDefault(); logout(); }
   });
 
   // ---------- Lancement des révisions ----------
   async function startRevision() {
     const note = $("space-note");
-    note.textContent = user ? "Chargement de ta progression…" : "";
+    note.textContent = "";
     window.BelamisLaunch();
     if (!user) return;
     try {
       const now = new Date().toISOString();
       const next = await store.update((p) => ({ ...p, sessions: (p.sessions || 0) + 1, firstVisit: p.firstVisit || now, lastVisit: now }));
-      const where = sb ? "sur ton compte" : "dans ce navigateur (mode démo)";
-      note.textContent = next.sessions === 1
-        ? `Première séance, bienvenue ! Ta progression est sauvegardée ${where}.`
-        : `Séance n°${next.sessions}. Ta progression est sauvegardée ${where}.`;
+      const name = user.prenom ? `${user.prenom}, ` : "";
+      note.textContent = next.sessions === 1 ? `Bienvenue ${name}c'est ta première séance !` : `Bon retour ${name}séance n°${next.sessions}.`;
     } catch (_) {
       note.textContent = "Ta progression n'a pas pu être chargée. Vérifie ta connexion internet.";
     }
   }
-
   document.querySelectorAll("[data-launch]").forEach((el) =>
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-      // on entre directement dans l'univers ; la connexion reste proposée dans la barre du haut
-      startRevision();
-    })
+    el.addEventListener("click", (e) => { e.preventDefault(); startRevision(); })
   );
 
   // ---------- Démarrage : session existante ? ----------
   if (sb) {
     sb.auth.getSession().then(({ data }) => setUser(data.session && data.session.user));
-    sb.auth.onAuthStateChange((_event, session) => setUser(session && session.user));
+    sb.auth.onAuthStateChange((event, s) => {
+      setUser(s && s.user);
+      if (event === "PASSWORD_RECOVERY") { openAuth("reset"); }
+    });
   } else {
-    setUser(demo.read().user || null);
+    const s = session.read();
+    const a = s.email && accounts.read()[s.email];
+    setUser(a ? { id: `local:${s.email}`, email: s.email, prenom: a.prenom } : null);
   }
 
-  window.Belamis = { store, get user() { return user; }, configured };
+  window.Belamis = {
+    store, configured,
+    get user() { return user; },
+    openAuth, logout,
+  };
 })();

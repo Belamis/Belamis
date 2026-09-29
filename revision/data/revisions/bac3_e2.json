@@ -1,0 +1,2227 @@
+{
+ "sujets": [
+  {
+   "id": "rev-bac3-e2-hg-reperes",
+   "num": 1,
+   "domaine": "hg",
+   "titre": "Les grands repères chronologiques",
+   "theme": "Périodes, dates clés de l’Antiquité à nos jours, calcul des siècles et frise chronologique",
+   "revision": true,
+   "duree": 1800,
+   "total": 13,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>Le jury attend des <strong>dates précises</strong> et une chronologie sûre : c’est la base de toute réponse d’histoire. Tu dois savoir placer un événement dans sa période, dans son siècle, et l’expliquer en une phrase.</p><h4>1. Les quatre grandes périodes (après la Préhistoire)</h4><table class=\"tab\"><thead><tr><th>Période</th><th>Début conventionnel</th><th>Fin conventionnelle</th></tr></thead><tbody><tr><td>Préhistoire</td><td>apparition des premiers humains (plus de 2 millions d’années)</td><td>invention de l’écriture, vers 3300 av. J.-C. (Mésopotamie)</td></tr><tr><td>Antiquité</td><td>vers 3300 av. J.-C.</td><td>476 : chute de l’Empire romain d’Occident</td></tr><tr><td>Moyen Âge</td><td>476</td><td>1492 (Colomb en Amérique) ou 1453 (prise de Constantinople)</td></tr><tr><td>Temps modernes</td><td>1492</td><td>1789 : Révolution française</td></tr><tr><td>Époque contemporaine</td><td>1789</td><td>aujourd’hui</td></tr></tbody></table><h4>2. Les dates incontournables</h4><table class=\"tab\"><thead><tr><th>Période</th><th>Repères</th></tr></thead><tbody><tr><td>Antiquité</td><td>vers 3300 av. J.-C. : écriture ; Ve s. av. J.-C. : Athènes de Périclès ; 52 av. J.-C. : Alésia (Vercingétorix vaincu par César) ; Ier s. : naissance du christianisme ; 476 : fin de l’Empire romain d’Occident</td></tr><tr><td>Moyen Âge</td><td>vers 496-499 : baptême de Clovis ; 622 : hégire (début du calendrier musulman) ; 800 : Charlemagne empereur ; 987 : Hugues Capet, début des Capétiens ; 1095 : appel à la première croisade ; XIe-XIIIe s. : art roman puis gothique</td></tr><tr><td>Temps modernes</td><td>1492 : Colomb en Amérique ; 1515 : Marignan (François Ier) ; 1539 : ordonnance de Villers-Cotterêts ; 1598 : édit de Nantes (Henri IV) ; 1661-1715 : règne personnel de Louis XIV ; 1685 : révocation de l’édit de Nantes ; XVIIIe s. : les Lumières, traite atlantique</td></tr><tr><td>Époque contemporaine</td><td>1789 : Révolution ; 1792 : Ire République ; 1804 : Napoléon empereur, Code civil ; 1848 : suffrage universel masculin, abolition de l’esclavage ; 1870 : IIIe République ; 1881-1882 : lois Ferry ; 1905 : séparation des Églises et de l’État ; 1914-1918 ; 1939-1945 ; 1958 : Ve République ; 1957 : traités de Rome ; 1989 : chute du mur de Berlin</td></tr></tbody></table><h4>3. Méthode : le siècle d’une date</h4><ul><li>Le siècle = <strong>centaines + 1</strong> : 1515 → 15 + 1 = XVIe siècle ; 476 → Ve siècle.</li><li>Piège : une année « ronde » termine le siècle. L’an <strong>1900</strong> appartient au XIXe siècle, <strong>1901</strong> ouvre le XXe (on n’a pas d’an 0).</li><li>Avant J.-C., on compte à rebours : 52 av. J.-C. → Ier siècle av. J.-C. ; 3300 av. J.-C. → XXXIVe siècle av. J.-C. (on dit plutôt « IVe millénaire »).</li><li>Un millénaire = 1 000 ans : le IIe millénaire va de 1001 à 2000.</li></ul><h4>4. Construire une frise</h4><ul><li>Une <strong>échelle</strong> régulière (1 cm = 10 ans, 100 ans…) et un titre.</li><li>Des <strong>périodes</strong> (bandes colorées) et des <strong>dates</strong> (points ou traits) : on distingue ce qui dure et ce qui est ponctuel.</li><li>À l’école (cycle 3), la frise est un outil permanent de la classe : on y replace chaque nouveau repère.</li></ul><div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Pour chaque repère : <strong>la date, le lieu, les acteurs, la portée</strong>. Exemple : « En 1598, Henri IV signe l’édit de Nantes, qui accorde aux protestants une liberté de culte limitée et met fin aux guerres de Religion. »</p><p>Les découpages en périodes sont des <strong>conventions</strong> d’historiens (souvent européennes) : ils aident à penser le temps, ce ne sont pas des ruptures vécues par les contemporains.</p></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La bataille de Marignan a lieu en 1515. À quel siècle appartient-elle ?</p>",
+       "options": [
+        "XVe siècle",
+        "XVIe siècle",
+        "XVIIe siècle"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>XVIe siècle</strong> : 15 centaines + 1 = 16.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>L’année 1900 appartient au…</p>",
+       "options": [
+        "XIXe siècle",
+        "XXe siècle"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>XIXe siècle</strong> : un siècle va de l’an 01 à l’an 00 (1801-1900). Le XXe commence en 1901.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel événement marque, par convention, la fin de la Préhistoire ?</p>",
+       "options": [
+        "La maîtrise du feu",
+        "L’invention de l’agriculture",
+        "L’invention de l’écriture"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<p>L’<strong>écriture</strong>, vers 3300 av. J.-C. en Mésopotamie. L’agriculture (Néolithique) appartient encore à la Préhistoire.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel ordre chronologique est juste ?</p>",
+       "options": [
+        "Clovis baptisé → Charlemagne empereur → Hugues Capet roi",
+        "Charlemagne empereur → Clovis baptisé → Hugues Capet roi",
+        "Hugues Capet roi → Clovis baptisé → Charlemagne empereur"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>Vers 496-499 (Clovis), 800 (Charlemagne), 987 (Hugues Capet).</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles décisions sont prises sous Louis XIV ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "La révocation de l’édit de Nantes",
+        "L’ordonnance de Villers-Cotterêts",
+        "L’installation de la Cour à Versailles",
+        "L’abolition des privilèges"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p>Louis XIV révoque l’édit de Nantes en <strong>1685</strong> et installe la Cour à <strong>Versailles en 1682</strong>. Villers-Cotterêts date de François Ier (1539) ; l’abolition des privilèges, de la nuit du 4 août 1789.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>L’esclavage est aboli <strong>définitivement</strong> dans les colonies françaises en…</p>",
+       "options": [
+        "1794",
+        "1802",
+        "1848"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<p><strong>1848</strong> (décret du 27 avril, à l’initiative de Victor Schœlcher). Une première abolition date de 1794, mais Bonaparte rétablit l’esclavage en 1802.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles affirmations sont exactes ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "La loi de 1881 rend l’école primaire publique gratuite",
+        "La loi de 1882 la rend obligatoire et laïque",
+        "La loi de séparation des Églises et de l’État date de 1882"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p>Lois Ferry : gratuité (<strong>1881</strong>), obligation de 6 à 13 ans et laïcité des programmes (<strong>1882</strong>). La séparation des Églises et de l’État date du <strong>9 décembre 1905</strong>.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelle date ouvre, par convention, l’époque contemporaine ?</p>",
+       "options": [
+        "1492",
+        "1789",
+        "1815"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>1789</strong> : la Révolution française, qui fonde la souveraineté nationale et l’égalité des droits.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 5,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Classe ces huit événements dans l’ordre chronologique, puis indique pour chacun sa <strong>période</strong> et son <strong>siècle</strong> : la prise de la Bastille ; Alésia ; l’hégire ; l’édit de Nantes ; le couronnement de Charlemagne ; la chute du mur de Berlin ; l’arrivée de Colomb en Amérique ; le baptême de Clovis.</p>",
+       "corrige": "<table class=\"tab\"><thead><tr><th>Date</th><th>Événement</th><th>Période</th><th>Siècle</th></tr></thead><tbody><tr><td>52 av. J.-C.</td><td>Alésia</td><td>Antiquité</td><td>Ier s. av. J.-C.</td></tr><tr><td>vers 496-499</td><td>Baptême de Clovis</td><td>Moyen Âge (début)</td><td>Ve s.</td></tr><tr><td>622</td><td>Hégire</td><td>Moyen Âge</td><td>VIIe s.</td></tr><tr><td>800</td><td>Couronnement de Charlemagne</td><td>Moyen Âge</td><td>VIIIe s. (dernière année du siècle : 701-800)</td></tr><tr><td>1492</td><td>Colomb en Amérique</td><td>début des Temps modernes</td><td>XVe s.</td></tr><tr><td>1598</td><td>Édit de Nantes</td><td>Temps modernes</td><td>XVIe s.</td></tr><tr><td>1789</td><td>Prise de la Bastille</td><td>début de l’époque contemporaine</td><td>XVIIIe s.</td></tr><tr><td>1989</td><td>Chute du mur de Berlin</td><td>Époque contemporaine</td><td>XXe s.</td></tr></tbody></table><p>Piège : <strong>800</strong> appartient au VIIIe siècle et <strong>1492</strong> au XVe : la date qui ouvre une période n’est pas forcément dans le « nouveau » siècle.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>En quelques lignes, explique pourquoi on fait commencer l’époque contemporaine en 1789.</p>",
+       "corrige": "<p>En 1789, la Révolution française met fin à la monarchie absolue et à la société d’ordres : les députés se proclament Assemblée nationale (17 juin), les privilèges sont abolis (nuit du 4 août) et la <strong>Déclaration des droits de l’homme et du citoyen</strong> (26 août) affirme l’égalité en droits et la souveraineté de la nation. Ces principes (libertés, égalité devant la loi, citoyenneté) fondent le monde politique qui suit, même si leur mise en œuvre est longue (suffrage universel masculin en 1848, vote des femmes en 1944). Attention : c’est une convention française et européenne ; d’autres historiens insistent sur la révolution industrielle.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-hg-1914-1945",
+   "num": 2,
+   "domaine": "hg",
+   "titre": "La France de 1914 à 1945",
+   "theme": "Guerre totale, totalitarismes, Vichy et la collaboration, Résistance, Shoah",
+   "revision": true,
+   "duree": 2400,
+   "total": 13,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>C’est le cœur du programme de 3e, et un thème déjà tombé au concours (question de cours sur <strong>Vichy</strong>, session 2026). Il faut maîtriser les dates, les notions (guerre totale, totalitarisme, collaboration, génocide) et savoir construire un développement.</p><h4>1. La Première Guerre mondiale (1914-1918) : une guerre totale</h4><ul><li><strong>28 juin 1914</strong> : attentat de Sarajevo ; l’Allemagne déclare la guerre à la France le <strong>3 août 1914</strong>. Triple-Entente (France, Royaume-Uni, Russie) contre Triple-Alliance (Allemagne, Autriche-Hongrie ; l’Italie rejoint l’Entente en 1915).</li><li>Guerre de mouvement (bataille de la Marne, septembre 1914), puis <strong>guerre de position</strong> dans les tranchées. <strong>Verdun</strong> (février-décembre 1916) et la Somme (juillet-novembre 1916) : batailles d’anéantissement.</li><li><strong>Guerre totale</strong> : mobilisation des soldats, de l’économie (femmes dans les usines, « munitionnettes »), des colonies (tirailleurs), des esprits (propagande, censure).</li><li>Violences contre les civils : <strong>génocide des Arméniens</strong> par l’Empire ottoman (1915-1916).</li><li>1917 : entrée en guerre des États-Unis (avril), révolutions en Russie. <strong>Armistice le 11 novembre 1918</strong> ; traité de <strong>Versailles</strong> (28 juin 1919).</li><li>Bilan : environ 10 millions de soldats morts, dont environ 1,4 million de Français ; « gueules cassées », monuments aux morts dans chaque commune.</li></ul><h4>2. Démocraties fragilisées et totalitarismes</h4><p>Un <strong>régime totalitaire</strong> veut contrôler toute la société : parti unique, culte du chef, propagande, embrigadement de la jeunesse, terreur policière, élimination des opposants.</p><table class=\"tab\"><thead><tr><th></th><th>URSS de Staline</th><th>Allemagne nazie</th></tr></thead><tbody><tr><td>Arrivée au pouvoir</td><td>Staline s’impose après la mort de Lénine (1924), seul maître à la fin des années 1920</td><td>Hitler nommé chancelier le 30 janvier 1933</td></tr><tr><td>Idéologie</td><td>communisme : société sans classes</td><td>nazisme : racisme, antisémitisme, « espace vital »</td></tr><tr><td>Terreur</td><td>goulag, grandes purges (1936-1938), famine en Ukraine (1932-1933)</td><td>camps de concentration (Dachau, 1933), lois de Nuremberg (1935), Nuit de Cristal (9-10 novembre 1938)</td></tr></tbody></table><p>L’Italie de Mussolini (au pouvoir en 1922) est un régime fasciste. En France, la crise des années 1930 (émeute du 6 février 1934) aboutit au <strong>Front populaire</strong> (1936) : congés payés, semaine de 40 heures.</p><h4>3. La Seconde Guerre mondiale, guerre d’anéantissement</h4><ul><li>1er septembre 1939 : invasion de la Pologne ; 3 septembre : la France et le Royaume-Uni déclarent la guerre à l’Allemagne.</li><li>Mai-juin 1940 : défaite française. <strong>18 juin 1940</strong> : appel du général de Gaulle à Londres. <strong>22 juin</strong> : armistice (zone occupée au nord et à l’ouest, zone « libre » au sud jusqu’en novembre 1942).</li><li>Guerre mondiale (1941 : attaque de l’URSS et de Pearl Harbor), violences extrêmes contre les civils, bombes atomiques (Hiroshima 6 août, Nagasaki 9 août 1945).</li><li>Fin : capitulation allemande <strong>8 mai 1945</strong> ; capitulation japonaise le 2 septembre 1945.</li></ul><h4>4. Vichy : un régime autoritaire qui collabore</h4><ul><li><strong>10 juillet 1940</strong> : l’Assemblée nationale vote les pleins pouvoirs au maréchal Pétain. Fin de la IIIe République ; naissance de l’<strong>État français</strong>, installé à Vichy.</li><li><strong>Révolution nationale</strong> : « Travail, Famille, Patrie », culte du chef, suppression des partis et des élections, exclusion des Juifs, des étrangers, des francs-maçons, des communistes.</li><li><strong>Antisémitisme d’État</strong> : statut des Juifs du 3 octobre 1940 (exclusion de la fonction publique, de l’enseignement…), second statut en juin 1941, recensements, spoliations.</li><li><strong>Collaboration</strong> d’État après l’entrevue de <strong>Montoire</strong> (24 octobre 1940) : police française dans les rafles (<strong>Vél d’Hiv, 16-17 juillet 1942</strong>, plus de 13 000 Juifs arrêtés), Service du travail obligatoire (<strong>STO</strong>, février 1943), Milice (1943).</li><li>En 1995, le président Chirac reconnaît la responsabilité de l’État français dans la déportation des Juifs.</li></ul><h4>5. La Résistance</h4><ul><li><strong>Extérieure</strong> : la France libre du général de Gaulle, les Forces françaises libres.</li><li><strong>Intérieure</strong> : réseaux (renseignement, évasion), mouvements (Combat, Libération, Franc-Tireur…), presse clandestine, sabotages ; maquis gonflés par les réfractaires au STO. Aide aux Juifs (les « Justes parmi les nations »).</li><li><strong>Jean Moulin</strong> unifie la Résistance : première réunion du <strong>Conseil national de la Résistance</strong> le 27 mai 1943 ; programme du CNR (15 mars 1944).</li><li>Libération : débarquements de Normandie (6 juin 1944) et de Provence (15 août 1944), libération de Paris le 25 août 1944.</li></ul><h4>6. La Shoah</h4><p>Génocide d’environ <strong>6 millions de Juifs</strong> d’Europe par les nazis et leurs complices : fusillades de masse à l’Est par les Einsatzgruppen (« Shoah par balles », dès 1941), ghettos, puis <strong>centres de mise à mort</strong> (Auschwitz-Birkenau, Treblinka, Sobibor, Belzec, Chelmno, Majdanek). La conférence de <strong>Wannsee</strong> (20 janvier 1942) organise la coordination de la « solution finale ». Depuis la France, environ 75 000 Juifs sont déportés ; seuls quelques milliers reviennent. Les Tsiganes sont aussi victimes d’un génocide.</p><div class=\"doc\"><p class=\"doc-title\">À retenir : ne confonds pas</p><ul><li><strong>Camp de concentration</strong> (détention, travail forcé, mort massive par épuisement) et <strong>centre de mise à mort</strong> (assassinat immédiat, dans les chambres à gaz) ; Auschwitz-Birkenau est les deux.</li><li><strong>Armistice</strong> (arrêt des combats) et <strong>capitulation</strong> (reddition de l’armée).</li><li><strong>Collaboration</strong> d’État (Vichy) et <strong>collaborationnisme</strong> (partisans de l’Allemagne nazie à Paris).</li></ul></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles caractéristiques définissent une « guerre totale » ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "La mobilisation de l’économie et des civils",
+        "La propagande et la censure",
+        "L’utilisation exclusive de soldats professionnels",
+        "L’engagement des empires coloniaux"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>Dans une guerre totale, <strong>toutes les ressources</strong> de la nation sont mobilisées : hommes, économie, colonies, esprits. Les armées de 1914 sont des armées de conscrits, pas de professionnels.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La bataille de Verdun se déroule en…</p>",
+       "options": [
+        "1914",
+        "1916",
+        "1918"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>De <strong>février à décembre 1916</strong> ; environ 300 000 morts français et allemands.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qui vote les pleins pouvoirs à Pétain le 10 juillet 1940 ?</p>",
+       "options": [
+        "Les Allemands",
+        "L’Assemblée nationale (députés et sénateurs réunis)",
+        "Un référendum"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Les parlementaires réunis en <strong>Assemblée nationale</strong> à Vichy votent les pleins pouvoirs (569 voix pour, 80 contre). Ce vote met fin à la IIIe République.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La rafle du Vél d’Hiv (16-17 juillet 1942) est menée…</p>",
+       "options": [
+        "uniquement par la Gestapo",
+        "par la police française, à la demande des autorités allemandes",
+        "par la Milice seule"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>C’est la <strong>police française</strong> qui arrête plus de 13 000 Juifs, dont environ 4 000 enfants : un exemple majeur de la collaboration d’État.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels éléments appartiennent à la « Révolution nationale » de Vichy ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "La devise « Travail, Famille, Patrie »",
+        "Le culte du chef",
+        "Le suffrage universel",
+        "L’exclusion des Juifs"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>Vichy supprime les élections et les libertés ; il exalte Pétain et exclut Juifs, étrangers, communistes et francs-maçons.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qui préside la première réunion du Conseil national de la Résistance (27 mai 1943) ?</p>",
+       "options": [
+        "Jean Moulin",
+        "Charles de Gaulle",
+        "Lucie Aubrac"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Jean Moulin</strong>, représentant de De Gaulle. Arrêté à Caluire en juin 1943, il meurt sous la torture.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel lieu est à la fois un camp de concentration et un centre de mise à mort ?</p>",
+       "options": [
+        "Dachau",
+        "Auschwitz-Birkenau",
+        "Drancy"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Auschwitz-Birkenau</strong>. Dachau (1933) est un camp de concentration ; Drancy, un camp de transit en France, d’où partent la plupart des convois vers Auschwitz.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles dates sont justes ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Hitler chancelier : 30 janvier 1933",
+        "Armistice franco-allemand : 22 juin 1940",
+        "Libération de Paris : 25 août 1944",
+        "Capitulation allemande : 11 novembre 1945"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p>La capitulation allemande date du <strong>8 mai 1945</strong> ; le 11 novembre est l’armistice de 1918.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 5,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p><strong>Question de cours (type concours).</strong> Présente le régime de Vichy : sa naissance, sa nature et sa politique (organise ta réponse en un plan).</p>",
+       "corrige": "<p><strong>Introduction</strong> : après la défaite de mai-juin 1940 et l’armistice du 22 juin, la France est coupée en deux zones. Le 10 juillet 1940, les parlementaires votent les pleins pouvoirs au maréchal Pétain : la IIIe République disparaît au profit de l’« État français » (1940-1944).</p><p><strong>I. Un régime autoritaire</strong> : Pétain concentre les pouvoirs (actes constitutionnels), supprime élections, partis et syndicats, fait l’objet d’un culte (portraits, « Maréchal, nous voilà »). La Révolution nationale (« Travail, Famille, Patrie ») rejette les valeurs républicaines ; la jeunesse est encadrée.</p><p><strong>II. Un régime d’exclusion</strong> : statuts des Juifs (octobre 1940, juin 1941), internement des étrangers, répression des communistes et des résistants.</p><p><strong>III. Un régime qui collabore</strong> : Montoire (octobre 1940), collaboration policière (Vél d’Hiv, juillet 1942), économique (STO, février 1943), Milice (1943). Il perd tout pouvoir réel après l’occupation totale du pays (novembre 1942).</p><p><strong>Conclusion</strong> : le régime s’effondre à la Libération (été 1944) ; le GPRF rétablit la légalité républicaine. En 1995, l’État reconnaît sa responsabilité dans la déportation des Juifs.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un élève de CM2 affirme : « Pendant la guerre, tous les Français étaient résistants. » Comment corriges-tu cette idée ?</p>",
+       "corrige": "<p>On valorise la question, puis on nuance avec des faits : la grande majorité des Français cherche d’abord à survivre (pénuries, prisonniers de guerre). Une <strong>minorité</strong> s’engage dans la Résistance, qui grandit à partir de 1942-1943 (STO, défaites allemandes) ; une autre minorité collabore. On peut montrer une affiche de propagande de Vichy, un tract clandestin et un témoignage de Juste pour faire comprendre la diversité des attitudes, sans juger les individus mais en distinguant les choix.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-hg-republique",
+   "num": 3,
+   "domaine": "hg",
+   "titre": "La République de 1870 à la Ve République",
+   "theme": "IIIe, IVe et Ve Républiques : institutions, libertés, élargissement des droits et droits des femmes",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>De 1870 à nos jours, la République s’installe durablement, change de constitution et élargit les droits. Le jury attend la chronologie des régimes, le rôle des institutions et l’histoire des droits, notamment ceux des femmes.</p><h4>1. La IIIe République (1870-1940) : enraciner la République</h4><ul><li><strong>4 septembre 1870</strong> : proclamation de la République après la défaite de Sedan. Mars-mai 1871 : la Commune de Paris, écrasée lors de la « Semaine sanglante ».</li><li><strong>1875</strong> : lois constitutionnelles (amendement Wallon) ; régime parlementaire : Chambre des députés et Sénat élisent le président.</li><li>Symboles : la Marseillaise hymne national (1879), le 14 juillet fête nationale (1880), Marianne dans les mairies.</li><li>Libertés : liberté de réunion et <strong>liberté de la presse</strong> (1881), syndicats (1884), <strong>associations</strong> (1901).</li><li>École : lois <strong>Ferry</strong> (1881-1882) ; <strong>séparation des Églises et de l’État</strong> (9 décembre 1905).</li><li>Crises : l’<strong>affaire Dreyfus</strong> (1894-1906), le 6 février 1934 ; la République disparaît le 10 juillet 1940.</li></ul><h4>2. Refonder la République (1944-1958)</h4><ul><li><strong>GPRF</strong> (1944-1946) présidé par De Gaulle : droit de vote des femmes (ordonnance du 21 avril 1944), Sécurité sociale (1945), nationalisations.</li><li><strong>IVe République</strong> (constitution du 27 octobre 1946) : régime parlementaire, préambule de 1946 (droit au travail, droit de grève, égalité femmes-hommes « dans tous les domaines »). Instabilité gouvernementale et guerre d’Algérie (1954-1962) entraînent sa chute en mai 1958.</li></ul><h4>3. La Ve République (depuis 1958)</h4><ul><li>Constitution adoptée par référendum le 28 septembre et promulguée le <strong>4 octobre 1958</strong>. Exécutif renforcé : le président nomme le Premier ministre, peut dissoudre l’Assemblée, recourir au référendum, disposer des pleins pouvoirs en cas de crise (art. 16).</li><li><strong>1962</strong> : élection du président au suffrage universel direct (référendum) ; première élection en <strong>1965</strong>.</li><li>Alternance en 1981 ; cohabitations (1986, 1993, 1997) ; <strong>quinquennat</strong> adopté en 2000.</li><li>Le <strong>Conseil constitutionnel</strong> vérifie la conformité des lois à la Constitution (bloc de constitutionnalité : DDHC de 1789, préambule de 1946, Charte de l’environnement de 2004).</li></ul><h4>4. L’élargissement des droits</h4><table class=\"tab\"><thead><tr><th>Date</th><th>Droit</th></tr></thead><tbody><tr><td>1848</td><td>suffrage universel masculin ; abolition de l’esclavage</td></tr><tr><td>1880</td><td>loi Camille Sée : lycées publics de jeunes filles</td></tr><tr><td>1936</td><td>trois femmes sous-secrétaires d’État (gouvernement Blum), alors qu’elles ne votent pas</td></tr><tr><td>1944-1945</td><td>droit de vote et d’éligibilité des femmes ; premier vote aux municipales d’avril 1945</td></tr><tr><td>1965</td><td>les femmes mariées peuvent exercer un métier et ouvrir un compte bancaire sans l’autorisation de leur mari</td></tr><tr><td>1967</td><td>loi Neuwirth : contraception autorisée</td></tr><tr><td>1974</td><td>majorité civile et droit de vote à 18 ans</td></tr><tr><td>1975</td><td>loi Veil : dépénalisation de l’IVG ; divorce par consentement mutuel</td></tr><tr><td>1981</td><td>abolition de la peine de mort (Robert Badinter)</td></tr><tr><td>2000</td><td>loi sur la parité en politique</td></tr><tr><td>2024</td><td>liberté de recourir à l’IVG inscrite dans la Constitution</td></tr></tbody></table><div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Une <strong>République</strong> n’est pas seulement l’absence de roi : c’est un régime fondé sur la souveraineté du peuple, l’égalité devant la loi et des libertés garanties. Son histoire est celle d’un <strong>élargissement progressif</strong> de la citoyenneté : aux hommes (1848), aux femmes (1944), aux jeunes de 18 ans (1974).</p></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans quel contexte la IIIe République est-elle proclamée le 4 septembre 1870 ?</p>",
+       "options": [
+        "Après la défaite de Sedan face à la Prusse",
+        "Après la mort de Napoléon Ier",
+        "Après la révolution de 1848"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>La capture de Napoléon III à <strong>Sedan</strong> (2 septembre 1870) fait tomber le Second Empire.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles lois de la IIIe République garantissent des libertés ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "La loi de 1881 sur la liberté de la presse",
+        "La loi de 1901 sur les associations",
+        "La loi de 1884 sur les syndicats",
+        "Le statut des Juifs de 1940"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p>1881, 1884 et 1901 sont des lois de liberté. Le statut des Juifs (octobre 1940) est une loi d’exclusion du régime de Vichy.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Les Françaises votent pour la première fois en…</p>",
+       "options": [
+        "1936",
+        "1945",
+        "1958"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Aux municipales d’<strong>avril 1945</strong>, après l’ordonnance du 21 avril 1944.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Depuis quand le président de la République est-il élu au suffrage universel direct ?</p>",
+       "options": [
+        "1958 (première élection en 1958)",
+        "Réforme de 1962 (première élection en 1965)",
+        "Réforme de 2000"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Référendum d’octobre <strong>1962</strong> ; première élection directe en <strong>1965</strong> (De Gaulle face à Mitterrand). En 1958, le président était élu par un collège d’environ 80 000 grands électeurs.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qu’apporte le préambule de la Constitution de 1946 ?</p>",
+       "options": [
+        "Il crée l’élection du président au suffrage direct",
+        "Il proclame des droits économiques et sociaux (travail, grève, protection sociale)",
+        "Il abolit la peine de mort"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Le préambule de 1946 ajoute des <strong>droits sociaux</strong> et l’égalité femmes-hommes ; il fait toujours partie du bloc de constitutionnalité.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles dates sont exactes ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Abolition de la peine de mort : 1981",
+        "Majorité à 18 ans : 1974",
+        "Loi Veil sur l’IVG : 1967",
+        "Quinquennat : 2000"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>La loi Veil date de <strong>1975</strong> ; 1967 est la loi Neuwirth sur la contraception.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel est le rôle principal du Conseil constitutionnel ?</p>",
+       "options": [
+        "Juger les crimes",
+        "Vérifier que les lois respectent la Constitution et contrôler la régularité des élections nationales",
+        "Voter le budget"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Créé en 1958, il contrôle la <strong>constitutionnalité des lois</strong> (y compris par la question prioritaire de constitutionnalité depuis 2010) et veille à la régularité des élections nationales et des référendums.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 5,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Explique comment la IIIe République parvient à « enraciner » la République en France entre 1870 et 1914 (trois arguments datés).</p>",
+       "corrige": "<p><strong>1. Des institutions stables</strong> : les lois constitutionnelles de 1875 installent un régime parlementaire qui durera jusqu’en 1940, le plus long depuis 1789.</p><p><strong>2. Des symboles et des libertés</strong> : Marseillaise (1879), 14 juillet (1880), Marianne ; liberté de la presse et de réunion (1881), syndicats (1884), associations (1901). Le citoyen vote (suffrage universel masculin) et s’informe.</p><p><strong>3. L’école et la laïcité</strong> : les lois Ferry (1881-1882) forment de futurs citoyens (instruction morale et civique, histoire nationale) ; la loi de 1905 sépare les Églises et l’État et garantit la liberté de conscience. La République surmonte aussi des crises (boulangisme, affaire Dreyfus), ce qui prouve sa solidité. Limite : les femmes restent exclues du vote.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Pour une classe de CM2, propose une frise de cinq dates sur l’égalité femmes-hommes, avec une phrase par date.</p>",
+       "corrige": "<ul><li><strong>1880</strong> : des lycées publics s’ouvrent aux filles (loi Camille Sée).</li><li><strong>1944</strong> : les femmes obtiennent le droit de vote ; elles votent en 1945.</li><li><strong>1965</strong> : une femme mariée peut travailler et ouvrir un compte en banque sans l’accord de son mari.</li><li><strong>1975</strong> : la loi Veil autorise l’IVG.</li><li><strong>2000</strong> : la loi sur la parité oblige les partis à présenter autant de femmes que d’hommes à la plupart des élections.</li></ul><p>On fait remarquer aux élèves que l’égalité en droit a été conquise lentement et que l’égalité réelle reste un objectif (salaires, métiers).</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-geo-france-ue",
+   "num": 4,
+   "domaine": "hg",
+   "titre": "La France, l’Union européenne et la mondialisation",
+   "theme": "Population, aires urbaines, espaces productifs, outre-mer, UE, mondialisation et méthode du croquis",
+   "revision": true,
+   "duree": 2400,
+   "total": 13,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>La géographie de 3e (la France et l’UE) est très souvent tombée au concours, avec une <strong>carte ou un croquis</strong> à réaliser (session 2026 : la répartition de la population française). Il faut des chiffres à jour, des notions définies et une méthode sûre.</p><h4>1. La population française</h4><ul><li>Au 1er janvier 2026 : <strong>69,1 millions</strong> d’habitants (66,8 millions en métropole, 2,3 millions dans les DROM) ; environ 120 hab./km² en métropole (Insee).</li><li>En 2025, pour la première fois depuis 1945, le <strong>solde naturel est négatif</strong> (645 000 naissances, 651 000 décès) ; fécondité 1,56 enfant par femme. La croissance vient du solde migratoire.</li><li><strong>Répartition inégale</strong> : fortes densités en Île-de-France, dans les grandes métropoles, sur les littoraux (héliotropisme vers le Sud et l’Ouest), dans les vallées (Rhône, Seine, Rhin) et le Nord ; faibles densités dans une large bande du nord-est au sud-ouest (la « diagonale des faibles densités ») et dans les montagnes.</li></ul><h4>2. Les aires urbaines (aires d’attraction des villes)</h4><ul><li>Une aire d’attraction = un <strong>pôle</strong> (concentration d’emplois) + une <strong>couronne</strong> dont au moins 15 % des actifs viennent travailler dans le pôle. En France, <strong>699 aires</strong> regroupent <strong>93 %</strong> de la population ; celle de Paris compte environ 13 millions d’habitants (Insee, zonage 2020). Le programme de 3e parle encore d’« aires urbaines ».</li><li><strong>Métropolisation</strong> : concentration des hommes, des richesses et des fonctions de commandement dans les grandes villes. <strong>Périurbanisation</strong> : croissance des couronnes (lotissements, voiture, étalement urbain). <strong>Gentrification</strong> : embourgeoisement de quartiers anciens.</li></ul><h4>3. Les espaces productifs</h4><ul><li><strong>Agricoles</strong> : la France est le premier producteur agricole de l’UE (céréales du Bassin parisien, vignobles, élevage de l’Ouest) ; agriculture productiviste et raisonnée ou biologique.</li><li><strong>Industriels</strong> : désindustrialisation des vieux bassins (Nord, Lorraine), reconversions, technopôles (Sophia-Antipolis, Saclay), zones industrialo-portuaires (Le Havre, Fos-sur-Mer), aéronautique à Toulouse.</li><li><strong>Tertiaires et touristiques</strong> : 3/4 des emplois ; la France est la première destination touristique mondiale (Paris, littoraux, montagnes).</li><li><strong>Espaces de faible densité</strong> : ruraux, montagnes ; vieillissement ou au contraire renouveau (néo-ruraux, tourisme).</li></ul><h4>4. Les territoires ultramarins</h4><ul><li>5 <strong>DROM</strong> : Guadeloupe, Martinique, Guyane, La Réunion, Mayotte (101 départements au total). Collectivités d’outre-mer : Saint-Pierre-et-Miquelon, Saint-Barthélemy, Saint-Martin, Wallis-et-Futuna, Polynésie française ; statut particulier : Nouvelle-Calédonie ; TAAF.</li><li>Atouts : la France a la <strong>2e ZEE du monde</strong> (environ 10 millions de km², dont plus de 95 % outre-mer), biodiversité, base spatiale de Kourou. Contraintes : éloignement, insularité, chômage élevé, dépendance à la métropole, risques (cyclones, volcans).</li><li>Les DROM et Saint-Martin sont des <strong>régions ultrapériphériques</strong> (RUP) de l’UE.</li></ul><h4>5. La France et l’Union européenne</h4><ul><li><strong>27 États</strong> depuis le Brexit (31 janvier 2020), environ 450 millions d’habitants. Zone euro : <strong>21 pays</strong> depuis l’entrée de la Bulgarie (1er janvier 2026). Espace Schengen : 29 États (dont 4 non membres de l’UE : Islande, Norvège, Suisse, Liechtenstein).</li><li>Institutions : Commission (Bruxelles), Parlement européen (Strasbourg, élu depuis 1979), Conseil de l’UE, Conseil européen, Cour de justice (Luxembourg), BCE (Francfort).</li><li>Politiques qui transforment le territoire : politique agricole commune (PAC), fonds régionaux (FEDER), coopérations transfrontalières, corridors de transport.</li></ul><h4>6. La mondialisation</h4><p>Mise en relation des espaces par des <strong>flux</strong> (marchandises, capitaux, personnes, informations). Acteurs : États, firmes transnationales (FTN), organisations internationales (OMC). Supports : conteneurisation (environ 80 % du commerce mondial en volume passe par la mer), hubs aéroportuaires, câbles sous-marins. Lieux : métropoles mondiales (New York, Londres, Tokyo, Paris), façades maritimes (la Northern Range, avec Rotterdam, premier port d’Europe). Elle crée des <strong>inégalités</strong> entre espaces intégrés et marges.</p><h4>7. Méthode : la carte et le croquis</h4><ol><li>Lire le sujet : le <strong>titre</strong> du croquis reprend le sujet.</li><li>Construire une <strong>légende organisée</strong> en 2 ou 3 parties titrées (exemple : I. Des espaces densément peuplés ; II. Des espaces peu peuplés ; III. Des dynamiques).</li><li>Choisir des <strong>figurés adaptés</strong> : surfaces (zones), points (villes), lignes (axes), flèches (flux). Couleurs chaudes pour ce qui est fort ou dynamique, froides pour ce qui est faible.</li><li>Ajouter la <strong>nomenclature</strong> (villes, fleuves, mers), l’orientation et l’échelle si le fond ne les donne pas.</li></ol><figure class=\"fig\"><svg viewBox=\"0 0 360 150\" width=\"360\" height=\"150\" role=\"img\" aria-label=\"Exemples de figurés\"><rect x=\"10\" y=\"10\" width=\"40\" height=\"24\" class=\"shade stroke thin\"/><text x=\"60\" y=\"27\" font-size=\"12\">figuré de surface (zone)</text><circle cx=\"30\" cy=\"60\" r=\"9\" class=\"fillink\"/><circle cx=\"30\" cy=\"60\" r=\"4\" class=\"fillink\"/><text x=\"60\" y=\"64\" font-size=\"12\">figuré ponctuel (ville, port) : taille = importance</text><line x1=\"10\" y1=\"95\" x2=\"50\" y2=\"95\" class=\"thick stroke\"/><text x=\"60\" y=\"99\" font-size=\"12\">figuré linéaire (axe, frontière)</text><line x1=\"10\" y1=\"128\" x2=\"46\" y2=\"128\" class=\"stroke thick c-red\"/><polygon points=\"46,122 56,128 46,134\" class=\"c-red\"/><text x=\"60\" y=\"132\" font-size=\"12\">flèche : flux, dynamique, migration</text></svg><figcaption>Les trois familles de figurés, plus la flèche pour les flux.</figcaption></figure><div class=\"doc\"><p class=\"doc-title\">Pièges</p><ul><li>Une légende en liste non organisée est pénalisée.</li><li>Ne pas oublier les DROM en cartouche sur une carte de la France.</li><li>Un croquis simplifie : on ne recopie pas tout, on sélectionne pour démontrer.</li></ul></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Combien d’habitants compte la France au 1er janvier 2026 (Insee) ?</p>",
+       "options": [
+        "Environ 64 millions",
+        "Environ 69 millions",
+        "Environ 75 millions"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>69,1 millions</strong>, dont 66,8 millions en métropole.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels espaces sont densément peuplés en France ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "L’Île-de-France",
+        "Les littoraux méditerranéen et atlantique",
+        "Le Massif central",
+        "La vallée du Rhône"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>Le Massif central fait partie de la « diagonale des faibles densités ».</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qu’est-ce que la périurbanisation ?</p>",
+       "options": [
+        "Le retour des habitants dans le centre ancien",
+        "L’extension des villes sur les espaces ruraux voisins",
+        "La disparition des villes moyennes"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>C’est la croissance des <strong>couronnes</strong> : lotissements, zones commerciales, mobilités pendulaires en voiture.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels territoires sont des DROM ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "La Réunion",
+        "La Polynésie française",
+        "Mayotte",
+        "La Guyane"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p>La Polynésie française est une <strong>collectivité d’outre-mer</strong> (COM), pas un DROM.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Combien de pays utilisent l’euro en 2026 ?</p>",
+       "options": [
+        "19",
+        "20",
+        "21"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<p><strong>21</strong> : la Croatie est entrée en 2023, la Bulgarie le 1er janvier 2026.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel figuré choisir pour représenter les principales métropoles sur un croquis ?</p>",
+       "options": [
+        "Un figuré de surface",
+        "Un figuré ponctuel de taille proportionnée",
+        "Une flèche"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Un <strong>cercle</strong> dont la taille varie avec l’importance de la ville ; la flèche est réservée aux flux.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Pourquoi la France a-t-elle la deuxième ZEE du monde ?</p>",
+       "options": [
+        "Grâce à la longueur de ses côtes métropolitaines",
+        "Grâce à ses territoires ultramarins répartis sur tous les océans",
+        "Grâce aux accords de Schengen"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Plus de 95 % de la ZEE française se trouve <strong>outre-mer</strong> (Polynésie française, Nouvelle-Calédonie, TAAF…).</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels éléments sont des acteurs de la mondialisation ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Les firmes transnationales",
+        "Les États",
+        "L’OMC",
+        "Les porte-conteneurs"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p>Les porte-conteneurs sont un <strong>support</strong> (un moyen) des flux, pas un acteur qui décide.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 5,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Tu dois réaliser le croquis « La répartition de la population en France métropolitaine ». Propose une <strong>légende organisée</strong> (parties, éléments, figurés).</p>",
+       "corrige": "<p><strong>I. Des espaces très peuplés</strong></p><ul><li>Aire parisienne : grand cercle rouge (plus de 13 millions d’habitants).</li><li>Métropoles régionales (Lyon, Marseille, Lille, Toulouse, Bordeaux, Nantes…) : cercles rouges plus petits.</li><li>Littoraux et vallées densément peuplés : aplat orange.</li></ul><p><strong>II. Des espaces peu peuplés</strong></p><ul><li>Diagonale des faibles densités : aplat jaune pâle ou vert pâle.</li><li>Montagnes peu peuplées : hachures ou aplat vert.</li></ul><p><strong>III. Des dynamiques</strong></p><ul><li>Attractivité des littoraux atlantique et méditerranéen et des métropoles du Sud et de l’Ouest : flèches.</li><li>Périurbanisation autour des métropoles : auréole hachurée.</li></ul><p>Titre, nomenclature (villes, mers, massifs), cartouche des DROM si on étudie toute la France. Couleurs du plus chaud (dense) au plus froid (peu dense).</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Montre, à partir de l’exemple d’un smartphone vendu en France, ce qu’est la mondialisation (acteurs, flux, lieux).</p>",
+       "corrige": "<p>Le smartphone est conçu par une <strong>firme transnationale</strong> (siège aux États-Unis ou en Corée du Sud), à partir de métaux extraits en Afrique ou en Amérique du Sud, de composants fabriqués à Taïwan ou en Corée, assemblé en Chine ou en Inde (main-d’œuvre moins chère). Il voyage en <strong>conteneur</strong> jusqu’à Rotterdam ou au Havre, puis par camion jusqu’aux magasins. Les <strong>flux</strong> sont matériels (composants, produit fini) et immatériels (brevets, publicité, paiements, données). Cet exemple montre l’interdépendance des territoires, la division internationale du travail et les inégalités (conditions de travail, pollution) qu’elle produit.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-emc",
+   "num": 5,
+   "domaine": "hg",
+   "titre": "EMC : laïcité, institutions, justice et droits de l’enfant",
+   "theme": "Valeurs et symboles, laïcité, séparation des pouvoirs, justice, CIDE, lutte contre le harcèlement",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>En EMC, le jury attend des <strong>définitions précises</strong>, des <strong>références aux textes</strong> (DDHC, Constitution, lois, Code de l’éducation) et le lien avec la <strong>vie de la classe</strong>.</p><h4>1. Valeurs et symboles de la République</h4><ul><li>Article 1er de la Constitution : « La France est une République indivisible, <strong>laïque</strong>, démocratique et sociale. Elle assure l’égalité devant la loi de tous les citoyens sans distinction d’origine, de race ou de religion. »</li><li>Article 2 : langue française ; drapeau tricolore ; hymne (la Marseillaise) ; devise « Liberté, Égalité, Fraternité » ; principe : « gouvernement du peuple, par le peuple et pour le peuple ». Autres symboles : Marianne, le 14 juillet.</li></ul><h4>2. La laïcité</h4><ul><li><strong>Loi du 9 décembre 1905</strong> : la République « assure la liberté de conscience » et « garantit le libre exercice des cultes » (art. 1) ; elle « ne reconnaît, ne salarie ni ne subventionne aucun culte » (art. 2).</li><li>Trois piliers : <strong>liberté de conscience</strong> (croire ou ne pas croire), <strong>séparation</strong> des Églises et de l’État, <strong>égalité</strong> de tous et neutralité de l’État.</li><li>À l’école : les <strong>agents publics</strong> (enseignants) sont soumis à une stricte neutralité ; la loi du 15 mars 2004 interdit aux <strong>élèves</strong> des écoles, collèges et lycées publics les signes religieux ostensibles. Charte de la laïcité à l’École (2013) ; journée de la laïcité le 9 décembre.</li><li>La laïcité n’est pas l’hostilité aux religions : elle protège la liberté de chacun.</li></ul><h4>3. Les institutions et la citoyenneté</h4><table class=\"tab\"><thead><tr><th>Pouvoir</th><th>Qui ?</th><th>Rôle</th></tr></thead><tbody><tr><td>Législatif</td><td>Parlement : Assemblée nationale (577 députés, 5 ans) et Sénat (348 sénateurs, 6 ans)</td><td>vote la loi et le budget, contrôle le gouvernement</td></tr><tr><td>Exécutif</td><td>Président (5 ans, suffrage universel direct) ; Premier ministre et gouvernement</td><td>fait appliquer les lois, conduit la politique de la nation</td></tr><tr><td>Judiciaire</td><td>magistrats (juges), indépendants</td><td>applique la loi, tranche les litiges, sanctionne</td></tr></tbody></table><p>La <strong>séparation des pouvoirs</strong> (Montesquieu) protège la liberté (DDHC, art. 16). Les <strong>collectivités territoriales</strong> : commune (conseil municipal, maire), département, région. On devient électeur à 18 ans (inscription automatique). Le citoyen a des droits (vote, libertés) et des devoirs (respect de la loi, impôt, défense : journée défense et citoyenneté).</p><h4>4. La justice</h4><ul><li><strong>Justice civile</strong> : règle les conflits entre personnes (divorce, loyer…). <strong>Justice pénale</strong> : sanctionne les infractions : contravention (tribunal de police), délit (tribunal correctionnel), crime (cour d’assises, ou cour criminelle départementale pour certains crimes).</li><li>Principes : <strong>présomption d’innocence</strong> (DDHC, art. 9), droit à un avocat, procès équitable, possibilité de faire appel ; nul ne peut se faire justice soi-même.</li><li>Mineurs : justice spécialisée (juge des enfants, tribunal pour enfants), priorité à l’éducatif ; Code de la justice pénale des mineurs (2021), qui présume qu’un mineur de moins de 13 ans n’a pas de discernement.</li><li>Le <strong>Défenseur des droits</strong> (depuis 2011) peut être saisi gratuitement, y compris par un enfant.</li></ul><h4>5. Les droits de l’enfant</h4><ul><li><strong>Convention internationale des droits de l’enfant</strong> (CIDE), adoptée par l’ONU le <strong>20 novembre 1989</strong>, ratifiée par la France en 1990 ; 54 articles ; un enfant = toute personne de moins de 18 ans.</li><li>Quatre principes : non-discrimination ; <strong>intérêt supérieur de l’enfant</strong> ; droit à la vie et au développement ; droit d’exprimer son opinion.</li><li>Numéro de l’enfance en danger : <strong>119</strong> (gratuit, 24 h/24). L’enseignant a l’obligation de signaler un enfant en danger (information préoccupante).</li></ul><h4>6. Le harcèlement</h4><ul><li>Définition : une violence <strong>répétée</strong> (verbale, physique, psychologique), exercée par un ou plusieurs élèves sur une victime qui ne peut se défendre, avec un rapport de domination et souvent l’<strong>isolement</strong>. Le cyberharcèlement le prolonge en ligne, sans répit.</li><li>Droit : « Aucun élève ne doit subir […] des faits de harcèlement » (Code de l’éducation, art. L. 511-3-1, loi de 2019) ; la loi du 2 mars 2022 fait du harcèlement scolaire un <strong>délit</strong>.</li><li>Prévention : programme <strong>pHARe</strong> (ambassadeurs élèves, méthode de la préoccupation partagée), numéro <strong>3018</strong> (harcèlement et cyberharcèlement).</li></ul><div class=\"doc\"><p class=\"doc-title\">À retenir pour la classe</p><p>L’EMC se vit autant qu’elle s’enseigne : conseils d’élèves, règles de vie élaborées ensemble, débats réglés, messages clairs. Toujours partir d’une <strong>situation concrète</strong> et remonter vers le principe et le texte.</p></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Que dit l’article 2 de la loi du 9 décembre 1905 ?</p>",
+       "options": [
+        "La République interdit les religions",
+        "La République ne reconnaît, ne salarie ni ne subventionne aucun culte",
+        "Les élèves ne peuvent pas parler de religion à l’école"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>C’est le principe de <strong>séparation</strong>. L’article 1 garantit la liberté de conscience et le libre exercice des cultes.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>À l’école publique, qui est soumis à l’obligation de neutralité religieuse stricte ?</p>",
+       "options": [
+        "Les enseignants et tous les agents publics",
+        "Les élèves, qui ne peuvent porter aucun signe même discret",
+        "Les parents d’élèves dans la rue devant l’école"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>Les <strong>agents publics</strong> sont neutres. Les élèves ne peuvent pas porter de signes religieux <strong>ostensibles</strong> (loi de 2004), mais des signes discrets sont admis.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Combien y a-t-il de députés et de sénateurs ?</p>",
+       "options": [
+        "577 députés et 348 sénateurs",
+        "348 députés et 577 sénateurs",
+        "500 députés et 300 sénateurs"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>577 députés</strong> élus pour 5 ans au suffrage direct ; <strong>348 sénateurs</strong> élus pour 6 ans au suffrage indirect.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles infractions sont jugées par la cour d’assises ?</p>",
+       "options": [
+        "Les contraventions",
+        "Les délits",
+        "Les crimes"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<p>Les <strong>crimes</strong> (meurtre, viol…), avec un jury populaire ; certains crimes sont jugés par la cour criminelle départementale.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels principes figurent dans la CIDE ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "L’intérêt supérieur de l’enfant",
+        "La non-discrimination",
+        "Le droit de vote dès 16 ans",
+        "Le droit d’exprimer son opinion"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>La CIDE ne donne pas de droit de vote. Ses principes : non-discrimination, intérêt supérieur, vie et développement, participation.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels critères permettent de parler de harcèlement ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "La répétition",
+        "Un rapport de domination",
+        "Un conflit ponctuel entre deux élèves de force égale",
+        "L’isolement de la victime"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>Un conflit ponctuel entre égaux n’est pas du harcèlement (mais il se traite aussi). Répétition, domination, isolement sont les marqueurs.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel numéro appeler pour un cas de cyberharcèlement ?</p>",
+       "options": [
+        "Le 119",
+        "Le 3018",
+        "Le 17"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Le <strong>3018</strong> (harcèlement et cyberharcèlement). Le 119 est celui de l’enfance en danger ; le 17, police secours.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel article de la DDHC garantit la présomption d’innocence ?</p>",
+       "options": [
+        "Article 1",
+        "Article 9",
+        "Article 16"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Article 9</strong>. L’article 1 proclame l’égalité en droits ; l’article 16, la garantie des droits et la séparation des pouvoirs.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>En CM1, une élève affirme : « La laïcité, ça veut dire qu’on n’a pas le droit d’avoir une religion. » Comment lui réponds-tu et quelle activité proposes-tu ?</p>",
+       "corrige": "<p><strong>Réponse</strong> : au contraire, la laïcité <strong>protège</strong> la liberté de croire ou de ne pas croire (loi de 1905, art. 1). Elle signifie que l’État et l’école publique sont <strong>neutres</strong> : ils ne favorisent aucune religion, ce qui permet à tous les élèves d’être accueillis de la même façon. Chacun peut avoir une religion ; à l’école, on n’affiche pas de signe ostensible et les enseignements (sciences, histoire) ne sont pas contestés au nom d’une croyance.</p><p><strong>Activité</strong> : étude de quelques articles de la Charte de la laïcité à l’École (affichée dans l’école), puis débat réglé à partir de situations (« Peut-on refuser d’aller à la piscine ? », « L’enseignante peut-elle dire sa religion ? ») et trace écrite collective ; lien avec la journée du 9 décembre.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un élève de CM2 te confie qu’on se moque de lui tous les jours dans la cour et sur un groupe de messagerie. Quelles sont tes actions, dans l’ordre ?</p>",
+       "corrige": "<ol><li><strong>Écouter et protéger</strong> : le croire, le rassurer, ne pas le confronter à ses harceleurs ; assurer sa sécurité (surveillance de la cour).</li><li><strong>Informer</strong> le directeur ou la directrice et suivre le protocole de l’école (référents pHARe, équipe ressource de circonscription).</li><li><strong>Informer les familles</strong> de la victime puis des auteurs ; recueillir les faits par écrit ; conserver les captures d’écran pour le cyberharcèlement.</li><li><strong>Traiter</strong> : méthode de la préoccupation partagée avec les auteurs, sanctions éducatives si besoin ; en cas de faits graves, signalement (le harcèlement est un délit depuis 2022). Faire connaître le <strong>3018</strong>.</li><li><strong>Prévenir</strong> : séances sur l’empathie, les réseaux sociaux (l’usage est interdit avant 13 ans selon leurs propres conditions), ambassadeurs élèves ; faire un suivi dans les semaines qui suivent.</li></ol>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-sci-vivant",
+   "num": 6,
+   "domaine": "sciences",
+   "titre": "Le vivant : cellule, nutrition, reproduction, écosystèmes",
+   "theme": "Cellule, photosynthèse et respiration, reproduction, réseaux trophiques, classification et évolution",
+   "revision": true,
+   "duree": 2400,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>Le vivant représente une grande part des questions de sciences de la 2e épreuve. On attend des notions exactes, un vocabulaire précis et la capacité à repérer les <strong>conceptions erronées</strong> des élèves.</p><h4>1. La cellule, unité du vivant</h4><ul><li>Tout être vivant est formé d’une ou plusieurs <strong>cellules</strong> (bactérie : une seule, sans noyau ; humain : des dizaines de milliers de milliards).</li><li>Cellule animale : membrane, cytoplasme, <strong>noyau</strong> (qui contient l’ADN, support de l’information génétique). La cellule végétale a en plus une <strong>paroi</strong>, une grande vacuole et des <strong>chloroplastes</strong> (dans les parties vertes).</li><li>On observe les cellules au <strong>microscope</strong> (épiderme d’oignon, cellules de l’intérieur de la joue) ; grossissement = grossissement de l’oculaire × grossissement de l’objectif.</li><li>Chez l’être humain, chaque cellule (sauf les gamètes) contient 46 chromosomes, soit 23 paires.</li></ul><h4>2. La nutrition</h4><table class=\"tab\"><thead><tr><th></th><th>Végétaux chlorophylliens</th><th>Animaux</th></tr></thead><tbody><tr><td>Type</td><td><strong>autotrophes</strong> : fabriquent leur matière organique</td><td><strong>hétérotrophes</strong> : prélèvent la matière organique d’autres êtres vivants</td></tr><tr><td>Besoins</td><td>lumière, eau et sels minéraux (racines), dioxyde de carbone (feuilles)</td><td>aliments, dioxygène, eau</td></tr><tr><td>Mécanisme</td><td><strong>photosynthèse</strong> (à la lumière) : dioxyde de carbone + eau → glucose (matière organique) + dioxygène</td><td>digestion, puis respiration dans les cellules</td></tr></tbody></table><p><strong>Tous</strong> les êtres vivants respirent, y compris les végétaux, jour et nuit : dans les cellules, glucose + dioxygène → dioxyde de carbone + eau + énergie. De jour, chez la plante, la photosynthèse l’emporte, d’où un rejet net de dioxygène.</p><h4>3. La reproduction</h4><ul><li><strong>Reproduction sexuée</strong> : rencontre de deux gamètes (fécondation) → cellule-œuf → nouvel individu, différent de ses parents. Chez les plantes à fleurs : pollinisation (vent, insectes), fécondation, la fleur devient fruit, l’ovule devient graine.</li><li><strong>Reproduction asexuée</strong> : un seul parent, individus identiques (bouturage, stolons du fraisier, tubercule de pomme de terre, division des bactéries).</li><li>Chez les animaux : fécondation interne (mammifères, oiseaux) ou externe (la plupart des poissons, grenouille) ; ovipares / vivipares ; développement direct ou avec métamorphose (têtard → grenouille, chenille → papillon).</li></ul><h4>4. Les écosystèmes</h4><ul><li>Écosystème = un milieu (biotope) + les êtres vivants qui y vivent (biocénose) et leurs relations.</li><li>Réseau trophique : <strong>producteurs</strong> (végétaux), <strong>consommateurs</strong> (herbivores, carnivores), <strong>décomposeurs</strong> (bactéries, champignons, lombrics) qui recyclent la matière organique en matière minérale.</li></ul><figure class=\"fig\"><svg viewBox=\"0 0 380 130\" width=\"380\" height=\"130\" role=\"img\" aria-label=\"Chaîne alimentaire\"><rect x=\"5\" y=\"45\" width=\"70\" height=\"30\" class=\"tile stroke thin\"/><text x=\"40\" y=\"65\" font-size=\"12\" text-anchor=\"middle\">salade</text><rect x=\"105\" y=\"45\" width=\"70\" height=\"30\" class=\"tile stroke thin\"/><text x=\"140\" y=\"65\" font-size=\"12\" text-anchor=\"middle\">escargot</text><rect x=\"205\" y=\"45\" width=\"70\" height=\"30\" class=\"tile stroke thin\"/><text x=\"240\" y=\"65\" font-size=\"12\" text-anchor=\"middle\">grive</text><rect x=\"305\" y=\"45\" width=\"70\" height=\"30\" class=\"tile stroke thin\"/><text x=\"340\" y=\"65\" font-size=\"12\" text-anchor=\"middle\">épervier</text><line x1=\"75\" y1=\"60\" x2=\"100\" y2=\"60\" class=\"stroke thick\"/><polygon points=\"100,55 106,60 100,65\" class=\"fillink\"/><line x1=\"175\" y1=\"60\" x2=\"200\" y2=\"60\" class=\"stroke thick\"/><polygon points=\"200,55 206,60 200,65\" class=\"fillink\"/><line x1=\"275\" y1=\"60\" x2=\"300\" y2=\"60\" class=\"stroke thick\"/><polygon points=\"300,55 306,60 300,65\" class=\"fillink\"/><text x=\"190\" y=\"105\" font-size=\"11\" text-anchor=\"middle\">la flèche se lit « est mangé par » : elle va du mangé vers le mangeur</text><text x=\"40\" y=\"35\" font-size=\"10\" text-anchor=\"middle\">producteur</text><text x=\"140\" y=\"35\" font-size=\"10\" text-anchor=\"middle\">consommateur 1</text><text x=\"240\" y=\"35\" font-size=\"10\" text-anchor=\"middle\">consommateur 2</text><text x=\"340\" y=\"35\" font-size=\"10\" text-anchor=\"middle\">consommateur 3</text></svg><figcaption>Une chaîne alimentaire : la matière passe du végétal aux animaux.</figcaption></figure><ul><li>L’être humain agit sur les écosystèmes (déforestation, pollution, espèces invasives, changement climatique) ; la biodiversité s’érode.</li></ul><h4>5. Biodiversité, classification, évolution</h4><ul><li>La classification scientifique range les êtres vivants en <strong>groupes emboîtés</strong> selon les <strong>attributs qu’ils partagent</strong> (vertèbres, 4 membres, poils…), jamais selon ce qu’ils n’ont pas, ni selon le milieu de vie ou le régime alimentaire. Exemple : la baleine partage avec la vache les poils et les mamelles : ce sont deux mammifères.</li><li><strong>Évolution</strong> : les espèces se transforment au cours du temps ; elles partagent des ancêtres communs. Charles Darwin, <em>De l’origine des espèces</em> (1859) : la <strong>sélection naturelle</strong> favorise les individus porteurs de variations avantageuses dans un milieu donné.</li><li>Les fossiles montrent que des espèces ont disparu et que d’autres sont apparues (la vie sur Terre remonte à plus de 3,5 milliards d’années).</li></ul><div class=\"doc\"><p class=\"doc-title\">Conceptions fréquentes des élèves</p><ul><li>« Les plantes se nourrissent de terre » : non, le sol apporte eau et sels minéraux ; la matière de la plante vient surtout du CO<sub>2</sub> de l’air (photosynthèse).</li><li>« Les plantes ne respirent pas » ou « respirent seulement la nuit » : elles respirent en permanence.</li><li>« La baleine est un poisson » : elle a des poils (rares) et allaite : mammifère.</li><li>« L’homme descend du singe » : l’humain et les grands singes actuels partagent un <strong>ancêtre commun</strong>.</li></ul></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels éléments trouve-t-on dans une cellule végétale de feuille mais pas dans une cellule animale ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Une paroi",
+        "Des chloroplastes",
+        "Un noyau",
+        "Une membrane"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p>Noyau et membrane existent dans les deux. <strong>Paroi</strong> et <strong>chloroplastes</strong> sont propres aux cellules végétales (les chloroplastes, dans les parties vertes).</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La photosynthèse transforme…</p>",
+       "options": [
+        "du dioxygène et du glucose en dioxyde de carbone et en eau",
+        "du dioxyde de carbone et de l’eau en glucose et en dioxygène, grâce à la lumière",
+        "des sels minéraux en lumière"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>C’est la réaction qui permet à la plante de <strong>fabriquer sa matière organique</strong> ; la respiration fait l’inverse.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une plante verte respire…</p>",
+       "options": [
+        "uniquement la nuit",
+        "uniquement le jour",
+        "jour et nuit"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<p>La respiration est <strong>permanente</strong> ; le jour, elle est masquée par la photosynthèse, plus intense.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels exemples relèvent de la reproduction asexuée ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Le bouturage d’un géranium",
+        "Les stolons du fraisier",
+        "La germination d’une graine de haricot",
+        "La division d’une bactérie"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>Une graine résulte d’une <strong>fécondation</strong> : c’est de la reproduction sexuée.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans la chaîne « herbe → lapin → renard », que signifie la flèche ?</p>",
+       "options": [
+        "« mange »",
+        "« est mangé par »",
+        "« vit à côté de »"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Convention : la flèche va du mangé vers le mangeur ; elle indique le <strong>sens du transfert de matière</strong>.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel est le rôle des décomposeurs ?</p>",
+       "options": [
+        "Produire de la matière organique à partir de la lumière",
+        "Transformer la matière organique morte en matière minérale réutilisable par les végétaux",
+        "Manger les herbivores"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Bactéries, champignons et petits animaux du sol <strong>recyclent</strong> la matière : sans eux, l’écosystème s’épuiserait.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Pourquoi range-t-on la chauve-souris avec les mammifères et non avec les oiseaux ?</p>",
+       "options": [
+        "Parce qu’elle vole la nuit",
+        "Parce qu’elle a des poils et des mamelles",
+        "Parce qu’elle n’a pas de plumes"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>On classe selon les <strong>attributs partagés</strong> (poils, mamelles). « Ne pas avoir de plumes » n’est pas un critère : on ne classe pas par absence.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qui a publié <em>De l’origine des espèces</em> et en quelle année ?</p>",
+       "options": [
+        "Lamarck, 1809",
+        "Darwin, 1859",
+        "Pasteur, 1885"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Charles Darwin, 1859</strong> : théorie de l’évolution par sélection naturelle.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un élève de CM1 affirme : « La plante grandit parce qu’elle mange la terre. » Propose une expérience simple pour faire évoluer cette conception, et l’interprétation attendue.</p>",
+       "corrige": "<p><strong>Référence historique</strong> : l’expérience de Van Helmont (XVIIe siècle), qui fit pousser un saule pendant cinq ans : l’arbre gagna environ 74 kg alors que la terre perdit à peine quelques dizaines de grammes.</p><p><strong>En classe</strong> : peser un pot de terre sèche, y semer des graines de haricot, arroser pendant plusieurs semaines ; à la fin, sécher et peser à nouveau la terre (sa masse n’a presque pas changé) ; on peut aussi faire pousser des graines sur du coton humide (sans terre). Témoin : même dispositif à l’obscurité (la plante s’étiole puis meurt quand ses réserves sont épuisées).</p><p><strong>Conclusion</strong> : la plante ne « mange » pas la terre ; elle a besoin d’eau, de sels minéraux, de lumière et de l’air (dioxyde de carbone) pour fabriquer sa matière.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Dans une mare, on trouve : algues, larves de moustique, têtards, dytiques (insectes carnassiers), grenouilles, héron, bactéries du fond. Construis un réseau trophique d’au moins cinq relations et indique les producteurs et les décomposeurs.</p>",
+       "corrige": "<ul><li>algues → têtards ; algues → larves de moustique ;</li><li>larves de moustique → dytiques ; têtards → dytiques ;</li><li>larves de moustique → grenouilles (adultes, surtout insectes) ; dytiques → grenouilles ;</li><li>grenouilles → héron ; têtards → héron.</li></ul><p><strong>Producteurs</strong> : les algues (photosynthèse). <strong>Décomposeurs</strong> : les bactéries du fond, qui transforment les cadavres et excréments en sels minéraux utilisés par les algues : la matière circule en boucle. Les flèches se lisent « est mangé par ».</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-sci-corps",
+   "num": 7,
+   "domaine": "sciences",
+   "titre": "Le corps humain et la santé",
+   "theme": "Digestion, respiration, circulation, mouvement, alimentation, microbes et vaccination",
+   "revision": true,
+   "duree": 2100,
+   "total": 11,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>Les sujets partent souvent d’une situation concrète (sport, repas, maladie) avec des documents et des calculs. Il faut connaître le trajet des aliments, de l’air, du sang, et les règles d’hygiène.</p><h4>1. Digestion</h4><ul><li>Tube digestif : bouche → œsophage → estomac → intestin grêle → gros intestin → anus. Glandes annexes : glandes salivaires, foie, pancréas.</li><li>Transformation <strong>mécanique</strong> (dents, brassage) et <strong>chimique</strong> par les <strong>enzymes</strong> des sucs digestifs : les aliments deviennent des <strong>nutriments</strong> (glucose, acides aminés, acides gras…).</li><li>Les nutriments passent dans le sang au niveau de l’<strong>intestin grêle</strong> (absorption, grâce à ses villosités) ; les déchets non digérés forment les excréments. Piège : les aliments ne vont pas « dans les jambes » par un tuyau direct.</li></ul><h4>2. Respiration et circulation</h4><ul><li>L’air entre par le nez ou la bouche → trachée → bronches → <strong>alvéoles pulmonaires</strong>, où le dioxygène passe dans le sang et le dioxyde de carbone en sort.</li><li>Le <strong>cœur</strong> est un muscle creux à 4 cavités (2 oreillettes, 2 ventricules), qui fonctionne comme une double pompe : le cœur droit envoie le sang vers les poumons, le cœur gauche vers tout le corps. Le sang circule dans des vaisseaux (artères, veines, capillaires) en <strong>circuit fermé</strong> (William Harvey, 1628).</li><li>Le sang apporte aux cellules (dont les muscles) <strong>dioxygène et glucose</strong> et emporte le CO<sub>2</sub> et les déchets. À l’effort, les fréquences cardiaque et respiratoire augmentent pour accroître cet apport.</li><li><strong>Débit cardiaque</strong> = volume d’éjection systolique × fréquence cardiaque (exemple : 70 mL × 70 battements/min ≈ 4,9 L/min au repos).</li></ul><h4>3. Mouvement</h4><p>Un mouvement résulte de la <strong>contraction</strong> d’un muscle, qui raccourcit et tire sur l’os par un tendon ; l’articulation permet la rotation. Les muscles fonctionnent par paires antagonistes : pour plier le bras, le biceps se contracte et le triceps se relâche ; c’est l’inverse pour tendre le bras. Un muscle ne pousse jamais.</p><h4>4. Alimentation et hygiène de vie</h4><ul><li>Groupes d’aliments et équilibre : fruits et légumes, féculents, produits laitiers, protéines (viande, poisson, œufs, légumineuses), matières grasses, eau ; limiter sucres et sel. Énergie en kilojoules ou kilocalories (1 kcal ≈ 4,18 kJ).</li><li>Sommeil : un enfant de 6 à 12 ans a besoin d’environ 9 à 12 heures par nuit ; les écrans le perturbent.</li><li>Activité physique quotidienne (au moins 60 minutes par jour recommandées pour les enfants par l’OMS).</li></ul><h4>5. Microbes, défenses et vaccination</h4><ul><li>Micro-organismes : bactéries (cellules), virus (non cellulaires, se multiplient dans des cellules), champignons microscopiques (levures, moisissures). La plupart sont <strong>utiles ou inoffensifs</strong> (yaourt, pain, microbiote intestinal) ; certains sont pathogènes.</li><li>Contamination → infection. Barrières naturelles (peau, muqueuses) puis réaction immunitaire (globules blancs, anticorps).</li><li><strong>Vaccination</strong> : on introduit un agent rendu inoffensif (ou un fragment) pour que l’organisme garde une mémoire immunitaire (Jenner, 1796 ; Pasteur, vaccin contre la rage, 1885).</li><li>Les <strong>antibiotiques</strong> agissent sur les bactéries, <strong>pas sur les virus</strong>. Asepsie (empêcher l’entrée des microbes : lavage des mains) et antisepsie (les détruire : désinfectant).</li></ul><h4>6. La puberté</h4><p>Entre environ 10 et 14 ans (variable), les organes reproducteurs deviennent fonctionnels sous l’effet d’hormones : ovulation et règles chez la fille, production de spermatozoïdes chez le garçon. Thème traité avec tact, en lien avec l’éducation à la vie affective et relationnelle.</p><div class=\"doc\"><p class=\"doc-title\">À retenir : calcul type</p><p>Une barre de céréales apporte 450 kJ pour 100 g ; une barre de 25 g apporte 450 × 25 / 100 = <strong>112,5 kJ</strong>. Toujours poser la proportionnalité et vérifier les unités (kJ, kcal, g, min).</p></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Où les nutriments passent-ils dans le sang ?</p>",
+       "options": [
+        "Dans l’estomac",
+        "Dans l’intestin grêle",
+        "Dans le gros intestin"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Dans l’<strong>intestin grêle</strong>, très long et replié en villosités qui offrent une immense surface d’échange.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel est le rôle des enzymes digestives ?</p>",
+       "options": [
+        "Découper chimiquement les aliments en nutriments",
+        "Faire avancer les aliments dans le tube digestif",
+        "Tuer tous les microbes"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>Ce sont des molécules présentes dans les sucs digestifs qui <strong>simplifient</strong> les grosses molécules (amidon → glucose, par exemple).</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Où le dioxygène passe-t-il de l’air dans le sang ?</p>",
+       "options": [
+        "Dans la trachée",
+        "Dans les alvéoles pulmonaires",
+        "Dans le cœur"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Dans les <strong>alvéoles</strong>, aux parois très fines entourées de capillaires.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un cœur éjecte 80 mL de sang par battement à 150 battements par minute. Quel est son débit ?</p>",
+       "options": [
+        "1,2 L/min",
+        "12 L/min",
+        "120 L/min"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>80 mL × 150 = 12 000 mL/min = <strong>12 L/min</strong>.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quand on plie le bras…</p>",
+       "options": [
+        "le biceps se contracte et le triceps se relâche",
+        "le triceps se contracte et pousse l’avant-bras",
+        "l’os se plie"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>Le <strong>biceps</strong> se contracte, raccourcit et tire sur le radius ; le triceps, antagoniste, se relâche. Un muscle ne pousse pas.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles affirmations sont exactes ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Les antibiotiques guérissent la grippe",
+        "Beaucoup de bactéries sont utiles",
+        "Un vaccin prépare l’organisme à se défendre",
+        "Les virus sont des cellules"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p>Les antibiotiques n’agissent pas sur les <strong>virus</strong> (la grippe est virale) ; les virus ne sont pas des cellules.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qui a mis au point le premier vaccin contre la rage appliqué à l’être humain (1885) ?</p>",
+       "options": [
+        "Edward Jenner",
+        "Louis Pasteur",
+        "Alexander Fleming"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Pasteur</strong>, 1885 (le jeune Joseph Meister). Jenner : variole, 1796 ; Fleming : pénicilline, 1928.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un adulte au repos a une fréquence cardiaque de 70 battements/min et un volume d’éjection de 70 mL. Pendant une course, sa fréquence monte à 160 battements/min et le volume d’éjection à 100 mL. Calcule le débit cardiaque dans les deux cas et explique l’intérêt de cette variation.</p>",
+       "corrige": "<p>Repos : 70 × 70 = 4 900 mL/min ≈ <strong>4,9 L/min</strong>. Course : 160 × 100 = 16 000 mL/min = <strong>16 L/min</strong>, soit environ 3,3 fois plus.</p><p>À l’effort, les muscles consomment beaucoup plus de <strong>dioxygène et de glucose</strong> pour produire l’énergie nécessaire à leur contraction (respiration cellulaire) et rejettent plus de CO<sub>2</sub>. L’augmentation du débit cardiaque (et de la fréquence respiratoire) accroît l’apport de sang, donc de dioxygène et de nutriments, aux muscles, et l’évacuation des déchets.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Propose à des élèves de CE2-CM1 une expérience avec un témoin pour montrer l’intérêt de se laver les mains.</p>",
+       "corrige": "<p><strong>Matériel</strong> : tranches de pain de mie, sachets de congélation fermés, étiquettes.</p><p><strong>Protocole</strong> : tranche 1 touchée avec des mains non lavées (après la récréation) ; tranche 2 touchée avec des mains lavées au savon ; tranche 3, <strong>témoin</strong>, sortie avec une pince propre et jamais touchée. On ferme les sachets et on les place au même endroit, à la même température, pendant 1 à 2 semaines ; <strong>un seul facteur varie</strong> : le contact avec les mains.</p><p><strong>Résultats attendus</strong> : beaucoup de moisissures sur la tranche 1, peu sur la tranche 2, très peu sur le témoin. Conclusion : nos mains portent des micro-organismes invisibles ; le lavage en élimine une grande partie. Sécurité : ne jamais ouvrir les sachets moisis ; les jeter fermés.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-sci-matiere-energie",
+   "num": 8,
+   "domaine": "sciences",
+   "titre": "Matière, mouvement, énergie, électricité",
+   "theme": "États et changements d’état, mélanges, vitesse, formes et conversions d’énergie, circuits électriques",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>La physique-chimie de la 2e épreuve porte sur des situations de classe (fabriquer, mesurer, expliquer). Les calculs sont simples mais les <strong>unités</strong> et le <strong>vocabulaire</strong> doivent être exacts.</p><h4>1. La matière et ses états</h4><ul><li>Trois états : <strong>solide</strong> (forme propre), <strong>liquide</strong> (volume propre, prend la forme du récipient, surface libre horizontale au repos), <strong>gaz</strong> (occupe tout l’espace offert, compressible). L’air est de la matière : il a une masse (environ 1,2 g par litre).</li><li>Changements d’état : fusion (solide → liquide), solidification, <strong>vaporisation</strong> (liquide → gaz : ébullition ou évaporation), <strong>liquéfaction</strong> (gaz → liquide, « condensation » dans le langage courant), sublimation (solide → gaz), condensation solide (gaz → solide).</li><li>Eau pure à pression atmosphérique normale : fusion à 0 °C, ébullition à 100 °C ; pendant le changement d’état d’un corps pur, la température reste constante (palier).</li><li>Lors d’un changement d’état, la <strong>masse se conserve</strong>, le volume change (l’eau augmente de volume d’environ 9 % en gelant : la glace flotte).</li><li>Masse volumique ρ = m / V ; eau : 1 g/mL = 1 kg/L. Un objet flotte dans l’eau si sa masse volumique est inférieure à celle de l’eau.</li><li><strong>Mélanges</strong> : homogène (eau salée : le sel est <strong>dissous</strong>, il n’a pas disparu : la masse totale se conserve) ou hétérogène (eau + sable) ; séparation par décantation, filtration, évaporation. Solubilité limitée (saturation). Ne pas confondre dissolution et fusion.</li></ul><h4>2. Le mouvement</h4><ul><li>Un mouvement se décrit <strong>par rapport à un référentiel</strong> : le passager est immobile par rapport au train, en mouvement par rapport au quai.</li><li><strong>Trajectoire</strong> : rectiligne, circulaire, curviligne. <strong>Vitesse</strong> : v = d / t ; 1 m/s = 3,6 km/h. Mouvement uniforme, accéléré ou ralenti.</li><li>Une action mécanique (force) peut mettre en mouvement, modifier la trajectoire ou la vitesse, déformer. Le poids est l’attraction de la Terre (P = m × g, g ≈ 9,8 N/kg).</li></ul><h4>3. L’énergie</h4><ul><li>Formes : cinétique (mouvement), potentielle (position), thermique, chimique (aliments, carburants, piles), électrique, lumineuse, nucléaire.</li><li>L’énergie ne se crée pas : elle se <strong>convertit</strong> (panneau photovoltaïque : lumineuse → électrique ; moteur : électrique → mécanique + thermique). Une partie est toujours « perdue » sous forme de chaleur ; rendement = énergie utile / énergie reçue.</li><li>Sources <strong>renouvelables</strong> (soleil, vent, eau, biomasse, géothermie) / <strong>non renouvelables</strong> (pétrole, gaz, charbon, uranium).</li><li>Unités : joule (J), kilowattheure (1 kWh = 3,6 × 10<sup>6</sup> J). <strong>E = P × t</strong> : un radiateur de 2 000 W allumé 3 h consomme 2 kW × 3 h = 6 kWh.</li></ul><h4>4. L’électricité</h4><ul><li>Un circuit fonctionne s’il forme une <strong>boucle fermée</strong> passant par les deux bornes du générateur. Conducteurs (métaux, graphite, eau salée) / isolants (plastique, verre, bois sec, air).</li><li><strong>Série</strong> : une seule boucle ; si une lampe grille, tout s’éteint ; plus il y a de lampes, plus elles brillent faiblement. <strong>Dérivation</strong> : plusieurs boucles ; chaque dipôle est indépendant (installation de la maison).</li><li><strong>Court-circuit</strong> : les bornes du générateur sont reliées par un fil sans dipôle ; le courant devient très intense, la pile s’échauffe et s’use.</li><li>Collège : tension U en volts (voltmètre en dérivation), intensité I en ampères (ampèremètre en série), loi d’Ohm <strong>U = R × I</strong>, puissance <strong>P = U × I</strong>.</li><li>Sécurité : ne jamais manipuler le secteur (230 V) ; en classe, piles de 4,5 V au plus.</li></ul><figure class=\"fig\"><svg viewBox=\"0 0 380 140\" width=\"380\" height=\"140\" role=\"img\" aria-label=\"Circuit en série et en dérivation\"><rect x=\"20\" y=\"20\" width=\"140\" height=\"90\" class=\"stroke thin\" fill=\"none\"/><line x1=\"80\" y1=\"12\" x2=\"80\" y2=\"28\" class=\"stroke thick\"/><line x1=\"90\" y1=\"16\" x2=\"90\" y2=\"24\" class=\"stroke thick\"/><circle cx=\"20\" cy=\"65\" r=\"10\" class=\"stroke thin\" fill=\"none\"/><line x1=\"13\" y1=\"58\" x2=\"27\" y2=\"72\" class=\"stroke thin\"/><line x1=\"27\" y1=\"58\" x2=\"13\" y2=\"72\" class=\"stroke thin\"/><circle cx=\"160\" cy=\"65\" r=\"10\" class=\"stroke thin\" fill=\"none\"/><line x1=\"153\" y1=\"58\" x2=\"167\" y2=\"72\" class=\"stroke thin\"/><line x1=\"167\" y1=\"58\" x2=\"153\" y2=\"72\" class=\"stroke thin\"/><text x=\"90\" y=\"130\" font-size=\"12\" text-anchor=\"middle\">série : une seule boucle</text><rect x=\"220\" y=\"20\" width=\"140\" height=\"90\" class=\"stroke thin\" fill=\"none\"/><line x1=\"290\" y1=\"20\" x2=\"290\" y2=\"110\" class=\"stroke thin\"/><line x1=\"280\" y1=\"12\" x2=\"280\" y2=\"28\" class=\"stroke thick\"/><line x1=\"270\" y1=\"16\" x2=\"270\" y2=\"24\" class=\"stroke thick\"/><circle cx=\"290\" cy=\"65\" r=\"10\" class=\"stroke thin\" fill=\"none\"/><line x1=\"283\" y1=\"58\" x2=\"297\" y2=\"72\" class=\"stroke thin\"/><line x1=\"297\" y1=\"58\" x2=\"283\" y2=\"72\" class=\"stroke thin\"/><circle cx=\"360\" cy=\"65\" r=\"10\" class=\"stroke thin\" fill=\"none\"/><line x1=\"353\" y1=\"58\" x2=\"367\" y2=\"72\" class=\"stroke thin\"/><line x1=\"367\" y1=\"58\" x2=\"353\" y2=\"72\" class=\"stroke thin\"/><text x=\"290\" y=\"130\" font-size=\"12\" text-anchor=\"middle\">dérivation : deux boucles</text></svg><figcaption>Deux lampes (cercles barrés) alimentées par une pile (traits parallèles).</figcaption></figure><div class=\"doc\"><p class=\"doc-title\">Conceptions fréquentes</p><ul><li>« Le sucre disparaît dans l’eau » : il est dissous, la masse est conservée.</li><li>« Un seul fil suffit pour allumer la lampe » : il faut une boucle.</li><li>« La pile contient de l’électricité qu’on verse » : elle convertit de l’énergie chimique en énergie électrique.</li><li>« L’air, ce n’est rien » : l’air a une masse et occupe un volume.</li></ul></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Comment s’appelle le passage de l’état gazeux à l’état liquide ?</p>",
+       "options": [
+        "La vaporisation",
+        "La liquéfaction",
+        "La fusion"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Liquéfaction</strong> (dans la vie courante, on parle de « condensation » : buée sur une vitre froide).</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>On fait fondre 200 g de glace dans un récipient fermé. Quelle est la masse d’eau liquide obtenue ?</p>",
+       "options": [
+        "Moins de 200 g",
+        "200 g",
+        "Plus de 200 g"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>La <strong>masse se conserve</strong> lors d’un changement d’état ; seul le volume change (il diminue un peu à la fusion).</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>On dissout 10 g de sel dans 250 g d’eau. Quelle est la masse de la solution ?</p>",
+       "options": [
+        "250 g",
+        "260 g",
+        "240 g"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>250 + 10 = <strong>260 g</strong> : le sel n’a pas disparu.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un cycliste parcourt 30 km en 1 h 30 min. Quelle est sa vitesse moyenne ?</p>",
+       "options": [
+        "20 km/h",
+        "45 km/h",
+        "30 km/h"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>v = 30 km / 1,5 h = <strong>20 km/h</strong>. Piège : 1 h 30 min = 1,5 h, pas 1,3 h.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles sources d’énergie sont renouvelables ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Le vent",
+        "L’uranium",
+        "Le soleil",
+        "La biomasse (bois)"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p>L’uranium est un stock limité de la croûte terrestre : non renouvelable (même si le nucléaire émet peu de CO<sub>2</sub>).</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une lampe de 60 W reste allumée 5 heures. Quelle énergie consomme-t-elle ?</p>",
+       "options": [
+        "0,3 kWh",
+        "3 kWh",
+        "12 Wh"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>E = P × t = 60 W × 5 h = 300 Wh = <strong>0,3 kWh</strong>.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Deux lampes sont montées en dérivation. On dévisse l’une d’elles. Que se passe-t-il ?</p>",
+       "options": [
+        "L’autre s’éteint",
+        "L’autre reste allumée",
+        "La pile est en court-circuit"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>En <strong>dérivation</strong>, chaque lampe est dans sa propre boucle avec la pile : l’autre reste allumée.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels matériaux sont des conducteurs électriques ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Le cuivre",
+        "Le plastique",
+        "La mine de crayon (graphite)",
+        "L’aluminium"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p>Les <strong>métaux</strong> et le graphite conduisent ; le plastique est isolant (gaine des fils).</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un élève de CM1 affirme : « Quand on met du sucre dans l’eau, il disparaît, donc il ne pèse plus rien. » Propose une expérience pour lui montrer le contraire et rédige la conclusion attendue.</p>",
+       "corrige": "<p><strong>Protocole</strong> : sur une balance, peser un verre d’eau et, à côté, une coupelle contenant 20 g de sucre (masse totale notée, par exemple 320 g). Verser le sucre dans l’eau, mélanger jusqu’à ce qu’on ne le voie plus, reposer le verre <strong>et la coupelle vide</strong> sur la balance.</p><p><strong>Résultat</strong> : la balance affiche toujours 320 g. On peut aussi goûter l’eau (elle est sucrée) et faire évaporer une petite quantité : le sucre réapparaît.</p><p><strong>Conclusion</strong> : le sucre ne disparaît pas, il est <strong>dissous</strong> : il est dispersé en particules trop petites pour être vues. La masse totale se conserve. On distingue dissolution et fusion (le sucre n’a pas fondu : il n’a pas été chauffé).</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Une famille utilise un radiateur de 1 500 W pendant 4 h par jour, pendant 30 jours. Calcule l’énergie consommée en kWh, puis le coût si le kWh coûte 0,20 €.</p>",
+       "corrige": "<p>Énergie par jour : 1,5 kW × 4 h = 6 kWh. Sur 30 jours : 6 × 30 = <strong>180 kWh</strong>.</p><p>Coût : 180 × 0,20 = <strong>36 €</strong>. (En joules : 180 × 3,6 × 10<sup>6</sup> = 6,48 × 10<sup>8</sup> J.)</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-sci-terre-univers",
+   "num": 9,
+   "domaine": "sciences",
+   "titre": "La Terre et l’Univers, et la démarche scientifique",
+   "theme": "Système solaire, jour et nuit, saisons, phases de la Lune, séismes et volcans, démarche d’investigation",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>Ce thème mobilise des modèles (maquettes, schémas) et de nombreuses conceptions erronées. Le jury attend des explications justes et une <strong>démarche d’investigation</strong> rigoureuse.</p><h4>1. Le système solaire</h4><ul><li>Une étoile, le <strong>Soleil</strong>, et <strong>8 planètes</strong> : Mercure, Vénus, Terre, Mars (telluriques, rocheuses) ; Jupiter, Saturne, Uranus, Neptune (géantes gazeuses ou de glaces). Pluton est une <strong>planète naine</strong> depuis 2006.</li><li>La Terre est à environ 150 millions de km du Soleil ; la lumière, qui va à environ 300 000 km/s, met environ 8 min 20 s pour nous parvenir. La Terre s’est formée il y a environ 4,6 milliards d’années.</li><li>Une étoile produit sa lumière ; une planète et la Lune sont <strong>éclairées</strong> (elles diffusent la lumière du Soleil).</li><li>Histoire : géocentrisme (Ptolémée) → héliocentrisme (Copernic, 1543 ; Galilée, lunette, 1609-1610).</li></ul><h4>2. Jour, nuit, année, saisons</h4><ul><li><strong>Rotation</strong> de la Terre sur elle-même en environ 24 h (d’ouest en est) → alternance jour/nuit, mouvement apparent du Soleil (lever à l’est, coucher à l’ouest).</li><li><strong>Révolution</strong> autour du Soleil en environ 365,25 jours → l’année (d’où les années bissextiles).</li><li><strong>Saisons</strong> : dues à l’<strong>inclinaison de l’axe</strong> de rotation (environ 23,4°) qui garde une direction fixe. En été dans l’hémisphère Nord, le Soleil monte plus haut (rayons plus concentrés) et les jours sont plus longs. Les saisons sont inversées entre les deux hémisphères.</li><li>Piège : ce n’est <strong>pas</strong> la distance au Soleil ; la Terre en est même au plus près début janvier (périhélie).</li></ul><figure class=\"fig\"><svg viewBox=\"0 0 380 150\" width=\"380\" height=\"150\" role=\"img\" aria-label=\"Terre inclinée éclairée par le Soleil\"><circle cx=\"40\" cy=\"75\" r=\"26\" class=\"c-yellow stroke thin\"/><text x=\"40\" y=\"118\" font-size=\"11\" text-anchor=\"middle\">Soleil</text><line x1=\"80\" y1=\"45\" x2=\"200\" y2=\"45\" class=\"stroke thin dash\"/><line x1=\"80\" y1=\"75\" x2=\"200\" y2=\"75\" class=\"stroke thin dash\"/><line x1=\"80\" y1=\"105\" x2=\"200\" y2=\"105\" class=\"stroke thin dash\"/><circle cx=\"260\" cy=\"75\" r=\"40\" class=\"stroke thin\" fill=\"none\"/><path d=\"M260 35 A40 40 0 0 1 260 115 Z\" class=\"shade\"/><line x1=\"245\" y1=\"25\" x2=\"275\" y2=\"125\" class=\"stroke thick\"/><text x=\"285\" y=\"30\" font-size=\"11\">axe incliné d’environ 23,4°</text><text x=\"310\" y=\"140\" font-size=\"11\" text-anchor=\"middle\">partie à la nuit (ombrée)</text></svg><figcaption>Les rayons du Soleil arrivent parallèles ; l’inclinaison de l’axe fait varier la hauteur du Soleil et la durée du jour selon la position sur l’orbite.</figcaption></figure><h4>3. La Lune</h4><ul><li>Satellite naturel de la Terre, à environ 384 000 km. Elle tourne autour de la Terre et sur elle-même en environ 27,3 jours : elle nous montre <strong>toujours la même face</strong>.</li><li><strong>Phases</strong> : la Lune est toujours à moitié éclairée par le Soleil ; selon sa position, nous voyons une partie plus ou moins grande de cette moitié. Cycle : nouvelle Lune → premier croissant → premier quartier → gibbeuse → pleine Lune → dernier quartier → dernier croissant ; environ <strong>29,5 jours</strong> (lunaison).</li><li>Piège : les phases ne sont pas dues à l’ombre de la Terre (celle-ci provoque les <strong>éclipses de Lune</strong>, qui ne se produisent qu’à la pleine Lune).</li></ul><h4>4. La Terre, planète active</h4><ul><li>La surface terrestre est découpée en <strong>plaques lithosphériques</strong> qui se déplacent de quelques centimètres par an (tectonique des plaques, théorie développée dans les années 1960 à partir des idées de Wegener, 1912).</li><li><strong>Séismes</strong> : rupture brutale des roches en profondeur au <strong>foyer</strong> ; l’<strong>épicentre</strong> est le point de la surface à la verticale du foyer. La <strong>magnitude</strong> mesure l’énergie libérée (une seule valeur par séisme) ; l’<strong>intensité</strong> mesure les effets en un lieu (échelle de I à XII, qui diminue en s’éloignant de l’épicentre).</li><li><strong>Volcans</strong> : remontée de magma. Éruptions <strong>effusives</strong> (lave fluide, coulées : Piton de la Fournaise) ; <strong>explosives</strong> (lave visqueuse, nuées ardentes, cendres : montagne Pelée en 1902, Soufrière en Guadeloupe).</li><li>Risque = aléa × enjeux (vulnérabilité) ; prévention : surveillance, normes parasismiques, plans d’évacuation, exercices (PPMS à l’école).</li></ul><h4>5. La démarche scientifique (investigation)</h4><ol><li>Une <strong>situation-problème</strong> et une question (« De quoi une graine a-t-elle besoin pour germer ? »).</li><li>Des <strong>hypothèses</strong> émises par les élèves (conceptions initiales).</li><li>Une <strong>expérience</strong> pour tester chaque hypothèse : un <strong>témoin</strong>, et <strong>un seul facteur</strong> qui varie à la fois ; ou une observation, une recherche documentaire, une modélisation.</li><li>Des <strong>résultats</strong> consignés (tableau, schéma, photo) dans le cahier d’expériences.</li><li>Une <strong>conclusion</strong> qui répond à la question, puis une trace écrite institutionnalisée.</li></ol><div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Un <strong>modèle</strong> (lampe + balle pour la Lune, maquette des plaques) aide à comprendre mais a des limites : on les signale aux élèves (tailles et distances non respectées).</p></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Combien le système solaire compte-t-il de planètes ?</p>",
+       "options": [
+        "7",
+        "8",
+        "9"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>8</strong> ; Pluton est classée planète naine depuis 2006.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelle est la cause des saisons sur Terre ?</p>",
+       "options": [
+        "La variation de la distance Terre-Soleil",
+        "L’inclinaison de l’axe de rotation de la Terre",
+        "La rotation de la Terre sur elle-même"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>L’<strong>inclinaison</strong> (environ 23,4°) fait varier la hauteur du Soleil et la durée du jour au cours de l’année. La Terre est au plus près du Soleil en janvier : ce n’est donc pas la distance.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelle est la durée d’un cycle complet des phases de la Lune ?</p>",
+       "options": [
+        "Environ 24 heures",
+        "Environ 29,5 jours",
+        "Environ 365 jours"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Environ <strong>29,5 jours</strong> (d’une nouvelle Lune à la suivante).</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Pourquoi la Lune présente-t-elle des phases ?</p>",
+       "options": [
+        "Parce que l’ombre de la Terre la cache en partie",
+        "Parce que nous voyons, selon sa position, une partie plus ou moins grande de sa moitié éclairée par le Soleil",
+        "Parce qu’elle produit plus ou moins de lumière"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>La Lune ne produit pas de lumière et l’ombre de la Terre n’intervient que lors des <strong>éclipses</strong>.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qu’est-ce que l’épicentre d’un séisme ?</p>",
+       "options": [
+        "Le lieu en profondeur où les roches se rompent",
+        "Le point de la surface situé à la verticale du foyer",
+        "L’endroit où les dégâts sont les plus faibles"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Le lieu de rupture en profondeur est le <strong>foyer</strong> ; l’<strong>épicentre</strong> est à sa verticale, en surface.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles caractéristiques correspondent à une éruption explosive ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Lave visqueuse",
+        "Nuées ardentes et cendres",
+        "Longues coulées de lave fluide",
+        "Exemple : montagne Pelée (1902)"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>Les longues coulées de lave fluide caractérisent les éruptions <strong>effusives</strong> (Piton de la Fournaise).</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Pour tester si la lumière est nécessaire à la germination, quel dispositif est correct ?</p>",
+       "options": [
+        "Deux pots identiques (même graines, eau, température), l’un à la lumière, l’autre à l’obscurité",
+        "Un pot à la lumière avec de l’eau, un pot à l’obscurité sans eau",
+        "Un seul pot à la lumière"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>On ne fait varier qu’<strong>un seul facteur</strong>. Résultat : les graines germent aussi à l’obscurité (elles utilisent leurs réserves) ; la lumière devient nécessaire ensuite pour la croissance de la plantule.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La lumière du Soleil met environ combien de temps pour atteindre la Terre ?</p>",
+       "options": [
+        "8 secondes",
+        "8 minutes",
+        "8 heures"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>150 000 000 km ÷ 300 000 km/s = 500 s ≈ <strong>8 min 20 s</strong>.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un élève de CM2 explique : « Il fait chaud en été parce que la Terre est plus près du Soleil. » Montre que cette explication est fausse (deux arguments) et propose une modélisation pour la classe.</p>",
+       "corrige": "<p><strong>Arguments</strong> : 1) quand c’est l’été dans l’hémisphère Nord, c’est l’hiver dans l’hémisphère Sud : si la distance était la cause, les deux hémisphères auraient la même saison. 2) La Terre est au plus près du Soleil début janvier (périhélie, environ 147 millions de km) et au plus loin début juillet (environ 152 millions de km).</p><p><strong>Modélisation</strong> : une lampe (Soleil) au centre d’une table, un globe à l’axe incliné qu’on déplace autour en gardant l’axe toujours orienté dans la même direction. On observe qu’en « juin » l’hémisphère Nord reçoit la lumière plus directement et que la zone éclairée y est plus grande (jours plus longs). Complément : une lampe torche éclairant une feuille à la verticale puis en oblique montre que la même lumière concentrée sur une petite surface chauffe davantage. Limites du modèle : distances et tailles non respectées.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un séisme de magnitude 6 a lieu. En un lieu A, à 10 km de l’épicentre, l’intensité est VIII ; en un lieu B, à 80 km, elle est IV. Explique ces données en distinguant magnitude et intensité.</p>",
+       "corrige": "<p>La <strong>magnitude</strong> (6) caractérise le séisme lui-même : elle mesure l’énergie libérée au foyer ; il n’y a qu’une valeur. L’<strong>intensité</strong> décrit les effets observés en un lieu (ressenti, dégâts) sur une échelle de I à XII : elle dépend de la distance à l’épicentre, de la nature du sol et de la qualité des constructions. Les ondes s’atténuent en s’éloignant : A, proche, subit des dégâts importants (VIII) ; B, plus loin, ne ressent qu’une secousse modérée (IV).</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-arts-oeuvre",
+   "num": 10,
+   "domaine": "arts",
+   "titre": "Repères d’histoire des arts et analyse d’une œuvre",
+   "theme": "Grandes périodes et œuvres de référence, vocabulaire plastique, méthode d’analyse et pistes pour la classe",
+   "revision": true,
+   "duree": 2100,
+   "total": 10,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>En arts, la 2e épreuve demande d’<strong>analyser des œuvres</strong> (reproductions) avec un vocabulaire précis, de les situer dans l’histoire des arts et de proposer des pistes pour la classe. Les sujets s’organisent autour de thèmes (questionner la ressemblance, la représentation de l’être humain, le paysage…).</p><h4>1. Des repères d’histoire des arts</h4><table class=\"tab\"><thead><tr><th>Période</th><th>Repères (œuvre, artiste, date)</th></tr></thead><tbody><tr><td>Préhistoire</td><td>grotte Chauvet (environ 36 000 ans), grotte de Lascaux (environ 20 000 ans) : peintures pariétales, animaux, mains négatives</td></tr><tr><td>Antiquité</td><td>pyramides de Gizeh (vers 2500 av. J.-C.) ; Parthénon d’Athènes (Ve s. av. J.-C.) ; sculpture grecque (canon, contrapposto) ; Colisée de Rome (Ier s.)</td></tr><tr><td>Moyen Âge</td><td>art roman (XIe-XIIe s. : voûtes en berceau, murs épais) ; broderie de Bayeux (XIe s.) ; art gothique (XIIe-XVe s. : arcs brisés, vitraux, Notre-Dame de Paris commencée en 1163) ; enluminures</td></tr><tr><td>Renaissance (XVe-XVIe s.)</td><td>perspective linéaire ; Van Eyck, <em>Les Époux Arnolfini</em> (1434) ; Léonard de Vinci, <em>La Joconde</em> (vers 1503-1519) ; Michel-Ange, plafond de la chapelle Sixtine (1508-1512) ; châteaux de la Loire</td></tr><tr><td>XVIIe-XVIIIe s.</td><td>baroque (mouvement, théâtralité : Le Bernin, Rubens) et classicisme (ordre, symétrie : Versailles, Poussin) ; Vermeer ; Chardin</td></tr><tr><td>XIXe s.</td><td>romantisme (Géricault, <em>Le Radeau de la Méduse</em>, 1818-1819 ; Delacroix, <em>La Liberté guidant le peuple</em>, 1830) ; réalisme (Millet, <em>Des glaneuses</em>, 1857 ; Courbet) ; photographie (Niépce, vers 1826-1827 ; daguerréotype, 1839) ; impressionnisme (Monet, <em>Impression, soleil levant</em>, 1872, exposé en 1874) ; Rodin ; cinéma des frères Lumière (1895)</td></tr><tr><td>XXe-XXIe s.</td><td>fauvisme (1905 : Matisse) ; cubisme (Picasso, <em>Les Demoiselles d’Avignon</em>, 1907 ; <em>Guernica</em>, 1937) ; abstraction (Kandinsky, vers 1910) ; ready-made (Duchamp, <em>Fontaine</em>, 1917) ; surréalisme (manifeste de Breton, 1924 ; Magritte, <em>La Trahison des images</em>, 1929) ; pop art (Warhol, années 1960) ; land art (Smithson, <em>Spiral Jetty</em>, 1970) ; hyperréalisme (Ron Mueck) ; street art</td></tr></tbody></table><h4>2. Le vocabulaire plastique</h4><table class=\"tab\"><thead><tr><th>Domaine</th><th>Mots à employer</th></tr></thead><tbody><tr><td>Identification</td><td>cartel : artiste, titre, date, technique (huile sur toile, fresque, sculpture en bronze, photographie…), dimensions, lieu de conservation</td></tr><tr><td>Composition</td><td>format (portrait, paysage, carré), plans (premier plan, arrière-plan), lignes de force (horizontales = calme, obliques = mouvement), symétrie, centre d’intérêt, cadrage, point de vue (plongée, contre-plongée)</td></tr><tr><td>Espace</td><td>perspective linéaire (point de fuite, ligne d’horizon), perspective atmosphérique (lointains bleutés et flous), superposition, profondeur ou aplat</td></tr><tr><td>Couleur et lumière</td><td>couleurs primaires, secondaires, complémentaires ; chaudes / froides ; camaïeu ; contraste ; clair-obscur ; source de lumière ; valeur (clair / foncé)</td></tr><tr><td>Matière et geste</td><td>touche (lisse, visible, en virgules), empâtement, trace, texture, support, médium, outil</td></tr><tr><td>Sculpture et espace</td><td>ronde-bosse (on tourne autour), bas-relief / haut-relief, installation, in situ, volume, socle</td></tr></tbody></table><figure class=\"fig\"><svg viewBox=\"0 0 360 120\" width=\"360\" height=\"120\" role=\"img\" aria-label=\"Couleurs complémentaires\"><rect x=\"10\" y=\"20\" width=\"50\" height=\"40\" fill=\"#d62828\"/><rect x=\"62\" y=\"20\" width=\"50\" height=\"40\" fill=\"#2a9d3f\"/><rect x=\"130\" y=\"20\" width=\"50\" height=\"40\" fill=\"#1d4ed8\"/><rect x=\"182\" y=\"20\" width=\"50\" height=\"40\" fill=\"#f08c00\"/><rect x=\"250\" y=\"20\" width=\"50\" height=\"40\" fill=\"#f5d000\"/><rect x=\"302\" y=\"20\" width=\"50\" height=\"40\" fill=\"#7b2cbf\"/><text x=\"61\" y=\"80\" font-size=\"11\" text-anchor=\"middle\">rouge / vert</text><text x=\"181\" y=\"80\" font-size=\"11\" text-anchor=\"middle\">bleu / orange</text><text x=\"301\" y=\"80\" font-size=\"11\" text-anchor=\"middle\">jaune / violet</text><text x=\"180\" y=\"105\" font-size=\"11\" text-anchor=\"middle\">côte à côte, deux complémentaires se renforcent (contraste)</text></svg><figcaption>Les trois paires de complémentaires du cercle chromatique traditionnel.</figcaption></figure><h4>3. Méthode d’analyse d’une œuvre</h4><ol><li><strong>Présenter</strong> : cartel et nature de l’œuvre.</li><li><strong>Décrire</strong> : ce que l’on voit, du général au détail, sans interpréter.</li><li><strong>Analyser</strong> : composition, espace, couleurs, lumière, matière ; relier chaque choix à un effet (« les obliques créent un mouvement ascendant »).</li><li><strong>Interpréter</strong> : sens, intention, symboles, contexte historique et artistique ; comparer avec une autre œuvre.</li><li><strong>Transposer en classe</strong> : une pratique plastique qui fait vivre la même question (par exemple : « Faire un portrait ressemblant sans dessiner le visage »).</li></ol><div class=\"doc\"><p class=\"doc-title\">À l’école</p><p>En arts plastiques, on part d’une <strong>incitation</strong> ouverte (consigne-problème), les élèves <strong>pratiquent</strong>, puis on <strong>verbalise</strong> les productions et on les met en relation avec des œuvres de référence. Le parcours d’éducation artistique et culturelle (PEAC) repose sur trois piliers : <strong>rencontrer</strong> des œuvres et des artistes, <strong>pratiquer</strong>, <strong>s’approprier</strong> des connaissances.</p></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelle œuvre appartient au mouvement romantique ?</p>",
+       "options": [
+        "<em>La Liberté guidant le peuple</em>, Delacroix",
+        "<em>Impression, soleil levant</em>, Monet",
+        "<em>Les Demoiselles d’Avignon</em>, Picasso"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>Delacroix (1830) : romantisme (passion, mouvement, couleur). Monet : impressionnisme ; Picasso : cubisme naissant.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qu’est-ce qu’un ready-made ?</p>",
+       "options": [
+        "Une peinture réalisée très rapidement",
+        "Un objet manufacturé choisi par l’artiste et présenté comme œuvre d’art",
+        "Une sculpture en ronde-bosse"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Inventé par <strong>Marcel Duchamp</strong> (<em>Fontaine</em>, 1917, un urinoir signé « R. Mutt ») : c’est le choix de l’artiste qui fait l’œuvre.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelle est la couleur complémentaire du bleu ?</p>",
+       "options": [
+        "Le vert",
+        "L’orange",
+        "Le violet"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>L’<strong>orange</strong> (mélange des deux autres primaires, rouge et jaune). Juxtaposées, deux complémentaires se font valoir.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans une perspective linéaire, les lignes parallèles fuyantes…</p>",
+       "options": [
+        "restent parallèles",
+        "convergent vers un point de fuite situé sur la ligne d’horizon",
+        "s’arrêtent au premier plan"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Elles convergent vers un <strong>point de fuite</strong> ; la ligne d’horizon est à hauteur des yeux du spectateur. Technique théorisée à la Renaissance (Brunelleschi, Alberti).</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles caractéristiques renvoient à l’impressionnisme ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Touche visible et fragmentée",
+        "Peinture en plein air, effets de lumière changeante",
+        "Contours nets et couleurs lisses",
+        "Sujets de la vie moderne et des paysages"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>Les impressionnistes abandonnent le fini lisse et le contour net au profit de la <strong>touche</strong> et de la <strong>lumière</strong>.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une photographie prise de bas en haut est une…</p>",
+       "options": [
+        "plongée",
+        "contre-plongée",
+        "vue frontale"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>En <strong>contre-plongée</strong>, le sujet paraît grand, puissant ; en plongée (de haut en bas), il paraît petit, écrasé.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels sont les trois piliers du parcours d’éducation artistique et culturelle ?</p>",
+       "options": [
+        "Lire, écrire, compter",
+        "Rencontrer, pratiquer, s’approprier des connaissances",
+        "Observer, copier, exposer"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Rencontres (œuvres, artistes, lieux), pratiques (individuelles et collectives), connaissances (vocabulaire, repères) : les trois piliers du <strong>PEAC</strong>.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 3,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Analyse en quelques lignes <em>Des glaneuses</em> de Jean-François Millet (1857, huile sur toile, musée d’Orsay) : au premier plan, trois paysannes courbées ramassent les épis restés au sol ; au loin, sous un ciel clair, de grandes meules et une foule de moissonneurs, un contremaître à cheval.</p>",
+       "corrige": "<p><strong>Présentation</strong> : huile sur toile de format paysage, peinte en 1857 par Millet, peintre <strong>réaliste</strong> de l’école de Barbizon.</p><p><strong>Composition</strong> : les trois femmes occupent le premier plan, en frise ; leurs dos courbés dessinent des <strong>courbes</strong> qui répètent le geste du glanage. L’horizon haut laisse une grande place à la terre. Opposition entre le premier plan (pauvres glaneuses, couleurs sourdes, bleu, rouge et ocre des vêtements) et l’arrière-plan lumineux (abondance des meules).</p><p><strong>Interprétation</strong> : Millet donne aux plus pauvres, qui ramassent les restes de la moisson, la <strong>monumentalité</strong> réservée jusque-là à la peinture d’histoire ; l’œuvre fut perçue comme une critique sociale. <strong>En classe</strong> : comparer avec une photographie actuelle de travail agricole ; pratique : représenter un geste du quotidien en choisissant un cadrage qui le met en valeur.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-arts-musique",
+   "num": 11,
+   "domaine": "arts",
+   "titre": "Éducation musicale : écouter, décrire, situer",
+   "theme": "Paramètres du son, voix et instruments, formes, repères historiques, démarche d’écoute en classe",
+   "revision": true,
+   "duree": 1800,
+   "total": 10,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>La partie musique de l’épreuve s’appuie sur des <strong>écoutes</strong> (ou partitions, textes) : il faut les décrire avec le vocabulaire juste, les situer, et proposer une démarche d’écoute ou de chant pour la classe.</p><h4>1. Les paramètres du son</h4><table class=\"tab\"><thead><tr><th>Paramètre</th><th>Ce qu’il décrit</th><th>Vocabulaire</th></tr></thead><tbody><tr><td>Hauteur</td><td>grave / aigu ; dépend de la fréquence (en hertz, Hz)</td><td>le la de référence = 440 Hz ; mélodie ascendante, descendante, conjointe, disjointe</td></tr><tr><td>Durée</td><td>son long / court ; rythme</td><td>pulsation, tempo (lent → rapide : largo, adagio, andante, moderato, allegro, presto), ostinato rythmique</td></tr><tr><td>Intensité</td><td>fort / faible (nuances)</td><td>pianissimo (pp), piano (p), mezzo forte (mf), forte (f), fortissimo (ff) ; crescendo, decrescendo</td></tr><tr><td>Timbre</td><td>la « couleur » du son, qui permet de reconnaître la source</td><td>voix, instrument ; brillant, sombre, métallique, feutré</td></tr></tbody></table><h4>2. Voix et instruments</h4><ul><li><strong>Voix</strong> : de l’aigu au grave, soprano, mezzo-soprano, alto (voix de femmes ou d’enfants) ; ténor, baryton, basse (voix d’hommes). Chœur, soliste, a cappella (sans accompagnement).</li><li><strong>Familles de l’orchestre symphonique</strong> : <strong>cordes</strong> frottées (violon, alto, violoncelle, contrebasse), pincées (harpe, guitare), frappées (piano) ; <strong>bois</strong> (flûte traversière, hautbois, clarinette, basson ; le saxophone est un bois car il a une anche) ; <strong>cuivres</strong> (trompette, cor, trombone, tuba : le son naît de la vibration des lèvres dans l’embouchure) ; <strong>percussions</strong> (timbales, grosse caisse, cymbales, xylophone, triangle).</li><li>Le classement se fait selon <strong>la manière de produire le son</strong>, pas selon la matière : la flûte traversière en métal est un bois.</li></ul><h4>3. Formes et procédés</h4><ul><li><strong>Couplet / refrain</strong> (chanson), <strong>rondo</strong> (A B A C A…), <strong>ABA</strong>, <strong>thème et variations</strong>, <strong>canon</strong> (même mélodie décalée), <strong>ostinato</strong> (motif répété obstinément : <em>Boléro</em> de Ravel), question-réponse, tutti / solo.</li><li>Musique à programme ou descriptive : la musique évoque un récit ou un paysage (Vivaldi, Smetana, Saint-Saëns, Prokofiev).</li></ul><h4>4. Repères historiques</h4><table class=\"tab\"><thead><tr><th>Période</th><th>Repères</th></tr></thead><tbody><tr><td>Moyen Âge</td><td>chant grégorien (monodie religieuse a cappella) ; Hildegarde de Bingen (XIIe s.) ; troubadours</td></tr><tr><td>Renaissance</td><td>polyphonie vocale : Josquin des Prés, Clément Janequin (<em>La Guerre</em>)</td></tr><tr><td>Baroque (vers 1600-1750)</td><td>Monteverdi (<em>L’Orfeo</em>, 1607) ; Lully ; Vivaldi (<em>Les Quatre Saisons</em>, publiées en 1725) ; Bach ; Haendel ; basse continue, contrastes</td></tr><tr><td>Classique (vers 1750-1820)</td><td>Haydn ; Mozart (1756-1791 : <em>La Flûte enchantée</em>, 1791) ; Beethoven (1770-1827) ; équilibre, symphonie, sonate</td></tr><tr><td>Romantique (XIXe s.)</td><td>Schubert, Chopin, Berlioz (<em>Symphonie fantastique</em>, 1830), Smetana (<em>La Moldau</em>, 1874), Saint-Saëns (<em>Le Carnaval des animaux</em>, 1886) ; expression des sentiments, grands orchestres</td></tr><tr><td>XXe-XXIe s.</td><td>Debussy ; Stravinsky (<em>Le Sacre du printemps</em>, 1913) ; Ravel (<em>Boléro</em>, 1928) ; Prokofiev (<em>Pierre et le Loup</em>, 1936) ; jazz (Louis Armstrong, Duke Ellington) ; musique concrète (Pierre Schaeffer, 1948) ; musique répétitive (Steve Reich) ; chanson française (Piaf, Brassens, Nougaro) ; musiques du monde, rock, rap</td></tr></tbody></table><h4>5. L’écoute en classe</h4><ol><li>Première écoute libre : réactions, ressenti, émotions.</li><li>Écoutes <strong>ciblées</strong> avec une consigne (« Levez la main quand le thème revient », « Quels instruments entendez-vous ? »).</li><li>Verbalisation avec le vocabulaire des paramètres ; <strong>codage</strong> (musicogramme) de la forme.</li><li>Mise en relation : contexte, autre œuvre, arts visuels ; réinvestissement en chant ou en création (percussions corporelles, ostinato).</li></ol><div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Le programme d’éducation musicale s’organise autour de quatre compétences : <strong>chanter et interpréter</strong> ; <strong>écouter, comparer et commenter</strong> ; <strong>explorer, imaginer et créer</strong> ; <strong>échanger, partager et argumenter</strong>. Le chant choral est une pratique quotidienne et collective.</p></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel paramètre du son permet de distinguer une flûte d’un violon jouant la même note, aussi fort ?</p>",
+       "options": [
+        "La hauteur",
+        "L’intensité",
+        "Le timbre"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<p>Le <strong>timbre</strong>, la « couleur » propre à chaque source sonore.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Que signifie « crescendo » ?</p>",
+       "options": [
+        "En accélérant",
+        "En augmentant progressivement l’intensité",
+        "En allant vers l’aigu"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Crescendo = de plus en plus <strong>fort</strong>. Accélérer se dit « accelerando ».</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>À quelle famille appartient le saxophone ?</p>",
+       "options": [
+        "Les cuivres",
+        "Les bois",
+        "Les percussions"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Aux <strong>bois</strong>, car le son est produit par une anche, même si l’instrument est en métal.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels instruments sont des cordes frottées ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Le violoncelle",
+        "La harpe",
+        "La contrebasse",
+        "Le violon"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p>La harpe est un instrument à cordes <strong>pincées</strong>.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qu’est-ce qu’un ostinato ?</p>",
+       "options": [
+        "Un motif répété obstinément",
+        "Un chant sans accompagnement",
+        "Un changement brusque de tempo"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>Exemple : la formule rythmique de caisse claire répétée tout au long du <em>Boléro</em> de Ravel. Chanter sans accompagnement se dit a cappella.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelle œuvre évoque le parcours d’un fleuve de sa source à Prague ?</p>",
+       "options": [
+        "<em>Les Quatre Saisons</em> de Vivaldi",
+        "<em>La Moldau</em> de Smetana",
+        "<em>Le Sacre du printemps</em> de Stravinsky"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Smetana</strong>, <em>La Moldau</em> (1874), poème symphonique extrait du cycle <em>Ma patrie</em> : musique à programme romantique.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans quel ordre chronologique ces compositeurs ont-ils vécu ?</p>",
+       "options": [
+        "Mozart → Vivaldi → Debussy",
+        "Vivaldi → Mozart → Debussy",
+        "Debussy → Mozart → Vivaldi"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Vivaldi (1678-1741, baroque), Mozart (1756-1791, classique), Debussy (1862-1918).</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 3,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Tu fais écouter à une classe de CM1 l’extrait « L’Orage » de l’<em>Été</em> (<em>Les Quatre Saisons</em>, Vivaldi). Propose une démarche d’écoute en trois temps, avec les consignes et le vocabulaire attendu.</p>",
+       "corrige": "<p><strong>1. Écoute libre</strong> : « Qu’imagines-tu ? Quelle émotion ressens-tu ? » Les élèves évoquent l’agitation, la tempête, la peur.</p><p><strong>2. Écoutes ciblées</strong> : « Le tempo est-il lent ou rapide ? » (rapide, presto) ; « Quels instruments ? » (cordes frottées, violon soliste et orchestre, clavecin pour la basse continue) ; « Comment la musique imite-t-elle l’orage ? » (notes répétées très rapides pour la pluie, gammes descendantes rapides comme des éclairs, nuances forte, contrastes entre solo et tutti).</p><p><strong>3. Mise en relation et création</strong> : situer l’œuvre (baroque, 1725, musique descriptive accompagnée de sonnets) ; comparer avec un orage peint (Turner) ; créer un paysage sonore de l’orage avec la voix, les percussions corporelles et de petits instruments, en jouant sur l’intensité (crescendo) et le tempo.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-ang-grammar",
+   "num": 12,
+   "domaine": "anglais",
+   "titre": "Grammar essentials for the exam",
+   "theme": "Temps (present perfect, prétérit), modaux, questions, prépositions et pièges des francophones",
+   "revision": true,
+   "duree": 1800,
+   "total": 13,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>À l’épreuve, tu dois comprendre un texte authentique et écrire en anglais correct. Les erreurs de base (temps, <em>do</em>, prépositions) coûtent cher : voici l’essentiel, avec les pièges typiques des francophones.</p><h4>1. Tenses</h4><table class=\"tab\"><thead><tr><th>Tense</th><th>Form</th><th>Use</th><th>Example</th></tr></thead><tbody><tr><td>Present simple</td><td>V / V-s (he, she, it)</td><td>habits, general truths</td><td>She <strong>teaches</strong> in Year 4. Water <strong>boils</strong> at 100 °C.</td></tr><tr><td>Present continuous</td><td>am/is/are + V-ing</td><td>now, temporary; planned future</td><td>The children <strong>are reading</strong> now.</td></tr><tr><td>Simple past (preterite)</td><td>V-ed / irregular</td><td>finished action, finished time (<em>yesterday, in 2010, ago</em>)</td><td>We <strong>went</strong> to London last year.</td></tr><tr><td>Past continuous</td><td>was/were + V-ing</td><td>action in progress in the past</td><td>I <strong>was reading</strong> when she called.</td></tr><tr><td>Present perfect</td><td>have/has + past participle</td><td>link past–present; unfinished time; <em>for / since, already, yet, ever, never</em></td><td>I <strong>have lived</strong> here <strong>for</strong> ten years / <strong>since</strong> 2016.</td></tr><tr><td>Past perfect</td><td>had + past participle</td><td>earlier past</td><td>The lesson <strong>had started</strong> when he arrived.</td></tr><tr><td>Future</td><td>will + V / be going to + V</td><td>prediction, decision / intention, evidence</td><td>I<strong>’ll help</strong> you. It’s <strong>going to</strong> rain.</td></tr></tbody></table><div class=\"doc\"><p class=\"doc-title\">Pièges</p><ul><li>« Je suis ici depuis 2 ans » = I <strong>have been</strong> here <strong>for</strong> two years (pas <em>I am here since</em>).</li><li><em>for</em> + durée (for three weeks), <em>since</em> + point de départ (since Monday), <em>ago</em> + prétérit (two days ago).</li><li>Pas de présent perfect avec une date passée : <em>I saw him yesterday</em> (pas <em>I have seen him yesterday</em>).</li></ul></div><h4>2. Modals</h4><ul><li><strong>can / could</strong> : ability, permission, possibility (<em>Can I go out?</em>). <strong>may / might</strong> : possibility (<em>It might rain</em>), formal permission.</li><li><strong>must</strong> : obligation from the speaker, strong deduction (<em>She must be tired</em>). <strong>have to</strong> : external obligation. <strong>mustn’t</strong> = interdiction ; <strong>don’t have to</strong> = absence d’obligation.</li><li><strong>should</strong> : advice (<em>You should read more</em>). <strong>would</strong> : conditional, polite requests.</li><li>Form : modal + <strong>base verbale sans to</strong>, pas de -s : <em>She can swim</em> (pas <em>she cans / she can to swim</em>).</li></ul><h4>3. Questions and negatives</h4><ul><li>Auxiliary <strong>do / does / did</strong> with lexical verbs : <em>Does he like maths? Where did you go? I don’t know.</em> After <em>does / did</em>, the verb is in the base form (<em>Did she <strong>go</strong></em>, not <em>went</em>).</li><li>With <em>be</em>, modals and perfect tenses : inversion (<em>Are you ready? Can you help? Have you finished?</em>).</li><li>Wh-words : what, where, when, who, whose, which, why, how, how much / how many, how long, how often.</li><li>Subject questions : no <em>do</em> : <em>Who <strong>wrote</strong> this book?</em></li><li>Question tags : <em>It’s cold, isn’t it? You like it, don’t you?</em></li></ul><h4>4. Prepositions and common structures</h4><table class=\"tab\"><thead><tr><th></th><th>in</th><th>on</th><th>at</th></tr></thead><tbody><tr><td>Time</td><td>months, years, seasons, parts of the day : in May, in 2026, in the morning</td><td>days, dates : on Monday, on 5 November</td><td>clock times, festivals : at 8 o’clock, at Christmas, at night, at the weekend (UK)</td></tr><tr><td>Place</td><td>enclosed space, cities, countries : in the classroom, in Wales</td><td>surfaces : on the wall, on the table</td><td>points : at school, at the door, at home</td></tr></tbody></table><ul><li>Uncountable nouns : <em>information, advice, homework, furniture, news</em> (no plural : <em>some information</em>). <em>People</em> is plural : <em>people are</em>.</li><li>Faux amis : <em>actually</em> = en fait ; <em>eventually</em> = finalement ; <em>library</em> = bibliothèque ; <em>to attend</em> = assister à ; <em>sensible</em> = raisonnable.</li><li><em>I agree</em> (pas <em>I am agree</em>) ; <em>It depends on</em> ; <em>to be interested in</em> ; <em>to look forward to + V-ing</em>.</li></ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Choose the correct sentence.</p>",
+       "options": [
+        "I am teaching in this school since 2020.",
+        "I have been teaching in this school since 2020.",
+        "I teach in this school for 2020."
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Present perfect (continuous)</strong> + <em>since</em> + starting point : the action began in the past and continues.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Choose the correct sentence.</p>",
+       "options": [
+        "I have visited Bath last summer.",
+        "I visited Bath last summer.",
+        "I was visit Bath last summer."
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>« Last summer » is a <strong>finished time</strong> : simple past.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« You ___ bring a snack; the school provides one. » (= ce n’est pas obligatoire)</p>",
+       "options": [
+        "mustn’t",
+        "don’t have to",
+        "can’t"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>don’t have to</strong> = absence d’obligation ; <em>mustn’t</em> = interdiction.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Which questions are correct? (one or more answers)</p>",
+       "options": [
+        "Where did you go on holiday?",
+        "Where you went on holiday?",
+        "Who wrote this poem?",
+        "Does she likes English?"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><em>Where did you <strong>go</strong></em> (do-support, base form). <em>Who wrote</em> : subject question, no <em>do</em>. <em>Does she <strong>like</strong></em> (no -s after does).</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« The pupils arrive ___ 8.30 ___ Monday. »</p>",
+       "options": [
+        "in / at",
+        "at / on",
+        "on / in"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>at</strong> + clock time, <strong>on</strong> + day.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Which sentences are correct? (one or more answers)</p>",
+       "options": [
+        "She can speak Welsh.",
+        "She cans speak Welsh.",
+        "She can to speak Welsh.",
+        "She might come tomorrow."
+       ],
+       "bonnes": [
+        0,
+        3
+       ],
+       "corrige": "<p>Modal + base form, no <em>-s</em>, no <em>to</em>.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Choose the correct sentence.</p>",
+       "options": [
+        "The teacher gave us many informations.",
+        "The teacher gave us a lot of information.",
+        "The teacher gave us an information."
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><em>Information</em> is <strong>uncountable</strong> : <em>a lot of / some information, a piece of information</em>.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Complete : « It’s a lovely day, ___? »</p>",
+       "options": [
+        "isn’t it",
+        "is it",
+        "doesn’t it"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>Positive sentence with <em>be</em> → negative tag with <em>be</em> : <strong>isn’t it?</strong></p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 5,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Correct the mistakes in these sentences written by a candidate, and explain each correction in one line.</p><ol><li>I am agree with the author.</li><li>Children needs to play outside.</li><li>The school has been built in 1995.</li><li>People is more and more interested by screens.</li><li>I live in Lyon since five years.</li><li>He didn’t went to school yesterday.</li></ol>",
+       "corrige": "<ol><li><strong>I agree</strong> with the author. (<em>agree</em> is a verb, no <em>be</em>.)</li><li>Children <strong>need</strong>… (<em>children</em> is plural.)</li><li>The school <strong>was built</strong> in 1995. (finished date → simple past, here passive.)</li><li>People <strong>are</strong> more and more interested <strong>in</strong> screens. (<em>people</em> is plural ; <em>interested in</em>.)</li><li>I <strong>have lived</strong> in Lyon <strong>for</strong> five years. (present perfect + for + duration.)</li><li>He didn’t <strong>go</strong>… (base form after <em>did</em>.)</li></ol>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Translate into English : « Depuis trois ans, les élèves apprennent l’anglais grâce à des chansons. L’année dernière, ils ont chanté devant leurs parents. Ils ne doivent pas avoir peur de se tromper. »</p>",
+       "corrige": "<p><em>For three years, the pupils <strong>have been learning</strong> English through songs. Last year, they <strong>sang</strong> in front of their parents. They <strong>shouldn’t be</strong> afraid of making mistakes.</em></p><p>Remarques : <em>depuis</em> + durée → present perfect (continuous) + <em>for</em> ; « l’année dernière » → prétérit ; « ne doivent pas avoir peur » exprime ici un conseil (<em>shouldn’t</em>) ou une absence de raison (<em>don’t need to be afraid</em>), pas une interdiction.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-e2-ang-methode",
+   "num": 13,
+   "domaine": "anglais",
+   "titre": "Reading, writing and teaching English at primary school",
+   "theme": "Méthode de la compréhension et de l’expression écrite ; CECRL, activités langagières, rituels et activités en classe",
+   "revision": true,
+   "duree": 1800,
+   "total": 11,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>L’épreuve d’anglais comprend une partie <strong>compréhension</strong> d’un document authentique (article de presse britannique, par exemple) et une partie <strong>expression</strong> (réponses rédigées de 40 ou 80 mots environ). Elle suppose aussi de connaître l’enseignement de l’anglais à l’école.</p><h4>1. Reading comprehension : la méthode</h4><ul><li>Lire d’abord le paratexte (titre, source, date) puis toutes les questions ; repérer le <strong>thème</strong>, les acteurs, les chiffres.</li><li>Répondre <strong>en anglais</strong>, en phrases complètes, avec <strong>tes propres mots</strong> ; justifier par une citation courte entre guillemets (avec la ligne si possible). Ne pas recopier des paragraphes entiers.</li><li>Questions « explain this assertion » : reformuler, puis expliquer à l’aide des éléments du texte (causes, exemples, chiffres).</li><li>Ne pas confondre l’opinion de l’auteur et les faits ou avis rapportés (<em>according to…, the report claims…</em>).</li></ul><h4>2. Writing : la méthode</h4><ul><li>Respecter le <strong>nombre de mots</strong> indiqué (une marge d’environ 10 %) ; répondre exactement à la question posée.</li><li>Structure : une phrase d’entrée qui prend position, deux arguments avec un exemple concret (souvent tiré de ta pratique de classe), une phrase de conclusion.</li><li>Connecteurs : <em>firstly, moreover, besides, however, on the other hand, for instance, as a result, therefore, to conclude</em>. Opinion : <em>In my opinion, I believe, As far as I am concerned</em>.</li><li>Se relire : accords (-s), temps, <em>do</em>, prépositions, orthographe.</li></ul><h4>3. Enseigner l’anglais à l’école</h4><ul><li><strong>CECRL</strong> (Cadre européen commun de référence pour les langues, Conseil de l’Europe, 2001 ; volume complémentaire 2018) : six niveaux de A1 à C2 ; A1 = « utilisateur élémentaire » capable de comprendre et d’utiliser des expressions familières et quotidiennes.</li><li>Objectif : niveau <strong>A1</strong> dans les cinq activités langagières en fin de CM2 (certains élèves atteignent A2 dans certaines activités) ; au cycle 4, A2 dans toutes les activités et B1 dans plusieurs.</li><li><strong>Cinq activités langagières</strong> : écouter et comprendre ; lire et comprendre ; parler en continu ; réagir et dialoguer ; écrire.</li><li>Horaire : 1 h 30 par semaine aux cycles 2 et 3, de préférence en séances courtes et fréquentes, avec une <strong>priorité à l’oral</strong>. Approche actionnelle : une <strong>tâche finale</strong> donne du sens à la séquence (jouer une saynète, présenter sa famille, réaliser un livre).</li></ul><h4>4. Routines, rituels et activités</h4><table class=\"tab\"><thead><tr><th>Moment</th><th>Exemples</th></tr></thead><tbody><tr><td>Rituels d’entrée (5 min)</td><td><em>Hello! How are you today? I’m fine / tired / happy.</em> ; date (<em>What’s the date today? It’s Monday, the 5th of October</em>) ; weather (<em>It’s sunny / rainy / cloudy</em>) ; roll call</td></tr><tr><td>Classroom language</td><td><em>Listen. Repeat. Sit down. Stand up. Open your book. Work in pairs. Well done! Good job! Can I go to the toilet, please?</em></td></tr><tr><td>Découverte (input)</td><td>flashcards, album (<em>The Very Hungry Caterpillar</em>, Eric Carle, 1969 ; <em>Brown Bear, Brown Bear, What Do You See?</em>, Bill Martin Jr. et Eric Carle), chansons et nursery rhymes, vidéos courtes</td></tr><tr><td>Entraînement</td><td>TPR (Total Physical Response : l’élève répond par le geste), <em>Simon says</em>, jeu de Kim, bingo, memory, <em>guessing games</em>, jeux de rôle</td></tr><tr><td>Culture</td><td>Halloween (31 October), Bonfire Night (5 November), Thanksgiving (4th Thursday in November, USA), Christmas crackers, Pancake Day, St Patrick’s Day (17 March) ; les pays anglophones</td></tr></tbody></table><div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Une séance type : rituel → réactivation → découverte d’une notion nouvelle en contexte → entraînement par le jeu → production guidée → trace (écrite ou sonore). L’enseignant parle anglais le plus possible, s’appuie sur le geste et l’image, et ne traduit qu’en dernier recours. L’erreur est normale : on reformule sans bloquer la prise de parole.</p></div>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel niveau du CECRL est visé pour tous les élèves en fin de CM2 ?</p>",
+       "options": [
+        "A1",
+        "A2",
+        "B1"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>A1</strong> dans les cinq activités langagières ; certains élèves atteignent A2 dans certaines activités. A2 est visé au cycle 4.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles sont des activités langagières du CECRL telles qu’elles figurent dans les programmes ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Réagir et dialoguer",
+        "Parler en continu",
+        "Traduire",
+        "Écouter et comprendre"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p>Les cinq activités : écouter et comprendre, lire et comprendre, parler en continu, réagir et dialoguer, écrire. La traduction n’en fait pas partie à l’école.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qu’est-ce que le TPR (Total Physical Response) ?</p>",
+       "options": [
+        "Une méthode où l’élève montre sa compréhension par le geste, sans être obligé de parler",
+        "Un test de niveau officiel",
+        "Une méthode de traduction mot à mot"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p>Méthode de James Asher : on entend (<em>Touch your nose!</em>), on agit. Elle rassure et ancre le vocabulaire.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quand fête-t-on Bonfire Night au Royaume-Uni ?</p>",
+       "options": [
+        "31 October",
+        "5 November",
+        "17 March"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Le <strong>5 novembre</strong>, en souvenir de l’échec de la Conspiration des poudres (Guy Fawkes, 1605).</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans une réponse de compréhension, que faut-il faire ? (une ou plusieurs réponses)</p>",
+       "options": [
+        "Répondre en anglais avec ses propres mots",
+        "Justifier par une courte citation du texte",
+        "Recopier tout le paragraphe concerné",
+        "Répondre en français"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p>On reformule et on justifie brièvement ; recopier ou répondre en français est pénalisé.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Pour une question « 80 words », quelle longueur viser ?</p>",
+       "options": [
+        "Environ 40 mots",
+        "Entre 70 et 90 mots environ",
+        "Au moins 150 mots"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p>Une marge d’environ <strong>10 %</strong> est généralement tolérée : trop court ou trop long est pénalisé.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel horaire hebdomadaire est prévu pour les langues vivantes aux cycles 2 et 3 ?</p>",
+       "options": [
+        "45 minutes",
+        "1 h 30",
+        "3 heures"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>1 h 30</strong> par semaine (54 heures annuelles), à répartir de préférence en séances courtes et régulières.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Answer the question in about <strong>80 words</strong> : « Do you think songs are a good way to teach English to young children? Give examples. »</p>",
+       "corrige": "<p><em>In my opinion, songs are one of the best tools to teach English to young children. Firstly, they are fun and motivating: pupils want to sing again and again, so they memorise words and structures without effort. Moreover, rhythm and melody help them to pronounce English sounds correctly. For instance, \"Head, Shoulders, Knees and Toes\" teaches the parts of the body with gestures. However, the teacher should explain the meaning with pictures. To conclude, songs make learning natural and enjoyable.</em></p><p>(Environ 80 mots.) Structure : prise de position → deux arguments reliés par des connecteurs → exemple concret → nuance → conclusion.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Décris un rituel de 5 minutes en anglais pour une classe de CE2 en début de séance (déroulé, formulations, intérêt pédagogique).</p>",
+       "corrige": "<ol><li><strong>Greetings</strong> : <em>Good morning, everybody! — Good morning, Miss/Mr …!</em> ; <em>How are you today?</em> Chaque élève répond avec une étiquette-visage : <em>I’m happy / sad / tired / hungry.</em></li><li><strong>Date</strong> : un élève « day helper » vient au tableau : <em>What day is it today? — It’s Tuesday. What’s the date? — It’s the 6th of October.</em></li><li><strong>Weather</strong> : <em>What’s the weather like? — It’s cloudy and windy.</em> (flashcards météo, chanson <em>How’s the weather?</em>)</li><li><strong>Roll call</strong> : <em>Is Tom here? — Yes, he is. / No, he’s absent.</em></li></ol><p><strong>Intérêt</strong> : la répétition quotidienne installe des structures en <strong>contexte authentique</strong>, sécurise les élèves (ils savent ce qui les attend), permet à chacun de parler un peu chaque jour ; on enrichit progressivement (nouveaux adjectifs, réponses plus longues) et on confie le rôle de meneur à un élève.</p>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

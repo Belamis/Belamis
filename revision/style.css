@@ -1356,7 +1356,9 @@ html[data-theme="lagon"] :is(.study, .sheet) :is(.eval-ok, .eval-half, .eval-ko)
 html[data-theme="clair"] :is(.study, .sheet) .eval-ko[aria-pressed="true"],
 html[data-theme="lagon"] :is(.study, .sheet) .eval-ko[aria-pressed="true"] { background: var(--bad); border-color: var(--bad); }
 html:is([data-theme="clair"], [data-theme="lagon"]) .study .study-score.danger strong { color: var(--bad); }
-html:is([data-theme="clair"], [data-theme="lagon"]) .study :is(.btn-ghost, .type-chip, .list-tab) { color: var(--ink); border-color: var(--line); }
+html:is([data-theme="clair"], [data-theme="lagon"]) .study :is(.btn-ghost, .type-chip, .list-tab):not([aria-selected="true"]) { color: var(--ink); border-color: var(--line); }
+html:is([data-theme="clair"], [data-theme="lagon"]) .study .list-tab[aria-selected="true"] { color: var(--on-accent); }
+html:is([data-theme="clair"], [data-theme="lagon"]) .study .eyebrow { background: var(--surface); border-color: var(--line); color: var(--ink-soft); }
 html:is([data-theme="clair"], [data-theme="lagon"]) .study .btn-ghost:hover { background: var(--surface-2); }
 html:is([data-theme="clair"], [data-theme="lagon"]) .study .sujet-card { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 6px 18px rgba(0, 0, 0, 0.05); }
 html:is([data-theme="clair"], [data-theme="lagon"]) .study :is(.fig, .copie-eleve) { box-shadow: inset 0 0 0 1px var(--line); }

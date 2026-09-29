@@ -333,6 +333,8 @@
         ${p.audio ? audioHTML(p) : ""}
         ${p.questions.map((q) => questionHTML(p, q, e)).join("")}
       </section>`).join("");
+    // tableaux larges défilants : atteignables au clavier
+    document.querySelectorAll("#study-questions .table-wrap, #study-text .table-wrap").forEach((w) => { w.tabIndex = 0; w.setAttribute("role", "region"); w.setAttribute("aria-label", "Tableau (faire défiler)"); });
 
     updateTotals();
   }

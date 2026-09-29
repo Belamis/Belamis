@@ -55,6 +55,7 @@
   function blocsOf(c) {
     const list = c.blocs.map((b) => ({ ...b }));
     list.push({ m: c.rev, name: "Séances de révision", rev: true });
+    (c.notions || []).forEach((m) => list.push({ m, name: m === "notions-fr" ? "Notions de français" : "Notions de maths", rev: true }));
     return list;
   }
 

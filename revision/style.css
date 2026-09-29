@@ -1453,3 +1453,7 @@ html:is([data-theme="clair"], [data-theme="lagon"]) .study .study-bar { border-b
 .auth-check input { width: 16px !important; height: 16px; padding: 0 !important; accent-color: var(--lime); }
 .inline-btns { display: flex; flex-wrap: wrap; gap: 8px; }
 #nav-guest { gap: 8px; }
+.concours-rev { flex-wrap: wrap; gap: 10px; }
+.matiere-notion { border-color: rgba(201, 182, 255, 0.5); background: rgba(24, 16, 40, 0.55); }
+.matiere-notion:hover:not(:disabled) { border-color: #c9b6ff; background: rgba(34, 22, 58, 0.7); box-shadow: 0 10px 40px -10px rgba(170, 140, 255, 0.55); }
+.matiere-notion small { border-color: rgba(201, 182, 255, 0.6) !important; color: #d8caff !important; }

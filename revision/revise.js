@@ -55,6 +55,18 @@
       title: "Choisis un thème, <em>révise l'essentiel</em>.",
       intro: "Chaque séance dure 20 à 40 minutes : un rappel de cours, un quiz corrigé tout de suite, puis un ou deux exercices d'application. Rien n'est obligatoire : fais celles qui te manquent avant l'écrit et la préparation de ton dossier.",
     },
+    "notions-fr": {
+      data: (window.BELAMIS_NOTIONS || {}).fr,
+      eyebrow: "Révision des notions · français",
+      title: "Une notion, <em>une fiche</em>.",
+      intro: "Grammaire, conjugaison, orthographe, lexique, texte : chaque fiche reprend une notion précise avec l'essentiel du cours, des exemples, les pièges, ce qu'on enseigne à l'école, puis un quiz corrigé et deux exercices. Choisis une catégorie ou pioche la notion qui te manque. Commune aux trois concours.",
+    },
+    "notions-ma": {
+      data: (window.BELAMIS_NOTIONS || {}).ma,
+      eyebrow: "Révision des notions · mathématiques",
+      title: "Une notion, <em>une fiche</em>.",
+      intro: "Nombres, fractions, calcul, Pythagore, Thalès, aires, volumes, probabilités… chaque fiche reprend une notion précise avec l'essentiel du cours, des exemples résolus, les pièges, ce qu'on enseigne à l'école, puis un quiz corrigé et deux exercices. Commune aux trois concours.",
+    },
   };
 
   // ---------- Concours : on choisit d'abord son concours, puis ses épreuves ----------
@@ -67,6 +79,7 @@
         { m: "epreuve2", name: "Épreuve 2", sub: "HG-EMC · sciences · arts · anglais" },
       ],
       rev: "rev-bac3",
+      notions: ["notions-fr", "notions-ma"],
     },
     myt2: {
       nom: "2nd concours interne", lead: "2nd concours interne spécifique Mayotte : choisis une épreuve.",
@@ -76,6 +89,7 @@
         { m: "mayotte", dom: "oral", name: "Oraux d'admission", sub: "Étude de cas · mise en situation" },
       ],
       rev: "rev-myt2",
+      notions: ["notions-fr", "notions-ma"],
     },
     p1: {
       nom: "1er concours interne", lead: "1er concours interne : choisis une épreuve.",
@@ -85,6 +99,7 @@
         { m: "interne1", dom: "p1-facultatif", name: "Épreuve facultative", sub: "Éducation prioritaire · sur 10" },
       ],
       rev: "rev-p1",
+      notions: ["notions-fr", "notions-ma"],
     },
   };
   const CONCOURS_KEY = "belamis-concours";
@@ -115,10 +130,18 @@
       </button>`;
     }).join("");
     const nr = countSujets(c.rev);
+    const NOM = { "notions-fr": "Notions de français", "notions-ma": "Notions de maths" };
+    const SUB = { "notions-fr": "Grammaire, conjugaison, orthographe, lexique", "notions-ma": "Fractions, Pythagore, Thalès, aires, probabilités…" };
     $("concours-rev").innerHTML = `<button class="matiere matiere-rev" type="button" data-matiere="${c.rev}"${nr ? "" : " disabled"}>
         <span class="matiere-name">Séances de révision <small>conseillé</small></span>
-        <span class="matiere-sub">${nr ? `Rappels de cours et quiz par thème, à faire quand tu veux · ${nr} thèmes` : "En préparation"}</span>
+        <span class="matiere-sub">${nr ? `Rappels de cours et quiz par thème · ${nr} thèmes` : "En préparation"}</span>
+      </button>` + (c.notions || []).map((m) => {
+        const n = countSujets(m);
+        return `<button class="matiere matiere-rev matiere-notion" type="button" data-matiere="${m}"${n ? "" : " disabled"}>
+        <span class="matiere-name">${NOM[m]} <small>une fiche par notion</small></span>
+        <span class="matiere-sub">${n ? `${SUB[m]} · ${n} fiches` : "En préparation"}</span>
       </button>`;
+      }).join("");
   }
 
   const $ = (id) => document.getElementById(id);
@@ -215,7 +238,7 @@
     const status = sc.evaluated
       ? `<span class="chip chip-score">${fmtPts(sc.got)} / ${fmtPts(sc.evaluated)} pts évalués</span>`
       : sc.answered ? `<span class="chip">${sc.answered} / ${sc.total} réponses</span>` : `<span class="chip chip-new">Nouveau</span>`;
-    const kind = s.revision ? `Séance · ${Math.round((s.duree || 1800) / 60)} min` : s.officiel ? "Annale officielle" : s.lycee ? "Approfondissement" : s.entrainement ? "Entraînement rapide" : /oral/.test(s.domaine) ? "Oral d'admission" : "Sujet type";
+    const kind = s.fiche ? `Fiche · ${Math.round((s.duree || 900) / 60)} min` : s.revision ? `Séance · ${Math.round((s.duree || 1800) / 60)} min` : s.officiel ? "Annale officielle" : s.lycee ? "Approfondissement" : s.entrainement ? "Entraînement rapide" : /oral/.test(s.domaine) ? "Oral d'admission" : "Sujet type";
     const top = s.texte
       ? `<span class="sujet-num">${sujetName(s)}</span><span class="sujet-genre">${esc(s.genre)}</span>`
       : `<span class="sujet-num">${kind}</span><span class="sujet-genre">${DATA.domaines ? esc(DATA.domaines[s.domaine] || "") : `noté sur ${sujetTotal(s)}`}</span>`;

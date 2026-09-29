@@ -162,7 +162,13 @@
     if (first) first.focus();
   }
 
-  function openAuth(tab = "login") {
+  let pendingLaunch = false; // les révisions démarreront dès la connexion
+
+  function openAuth(tab = "login", gate = false) {
+    pendingLaunch = gate;
+    $("auth-gate").hidden = !gate;
+    // ne proposer la reprise que s'il reste des révisions faites sans compte (anciennes versions)
+    $("signup-import").closest("label").hidden = !Object.keys(guest.read() || {}).length;
     lastFocus = document.activeElement;
     Object.values(forms).forEach((f) => msg(f, ""));
     suggestBox.hidden = true;
@@ -174,9 +180,12 @@
   }
 
   function closeAuth() {
+    const launch = pendingLaunch && user;
+    pendingLaunch = false;
     modal.classList.remove("open");
     modal.hidden = true;
     if (lastFocus && lastFocus.focus) lastFocus.focus();
+    if (launch) startRevision();
   }
 
   function busy(form, on) {
@@ -321,6 +330,9 @@
     if (sb) { try { await sb.auth.signOut(); } catch (_) { /* hors ligne */ } }
     session.write({});
     setUser(null);
+    // l'espace de révision est réservé aux comptes : retour à l'accueil
+    document.querySelectorAll(".sheet:not([hidden]) [data-close-panel]").forEach((b) => b.click());
+    if (document.body.classList.contains("launching")) $("back").click();
   }
 
   // ---------- Événements ----------
@@ -350,10 +362,10 @@
 
   // ---------- Lancement des révisions ----------
   async function startRevision() {
+    if (!user) { openAuth("signup", true); return; }
     const note = $("space-note");
     note.textContent = "";
     window.BelamisLaunch();
-    if (!user) return;
     try {
       const now = new Date().toISOString();
       const next = await store.update((p) => ({ ...p, sessions: (p.sessions || 0) + 1, firstVisit: p.firstVisit || now, lastVisit: now }));

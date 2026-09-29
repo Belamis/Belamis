@@ -747,6 +747,16 @@ body.launching .footer { opacity: 0; pointer-events: none; }
   background: rgba(92, 225, 230, 0.08);
   border: 1px solid rgba(92, 225, 230, 0.25);
 }
+.auth-gate {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--lime);
+  background: rgba(201, 242, 90, 0.08);
+  border: 1px solid rgba(201, 242, 90, 0.3);
+}
 .auth-x {
   position: absolute;
   top: 14px;

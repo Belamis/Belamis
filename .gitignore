@@ -12,3 +12,4 @@
 *.keystore
 __pycache__/
 revision/dist/
+node_modules/

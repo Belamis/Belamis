@@ -2,3 +2,8 @@
 [build]
   command = "sh revision/netlify-build.sh"
   publish = "revision/dist"
+
+# Vérification des réponses par l'IA (fonction /api/verifier, clé ANTHROPIC_API_KEY)
+[functions]
+  directory = "revision/netlify/functions"
+  node_bundler = "esbuild"

@@ -33,3 +33,22 @@ Pour une mise à jour : **Deploys** → glisse le nouveau zip dans la zone « Dr
 - **Nom de domaine à toi** (facultatif, environ 10 € par an) : Netlify →
   **Domain management → Add a domain**, puis suis les instructions DNS.
   Le certificat HTTPS est automatique et gratuit.
+
+## Vérification des réponses par l'IA
+
+Sous chaque exercice rédigé, le bouton **Vérifier avec l'IA** envoie la réponse, l'énoncé et
+le corrigé à Claude (Anthropic) via la fonction `revision/netlify/functions/verifier.mts`.
+Il renvoie un avis : juste / en partie juste / à revoir, une note sur le barème, ce qui est juste,
+ce qu'il faut corriger et un conseil. Le bouton reste caché tant que le service n'est pas activé.
+
+1. **Déploiement par GitHub obligatoire** (méthode 2) : le glisser-déposer d'un zip ne publie pas
+   les fonctions Netlify.
+2. Crée une clé sur <https://console.anthropic.com> (**API Keys**) et ajoute un peu de crédit
+   (**Billing**). Une vérification coûte environ 2 à 4 centimes (plus pour une longue rédaction).
+3. Sur Netlify : **Site configuration → Environment variables → Add a variable** :
+   `ANTHROPIC_API_KEY` = ta clé. Puis **Deploys → Trigger deploy**.
+4. Facultatif : `BELAMIS_IA_MODEL` pour changer de modèle (par défaut `claude-opus-5-5`).
+
+La clé reste sur le serveur Netlify, jamais dans le navigateur. Chaque adresse IP est limitée
+à 12 vérifications par minute. Pour suivre ou plafonner la dépense : console Anthropic →
+**Limits** (plafond mensuel).

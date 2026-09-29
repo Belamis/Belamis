@@ -138,7 +138,7 @@
       </button>` + (c.notions || []).map((m) => {
         const n = countSujets(m);
         return `<button class="matiere matiere-rev matiere-notion" type="button" data-matiere="${m}"${n ? "" : " disabled"}>
-        <span class="matiere-name">${NOM[m]} <small>une fiche par notion</small></span>
+        <span class="matiere-name">${NOM[m]} <small>par notion</small></span>
         <span class="matiere-sub">${n ? `${SUB[m]} · ${n} fiches` : "En préparation"}</span>
       </button>`;
       }).join("");

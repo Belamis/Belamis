@@ -1469,3 +1469,4 @@ html:is([data-theme="clair"], [data-theme="lagon"]) .study .study-bar { border-b
   .space-tools .btn { padding: 8px 12px; font-size: 0.85rem; }
   .matieres .matiere { min-width: 0; width: 100%; }
 }
+@media (max-width: 600px) { .concours-rev .matiere { width: 100%; min-width: 0; } .concours-rev { width: 100%; } }

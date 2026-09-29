@@ -51,7 +51,7 @@ def _t(x, y, s, size=11, anchor="middle", cls=""):
 
 # ---------------------------------------------------------------- France
 # « diagonale » des faibles densités, des Ardennes et de la Meuse aux Landes, par le Massif central
-DIAGONALE = [(4.6, 50.0), (6.2, 49.1), (4.4, 46.6), (3.9, 44.4), (2.2, 44.1), (0.3, 43.9), (-0.9, 44.3), (1.5, 45.9), (2.9, 47.8)]
+DIAGONALE = [(4.6, 50.0), (5.4, 49.2), (4.4, 46.6), (3.9, 44.4), (2.2, 44.1), (0.3, 43.9), (-0.9, 44.3), (1.5, 45.9), (2.9, 47.8)]
 FR = Proj(-5.4, 9.9, 41.2, 51.3, 520, lat_ref=46.5)
 
 def _france_body():
@@ -76,12 +76,15 @@ def france_vierge(label="Fond de carte de la France métropolitaine"):
 def carte_population():
     """Corrigé : principales aires urbaines (catégories d'après INSEE, aires d'attraction des villes 2020)."""
     cats = [("Paris", 26), ("Lyon", 13), ("Marseille", 13), ("Lille", 13), ("Toulouse", 13), ("Bordeaux", 13),
-            ("Nantes", 8), ("Nice", 8), ("Strasbourg", 8), ("Montpellier", 8), ("Rennes", 8), ("Grenoble", 8)]
+            ("Nantes", 13), ("Nice", 8), ("Strasbourg", 8), ("Montpellier", 8), ("Rennes", 8), ("Grenoble", 8), ("Rouen", 8)]
     b = _france_body()
     # couloirs de fortes densités (vallées et littoraux), en aplat léger
-    for a, z in (("Lille", "Paris"), ("Paris", "Lyon"), ("Lyon", "Marseille"), ("Marseille", "Nice")):
+    for a, z in (("Lille", "Paris"), ("Lyon", "Marseille"), ("Marseille", "Nice")):
         (x1, y1), (x2, y2) = FR(*VILLES[a]), FR(*VILLES[z])
         b += f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" class="axe-dense"/>'
+    # grand axe de communication reliant la région parisienne à l'axe rhodanien
+    (x1, y1), (x2, y2) = FR(*VILLES["Paris"]), FR(*VILLES["Lyon"])
+    b += f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" class="axe-com"/>'
     for nom, r in cats:
         x, y = FR(*VILLES[nom])
         b += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" class="ville"/>'
@@ -92,12 +95,13 @@ def carte_population():
     # diagonale des faibles densités
     pts = [FR(*p) for p in DIAGONALE]
     b += '<polygon points="' + " ".join(f"{x:.1f},{y:.1f}" for x, y in pts) + '" class="faible"/>'
-    lg = (f'<g transform="translate({FR.w + 14},{FR.h - 130})"><rect x="-8" y="-14" width="172" height="112" class="legend-box"/>'
-          + '<circle cx="8" cy="0" r="9" class="ville"/>' + _t(24, 4, "plus de 10 millions d’hab.", 10, "start")
-          + '<circle cx="8" cy="24" r="6" class="ville"/>' + _t(24, 28, "1 à 2,5 millions", 10, "start")
-          + '<circle cx="8" cy="46" r="4" class="ville"/>' + _t(24, 50, "0,5 à 1 million", 10, "start")
-          + '<line x1="0" y1="68" x2="16" y2="68" class="axe-dense"/>' + _t(24, 72, "axe de fortes densités", 10, "start")
-          + '<rect x="0" y="82" width="16" height="10" class="faible"/>' + _t(24, 91, "faibles densités", 10, "start") + "</g>")
+    lg = (f'<g transform="translate({FR.w + 14},{FR.h - 196})"><rect x="-8" y="-8" width="186" height="192" class="legend-box"/>'
+          + '<circle cx="26" cy="26" r="26" class="ville"/>' + _t(60, 30, "plus de 10 millions", 10, "start")
+          + '<circle cx="26" cy="72" r="13" class="ville"/>' + _t(60, 76, "1 à 2,5 millions", 10, "start")
+          + '<circle cx="26" cy="100" r="8" class="ville"/>' + _t(60, 104, "0,5 à 1 million", 10, "start")
+          + '<line x1="16" y1="124" x2="36" y2="124" class="axe-dense"/>' + _t(46, 128, "axe de fortes densités", 10, "start")
+          + '<line x1="16" y1="146" x2="36" y2="146" class="axe-com"/>' + _t(46, 150, "axe de communication majeur", 10, "start")
+          + '<rect x="16" y="162" width="20" height="12" class="faible"/>' + _t(46, 172, "faibles densités", 10, "start") + "</g>")
     return _svg(FR.w + 200, FR.h, b + lg, "Croquis corrigé : répartition de la population en France métropolitaine",
                 caption="La répartition de la population en France métropolitaine (catégories d’après l’INSEE, aires d’attraction des villes)")
 
@@ -197,8 +201,10 @@ def carte_mondialisation_maritime():
              "Busan": (129.0, 35.1), "Dubaï (Jebel Ali)": (55.0, 25.0), "Le Havre": (0.1, 49.5), "Marseille-Fos": (4.9, 43.4)}
     detroits = {"Pas-de-Calais": (1.5, 51.0), "Gibraltar": (-5.6, 36.0), "canal de Suez": (32.3, 30.5), "Bab-el-Mandeb": (43.4, 12.6),
                 "Ormuz": (56.4, 26.6), "Malacca": (100.5, 3.5), "canal de Panama": (-79.7, 9.1)}
-    routes = [[(-118, 34), (-179.9, 31)], [(179.9, 31), (140, 33), (122, 31)], [(122, 31), (104, 1.3), (80, 6), (43.4, 12.6), (32.3, 30.5), (15, 36), (-5.6, 36), (-9, 43), (0, 49.5), (4.5, 52)],
-              [(4.5, 52), (-30, 45), (-74, 40)], [(-79.7, 9.1), (-118, 33.7)]]
+    routes = [[(-118, 34), (-179.9, 31)], [(179.9, 31), (140, 33), (128, 30), (122, 31)],
+              [(122, 31), (104, 1.3), (80, 6), (43.4, 12.6), (32.5, 29.9), (32.3, 31.3), (20, 34.2), (11, 37.6), (0, 37),
+               (-5.6, 36), (-10, 37), (-10, 43.5), (-5.5, 48.6), (1.5, 50.9), (4.5, 52)],
+              [(-1, 50), (0.1, 49.5)], [(1.5, 50.9), (-5.5, 49.5), (-30, 45), (-74, 40)], [(-79.7, 9.1), (-118, 33.7)]]
     for r in routes:
         pts = [WO(*p) for p in r]
         b += '<polyline points="' + " ".join(f"{x:.1f},{y:.1f}" for x, y in pts) + '" class="route"/>'

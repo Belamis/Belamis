@@ -1,0 +1,2619 @@
+{
+ "sujets": [
+  {
+   "id": "rev-bac3-fr-classes",
+   "num": 1,
+   "domaine": "francais",
+   "titre": "Classes grammaticales",
+   "theme": "Reconnaître et justifier la nature des mots, surtout les mots à plusieurs classes (que, leur, des, en, tout)",
+   "revision": true,
+   "duree": 1800,
+   "total": 11,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>À l’écrit du CRPE, on te demande souvent de <strong>donner la nature</strong> (la classe grammaticale) de mots soulignés <strong>et de justifier</strong>. La nature d’un mot est stable (c’est son « identité » dans le dictionnaire) ; sa <strong>fonction</strong> dépend de la phrase. Ne confonds pas les deux.</p>\n<h4>1. Les classes de mots</h4>\n<table class=\"tab\"><thead><tr><th>Classes variables</th><th>Rôle</th><th>Exemples</th></tr></thead><tbody><tr><td>Nom</td><td>désigne un être, une chose, une idée ; noyau du groupe nominal</td><td><em>enfant, Paris, courage</em></td></tr><tr><td>Déterminant</td><td>introduit le nom, porte son genre et son nombre</td><td><em>le, une, des, du, ce, mon, chaque, quel, deux</em></td></tr><tr><td>Adjectif</td><td>qualifie ou précise le nom, s’accorde avec lui</td><td><em>grand, rouge, municipal</em></td></tr><tr><td>Pronom</td><td>remplace (ou représente) un nom, un groupe, une idée</td><td><em>il, le, lui, qui, celui-ci, le mien, rien</em></td></tr><tr><td>Verbe</td><td>se conjugue (personne, temps, mode) ; noyau du groupe verbal</td><td><em>chanter, finir, prendre</em></td></tr></tbody></table><table class=\"tab\"><thead><tr><th>Classes invariables</th><th>Rôle</th><th>Exemples</th></tr></thead><tbody><tr><td>Adverbe</td><td>modifie un verbe, un adjectif, un autre adverbe ou la phrase</td><td><em>très, vite, ne… pas, hier, heureusement</em></td></tr><tr><td>Préposition</td><td>introduit un complément (groupe prépositionnel)</td><td><em>à, de, dans, par, pour, sans, avec, en</em></td></tr><tr><td>Conjonction de coordination</td><td>relie deux éléments de même statut</td><td><em>mais, ou, et, donc, or, ni, car</em></td></tr><tr><td>Conjonction de subordination</td><td>introduit une subordonnée conjonctive</td><td><em>que, quand, lorsque, si, comme, puisque</em></td></tr><tr><td>Interjection</td><td>exprime une émotion, un appel</td><td><em>oh, hélas, chut</em></td></tr></tbody></table>\n<h4>2. Les sous-classes à connaître</h4>\n<ul>\n<li><strong>Déterminants</strong> : article défini (<em>le, la, les</em> et les formes contractées <em>au, aux, du, des</em>), article indéfini (<em>un, une, des</em>), article partitif (<em>du, de la</em> : <em>boire du lait</em>), possessif (<em>mon, leur</em>), démonstratif (<em>ce, cette</em>), interrogatif ou exclamatif (<em>quel</em>), indéfini (<em>chaque, aucun, plusieurs</em>), numéral cardinal (<em>trois</em>).</li>\n<li><strong>Pronoms</strong> : personnel (<em>je, me, le, lui, leur, en, y</em>), possessif (<em>le mien</em>), démonstratif (<em>celui, ceci, ce</em> dans <em>c’est</em>), relatif (<em>qui, que, quoi, dont, où, lequel</em>), interrogatif (<em>qui ? que ? lequel ?</em>), indéfini (<em>on, personne, rien, chacun</em>).</li>\n</ul>\n<h4>3. La méthode : justifier par un test</h4>\n<ul>\n<li><strong>Déterminant ou pronom ?</strong> Le déterminant est suivi d’un nom (<em>le chat</em>) ; le pronom accompagne un verbe et remplace un groupe (<em>je le vois</em> = je vois le chat).</li>\n<li><strong>Adverbe</strong> : invariable et souvent supprimable (<em>elle court [très] vite</em>).</li>\n<li><strong>Préposition</strong> : invariable, suivie de son complément (<em>dans la cour</em>).</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Une bonne réponse = <strong>classe précise + justification</strong>. Exemple : « <em>leur</em> (<em>il leur parle</em>) : pronom personnel, 3e personne du pluriel ; placé devant le verbe, il remplace “à ses amis” ; il est invariable (pas de -s). »</p></div>\n<h4>4. Les pièges des candidats : les mots « caméléons »</h4>\n<table class=\"tab\"><thead><tr><th>Mot</th><th>Cas possibles</th></tr></thead><tbody><tr><td><em>leur</em></td><td>déterminant possessif devant un nom (<em>leurs livres</em>) / pronom personnel devant un verbe, toujours invariable (<em>je leur parle</em>)</td></tr><tr><td><em>des</em></td><td>article indéfini (<em>des enfants jouent</em>) / article défini contracté = de + les (<em>il revient des champs</em>)</td></tr><tr><td><em>du</em></td><td>article partitif (<em>manger du pain</em>) / article défini contracté = de + le (<em>le toit du garage</em>)</td></tr><tr><td><em>que</em></td><td>pronom relatif avec antécédent (<em>le livre que je lis</em>) / conjonction de subordination (<em>je crois que…</em>) / pronom interrogatif (<em>Que veux-tu ?</em>) / adverbe exclamatif (<em>Que c’est beau !</em>) / adverbe dans la négation restrictive <em>ne… que</em></td></tr><tr><td><em>en</em></td><td>préposition (<em>en France, en courant</em>) / pronom personnel (<em>j’en veux</em> = de ce gâteau)</td></tr><tr><td><em>tout</em></td><td>déterminant (<em>tout homme</em>) / pronom (<em>tout est prêt</em>) / adverbe = « entièrement » (<em>elle est tout émue</em>)</td></tr><tr><td><em>si</em></td><td>conjonction de subordination (<em>si tu viens</em>) / adverbe d’intensité (<em>si grand</em>)</td></tr></tbody></table><p>Autre piège : un infinitif précédé d’un déterminant devient un <strong>nom</strong> (<em>le rire</em>, <em>le devoir</em>) ; un participe employé seul auprès d’un nom fonctionne comme un adjectif (<em>une porte fermée</em>).</p>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Il <u>leur</u> parle de leurs projets », le mot souligné est :",
+       "options": [
+        "un déterminant possessif",
+        "un pronom personnel",
+        "un pronom possessif"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<strong>Pronom personnel</strong> : placé devant le verbe <em>parle</em>, il remplace « à eux » (COI). Il est invariable ; le second <em>leurs</em>, devant le nom <em>projets</em>, est un déterminant possessif."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Il revient <u>des</u> champs », le mot souligné est :",
+       "options": [
+        "un article indéfini",
+        "un article défini contracté",
+        "un article partitif"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<strong>Article défini contracté</strong> : <em>des</em> = <em>de</em> + <em>les</em> (il revient <em>de les</em> champs). Au singulier on dirait « il revient <em>du</em> champ »."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Je crois <u>que</u> tu as raison », le mot souligné est :",
+       "options": [
+        "un pronom relatif",
+        "une conjonction de subordination",
+        "un adverbe exclamatif"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<strong>Conjonction de subordination</strong> : pas d’antécédent, il introduit une subordonnée complétive (COD de <em>crois</em>) et n’a pas de fonction dans cette subordonnée."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Elle marche très vite mais prudemment », quels mots sont des adverbes ?",
+       "options": [
+        "très",
+        "vite",
+        "mais",
+        "prudemment"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<em>Très</em> (modifie <em>vite</em>), <em>vite</em> et <em>prudemment</em> (modifient le verbe) sont des adverbes. <em>Mais</em> est une conjonction de coordination."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Elle est <u>tout</u> émue », le mot souligné est :",
+       "options": [
+        "un déterminant",
+        "un pronom",
+        "un adverbe"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<strong>Adverbe</strong> : il signifie « entièrement » et modifie l’adjectif <em>émue</em>. (Il varie seulement devant un adjectif féminin commençant par une consonne ou un h aspiré : <em>elle est toute petite</em>.)"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Des cerises ? Prends-<u>en</u> ! », le mot souligné est :",
+       "options": [
+        "une préposition",
+        "un pronom personnel",
+        "un adverbe"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<strong>Pronom personnel</strong> : <em>en</em> remplace « des cerises » (COD de <em>prends</em>). Préposition, il serait suivi d’un complément (<em>en ville</em>)."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Le <u>rire</u> de Paul résonne », le mot souligné est :",
+       "options": [
+        "un verbe à l’infinitif",
+        "un nom",
+        "un adjectif"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<strong>Nom</strong> : précédé du déterminant <em>le</em> et complété par <em>de Paul</em>, l’infinitif est devenu un nom (on peut dire <em>les rires</em>)."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Donne la nature des six mots soulignés et justifie ta réponse.</p>\n<p>« <u>Chaque</u> matin, la vieille femme <u>que</u> nous croisions <u>leur</u> souriait <u>doucement</u>, <u>et</u> elle disparaissait <u>dans</u> la brume. »</p>",
+       "corrige": "<ul>\n<li><strong>Chaque</strong> : déterminant indéfini ; il introduit le nom <em>matin</em>.</li>\n<li><strong>que</strong> : pronom relatif ; il a un antécédent (<em>la vieille femme</em>), introduit la subordonnée relative <em>que nous croisions</em> et y est COD de <em>croisions</em>.</li>\n<li><strong>leur</strong> : pronom personnel (3e personne du pluriel) ; placé devant le verbe <em>souriait</em>, il est invariable et signifie « à eux » (COI).</li>\n<li><strong>doucement</strong> : adverbe (formé sur l’adjectif <em>douce</em> + suffixe <em>-ment</em>) ; invariable, il modifie le verbe <em>souriait</em>.</li>\n<li><strong>et</strong> : conjonction de coordination ; il relie deux propositions de même statut.</li>\n<li><strong>dans</strong> : préposition ; elle introduit le groupe nominal <em>la brume</em>.</li>\n</ul>\n<p><strong>Piège évité</strong> : ne réponds pas « <em>que</em> : conjonction » sans vérifier la présence d’un antécédent.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Donne la nature du mot <em>que</em> dans chacune des phrases suivantes, en justifiant.</p>\n<ol><li>« Que veux-tu ? »</li><li>« Le film que j’ai vu était long. »</li><li>« Il faut que tu viennes. »</li><li>« Qu’il est tard ! »</li></ol>",
+       "corrige": "<ol>\n<li><strong>Pronom interrogatif</strong> : il pose une question sur le COD de <em>veux</em> (réponse : « je veux <em>un gâteau</em> »).</li>\n<li><strong>Pronom relatif</strong> : antécédent <em>le film</em> ; il est COD de <em>ai vu</em> dans la relative.</li>\n<li><strong>Conjonction de subordination</strong> : pas d’antécédent ; elle introduit la complétive <em>que tu viennes</em> (sujet réel de <em>il faut</em>) ; elle n’a pas de fonction dans la subordonnée.</li>\n<li><strong>Adverbe exclamatif</strong> : il marque l’intensité (= « comme il est tard ! »).</li>\n</ol>\n<p><strong>Astuce</strong> : cherche d’abord un antécédent (relatif), puis un verbe principal qui « appelle » une proposition (conjonction), puis le type de phrase (interrogative, exclamative).</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-fr-fonctions",
+   "num": 2,
+   "domaine": "francais",
+   "titre": "Fonctions dans la phrase",
+   "theme": "Sujet, COD, COI, COS, attributs, complément d’agent, complément de phrase, fonctions dans le groupe nominal",
+   "revision": true,
+   "duree": 1800,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>La <strong>fonction</strong> d’un mot ou d’un groupe, c’est son <strong>rôle dans la phrase</strong>. Un même groupe nominal peut être sujet, COD, attribut… Pour chaque réponse, donne la fonction <strong>et le mot dont il dépend</strong> (« COD du verbe <em>lire</em> », « complément du nom <em>tasse</em> »).</p>\n<h4>1. Les fonctions liées au verbe</h4>\n<table class=\"tab\"><thead><tr><th>Fonction</th><th>Comment la reconnaître</th><th>Exemple</th></tr></thead><tbody><tr><td>Sujet</td><td>encadrement « c’est… qui » ; commande l’accord du verbe ; peut être inversé</td><td><em>Dans la cour jouaient <strong>les enfants</strong>.</em></td></tr><tr><td>COD</td><td>construit sans préposition ; pronominalisable par <em>le, la, les, en</em> ; ni supprimable ni déplaçable en général ; devient sujet au passif</td><td><em>Léa lit <strong>un roman</strong>.</em> → Léa <em>le</em> lit.</td></tr><tr><td>COI</td><td>introduit par une préposition (<em>à, de</em>) imposée par le verbe ; pronominalisable par <em>lui, leur, en, y</em></td><td><em>Il parle <strong>de son voyage</strong>.</em></td></tr><tr><td>COS</td><td>second complément d’objet quand le verbe a déjà un COD</td><td><em>Elle offre un livre <strong>à sa sœur</strong>.</em></td></tr><tr><td>Attribut du sujet</td><td>après un verbe attributif (<em>être, paraître, sembler, devenir, rester, demeurer, avoir l’air…</em>) ; s’accorde avec le sujet</td><td><em>Mes voisins semblent <strong>fatigués</strong>.</em></td></tr><tr><td>Attribut du COD</td><td>caractérise le COD à travers le verbe (<em>trouver, juger, rendre, nommer…</em>)</td><td><em>Je la trouve <strong>courageuse</strong>.</em></td></tr><tr><td>Complément d’agent</td><td>à la voix passive, introduit par <em>par</em> ou <em>de</em> ; redevient sujet à l’actif</td><td><em>Le chat a été soigné <strong>par la vétérinaire</strong>.</em></td></tr><tr><td>Autre complément du verbe</td><td>essentiel mais non objet : lieu, mesure, prix… ; ni supprimable ni déplaçable</td><td><em>Nous allons <strong>à la piscine</strong>. Il pèse <strong>80 kilos</strong>.</em></td></tr></tbody></table>\n<h4>2. Le complément de phrase (ancien « complément circonstanciel »)</h4>\n<p>Il porte sur toute la phrase : il est <strong>supprimable</strong> et <strong>déplaçable</strong>. Il précise le temps, le lieu, la cause, le but, la manière… Il peut être un groupe nominal (<em>ce matin</em>), un groupe prépositionnel (<em>à cause de la pluie</em>), un adverbe (<em>hier</em>) ou une subordonnée (<em>quand il pleut</em>).</p>\n<p><em>Ce matin, Léa a rencontré son professeur</em> → <em>Léa a rencontré son professeur ce matin</em> → <em>Léa a rencontré son professeur</em>. Les deux tests fonctionnent : c’est un complément de phrase.</p>\n<h4>3. Les fonctions dans le groupe nominal</h4>\n<ul>\n<li><strong>Épithète</strong> : adjectif placé directement à côté du nom (<em>une <strong>vieille</strong> maison</em>) ; <strong>épithète détachée</strong> s’il est séparé par une virgule (<em><strong>Fatiguée</strong>, Léa s’assoit</em>).</li>\n<li><strong>Complément du nom</strong> : groupe généralement introduit par une préposition (<em>une tasse <strong>de thé</strong></em>, <em>la maison <strong>de mes parents</strong></em>).</li>\n<li><strong>Apposition</strong> : groupe nominal détaché qui désigne la même réalité que le nom (<em>Paris, <strong>la capitale</strong>, …</em>).</li>\n<li><strong>Complément de l’adjectif</strong> : <em>fier <strong>de son fils</strong></em>, <em>prêt <strong>à partir</strong></em>.</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><ul><li>Toujours <strong>manipuler</strong> : supprimer, déplacer, remplacer par un pronom, passer au passif.</li>\n<li>Toujours dire <strong>de quoi</strong> le groupe est complément.</li>\n<li>La préposition ne suffit pas pour dire « COI » : <em>il va à Paris</em> (lieu) ≠ <em>il pense à Paris</em> (COI).</li></ul></div>\n<h4>4. Pièges fréquents</h4>\n<ul>\n<li><strong>Sujet inversé</strong> : <em>Au fond du jardin poussaient de grands arbres</em> → le sujet est <em>de grands arbres</em> (c’est <em>de grands arbres</em> qui poussent).</li>\n<li><strong>« peser », « mesurer », « coûter », « durer »</strong> : <em>Il pèse 80 kilos</em> n’a pas de COD (pas de passif possible : *« 80 kilos sont pesés par lui ») ; en revanche <em>Il pèse ses légumes</em> a un COD.</li>\n<li><strong>Attribut ou COD ?</strong> Avec <em>être</em>, le groupe désigne le sujet : attribut. <em>Il devient médecin</em> : attribut ; <em>il consulte un médecin</em> : COD.</li>\n<li><strong>Complément du nom ou COI ?</strong> <em>Il parle <u>de son frère</u></em> dépend du verbe (COI) ; <em>la voiture <u>de son frère</u></em> dépend du nom (complément du nom).</li>\n</ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quel est le sujet de <em>poussaient</em> dans « Au fond du jardin poussaient de grands arbres » ?",
+       "options": [
+        "Au fond du jardin",
+        "de grands arbres",
+        "jardin"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Sujet inversé : <em>ce sont de grands arbres qui poussaient</em>. <em>Au fond du jardin</em> est un complément de phrase (lieu)."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Mes voisins semblent fatigués », <em>fatigués</em> est :",
+       "options": [
+        "épithète de <em>voisins</em>",
+        "attribut du sujet <em>mes voisins</em>",
+        "COD de <em>semblent</em>"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<em>Sembler</em> est un verbe attributif : <em>fatigués</em> est <strong>attribut du sujet</strong> et s’accorde avec lui (masculin pluriel)."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Elle téléphone à sa sœur tous les soirs. » Quelles affirmations sont justes ?",
+       "options": [
+        "<em>à sa sœur</em> est COI de <em>téléphone</em>",
+        "<em>tous les soirs</em> est complément de phrase",
+        "<em>tous les soirs</em> est COD de <em>téléphone</em>"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<em>À sa sœur</em> est COI (<em>elle lui téléphone</em>). <em>Tous les soirs</em> se supprime et se déplace : complément de phrase (temps), malgré l’absence de préposition."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Je le trouve courageux », <em>courageux</em> est :",
+       "options": [
+        "attribut du sujet",
+        "attribut du COD",
+        "épithète"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Il caractérise <em>le</em> (COD) à travers le verbe <em>trouver</em> : <strong>attribut du COD</strong>."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Le chat a été soigné par la vétérinaire », <em>par la vétérinaire</em> est :",
+       "options": [
+        "complément de phrase",
+        "COI",
+        "complément d’agent"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "Phrase passive : à l’actif, <em>la vétérinaire</em> devient sujet (<em>la vétérinaire a soigné le chat</em>). C’est le <strong>complément d’agent</strong>."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans quelle phrase le groupe souligné est-il COD ?",
+       "options": [
+        "Il pèse <u>ses légumes</u>.",
+        "Il pèse <u>80 kilos</u>.",
+        "Il dort <u>deux heures</u>."
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "Seul <em>ses légumes</em> accepte le passif (<em>ses légumes sont pesés</em>) et la reprise par <em>les</em>. <em>80 kilos</em> est un complément du verbe (mesure) ; <em>deux heures</em> un complément de durée."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « une tasse de thé brûlante », <em>de thé</em> est :",
+       "options": [
+        "COI",
+        "complément du nom <em>tasse</em>",
+        "complément de phrase"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Le groupe prépositionnel dépend du nom <em>tasse</em> : <strong>complément du nom</strong>. <em>Brûlante</em> est épithète de <em>tasse</em> (accord au féminin)."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Nous allons à la piscine », <em>à la piscine</em> est :",
+       "options": [
+        "complément de phrase (lieu)",
+        "COI",
+        "complément du verbe (lieu), essentiel"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "On ne peut ni le supprimer (*« nous allons ») ni le déplacer naturellement : il est <strong>complément du verbe</strong>. Ce n’est pas un COI : on ne peut pas le remplacer par <em>lui</em> ; on dit <em>nous y allons</em> (lieu)."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Donne la fonction des groupes soulignés, en précisant de quel mot ils dépendent.</p>\n<p>« <u>Le soir</u>, <u>les pêcheurs du village</u> rapportaient <u>leurs filets</u>. Ils <u>les</u> confiaient <u>aux enfants</u>, qui paraissaient <u>heureux</u>. »</p>",
+       "corrige": "<ul>\n<li><strong>Le soir</strong> : complément de phrase (temps) ; supprimable et déplaçable.</li>\n<li><strong>les pêcheurs du village</strong> : sujet de <em>rapportaient</em> (c’est… qui) ; à l’intérieur, <em>du village</em> est complément du nom <em>pêcheurs</em>.</li>\n<li><strong>leurs filets</strong> : COD de <em>rapportaient</em> (→ <em>ils les rapportaient</em>).</li>\n<li><strong>les</strong> : pronom personnel, COD de <em>confiaient</em> ; il reprend <em>leurs filets</em>.</li>\n<li><strong>aux enfants</strong> : COS de <em>confiaient</em> (le verbe a déjà un COD, <em>les</em>) ; pronominalisable : <em>ils les leur confiaient</em>.</li>\n<li><strong>heureux</strong> : attribut du sujet <em>qui</em> (mis pour <em>les enfants</em>), après le verbe attributif <em>paraître</em> ; d’où le masculin pluriel.</li>\n</ul>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>a) Mets à la voix passive : « La tempête a détruit le vieux phare. » Indique la fonction de chaque groupe avant et après la transformation.</p>\n<p>b) Dans « Ce matin, Léa a rencontré son professeur », montre par deux manipulations que <em>ce matin</em> est un complément de phrase et que <em>son professeur</em> n’en est pas un.</p>",
+       "corrige": "<p>a) « <strong>Le vieux phare a été détruit par la tempête.</strong> »</p>\n<ul><li>Actif : <em>la tempête</em> = sujet ; <em>le vieux phare</em> = COD de <em>a détruit</em>.</li>\n<li>Passif : <em>le vieux phare</em> = sujet ; <em>par la tempête</em> = complément d’agent. Le temps est conservé (passé composé → auxiliaire <em>être</em> au passé composé : <em>a été</em>) et le participe s’accorde avec le sujet.</li></ul>\n<p>b) <em>Ce matin</em> : on peut le <strong>déplacer</strong> (<em>Léa a rencontré son professeur ce matin</em>) et le <strong>supprimer</strong> (<em>Léa a rencontré son professeur</em>) : complément de phrase.<br>\n<em>Son professeur</em> : on ne peut ni le supprimer (<em>*Léa a rencontré</em> est incomplet) ni le déplacer en tête (<em>*Son professeur, Léa a rencontré</em>) ; on peut le remplacer par <em>le</em> (<em>Léa l’a rencontré</em>) : c’est le COD de <em>a rencontré</em>.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-fr-phrase",
+   "num": 3,
+   "domaine": "francais",
+   "titre": "Phrase simple, phrase complexe",
+   "theme": "Compter les propositions, distinguer juxtaposition, coordination et subordination ; relatives, complétives, interrogatives indirectes, circonstancielles",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Phrase simple ou complexe ?</h4>\n<p>Compte les <strong>verbes conjugués</strong> (à un mode personnel) : un verbe conjugué = une proposition.</p>\n<ul><li><strong>Phrase simple</strong> : une seule proposition (<em>Chaque matin, avant de partir, elle boit un café.</em> — <em>partir</em> est à l’infinitif et ne compte pas).</li>\n<li><strong>Phrase complexe</strong> : plusieurs propositions.</li></ul>\n<h4>2. Trois façons de relier les propositions</h4>\n<table class=\"tab\"><thead><tr><th>Mode de liaison</th><th>Outil</th><th>Exemple</th></tr></thead><tbody><tr><td>Juxtaposition</td><td>une ponctuation (virgule, point-virgule, deux-points)</td><td><em>Il pleuvait ; nous sommes restés à la maison.</em></td></tr><tr><td>Coordination</td><td>une conjonction de coordination (<em>mais, ou, et, donc, or, ni, car</em>)</td><td><em>Elle part et il reste.</em></td></tr><tr><td>Subordination</td><td>un mot subordonnant : la subordonnée dépend d’une proposition principale</td><td><em>Je sais <strong>qu’il viendra</strong>.</em></td></tr></tbody></table>\n<h4>3. Les subordonnées</h4>\n<table class=\"tab\"><thead><tr><th>Subordonnée</th><th>Introduite par</th><th>Rôle</th><th>Exemple</th></tr></thead><tbody><tr><td>Relative</td><td>un pronom relatif (<em>qui, que, quoi, dont, où, lequel…</em>) qui a une fonction dans la relative</td><td>complète un antécédent (nom ou pronom)</td><td><em>Le livre <strong>que tu m’as prêté</strong> est passionnant.</em></td></tr><tr><td>Conjonctive complétive</td><td><em>que</em> (conjonction, sans fonction)</td><td>le plus souvent COD ; parfois sujet ou attribut</td><td><em>Je pense <strong>que tu as raison</strong>.</em></td></tr><tr><td>Interrogative indirecte</td><td><em>si, qui, ce que, où, quand, pourquoi, comment…</em></td><td>COD d’un verbe comme <em>se demander, savoir, dire</em></td><td><em>Je me demande <strong>si elle viendra</strong>.</em></td></tr><tr><td>Circonstancielle</td><td>une conjonction : <em>quand, lorsque, parce que, puisque, pour que, bien que, si…</em></td><td>complément de phrase (temps, cause, but, conséquence, concession, condition, comparaison)</td><td><em><strong>Bien qu’il soit fatigué</strong>, il continue.</em></td></tr></tbody></table>\n<p><strong>Les circonstancielles les plus fréquentes</strong> : temps (<em>quand, lorsque, dès que, avant que</em>) ; cause (<em>parce que, puisque, comme</em> en tête de phrase) ; but (<em>pour que, afin que</em> + subjonctif) ; conséquence (<em>si bien que, de sorte que, si… que</em>) ; concession (<em>bien que, quoique</em> + subjonctif) ; condition (<em>si</em>) ; comparaison (<em>comme, ainsi que</em>).</p>\n<p>La relative peut être <strong>déterminative</strong> (indispensable pour identifier l’antécédent : <em>les élèves qui ont fini peuvent sortir</em>) ou <strong>explicative</strong>, entre virgules (<em>les élèves, qui avaient fini, sont sortis</em>).</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Méthode d’analyse en 4 étapes : 1) souligner les verbes conjugués ; 2) repérer les mots de liaison (ponctuation, conjonctions, pronoms relatifs) ; 3) délimiter chaque proposition par des crochets ; 4) nommer chaque proposition et donner la fonction des subordonnées.</p></div>\n<h4>4. Pièges fréquents</h4>\n<ul>\n<li><strong><em>que</em></strong> : relatif s’il a un antécédent (<em>la maison que j’habite</em>), conjonction sinon (<em>je veux que tu viennes</em>).</li>\n<li><strong><em>si</em></strong> : condition (<em>Si tu viens, je serai content</em>) ou interrogation indirecte (<em>Je me demande si tu viendras</em>) : dans le second cas, on peut retrouver une question directe (« Viendras-tu ? »).</li>\n<li><strong><em>comme</em></strong> : cause (<em>Comme il était malade, il n’est pas venu</em>), comparaison (<em>Il chante comme son père</em>), temps (<em>Comme il sortait, le téléphone sonna</em>).</li>\n<li><strong><em>où</em></strong> : relatif (<em>la ville où je suis né</em>) ou interrogatif (<em>Dis-moi où tu vas</em>).</li>\n<li>Oublier un verbe conjugué caché dans une relative courte (<em>qui brillait</em>).</li>\n</ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Il pleuvait ; nous sommes restés à la maison. » Cette phrase contient :",
+       "options": [
+        "une phrase simple",
+        "deux propositions juxtaposées",
+        "deux propositions coordonnées",
+        "une principale et une subordonnée"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Deux verbes conjugués (<em>pleuvait</em>, <em>sommes restés</em>) reliés par un point-virgule : <strong>juxtaposition</strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Le livre que tu m’as prêté est passionnant », la proposition <em>que tu m’as prêté</em> est :",
+       "options": [
+        "une subordonnée complétive",
+        "une subordonnée relative",
+        "une subordonnée circonstancielle"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<em>Que</em> a un antécédent (<em>le livre</em>) et il est COD de <em>as prêté</em> : subordonnée <strong>relative</strong>."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Je pense que tu as raison », la subordonnée est :",
+       "options": [
+        "relative, complément de l’antécédent",
+        "complétive, COD de <em>pense</em>",
+        "circonstancielle de cause"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<em>Que</em> n’a pas d’antécédent ; la subordonnée est <strong>complétive</strong>, COD de <em>pense</em> (<em>je le pense</em>)."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Bien qu’il soit fatigué, il continue. » La subordonnée exprime :",
+       "options": [
+        "la cause",
+        "la concession (opposition)",
+        "la condition"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<em>Bien que</em> + subjonctif : <strong>concession</strong>. Le fait attendu (s’arrêter) ne se produit pas."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Je me demande si elle viendra », la proposition <em>si elle viendra</em> est :",
+       "options": [
+        "une circonstancielle de condition",
+        "une interrogative indirecte",
+        "une relative"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Elle correspond à la question directe « Viendra-t-elle ? » et est COD de <em>me demande</em>. Une circonstancielle de condition ne se construit d’ailleurs pas avec le futur après <em>si</em>."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Combien de propositions dans « Quand le soleil se couche, les oiseaux qui nichent dans le parc se taisent » ?",
+       "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "Trois verbes conjugués : <em>se couche</em> (circonstancielle de temps), <em>nichent</em> (relative), <em>se taisent</em> (principale)."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans « Comme il était malade, il n’est pas venu », <em>comme</em> introduit :",
+       "options": [
+        "une comparaison",
+        "une cause",
+        "un temps"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "On peut remplacer par <em>puisqu’il était malade</em> : <strong>cause</strong>."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles phrases sont des phrases simples ?",
+       "options": [
+        "Chaque matin, avant de partir, elle boit un café.",
+        "Elle part et il reste.",
+        "Regarder les étoiles me fascine."
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "Les phrases 1 et 3 n’ont qu’un verbe conjugué (<em>boit</em>, <em>fascine</em>) ; les infinitifs ne comptent pas. La phrase 2 a deux propositions coordonnées."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Délimite les propositions de cette phrase, donne la nature de chacune et la fonction des subordonnées.</p>\n<p>« Lorsque la nuit tomba, les voyageurs, qui avaient marché tout le jour, s’arrêtèrent près d’une ferme dont les fenêtres brillaient, car ils espéraient qu’on les accueillerait. »</p>",
+       "corrige": "<p>Six verbes conjugués : <em>tomba, avaient marché, s’arrêtèrent, brillaient, espéraient, accueillerait</em> → <strong>six propositions</strong>.</p>\n<ol>\n<li>[<em>les voyageurs … s’arrêtèrent près d’une ferme</em>] : <strong>proposition principale</strong>.</li>\n<li>[<em>Lorsque la nuit tomba</em>] : subordonnée <strong>circonstancielle de temps</strong>, complément de phrase.</li>\n<li>[<em>qui avaient marché tout le jour</em>] : subordonnée <strong>relative</strong> (explicative, entre virgules), complément de l’antécédent <em>les voyageurs</em> ; <em>qui</em> est sujet.</li>\n<li>[<em>dont les fenêtres brillaient</em>] : subordonnée <strong>relative</strong>, complément de l’antécédent <em>une ferme</em> ; <em>dont</em> est complément du nom <em>fenêtres</em> (les fenêtres <em>de la ferme</em>).</li>\n<li>[<em>car ils espéraient</em>] : proposition <strong>coordonnée</strong> à la principale par <em>car</em> (conjonction de coordination, et non de subordination).</li>\n<li>[<em>qu’on les accueillerait</em>] : subordonnée <strong>complétive</strong>, COD de <em>espéraient</em>.</li>\n</ol>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Transforme chaque phrase selon la consigne.</p>\n<ol><li>« Il a réussi grâce à son travail. » → cause exprimée par une subordonnée.</li>\n<li>« J’ai lu un roman. Ce roman m’a bouleversé. » → une seule phrase avec une relative.</li>\n<li>« Malgré la pluie, nous sortirons. » → concession exprimée par une subordonnée.</li>\n<li>« Dis-moi : où vas-tu ? » → discours indirect.</li></ol>",
+       "corrige": "<ol>\n<li>« Il a réussi <strong>parce qu’il a travaillé</strong>. » (subordonnée circonstancielle de cause, indicatif).</li>\n<li>« J’ai lu un roman <strong>qui m’a bouleversé</strong>. » (<em>qui</em> sujet de <em>a bouleversé</em> ; antécédent <em>un roman</em>).</li>\n<li>« <strong>Bien qu’il pleuve</strong>, nous sortirons. » Attention au <strong>subjonctif</strong> après <em>bien que</em> (et non *« bien qu’il pleut »).</li>\n<li>« Dis-moi <strong>où tu vas</strong>. » Interrogative indirecte : plus d’inversion du sujet, plus de point d’interrogation, et la subordonnée devient COD du verbe introducteur <em>dis</em>. Ici les pronoms ne changent pas, car on s’adresse toujours à la même personne.</li>\n</ol>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-fr-conjugaison",
+   "num": 4,
+   "domaine": "francais",
+   "titre": "Conjugaison, valeurs des temps et des modes",
+   "theme": "Formes verbales délicates et valeurs des temps et des modes, à justifier par le contexte",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Les modes</h4>\n<ul>\n<li><strong>Modes personnels</strong> (varient en personne) : <strong>indicatif</strong>, <strong>subjonctif</strong>, <strong>impératif</strong>. Dans la terminologie officielle (<em>Grammaire du français</em>, Eduscol), le <strong>conditionnel</strong> est rangé parmi les <strong>temps de l’indicatif</strong> (il se forme comme un futur, avec les terminaisons de l’imparfait) ; on te comprendra si tu parles de « mode conditionnel », mais sois cohérent.</li>\n<li><strong>Formes non personnelles</strong> : <strong>infinitif</strong> (<em>chanter, avoir chanté</em>) et <strong>participe</strong> (<em>chantant, chanté</em>) ; le <strong>gérondif</strong> = <em>en</em> + participe présent (<em>en chantant</em>).</li>\n</ul>\n<h4>2. Temps simples et temps composés</h4>\n<p>Chaque temps simple a son temps composé (auxiliaire <em>avoir</em> ou <em>être</em> conjugué au temps simple + participe passé), qui exprime l’<strong>accompli</strong> ou l’<strong>antériorité</strong> : présent → passé composé ; imparfait → plus-que-parfait ; passé simple → passé antérieur ; futur → futur antérieur ; conditionnel présent → conditionnel passé.</p>\n<table class=\"tab\"><thead><tr><th>Point délicat</th><th>À retenir</th></tr></thead><tbody><tr><td>Passé simple / imparfait (1er groupe, je)</td><td><em>je chantai</em> (passé simple) ≠ <em>je chantais</em> (imparfait) ; test : passer à <em>il</em> (<em>il chanta / il chantait</em>)</td></tr><tr><td>Futur / conditionnel (je)</td><td><em>je chanterai</em> ≠ <em>je chanterais</em> ; test : passer à <em>nous</em> (<em>nous chanterons / nous chanterions</em>)</td></tr><tr><td>Passés simples irréguliers</td><td><em>il vint, il prit, il fut, il eut, il mit, il vit, il courut, il aperçut</em> ; <em>ils vinrent, ils prirent</em></td></tr><tr><td>Subjonctif présent, nous / vous</td><td><em>que nous voyions, croyions, ayons, soyons</em> (<em>ayons</em> et <em>soyons</em> sans i)</td></tr><tr><td>Impératif, 2e personne du singulier</td><td>pas de -s pour les verbes en -er et <em>aller</em> (<em>chante, va</em>), sauf devant <em>en</em> et <em>y</em> : <em>penses-y, vas-y, manges-en</em></td></tr><tr><td>Verbes en -cer, -ger</td><td><em>nous commençons, nous mangeons</em> (cédille, e pour garder le son)</td></tr><tr><td>Verbes en -eler, -eter</td><td><em>j’appelle, je jette</em> mais <em>j’achète, je gèle</em></td></tr></tbody></table>\n<h4>3. Les valeurs des temps (à justifier par le contexte)</h4>\n<table class=\"tab\"><thead><tr><th>Temps</th><th>Valeurs principales</th><th>Exemples</th></tr></thead><tbody><tr><td>Présent</td><td>d’énonciation (moment où l’on parle) ; d’habitude ; de vérité générale ; de narration (historique) ; futur ou passé proche</td><td><em>La Terre tourne autour du Soleil. En 1492, Colomb atteint l’Amérique. Je pars demain.</em></td></tr><tr><td>Imparfait</td><td>arrière-plan, description ; habitude dans le passé ; action en cours ; hypothèse après <em>si</em> ; atténuation (politesse)</td><td><em>Il faisait nuit. Chaque été, nous partions. Je voulais vous demander…</em></td></tr><tr><td>Passé simple</td><td>premier plan du récit : actions ponctuelles, successives, achevées ; récit coupé de la situation d’énonciation</td><td><em>Soudain, la porte s’ouvrit.</em></td></tr><tr><td>Passé composé</td><td>action passée en lien avec le présent (accompli) ; temps du récit ancré dans l’énonciation, du discours</td><td><em>J’ai fini mon travail.</em></td></tr><tr><td>Plus-que-parfait</td><td>antériorité par rapport à un repère passé</td><td><em>Il avait plu toute la nuit.</em></td></tr><tr><td>Futur</td><td>fait à venir ; ordre atténué ; futur historique (« de perspective »)</td><td><em>Tu rangeras ta chambre.</em></td></tr><tr><td>Conditionnel</td><td>futur dans le passé ; hypothèse, irréel (avec <em>si</em> + imparfait / plus-que-parfait) ; atténuation, politesse ; information non confirmée</td><td><em>Il dit qu’il viendrait. Si j’avais su, je serais venu. Le voleur aurait fui.</em></td></tr><tr><td>Subjonctif</td><td>fait envisagé, non posé comme réel : volonté, souhait, sentiment, doute ; après <em>pour que, bien que, avant que</em>…</td><td><em>Il faut que tu viennes.</em></td></tr><tr><td>Impératif</td><td>ordre, conseil, défense, prière</td><td><em>Ferme la porte.</em></td></tr></tbody></table><div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Pour « donner la valeur » d’un temps : <strong>identifie</strong> le temps et le mode, puis <strong>nomme la valeur</strong> et <strong>justifie par un indice</strong> du texte (<em>chaque été</em> → habitude ; <em>soudain</em> → action de premier plan).</p></div>\n<h4>4. Pièges fréquents</h4>\n<ul>\n<li>Confondre <strong>temps grammatical</strong> et <strong>époque</strong> : un présent peut renvoyer au passé (présent de narration) ou au futur.</li>\n<li>*« Si j’aurais su » : après <em>si</em> de condition, jamais de conditionnel.</li>\n<li>Subjonctif de <em>être</em> et <em>avoir</em> à la 3e personne : <em>qu’il soit</em>, <em>qu’il ait</em> (et non *« qu’il soie », *« qu’il aie » ; mais <em>que j’aie</em> est correct).</li>\n</ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« La Terre tourne autour du Soleil. » Valeur du présent :",
+       "options": [
+        "présent d’énonciation",
+        "présent de vérité générale",
+        "présent de narration"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Le fait est vrai en tout temps : <strong>vérité générale</strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Je voulais vous demander un service. » Valeur de l’imparfait :",
+       "options": [
+        "habitude dans le passé",
+        "description",
+        "atténuation (politesse)"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "La demande est actuelle ; l’imparfait la rend moins directe : valeur d’<strong>atténuation</strong>."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Selon la police, le voleur aurait fui par le toit. » Le conditionnel exprime :",
+       "options": [
+        "un futur dans le passé",
+        "une information non confirmée",
+        "un ordre atténué"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Le journaliste ne prend pas en charge l’information : <strong>information non confirmée</strong> (conditionnel journalistique)."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles formes sont au passé simple ?",
+       "options": [
+        "il chanta",
+        "je chantais",
+        "je chantai",
+        "ils prirent"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<em>Je chantais</em> est à l’imparfait. <em>Je chantai</em> (sans -s) est au passé simple, comme <em>il chanta</em> et <em>ils prirent</em>."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Il faut que nous … la vérité. » (voir)",
+       "options": [
+        "voyons",
+        "voyions",
+        "voyiions"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Subjonctif présent : radical <em>voy-</em> + terminaison <em>-ions</em> → <strong>que nous voyions</strong>."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Si j’avais su, je serais venu. » <em>Serais venu</em> est :",
+       "options": [
+        "un conditionnel passé à valeur d’irréel du passé",
+        "un plus-que-parfait",
+        "un subjonctif passé"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "Auxiliaire au conditionnel présent + participe : <strong>conditionnel passé</strong> ; le fait ne s’est pas réalisé : irréel du passé."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles phrases sont correctement écrites ?",
+       "options": [
+        "Mange ta soupe.",
+        "Penses-y.",
+        "Va-y."
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "Impératif des verbes en -er sans -s (<em>mange</em>), sauf devant <em>en</em> et <em>y</em> : <em>penses-y</em>, <em>vas-y</em>. *« Va-y » est fautif."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Il m’a dit qu’il viendrait le lendemain. » Valeur de <em>viendrait</em> :",
+       "options": [
+        "hypothèse",
+        "politesse",
+        "futur dans le passé"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "Le repère est passé (<em>a dit</em>) ; l’arrivée est postérieure à ce repère : <strong>futur dans le passé</strong> (au discours direct : « je viendrai demain »)."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Pour chaque verbe souligné, donne le temps, le mode et la valeur, en t’appuyant sur un indice.</p>\n<p>« Chaque été, nous <u>partions</u> chez ma grand-mère. La maison <u>était</u> immense et <u>sentait</u> la lavande. Un matin, mon frère <u>disparut</u>. Nous le <u>cherchâmes</u> partout. Aujourd’hui encore, je ne <u>sais</u> pas où il <u>s’était caché</u>. »</p>",
+       "corrige": "<ul>\n<li><strong>partions</strong> : imparfait de l’indicatif, valeur d’<strong>habitude</strong> (indice : <em>chaque été</em>).</li>\n<li><strong>était, sentait</strong> : imparfait, <strong>description</strong> (arrière-plan du récit).</li>\n<li><strong>disparut</strong> : passé simple, action ponctuelle de <strong>premier plan</strong> qui rompt l’habitude (indice : <em>un matin</em>).</li>\n<li><strong>cherchâmes</strong> : passé simple (1re personne du pluriel, accent circonflexe), action de premier plan, achevée.</li>\n<li><strong>sais</strong> : présent de l’indicatif, <strong>présent d’énonciation</strong> : le narrateur parle au moment où il écrit (indice : <em>aujourd’hui encore</em>).</li>\n<li><strong>s’était caché</strong> : plus-que-parfait, <strong>antériorité</strong> par rapport à la disparition.</li>\n</ul>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Récris ce passage au passé, en employant le passé simple et l’imparfait. Justifie deux de tes choix.</p>\n<p>« Le train entre en gare. Les voyageurs descendent, pendant que la pluie tombe. Paul aperçoit sa sœur ; il court vers elle et l’embrasse. »</p>",
+       "corrige": "<p>« Le train <strong>entra</strong> en gare. Les voyageurs <strong>descendirent</strong>, pendant que la pluie <strong>tombait</strong>. Paul <strong>aperçut</strong> sa sœur ; il <strong>courut</strong> vers elle et l’<strong>embrassa</strong>. »</p>\n<ul>\n<li><em>tombait</em> : imparfait, car la pluie est un <strong>arrière-plan</strong> qui dure pendant les autres actions (<em>pendant que</em>).</li>\n<li><em>entra, descendirent, aperçut, courut, embrassa</em> : passé simple, actions <strong>successives de premier plan</strong>.</li>\n<li>Pièges : <em>aperçut</em> (cédille devant u, pas de *« aperçevit ») ; <em>courut</em> (un seul r) ; <em>descendirent</em> (pas de *« descendèrent »).</li>\n</ul>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-fr-orthographe",
+   "num": 5,
+   "domaine": "francais",
+   "titre": "Orthographe grammaticale",
+   "theme": "Accords dans le groupe nominal, accord sujet-verbe, accord du participe passé, homophones grammaticaux",
+   "revision": true,
+   "duree": 2100,
+   "total": 11,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Les accords dans le groupe nominal</h4>\n<p>Le <strong>nom</strong> donne son genre et son nombre au déterminant et aux adjectifs : <em>de<strong>s</strong> robe<strong>s</strong> légère<strong>s</strong></em>. Si un adjectif qualifie plusieurs noms de genres différents, il se met au masculin pluriel : <em>une jupe et un pull noirs</em>.</p>\n<table class=\"tab\"><thead><tr><th>Cas</th><th>Règle</th><th>Exemples</th></tr></thead><tbody><tr><td>Adjectifs de couleur</td><td>issus d’un nom : invariables (sauf <em>rose, mauve, fauve, pourpre, écarlate</em>) ; composés : invariables</td><td><em>des chemises marron, orange ; des yeux bleu clair ; des jupes roses</em></td></tr><tr><td><em>demi, nu</em></td><td>invariables devant le nom (avec trait d’union) ; accord en genre après</td><td><em>une demi-heure, une heure et demie ; nu-pieds, pieds nus</em></td></tr><tr><td><em>vingt, cent</em></td><td>prennent un s s’ils sont multipliés et en fin de nombre</td><td><em>quatre-vingts, deux cents ; quatre-vingt-trois, deux cent trois</em></td></tr><tr><td><em>mille</em></td><td>toujours invariable</td><td><em>trois mille euros</em></td></tr></tbody></table>\n<h4>2. L’accord du verbe avec son sujet</h4>\n<ul>\n<li>Cherche le sujet avec « c’est… qui », même s’il est <strong>inversé</strong> ou <strong>éloigné</strong> : <em>Les fleurs que ma grand-mère plantait chaque printemps <strong>embaumaient</strong></em>.</li>\n<li>Pronom relatif <em>qui</em> : le verbe s’accorde avec l’<strong>antécédent</strong> : <em>C’est toi qui <strong>as</strong> raison ; c’est moi qui <strong>suis</strong> là</em>.</li>\n<li>Plusieurs sujets → pluriel ; la 1re personne l’emporte, puis la 2e : <em>Toi et moi <strong>partirons</strong></em>.</li>\n<li><em>La plupart des…</em> → pluriel : <em>La plupart des élèves <strong>sont</strong> venus</em>.</li>\n<li>Écran d’un pronom COD : <em>Je les <strong>regarde</strong></em> (et non *« regardes »).</li>\n</ul>\n<h4>3. L’accord du participe passé</h4>\n<table class=\"tab\"><thead><tr><th>Emploi</th><th>Règle</th><th>Exemples</th></tr></thead><tbody><tr><td>Employé seul</td><td>comme un adjectif : avec le nom</td><td><em>des feuilles tombées</em></td></tr><tr><td>Avec <em>être</em></td><td>avec le sujet</td><td><em>Elles sont parties.</em></td></tr><tr><td>Avec <em>avoir</em></td><td>jamais avec le sujet ; avec le <strong>COD s’il est placé avant</strong> le verbe (<em>le, la, les, que, combien de…</em>)</td><td><em>Les fleurs que j’ai cueilli<strong>es</strong>. J’ai cueilli des fleurs.</em></td></tr><tr><td>COD = <em>en</em></td><td>pas d’accord</td><td><em>Des pommes, j’en ai mangé trois.</em></td></tr><tr><td>Verbes pronominaux</td><td>toujours pronominaux (<em>s’évanouir, se souvenir, s’enfuir…</em>) : avec le sujet ; sinon, comme avec <em>avoir</em> : on cherche le COD</td><td><em>Elles se sont souvenues. Elles se sont lavées</em> (se = COD) ; <em>elles se sont lavé les mains</em> (COD après) ; <em>elles se sont parlé</em> (se = COI)</td></tr><tr><td>Suivi d’un infinitif</td><td><em>fait</em> et <em>laissé</em> + infinitif : invariables (rectifications de 1990 pour <em>laissé</em>)</td><td><em>Elle s’est fait couper les cheveux.</em></td></tr></tbody></table><div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Participe avec <em>avoir</em> : pose-toi deux questions. 1) Le verbe a-t-il un COD (<em>j’ai cueilli quoi ?</em>) ? 2) Est-il placé <strong>avant</strong> ? Si oui aux deux, accord avec ce COD ; sinon, participe invariable.</p></div>\n<h4>4. Homophones grammaticaux : les tests de substitution</h4>\n<table class=\"tab\"><thead><tr><th>Homophones</th><th>Test</th></tr></thead><tbody><tr><td>a / à</td><td><em>a</em> → <em>avait</em></td></tr><tr><td>et / est</td><td><em>est</em> → <em>était</em> ; <em>et</em> → <em>et puis</em></td></tr><tr><td>son / sont</td><td><em>sont</em> → <em>étaient</em></td></tr><tr><td>on / ont</td><td><em>ont</em> → <em>avaient</em> ; <em>on</em> → <em>il</em></td></tr><tr><td>ces / ses / c’est / s’est</td><td><em>ses</em> → <em>les siens</em> ; <em>ces</em> → <em>ceux-là</em> ; <em>c’est</em> → <em>cela est</em> ; <em>s’est</em> devant un participe (verbe pronominal)</td></tr><tr><td>ou / où</td><td><em>ou</em> → <em>ou bien</em></td></tr><tr><td>-é / -er / -ez</td><td>remplacer par un verbe du 3e groupe : <em>vendre</em> (infinitif) / <em>vendu</em> (participe)</td></tr></tbody></table><p><strong>Pièges des candidats</strong> : accorder le participe avec le sujet quand l’auxiliaire est <em>avoir</em> (*« elles ont mangées ») ; oublier l’accord avec le COD antéposé ; accorder <em>leur</em> pronom (*« je leurs parle »).</p>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Les fleurs que j’ai cueilli… sont fanées. »",
+       "options": [
+        "cueilli",
+        "cueillis",
+        "cueillies"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "Auxiliaire <em>avoir</em>, COD <em>que</em> (mis pour <em>les fleurs</em>, féminin pluriel) placé avant : <strong>cueillies</strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Elles se sont lavé… les mains. »",
+       "options": [
+        "lavé",
+        "lavées",
+        "lavés"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "Le COD est <em>les mains</em>, placé après le verbe ; <em>se</em> est COS (<em>laver les mains à soi</em>). Participe <strong>invariable</strong>."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles écritures sont correctes ?",
+       "options": [
+        "quatre-vingts euros",
+        "deux cents trois",
+        "deux cent trois",
+        "mille deux cents"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<em>Vingt</em> et <em>cent</em> prennent un s quand ils sont multipliés et terminent le nombre : <em>quatre-vingts</em>, <em>deux cents</em>, <em>mille deux cents</em> ; mais <em>deux cent trois</em>."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« C’est toi qui … raison. »",
+       "options": [
+        "a",
+        "as",
+        "ont"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Le relatif <em>qui</em> a pour antécédent <em>toi</em> (2e personne du singulier) : <strong>as</strong>."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quels groupes sont correctement accordés ?",
+       "options": [
+        "des chemises marron",
+        "des yeux bleu clair",
+        "des jupes roses",
+        "des robes oranges"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<em>Marron</em>, <em>orange</em> (issus de noms) et les couleurs composées restent invariables ; <em>rose</em> fait partie des exceptions qui s’accordent."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Des pommes, j’en ai mangé… trois. »",
+       "options": [
+        "mangé",
+        "mangées"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "Le COD est le pronom <em>en</em> : le participe reste <strong>invariable</strong>."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« La plupart des élèves … venus. »",
+       "options": [
+        "est",
+        "sont"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Après <em>la plupart des</em> + nom pluriel, le verbe se met au <strong>pluriel</strong>."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Voici un extrait d’une production d’élève de CM2. Relève et corrige les erreurs d’accord, puis explique chaque correction.</p>\n<div class=\"copie-eleve\"><p>Les enfant de la classe sont aller au musée. Ils ont regardés des tableaux que leurs maître leur avait montré en classe. Les filles se sont assisent par terre et ont dessinées.</p></div>",
+       "corrige": "<ul>\n<li><em>enfant</em> → <strong>enfants</strong> : nom au pluriel (déterminant <em>les</em>).</li>\n<li><em>aller</em> → <strong>allés</strong> : participe passé (test : <em>ils sont venus</em>), avec <em>être</em> il s’accorde avec le sujet <em>les enfants</em> (masculin pluriel).</li>\n<li><em>regardés</em> → <strong>regardé</strong> : auxiliaire <em>avoir</em>, COD <em>des tableaux</em> placé après : invariable.</li>\n<li><em>leurs maître</em> → <strong>leur maître</strong> : déterminant possessif devant un nom singulier (un seul maître).</li>\n<li><em>montré</em> → <strong>montrés</strong> : auxiliaire <em>avoir</em>, COD <em>que</em> (mis pour <em>des tableaux</em>) placé avant.</li>\n<li><em>assisent</em> → <strong>assises</strong> : participe passé de <em>s’asseoir</em> (verbe pronominal ; <em>se</em> est COD), accord avec <em>les filles</em>. L’élève a confondu avec une forme conjuguée.</li>\n<li><em>dessinées</em> → <strong>dessiné</strong> : auxiliaire <em>avoir</em>, pas de COD : invariable.</li>\n</ul>\n<p>(<em>leur</em> dans « leur avait montré » est bien écrit : pronom personnel, invariable.)</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Écris correctement le participe passé du verbe entre parenthèses et justifie.</p>\n<ol><li>Les lettres qu’elle a (écrire) sont touchantes.</li>\n<li>Ces histoires, on nous les a souvent (raconter).</li>\n<li>Elles se sont (téléphoner) hier.</li>\n<li>Les heures qu’il a (dormir) ne lui ont pas suffi.</li>\n<li>Combien de livres as-tu (lire) ?</li>\n<li>Ils se sont (souvenir) de ce jour.</li></ol>",
+       "corrige": "<ol>\n<li><strong>écrites</strong> : COD <em>qu’</em> (= les lettres) placé avant.</li>\n<li><strong>racontées</strong> : COD <em>les</em> (= ces histoires) placé avant.</li>\n<li><strong>téléphoné</strong> : on téléphone <em>à</em> quelqu’un, <em>se</em> est COI ; pas de COD : invariable.</li>\n<li><strong>dormi</strong> : <em>qu’</em> est un complément de durée, pas un COD (<em>dormir</em> n’a pas de COD) : invariable.</li>\n<li><strong>lus</strong> : COD <em>combien de livres</em> placé avant.</li>\n<li><strong>souvenus</strong> : verbe toujours pronominal : accord avec le sujet <em>ils</em>.</li>\n</ol>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-fr-lexique",
+   "num": 6,
+   "domaine": "francais",
+   "titre": "Lexique et compréhension lexicale",
+   "theme": "Formation des mots, familles, polysémie, synonymie, champ lexical, registres de langue",
+   "revision": true,
+   "duree": 1800,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>La partie « lexique et compréhension lexicale » te demande d’<strong>expliquer la formation d’un mot</strong>, de donner son <strong>sens en contexte</strong>, des <strong>synonymes</strong>, des mots de la même famille ou de relever un <strong>champ lexical</strong>.</p>\n<h4>1. La formation des mots</h4>\n<table class=\"tab\"><thead><tr><th>Procédé</th><th>Principe</th><th>Exemples</th></tr></thead><tbody><tr><td>Dérivation</td><td>base (radical) + préfixe et/ou suffixe</td><td><em>re-faire, lent-ement, in-croy-able</em></td></tr><tr><td>Dérivation parasynthétique</td><td>préfixe et suffixe ajoutés en même temps (le mot sans l’un des deux n’existe pas)</td><td><em>em-barqu-er, a-terr-ir, em-bell-ir</em></td></tr><tr><td>Conversion (dérivation impropre)</td><td>changement de classe sans changer la forme</td><td><em>le rire, le dîner, un bleu</em></td></tr><tr><td>Composition</td><td>association de mots existants</td><td><em>pomme de terre, porte-clés, arc-en-ciel</em></td></tr><tr><td>Composition savante</td><td>éléments grecs ou latins</td><td><em>télé-phone</em> (loin + voix), <em>thermo-mètre</em></td></tr><tr><td>Troncation</td><td>on coupe le mot</td><td><em>vélo(cipède), métro(politain), prof</em></td></tr><tr><td>Siglaison, acronyme</td><td>initiales (lues lettre à lettre ou comme un mot)</td><td><em>SNCF ; ONU</em></td></tr><tr><td>Mot-valise</td><td>fusion de deux mots</td><td><em>courriel</em> = courrier + électronique</td></tr><tr><td>Emprunt</td><td>mot venu d’une autre langue</td><td><em>algèbre</em> (arabe), <em>week-end</em> (anglais)</td></tr></tbody></table>\n<p><strong>Préfixes utiles</strong> : <em>in-, im-, il-, ir-</em> (négation : <em>illisible, irréel</em>) ; <em>re-</em> (répétition) ; <em>pré-</em> (avant) ; <em>anti-</em> (contre). <strong>Suffixes</strong> : <em>-able</em> (possibilité), <em>-ment</em> (adverbe de manière), <em>-eur</em> (agent), <em>-age</em> (action), <em>-ette</em> (diminutif), <em>-âtre</em> (péjoratif : <em>verdâtre</em>).</p>\n<h4>2. Les relations entre les mots</h4>\n<ul>\n<li><strong>Famille de mots</strong> : mots formés sur un même radical, parfois sous une forme savante : <em>mer, marin, maritime, amerrir</em>.</li>\n<li><strong>Polysémie</strong> : un mot a plusieurs sens liés entre eux (<em>feuille</em> d’arbre, de papier). <strong>Homonymie</strong> : deux mots différents ont la même forme (<em>avocat</em> le fruit / la profession ; <em>vers, vert, verre</em>).</li>\n<li><strong>Synonymie</strong> : sens proches, rarement identiques (nuance, registre, contexte). <strong>Antonymie</strong> : sens contraires (<em>grave / aigu</em> pour une voix).</li>\n<li><strong>Hyperonyme / hyponyme</strong> : <em>arbre</em> est l’hyperonyme de <em>chêne, sapin</em>.</li>\n<li><strong>Sens propre / sens figuré</strong> ; <strong>dénotation</strong> (sens objectif) / <strong>connotation</strong> (valeurs associées).</li>\n<li><strong>Champ lexical</strong> : ensemble des mots <em>d’un texte</em> qui renvoient à un même thème (mer : <em>vague, écume, marin, sel</em>). <strong>Champ sémantique</strong> : ensemble des sens <em>d’un mot</em>.</li>\n<li><strong>Étymologie</strong> : un même mot latin a pu donner deux mots, un « populaire » et un « savant » (doublets) : <em>hospitale</em> → <em>hôtel</em> et <em>hôpital</em> ; <em>fragilis</em> → <em>frêle</em> et <em>fragile</em>.</li>\n</ul>\n<h4>3. Les registres de langue</h4>\n<table class=\"tab\"><thead><tr><th>Familier</th><th>Courant</th><th>Soutenu</th></tr></thead><tbody><tr><td>un bouquin</td><td>un livre</td><td>un ouvrage</td></tr><tr><td>bosser</td><td>travailler</td><td>œuvrer</td></tr><tr><td>se barrer</td><td>partir</td><td>prendre congé</td></tr></tbody></table><div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Expliquer la formation d’un mot : <strong>découper</strong> (préfixe / base / suffixe), <strong>donner le sens de chaque élément</strong>, puis <strong>reconstituer le sens</strong> : <em>incontournable</em> = <em>in-</em> (négation) + <em>contourn(er)</em> + <em>-able</em> (possibilité) : « qu’on ne peut pas contourner, éviter ».</p></div>\n<h4>4. Pièges fréquents</h4>\n<ul>\n<li>Confondre <strong>champ lexical</strong> (thème, mots de familles différentes) et <strong>famille</strong> (même radical).</li>\n<li>Croire que <em>in-</em> est toujours négatif : <em>inonder, infiltrer, inclure</em> (in- = « dans »).</li>\n<li>Rattacher un mot à une fausse famille à cause de la ressemblance : <em>terrible</em> vient de <em>terreur</em>, pas de <em>terre</em>.</li>\n<li>Donner un synonyme qui ne convient pas <strong>dans le contexte</strong> : vérifie en remplaçant dans la phrase.</li>\n</ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quels mots appartiennent à la famille de <em>terre</em> ?",
+       "options": [
+        "terrain",
+        "terrible",
+        "atterrir",
+        "enterrer",
+        "territoire"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3,
+        4
+       ],
+       "corrige": "<em>Terrain, atterrir, enterrer, territoire</em> viennent de <em>terra</em>. <em>Terrible</em> est de la famille de <em>terreur</em> (latin <em>terror</em>)."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Le mot <em>courriel</em> est formé par :",
+       "options": [
+        "dérivation",
+        "composition",
+        "mot-valise",
+        "troncation"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<em>Cour(rier) + (électron)iel</em> : deux mots fusionnés, c’est un <strong>mot-valise</strong>."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<em>La feuille du chêne</em> / <em>une feuille de papier</em> : le mot <em>feuille</em> illustre :",
+       "options": [
+        "la polysémie",
+        "l’homonymie",
+        "l’antonymie"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "Un seul mot avec deux sens liés (objet mince et plat) : <strong>polysémie</strong>."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans quel mot le préfixe <em>in-</em> n’exprime-t-il <strong>pas</strong> la négation ?",
+       "options": [
+        "inutile",
+        "incapable",
+        "inonder"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "Dans <em>inonder</em>, <em>in-</em> signifie « sur, dans » (latin <em>inundare</em>, de <em>unda</em>, l’onde)."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "À quel registre appartient le mot <em>bouquin</em> ?",
+       "options": [
+        "familier",
+        "courant",
+        "soutenu"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<em>Bouquin</em> est familier ; <em>livre</em> est courant ; <em>ouvrage</em> est plus soutenu."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quel est l’hyperonyme de <em>chêne, sapin, bouleau</em> ?",
+       "options": [
+        "forêt",
+        "arbre",
+        "bois"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<em>Arbre</em> englobe ces trois mots (hyponymes)."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Le verbe <em>débarquer</em> est formé par :",
+       "options": [
+        "composition",
+        "dérivation parasynthétique",
+        "troncation"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<em>Dé- + barqu(e) + -er</em> : préfixe et suffixe ajoutés ensemble à la base <em>barque</em> ; *« barquer » n’existe pas en français courant."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<em>mer, marin, maritime, amerrir</em> forment :",
+       "options": [
+        "une famille de mots",
+        "un champ lexical",
+        "un champ sémantique"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "Même radical (<em>mer</em>, latin <em>mare</em>) : <strong>famille de mots</strong>. Un champ lexical regroupe des mots d’un même thème, même sans radical commun."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Explique la formation des mots suivants et déduis-en leur sens : <em>incontournable, réorganisation, téléphone, porte-clés, vélo</em>.</p>",
+       "corrige": "<ul>\n<li><strong>incontournable</strong> : dérivation ; <em>in-</em> (négation) + base verbale <em>contourner</em> + <em>-able</em> (possibilité) → « qu’on ne peut pas contourner, éviter ».</li>\n<li><strong>réorganisation</strong> : dérivation ; <em>ré-</em> (de nouveau) + <em>organis(er)</em> + <em>-ation</em> (suffixe nominal d’action) → « action d’organiser de nouveau ».</li>\n<li><strong>téléphone</strong> : composition savante sur deux éléments grecs, <em>têle</em> (loin) et <em>phônê</em> (voix, son) → « appareil qui transmet la voix à distance ».</li>\n<li><strong>porte-clés</strong> : composition (verbe <em>porter</em> + nom <em>clés</em>) → « objet qui sert à porter des clés ».</li>\n<li><strong>vélo</strong> : troncation de <em>vélocipède</em> (lui-même composé savant latin : <em>velox</em>, rapide + <em>pes, pedis</em>, pied).</li>\n</ul>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Le mot <em>grave</em> est polysémique. Pour chaque emploi, donne un synonyme et un antonyme adaptés au contexte.</p>\n<ol><li>une maladie grave</li><li>une voix grave</li><li>un air grave</li><li>un accent grave (sur une lettre)</li></ol>",
+       "corrige": "<ol>\n<li><strong>maladie grave</strong> : synonymes <em>sérieuse, dangereuse</em> ; antonyme <em>bénigne</em>.</li>\n<li><strong>voix grave</strong> : synonyme <em>basse</em> ; antonyme <em>aiguë</em>.</li>\n<li><strong>air grave</strong> : synonymes <em>sérieux, solennel</em> ; antonymes <em>enjoué, léger</em>.</li>\n<li><strong>accent grave</strong> : sens technique, sans synonyme ; il s’oppose à l’<em>accent aigu</em> (et à l’accent circonflexe).</li>\n</ol>\n<p>Conclusion : un mot polysémique n’a pas un seul synonyme ni un seul antonyme ; c’est le <strong>contexte</strong> qui les détermine. C’est un bon exercice à proposer aux élèves.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-fr-reflexion",
+   "num": 7,
+   "domaine": "francais",
+   "titre": "Réflexion rédigée et analyse de texte",
+   "theme": "Méthode de la réflexion rédigée ; figures de style, énonciation, point de vue, paroles rapportées",
+   "revision": true,
+   "duree": 2400,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<p>La dernière partie du français te demande une <strong>réflexion rédigée et structurée</strong> à partir d’une question sur le texte (500 mots au plus). Le jury évalue la compréhension du texte, la construction de ta réponse et la qualité de ta langue.</p>\n<h4>1. La méthode en 5 étapes</h4>\n<ol>\n<li><strong>Analyser la question</strong> : souligne les mots-clés, reformule-la. Quelle est la vraie question posée ?</li>\n<li><strong>Relire le texte crayon en main</strong> : relève des citations courtes, les procédés d’écriture, les indices d’énonciation.</li>\n<li><strong>Construire un plan</strong> en deux ou trois parties, chacune avec une idée directrice qui répond à la question.</li>\n<li><strong>Rédiger</strong> : chaque paragraphe = une idée + un exemple (citation entre guillemets) + une analyse (ce que la citation montre).</li>\n<li><strong>Se relire</strong> (garde 10 minutes) : accords, conjugaison, ponctuation.</li>\n</ol>\n<table class=\"tab\"><thead><tr><th>Partie</th><th>Contenu</th></tr></thead><tbody><tr><td>Introduction</td><td>une amorce ; la présentation du texte (auteur, titre, date, genre, situation) ; la <strong>problématique</strong> (la question reformulée) ; l’<strong>annonce du plan</strong></td></tr><tr><td>Développement</td><td>2 ou 3 parties, avec des connecteurs (<em>d’abord, de plus, cependant, ainsi</em>) ; des citations analysées</td></tr><tr><td>Conclusion</td><td>une réponse nette à la question ; une ouverture (autre texte, enjeu pour l’école…)</td></tr></tbody></table>\n<h4>2. Les outils d’analyse</h4>\n<p><strong>Figures de style courantes</strong></p>\n<table class=\"tab\"><thead><tr><th>Figure</th><th>Définition</th><th>Exemple</th></tr></thead><tbody><tr><td>Comparaison</td><td>rapprochement avec un outil (<em>comme, tel, pareil à</em>)</td><td><em>Il est fort comme un lion.</em></td></tr><tr><td>Métaphore</td><td>rapprochement sans outil</td><td><em>Cet homme est un lion.</em></td></tr><tr><td>Personnification</td><td>on prête à une chose des traits humains</td><td><em>Le vent gémit.</em></td></tr><tr><td>Hyperbole</td><td>exagération</td><td><em>Je meurs de faim.</em></td></tr><tr><td>Litote</td><td>dire moins pour faire entendre plus</td><td><em>Va, je ne te hais point</em> (Corneille, <em>Le Cid</em>)</td></tr><tr><td>Euphémisme</td><td>atténuer une réalité pénible</td><td><em>Il nous a quittés.</em></td></tr><tr><td>Antithèse</td><td>opposition de deux termes</td><td><em>Je vis, je meurs</em> (Louise Labé)</td></tr><tr><td>Oxymore</td><td>deux termes contradictoires réunis</td><td><em>Cette obscure clarté</em> (Corneille)</td></tr><tr><td>Anaphore</td><td>répétition en début de vers ou de phrase</td><td><em>J’irai par la forêt, j’irai par la montagne</em> (Hugo)</td></tr><tr><td>Gradation</td><td>termes d’intensité croissante</td><td><em>Va, cours, vole</em> (Corneille)</td></tr></tbody></table>\n<p><strong>Énonciation</strong> : qui parle, à qui, où, quand ? Un texte <strong>ancré</strong> dans la situation d’énonciation contient <em>je, tu</em>, des indices de temps et de lieu relatifs (<em>ici, aujourd’hui, hier</em>), le présent, le passé composé. Un récit <strong>coupé</strong> emploie la 3e personne, le passé simple et des repères absolus (<em>ce jour-là, le lendemain</em>). La <strong>modalisation</strong> montre le degré de certitude ou le jugement du locuteur (<em>peut-être, sans doute</em>, verbes <em>sembler, paraître</em>, conditionnel, vocabulaire mélioratif ou péjoratif).</p>\n<p><strong>Point de vue (focalisation)</strong> : <strong>interne</strong> (on voit par les yeux d’un personnage) ; <strong>externe</strong> (le narrateur ne sait que ce qu’un témoin voit) ; <strong>omniscient</strong> ou focalisation zéro (le narrateur sait tout, pensées et passé des personnages).</p>\n<p><strong>Paroles rapportées</strong> : discours direct (guillemets, tirets) ; indirect (subordonnée, changement de pronoms et de temps : <em>il dit qu’il viendrait</em>) ; indirect libre (paroles ou pensées intégrées au récit sans verbe introducteur, avec les temps du récit : <em>Il viendrait, c’était sûr !</em>).</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><p>Un procédé ne vaut que par son <strong>effet</strong> : « l’anaphore <em>j’irai par…</em> traduit la détermination du poète » vaut mieux que « il y a une anaphore ».</p></div>\n<h4>3. Pièges fréquents</h4>\n<ul>\n<li><strong>Paraphraser</strong> le texte au lieu de l’analyser.</li>\n<li>Citer sans commenter, ou faire un <strong>catalogue de figures</strong> sans lien avec la question.</li>\n<li>Oublier de <strong>répondre</strong> clairement à la question, ou partir hors sujet.</li>\n<li>Écrire « je vais parler de… », « dans ce texte on va voir… » : préfère une problématique rédigée.</li>\n<li>Négliger la langue : la correction orthographique et syntaxique est évaluée.</li>\n</ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Cet homme est un lion. » Quelle figure ?",
+       "options": [
+        "comparaison",
+        "métaphore",
+        "personnification"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Rapprochement sans outil de comparaison : <strong>métaphore</strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Je meurs de faim. » Quelle figure ?",
+       "options": [
+        "hyperbole",
+        "euphémisme",
+        "litote"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "Exagération : <strong>hyperbole</strong>."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Va, je ne te hais point » (Corneille) est :",
+       "options": [
+        "une antithèse",
+        "une litote",
+        "un oxymore"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Chimène dit moins (je ne te hais pas) pour faire entendre plus (je t’aime) : <strong>litote</strong>."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Cette obscure clarté qui tombe des étoiles » (Corneille) contient :",
+       "options": [
+        "un oxymore",
+        "une gradation",
+        "une anaphore"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<em>Obscure</em> et <em>clarté</em> sont contradictoires et réunis dans le même groupe : <strong>oxymore</strong>."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Il ignorait que, au même moment, sa femme préparait sa fuite. » Le point de vue est :",
+       "options": [
+        "interne",
+        "externe",
+        "omniscient"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "Le narrateur sait ce que le personnage ignore et ce qui se passe ailleurs : <strong>point de vue omniscient</strong>."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quels mots sont des indices d’un énoncé ancré dans la situation d’énonciation ?",
+       "options": [
+        "je",
+        "hier",
+        "ici",
+        "le lendemain"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<em>Je, hier, ici</em> renvoient à la situation de celui qui parle. <em>Le lendemain</em> est un repère lié au récit (énoncé coupé)."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« Elle reviendrait, c’était certain ! Il suffisait d’attendre. » Ces paroles sont au :",
+       "options": [
+        "discours direct",
+        "discours indirect",
+        "discours indirect libre"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "Pensées du personnage intégrées au récit, sans verbe introducteur ni guillemets, avec les temps du récit et une exclamation : <strong>discours indirect libre</strong>."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Qu’attend-on dans l’introduction d’une réflexion rédigée ?",
+       "options": [
+        "la présentation du texte",
+        "une problématique",
+        "l’annonce du plan",
+        "la formule « dans ce texte, on va voir »"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "Présentation, problématique et annonce du plan. La formule scolaire « on va voir » est à éviter."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Voici la première strophe du poème « Demain, dès l’aube… » de Victor Hugo (<em>Les Contemplations</em>, 1856).</p>\n<div class=\"doc\"><p>« Demain, dès l’aube, à l’heure où blanchit la campagne,<br>Je partirai. Vois-tu, je sais que tu m’attends.<br>J’irai par la forêt, j’irai par la montagne.<br>Je ne puis demeurer loin de toi plus longtemps. »</p><p class=\"doc-src\">Victor Hugo, <em>Les Contemplations</em>, 1856</p></div>\n<p>a) Relève les indices de l’énonciation et dis ce qu’ils révèlent. b) Identifie deux procédés d’écriture et leur effet. c) Quelle est la valeur des verbes au futur ?</p>",
+       "corrige": "<p>a) <strong>Énonciation</strong> : <em>je</em> (le poète), <em>tu, te, toi</em> (un destinataire à qui il s’adresse), l’apostrophe <em>Vois-tu</em>, l’adverbe <em>Demain</em> et le présent <em>je sais</em>. Le poème est un discours <strong>ancré</strong> dans la situation d’énonciation : le poète parle directement à un être aimé et absent, ce qui crée une impression d’intimité.</p>\n<p>b) <strong>Procédés</strong> : l’<strong>anaphore</strong> « <em>j’irai par la forêt, j’irai par la montagne</em> » souligne la détermination du marcheur, que rien n’arrêtera ; le rythme est ralenti par les <strong>virgules</strong> et le <strong>rejet</strong> « <em>Je partirai</em> » au début du vers 2, qui met en valeur la décision ; l’inversion du sujet « <em>où blanchit la campagne</em> » installe le cadre de l’aube.</p>\n<p>c) Les futurs <em>partirai, irai</em> expriment un <strong>projet certain</strong>, une résolution : le poète est sûr de ce qu’il va faire (renforcé par <em>je sais</em>). (La suite du poème révèle que ce voyage le conduit sur la tombe de sa fille Léopoldine.)</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<div class=\"doc\"><p class=\"doc-title\">Texte d’entraînement (écrit pour l’exercice)</p>\n<p>Ma mère ne savait pas lire. Le soir, quand je revenais de l’école, elle posait le courrier sur la table et attendait. Je déchiffrais pour elle les lettres de l’administration, lentement, en suivant les mots du doigt. Ces soirs-là, je me sentais à la fois fière et triste : fière de lui être utile, triste qu’elle dépende d’une enfant de dix ans. Un jour, elle m’a demandé de lui apprendre. Nous avons commencé par son prénom. Je revois encore ses mains, habituées aux gros travaux, serrer le crayon comme un outil trop fragile. Quand elle a réussi à écrire les six lettres, elle a ri, et ce rire, je l’entends encore.</p></div>\n<p>Question : « En quoi ce texte montre-t-il que savoir lire et écrire est une forme de liberté ? »</p>\n<p>Rédige l’introduction et propose un plan détaillé (idées directrices et citations).</p>",
+       "corrige": "<p><strong>Introduction possible</strong> : « Apprendre à lire et à écrire est souvent présenté comme la première mission de l’école. Dans ce récit à la première personne, une narratrice se souvient de sa mère, qui ne savait pas lire, et du jour où elle lui a appris à écrire son prénom. Nous nous demanderons comment ce texte fait de l’écrit une condition de l’autonomie. Nous verrons d’abord que l’illettrisme enferme la mère dans la dépendance, puis que l’apprentissage lui permet de conquérir sa liberté. »</p>\n<p><strong>Plan détaillé</strong></p>\n<ol>\n<li><strong>Ne pas savoir lire, c’est dépendre des autres</strong>\n<ul><li>La mère « attendait » : passivité, attente (imparfait d’habitude : <em>posait, attendait</em>).</li>\n<li>Inversion des rôles : c’est l’enfant qui lit « les lettres de l’administration » ; la mère dépend « d’une enfant de dix ans ».</li>\n<li>Sentiments contradictoires de la narratrice, soulignés par le parallélisme <em>fière… triste</em> (antithèse).</li></ul></li>\n<li><strong>Apprendre, c’est conquérir sa liberté et sa dignité</strong>\n<ul><li>Une démarche volontaire : « elle m’a demandé de lui apprendre » (passé composé, rupture : <em>Un jour</em>).</li>\n<li>Le prénom, premier mot écrit : affirmation de soi.</li>\n<li>La comparaison « comme un outil trop fragile » : l’effort d’un corps marqué par le travail.</li>\n<li>Le rire final et le présent d’énonciation « je l’entends encore » : la joie de la réussite, un souvenir qui dure.</li></ul></li>\n</ol>\n<p><strong>Conclusion possible</strong> : le texte montre que l’écrit rend autonome et donne une place dans la société ; il rappelle au futur enseignant l’enjeu de l’apprentissage de la lecture.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-ma-numeration",
+   "num": 8,
+   "domaine": "maths",
+   "titre": "Nombres et numération",
+   "theme": "Numération décimale, chiffre et nombre, décimaux, fractions décimales, ensembles de nombres, écriture scientifique",
+   "revision": true,
+   "duree": 1800,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. La numération décimale de position</h4>\n<p>En base dix, la valeur d’un chiffre dépend de sa <strong>position</strong> : 10 unités d’un rang = 1 unité du rang supérieur. Ne confonds pas <strong>chiffre</strong> et <strong>nombre</strong> :</p>\n<table class=\"tab\"><thead><tr><th>Dans 45 287</th><th>Réponse</th></tr></thead><tbody><tr><td>chiffre des centaines</td><td>2</td></tr><tr><td>nombre de centaines</td><td>452 (il y a 452 centaines dans 45 287)</td></tr><tr><td>chiffre des milliers</td><td>5</td></tr><tr><td>nombre de dizaines</td><td>4 528</td></tr></tbody></table>\n<h4>2. Les nombres décimaux</h4>\n<p>Un nombre décimal peut s’écrire comme une <strong>fraction décimale</strong> (dénominateur 10, 100, 1 000…) : 2,07 = <span class=\"frac\"><span>207</span><span>100</span></span> = 2 + <span class=\"frac\"><span>7</span><span>100</span></span> (2 unités et 7 centièmes, 0 dixième).</p>\n<ul>\n<li><strong>Comparer</strong> : on compare les parties entières, puis les dixièmes, puis les centièmes… 3,9 &gt; 3,12 car 9 dixièmes &gt; 1 dixième (piège : « 12 &gt; 9 »).</li>\n<li><strong>Intercaler</strong> : entre deux décimaux distincts, il y a toujours une <strong>infinité</strong> de décimaux (entre 1,5 et 1,51 : 1,501 ; 1,505 ; 1,5099…).</li>\n<li><strong>Fraction décimale ou non ?</strong> Une fraction irréductible est un nombre décimal si et seulement si son dénominateur n’a pas d’autres facteurs premiers que 2 et 5 : <span class=\"frac\"><span>3</span><span>4</span></span> = 0,75 et <span class=\"frac\"><span>7</span><span>20</span></span> = 0,35 sont décimaux ; <span class=\"frac\"><span>1</span><span>3</span></span> = 0,333… ne l’est pas.</li>\n</ul>\n<h4>3. Les ensembles de nombres</h4>\n<p>Entiers naturels (0, 1, 2…) ⊂ entiers relatifs (… −1, 0, 1…) ⊂ décimaux ⊂ rationnels (quotients d’entiers, comme <span class=\"frac\"><span>1</span><span>3</span></span>) ⊂ réels. Des nombres comme √2 ou π sont <strong>irrationnels</strong> : leur écriture décimale est illimitée et non périodique.</p>\n<h4>4. Puissances de 10 et écriture scientifique</h4>\n<p>Écriture scientifique : <em>a</em> × 10<sup><em>n</em></sup> avec 1 ≤ <em>a</em> &lt; 10 et <em>n</em> entier relatif. 0,000 452 = 4,52 × 10<sup>−4</sup> ; 150 000 000 = 1,5 × 10<sup>8</sup>.</p>\n<p><strong>Arrondir</strong> au dixième : on regarde le chiffre des centièmes (12,96 → 13,0). <strong>Tronquer</strong> : on coupe (12,96 → 12,9).</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><ul><li>« Chiffre de » ≠ « nombre de ».</li><li>Un décimal a une écriture à virgule <strong>finie</strong> ; entre deux décimaux, il y en a une infinité.</li><li>Pour comparer, aligne les rangs (ajoute des zéros : 3,90 et 3,12).</li></ul></div>\n<h4>5. Pièges fréquents</h4>\n<ul>\n<li>Croire que le nombre « le plus long » est le plus grand (3,099 &lt; 3,9).</li>\n<li>Oublier le 0 d’un rang vide : 2 unités et 7 centièmes s’écrit 2,07 et non 2,7.</li>\n<li>Écriture scientifique avec <em>a</em> ≥ 10 (45,2 × 10<sup>−5</sup> n’est pas scientifique).</li>\n<li>Penser que {F(1,3)} « vaut » 0,33 : c’est seulement une valeur approchée.</li>\n</ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quel est le nombre de centaines dans 45 287 ?",
+       "options": [
+        "2",
+        "452",
+        "45 200"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "45 287 = 452 centaines + 87 unités. Le <em>chiffre</em> des centaines est 2, le <em>nombre</em> de centaines est <strong>452</strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quel est le plus grand nombre ?",
+       "options": [
+        "3,9",
+        "3,12",
+        "3,099"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "On compare les dixièmes : 9 &gt; 1 &gt; 0. Donc <strong>3,9</strong> (= 3,900) est le plus grand."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles écritures sont égales à 2,07 ?",
+       "options": [
+        "<span class=\"frac\"><span>207</span><span>100</span></span>",
+        "2 + <span class=\"frac\"><span>7</span><span>10</span></span>",
+        "2 + <span class=\"frac\"><span>7</span><span>100</span></span>"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "2,07 = 2 unités et 7 centièmes = <span class=\"frac\"><span>207</span><span>100</span></span> = 2 + <span class=\"frac\"><span>7</span><span>100</span></span>. 2 + <span class=\"frac\"><span>7</span><span>10</span></span> = 2,7."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quels nombres sont décimaux ?",
+       "options": [
+        "<span class=\"frac\"><span>3</span><span>4</span></span>",
+        "<span class=\"frac\"><span>1</span><span>3</span></span>",
+        "<span class=\"frac\"><span>7</span><span>20</span></span>",
+        "<span class=\"frac\"><span>5</span><span>6</span></span>"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<span class=\"frac\"><span>3</span><span>4</span></span> = 0,75 et <span class=\"frac\"><span>7</span><span>20</span></span> = 0,35. Les dénominateurs 3 et 6 contiennent le facteur 3 : <span class=\"frac\"><span>1</span><span>3</span></span> et <span class=\"frac\"><span>5</span><span>6</span></span> ne sont pas décimaux."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "L’écriture scientifique de 0,000 452 est :",
+       "options": [
+        "4,52 × 10<sup>−4</sup>",
+        "45,2 × 10<sup>−5</sup>",
+        "4,52 × 10<sup>4</sup>"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "On déplace la virgule de 4 rangs vers la droite pour obtenir 4,52 (entre 1 et 10) : exposant <strong>−4</strong>."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "L’arrondi au dixième de 12,96 est :",
+       "options": [
+        "12,9",
+        "13,0",
+        "12,10"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Le chiffre des centièmes (6) est ≥ 5 : on arrondit au dixième supérieur, 12,96 → <strong>13,0</strong>. (12,9 est la troncature.)"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Combien y a-t-il de nombres décimaux entre 2,3 et 2,4 ?",
+       "options": [
+        "aucun",
+        "9",
+        "une infinité"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "2,31 ; 2,301 ; 2,3001… on peut toujours ajouter un rang : <strong>une infinité</strong>."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Le nombre √2 est :",
+       "options": [
+        "un nombre décimal",
+        "un nombre rationnel non décimal",
+        "un nombre irrationnel"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "√2 ≈ 1,414 213… ne peut pas s’écrire comme un quotient d’entiers : il est <strong>irrationnel</strong>."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>a) Écris sous forme décimale le nombre formé de 3 centaines, 15 dizaines, 7 unités et 12 dixièmes.</p>\n<p>b) Décompose 60,408 en indiquant la valeur de chaque chiffre non nul.</p>\n<p>c) Intercale trois nombres entre 1,5 et 1,51.</p>",
+       "corrige": "<p>a) 300 + 150 + 7 + 1,2 = <strong>458,2</strong>. (Piège : on ne peut pas « juxtaposer » 3, 15, 7, 12 ; il faut convertir : 15 dizaines = 150 et 12 dixièmes = 1,2.)</p>\n<p>b) 60,408 = 6 × 10 + 4 × <span class=\"frac\"><span>1</span><span>10</span></span> + 8 × <span class=\"frac\"><span>1</span><span>1000</span></span> = 60 + 0,4 + 0,008 (6 dizaines, 4 dixièmes, 8 millièmes ; 0 unité, 0 centième).</p>\n<p>c) 1,5 = 1,500 et 1,51 = 1,510 : par exemple <strong>1,501 ; 1,505 ; 1,509</strong> (ou 1,5001…).</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>a) La distance Terre-Soleil est d’environ 150 000 000 km et la lumière parcourt environ 300 000 km par seconde. Écris ces nombres en écriture scientifique, puis calcule le temps mis par la lumière du Soleil pour nous parvenir (en minutes et secondes).</p>\n<p>b) Les fractions <span class=\"frac\"><span>7</span><span>40</span></span> et <span class=\"frac\"><span>5</span><span>12</span></span> sont-elles des nombres décimaux ? Justifie.</p>",
+       "corrige": "<p>a) 150 000 000 = 1,5 × 10<sup>8</sup> ; 300 000 = 3 × 10<sup>5</sup>.</p>\n<p>Durée = distance ÷ vitesse = (1,5 × 10<sup>8</sup>) ÷ (3 × 10<sup>5</sup>) = 0,5 × 10<sup>3</sup> = <strong>500 s</strong>, soit 8 × 60 = 480 s et 20 s : <strong>8 min 20 s</strong>.</p>\n<p>b) 40 = 2<sup>3</sup> × 5 : <span class=\"frac\"><span>7</span><span>40</span></span> = <span class=\"frac\"><span>175</span><span>1000</span></span> = <strong>0,175</strong>, décimal. 12 = 2<sup>2</sup> × 3 et <span class=\"frac\"><span>5</span><span>12</span></span> est irréductible : le facteur 3 empêche d’obtenir un dénominateur puissance de 10 ; <span class=\"frac\"><span>5</span><span>12</span></span> = 0,41666… n’est <strong>pas décimal</strong>.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-ma-fractions",
+   "num": 9,
+   "domaine": "maths",
+   "titre": "Fractions et opérations",
+   "theme": "Sens des fractions, simplification, comparaison, quatre opérations, fraction d’une quantité, problèmes de reste",
+   "revision": true,
+   "duree": 1800,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Ce que signifie une fraction</h4>\n<ul>\n<li><strong>Partage</strong> : <span class=\"frac\"><span>3</span><span>4</span></span> d’une tarte = on partage en 4 parts égales et on en prend 3.</li>\n<li><strong>Quotient</strong> : <span class=\"frac\"><span>a</span><span>b</span></span> est le nombre qui, multiplié par <em>b</em>, donne <em>a</em> : 4 × <span class=\"frac\"><span>3</span><span>4</span></span> = 3.</li>\n<li><strong>Opérateur</strong> : <span class=\"frac\"><span>2</span><span>5</span></span> de 350 € = 350 × 2 ÷ 5 = 140 €.</li>\n</ul>\n<h4>2. Égalité et simplification</h4>\n<p>On ne change pas une fraction en multipliant ou divisant numérateur et dénominateur par un même nombre non nul : <span class=\"frac\"><span>84</span><span>126</span></span> = <span class=\"frac\"><span>84 ÷ 42</span><span>126 ÷ 42</span></span> = <span class=\"frac\"><span>2</span><span>3</span></span>. Divise par le <strong>PGCD</strong> pour obtenir directement la forme <strong>irréductible</strong>.</p>\n<h4>3. Comparer</h4>\n<ul>\n<li>Même dénominateur : on compare les numérateurs. Même numérateur : la plus grande est celle qui a le plus petit dénominateur (<span class=\"frac\"><span>3</span><span>5</span></span> &gt; <span class=\"frac\"><span>3</span><span>7</span></span>).</li>\n<li>Sinon : on réduit au même dénominateur, ou on compare à 1, à <span class=\"frac\"><span>1</span><span>2</span></span>…</li>\n</ul>\n<h4>4. Calculer</h4>\n<table class=\"tab\"><thead><tr><th>Opération</th><th>Règle</th><th>Exemple</th></tr></thead><tbody><tr><td>Addition, soustraction</td><td>même dénominateur, puis on ajoute les numérateurs</td><td><span class=\"frac\"><span>2</span><span>3</span></span> + <span class=\"frac\"><span>1</span><span>4</span></span> = <span class=\"frac\"><span>8</span><span>12</span></span> + <span class=\"frac\"><span>3</span><span>12</span></span> = <span class=\"frac\"><span>11</span><span>12</span></span></td></tr><tr><td>Multiplication</td><td>numérateurs entre eux, dénominateurs entre eux</td><td><span class=\"frac\"><span>2</span><span>3</span></span> × <span class=\"frac\"><span>3</span><span>4</span></span> = <span class=\"frac\"><span>6</span><span>12</span></span> = <span class=\"frac\"><span>1</span><span>2</span></span></td></tr><tr><td>Division</td><td>multiplier par l’inverse</td><td><span class=\"frac\"><span>3</span><span>4</span></span> ÷ <span class=\"frac\"><span>9</span><span>8</span></span> = <span class=\"frac\"><span>3</span><span>4</span></span> × <span class=\"frac\"><span>8</span><span>9</span></span> = <span class=\"frac\"><span>24</span><span>36</span></span> = <span class=\"frac\"><span>2</span><span>3</span></span></td></tr></tbody></table>\n<p>Priorités : parenthèses, puis multiplications et divisions, puis additions et soustractions. <span class=\"frac\"><span>5</span><span>6</span></span> − <span class=\"frac\"><span>2</span><span>3</span></span> × <span class=\"frac\"><span>1</span><span>4</span></span> = <span class=\"frac\"><span>5</span><span>6</span></span> − <span class=\"frac\"><span>1</span><span>6</span></span> = <span class=\"frac\"><span>4</span><span>6</span></span> = <span class=\"frac\"><span>2</span><span>3</span></span>.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><ul><li>« Prendre une fraction de » = multiplier.</li><li>Dans les problèmes de « reste », la 2e fraction porte sur le <strong>reste</strong>, pas sur le total : on dépense <span class=\"frac\"><span>1</span><span>3</span></span>, puis <span class=\"frac\"><span>1</span><span>4</span></span> du reste → il reste <span class=\"frac\"><span>2</span><span>3</span></span> × <span class=\"frac\"><span>3</span><span>4</span></span> = <span class=\"frac\"><span>1</span><span>2</span></span>.</li></ul></div>\n<h4>5. Pièges fréquents</h4>\n<ul>\n<li><span class=\"frac\"><span>a</span><span>b</span></span> + <span class=\"frac\"><span>c</span><span>d</span></span> ≠ <span class=\"frac\"><span>a + c</span><span>b + d</span></span> : <span class=\"frac\"><span>1</span><span>2</span></span> + <span class=\"frac\"><span>1</span><span>2</span></span> = 1 et non <span class=\"frac\"><span>2</span><span>4</span></span> !</li>\n<li>Simplifier une somme : <span class=\"frac\"><span>3 + 5</span><span>3</span></span> ≠ 5 ; on ne simplifie que des <strong>facteurs</strong>.</li>\n<li>Donner un résultat non irréductible quand l’énoncé le demande.</li>\n<li>Additionner des fractions qui portent sur des « touts » différents.</li>\n</ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<span class=\"frac\"><span>2</span><span>3</span></span> + <span class=\"frac\"><span>1</span><span>4</span></span> =",
+       "options": [
+        "<span class=\"frac\"><span>3</span><span>7</span></span>",
+        "<span class=\"frac\"><span>11</span><span>12</span></span>",
+        "<span class=\"frac\"><span>3</span><span>12</span></span>"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Dénominateur commun 12 : <span class=\"frac\"><span>8</span><span>12</span></span> + <span class=\"frac\"><span>3</span><span>12</span></span> = <strong><span class=\"frac\"><span>11</span><span>12</span></span></strong>. <span class=\"frac\"><span>3</span><span>7</span></span> est le piège classique."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<span class=\"frac\"><span>3</span><span>4</span></span> ÷ <span class=\"frac\"><span>9</span><span>8</span></span> =",
+       "options": [
+        "<span class=\"frac\"><span>27</span><span>32</span></span>",
+        "<span class=\"frac\"><span>2</span><span>3</span></span>",
+        "<span class=\"frac\"><span>3</span><span>2</span></span>"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<span class=\"frac\"><span>3</span><span>4</span></span> × <span class=\"frac\"><span>8</span><span>9</span></span> = <span class=\"frac\"><span>24</span><span>36</span></span> = <strong><span class=\"frac\"><span>2</span><span>3</span></span></strong>."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "La forme irréductible de <span class=\"frac\"><span>84</span><span>126</span></span> est :",
+       "options": [
+        "<span class=\"frac\"><span>42</span><span>63</span></span>",
+        "<span class=\"frac\"><span>2</span><span>3</span></span>",
+        "<span class=\"frac\"><span>4</span><span>6</span></span>"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "PGCD(84 ; 126) = 42, donc <span class=\"frac\"><span>84</span><span>126</span></span> = <strong><span class=\"frac\"><span>2</span><span>3</span></span></strong>. Les autres sont égales mais pas irréductibles."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles écritures sont égales à 0,75 ?",
+       "options": [
+        "<span class=\"frac\"><span>3</span><span>4</span></span>",
+        "<span class=\"frac\"><span>75</span><span>100</span></span>",
+        "<span class=\"frac\"><span>6</span><span>8</span></span>",
+        "<span class=\"frac\"><span>7</span><span>5</span></span>"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<span class=\"frac\"><span>3</span><span>4</span></span> = <span class=\"frac\"><span>6</span><span>8</span></span> = <span class=\"frac\"><span>75</span><span>100</span></span> = 0,75. <span class=\"frac\"><span>7</span><span>5</span></span> = 1,4."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelle est la plus grande fraction ?",
+       "options": [
+        "<span class=\"frac\"><span>5</span><span>7</span></span>",
+        "<span class=\"frac\"><span>7</span><span>10</span></span>",
+        "<span class=\"frac\"><span>2</span><span>3</span></span>"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<span class=\"frac\"><span>5</span><span>7</span></span> ≈ 0,714 ; <span class=\"frac\"><span>7</span><span>10</span></span> = 0,7 ; <span class=\"frac\"><span>2</span><span>3</span></span> ≈ 0,667. Ou dénominateur commun 210 : 150, 147 et 140."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<span class=\"frac\"><span>2</span><span>5</span></span> de 350 € représentent :",
+       "options": [
+        "140 €",
+        "175 €",
+        "70 €"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "350 ÷ 5 × 2 = 70 × 2 = <strong>140 €</strong>."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Léa dépense <span class=\"frac\"><span>1</span><span>3</span></span> de son argent, puis <span class=\"frac\"><span>1</span><span>4</span></span> de ce qui reste. Quelle fraction de son argent lui reste-t-il ?",
+       "options": [
+        "<span class=\"frac\"><span>5</span><span>12</span></span>",
+        "<span class=\"frac\"><span>1</span><span>2</span></span>",
+        "<span class=\"frac\"><span>7</span><span>12</span></span>"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Il reste <span class=\"frac\"><span>2</span><span>3</span></span> ; elle en dépense <span class=\"frac\"><span>1</span><span>4</span></span>, il reste <span class=\"frac\"><span>3</span><span>4</span></span> × <span class=\"frac\"><span>2</span><span>3</span></span> = <strong><span class=\"frac\"><span>1</span><span>2</span></span></strong>. (<span class=\"frac\"><span>5</span><span>12</span></span> = 1 − <span class=\"frac\"><span>1</span><span>3</span></span> − <span class=\"frac\"><span>1</span><span>4</span></span> est le piège : le <span class=\"frac\"><span>1</span><span>4</span></span> porte sur le reste.)"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "(<span class=\"frac\"><span>1</span><span>2</span></span> + <span class=\"frac\"><span>1</span><span>3</span></span>) × 6 =",
+       "options": [
+        "5",
+        "1",
+        "12"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<span class=\"frac\"><span>1</span><span>2</span></span> + <span class=\"frac\"><span>1</span><span>3</span></span> = <span class=\"frac\"><span>5</span><span>6</span></span>, et <span class=\"frac\"><span>5</span><span>6</span></span> × 6 = <strong>5</strong>."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Calcule et donne le résultat sous forme irréductible.</p>\n<p>A = <span class=\"frac\"><span>5</span><span>6</span></span> − <span class=\"frac\"><span>2</span><span>3</span></span> × <span class=\"frac\"><span>1</span><span>4</span></span> &nbsp;&nbsp; B = (<span class=\"frac\"><span>3</span><span>4</span></span> + <span class=\"frac\"><span>1</span><span>2</span></span>) ÷ <span class=\"frac\"><span>5</span><span>8</span></span> &nbsp;&nbsp; C = <span class=\"frac\"><span>7</span><span>12</span></span> + <span class=\"frac\"><span>5</span><span>18</span></span></p>",
+       "corrige": "<p><strong>A</strong> : la multiplication est prioritaire. <span class=\"frac\"><span>2</span><span>3</span></span> × <span class=\"frac\"><span>1</span><span>4</span></span> = <span class=\"frac\"><span>2</span><span>12</span></span> = <span class=\"frac\"><span>1</span><span>6</span></span> ; A = <span class=\"frac\"><span>5</span><span>6</span></span> − <span class=\"frac\"><span>1</span><span>6</span></span> = <span class=\"frac\"><span>4</span><span>6</span></span> = <strong><span class=\"frac\"><span>2</span><span>3</span></span></strong>.</p>\n<p><strong>B</strong> : <span class=\"frac\"><span>3</span><span>4</span></span> + <span class=\"frac\"><span>1</span><span>2</span></span> = <span class=\"frac\"><span>3</span><span>4</span></span> + <span class=\"frac\"><span>2</span><span>4</span></span> = <span class=\"frac\"><span>5</span><span>4</span></span> ; B = <span class=\"frac\"><span>5</span><span>4</span></span> × <span class=\"frac\"><span>8</span><span>5</span></span> = <span class=\"frac\"><span>40</span><span>20</span></span> = <strong>2</strong>.</p>\n<p><strong>C</strong> : le plus petit dénominateur commun de 12 et 18 est 36 ; C = <span class=\"frac\"><span>21</span><span>36</span></span> + <span class=\"frac\"><span>10</span><span>36</span></span> = <strong><span class=\"frac\"><span>31</span><span>36</span></span></strong> (31 est premier : irréductible).</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un club compte 480 adhérents. <span class=\"frac\"><span>3</span><span>8</span></span> pratiquent le football, <span class=\"frac\"><span>1</span><span>3</span></span> des autres pratiquent le basket, et les autres la natation.</p>\n<p>a) Combien d’adhérents pratiquent chaque sport ? b) Quelle fraction du club pratique la natation ?</p>",
+       "corrige": "<p>a) Football : <span class=\"frac\"><span>3</span><span>8</span></span> × 480 = 480 ÷ 8 × 3 = <strong>180</strong>. Reste : 480 − 180 = 300. Basket : <span class=\"frac\"><span>1</span><span>3</span></span> × 300 = <strong>100</strong>. Natation : 300 − 100 = <strong>200</strong>.</p>\n<p>b) <span class=\"frac\"><span>200</span><span>480</span></span> = <strong><span class=\"frac\"><span>5</span><span>12</span></span></strong>. Vérification par les fractions : le reste représente <span class=\"frac\"><span>5</span><span>8</span></span> du club, la natation <span class=\"frac\"><span>2</span><span>3</span></span> de ce reste : <span class=\"frac\"><span>2</span><span>3</span></span> × <span class=\"frac\"><span>5</span><span>8</span></span> = <span class=\"frac\"><span>10</span><span>24</span></span> = <span class=\"frac\"><span>5</span><span>12</span></span>.</p>\n<p><strong>Piège</strong> : calculer <span class=\"frac\"><span>1</span><span>3</span></span> de 480 pour le basket (160) ; la fraction porte sur « les autres ».</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-ma-proportionnalite",
+   "num": 10,
+   "domaine": "maths",
+   "titre": "Proportionnalité, pourcentages, vitesses, échelles",
+   "theme": "Reconnaître la proportionnalité, procédures, pourcentages et évolutions successives, vitesses et durées, échelles",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Reconnaître une situation de proportionnalité</h4>\n<p>Deux grandeurs sont proportionnelles si l’on passe de l’une à l’autre en <strong>multipliant toujours par le même nombre</strong> (coefficient de proportionnalité). Graphiquement : des points <strong>alignés sur une droite passant par l’origine</strong>.</p>\n<figure class=\"fig\"><svg viewBox=\"0 0 300 200\" role=\"img\" aria-label=\"Deux droites : la première passe par l’origine (proportionnalité), la seconde ne passe pas par l’origine (pas de proportionnalité).\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"170\" x2=\"280\" y2=\"170\" class=\"axis\"/><line x1=\"40\" y1=\"170\" x2=\"40\" y2=\"15\" class=\"axis\"/><line x1=\"40\" y1=\"170\" x2=\"260\" y2=\"40\" class=\"thick c-blue\"/><line x1=\"40\" y1=\"150\" x2=\"260\" y2=\"60\" class=\"thick c-red dash\"/><text x=\"165\" y=\"195\" text-anchor=\"middle\" font-size=\"12\">quantité</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"12\">prix</text><text x=\"250\" y=\"32\" text-anchor=\"end\" font-size=\"12\">proportionnel</text><text x=\"270\" y=\"85\" text-anchor=\"end\" font-size=\"12\">non proportionnel</text></svg></figure>\n<p>Contre-exemples : la taille d’un enfant et son âge ; un tarif « 10 € d’abonnement + 2 € par séance » (la droite ne passe pas par l’origine).</p>\n<h4>2. Les procédures (à connaître aussi pour enseigner)</h4>\n<table class=\"tab\"><thead><tr><th>Procédure</th><th>Exemple : 3 kg de pommes coûtent 7,20 €. Prix de 5 kg ?</th></tr></thead><tbody><tr><td>Passage à l’unité</td><td>1 kg coûte 7,20 ÷ 3 = 2,40 € ; 5 kg coûtent 5 × 2,40 = 12 €</td></tr><tr><td>Coefficient</td><td>prix = 2,40 × masse</td></tr><tr><td>Linéarité (additive, multiplicative)</td><td>2 kg = 4,80 € (÷ 3 × 2) ; 5 kg = 3 kg + 2 kg → 7,20 + 4,80 = 12 €</td></tr><tr><td>Produit en croix (4e proportionnelle)</td><td><em>x</em> = 5 × 7,20 ÷ 3 = 12 €</td></tr></tbody></table>\n<h4>3. Pourcentages</h4>\n<ul>\n<li><em>t</em> % de <em>x</em> = <em>x</em> × <em>t</em> ÷ 100.</li>\n<li>Augmenter de <em>t</em> % = multiplier par (1 + <em>t</em>/100) : +15 % → × 1,15. Diminuer de <em>t</em> % → × (1 − <em>t</em>/100) : −25 % → × 0,75.</li>\n<li>Évolutions successives : on <strong>multiplie</strong> les coefficients. +20 % puis −20 % → × 1,2 × 0,8 = × 0,96, soit <strong>−4 %</strong>.</li>\n<li>Retrouver un prix initial : on <strong>divise</strong> par le coefficient (après −25 %, 60 € → 60 ÷ 0,75 = 80 €).</li>\n</ul>\n<h4>4. Vitesses et durées</h4>\n<p><em>v</em> = <em>d</em> ÷ <em>t</em> ; <em>d</em> = <em>v</em> × <em>t</em> ; <em>t</em> = <em>d</em> ÷ <em>v</em>. Conversion : 1 m/s = 3,6 km/h (90 km/h = 90 ÷ 3,6 = 25 m/s). Les durées sont en <strong>base 60</strong> : 2,5 h = 2 h 30 min ; 1,2 h = 1 h 12 min.</p>\n<h4>5. Échelles</h4>\n<p>Échelle = distance sur le plan ÷ distance réelle (dans la <strong>même unité</strong>). Au 1/25 000, 1 cm sur la carte représente 25 000 cm = 250 m en réalité.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><ul><li>Vérifie toujours qu’une situation est proportionnelle avant d’utiliser un produit en croix.</li><li>Pourcentages successifs : on multiplie, on n’additionne pas.</li><li>La vitesse moyenne sur un trajet = distance totale ÷ durée totale, pas la moyenne des vitesses.</li></ul></div>\n<h4>6. Pièges fréquents</h4>\n<ul><li>Écrire 2,5 h = 2 h 50 min.</li><li>Oublier de convertir dans la même unité pour une échelle.</li><li>Calculer une baisse « à l’envers » : après −25 %, on ne retrouve pas le prix initial en ajoutant 25 %.</li></ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "3 kg de pommes coûtent 7,20 €. Combien coûtent 5 kg ?",
+       "options": [
+        "12 €",
+        "9,20 €",
+        "10,80 €"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "Prix au kilo : 7,20 ÷ 3 = 2,40 € ; 5 × 2,40 = <strong>12 €</strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles situations relèvent de la proportionnalité ?",
+       "options": [
+        "le prix payé et le nombre de baguettes à 1,10 € l’une",
+        "la taille d’un enfant et son âge",
+        "le périmètre d’un carré et la longueur de son côté",
+        "le coût d’un abonnement de 10 € plus 2 € par séance et le nombre de séances"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "Prix = 1,10 × nombre ; périmètre = 4 × côté. La taille n’est pas proportionnelle à l’âge ; le coût 10 + 2<em>n</em> ne l’est pas (0 séance coûte 10 €)."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Un article à 80 € augmente de 15 %. Son nouveau prix est :",
+       "options": [
+        "95 €",
+        "92 €",
+        "81,20 €"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "80 × 1,15 = <strong>92 €</strong> (hausse de 12 €)."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Un prix augmente de 20 %, puis baisse de 20 %. Globalement :",
+       "options": [
+        "il revient au prix initial",
+        "il baisse de 4 %",
+        "il augmente de 4 %"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Coefficient global : 1,2 × 0,8 = 0,96, soit une <strong>baisse de 4 %</strong>."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "90 km/h correspondent à :",
+       "options": [
+        "25 m/s",
+        "324 m/s",
+        "15 m/s"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "90 km/h = 90 000 m en 3 600 s = <strong>25 m/s</strong> (ou 90 ÷ 3,6)."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Combien de temps faut-il pour parcourir 150 km à 60 km/h ?",
+       "options": [
+        "2 h 50 min",
+        "2 h 30 min",
+        "2,3 h"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "150 ÷ 60 = 2,5 h = 2 h + 0,5 × 60 min = <strong>2 h 30 min</strong>."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Sur une carte au 1/25 000, deux villages sont à 4 cm. Distance réelle :",
+       "options": [
+        "100 m",
+        "1 km",
+        "10 km"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "4 × 25 000 = 100 000 cm = 1 000 m = <strong>1 km</strong>."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Après une remise de 25 %, un article coûte 60 €. Son prix initial était :",
+       "options": [
+        "75 €",
+        "80 €",
+        "85 €"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Prix initial × 0,75 = 60, donc prix initial = 60 ÷ 0,75 = <strong>80 €</strong>. (75 € = 60 + 25 % de 60 : piège.)"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un cycliste parcourt 30 km à l’aller à la vitesse moyenne de 20 km/h, puis revient par le même chemin à 30 km/h.</p>\n<p>a) Calcule la durée de l’aller et celle du retour (en heures et minutes). b) Calcule sa vitesse moyenne sur l’aller-retour. Pourquoi n’est-elle pas de 25 km/h ?</p>",
+       "corrige": "<p>a) Aller : 30 ÷ 20 = 1,5 h = <strong>1 h 30 min</strong>. Retour : 30 ÷ 30 = <strong>1 h</strong>.</p>\n<p>b) Distance totale 60 km ; durée totale 2,5 h. Vitesse moyenne = 60 ÷ 2,5 = <strong>24 km/h</strong>.</p>\n<p>Ce n’est pas la moyenne (20 + 30) ÷ 2 = 25 km/h, car le cycliste roule <strong>plus longtemps</strong> à 20 km/h (1 h 30) qu’à 30 km/h (1 h) : la vitesse lente « pèse » davantage.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un manteau coûte 120 €. Pendant les soldes, il baisse de 30 %, puis le magasin accorde une remise supplémentaire de 10 % sur le prix soldé.</p>\n<p>a) Calcule le prix final. b) Quel est le pourcentage de baisse global ? c) Quel pourcentage d’augmentation faudrait-il appliquer au prix final pour retrouver 120 € ? (arrondi au dixième)</p>",
+       "corrige": "<p>a) 120 × 0,7 = 84 € ; 84 × 0,9 = <strong>75,60 €</strong>.</p>\n<p>b) Coefficient global : 0,7 × 0,9 = 0,63 ; 1 − 0,63 = 0,37 : baisse de <strong>37 %</strong> (et non 40 %).</p>\n<p>c) 120 ÷ 75,6 ≈ 1,587 3 : il faudrait une hausse d’environ <strong>58,7 %</strong>. Une baisse et une hausse de même pourcentage ne se compensent pas.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-ma-arithmetique",
+   "num": 11,
+   "domaine": "maths",
+   "titre": "Arithmétique",
+   "theme": "Multiples et diviseurs, division euclidienne, critères de divisibilité, nombres premiers, décomposition, PGCD",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Multiples, diviseurs, division euclidienne</h4>\n<p><em>a</em> est un <strong>multiple</strong> de <em>b</em> (ou <em>b</em> est un <strong>diviseur</strong> de <em>a</em>, ou <em>a</em> est <strong>divisible</strong> par <em>b</em>) s’il existe un entier <em>k</em> tel que <em>a</em> = <em>k</em> × <em>b</em>. 36 = 4 × 9 : 36 est multiple de 4 et de 9.</p>\n<p><strong>Division euclidienne</strong> de <em>a</em> par <em>b</em> : <em>a</em> = <em>b</em> × <em>q</em> + <em>r</em> avec <strong>0 ≤ <em>r</em> &lt; <em>b</em></strong>. 247 = 12 × 20 + 7 (quotient 20, reste 7). <em>b</em> divise <em>a</em> si et seulement si le reste est nul.</p>\n<h4>2. Critères de divisibilité</h4>\n<table class=\"tab\"><thead><tr><th>Par</th><th>Critère</th><th>Exemple</th></tr></thead><tbody><tr><td>2</td><td>chiffre des unités pair</td><td>3 564</td></tr><tr><td>3</td><td>somme des chiffres divisible par 3</td><td>3 + 5 + 6 + 4 = 18</td></tr><tr><td>4</td><td>nombre formé par les deux derniers chiffres divisible par 4</td><td>64 = 4 × 16</td></tr><tr><td>5</td><td>chiffre des unités 0 ou 5</td><td>3 565</td></tr><tr><td>9</td><td>somme des chiffres divisible par 9</td><td>18 = 2 × 9</td></tr><tr><td>10</td><td>chiffre des unités 0</td><td>3 560</td></tr></tbody></table>\n<h4>3. Nombres premiers</h4>\n<p>Un nombre premier a <strong>exactement deux diviseurs</strong> : 1 et lui-même. <strong>1 n’est pas premier</strong> ; 2 est le seul nombre premier pair. Premiers inférieurs à 50 : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47.</p>\n<p>Pour tester <em>n</em>, on essaie les divisions par les nombres premiers jusqu’à √<em>n</em> : 91 = 7 × 13 n’est pas premier.</p>\n<p><strong>Décomposition en facteurs premiers</strong> (unique) : 360 = 2<sup>3</sup> × 3<sup>2</sup> × 5. Nombre de diviseurs : (3 + 1)(2 + 1)(1 + 1) = 24.</p>\n<h4>4. PGCD et applications</h4>\n<ul>\n<li>Par les décompositions : 84 = 2<sup>2</sup> × 3 × 7 ; 126 = 2 × 3<sup>2</sup> × 7 ; PGCD = 2 × 3 × 7 = 42 (facteurs communs, plus petits exposants).</li>\n<li>Par l’<strong>algorithme d’Euclide</strong> : on divise, puis on remplace le couple par (diviseur, reste) jusqu’à un reste nul ; le PGCD est le dernier reste non nul. 126 = 84 × 1 + 42 ; 84 = 42 × 2 + 0 → PGCD = 42.</li>\n<li>Usages : rendre une fraction irréductible ; faire le <strong>plus grand nombre de lots identiques</strong>. Le plus petit multiple commun sert quand des événements périodiques coïncident.</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><ul><li>Divisible par 3 et par 9 : somme des chiffres ; par 4 : deux derniers chiffres.</li><li>1 n’est pas premier.</li><li>« Le plus grand nombre de lots » → PGCD ; « la prochaine fois ensemble » → plus petit multiple commun.</li></ul></div>\n<h4>5. Pièges fréquents</h4>\n<ul><li>Écrire une « division euclidienne » avec un reste supérieur au diviseur (247 = 12 × 19 + 19 est juste mais ce n’est pas la division euclidienne).</li>\n<li>Critère de 4 : regarder seulement le dernier chiffre.</li>\n<li>Oublier qu’un nombre impair peut ne pas être premier (9, 15, 21…).</li></ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quels nombres sont premiers ?",
+       "options": [
+        "51",
+        "53",
+        "57",
+        "59",
+        "91"
+       ],
+       "bonnes": [
+        1,
+        3
+       ],
+       "corrige": "51 = 3 × 17 ; 57 = 3 × 19 ; 91 = 7 × 13. <strong>53 et 59</strong> n’ont aucun diviseur premier ≤ 7 (√59 &lt; 8)."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "3 564 est divisible par :",
+       "options": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "9"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2,
+        4
+       ],
+       "corrige": "Pair → 2 ; somme des chiffres 18 → 3 et 9 ; 64 divisible par 4 → 4. Il ne finit ni par 0 ni par 5."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "La décomposition en facteurs premiers de 360 est :",
+       "options": [
+        "2<sup>3</sup> × 3<sup>2</sup> × 5",
+        "2<sup>2</sup> × 9 × 10",
+        "2 × 3 × 60"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "360 = 8 × 45 = 2<sup>3</sup> × 3<sup>2</sup> × 5. Les autres écritures contiennent des facteurs non premiers (9, 10, 60)."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "PGCD(84 ; 126) =",
+       "options": [
+        "14",
+        "21",
+        "42"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "126 = 84 × 1 + 42 ; 84 = 42 × 2 + 0 : PGCD = <strong>42</strong>."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelle égalité traduit la division euclidienne de 247 par 12 ?",
+       "options": [
+        "247 = 12 × 20 + 7",
+        "247 = 12 × 19 + 19",
+        "247 = 12 × 20,5 + 1"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "Le reste doit être un entier compris entre 0 et 11 : 247 = 12 × 20 + 7."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Combien de diviseurs a 36 ?",
+       "options": [
+        "6",
+        "8",
+        "9"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "1, 2, 3, 4, 6, 9, 12, 18, 36 : <strong>9 diviseurs</strong> (36 = 2<sup>2</sup> × 3<sup>2</sup> : 3 × 3 = 9)."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles affirmations sont vraies ?",
+       "options": [
+        "1 est un nombre premier",
+        "2 est le seul nombre premier pair",
+        "tout nombre impair est premier"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "1 n’a qu’un diviseur : il n’est pas premier. 9 est impair et non premier."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Un bus A part toutes les 12 min, un bus B toutes les 18 min. Ils partent ensemble à 7 h. Prochain départ commun ?",
+       "options": [
+        "7 h 30",
+        "7 h 36",
+        "8 h 36"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Multiples de 12 : 12, 24, <strong>36</strong> ; multiples de 18 : 18, <strong>36</strong>. Le plus petit multiple commun est 36 : <strong>7 h 36</strong>."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un fleuriste dispose de 252 roses et de 196 tulipes. Il veut composer le plus grand nombre possible de bouquets identiques en utilisant toutes les fleurs.</p>\n<p>a) Combien de bouquets ? b) Quelle est la composition de chaque bouquet ?</p>",
+       "corrige": "<p>Le nombre de bouquets doit diviser 252 et 196 ; on cherche le plus grand : c’est le <strong>PGCD</strong>.</p>\n<p>Algorithme d’Euclide : 252 = 196 × 1 + 56 ; 196 = 56 × 3 + 28 ; 56 = 28 × 2 + 0. PGCD(252 ; 196) = 28.</p>\n<p>(Vérification par décomposition : 252 = 2<sup>2</sup> × 3<sup>2</sup> × 7 et 196 = 2<sup>2</sup> × 7<sup>2</sup> ; PGCD = 2<sup>2</sup> × 7 = 28.)</p>\n<p>a) <strong>28 bouquets</strong>. b) 252 ÷ 28 = <strong>9 roses</strong> et 196 ÷ 28 = <strong>7 tulipes</strong> par bouquet.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>a) Démontre que la somme de trois entiers consécutifs est toujours un multiple de 3.</p>\n<p>b) Décompose 2 024 en produit de facteurs premiers et déduis-en son nombre de diviseurs.</p>",
+       "corrige": "<p>a) Trois entiers consécutifs s’écrivent <em>n</em>, <em>n</em> + 1, <em>n</em> + 2. Leur somme vaut 3<em>n</em> + 3 = <strong>3(<em>n</em> + 1)</strong>, produit de 3 par un entier : c’est un multiple de 3 (et même 3 fois le nombre du milieu). Des exemples (4 + 5 + 6 = 15) illustrent mais ne <strong>démontrent</strong> pas.</p>\n<p>b) 2 024 = 2 × 1 012 = 2<sup>2</sup> × 506 = 2<sup>3</sup> × 253 et 253 = 11 × 23. Donc <strong>2 024 = 2<sup>3</sup> × 11 × 23</strong>. Nombre de diviseurs : (3 + 1)(1 + 1)(1 + 1) = <strong>16</strong>.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-ma-litteral",
+   "num": 12,
+   "domaine": "maths",
+   "titre": "Calcul littéral et équations",
+   "theme": "Substituer, développer, factoriser, résoudre des équations, prouver avec une lettre",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Le vocabulaire</h4>\n<p>Une expression littérale contient des lettres qui désignent des nombres. On peut la <strong>calculer</strong> pour une valeur (substitution), la <strong>réduire</strong>, la <strong>développer</strong> (transformer un produit en somme) ou la <strong>factoriser</strong> (transformer une somme en produit).</p>\n<p>Pour <em>x</em> = −2 : 2<em>x</em><sup>2</sup> − 3<em>x</em> = 2 × (−2)<sup>2</sup> − 3 × (−2) = 8 + 6 = 14. Mets des <strong>parenthèses</strong> autour des nombres négatifs.</p>\n<h4>2. Développer et factoriser</h4>\n<table class=\"tab\"><thead><tr><th>Outil</th><th>Formule</th><th>Exemple</th></tr></thead><tbody><tr><td>Distributivité simple</td><td><em>k</em>(<em>a</em> + <em>b</em>) = <em>ka</em> + <em>kb</em></td><td>3(2<em>x</em> − 5) = 6<em>x</em> − 15</td></tr><tr><td>Double distributivité</td><td>(<em>a</em> + <em>b</em>)(<em>c</em> + <em>d</em>) = <em>ac</em> + <em>ad</em> + <em>bc</em> + <em>bd</em></td><td>(<em>x</em> + 2)(<em>x</em> − 3) = <em>x</em><sup>2</sup> − <em>x</em> − 6</td></tr><tr><td>Carré d’une somme</td><td>(<em>a</em> + <em>b</em>)<sup>2</sup> = <em>a</em><sup>2</sup> + 2<em>ab</em> + <em>b</em><sup>2</sup></td><td>(<em>x</em> + 4)<sup>2</sup> = <em>x</em><sup>2</sup> + 8<em>x</em> + 16</td></tr><tr><td>Différence de deux carrés</td><td><em>a</em><sup>2</sup> − <em>b</em><sup>2</sup> = (<em>a</em> − <em>b</em>)(<em>a</em> + <em>b</em>)</td><td><em>x</em><sup>2</sup> − 49 = (<em>x</em> − 7)(<em>x</em> + 7)</td></tr><tr><td>Facteur commun</td><td><em>ka</em> + <em>kb</em> = <em>k</em>(<em>a</em> + <em>b</em>)</td><td>6<em>x</em> + 9 = 3(2<em>x</em> + 3)</td></tr></tbody></table>\n<p>Un signe « − » devant une parenthèse change tous les signes : −(3<em>x</em> − 4) = −3<em>x</em> + 4.</p>\n<h4>3. Résoudre une équation</h4>\n<ul>\n<li><strong>Premier degré</strong> : on regroupe les <em>x</em> d’un côté, les nombres de l’autre, en faisant la même opération dans les deux membres. 5<em>x</em> − 3 = 2<em>x</em> + 9 → 3<em>x</em> = 12 → <em>x</em> = 4. <strong>Vérifie</strong> : 5 × 4 − 3 = 17 = 2 × 4 + 9.</li>\n<li><strong>Équation produit nul</strong> : un produit est nul si et seulement si l’un de ses facteurs est nul. (2<em>x</em> − 6)(<em>x</em> + 1) = 0 ⇔ <em>x</em> = 3 ou <em>x</em> = −1.</li>\n<li><strong><em>x</em><sup>2</sup> = <em>a</em></strong> : deux solutions √<em>a</em> et −√<em>a</em> si <em>a</em> &gt; 0 ; une (0) si <em>a</em> = 0 ; aucune si <em>a</em> &lt; 0.</li>\n</ul>\n<h4>4. Prouver avec le calcul littéral</h4>\n<p>Pour montrer qu’un <strong>programme de calcul</strong> donne toujours le même type de résultat, on le traduit avec une lettre : « choisir un nombre, ajouter 3, multiplier par 2, soustraire 6 » → (<em>x</em> + 3) × 2 − 6 = 2<em>x</em> : on obtient toujours le double du nombre choisi. Des exemples numériques ne suffisent pas à prouver ; <strong>un contre-exemple suffit à réfuter</strong>.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><ul><li>(<em>a</em> + <em>b</em>)<sup>2</sup> ≠ <em>a</em><sup>2</sup> + <em>b</em><sup>2</sup>.</li><li>Mise en équation : choisir l’inconnue, écrire l’équation, résoudre, vérifier, conclure par une phrase avec l’unité.</li></ul></div>\n<h4>5. Pièges fréquents</h4>\n<ul><li>−3<sup>2</sup> = −9 mais (−3)<sup>2</sup> = 9.</li><li>Oublier de changer les signes après un « − » devant une parenthèse.</li><li>2<em>x</em> = 6 → <em>x</em> = 3 (on divise), et non <em>x</em> = 4 (on ne soustrait pas 2).</li><li>Diviser les deux membres d’une inéquation par un nombre négatif sans changer le sens.</li></ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Le développement de 3(2<em>x</em> − 5) est :",
+       "options": [
+        "6<em>x</em> − 5",
+        "6<em>x</em> − 15",
+        "5<em>x</em> − 15"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "On distribue 3 sur les deux termes : 3 × 2<em>x</em> − 3 × 5 = <strong>6<em>x</em> − 15</strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "(<em>x</em> + 4)<sup>2</sup> =",
+       "options": [
+        "<em>x</em><sup>2</sup> + 16",
+        "<em>x</em><sup>2</sup> + 8<em>x</em> + 16",
+        "<em>x</em><sup>2</sup> + 4<em>x</em> + 16"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "(<em>a</em> + <em>b</em>)<sup>2</sup> = <em>a</em><sup>2</sup> + 2<em>ab</em> + <em>b</em><sup>2</sup> avec 2<em>ab</em> = 8<em>x</em>. Test : pour <em>x</em> = 1, (1 + 4)<sup>2</sup> = 25 = 1 + 8 + 16."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Une factorisation de <em>x</em><sup>2</sup> − 49 est :",
+       "options": [
+        "(<em>x</em> − 7)<sup>2</sup>",
+        "(<em>x</em> − 7)(<em>x</em> + 7)",
+        "(<em>x</em> − 49)(<em>x</em> + 1)"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Différence de deux carrés : <em>x</em><sup>2</sup> − 7<sup>2</sup> = (<em>x</em> − 7)(<em>x</em> + 7)."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "La solution de 5<em>x</em> − 3 = 2<em>x</em> + 9 est :",
+       "options": [
+        "<em>x</em> = 2",
+        "<em>x</em> = 4",
+        "<em>x</em> = 12"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "3<em>x</em> = 12, donc <em>x</em> = 4. Vérification : 17 = 17."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles sont les solutions de (2<em>x</em> − 6)(<em>x</em> + 1) = 0 ?",
+       "options": [
+        "3",
+        "−1",
+        "6",
+        "1"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "2<em>x</em> − 6 = 0 donne <em>x</em> = 3 ; <em>x</em> + 1 = 0 donne <em>x</em> = −1."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Pour <em>x</em> = −2, 2<em>x</em><sup>2</sup> − 3<em>x</em> vaut :",
+       "options": [
+        "2",
+        "14",
+        "−14"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "2 × (−2)<sup>2</sup> − 3 × (−2) = 2 × 4 + 6 = <strong>14</strong>."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "−(3<em>x</em> − 4) + 2<em>x</em> =",
+       "options": [
+        "−<em>x</em> + 4",
+        "−<em>x</em> − 4",
+        "5<em>x</em> − 4"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "−3<em>x</em> + 4 + 2<em>x</em> = <strong>−<em>x</em> + 4</strong>."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Programme : choisir un nombre, ajouter 3, multiplier par 2, soustraire 6. Le résultat est :",
+       "options": [
+        "toujours le double du nombre choisi",
+        "toujours 0",
+        "le nombre choisi augmenté de 3"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "(<em>x</em> + 3) × 2 − 6 = 2<em>x</em> + 6 − 6 = <strong>2<em>x</em></strong>."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Programme de calcul : « Choisir un nombre. Lui ajouter 1. Élever le résultat au carré. Soustraire le carré du nombre choisi. »</p>\n<p>a) Applique-le à 5. b) Démontre que le résultat est toujours égal à la somme du double du nombre choisi et de 1. c) Quel nombre faut-il choisir pour obtenir 51 ?</p>",
+       "corrige": "<p>a) 5 + 1 = 6 ; 6<sup>2</sup> = 36 ; 36 − 5<sup>2</sup> = 36 − 25 = <strong>11</strong>.</p>\n<p>b) Avec <em>x</em> : (<em>x</em> + 1)<sup>2</sup> − <em>x</em><sup>2</sup> = <em>x</em><sup>2</sup> + 2<em>x</em> + 1 − <em>x</em><sup>2</sup> = <strong>2<em>x</em> + 1</strong>. (Pour 5 : 2 × 5 + 1 = 11, cohérent.)</p>\n<p>c) 2<em>x</em> + 1 = 51 ⇔ 2<em>x</em> = 50 ⇔ <em>x</em> = <strong>25</strong>. Vérification : 26<sup>2</sup> − 25<sup>2</sup> = 676 − 625 = 51.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>a) Un rectangle a une longueur qui dépasse sa largeur de 5 cm et un périmètre de 58 cm. Calcule ses dimensions et son aire.</p>\n<p>b) Résous l’équation 3(<em>x</em> − 2) = 5<em>x</em> + 4.</p>",
+       "corrige": "<p>a) Soit <em>x</em> la largeur (en cm) ; la longueur est <em>x</em> + 5. Périmètre : 2(<em>x</em> + <em>x</em> + 5) = 58 ⇔ 4<em>x</em> + 10 = 58 ⇔ 4<em>x</em> = 48 ⇔ <em>x</em> = 12.</p>\n<p>Largeur <strong>12 cm</strong>, longueur <strong>17 cm</strong> (vérification : 2 × (12 + 17) = 58). Aire : 12 × 17 = <strong>204 cm<sup>2</sup></strong>.</p>\n<p>b) 3<em>x</em> − 6 = 5<em>x</em> + 4 ⇔ −6 − 4 = 5<em>x</em> − 3<em>x</em> ⇔ −10 = 2<em>x</em> ⇔ <em>x</em> = <strong>−5</strong>. Vérification : 3 × (−7) = −21 et 5 × (−5) + 4 = −21.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-ma-geometrie",
+   "num": 13,
+   "domaine": "maths",
+   "titre": "Géométrie : Pythagore, Thalès, trigonométrie, transformations",
+   "theme": "Théorèmes de Pythagore et de Thalès et leurs réciproques, trigonométrie, angles, transformations du plan",
+   "revision": true,
+   "duree": 2400,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Le théorème de Pythagore</h4>\n<figure class=\"fig\"><svg viewBox=\"0 0 300 190\" role=\"img\" aria-label=\"Triangle ABC rectangle en A, avec AB = 6 et AC = 8 ; on cherche BC.\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"60,160 60,30 250,160\" class=\"stroke\"/><polyline points=\"60,145 75,145 75,160\" class=\"thin\"/><text x=\"48\" y=\"172\" text-anchor=\"middle\" font-size=\"14\">A</text><text x=\"48\" y=\"28\" text-anchor=\"middle\" font-size=\"14\">B</text><text x=\"262\" y=\"172\" text-anchor=\"middle\" font-size=\"14\">C</text><text x=\"40\" y=\"100\" text-anchor=\"middle\" font-size=\"14\">6</text><text x=\"155\" y=\"180\" text-anchor=\"middle\" font-size=\"14\">8</text><text x=\"170\" y=\"85\" text-anchor=\"middle\" font-size=\"14\">?</text></svg></figure>\n<ul>\n<li><strong>Théorème</strong> (calculer une longueur) : si ABC est rectangle en A, alors BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> (BC est l’hypoténuse, côté opposé à l’angle droit). Ici BC<sup>2</sup> = 36 + 64 = 100, BC = 10.</li>\n<li><strong>Réciproque</strong> (prouver qu’un triangle est rectangle) : si le carré du plus grand côté est égal à la somme des carrés des deux autres, le triangle est rectangle.</li>\n<li><strong>Contraposée</strong> (prouver qu’il ne l’est pas) : si l’égalité est fausse, le triangle n’est pas rectangle.</li>\n</ul>\n<h4>2. Le théorème de Thalès</h4>\n<figure class=\"fig\"><svg viewBox=\"0 0 320 220\" role=\"img\" aria-label=\"Triangle ABC ; M sur le côté [AB] et N sur le côté [AC], la droite (MN) est parallèle à (BC).\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,190 280,190 160,20\" class=\"stroke\"/><line x1=\"112\" y1=\"88\" x2=\"208\" y2=\"88\" class=\"thick c-blue\"/><text x=\"160\" y=\"14\" text-anchor=\"middle\" font-size=\"14\">A</text><text x=\"30\" y=\"204\" text-anchor=\"middle\" font-size=\"14\">B</text><text x=\"290\" y=\"204\" text-anchor=\"middle\" font-size=\"14\">C</text><text x=\"100\" y=\"86\" text-anchor=\"middle\" font-size=\"14\">M</text><text x=\"222\" y=\"86\" text-anchor=\"middle\" font-size=\"14\">N</text></svg></figure>\n<p>Si M ∈ (AB), N ∈ (AC) et (MN) // (BC), alors <span class=\"frac\"><span>AM</span><span>AB</span></span> = <span class=\"frac\"><span>AN</span><span>AC</span></span> = <span class=\"frac\"><span>MN</span><span>BC</span></span>. Cela marche aussi en configuration « papillon » (M et N de l’autre côté de A).</p>\n<p><strong>Réciproque</strong> : si A, M, B et A, N, C sont alignés <strong>dans le même ordre</strong> et si <span class=\"frac\"><span>AM</span><span>AB</span></span> = <span class=\"frac\"><span>AN</span><span>AC</span></span>, alors (MN) // (BC). Si les rapports sont différents, les droites ne sont pas parallèles.</p>\n<h4>3. La trigonométrie dans le triangle rectangle</h4>\n<table class=\"tab\"><thead><tr><th>Pour l’angle aigu <em>x</em></th><th>Formule</th><th>Moyen mnémotechnique</th></tr></thead><tbody><tr><td>cosinus</td><td>côté adjacent ÷ hypoténuse</td><td>CAH</td></tr><tr><td>sinus</td><td>côté opposé ÷ hypoténuse</td><td>SOH</td></tr><tr><td>tangente</td><td>côté opposé ÷ côté adjacent</td><td>TOA</td></tr></tbody></table>\n<p>Calculatrice en <strong>degrés</strong> ; pour retrouver un angle, on utilise arccos, arcsin ou arctan (touches cos<sup>−1</sup>…).</p>\n<h4>4. Angles et transformations</h4>\n<ul>\n<li>Somme des angles d’un triangle : 180°. Angles alternes-internes égaux ⇔ droites parallèles.</li>\n<li><strong>Symétrie axiale, symétrie centrale, translation, rotation</strong> : elles conservent les longueurs, les angles, les aires, l’alignement (ce sont des isométries). Une symétrie centrale est une rotation de 180°.</li>\n<li><strong>Homothétie</strong> de rapport <em>k</em> : longueurs multipliées par |<em>k</em>|, aires par <em>k</em><sup>2</sup>, volumes par |<em>k</em>|<sup>3</sup> ; angles conservés. Si <em>k</em> &lt; 0, la figure est de l’autre côté du centre.</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><ul><li>Pythagore et trigonométrie : seulement dans un triangle <strong>rectangle</strong> (dis-le dans ta rédaction).</li><li>Rédaction type : « Dans le triangle …, rectangle en …, d’après le théorème de … ».</li><li>Ne pas arrondir avant la fin du calcul.</li></ul></div>\n<h4>5. Pièges fréquents</h4>\n<ul><li>Mettre l’hypoténuse au mauvais endroit dans l’égalité de Pythagore.</li><li>Utiliser la réciproque de Thalès sans vérifier l’ordre des points.</li><li>Calculatrice réglée en radians.</li><li>Confondre « égalité fausse » (contraposée) et « on ne peut pas conclure ».</li></ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "ABC est rectangle en A, AB = 6 cm et AC = 8 cm. Alors BC =",
+       "options": [
+        "14 cm",
+        "10 cm",
+        "√28 cm"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "BC<sup>2</sup> = 6<sup>2</sup> + 8<sup>2</sup> = 100, donc BC = <strong>10 cm</strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quels triangles (longueurs des côtés) sont rectangles ?",
+       "options": [
+        "5 ; 12 ; 13",
+        "6 ; 8 ; 11",
+        "7 ; 24 ; 25"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "25 + 144 = 169 = 13<sup>2</sup> ; 49 + 576 = 625 = 25<sup>2</sup> ; mais 36 + 64 = 100 ≠ 121 : le 2e n’est pas rectangle (contraposée)."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "M ∈ [AB], N ∈ [AC], (MN) // (BC), AM = 3, AB = 5 et BC = 10. Alors MN =",
+       "options": [
+        "6",
+        "8",
+        "4"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<span class=\"frac\"><span>AM</span><span>AB</span></span> = <span class=\"frac\"><span>MN</span><span>BC</span></span> : MN = 10 × 3 ÷ 5 = <strong>6</strong>."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Dans un triangle rectangle, le cosinus d’un angle aigu est :",
+       "options": [
+        "opposé ÷ hypoténuse",
+        "adjacent ÷ hypoténuse",
+        "opposé ÷ adjacent"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "CAH : cosinus = côté <strong>adjacent</strong> ÷ hypoténuse."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "ABC est rectangle en A, BC = 10 cm et l’angle B mesure 30°. Alors AC =",
+       "options": [
+        "5 cm",
+        "8,66 cm",
+        "20 cm"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "AC est opposé à l’angle B : AC = BC × sin 30° = 10 × 0,5 = <strong>5 cm</strong>."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Une homothétie de rapport 3 multiplie les aires par :",
+       "options": [
+        "3",
+        "6",
+        "9"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "Les longueurs sont multipliées par 3, les aires par 3<sup>2</sup> = <strong>9</strong>."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles transformations conservent les longueurs ?",
+       "options": [
+        "symétrie axiale",
+        "translation",
+        "rotation",
+        "homothétie de rapport 2"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "Symétries, translations et rotations sont des isométries. Une homothétie de rapport 2 double les longueurs."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Un triangle a deux angles de 47° et 68°. Le troisième mesure :",
+       "options": [
+        "75°",
+        "65°",
+        "115°"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "180 − 47 − 68 = <strong>65°</strong>."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Une échelle de 5 m est appuyée contre un mur vertical. Son pied est posé sur le sol horizontal, à 1,4 m du mur.</p>\n<p>a) À quelle hauteur l’échelle touche-t-elle le mur ? b) Quel angle fait-elle avec le sol (arrondi au degré) ?</p>",
+       "corrige": "<p>Le mur est perpendiculaire au sol : le triangle formé par le mur, le sol et l’échelle est <strong>rectangle</strong> ; l’échelle (5 m) est l’hypoténuse.</p>\n<p>a) D’après le théorème de Pythagore : <em>h</em><sup>2</sup> + 1,4<sup>2</sup> = 5<sup>2</sup>, soit <em>h</em><sup>2</sup> = 25 − 1,96 = 23,04 et <em>h</em> = √23,04 = <strong>4,8 m</strong>.</p>\n<p>b) L’angle au sol a pour côté adjacent la distance au mur : cos <em>x</em> = 1,4 ÷ 5 = 0,28, d’où <em>x</em> = arccos(0,28) ≈ 73,7°, soit <strong>74°</strong> environ.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<figure class=\"fig\"><svg viewBox=\"0 0 320 220\" role=\"img\" aria-label=\"Triangle ABC ; M appartient au segment [AB], N appartient au segment [AC].\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,190 280,190 160,20\" class=\"stroke\"/><line x1=\"112\" y1=\"88\" x2=\"208\" y2=\"88\" class=\"thick c-blue\"/><text x=\"160\" y=\"14\" text-anchor=\"middle\" font-size=\"14\">A</text><text x=\"30\" y=\"204\" text-anchor=\"middle\" font-size=\"14\">B</text><text x=\"290\" y=\"204\" text-anchor=\"middle\" font-size=\"14\">C</text><text x=\"100\" y=\"86\" text-anchor=\"middle\" font-size=\"14\">M</text><text x=\"222\" y=\"86\" text-anchor=\"middle\" font-size=\"14\">N</text></svg></figure><p>Sur la figure (qui n’est pas à l’échelle), M ∈ [AB] et N ∈ [AC], avec AB = 7,5 cm, AM = 3 cm, AC = 10 cm, AN = 4 cm et BC = 12 cm.</p>\n<p>a) Les droites (MN) et (BC) sont-elles parallèles ? b) Calcule MN.</p>",
+       "corrige": "<p>a) <span class=\"frac\"><span>AM</span><span>AB</span></span> = <span class=\"frac\"><span>3</span><span>7,5</span></span> = 0,4 et <span class=\"frac\"><span>AN</span><span>AC</span></span> = <span class=\"frac\"><span>4</span><span>10</span></span> = 0,4. Les points A, M, B et A, N, C sont alignés dans le même ordre et les rapports sont égaux : d’après la <strong>réciproque du théorème de Thalès</strong>, (MN) // (BC).</p>\n<p>b) Les droites étant parallèles, le théorème de Thalès donne <span class=\"frac\"><span>MN</span><span>BC</span></span> = <span class=\"frac\"><span>AM</span><span>AB</span></span> = 0,4, donc MN = 0,4 × 12 = <strong>4,8 cm</strong>.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-ma-grandeurs",
+   "num": 14,
+   "domaine": "maths",
+   "titre": "Grandeurs et mesures",
+   "theme": "Aires, périmètres, volumes, conversions d’unités, effet d’un agrandissement",
+   "revision": true,
+   "duree": 1800,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Aires et périmètres</h4>\n<table class=\"tab\"><thead><tr><th>Figure</th><th>Périmètre</th><th>Aire</th></tr></thead><tbody><tr><td>Rectangle <em>L</em> × <em>ℓ</em></td><td>2(<em>L</em> + <em>ℓ</em>)</td><td><em>L</em> × <em>ℓ</em></td></tr><tr><td>Carré de côté <em>c</em></td><td>4<em>c</em></td><td><em>c</em><sup>2</sup></td></tr><tr><td>Triangle</td><td>somme des côtés</td><td>base × hauteur ÷ 2</td></tr><tr><td>Parallélogramme</td><td>somme des côtés</td><td>base × hauteur</td></tr><tr><td>Trapèze</td><td>somme des côtés</td><td>(<em>B</em> + <em>b</em>) × <em>h</em> ÷ 2</td></tr><tr><td>Disque de rayon <em>r</em></td><td>2π<em>r</em> (longueur du cercle)</td><td>π<em>r</em><sup>2</sup></td></tr></tbody></table>\n<p>Deux figures de même périmètre peuvent avoir des aires différentes (rectangles 6 × 4 et 8 × 2 : périmètre 20, aires 24 et 16).</p>\n<h4>2. Volumes</h4>\n<table class=\"tab\"><thead><tr><th>Solide</th><th>Volume</th></tr></thead><tbody><tr><td>Pavé droit</td><td><em>L</em> × <em>ℓ</em> × <em>h</em></td></tr><tr><td>Prisme droit, cylindre</td><td>aire de la base × hauteur (cylindre : π<em>r</em><sup>2</sup><em>h</em>)</td></tr><tr><td>Pyramide, cône</td><td>aire de la base × hauteur ÷ 3</td></tr><tr><td>Boule de rayon <em>r</em></td><td>4/3 × π<em>r</em><sup>3</sup></td></tr></tbody></table>\n<h4>3. Conversions</h4>\n<table class=\"tab\"><thead><tr><th>Grandeur</th><th>Passage d’une unité à la suivante</th><th>Repères</th></tr></thead><tbody><tr><td>Longueurs</td><td>× 10</td><td>1 km = 1 000 m</td></tr><tr><td>Aires</td><td>× 100</td><td>1 m<sup>2</sup> = 100 dm<sup>2</sup> = 10 000 cm<sup>2</sup> ; 1 a = 100 m<sup>2</sup> ; 1 ha = 10 000 m<sup>2</sup></td></tr><tr><td>Volumes</td><td>× 1 000</td><td>1 dm<sup>3</sup> = 1 L ; 1 m<sup>3</sup> = 1 000 L ; 1 cm<sup>3</sup> = 1 mL</td></tr><tr><td>Durées</td><td>base 60</td><td>0,75 h = 45 min ; 1 h = 3 600 s</td></tr></tbody></table>\n<h4>4. Agrandissement et réduction</h4>\n<p>Si les longueurs sont multipliées par <em>k</em>, les aires sont multipliées par <em>k</em><sup>2</sup> et les volumes par <em>k</em><sup>3</sup>. Doubler l’arête d’un cube multiplie son volume par 8.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><ul><li>Convertis <strong>avant</strong> de calculer, et toutes les longueurs dans la même unité.</li><li>Rayon = diamètre ÷ 2.</li><li>Donne une valeur exacte (avec π) puis une valeur approchée si on la demande.</li></ul></div>\n<h4>5. Pièges fréquents</h4>\n<ul><li>1 m<sup>2</sup> = 10 dm<sup>2</sup> (faux : 100) ; 1 m<sup>3</sup> = 100 L (faux : 1 000).</li><li>Utiliser le diamètre à la place du rayon.</li><li>Oublier le « ÷ 3 » des pyramides et des cônes.</li><li>Confondre aire et périmètre (unités : cm et cm<sup>2</sup>).</li></ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "3,5 m<sup>2</sup> =",
+       "options": [
+        "350 cm<sup>2</sup>",
+        "3 500 cm<sup>2</sup>",
+        "35 000 cm<sup>2</sup>"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "1 m<sup>2</sup> = 10 000 cm<sup>2</sup>, donc 3,5 m<sup>2</sup> = <strong>35 000 cm<sup>2</sup></strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "2,4 dm<sup>3</sup> =",
+       "options": [
+        "2,4 L",
+        "24 L",
+        "0,24 L"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "1 dm<sup>3</sup> = 1 L : <strong>2,4 L</strong>."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Volume d’un cylindre de rayon 3 cm et de hauteur 10 cm (arrondi au dixième) :",
+       "options": [
+        "94,2 cm<sup>3</sup>",
+        "282,7 cm<sup>3</sup>",
+        "90 cm<sup>3</sup>"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "π × 3<sup>2</sup> × 10 = 90π ≈ <strong>282,7 cm<sup>3</sup></strong>. (94,2 ≈ 30π : erreur r au lieu de r<sup>2</sup>.)"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "1 hectare =",
+       "options": [
+        "100 m<sup>2</sup>",
+        "1 000 m<sup>2</sup>",
+        "10 000 m<sup>2</sup>"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "1 ha = 1 hm<sup>2</sup> = 100 m × 100 m = <strong>10 000 m<sup>2</sup></strong>."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Aire d’un trapèze de bases 8 cm et 5 cm et de hauteur 4 cm :",
+       "options": [
+        "26 cm<sup>2</sup>",
+        "52 cm<sup>2</sup>",
+        "160 cm<sup>2</sup>"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "(8 + 5) × 4 ÷ 2 = <strong>26 cm<sup>2</sup></strong>."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Si l’on double l’arête d’un cube, son volume est multiplié par :",
+       "options": [
+        "2",
+        "4",
+        "8"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "2<sup>3</sup> = <strong>8</strong>."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "2,75 h =",
+       "options": [
+        "2 h 75 min",
+        "2 h 45 min",
+        "2 h 7 min 30 s"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "0,75 × 60 = 45 min : <strong>2 h 45 min</strong>."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Quelles affirmations sont vraies ?",
+       "options": [
+        "Deux figures de même périmètre ont la même aire.",
+        "Deux figures de même périmètre peuvent avoir des aires différentes.",
+        "Une pyramide a pour volume le tiers du prisme de même base et de même hauteur."
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "Rectangles 6 × 4 et 8 × 2 : même périmètre (20), aires 24 et 16. Le volume d’une pyramide est bien (base × hauteur) ÷ 3."
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Une piscine a la forme d’un pavé droit : 10 m de long, 4 m de large, 1,5 m de profondeur.</p>\n<p>a) Quel est son volume en m<sup>3</sup>, puis en litres ? b) On la remplit à raison de 12 m<sup>3</sup> par heure : combien de temps faut-il ? c) On carrelle le fond et les parois : quelle surface faut-il carreler ?</p>",
+       "corrige": "<p>a) <em>V</em> = 10 × 4 × 1,5 = <strong>60 m<sup>3</sup></strong> = 60 × 1 000 = <strong>60 000 L</strong>.</p>\n<p>b) 60 ÷ 12 = <strong>5 h</strong>.</p>\n<p>c) Fond : 10 × 4 = 40 m<sup>2</sup>. Grandes parois : 2 × (10 × 1,5) = 30 m<sup>2</sup>. Petites parois : 2 × (4 × 1,5) = 12 m<sup>2</sup>. Total : <strong>82 m<sup>2</sup></strong> (pas de carrelage sur le « dessus », qui est ouvert).</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<figure class=\"fig\"><svg viewBox=\"0 0 340 170\" role=\"img\" aria-label=\"Rectangle de 12 cm sur 8 cm prolongé, sur un côté de 8 cm, par un demi-disque de diamètre 8 cm.\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M60,30 L240,30 A60,60 0 0 1 240,150 L60,150 Z\" class=\"stroke shade\"/><line x1=\"240\" y1=\"30\" x2=\"240\" y2=\"150\" class=\"dash thin\"/><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-size=\"14\">12 cm</text><text x=\"40\" y=\"95\" text-anchor=\"end\" font-size=\"13\">8 cm</text></svg></figure><p>La figure est formée d’un rectangle de 12 cm sur 8 cm et d’un demi-disque de diamètre 8 cm. Calcule son aire et son périmètre (valeurs exactes, puis arrondies au dixième).</p>",
+       "corrige": "<p><strong>Aire</strong> : rectangle 12 × 8 = 96 cm<sup>2</sup> ; demi-disque de rayon 4 cm : π × 4<sup>2</sup> ÷ 2 = 8π cm<sup>2</sup>. Aire = <strong>96 + 8π ≈ 121,1 cm<sup>2</sup></strong>.</p>\n<p><strong>Périmètre</strong> : on ne compte pas le côté commun (en pointillés). Trois côtés du rectangle : 12 + 8 + 12 = 32 cm ; demi-cercle : 2π × 4 ÷ 2 = 4π cm. Périmètre = <strong>32 + 4π ≈ 44,6 cm</strong>.</p>\n<p><strong>Pièges</strong> : prendre 8 comme rayon ; compter le segment intérieur dans le périmètre.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-bac3-ma-stats-proba-algo",
+   "num": 15,
+   "domaine": "maths",
+   "titre": "Statistiques, probabilités et algorithmique",
+   "theme": "Moyenne, médiane, étendue, fréquences ; probabilités, arbre, événement contraire ; programmes Scratch",
+   "revision": true,
+   "duree": 2400,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "<h4>1. Statistiques</h4>\n<ul>\n<li><strong>Effectif</strong> d’une valeur : nombre de fois où elle apparaît ; <strong>fréquence</strong> = effectif ÷ effectif total (en fraction, décimal ou pourcentage).</li>\n<li><strong>Moyenne</strong> = somme des valeurs ÷ effectif total. Moyenne <strong>pondérée</strong> : chaque valeur est multipliée par son effectif (ou coefficient). Notes 12 (coef. 2) et 15 (coef. 1) : (24 + 15) ÷ 3 = 13.</li>\n<li><strong>Médiane</strong> : on <strong>range</strong> les valeurs ; c’est la valeur qui partage la série en deux groupes de même effectif. Effectif impair : la valeur du milieu ; effectif pair : la moyenne des deux valeurs centrales (3, 7, 8, 12, 15, 20 → (8 + 12) ÷ 2 = 10).</li>\n<li><strong>Étendue</strong> = plus grande valeur − plus petite valeur.</li>\n</ul>\n<h4>2. Probabilités</h4>\n<ul>\n<li>Expérience aléatoire, <strong>issues</strong>, <strong>événement</strong> (ensemble d’issues). Une probabilité est comprise entre 0 (impossible) et 1 (certain).</li>\n<li>Situation d’<strong>équiprobabilité</strong> : P(A) = nombre d’issues favorables ÷ nombre d’issues possibles. Dé équilibré, « multiple de 3 » : {3 ; 6} → 2/6 = 1/3.</li>\n<li>Événement <strong>contraire</strong> : P(non A) = 1 − P(A).</li>\n<li><strong>Deux épreuves</strong> : un arbre ou un tableau ; on multiplie les probabilités le long d’une branche. Sac de 3 rouges et 2 bleues, deux tirages <strong>sans remise</strong> : P(deux rouges) = 3/5 × 2/4 = 3/10.</li>\n<li>Quand on répète une expérience un grand nombre de fois, la <strong>fréquence</strong> observée se rapproche de la probabilité ; sur peu d’essais, elle peut en être éloignée.</li>\n</ul>\n<h4>3. Algorithmique avec Scratch</h4>\n<table class=\"tab\"><thead><tr><th>Catégorie</th><th>Blocs utiles</th></tr></thead><tbody><tr><td>Événements</td><td><em>quand le drapeau vert est cliqué</em></td></tr><tr><td>Mouvement</td><td><em>avancer de … pas</em>, <em>tourner de … degrés</em>, <em>s’orienter à …</em>, <em>aller à x : … y : …</em></td></tr><tr><td>Stylo</td><td><em>stylo en position d’écriture</em>, <em>relever le stylo</em>, <em>effacer tout</em></td></tr><tr><td>Contrôle</td><td><em>répéter … fois</em>, <em>répéter jusqu’à …</em>, <em>si … alors … sinon</em></td></tr><tr><td>Variables, opérateurs</td><td><em>mettre … à …</em>, <em>ajouter … à …</em>, <em>nombre aléatoire entre … et …</em></td></tr></tbody></table><div class=\"doc\"><p class=\"doc-title\">Script Scratch</p><pre>quand le drapeau vert est cliqué\nstylo en position d’écriture\nrépéter 5 fois\n    avancer de 50 pas\n    tourner de 72 degrés\nfin</pre></div>\n<p>Pour tracer un <strong>polygone régulier à <em>n</em> côtés</strong>, on tourne de <strong>360 ÷ <em>n</em></strong> degrés (angle extérieur) : 72° pour un pentagone, 120° pour un triangle équilatéral, 90° pour un carré.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p><ul><li>Médiane : toujours ranger la série d’abord.</li><li>Sans remise, le deuxième tirage se fait dans une urne modifiée.</li><li>Scratch : on tourne de l’angle <strong>extérieur</strong> (180° − angle intérieur).</li></ul></div>\n<h4>4. Pièges fréquents</h4>\n<ul><li>Calculer la médiane sans ranger, ou prendre la « valeur du milieu du tableau ».</li><li>Moyenne d’un tableau : diviser par le nombre de valeurs différentes au lieu de l’effectif total.</li><li>Triangle équilatéral en Scratch : tourner de 60° (on obtient un hexagone).</li><li>Confondre fréquence observée et probabilité.</li></ul>",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Moyenne de la série 12 ; 15 ; 8 ; 10 ; 15 :",
+       "options": [
+        "12",
+        "15",
+        "10"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "(12 + 15 + 8 + 10 + 15) ÷ 5 = 60 ÷ 5 = <strong>12</strong>."
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Médiane de la série 3 ; 7 ; 8 ; 12 ; 15 ; 20 :",
+       "options": [
+        "8",
+        "10",
+        "12"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Effectif pair (6) : moyenne des 3e et 4e valeurs, (8 + 12) ÷ 2 = <strong>10</strong>."
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "On lance un dé équilibré à six faces. Probabilité d’obtenir un multiple de 3 :",
+       "options": [
+        "1/6",
+        "1/3",
+        "1/2"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "Issues favorables : 3 et 6. 2/6 = <strong>1/3</strong>."
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Si P(A) = 0,35, alors P(non A) =",
+       "options": [
+        "0,35",
+        "0,65",
+        "1,35"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "P(non A) = 1 − 0,35 = <strong>0,65</strong>."
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "On lance deux pièces équilibrées. Probabilité d’obtenir deux fois « pile » :",
+       "options": [
+        "1/2",
+        "1/3",
+        "1/4"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "Issues équiprobables : PP, PF, FP, FF. P = <strong>1/4</strong> (1/2 × 1/2). Piège : 1/3 en comptant « deux piles, deux faces, un de chaque »."
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "« répéter 5 fois : avancer de 50 pas, tourner de 72 degrés » trace :",
+       "options": [
+        "un pentagone régulier",
+        "une étoile",
+        "un hexagone régulier"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "5 × 72° = 360° : le lutin fait un tour complet en 5 côtés égaux, c’est un <strong>pentagone régulier</strong>."
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Moyenne d’un 12 (coefficient 2) et d’un 15 (coefficient 1) :",
+       "options": [
+        "13,5",
+        "13",
+        "14"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "(12 × 2 + 15 × 1) ÷ 3 = 39 ÷ 3 = <strong>13</strong>."
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "Un sac contient 3 boules rouges et 2 bleues. On tire deux boules sans remise. P(deux rouges) =",
+       "options": [
+        "9/25",
+        "3/10",
+        "3/5"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "3/5 × 2/4 = 6/20 = <strong>3/10</strong>. (9/25 serait le résultat avec remise.)"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Voici les notes d’un contrôle dans une classe.</p><table class=\"tab\"><thead><tr><th>Note</th><th>8</th><th>10</th><th>12</th><th>14</th><th>16</th><th>18</th></tr></thead><tbody><tr><td>Effectif</td><td>3</td><td>5</td><td>7</td><td>6</td><td>3</td><td>1</td></tr></tbody></table><p>a) Calcule l’effectif total, la moyenne, la médiane et l’étendue. b) Quel pourcentage d’élèves a obtenu au moins 14 ?</p>",
+       "corrige": "<p>a) Effectif total : 3 + 5 + 7 + 6 + 3 + 1 = <strong>25</strong>.</p>\n<p>Moyenne : (8 × 3 + 10 × 5 + 12 × 7 + 14 × 6 + 16 × 3 + 18 × 1) ÷ 25 = (24 + 50 + 84 + 84 + 48 + 18) ÷ 25 = 308 ÷ 25 = <strong>12,32</strong>.</p>\n<p>Médiane : 25 valeurs, la médiane est la 13e. Effectifs cumulés : 3 ; 8 ; 15… La 13e valeur est 12 : médiane = <strong>12</strong>.</p>\n<p>Étendue : 18 − 8 = <strong>10</strong>.</p>\n<p>b) 6 + 3 + 1 = 10 élèves ; 10 ÷ 25 = 0,4 = <strong>40 %</strong>.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>On considère le script suivant.</p><div class=\"doc\"><p class=\"doc-title\">Script Scratch</p><pre>quand le drapeau vert est cliqué\nstylo en position d’écriture\nrépéter 3 fois\n    avancer de 60 pas\n    tourner de 120 degrés\nfin\nsi (nombre aléatoire entre 1 et 6) = 6 alors\n    dire « Gagné ! »\nfin</pre></div><p>a) Quelle figure est tracée ? Quel est son périmètre ? b) Modifie le script pour tracer un hexagone régulier de même côté, et donne son périmètre. c) Quelle est la probabilité que le lutin dise « Gagné ! » ?</p>",
+       "corrige": "<p>a) 3 côtés de 60 pas, on tourne de 120° à chaque fois (3 × 120 = 360) : un <strong>triangle équilatéral</strong> de côté 60 pas, de périmètre <strong>180 pas</strong>. (L’angle intérieur vaut 60° ; on tourne de l’angle extérieur 180 − 60 = 120°.)</p>\n<p>b) <em>répéter 6 fois : avancer de 60 pas, tourner de 60 degrés</em> (360 ÷ 6 = 60). Périmètre : 6 × 60 = <strong>360 pas</strong>.</p>\n<p>c) Le nombre aléatoire entre 1 et 6 est tiré de façon équiprobable parmi 6 valeurs ; une seule convient : probabilité <strong>1/6</strong>.</p>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -19,7 +19,9 @@
   const skipBtn = document.getElementById("skip");
   const soundBtn = document.getElementById("sound");
   const backBtn = document.getElementById("back");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // les animations se jouent sauf si l’élève choisit « réduites » dans Paramètres
+  let reduceMotion = Boolean(window.BelamisPrefs && window.BelamisPrefs.get("motion") === "reduit");
+  if (window.BelamisPrefs) window.BelamisPrefs.onChange((k, v) => { if (k === "motion") reduceMotion = v === "reduit"; });
 
   const rand = (a, b) => a + Math.random() * (b - a);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -31,7 +33,7 @@
 
   let W = 0, H = 0, DPR = 1, cx = 0, cy = 0, R = 0, diag = 0;
   let running = false, raf = 0, t0 = 0, lastNow = 0, uiShown = false, boomDone = false;
-  let audio = null, muted = false;
+  let audio = null, muted = Boolean(window.BelamisPrefs && window.BelamisPrefs.get("sound") === false);
 
   // ---------- Sprites et fonds pré-calculés ----------
   function glowSprite(r, g, b) {
@@ -677,7 +679,12 @@
   }
 
   soundBtn.addEventListener("click", () => {
-    muted = !muted;
+    if (window.BelamisPrefs) window.BelamisPrefs.set("sound", muted); // bascule : la préférence prévient ci-dessous
+    else { muted = !muted; if (audio) audio.muted = muted; updateSoundBtn(); }
+  });
+  if (window.BelamisPrefs) window.BelamisPrefs.onChange((k, v) => {
+    if (k !== "sound") return;
+    muted = !v;
     if (audio) audio.muted = muted;
     updateSoundBtn();
   });

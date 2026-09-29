@@ -128,7 +128,8 @@
   // ---------- Affichage de l'état connecté ----------
   function renderAccount() {
     const email = user ? user.email : "";
-    loginBtn.hidden = Boolean(user);
+    // sans Supabase branché, pas de connexion à proposer : la sauvegarde se fait dans le navigateur
+    loginBtn.hidden = Boolean(user) || !configured;
     account.hidden = !user;
     $("nav-email").textContent = email;
     $("nav-avatar").textContent = email ? email[0].toUpperCase() : "";
@@ -305,7 +306,7 @@
   // ---------- Lancement des révisions ----------
   async function startRevision() {
     const note = $("space-note");
-    note.textContent = user ? "Chargement de ta progression…" : "Mode invité : tes réponses restent dans ce navigateur. Connecte-toi depuis l'accueil pour les retrouver partout.";
+    note.textContent = user ? "Chargement de ta progression…" : "";
     window.BelamisLaunch();
     if (!user) return;
     try {
@@ -323,8 +324,8 @@
   document.querySelectorAll("[data-launch]").forEach((el) =>
     el.addEventListener("click", (e) => {
       e.preventDefault();
-      if (user) startRevision();
-      else openAuth({ fromLaunch: true, reason: "Connecte-toi pour que tes révisions soient sauvegardées. Tu reçois un lien par mail, sans mot de passe." });
+      // on entre directement dans l'univers ; la connexion reste proposée dans la barre du haut
+      startRevision();
     })
   );
 

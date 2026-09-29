@@ -596,6 +596,15 @@
     if (b && !study.contains(b)) openStudy(b.dataset.matiere, b.dataset.dom);
   });
   try { showConcours(localStorage.getItem(CONCOURS_KEY)); } catch (_) { showConcours(null); }
+
+  // interface utilisée par les panneaux Progression et Paramètres (panels.js)
+  window.BelamisRevise = {
+    MATIERES, CONCOURS,
+    concours() { try { return localStorage.getItem(CONCOURS_KEY); } catch (_) { return null; } },
+    showConcours,
+    async open(m, dom, sujetId) { await openStudy(m, dom); if (sujetId) openSujet(sujetId); },
+    async refresh() { if (!study.hidden && !current) { await loadProgress(); renderList(); } },
+  };
   $("study-close").addEventListener("click", closeStudy);
   $("study-back").addEventListener("click", backToList);
   $("chrono-btn").addEventListener("click", toggleChrono);

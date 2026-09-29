@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="prefs.js"></script>
 </head>
 <body>
   <!-- Univers animé (polyèdre, cœur lumineux, rayons, fragments, nébuleuse) -->
@@ -30,8 +31,8 @@
     </a>
     <nav class="nav-links" aria-label="Navigation principale">
       <a href="#top" class="active">Accueil</a>
-      <a href="#decouvrir">Matières <small>bientôt</small></a>
-      <a href="#decouvrir">Mon suivi</a>
+      <a href="#decouvrir">Découvrir</a>
+      <a href="#revision" data-launch>Réviser</a>
     </nav>
     <div class="nav-auth">
       <button id="nav-login" class="btn btn-ghost btn-sm" type="button">Se connecter</button>
@@ -53,8 +54,8 @@
         <span class="eyebrow"><i class="pulse-dot"></i>Plateforme de révision · CRPE</span>
         <h1>Révise dans un <em>univers</em> qui bouge avec toi.</h1>
         <p class="lead">
-          Fiches, quiz et entraînements pour préparer le concours
-          de professeur des écoles, sans jamais t'ennuyer.
+          Sujets corrigés, séances de révision et suivi de progression pour le CRPE BAC+3
+          et les concours internes, dans un univers qui donne envie de travailler.
         </p>
         <div class="cta">
           <a class="btn btn-primary" href="#revision" data-launch>
@@ -81,25 +82,25 @@
           <div class="card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10l4 4v12H5z" /><path d="M15 4v4h4M8 12h8M8 16h6" /></svg>
           </div>
-          <h3>Fiches vivantes</h3>
-          <p>Des synthèses claires pour chaque matière, à lire, surligner et reprendre quand tu veux.</p>
-          <span class="tag">Bientôt</span>
+          <h3>Sujets corrigés</h3>
+          <p>64 sujets au format du concours, annales officielles comprises, avec corrigés détaillés et barèmes.</p>
+          <span class="tag">3 concours</span>
         </article>
         <article class="card reveal">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5V14M12 17h.01" /></svg>
           </div>
-          <h3>Quiz & entraînements</h3>
-          <p>Teste-toi en quelques minutes : questions ciblées, corrections détaillées, zéro pression.</p>
-          <span class="tag">Bientôt</span>
+          <h3>Séances de révision</h3>
+          <p>43 rappels de cours par thème, chacun suivi d'un quiz corrigé tout de suite et d'exercices d'application.</p>
+          <span class="tag">20 à 40 min</span>
         </article>
         <article class="card reveal">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16" /><path d="M8 15l3-4 3 2 5-7" /></svg>
           </div>
           <h3>Suivi de progression</h3>
-          <p>Visualise ce que tu maîtrises et ce qu'il reste à consolider avant le jour J.</p>
-          <span class="tag">Bientôt</span>
+          <p>Taux de réussite, sujets terminés, temps de travail et sujets à reprendre, pour le concours que tu prépares.</p>
+          <span class="tag">Automatique</span>
         </article>
       </div>
     </section>
@@ -119,10 +120,14 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
           Accueil
         </button>
-        <button id="sound" class="btn btn-ghost btn-sm sound" type="button" aria-pressed="true">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" /><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" /></svg>
-          <span>Son activé</span>
-        </button>
+        <div class="space-tools">
+          <button class="btn btn-ghost btn-sm" type="button" data-open-panel="progress"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16" /><path d="M8 15l3-4 3 2 5-7" /></svg>Progression</button>
+          <button class="btn btn-ghost btn-sm" type="button" data-open-panel="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" /></svg>Paramètres</button>
+          <button id="sound" class="btn btn-ghost btn-sm sound" type="button" aria-pressed="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" /><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" /></svg>
+            <span>Son activé</span>
+          </button>
+        </div>
       </div>
       <div class="space-center">
         <span class="eyebrow gold"><i class="pulse-dot"></i>Espace de révision</span>
@@ -156,6 +161,29 @@
     </div>
   </div>
 
+
+  <!-- Progression dans le concours choisi -->
+  <div id="panel-progress" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="progress-title">
+    <div class="sheet-box">
+      <header class="sheet-head">
+        <div><h2 id="progress-title">Ma progression</h2><p id="progress-sub"></p></div>
+        <button class="x-btn" type="button" data-close-panel aria-label="Fermer">×</button>
+      </header>
+      <div id="progress-body" class="sheet-body"></div>
+    </div>
+  </div>
+
+  <!-- Paramètres -->
+  <div id="panel-settings" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="settings-title">
+    <div class="sheet-box">
+      <header class="sheet-head">
+        <div><h2 id="settings-title">Paramètres</h2><p>Réglés pour cet appareil. Tout peut être modifié à tout moment.</p></div>
+        <button class="x-btn" type="button" data-close-panel aria-label="Fermer">×</button>
+      </header>
+      <div id="settings-body" class="sheet-body"></div>
+    </div>
+  </div>
+
   <!-- Espace de travail : sujets de français -->
   <div id="study" class="study" hidden role="dialog" aria-modal="true" aria-label="Sujets de français">
     <section id="study-list" class="study-list">
@@ -164,6 +192,10 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
           Espace de Raphaël
         </button>
+        <div class="space-tools study-tools">
+          <button class="btn btn-ghost btn-sm" type="button" data-open-panel="progress">Progression</button>
+          <button class="btn btn-ghost btn-sm" type="button" data-open-panel="settings">Paramètres</button>
+        </div>
       </header>
       <div class="study-intro">
         <span class="eyebrow gold"><i class="pulse-dot"></i><span id="study-eyebrow">Français · 1re épreuve d'admissibilité</span></span>
@@ -264,5 +296,6 @@
   <script src="data/mayotte.js"></script>
   <script src="data/revisions.js"></script>
   <script src="revise.js"></script>
+  <script src="panels.js"></script>
 </body>
 </html>

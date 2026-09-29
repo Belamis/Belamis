@@ -10,7 +10,9 @@
 
   const canvas = document.getElementById("cosmos");
   const ctx = canvas.getContext("2d");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // les animations se jouent sauf si l’élève choisit « réduites » dans Paramètres
+  let reduceMotion = Boolean(window.BelamisPrefs && window.BelamisPrefs.get("motion") === "reduit");
+  if (window.BelamisPrefs) window.BelamisPrefs.onChange((k, v) => { if (k === "motion") reduceMotion = v === "reduit"; });
 
   let W = 0, H = 0, DPR = 1, cx = 0, cy = 0, R = 0, K = 0;
   const isSmall = () => Math.min(window.innerWidth, window.innerHeight) < 700;

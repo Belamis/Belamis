@@ -1,0 +1,4 @@
+# Hébergement Netlify de la plateforme de révision Belamis (dossier revision/).
+[build]
+  command = "sh revision/netlify-build.sh"
+  publish = "revision/dist"

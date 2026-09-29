@@ -11,3 +11,4 @@
 *.aab
 *.keystore
 __pycache__/
+revision/dist/

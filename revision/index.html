@@ -36,13 +36,13 @@
     </nav>
     <div class="nav-auth">
       <div id="nav-guest" class="account">
-        <button id="nav-login" class="btn btn-ghost btn-sm" type="button" data-auth="login">Se connecter</button>
-        <button id="nav-signup" class="btn btn-primary btn-sm" type="button" data-auth="signup">Créer un compte</button>
+        <button id="nav-login" class="btn btn-ghost btn-sm" type="button" data-auth="login"><span class="lbl-long">Se connecter</span><span class="lbl-short">Connexion</span></button>
+        <button id="nav-signup" class="btn btn-primary btn-sm" type="button" data-auth="signup"><span class="lbl-long">Créer un compte</span><span class="lbl-short">S'inscrire</span></button>
       </div>
       <div id="nav-account" class="account" hidden>
         <span id="nav-avatar" class="avatar" aria-hidden="true"></span>
         <span id="nav-email" class="account-email"></span>
-        <button id="nav-logout" class="btn btn-ghost btn-sm" type="button" data-logout>Se déconnecter</button>
+        <button id="nav-logout" class="btn btn-ghost btn-sm" type="button" data-logout><span class="lbl-long">Se déconnecter</span><span class="lbl-short">Quitter</span></button>
       </div>
     </div>
   </header>
@@ -239,7 +239,7 @@
         <button class="mtab" type="button" role="tab" data-tab="questions">Questions</button>
       </div>
       <div class="study-cols">
-        <article id="study-text" class="study-text"></article>
+        <article id="study-text" class="study-text" tabindex="0" aria-label="Texte du sujet"></article>
         <div id="study-questions-wrap" class="study-questions-wrap">
           <div id="study-questions"></div>
           <p id="study-save" class="study-save" role="status" aria-live="polite"></p>

@@ -1,0 +1,1034 @@
+{
+ "sujets": [
+  {
+   "id": "rev-p1-ecrit-analyse",
+   "num": 1,
+   "domaine": "ecrit",
+   "titre": "Analyser et commenter un dossier documentaire",
+   "theme": "Méthode de la première partie de l’écrit : libellé, fiches documents, tableau croisé, problématique, plan, introduction et conclusion",
+   "revision": true,
+   "duree": 2400,
+   "total": 10,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>L’écrit du <strong>premier concours interne</strong> (réservé aux instituteurs titulaires) dure <strong>4 heures</strong>, sans calculatrice, et est noté sur 40. Deux sujets sont proposés : tu en traites un seul. Il s’appuie sur un dossier de 3 à 5 documents (10 pages au plus) sur une question d’actualité de l’école primaire (lecture, oral, esprit critique, grandeurs et mesures, développement durable…).</p>\n<table class=\"tab\">\n<tr><th>Partie</th><th>Consigne type</th><th>Points</th></tr>\n<tr><td>1re partie (4 pages max)</td><td>« Vous analyserez et commenterez les documents qui composent le dossier ci-joint en précisant les enjeux de… »</td><td>20</td></tr>\n<tr><td>2e partie (4 pages max)</td><td>1. une programmation d’activités (12 points) ; 2. une séquence détaillée dans cette programmation (8 points)</td><td>20</td></tr>\n</table>\n<p>Le jury privilégie la capacité à <strong>situer la question dans ses divers contextes</strong> (institutionnel, scientifique, didactique, social, local), et non la paraphrase.</p>\n\n<h4>1. Analyser, commenter : de quoi s’agit-il ?</h4>\n<ul>\n<li><strong>Analyser</strong> : dégager les idées essentielles de chaque document, sa nature (texte officiel, article de recherche, guide, production d’élève, données), son auteur, sa date, son point de vue.</li>\n<li><strong>Commenter</strong> : mettre les documents en relation (convergences, complémentarités, tensions), les éclairer par tes connaissances (programmes, recherche, expérience) et en dégager les <strong>enjeux</strong> pour l’école.</li>\n<li><strong>Les enjeux</strong> : ce qui est en jeu pour les élèves (réussite, égalité, citoyenneté), pour l’enseignant (pratiques, gestes), pour l’institution (priorités, évaluation).</li>\n</ul>\n\n<h4>2. La méthode en six étapes (environ 1 h 45 pour la 1re partie)</h4>\n<ol>\n<li><strong>Analyser le libellé</strong> (5 min) : souligne les mots clés de « en précisant les enjeux de… » et définis-les.</li>\n<li><strong>Lire le dossier</strong> (25 min) : fiche d’identité de chaque document (nature, auteur, date, idée principale, citation utile).</li>\n<li><strong>Tableau croisé</strong> (15 min) : en lignes, les idées ou enjeux ; en colonnes, les documents ; ajoute une colonne « mes connaissances ».</li>\n<li><strong>Problématique</strong> (5 min) : une question qui fait apparaître une tension ou un défi.</li>\n<li><strong>Plan détaillé</strong> (15 min) : 2 ou 3 parties, chacune croisant plusieurs documents et des connaissances personnelles.</li>\n<li><strong>Rédaction</strong> (40 min) : introduction, développement, conclusion ; relecture.</li>\n</ol>\n\n<h4>3. Types de plans efficaces</h4>\n<table class=\"tab\">\n<tr><th>Plan</th><th>Exemple (dossier sur la fluence de lecture)</th></tr>\n<tr><td>Enjeux → obstacles → leviers</td><td>I. Pourquoi automatiser la lecture est décisif ; II. Ce qui fait obstacle (plurilinguisme, temps réduit) ; III. Les leviers pédagogiques</td></tr>\n<tr><td>Savoirs → apprentissages → enseignement</td><td>I. Ce que dit la recherche ; II. Comment l’élève apprend ; III. Ce que doit faire l’enseignant</td></tr>\n<tr><td>Constat → analyse → perspectives</td><td>I. Des résultats préoccupants ; II. Des causes identifiées ; III. Des réponses institutionnelles et pédagogiques</td></tr>\n</table>\n\n<h4>4. L’introduction et la conclusion</h4>\n<ul>\n<li><strong>Introduction</strong> : amorce ancrée dans l’actualité ou les programmes ; définition des termes clés ; présentation <em>synthétique</em> du dossier (nature des documents, ce qui les rassemble) ; problématique ; annonce du plan.</li>\n<li><strong>Conclusion</strong> : réponse à la problématique ; ouverture vers la 2e partie (la programmation qui suit) ou vers un enjeu plus large.</li>\n</ul>\n\n<h4>5. Les références qui font la différence</h4>\n<p>Programmes en vigueur (préciser le BO), socle commun, circulaire de rentrée, guides fondamentaux d’Éduscol, évaluations nationales, apports de la recherche (Dehaene, Goigoux, Bucheton, Rosenshine…), référentiel de compétences de 2013, et ton <strong>expérience d’instituteur</strong> analysée : c’est un atout propre au concours interne.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Définir les termes, identifier chaque document, croiser dans un tableau, problématiser, construire un plan thématique (jamais document par document), enrichir par des connaissances et l’expérience, conclure en répondant et en ouvrant.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La première partie de l’écrit du premier concours interne :</p>",
+       "options": [
+        "est notée sur 20",
+        "tient en 4 pages au maximum",
+        "consiste à résumer successivement chaque document",
+        "demande d’analyser et de commenter le dossier en précisant des enjeux"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong> Le jury sanctionne la paraphrase.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« Commenter » les documents, c’est :</p>",
+       "options": [
+        "les recopier en partie",
+        "les mettre en relation (convergences, tensions)",
+        "les éclairer par ses connaissances et son expérience",
+        "en dégager les enjeux pour l’école"
+       ],
+       "bonnes": [
+        1,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2, 3, 4.</strong></p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un tableau croisé sert à :</p>",
+       "options": [
+        "relier chaque idée aux documents qui l’évoquent",
+        "préparer un plan thématique",
+        "classer les documents par nombre de pages",
+        "repérer les idées pour lesquelles tes connaissances complètent le dossier"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong></p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Parmi ces plans, lequel est à proscrire ?</p>",
+       "options": [
+        "I. Document 1 – II. Document 2 – III. Documents 3 et 4",
+        "I. Enjeux – II. Obstacles – III. Leviers",
+        "I. Ce que dit la recherche – II. Ce que prescrit l’institution – III. Ce que fait l’enseignant",
+        "I. Constat – II. Analyse – III. Perspectives"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse 1.</strong> Un plan document par document empêche la mise en relation.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>L’introduction doit comporter :</p>",
+       "options": [
+        "une définition des termes clés",
+        "une présentation synthétique du dossier",
+        "la problématique et l’annonce du plan",
+        "la programmation demandée en 2e partie"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> La programmation relève de la deuxième partie.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« Situer la question dans ses divers contextes », c’est notamment :</p>",
+       "options": [
+        "rappeler le cadre institutionnel (programmes, circulaires)",
+        "mobiliser les apports de la recherche",
+        "tenir compte du contexte local (plurilinguisme, éducation prioritaire à Mayotte)",
+        "donner son opinion personnelle sans justification"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong></p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Ton expérience d’instituteur :</p>",
+       "options": [
+        "n’a pas sa place à l’écrit",
+        "peut illustrer et nuancer l’analyse, à condition d’être analysée",
+        "remplace les références institutionnelles",
+        "est un atout propre au concours interne"
+       ],
+       "bonnes": [
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2 et 4.</strong> Elle complète les références, elle ne les remplace pas.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 3,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Sujet (inspiré des thèmes tombés à Mayotte) : « Vous analyserez et commenterez les documents qui composent le dossier ci-joint en précisant les enjeux de l’enseignement de l’oral à l’école maternelle et au cycle 2. »</p>\n<p>Dossier (résumé) : <strong>Doc. 1</strong> – extraits du programme de l’école maternelle (BOEN n° 19 du 7 mai 2026) sur le langage oral ; <strong>Doc. 2</strong> – extrait du guide <em>Pour enseigner le vocabulaire à l’école maternelle</em> (Éduscol, 2020) ; <strong>Doc. 3</strong> – données de l’Insee (2022) sur les langues parlées à Mayotte ; <strong>Doc. 4</strong> – transcription d’un atelier de langage en moyenne section où quelques élèves monopolisent la parole.</p>\n<p>1. Définis les termes clés. 2. Construis le tableau croisé (3 idées au moins). 3. Formule une problématique et un plan détaillé en trois parties.</p>",
+       "corrige": "<p><strong>1. Termes clés.</strong> <em>Oral</em> : à la fois moyen d’apprendre (on parle pour apprendre) et objet d’apprentissage (on apprend à parler : lexique, syntaxe, prise de parole, écoute). <em>Enjeux</em> : ce qui est en jeu pour la réussite scolaire (le langage oral prépare la compréhension en lecture), pour l’égalité (écarts de vocabulaire selon les milieux) et pour la citoyenneté (débattre, écouter l’autre).</p>\n<p><strong>2. Tableau croisé.</strong></p>\n<table class=\"tab\">\n<tr><th>Idée</th><th>Doc. 1</th><th>Doc. 2</th><th>Doc. 3</th><th>Doc. 4</th><th>Connaissances</th></tr>\n<tr><td>L’oral s’enseigne de façon structurée</td><td>oui</td><td>oui (mots cibles, réemploi)</td><td>–</td><td>contre-exemple</td><td>enseignement explicite</td></tr>\n<tr><td>Le vocabulaire conditionne la compréhension</td><td>oui</td><td>oui</td><td>–</td><td>–</td><td>L = D × C (Gough et Tunmer)</td></tr>\n<tr><td>Les langues des élèves sont une ressource</td><td>valorisation du multilinguisme</td><td>–</td><td>75 % shimaoré, 55 % français</td><td>–</td><td>L. 312-11</td></tr>\n<tr><td>Faire parler tous les élèves</td><td>–</td><td>petits groupes</td><td>–</td><td>quelques élèves monopolisent</td><td>ateliers en groupes restreints</td></tr>\n</table>\n<p><strong>3. Problématique</strong> : « Comment faire de l’oral un objet d’enseignement structuré qui réduise les inégalités langagières, dans des classes où le français est pour beaucoup d’élèves la langue de l’école ? »</p>\n<p><strong>Plan détaillé</strong></p>\n<ul>\n<li><strong>I. L’oral, fondement des apprentissages</strong> : priorité des programmes (doc. 1) ; lien vocabulaire-compréhension (doc. 2) ; enjeu d’égalité, accentué à Mayotte (doc. 3).</li>\n<li><strong>II. Un enseignement qui ne va pas de soi</strong> : parler en classe ne suffit pas à apprendre à parler (doc. 4 : les « petits parleurs » se taisent) ; nécessité d’objectifs lexicaux et syntaxiques précis (doc. 2) ; prise en compte des langues familiales (doc. 1 et 3).</li>\n<li><strong>III. Des leviers pour enseigner l’oral</strong> : groupes restreints et ateliers dirigés ; mots cibles, catégorisation, réemploi (doc. 2) ; appui sur les langues des élèves (imagiers bilingues) ; évaluation par observation ; continuité maternelle-CP.</li>\n</ul>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-p1-ecrit-definitions",
+   "num": 2,
+   "domaine": "ecrit",
+   "titre": "Programmation, progression, séquence, séance",
+   "theme": "Définitions précises et différences entre programme, progression, programmation, séquence et séance, avec exemples",
+   "revision": true,
+   "duree": 1800,
+   "total": 10,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>Le rapport de jury 2025 de Mayotte relève « une grande confusion entre programmation et progression ». Ces termes doivent être <strong>définis avec précision</strong> et employés à bon escient, à l’écrit comme à l’oral.</p>\n<table class=\"tab\">\n<tr><th>Terme</th><th>Définition</th><th>Question à laquelle il répond</th></tr>\n<tr><td><strong>Programme</strong></td><td>texte officiel national (publié au Bulletin officiel) qui fixe ce que les élèves doivent apprendre, avec des objectifs et des attendus par année ou par cycle</td><td>Quoi enseigner ?</td></tr>\n<tr><td><strong>Progression</strong></td><td>ordre logique des apprentissages, du plus simple au plus complexe, justifié par la didactique de la discipline</td><td>Dans quel ordre et pourquoi ?</td></tr>\n<tr><td><strong>Programmation</strong></td><td>répartition dans le temps (cycle, année, périodes, semaines) des contenus à enseigner ; elle met en œuvre une progression dans un calendrier</td><td>Quand ?</td></tr>\n<tr><td><strong>Séquence</strong></td><td>ensemble organisé de séances (souvent 4 à 8, sur 2 à 4 semaines) visant un même objectif d’apprentissage, avec une évaluation</td><td>Comment atteindre cet objectif ?</td></tr>\n<tr><td><strong>Séance</strong></td><td>unité d’enseignement de 20 à 60 minutes, avec un objectif spécifique, des phases, des supports, une trace</td><td>Que faire aujourd’hui, et comment ?</td></tr>\n</table>\n<figure class=\"fig\"><svg viewBox=\"0 0 360 150\" role=\"img\" aria-label=\"Emboîtement : la programmation de cycle contient la programmation annuelle, qui contient des séquences, qui contiennent des séances\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"5\" y=\"5\" width=\"350\" height=\"140\" class=\"stroke\" fill=\"none\"/><text x=\"12\" y=\"22\">Programmation de cycle (3 ans)</text>\n<rect x=\"20\" y=\"30\" width=\"320\" height=\"108\" class=\"stroke shade\"/><text x=\"28\" y=\"46\">Programmation annuelle (5 périodes)</text>\n<rect x=\"35\" y=\"55\" width=\"140\" height=\"75\" class=\"stroke c-blue\"/><text x=\"42\" y=\"71\">Séquence 1</text>\n<rect x=\"45\" y=\"80\" width=\"38\" height=\"40\" class=\"stroke c-yellow\"/><text x=\"50\" y=\"104\">S1</text>\n<rect x=\"88\" y=\"80\" width=\"38\" height=\"40\" class=\"stroke c-yellow\"/><text x=\"93\" y=\"104\">S2</text>\n<rect x=\"131\" y=\"80\" width=\"38\" height=\"40\" class=\"stroke c-yellow\"/><text x=\"136\" y=\"104\">S3</text>\n<rect x=\"190\" y=\"55\" width=\"140\" height=\"75\" class=\"stroke c-blue\"/><text x=\"197\" y=\"71\">Séquence 2</text>\n</svg><figcaption>Les séances (S) composent une séquence ; les séquences s’inscrivent dans une programmation. La progression, elle, est l’ordre logique qui traverse l’ensemble.</figcaption></figure>\n<h4>1. Progression et programmation : l’exemple du code au CP</h4>\n<ul>\n<li><strong>Progression</strong> : on étudie d’abord des graphèmes simples et fréquents, des consonnes que l’on peut prolonger ([f], [l], [m], [r], [s]) avant les occlusives ([p], [t]), des syllabes CV avant CVC, puis les graphèmes complexes (ou, on, an…). C’est un ordre <em>justifié</em>.</li>\n<li><strong>Programmation</strong> : « période 1 : a, i, o, u, é, l, r, m, s, f… » ; « 12 à 15 CGP en fin de période 1, 25 à 30 en milieu d’année » (programme de 2024). C’est un <em>calendrier</em>.</li>\n</ul>\n<p>Deux classes peuvent suivre la même progression avec des programmations différentes (rythme plus rapide ou plus lent), mais une programmation sans progression réfléchie n’est qu’une liste.</p>\n\n<h4>2. Les différents niveaux de programmation</h4>\n<ul>\n<li><strong>De cycle</strong> : décidée collectivement en <strong>conseil de cycle</strong> (cohérence d’une année sur l’autre).</li>\n<li><strong>Annuelle</strong> : par périodes (cinq périodes entre les vacances) ; elle peut être <em>pluridisciplinaire</em> (liens entre français, sciences, EMC…), ce que valorise l’écrit du concours.</li>\n<li><strong>De période</strong> : séquences prévues semaine par semaine.</li>\n</ul>\n<p>Les programmes de français et de mathématiques de 2024 (cycle 2) et 2025 (cycle 3) fixent des <strong>objectifs d’apprentissage par année</strong>, souvent avec des repères par période (« en fin de période 1 », « en milieu d’année », « en fin d’année ») : la programmation doit les respecter.</p>\n\n<h4>3. Les autres outils de l’enseignant</h4>\n<ul>\n<li><strong>Emploi du temps</strong> : organisation hebdomadaire respectant les horaires réglementaires de chaque discipline.</li>\n<li><strong>Cahier journal</strong> : prévision de chaque journée (activités, objectifs, matériel) et bilan.</li>\n<li><strong>Fiche de préparation</strong> (de séquence, de séance) : objectifs, compétences, déroulement, différenciation, évaluation.</li>\n<li><strong>Projet d’école</strong> : axes prioritaires de l’équipe pour plusieurs années, adopté en conseil d’école.</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Programme = quoi (texte officiel). Progression = dans quel ordre et pourquoi (logique didactique). Programmation = quand (calendrier). Séquence = ensemble de séances pour un objectif. Séance = unité de temps avec un objectif spécifique. Programmation de cycle = décision d’équipe.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La programmation répond à la question :</p>",
+       "options": [
+        "Quand enseigner tel contenu ?",
+        "Dans quel ordre logique et pourquoi ?",
+        "Quoi enseigner, au niveau national ?",
+        "Comment conduire la séance du jour ?"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse 1.</strong> L’ordre logique justifié, c’est la progression ; le « quoi » national, c’est le programme.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« Étudier les graphèmes simples avant les graphèmes complexes, car ils sont plus fréquents et plus réguliers » relève :</p>",
+       "options": [
+        "de la progression",
+        "de la programmation",
+        "d’un choix didactique justifié",
+        "de l’emploi du temps"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> C’est un ordre justifié, sans indication de calendrier.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« Période 2 : séquence sur la soustraction posée (semaines 3 à 5) » relève :</p>",
+       "options": [
+        "de la programmation",
+        "de la progression",
+        "du projet d’école",
+        "de la fiche de séance"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse 1.</strong> C’est une inscription dans le calendrier.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une séquence :</p>",
+       "options": [
+        "est un ensemble organisé de séances visant un même objectif",
+        "comprend une évaluation",
+        "se limite à une seule séance",
+        "s’inscrit dans une programmation"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong></p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La programmation de cycle est :</p>",
+       "options": [
+        "décidée par l’IEN seul",
+        "élaborée en conseil de cycle",
+        "un outil de cohérence entre les années du cycle",
+        "facultative et sans lien avec le projet d’école"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Elle est une décision collective de l’équipe.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le programme :</p>",
+       "options": [
+        "est publié au Bulletin officiel",
+        "est un texte national qui s’impose à tous les enseignants",
+        "est rédigé par chaque école",
+        "est la même chose qu’un Bulletin officiel"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> Le BO est la publication qui contient de nombreux textes, dont les programmes : le rapport 2025 reproche aux candidats de ne pas les différencier.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le cahier journal :</p>",
+       "options": [
+        "prévoit le déroulement de chaque journée",
+        "remplace la programmation annuelle",
+        "permet de faire le bilan de ce qui a été réalisé",
+        "est un texte officiel"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong></p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 3,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Un candidat écrit dans sa copie : « Ma progression pour le CE1 : période 1, les nombres jusqu’à 100 ; période 2, l’addition posée ; période 3, les nombres jusqu’à 1 000. J’ai choisi cette programmation parce que les petits nombres sont plus faciles. »</p>\n<p>1. Relève la confusion. 2. Réécris le passage correctement en distinguant progression et programmation. 3. Ajoute une séquence et une séance pour illustrer la différence entre les quatre termes.</p>",
+       "corrige": "<p><strong>1. Confusion.</strong> Le candidat appelle « progression » ce qui est une <strong>programmation</strong> (répartition par périodes) et appelle « programmation » ce qui est la <strong>justification d’une progression</strong> (du plus simple au plus complexe).</p>\n<p><strong>2. Réécriture.</strong> « <em>Progression</em> : j’étudie d’abord les nombres jusqu’à 100, en consolidant les groupements par dizaines, avant l’addition posée, qui repose sur la compréhension des échanges 10 unités = 1 dizaine ; les nombres jusqu’à 1 000 viennent ensuite, car ils généralisent le principe de position à un troisième rang. <em>Programmation</em> : période 1, nombres jusqu’à 100 ; période 2, addition posée ; période 3, nombres jusqu’à 1 000. »</p>\n<p><strong>3. Illustration.</strong> <em>Séquence</em> (période 2, 5 séances) : « Calculer une addition posée avec retenue ». <em>Séance 2</em> (45 min) : objectif « comprendre la retenue comme l’échange de 10 unités contre 1 dizaine » ; phases : rappel (5 min), manipulation avec barres et cubes (15 min), mise en commun et lien avec l’écriture posée (10 min), entraînement guidé (10 min), trace écrite (5 min).</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-p1-ecrit-sequence",
+   "num": 3,
+   "domaine": "ecrit",
+   "titre": "Construire une séquence",
+   "theme": "Objectifs, compétences, architecture de séquence et de séance, évaluation, différenciation, enseignement explicite et gestes professionnels",
+   "revision": true,
+   "duree": 2400,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>La deuxième question de la 2e partie (8 points) demande une <strong>séquence détaillée</strong> : objectifs, compétences, déroulement (activité de l’enseignant et des élèves), modalités d’évaluation, différenciation. Le correcteur vérifie la <strong>cohérence</strong> entre tous ces éléments.</p>\n\n<h4>1. Objectifs et compétences</h4>\n<ul>\n<li><strong>Compétence</strong> : capacité à mobiliser des connaissances et des savoir-faire dans une situation ; elle se réfère au programme et au socle commun (« Chercher, modéliser, représenter, raisonner, calculer, communiquer » en mathématiques).</li>\n<li><strong>Objectif général de la séquence</strong> : ce que l’élève saura faire à la fin (« Résoudre des problèmes de comparaison à l’aide d’un schéma en barres »).</li>\n<li><strong>Objectifs spécifiques de séance</strong> : formulés avec un <strong>verbe d’action observable</strong> (identifier, comparer, produire, placer, justifier) et non « comprendre » ou « savoir » seuls, difficiles à évaluer.</li>\n<li><strong>Critères de réalisation</strong> (ce qu’il faut faire : « je trace deux barres alignées ») et <strong>critères de réussite</strong> (à quoi on voit que c’est réussi : « la réponse est juste et accompagnée d’une phrase »).</li>\n</ul>\n\n<h4>2. Architecture d’une séquence</h4>\n<table class=\"tab\">\n<tr><th>Étape</th><th>But</th></tr>\n<tr><td>Évaluation diagnostique</td><td>connaître les acquis et les représentations des élèves</td></tr>\n<tr><td>Découverte / situation problème</td><td>donner du sens, faire émerger le besoin du nouveau savoir</td></tr>\n<tr><td>Structuration, institutionnalisation</td><td>formuler le savoir, trace écrite</td></tr>\n<tr><td>Entraînement</td><td>automatiser, avec des révisions espacées</td></tr>\n<tr><td>Réinvestissement</td><td>utiliser le savoir dans une autre situation ou discipline</td></tr>\n<tr><td>Évaluation sommative</td><td>faire le bilan des acquis au regard de l’objectif</td></tr>\n</table>\n<p>Les phases d’une séance : rappel ou mise en projet ; recherche (individuelle puis en groupe) ou modélisation ; mise en commun ; institutionnalisation ; entraînement ; bilan (« Qu’avons-nous appris ? »).</p>\n\n<h4>3. L’enseignement explicite</h4>\n<p>Promu par les programmes de 2024-2025 et le référentiel de l’éducation prioritaire, il suit une démarche en trois temps (Barak Rosenshine, <em>Principles of Instruction</em>, 2010 ; Clermont Gauthier, Steve Bissonnette, Mario Richard) :</p>\n<ol>\n<li><strong>Modelage</strong> : l’enseignant montre et dit à voix haute ce qu’il pense en faisant (« je fais »).</li>\n<li><strong>Pratique guidée</strong> : les élèves s’exercent avec l’aide de l’enseignant, qui vérifie la compréhension et donne une rétroaction immédiate (« nous faisons »).</li>\n<li><strong>Pratique autonome</strong> : quand la réussite est assurée (« tu fais seul »), suivie de révisions régulières.</li>\n</ol>\n<p>Ce n’est pas un cours magistral : l’élève est actif, l’enseignant vérifie fréquemment la compréhension de <em>tous</em> les élèves (ardoises, questions ciblées).</p>\n\n<h4>4. L’évaluation</h4>\n<ul>\n<li><strong>Diagnostique</strong> (avant), <strong>formative</strong> (pendant, pour réguler : observation, ardoises, grilles d’autoévaluation), <strong>sommative</strong> (à la fin, bilan) ; au niveau national, les <strong>évaluations Repères</strong> du CP au CM2.</li>\n<li>Évaluation au service des apprentissages : critères connus des élèves, retour rapide, possibilité de progresser. Communication aux familles par le livret scolaire unique (LSU).</li>\n</ul>\n\n<h4>5. La différenciation</h4>\n<p>Différencier, c’est faire varier pour que chacun atteigne le <strong>même objectif</strong> (Halina Przesmycki, <em>La Pédagogie différenciée</em>, 1991) :</p>\n<table class=\"tab\">\n<tr><th>On peut varier…</th><th>Exemples</th></tr>\n<tr><td>les contenus / la tâche</td><td>nombres plus petits, texte plus court, étapes découpées</td></tr>\n<tr><td>les processus / les aides</td><td>matériel de manipulation, affichage référent, tutorat, lecture de l’énoncé par l’adulte</td></tr>\n<tr><td>les structures</td><td>groupes de besoin, binômes, atelier dirigé avec l’enseignant</td></tr>\n<tr><td>les productions</td><td>réponse orale, dessin, schéma, écrit</td></tr>\n</table>\n<p>Gestes professionnels : Dominique Bucheton décrit cinq préoccupations enchâssées de l’enseignant (le « multi-agenda ») : <strong>pilotage</strong> des tâches, <strong>atmosphère</strong>, <strong>tissage</strong> (faire des liens), <strong>étayage</strong>, <strong>objets de savoir</strong>.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Un objectif général, des objectifs de séance observables, des compétences du programme. Diagnostique → découverte → structuration → entraînement → réinvestissement → sommative. Explicite : je fais, nous faisons, tu fais. Différencier la tâche, les aides, les groupes, les productions, pour un même objectif.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels objectifs de séance sont formulés de manière observable ?</p>",
+       "options": [
+        "« Comprendre les fractions »",
+        "« Placer des fractions simples sur une droite graduée »",
+        "« Identifier le sujet du verbe dans une phrase simple »",
+        "« Savoir les nombres »"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> « Comprendre » et « savoir » ne disent pas ce que l’élève fera pour montrer qu’il a appris.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>L’évaluation formative :</p>",
+       "options": [
+        "a lieu en cours d’apprentissage",
+        "sert à réguler l’enseignement et à aider l’élève",
+        "est uniquement notée",
+        "peut prendre la forme d’une autoévaluation avec des critères"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong></p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Les trois temps de l’enseignement explicite sont :</p>",
+       "options": [
+        "modelage",
+        "pratique guidée",
+        "pratique autonome",
+        "découverte libre sans intervention de l’enseignant"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong></p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Différencier, c’est :</p>",
+       "options": [
+        "donner des objectifs différents selon le niveau supposé des élèves",
+        "faire varier les aides, les supports ou les groupes pour atteindre un même objectif",
+        "proposer du matériel de manipulation à certains élèves",
+        "réserver les exercices difficiles aux bons élèves"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> La différenciation ne renonce pas à l’objectif commun.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>L’institutionnalisation :</p>",
+       "options": [
+        "est le moment où le savoir est formulé et reconnu comme savoir de la classe",
+        "donne lieu à une trace écrite",
+        "se fait avant toute activité de recherche",
+        "peut s’appuyer sur les formulations des élèves"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong></p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Selon Dominique Bucheton, le « tissage » désigne :</p>",
+       "options": [
+        "les liens que l’enseignant fait entre la tâche, ce qui a été appris avant et ce qui vient après",
+        "la gestion du bruit dans la classe",
+        "l’aide individuelle apportée à un élève",
+        "l’organisation matérielle des tables"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse 1.</strong> L’aide relève de l’étayage ; le climat, de l’atmosphère ; l’organisation, du pilotage.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une évaluation diagnostique en début de séquence permet :</p>",
+       "options": [
+        "de connaître les acquis et les représentations des élèves",
+        "de constituer des groupes de besoin",
+        "de noter les élèves pour le livret",
+        "d’ajuster la séquence prévue"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong></p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un critère de réussite :</p>",
+       "options": [
+        "dit à quoi on reconnaît que la tâche est réussie",
+        "doit être connu des élèves",
+        "est la même chose que la consigne",
+        "aide à l’autoévaluation"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong></p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 4,
+       "enonce": "<p>Pour une classe de CE1 d’une école de Mamoudzou (REP+), construis une séquence de 5 séances : « Mesurer des longueurs en centimètres et en mètres ». Précise : l’objectif général, les compétences, le déroulement séance par séance (objectif, activités de l’enseignant et des élèves), l’évaluation et la différenciation.</p>",
+       "corrige": "<p><strong>Objectif général</strong> : mesurer et comparer des longueurs en utilisant le centimètre et le mètre et une règle graduée.</p>\n<p><strong>Compétences</strong> (programme de mathématiques du cycle 2) : grandeurs et mesures ; chercher, représenter, raisonner, communiquer. Lien avec le français (lexique : longueur, plus long, règle, graduation) et l’EPS (mesurer des sauts).</p>\n<table class=\"tab\">\n<tr><th>Séance</th><th>Objectif</th><th>Déroulement</th></tr>\n<tr><td>1 (diagnostique)</td><td>Comparer des longueurs directement et indirectement</td><td>Défi : « Quelle bande est la plus longue ? » (bandes non déplaçables) ; recherche en binômes, usage d’une ficelle ; mise en commun des procédures. L’enseignant observe les représentations.</td></tr>\n<tr><td>2</td><td>Mesurer avec une unité et comprendre la nécessité d’une unité commune</td><td>Mesure du tableau avec des empans puis des baguettes identiques ; constat : les empans donnent des résultats différents ; institutionnalisation : « Pour comparer, on utilise la même unité. »</td></tr>\n<tr><td>3</td><td>Utiliser la règle graduée en centimètres</td><td>Modelage : l’enseignant mesure à voix haute (« je place le 0 au bout du segment… ») ; pratique guidée sur des segments ; erreur classique travaillée : partir de 1 ou du bord de la règle.</td></tr>\n<tr><td>4</td><td>Connaître le mètre et la relation 1 m = 100 cm</td><td>Fabrication d’une bande de 1 m avec 10 bandes de 10 cm ; estimation puis mesure d’objets de la classe ; trace écrite.</td></tr>\n<tr><td>5 (sommative et réinvestissement)</td><td>Mesurer et choisir l’unité adaptée</td><td>Évaluation : tracer et mesurer des segments, choisir cm ou m (« la longueur de la cour », « d’un crayon ») ; réinvestissement en EPS (mesurer des sauts en longueur).</td></tr>\n</table>\n<p><strong>Évaluation</strong> : diagnostique (séance 1, observation), formative (ardoise, grille « je place bien le 0 »), sommative (séance 5, critères : mesure juste à 1 cm près, unité écrite).</p>\n<p><strong>Différenciation</strong> : règles à grosses graduations, segments de longueur entière d’abord ; tutorat entre pairs ; vocabulaire illustré affiché (important pour les élèves qui apprennent en français, langue seconde) ; défi pour les élèves rapides (mesurer une ligne brisée).</p>\n<p><strong>Enseignement explicite</strong> : modelage à la séance 3, pratique guidée puis autonome, rappels courts en début des séances suivantes.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-p1-ecrit-programmes",
+   "num": 4,
+   "domaine": "ecrit",
+   "titre": "Les programmes en vigueur en 2026-2027",
+   "theme": "Quels programmes s’appliquent à quel niveau en 2026-2027, leurs références au Bulletin officiel et leur calendrier d’entrée en vigueur",
+   "revision": true,
+   "duree": 1800,
+   "total": 10,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>Citer un programme <strong>abrogé</strong> ou se tromper de niveau d’application fait mauvais effet dans une copie. En 2026-2027, plusieurs programmes coexistent, car les nouveaux textes entrent en vigueur <strong>progressivement</strong>, souvent d’abord au CP et au CM1 (débuts de cycle ou de sous-cycle).</p>\n\n<h4>1. Tableau des programmes en vigueur à la rentrée 2026</h4>\n<table class=\"tab\">\n<tr><th>Discipline</th><th>Texte</th><th>Application</th></tr>\n<tr><td>École maternelle (tous domaines)</td><td>BOEN n° 19 du 7 mai 2026</td><td>PS, MS, GS dès la rentrée 2026 ; six domaines d’apprentissage, auxquels s’ajoute l’éducation à la vie affective et relationnelle</td></tr>\n<tr><td>Français et mathématiques, cycle 2</td><td>BOEN n° 41 du 31 octobre 2024</td><td>CP, CE1, CE2 depuis la rentrée 2025</td></tr>\n<tr><td>Français et mathématiques, cycle 3</td><td>BOEN n° 16 du 17 avril 2025</td><td>CM1 (et 6e) depuis la rentrée 2025 ; CM2 à la rentrée 2026</td></tr>\n<tr><td>Sciences et technologie</td><td>BOEN n° 24 du 11 juin 2026</td><td>CP et CM1 à la rentrée 2026 ; CE1, CE2, CM2 à la rentrée 2027 (remplace progressivement « Questionner le monde » et le programme de sciences et technologie du cycle 3)</td></tr>\n<tr><td>Histoire-géographie et EPS</td><td>BOEN n° 22 du 28 mai 2026</td><td>CP et CM1 à la rentrée 2026 ; CE1, CE2, CM2 à la rentrée 2027</td></tr>\n<tr><td>Langues vivantes</td><td>BOEN n° 12 du 19 mars 2026</td><td>CP et CM1 à la rentrée 2026 ; CE1, CE2, CM2 à la rentrée 2027</td></tr>\n<tr><td>Enseignement moral et civique</td><td>BOEN n° 24 du 13 juin 2024</td><td>entrée progressive : CP et CM1 (2024), CE1 et CM2 (2025), CE2 (2026) : tous les niveaux en 2026-2027</td></tr>\n<tr><td>Éducation à la vie affective et relationnelle</td><td>BOEN n° 6 du 6 février 2025</td><td>tous les niveaux depuis la rentrée 2025</td></tr>\n<tr><td>Arts plastiques, éducation musicale ; autres disciplines non encore réécrites</td><td>programmes des cycles 2 et 3 (version consolidée, BOEN n° 31 du 30 juillet 2020)</td><td>restent en vigueur tant qu’un nouveau programme ne les remplace pas</td></tr>\n</table>\n\n<h4>2. Conséquence : qui applique quoi en 2026-2027 ?</h4>\n<ul>\n<li><strong>CP et CM1</strong> : presque tout est nouveau (français et mathématiques 2024/2025, sciences, histoire-géographie, EPS et langues vivantes 2026, EMC 2024).</li>\n<li><strong>CE1 et CE2</strong> : français et mathématiques 2024 ; « Questionner le monde », EPS et langues vivantes selon les programmes de 2020 jusqu’à la rentrée 2027 ; EMC 2024.</li>\n<li><strong>CM2</strong> : français et mathématiques 2025 (nouveauté de la rentrée 2026) ; sciences, histoire-géographie, EPS et langues vivantes de 2020 jusqu’à la rentrée 2027 ; EMC 2024.</li>\n</ul>\n\n<h4>3. Les textes qui accompagnent les programmes</h4>\n<ul>\n<li><strong>Socle commun de connaissances, de compétences et de culture</strong> : cinq domaines (langages pour penser et communiquer ; méthodes et outils pour apprendre ; formation de la personne et du citoyen ; systèmes naturels et systèmes techniques ; représentations du monde et activité humaine).</li>\n<li><strong>Circulaire de rentrée 2026</strong> (BOEN n° 19 du 7 mai 2026) : « Dans le premier degré, l’acquisition des automatismes en mathématiques et la résolution de problèmes sont la priorité absolue. »</li>\n<li><strong>Guides fondamentaux</strong> (Éduscol), <strong>évaluations nationales</strong> Repères du CP au CM2, ressources d’accompagnement des programmes.</li>\n</ul>\n<p>Méthode pour citer : « programme de mathématiques du cycle 2 (BOEN n° 41 du 31 octobre 2024) » plutôt que « les programmes de 2024 » ; un BO est une <em>publication</em>, le programme est le <em>texte</em> publié dedans.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Maternelle : BO 19 (2026). Français-maths : BO 41 (2024) pour le cycle 2, BO 16 (2025) pour le cycle 3, CM2 à la rentrée 2026. Sciences (BO 24, 2026), histoire-géographie et EPS (BO 22, 2026), langues vivantes (BO 12, 2026) : CP et CM1 en 2026, autres classes en 2027. EMC (BO 24, 2024) : tous niveaux en 2026-2027. EVAR (BO 6, 2025).</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>En 2026-2027, le programme de mathématiques d’une classe de CE2 est publié au :</p>",
+       "options": [
+        "BOEN n° 41 du 31 octobre 2024",
+        "BOEN n° 16 du 17 avril 2025",
+        "BOEN n° 31 du 30 juillet 2020",
+        "BOEN n° 24 du 11 juin 2026"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse 1.</strong> Le CE2 appartient au cycle 2 ; le BO 16 de 2025 concerne le cycle 3.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>À la rentrée 2026, les élèves de CM2 :</p>",
+       "options": [
+        "appliquent pour la première fois le programme de français et de mathématiques de 2025",
+        "appliquent le nouveau programme de sciences de 2026",
+        "gardent le programme de sciences et technologie de 2020 jusqu’à la rentrée 2027",
+        "appliquent le programme d’EMC de 2024"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 3, 4.</strong> Le programme de sciences de 2026 s’applique au CP et au CM1 en 2026, au CM2 en 2027.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le nouveau programme de l’école maternelle (BOEN n° 19 du 7 mai 2026) :</p>",
+       "options": [
+        "s’applique en PS, MS et GS dès la rentrée 2026",
+        "comporte six domaines d’apprentissage",
+        "ne concerne que la grande section",
+        "comprend aussi l’éducation à la vie affective et relationnelle"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong></p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels nouveaux programmes publiés en 2026 s’appliquent au CP et au CM1 dès la rentrée 2026 ?</p>",
+       "options": [
+        "sciences et technologie",
+        "histoire-géographie",
+        "EPS",
+        "langues vivantes"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Toutes les réponses.</strong> BOEN n° 24 (sciences), n° 22 (histoire-géographie, EPS), n° 12 (langues vivantes).</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le programme d’EMC publié au BOEN n° 24 du 13 juin 2024 :</p>",
+       "options": [
+        "s’applique à tous les niveaux de l’école élémentaire en 2026-2027",
+        "est entré en vigueur progressivement depuis 2024",
+        "ne concerne que le cycle 3",
+        "a été abrogé en 2026"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> CP et CM1 en 2024, CE1 et CM2 en 2025, CE2 en 2026.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« Le Bulletin officiel » et « le programme » :</p>",
+       "options": [
+        "sont deux choses différentes : le BO est la publication, le programme un texte qui y est publié",
+        "sont synonymes",
+        "doivent être cités ensemble (« programme de … publié au BOEN n° … du … »)",
+        "ne sont pas utiles dans une copie"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> Le rapport de Mayotte 2025 note que des candidats « ne différencient pas les B.O des programmes scolaires ».</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Selon la circulaire de rentrée 2026, la priorité absolue du premier degré en mathématiques est :</p>",
+       "options": [
+        "l’acquisition des automatismes",
+        "la résolution de problèmes",
+        "la géométrie dans l’espace",
+        "le calcul à la calculatrice"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong></p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 3,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Tu es nommé(e) en 2026-2027 dans une classe à double niveau <strong>CE2-CM1</strong> à Chirongui. Pour chacune des disciplines suivantes, indique le programme applicable à chaque niveau : français, mathématiques, sciences, histoire-géographie (ou « Questionner le monde »), EPS, langues vivantes, EMC. Quelle difficulté cela pose-t-il pour ta programmation, et comment la résoudre ?</p>",
+       "corrige": "<table class=\"tab\">\n<tr><th>Discipline</th><th>CE2</th><th>CM1</th></tr>\n<tr><td>Français</td><td>cycle 2, BOEN n° 41 du 31/10/2024</td><td>cycle 3, BOEN n° 16 du 17/04/2025</td></tr>\n<tr><td>Mathématiques</td><td>cycle 2, BOEN n° 41 du 31/10/2024</td><td>cycle 3, BOEN n° 16 du 17/04/2025</td></tr>\n<tr><td>Sciences</td><td>« Questionner le monde » (programme de 2020) jusqu’à la rentrée 2027</td><td>nouveau programme, BOEN n° 24 du 11/06/2026</td></tr>\n<tr><td>Histoire-géographie</td><td>« Questionner le monde » (espace et temps, 2020)</td><td>nouveau programme, BOEN n° 22 du 28/05/2026</td></tr>\n<tr><td>EPS</td><td>programme de 2020</td><td>nouveau programme, BOEN n° 22 du 28/05/2026</td></tr>\n<tr><td>Langues vivantes</td><td>programme de 2020</td><td>nouveau programme, BOEN n° 12 du 19/03/2026</td></tr>\n<tr><td>EMC</td><td colspan=\"2\">BOEN n° 24 du 13/06/2024 (CE2 : première année d’application en 2026-2027)</td></tr>\n</table>\n<p><strong>Difficulté</strong> : deux cycles différents et, dans plusieurs disciplines, un ancien et un nouveau programme. <strong>Réponses</strong> : programmer séparément français et mathématiques (objectifs par année très précis), avec des temps communs (rituels de calcul mental, lecture offerte, projets d’écriture) ; en sciences, histoire-géographie et EMC, choisir des thèmes compatibles (par exemple l’eau et le vivant autour du lagon) et différencier les attendus ; s’appuyer sur la programmation de cycle décidée en équipe et sur le conseil école-collège pour le CM1.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-p1-oral-dossier",
+   "num": 5,
+   "domaine": "oral",
+   "titre": "Construire le dossier et la fiche descriptive",
+   "theme": "Règles officielles du dossier de 10 pages, choix du thème, structure, analyse réflexive, fiche descriptive et préparation de l’oral",
+   "revision": true,
+   "duree": 2400,
+   "total": 11,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>L’oral d’admission du premier concours interne s’appuie sur un <strong>dossier personnel</strong> que tu rédiges à l’avance à partir de ta pratique d’instituteur. Déroulement : <strong>15 minutes de préparation</strong>, <strong>10 minutes d’exposé</strong> sur les questions ou thèmes proposés par le jury à partir du dossier, <strong>10 minutes d’entretien</strong>. L’épreuve permet de démontrer « son aptitude à articuler ses connaissances, sa réflexion et son expérience professionnelle » (arrêté du 24 décembre 1992 modifié).</p>\n\n<h4>1. Les règles officielles (page de garde de l’académie de Mayotte)</h4>\n<div class=\"doc\"><p class=\"doc-title\">Extrait</p>\n<p>« Le dossier constitue un ensemble construit et ordonné de documents élaborés par le candidat et faisant état d’observations, de pratiques, d’analyses de pratiques établies lors de ses activités professionnelles. Il est destiné à servir de support aux questions proposées par le jury pour l’exposé. »</p>\n<p class=\"doc-src\">Page de garde « Dossier épreuve orale d’admission », académie de Mayotte.</p></div>\n<table class=\"tab\">\n<tr><th>Élément</th><th>Règle</th></tr>\n<tr><td>Longueur</td><td>10 pages au maximum, <strong>sans annexes</strong></td></tr>\n<tr><td>Sommaire</td><td>en tête du dossier</td></tr>\n<tr><td>Mise en page</td><td>pagination obligatoire ; Arial 11 ; double interligne ; format A4 ; marges gauche et droite de 2,5 cm ; en-tête et pied de page de 1,25 cm</td></tr>\n<tr><td>Fiche descriptive</td><td>une page, en double interligne, qui présente « successivement l’économie et le contenu » du dossier</td></tr>\n<tr><td>Délai</td><td>« Tout dossier transmis après la date limite entraînera l’élimination du candidat. »</td></tr>\n</table>\n\n<h4>2. Choisir le thème</h4>\n<ul>\n<li>Une expérience <strong>réelle et récente</strong> que tu as conduite et que tu peux analyser.</li>\n<li>Un <strong>problème professionnel</strong> (un constat, des besoins d’élèves) plutôt qu’un projet simplement raconté.</li>\n<li>Ancré dans les <strong>programmes en vigueur</strong> et les priorités (lecture, écriture, vocabulaire, automatismes, résolution de problèmes).</li>\n<li>Qui ouvre à des questions variées : différenciation, évaluation, familles, équipe, valeurs de la République, éducation prioritaire, plurilinguisme.</li>\n<li>Un titre qui annonce une question : « Réviser ses écrits au CM1 : de la correction à l’amélioration ? »</li>\n</ul>\n\n<h4>3. Structure type (10 pages)</h4>\n<table class=\"tab\">\n<tr><th>Partie</th><th>Contenu</th><th>Pages</th></tr>\n<tr><td>Introduction</td><td>contexte (école, classe, élèves), constat, question professionnelle, plan</td><td>1</td></tr>\n<tr><td>Cadre de référence</td><td>textes officiels précis, apports de la recherche maîtrisés</td><td>1,5 à 2</td></tr>\n<tr><td>Mise en œuvre</td><td>programmation, séquence, séances, traces d’élèves intégrées au texte</td><td>3 à 3,5</td></tr>\n<tr><td>Analyse réflexive</td><td>effets observés, difficultés, écarts entre prévu et réalisé, ajustements</td><td>2 à 2,5</td></tr>\n<tr><td>Conclusion et perspectives</td><td>ce que l’expérience a changé, prolongements</td><td>0,5 à 1</td></tr>\n<tr><td>Références</td><td>textes et ouvrages cités</td><td>0,5</td></tr>\n</table>\n\n<h4>4. L’analyse réflexive : le cœur du dossier</h4>\n<p>Le <strong>compte rendu</strong> dit ce qui a été fait ; l’<strong>analyse</strong> dit <em>pourquoi</em>, <em>avec quels effets</em> et <em>ce qu’on en tire</em>. Elle s’appuie sur des indices (productions, mesures, observations), les relie à des références, envisage plusieurs hypothèses, reconnaît les limites et propose des ajustements. À éviter : l’autosatisfaction, le jargon non maîtrisé, les références plaquées, les jugements sur les familles, les photos d’élèves identifiables et les noms réels (anonymiser).</p>\n\n<h4>5. Préparer l’oral</h4>\n<ul>\n<li>Connaître parfaitement son dossier et les textes cités ; pouvoir justifier chaque choix.</li>\n<li>S’entraîner à produire, en 15 minutes, un exposé structuré de 10 minutes sur une question imposée (introduction, problématique, deux parties, conclusion).</li>\n<li>Anticiper les élargissements : autre cycle, élèves à besoins éducatifs particuliers, évaluation, relations avec les familles, laïcité.</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>10 pages, sans annexes, sommaire en tête, paginé, Arial 11, double interligne. Fiche descriptive d’une page : économie + contenu. Un problème professionnel réel, un cadre de référence exact, une mise en œuvre précise, une analyse réflexive honnête. Délai impératif.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le dossier de l’oral du premier concours interne :</p>",
+       "options": [
+        "compte 10 pages au maximum",
+        "peut comporter des annexes illimitées",
+        "commence par un sommaire",
+        "est paginé"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 3, 4.</strong> Il est « sans annexes » : les traces d’élèves doivent être intégrées dans les 10 pages.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La fiche descriptive :</p>",
+       "options": [
+        "tient sur une page",
+        "présente « successivement l’économie et le contenu » du dossier",
+        "reprend mot pour mot l’introduction",
+        "est la première chose que lit le jury"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong> Elle ne doit ni recopier l’introduction, ni annoncer des éléments absents du dossier.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le déroulement de l’épreuve est :</p>",
+       "options": [
+        "15 min de préparation, 10 min d’exposé, 10 min d’entretien",
+        "1 h de préparation, 10 min d’exposé, 20 min d’entretien",
+        "une présentation libre du dossier sans question du jury",
+        "un exposé sur des questions ou thèmes proposés par le jury à partir du dossier"
+       ],
+       "bonnes": [
+        0,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1 et 4.</strong> Le format « 1 h, 10 min, 20 min » est celui du second concours interne.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels choix de mise en page sont conformes ?</p>",
+       "options": [
+        "Arial 11, double interligne",
+        "police 9 pour tout faire tenir",
+        "marges gauche et droite de 2,5 cm",
+        "interligne simple"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> Réduire la police ou l’interligne est une erreur fréquente et sanctionnable.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Qu’est-ce qui distingue une analyse réflexive d’un compte rendu ?</p>",
+       "options": [
+        "elle explique pourquoi et avec quels effets",
+        "elle s’appuie sur des indices (productions, mesures)",
+        "elle reconnaît les limites et propose des ajustements",
+        "elle décrit chronologiquement les activités"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> La description chronologique est le propre du compte rendu.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel titre de dossier est le plus pertinent ?</p>",
+       "options": [
+        "« La lecture »",
+        "« Notre sortie à la plage »",
+        "« Faire parler les petits parleurs en moyenne section : ateliers de langage et langues des familles »",
+        "« Mon année scolaire »"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<p><strong>Réponse 3.</strong> Il annonce un problème professionnel, un niveau, une démarche ; les autres sont trop larges ou anecdotiques.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un dossier envoyé après la date limite :</p>",
+       "options": [
+        "est accepté avec une pénalité",
+        "entraîne l’élimination du candidat",
+        "peut être complété le jour de l’oral",
+        "est remplacé par un entretien libre"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse 2.</strong> Règle rappelée sur la page de garde.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Transforme ce paragraphe de compte rendu en paragraphe d’analyse réflexive : « En période 2, j’ai fait faire à mes CE1 de la lecture à voix haute tous les jours. Les élèves ont beaucoup aimé et ont fait de gros progrès. C’était une très bonne expérience. »</p>",
+       "corrige": "<p><strong>Problèmes</strong> : aucune donnée, aucune référence, un jugement autosatisfait (« très bonne expérience »), pas d’analyse des limites.</p>\n<p><strong>Version analytique possible</strong> : « En période 2, j’ai mis en place quinze minutes quotidiennes de lectures répétées en binômes, pour répondre au constat des évaluations de début de CE1 (sept élèves sur douze en difficulté en lecture à voix haute). Le programme de 2024 fixe en effet un objectif de 70 mots par minute en fin de CE1. Entre octobre et janvier, dix élèves ont progressé d’au moins 15 mots correctement lus par minute ; deux élèves n’ont presque pas progressé et répondent encore mal aux questions de compréhension. J’en déduis que le dispositif a surtout entraîné le décodage et que ces deux élèves ont besoin d’une reprise des correspondances complexes, que j’ai engagée en APC. Je dois aussi mieux articuler fluence et compréhension : j’ai ajouté, après chaque lecture, un rappel de l’histoire par l’élève. Cet ajustement a un coût en temps que je n’ai pas encore résolu. »</p>\n<p>Ce paragraphe contient : un constat chiffré, une référence exacte, des résultats nuancés, une hypothèse, un ajustement, une limite reconnue.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Rédige la fiche descriptive (plan et principales phrases, environ 250 mots) d’un dossier intitulé « Enseigner le schéma en barres au CE2 : un outil pour comprendre les problèmes ? », conduit dans une école de Sada.</p>",
+       "corrige": "<p><strong>En-tête</strong> : titre du dossier ; poste : instituteur titulaire, classe de CE2 (24 élèves), école élémentaire de Sada, éducation prioritaire ; année scolaire de l’expérience.</p>\n<p><strong>Économie du dossier</strong> : « Le dossier comprend cinq parties. L’introduction présente la classe et le constat de départ : en septembre, la moitié des élèves choisissait l’opération à partir des mots de l’énoncé. La première partie expose le cadre de référence : le programme de mathématiques du cycle 2 (BOEN n° 41 du 31 octobre 2024), qui demande un enseignement explicite de la résolution de problèmes en quatre phases, et le guide <em>La résolution de problèmes mathématiques au cours moyen</em>. La deuxième partie décrit la séquence de six séances sur les problèmes de comparaison et les traces d’élèves. La troisième analyse les effets observés et les limites. La conclusion ouvre sur le travail d’équipe au cycle 2. »</p>\n<p><strong>Contenu et idée force</strong> : « Le schéma en barres a aidé la majorité des élèves à comprendre la structure des problèmes, à condition d’être enseigné explicitement et de ne pas devenir une exigence systématique. Les élèves qui apprennent en français, langue seconde, en ont particulièrement bénéficié, car le schéma soutient la reformulation de l’histoire du problème. »</p>\n<p><strong>Ouverture</strong> : « Ce travail a conduit l’équipe à harmoniser les représentations utilisées du CE1 au CM2. »</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-p1-oral-prioritaire",
+   "num": 6,
+   "domaine": "oral",
+   "titre": "Éducation prioritaire et politique de la ville",
+   "theme": "Épreuve facultative : histoire et principes de l’éducation prioritaire, moyens, politique de la ville (QPV, PRE, cités éducatives) et Mayotte",
+   "revision": true,
+   "duree": 2100,
+   "total": 10,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>L’<strong>épreuve orale facultative</strong> du premier concours interne dure 10 minutes. Elle porte sur « le développement social urbain et la politique des zones d’éducation prioritaires » ; seuls les points au-dessus de la moyenne sont pris en compte pour l’admission. Le jury attend des <strong>connaissances précises</strong> et la <strong>valorisation d’une expérience professionnelle effective</strong>. À Mayotte, où toutes les écoles sont en éducation prioritaire, c’est une occasion de valoriser ton vécu.</p>\n\n<h4>1. L’éducation prioritaire : principe et histoire</h4>\n<ul>\n<li><strong>Principe</strong> : donner plus à ceux qui ont moins. Le Code de l’éducation (art. L. 111-1) prévoit que la répartition des moyens « tient compte des différences de situation, notamment en matière économique, territoriale et sociale ».</li>\n<li><strong>1981</strong> : création des zones d’éducation prioritaires (ZEP) par Alain Savary.</li>\n<li><strong>2014-2015</strong> : refondation (circulaire n° 2014-077 du 4 juin 2014) : réseaux <strong>REP</strong> et <strong>REP+</strong> constitués d’un collège et des écoles de son secteur ; <strong>référentiel pour l’éducation prioritaire</strong> (enseignement explicite des compétences, travail en équipe, coopération avec les parents, suivi des élèves, formation des personnels).</li>\n<li><strong>Objectif</strong> : réduire les écarts de réussite entre les élèves de l’éducation prioritaire et les autres.</li>\n</ul>\n\n<h4>2. Les moyens</h4>\n<table class=\"tab\">\n<tr><th>Mesure</th><th>Contenu</th></tr>\n<tr><td>Dédoublement</td><td>classes de GS, CP et CE1 dédoublées en REP et REP+ (engagé en 2017 au CP en REP+, puis étendu)</td></tr>\n<tr><td>Temps de concertation et de formation</td><td>en REP+, 18 demi-journées par an libérées pour le travail en équipe et la formation dans le premier degré</td></tr>\n<tr><td>Pilotage</td><td>IEN, principal du collège, coordonnateur de réseau ; projet de réseau</td></tr>\n<tr><td>Indemnités</td><td>indemnités spécifiques REP et REP+</td></tr>\n<tr><td>Petits-déjeuners gratuits</td><td>depuis 2019 dans les territoires prioritaires</td></tr>\n</table>\n<p>Les effets du dédoublement sont réels mais plus modestes qu’espéré : ils dépendent des pratiques pédagogiques. Réponds avec nuance.</p>\n\n<h4>3. La politique de la ville et l’école</h4>\n<ul>\n<li><strong>Loi du 21 février 2014</strong> de programmation pour la ville et la cohésion urbaine : <strong>quartiers prioritaires de la politique de la ville (QPV)</strong>, définis par un critère de revenu ; <strong>contrats de ville</strong> associant État, collectivités et partenaires, avec un volet éducation.</li>\n<li><strong>Programme de réussite éducative (PRE)</strong> (loi de programmation pour la cohésion sociale du 18 janvier 2005) : accompagnement individualisé d’enfants de 2 à 16 ans en fragilité, par une équipe pluridisciplinaire, avec l’accord des familles.</li>\n<li><strong>Cités éducatives</strong> (label depuis 2019) : alliance des acteurs éducatifs d’un territoire (école, collège, commune, préfecture, associations, familles). À Mayotte : <strong>Kawéni</strong> (Mamoudzou, 2020), <strong>Dzoumogné</strong> (Bandraboua, 2021), <strong>Petite-Terre</strong> (2022).</li>\n<li>Autres leviers : projets éducatifs territoriaux (PEDT), accompagnement à la scolarité, adultes-relais et médiateurs, dispositif « Ouvrir l’école aux parents pour la réussite des enfants », « mallette des parents ».</li>\n</ul>\n\n<h4>4. Mayotte : repères vérifiés</h4>\n<ul>\n<li>100 % des écoles et collèges de l’académie sont classés en éducation prioritaire : 115 écoles en REP, 73 en REP+ (réponse ministérielle, JO du 21 novembre 2023).</li>\n<li>57 % des enfants des 13 communes contrôlées par la chambre régionale des comptes sont scolarisés en rotation (rapport publié le 11 juin 2025) : le dédoublement est difficile faute de salles.</li>\n<li>Selon une étude du rectorat et de l’ARS de 2019, un enfant sur cinq ne recevait qu’un seul repas par jour (cité par Human Rights Watch, 2025) : l’alimentation est un enjeu éducatif.</li>\n</ul>\n\n<h4>5. Structurer une réponse de 10 minutes</h4>\n<p><strong>Définir</strong> (sigle, principe) → <strong>situer</strong> (texte, date) → <strong>illustrer</strong> par ton expérience (ce que tu as fait, ce que cela a apporté aux élèves, les limites) → <strong>ouvrir</strong> (enjeu à Mayotte).</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>ZEP 1981 ; REP et REP+ depuis la refondation de 2014 ; référentiel ; dédoublement GS-CP-CE1 ; 18 demi-journées en REP+. Politique de la ville : loi de 2014, QPV, contrats de ville, PRE (2005), cités éducatives (2019 ; Kawéni, Dzoumogné, Petite-Terre). Mayotte : 100 % en éducation prioritaire. Toujours valoriser une expérience réelle.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Les zones d’éducation prioritaires (ZEP) ont été créées :</p>",
+       "options": [
+        "en 1981",
+        "par Alain Savary",
+        "en 2014",
+        "par la loi de 2019"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> 2014 est la date de la refondation (REP, REP+).</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un réseau REP ou REP+ est constitué :</p>",
+       "options": [
+        "d’un collège et des écoles de son secteur",
+        "d’une seule école",
+        "d’un lycée et de ses collèges",
+        "autour d’un projet de réseau"
+       ],
+       "bonnes": [
+        0,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1 et 4.</strong></p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles classes sont dédoublées en éducation prioritaire ?</p>",
+       "options": [
+        "GS",
+        "CP",
+        "CE1",
+        "CM2"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> Le dédoublement a commencé au CP en REP+ en 2017.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>À Mayotte :</p>",
+       "options": [
+        "toutes les écoles publiques sont en éducation prioritaire",
+        "on compte 115 écoles en REP et 73 en REP+ (2023)",
+        "aucune école n’est en REP+",
+        "il existe trois cités éducatives : Kawéni, Dzoumogné et Petite-Terre"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong></p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le programme de réussite éducative (PRE) :</p>",
+       "options": [
+        "a été créé en 2005",
+        "accompagne individuellement des enfants de 2 à 16 ans en fragilité",
+        "se met en place avec l’accord des familles",
+        "remplace le RASED"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> Il relève de la politique de la ville et s’articule avec l’école sans remplacer ses dispositifs.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Les quartiers prioritaires de la politique de la ville (QPV) :</p>",
+       "options": [
+        "sont définis depuis la loi du 21 février 2014",
+        "reposent sur un critère de revenu des habitants",
+        "sont identiques aux réseaux REP",
+        "font l’objet de contrats de ville"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong> Les deux cartes (QPV et éducation prioritaire) se recoupent en partie mais sont distinctes.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le référentiel pour l’éducation prioritaire insiste sur :</p>",
+       "options": [
+        "l’enseignement explicite des compétences",
+        "le travail en équipe",
+        "la coopération avec les parents",
+        "la suppression des évaluations"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong></p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 3,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Question du jury : « Vous enseignez en REP+ à Mayotte. Montrez, à partir de votre expérience, comment l’école peut travailler avec les partenaires de la politique de la ville pour la réussite des élèves. » Construis une réponse de 10 minutes (plan et contenus), en l’illustrant par une action que tu pourrais avoir menée.</p>",
+       "corrige": "<p><strong>Introduction</strong> : l’école ne peut pas, seule, compenser les inégalités sociales ; la politique de la ville et l’éducation prioritaire poursuivent un même but : l’égalité des chances (L. 111-1). À Mayotte, toutes les écoles sont en éducation prioritaire et plusieurs quartiers sont des QPV. Problématique : comment l’école peut-elle s’appuyer sur ses partenaires sans renoncer à sa mission propre, faire apprendre ?</p>\n<p><strong>I. Un cadre qui organise le partenariat</strong> : réseaux REP+ et référentiel (coopération avec les parents, travail en équipe) ; loi de 2014 (QPV, contrats de ville) ; PRE (2005) ; cités éducatives (Kawéni, Dzoumogné, Petite-Terre).</p>\n<p><strong>II. Une action vécue (exemple)</strong> : « Dans ma classe de CE1 à Kawéni, en lien avec la cité éducative et une association de quartier, nous avons organisé un club de lecture partagé après la classe (les élèves étant en rotation le matin) : lecture d’albums, en français et parfois en shimaoré par des parents volontaires. J’ai fixé les objectifs (vocabulaire et compréhension), l’association assurait l’accueil. Pour un élève très absent, une orientation vers le PRE a permis, avec l’accord de la famille, un accompagnement de la famille et un retour plus régulier en classe. » Effets : participation régulière de 15 élèves, progrès en vocabulaire observés dans les évaluations de mi-année ; limites : fragilité du bénévolat, difficulté à toucher les familles les plus éloignées.</p>\n<p><strong>III. Conditions et limites</strong> : clarifier les rôles (l’enseignant garde la responsabilité pédagogique) ; respect de la laïcité et de la discrétion professionnelle dans le partage d’informations ; évaluer les effets ; associer les parents, membres de la communauté éducative (L. 111-4).</p>\n<p><strong>Conclusion</strong> : le partenariat prolonge l’école sans la remplacer ; ouverture : la fin programmée des rotations (loi du 11 août 2025, objectif 2031) changera l’organisation du temps périscolaire.</p>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

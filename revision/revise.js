@@ -28,8 +28,8 @@
     mayotte: {
       data: window.BELAMIS_MAYOTTE,
       eyebrow: "2nd concours interne · spécifique Mayotte",
-      title: "Deux écrits sur 40, <em>trois oraux</em>.",
-      intro: "Sujets construits sur le modèle des annales 2019-2025 de l'académie de Mayotte : français (compréhension orale, synthèse, langue et productions d'élèves) et maths-sciences (problème complexe, exercices, didactique), 4 heures chacun, une note de 10 sur 40 ou moins étant éliminatoire. Les oraux d'admission (étude de cas et mise en situation professionnelle) se préparent en 1 heure. Commence par le guide tiré des rapports de jury.",
+      title: "Deux concours internes, <em>un seul cap</em>.",
+      intro: "Sujets construits sur le modèle des annales 2019-2025 de l'académie de Mayotte. Le 2nd concours interne comporte deux écrits de 4 heures sur 40 (français ; maths-sciences), éliminatoires à 10 ou moins, puis des oraux préparés en 1 heure. Le 1er concours interne, réservé aux instituteurs titulaires, comporte un écrit de 4 heures (analyse d'un dossier, programmation, séquence) et un oral sur dossier personnel. Filtre par concours, et commence par le guide tiré des textes officiels et des rapports de jury.",
     },
   };
 
@@ -228,6 +228,9 @@
 
   function metaMayotte(s) {
     const h = (s.duree || 7200) / 3600;
+    if (s.domaine === "p1-ecrit") return `1er concours interne · durée : 4 heures · noté sur ${sujetTotal(s)} · deux parties de quatre pages au plus chacune.`;
+    if (s.domaine === "p1-oral") return `1er concours interne · noté sur ${sujetTotal(s)} · 15 minutes de préparation, exposé de 10 minutes, entretien de 10 minutes.`;
+    if (s.domaine === "p1-facultatif") return `1er concours interne · épreuve facultative de 10 minutes · notée sur ${sujetTotal(s)} ; seuls les points au-dessus de la moyenne comptent.`;
     if (s.domaine === "oral") return `Préparation : ${h} h · noté sur ${sujetTotal(s)} · exposé de 10 minutes puis entretien de 20 minutes avec le jury.`;
     return `Durée : ${h} heures${s.domaine === "maths" ? " · calculatrice autorisée" : " · sans document ni calculatrice"} · noté sur ${sujetTotal(s)} · une note de ${s.eliminatoire} ou moins est éliminatoire.`;
   }
@@ -325,7 +328,7 @@
   function questionHTML(p, q, e) {
     const k = qkey(p, q);
     const ev = e.evals[k];
-    const big = (q.type === "expression" && matiere === "francais") || q.type === "synthese";
+    const big = (q.type === "expression" && matiere === "francais") || ["synthese", "analyse", "programmation", "sequence"].includes(q.type);
     const isQcm = Array.isArray(q.options);
     return `<article class="question" id="q-${k}" data-key="${k}">
       <header class="question-head">
@@ -357,7 +360,9 @@
   }
 
   function placeholder(q, big) {
+    if (["analyse", "programmation", "sequence"].includes(q.type)) return q.type === "analyse" ? "Problématique, plan, idées clés de chaque partie en croisant les documents…" : "Construis ta proposition (périodes, objectifs, séances, évaluation)…";
     if (big) return q.type === "synthese" ? "Rédige ta réponse : introduction avec la problématique, développement en deux ou trois parties qui croisent les textes, conclusion…" : "Rédige ton développement : introduction, deux ou trois parties, conclusion…";
+    if (q.type === "dossier") return "Tes notes pour ton propre dossier…";
     if (q.type === "expose") return "Note ton plan d'exposé : problématique, deux ou trois parties, conclusion (pas de phrases entières, comme le jour de l'oral)…";
     if (q.type === "entretien" || q.type === "valeurs") return "Réponds comme devant le jury, en quelques phrases précises et argumentées…";
     if (q.type === "qualite") return "Relis ta copie avec la grille du corrigé et note ici ce que tu dois corriger…";

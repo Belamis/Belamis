@@ -7,9 +7,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DOSSIER = os.environ.get("MAYOTTE_DIR") or os.path.join(HERE, "mayotte")
 
 DOMAINES = {
-    "francais": "Écrit de français",
-    "maths": "Écrit de maths-sciences",
-    "oral": "Oraux d’admission",
+    "francais": "2nd interne · français",
+    "maths": "2nd interne · maths-sciences",
+    "oral": "2nd interne · oraux",
+    "p1-ecrit": "1er interne · écrit",
+    "p1-oral": "1er interne · oral sur dossier",
+    "p1-facultatif": "1er interne · épreuve facultative",
 }
 TYPES = {
     "oral-qcm": "Compréhension orale (QCM)",
@@ -24,6 +27,10 @@ TYPES = {
     "expose": "Exposé",
     "entretien": "Entretien avec le jury",
     "valeurs": "Valeurs de la République",
+    "analyse": "Analyse et commentaire du dossier",
+    "programmation": "Programmation d’activités",
+    "sequence": "Séquence",
+    "dossier": "Construire son dossier",
 }
 
 GUIDE = """
@@ -77,13 +84,22 @@ GUIDE = """
 <li>Session 2025 : 81 inscrits, 10 admissibles, 8 admis. Moyenne à l’admissibilité : 9,13/20 ; à l’admission : 11,63/20.</li>
 <li>Session 2027 (calendrier de l’académie) : inscriptions du 1<sup>er</sup> octobre au 25 novembre 2026 ; écrits les 5 et 6 avril 2027 ; oraux du 24 mai au 3 juin 2027.</li>
 </ul>
-<p class="doc-src">Sources : académie de Mayotte, pages « 2nd concours interne de recrutement de professeurs des écoles – spécifique Mayotte » et « Consultation des sujets antérieurs » ; rapports de jury 2023 et 2025 ; devenirenseignant.gouv.fr. Les sujets de Belamis sont des sujets originaux construits sur ce modèle, pas des annales.</p>
+<h4>Le 1<sup>er</sup> concours interne (instituteurs titulaires)</h4>
+<p>Il est ouvert aux <strong>instituteurs titulaires</strong> qui justifient de trois années de services effectifs (arrêté du 24 décembre 1992 modifié). Il ne comporte que deux épreuves :</p>
+<ul>
+<li><strong>Écrit d’admissibilité</strong> (4 h, /40, deux sujets au choix) : un dossier de 3 à 5 documents sur une question d’actualité de l’école primaire. Première partie (20 points, 4 pages au plus) : analyser et commenter le dossier en précisant ses enjeux, sans paraphrase. Deuxième partie (20 points, 4 pages au plus) : une programmation d’activités (12 points), de préférence pluridisciplinaire, puis une séquence détaillée (8 points).</li>
+<li><strong>Oral d’admission</strong> (/40) : un dossier personnel de 10 pages au plus (sans annexes, avec sommaire et pagination, en Arial 11 à double interligne) et une fiche descriptive d’une page, envoyés avant l’épreuve. Il présente des observations, des pratiques et des analyses de pratiques. Le jour de l’épreuve : 15 min de préparation, 10 min d’exposé sur les questions du jury, 10 min d’entretien.</li>
+<li><strong>Épreuve facultative</strong> (/10, 10 min) : des questions sur la politique de la ville et l’éducation prioritaire ; seuls les points au-dessus de la moyenne comptent.</li>
+</ul>
+<p>Sujets tombés à Mayotte de 2019 à 2025 : lecture et écriture, neurosciences et fonctions cognitives, parcours d’éducation artistique et culturelle, grandeurs et mesures, l’oral, la lecture littéraire, l’esprit critique, le dénombrement, l’éducation au développement durable, la manipulation en mathématiques, la droite graduée au CP, le lexique et la lecture de la maternelle au cycle 2.</p>
+
+<p class="doc-src">Sources : académie de Mayotte, pages « 2nd concours interne de recrutement de professeurs des écoles – spécifique Mayotte » et « Consultation des sujets antérieurs » ; rapports de jury 2023 et 2025 ; devenirenseignant.gouv.fr (épreuves et précisions du premier concours interne). Les sujets de Belamis sont des sujets originaux construits sur ce modèle, pas des annales.</p>
 """
 
 
 def charger():
     sujets = []
-    for nom in ("fr.json", "ms.json", "oral.json"):
+    for nom in ("fr.json", "ms.json", "oral.json", "p1.json"):
         chemin = os.path.join(DOSSIER, nom)
         if not os.path.exists(chemin):
             print("absent :", nom)
@@ -114,13 +130,12 @@ def verifier(sujets):
             if "audio" in p:
                 assert p["audio"]["titre"] and p["audio"]["texte"], s["id"]
         assert abs(tot - s["total"]) < 1e-6, (s["id"], tot, s["total"])
-        if s["domaine"] != "oral":
-            assert s["total"] == 40 and s["eliminatoire"] == 10 and s["duree"] == 14400, s["id"]
-        else:
-            assert s["total"] == 50 and s["duree"] == 3600, s["id"]
+        attendu = {"francais": (40, 10, 14400), "maths": (40, 10, 14400), "oral": (50, None, 3600),
+                   "p1-ecrit": (40, None, 14400), "p1-oral": (40, None, 900), "p1-facultatif": (10, None, 600)}[s["domaine"]]
+        assert (s["total"], s.get("eliminatoire"), s["duree"]) == attendu, (s["id"], attendu)
 
 
-ordre = {"francais": 0, "maths": 1, "oral": 2}
+ordre = {d: i for i, d in enumerate(DOMAINES)}
 sujets = charger()
 verifier(sujets)
 sujets.sort(key=lambda s: (ordre[s["domaine"]], s["id"]))
@@ -128,7 +143,7 @@ data = {
     "domaines": DOMAINES,
     "types": TYPES,
     "guide": GUIDE,
-    "guideTitre": "Le concours spécifique Mayotte : format, annales 2023-2025 et conseils des jurys",
+    "guideTitre": "Les deux concours internes de Mayotte : format, annales et conseils des jurys",
     "sujets": sujets,
 }
 sortie = os.environ.get("MAYOTTE_OUT") or os.path.join(HERE, "mayotte.js")

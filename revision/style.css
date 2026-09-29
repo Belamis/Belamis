@@ -1457,3 +1457,15 @@ html:is([data-theme="clair"], [data-theme="lagon"]) .study .study-bar { border-b
 .matiere-notion { border-color: rgba(201, 182, 255, 0.5); background: rgba(24, 16, 40, 0.55); }
 .matiere-notion:hover:not(:disabled) { border-color: #c9b6ff; background: rgba(34, 22, 58, 0.7); box-shadow: 0 10px 40px -10px rgba(170, 140, 255, 0.55); }
 .matiere-notion small { border-color: rgba(201, 182, 255, 0.6) !important; color: #d8caff !important; }
+
+/* l'espace de Raphaël défile quand ses boutons dépassent l'écran (téléphones) */
+.space-ui { overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+@media (max-height: 900px), (max-width: 600px) {
+  .space-ui { justify-content: flex-start; gap: 18px; }
+  .space-center { margin-block: auto; }
+}
+@media (max-width: 600px) {
+  .space-top { flex-wrap: wrap; }
+  .space-tools .btn { padding: 8px 12px; font-size: 0.85rem; }
+  .matieres .matiere { min-width: 0; width: 100%; }
+}

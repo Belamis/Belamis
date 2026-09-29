@@ -1,0 +1,398 @@
+{
+ "sujets": [
+  {
+   "id": "ang-sujet0",
+   "num": 1,
+   "domaine": "anglais",
+   "titre": "Sujet 0 officiel – The arts in schools",
+   "theme": "Les arts et la créativité à l’école (Angleterre)",
+   "officiel": true,
+   "source": "Sujet 0 du CRPE BAC+3 (2025), seconde épreuve d’admissibilité, partie 4.2 Anglais – document : The Guardian, 20 March 2025 (adapté).",
+   "remarque": "Le sujet officiel ne précise pas le barème des questions : la répartition des points proposée ici (10 + 10) est indicative. Le texte de l’article n’est pas reproduit (droits d’auteur) : travaille avec le sujet officiel sous les yeux.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Compréhension",
+     "short": "C",
+     "titre": "Compréhension – The Guardian view on the arts in schools",
+     "points": 10,
+     "intro": "<p><strong>Document (non reproduit ici) :</strong> « The Guardian view on the arts in schools: classrooms need more creativity », éditorial adapté de <em>The Guardian</em>, 20 mars 2025.</p><p><strong>Résumé en français.</strong> Dans cet éditorial, le <em>Guardian</em> salue le rapport intermédiaire de la commission d’examen des programmes scolaires anglais dirigée par la professeure Becky Francis, qui prend au sérieux la crainte que les arts aient été marginalisés dans les apprentissages. Le journal rappelle que, depuis 2010, les établissements ont été incités à orienter les élèves vers une combinaison de matières « académiques » au GCSE (anglais, mathématiques, sciences, une langue, histoire ou géographie), reléguant les arts au second plan. Il défend l’idée que la créativité et l’imagination font partie de ce qui nous rend humains et que les industries créatives comptent beaucoup pour le Royaume-Uni, économiquement comme culturellement. Enfin, il note qu’à l’école primaire aussi, sous les gouvernements travaillistes comme conservateurs, la volonté d’élever le niveau en lecture-écriture et en mathématiques a réduit la place du jeu et de la créativité.</p><p><em>Pour le texte intégral, reporte-toi au sujet 0 officiel (CRPE BAC+3, seconde épreuve d’admissibilité, partie 4.2 Anglais, pages 12-13), publié sur devenirenseignant.gouv.fr.</em></p><p>Answer the following questions in English in your own words.</p>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>What source is <em>The Guardian</em> using as a basis for this article?</p>",
+       "corrige": "<p class=\"answer\">The article is an editorial (“The Guardian view”) based on the interim report of an official review of the curriculum in English schools. This review is led by an expert in education, Professor Becky Francis. The newspaper comments on this report and hopes that it will lead to more room for the arts in schools.</p><p>Attendu : identifier le <strong>rapport intermédiaire</strong> (<em>interim report</em>) de la commission présidée par <strong>Prof. Becky Francis</strong> sur les programmes scolaires en Angleterre ; bonus si le candidat signale qu’il s’agit d’un éditorial (point de vue du journal). Pénaliser la simple recopie de la première phrase.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "comprehension",
+       "points": 4,
+       "enonce": "<p>According to the article, what evolution has affected the arts in British schools since 2010 and for what reasons?</p>",
+       "corrige": "<p class=\"answer\">Since 2010, the arts have become less important in schools: they have been pushed aside and are now a secondary subject. The main reason is that schools were asked to steer pupils towards a set of “academic” GCSE subjects: English, maths, science, a foreign language and history or geography. Art, music or drama were not part of this group. In primary schools too, successive governments, both Labour and Conservative, wanted to raise standards in reading, writing and maths, so there was less time for play and creative activities.</p><p>Attendu : 1) le constat (les arts relégués au second plan, « évincés » des apprentissages) ; 2) la cause au secondaire (combinaison de matières encouragée au GCSE, connue sous le nom d’<em>English Baccalaureate</em> ou EBacc, introduite en 2010) ; 3) la cause au primaire (priorité à la lecture-écriture et aux mathématiques, sous les deux grands partis). Reformulation exigée : expliquer <em>second fiddle</em> (rôle secondaire) plutôt que le recopier.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "c",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>“In the UK, the creative industries are hugely important economically as well as culturally” – explain this assertion.</p>",
+       "corrige": "<p class=\"answer\">Economically, the creative industries (music, cinema, television, video games, fashion, design, publishing, theatre…) create a lot of jobs – more than two million people work in them – and bring billions of pounds to the country, partly through exports. Culturally, they give the UK a strong image in the world: think of the Beatles, Adele, Harry Potter, the BBC or London’s West End theatres. They shape British identity and attract tourists. So, if schools neglect the arts, they may weaken a sector that matters for the future of the country.</p><p>Attendu : distinguer les deux dimensions (économique : emplois, richesse, exportations ; culturelle : rayonnement, identité, <em>soft power</em>) et donner au moins un exemple concret. Valoriser le lien avec l’argument de l’article (former ces compétences dès l’enfance).</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Expression",
+     "short": "E",
+     "titre": "Expression",
+     "points": 10,
+     "intro": "<p>Answer the following questions in English. Respect the number of words indicated (± 10 %).</p>",
+     "questions": [
+      {
+       "id": "d",
+       "type": "expression",
+       "points": 4,
+       "enonce": "<p>In your experience, can the arts (music, drama, etc.) support the learning of a language? (40 words)</p>",
+       "corrige": "<p><strong>Exemple de production (44 mots) :</strong></p><p class=\"answer\">Yes, definitely. When I was at school, we learnt English with songs and I still remember the words today. Music helps you memorise vocabulary and pronunciation, and drama gives you real situations to speak in. Besides, it is fun, so you feel less shy.</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Réponse claire à la question (prise de position) et appui sur une expérience personnelle.</li><li>Au moins un argument développé (mémorisation, prononciation, motivation, prise de parole).</li><li>Correction de la langue : prétérit (<em>learnt, remember</em>), comparatifs, connecteurs.</li><li>Respect du nombre de mots (environ 40).</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>to memorise / to remember</em></li><li><em>a nursery rhyme, a chant, a song</em></li><li><em>to act out a scene, role-play</em></li><li><em>pronunciation, rhythm, intonation</em></li><li><em>to feel confident / less shy</em></li><li><em>besides, what is more</em></li></ul>",
+       "niveau": "c4"
+      },
+      {
+       "id": "e",
+       "type": "expression",
+       "points": 6,
+       "enonce": "<p>In your opinion, what part should “play and creativity” have in a child’s life? Give examples. (80 words)</p>",
+       "corrige": "<p><strong>Exemple de production (80 mots) :</strong></p><p class=\"answer\">In my opinion, play and creativity should have a central place in a child’s life, at home and at school. By playing, children learn to cooperate, to follow rules and to solve problems. For example, building a hut with friends develops teamwork, and inventing a story develops language. At school, teachers can use board games in maths or drama in English lessons. Of course, children also need structured learning, but a good balance makes them happier and more curious learners.</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Opinion clairement exprimée et nuancée (équilibre jeu / apprentissages structurés).</li><li>Exemples concrets et variés (maison, école, loisirs), dont au moins un lié à l’école.</li><li>Organisation du propos : introduction, arguments reliés par des connecteurs, conclusion.</li><li>Richesse et correction de la langue (gérondif après préposition : <em>by playing</em> ; modaux <em>should, can</em>).</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>in my opinion / as far as I am concerned</em></li><li><em>by + V-ing (by playing, children learn…)</em></li><li><em>to develop, to foster</em></li><li><em>teamwork, to cooperate</em></li><li><em>board games, role-play, arts and crafts</em></li><li><em>a good balance between… and…</em></li><li><em>of course… but…</em></li></ul>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ang-forest-school",
+   "num": 2,
+   "domaine": "anglais",
+   "titre": "Forest Schools – learning outdoors",
+   "theme": "Forest School et apprentissages en plein air (Royaume-Uni)",
+   "officiel": false,
+   "source": "Sujet d’entraînement original (document rédigé pour l’entraînement).",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Compréhension",
+     "short": "C",
+     "titre": "Compréhension – Into the woods",
+     "points": 10,
+     "intro": "<div class=\"doc\" lang=\"en\"><p class=\"doc-title\">Document – Into the woods: why British pupils are learning outdoors</p><p>Every Tuesday morning, whatever the weather, a Year 1 class in a primary school in the south-west of England puts on waterproof trousers and wellies and walks to a small wood behind the playground. There are no tables, no worksheets and no interactive whiteboard. Instead, the six-year-olds build dens, look for insects under logs and learn to use simple tools under the careful eye of a trained Forest School leader.</p><p>The idea is not new. It comes from Scandinavia, where outdoor learning has long been part of early childhood education. In 1993, a group of staff from Bridgwater College, in Somerset, visited Denmark and were so impressed that they brought the approach back to Britain. Today, thousands of nurseries and primary schools across the UK offer Forest School sessions, and the Forest School Association, created in 2012, supports the people who lead them.</p><p>What makes Forest School different from a simple nature walk? First, it is regular and long-term: children go out every week for months, not just once a year. Second, it is child-led: adults suggest activities, but children are encouraged to follow their own curiosity. Finally, children are allowed to take “supported risks”, such as climbing a tree or helping to light a small fire, because learning to manage risk builds confidence.</p><p>Teachers often notice changes back in the classroom. “Some children who hardly speak inside become leaders in the woods,” says one teacher. “They cooperate, they solve problems, and they come back full of words to describe what they have seen.”</p><p>Not everyone is convinced. Some parents worry about muddy clothes and scratched knees, and some head teachers say that, with a busy curriculum, it is hard to find the time. But for supporters, a morning in the woods is not time lost: it is learning of a different kind.</p><p class=\"doc-src\">Text written for training purposes, based on general knowledge</p></div><p>Answer the following questions in English and, unless asked to quote, in your own words.</p>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "comprehension",
+       "points": 2,
+       "enonce": "<p>Where does the Forest School approach come from, and how did it arrive in the UK?</p>",
+       "corrige": "<p class=\"answer\">Forest School comes from Scandinavia, where children have been learning outdoors for a long time. It arrived in the UK in 1993, when some staff from a college in Somerset (Bridgwater College) went to Denmark, liked what they saw and decided to use the same method in Britain.</p><p>Deux éléments attendus : l’origine scandinave (1 pt) et la visite au Danemark de l’équipe du Bridgwater College en 1993 (1 pt).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>According to the text, what makes Forest School different from a simple nature walk? Explain the three features in your own words.</p>",
+       "corrige": "<p class=\"answer\">First, it happens very often and over a long period: the children go to the woods every week for several months, not only on a special day. Second, the children decide what they do: adults give ideas, but the children explore what interests them. Third, the children can do slightly dangerous things, like climbing trees, with an adult nearby, because this helps them to feel more confident.</p><p>1 pt par caractéristique correctement reformulée (régularité / durée ; activités choisies par l’enfant ; prise de risque encadrée). Ne pas accepter la simple recopie de <em>regular and long-term</em>, <em>child-led</em>, <em>supported risks</em>.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "c",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>What are the benefits of Forest School for children, according to the article? Justify your answer with two quotations.</p>",
+       "corrige": "<p class=\"answer\">Forest School helps children to become more confident and more sociable. Shy children can take responsibilities, work with others and find solutions together, and it also improves their language. Quotations: “Some children who hardly speak inside become leaders in the woods”; “They cooperate, they solve problems, and they come back full of words to describe what they have seen.” Also: “learning to manage risk builds confidence”.</p><p>2 pts pour l’explication (confiance en soi, coopération, résolution de problèmes, langage), 1 pt pour deux citations exactes et pertinentes, entre guillemets.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "d",
+       "type": "comprehension",
+       "points": 2,
+       "enonce": "<p>Explain the following words or expressions in context: “wellies” (§1), “child-led” (§3), “not time lost” (§5).</p>",
+       "corrige": "<p class=\"answer\">“Wellies” are wellington boots, rubber boots that you wear when it is wet or muddy. “Child-led” means that the children guide the activity: they choose what to do, not the adults. “Not time lost” means that the time spent in the woods is useful, not wasted, even if the children are not doing traditional lessons.</p><p>Barème indicatif : 0,75 + 0,5 + 0,75. <em>Wellies</em> (abréviation familière de <em>wellington boots</em>) est un mot très britannique.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Expression",
+     "short": "E",
+     "titre": "Expression",
+     "points": 10,
+     "intro": "<p>Answer the following questions in English. Respect the number of words indicated (± 10 %).</p>",
+     "questions": [
+      {
+       "id": "e",
+       "type": "expression",
+       "points": 4,
+       "enonce": "<p>Did you learn outside the classroom when you were a child? Describe one memory. (40 words)</p>",
+       "corrige": "<p><strong>Exemple de production (39 mots) :</strong></p><p class=\"answer\">When I was nine, my class spent a week in the mountains. We walked every day, observed birds and drew plants in a notebook. I learnt more about nature in five days than in a whole year of lessons!</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Récit au passé cohérent (prétérit simple, éventuellement <em>used to</em>).</li><li>Un souvenir précis (lieu, âge, activité) et une courte appréciation personnelle.</li><li>Correction de la langue (verbes irréguliers : <em>spent, drew, learnt</em>).</li><li>Respect du nombre de mots (environ 40).</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>when I was… years old</em></li><li><em>a school trip, a field trip</em></li><li><em>to observe, to collect, to draw</em></li><li><em>I used to…</em></li><li><em>I will never forget…</em></li><li><em>more… than…</em></li></ul>",
+       "niveau": "c4"
+      },
+      {
+       "id": "f",
+       "type": "expression",
+       "points": 6,
+       "enonce": "<p>You are a primary school teacher in France. Describe an outdoor activity you could organise to teach English to your pupils, and explain its benefits. (80 words)</p>",
+       "corrige": "<p><strong>Exemple de production (81 mots) :</strong></p><p class=\"answer\">I would organise a “nature treasure hunt” in the school garden with my Year 4 pupils. In small groups, they would receive a list in English: “Find something green, something round, two leaves, a stone…”. They would have to read the instructions, collect the objects and then present them to the class: “We found a big brown leaf.” This activity is fun and active. It helps pupils memorise colours, shapes and nature words, and it encourages them to speak English together.</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Activité concrète, réaliste et adaptée à l’âge des élèves (cycle 2 ou 3), décrite étape par étape.</li><li>Lien explicite avec l’apprentissage de l’anglais (lexique, structures, compréhension de consignes, prise de parole).</li><li>Justification des bénéfices (motivation, mémorisation par le mouvement, travail en groupe).</li><li>Langue correcte : conditionnel (<em>I would…, they would…</em>), impératif pour les consignes, connecteurs.</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>I would organise…</em></li><li><em>a treasure hunt, a scavenger hunt</em></li><li><em>in small groups / in pairs</em></li><li><em>to collect, to find, to point to</em></li><li><em>leaves, sticks, stones, a tree, a bug</em></li><li><em>this activity helps pupils (to) + verbe</em></li><li><em>it encourages them to…</em></li></ul>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ang-bonfire-night",
+   "num": 3,
+   "domaine": "anglais",
+   "titre": "Bonfire Night at school",
+   "theme": "Bonfire Night : une tradition britannique à l’école",
+   "officiel": false,
+   "source": "Sujet d’entraînement original (document rédigé pour l’entraînement).",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Compréhension",
+     "short": "C",
+     "titre": "Compréhension – Bonfire Night in my classroom",
+     "points": 10,
+     "intro": "<div class=\"doc\" lang=\"en\"><p class=\"doc-title\">Document – “Remember, remember”: Bonfire Night in my classroom (blog post)</p><p>Every year, in the first week of November, my Year 2 classroom is covered in paper fireworks and my pupils ask the same question: “Miss, are we doing the fireworks poem again?” Of course we are!</p><p>Bonfire Night, also called Guy Fawkes Night, is celebrated in Britain on 5 November. It remembers the Gunpowder Plot of 1605, when a small group of Catholic conspirators planned to blow up the Houses of Parliament in London and kill King James I. One of them, Guy Fawkes, was arrested in a cellar under the House of Lords, next to barrels of gunpowder. The plot failed, and Londoners lit bonfires to celebrate the King’s survival. The tradition has continued for more than four hundred years.</p><p>Today, most families simply enjoy the show: public firework displays, bonfires, sparklers and warm food like jacket potatoes, toffee apples or, in the north of England, parkin, a sticky ginger cake. When I was little, children made a “guy” out of old clothes and newspaper and asked passers-by for “a penny for the guy”. You rarely see that nowadays.</p><p>At school, I use the celebration to teach history, but also safety. We learn the rhyme “Remember, remember the fifth of November”, we write poems full of sound words like “whoosh”, “bang” and “crackle”, and a local firefighter visits us to explain how to stay safe around fireworks.</p><p>Some colleagues feel uncomfortable celebrating a story about a man who was sentenced to death, or burning a figure on a fire. I understand. That is why I don’t present it as a party but as a story full of questions: Why did the plotters act? Was it fair? How do we remember the past? My pupils, aged six and seven, have surprisingly strong opinions!</p><p class=\"doc-src\">Text written for training purposes, based on general knowledge</p></div><p>Answer the following questions in English and, unless asked to quote, in your own words.</p>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "comprehension",
+       "points": 2,
+       "enonce": "<p>Who is the author of this blog post and who are her pupils? Justify with elements from the text.</p>",
+       "corrige": "<p class=\"answer\">The author is a primary school teacher in Britain. We know it because she talks about “my Year 2 classroom” and her pupils call her “Miss”. Her pupils are young children: they are “aged six and seven”.</p><p>1 pt pour l’identification (enseignante du primaire en Grande-Bretagne), 1 pt pour la justification (<em>Year 2</em>, <em>Miss</em>, <em>aged six and seven</em>). Remarque culturelle : en Angleterre, les élèves appellent leur enseignante <em>Miss</em>.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>Explain in your own words what happened in 1605 and why people still light bonfires on 5 November.</p>",
+       "corrige": "<p class=\"answer\">In 1605, some Catholic men wanted to destroy Parliament with explosives and kill the King, James I. Guy Fawkes, one of them, was caught under the building with the gunpowder, so the attack never happened. People in London were happy that the King was alive, so they made big fires. Since then, the British have lit bonfires and set off fireworks every 5 November to remember that event.</p><p>Attendu : le complot (qui, quoi, contre qui) – 1 pt ; l’échec et l’arrestation de Guy Fawkes – 1 pt ; l’origine des feux (célébrer la survie du roi) et la continuité de la tradition – 1 pt.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "c",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>How does the author use Bonfire Night at school? Give three activities, then explain how she answers colleagues who feel uncomfortable with this celebration.</p>",
+       "corrige": "<p class=\"answer\">She teaches a traditional rhyme, “Remember, remember the fifth of November”; the children write poems with onomatopoeias; and a firefighter comes to talk about safety with fireworks. To colleagues who don’t like celebrating the execution of a man, she answers that she does not treat it as a celebration: she uses the story to make children think and debate about history and justice.</p><p>1,5 pt pour les trois activités, 1,5 pt pour la réponse aux réserves (approche critique, questionnement, pas une fête).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "d",
+       "type": "comprehension",
+       "points": 2,
+       "enonce": "<p>Find in the text: (1) a word meaning “people walking past in the street”; (2) three onomatopoeias. (3) Explain: “You rarely see that nowadays.”</p>",
+       "corrige": "<p class=\"answer\">(1) “passers-by”. (2) “whoosh”, “bang”, “crackle”. (3) It means that today children almost never make a “guy” or ask for money for it: this old custom has nearly disappeared.</p><p>Barème : 0,5 + 0,5 + 1.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Expression",
+     "short": "E",
+     "titre": "Expression",
+     "points": 10,
+     "intro": "<p>Answer the following questions in English. Respect the number of words indicated (± 10 %).</p>",
+     "questions": [
+      {
+       "id": "e",
+       "type": "expression",
+       "points": 4,
+       "enonce": "<p>Which festival from an English-speaking country would you like to share with your pupils? Explain why. (40 words)</p>",
+       "corrige": "<p><strong>Exemple de production (39 mots) :</strong></p><p class=\"answer\">I would choose Halloween because children love dressing up and it is a perfect way to learn vocabulary: witch, ghost, pumpkin. We could carve a pumpkin, sing songs and compare it with French traditions, such as All Saints’ Day.</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Choix d’une fête réellement anglophone, correctement nommée (<em>Halloween, Thanksgiving, St Patrick’s Day, Burns Night…</em>).</li><li>Au moins deux justifications, dont une pédagogique.</li><li>Langue correcte : conditionnel (<em>I would choose, we could…</em>), <em>because</em>, comparaison.</li><li>Respect du nombre de mots (environ 40).</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>I would choose… because…</em></li><li><em>to dress up (as)</em></li><li><em>to carve a pumpkin</em></li><li><em>to share a tradition</em></li><li><em>to compare… with…</em></li><li><em>such as…</em></li></ul>",
+       "niveau": "c4"
+      },
+      {
+       "id": "f",
+       "type": "expression",
+       "points": 6,
+       "enonce": "<p>Some people think that schools should not celebrate traditions linked to history, religion or politics. What is your opinion? Give examples. (80 words)</p>",
+       "corrige": "<p><strong>Exemple de production (80 mots) :</strong></p><p class=\"answer\">I think schools can talk about traditions, but they should not simply celebrate them. In France, state schools are secular, so teachers must stay neutral. However, studying a festival like Bonfire Night or Thanksgiving is an excellent way to discover another culture and its history. For example, pupils can learn songs, taste typical food and ask questions about the past. The teacher’s role is to explain, not to promote. This way, children learn to respect differences and to think critically.</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Opinion claire, argumentée et nuancée (étudier / célébrer).</li><li>Prise en compte du contexte français (laïcité, neutralité) et exemples précis tirés de l’aire anglophone.</li><li>Cohérence : connecteurs d’opposition et de conséquence (<em>however, so, this way</em>).</li><li>Correction et variété de la langue (modaux <em>should, must, can</em> ; vocabulaire de l’école).</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>I think / I believe that…</em></li><li><em>state schools are secular</em></li><li><em>to stay neutral</em></li><li><em>however / on the other hand</em></li><li><em>to discover another culture</em></li><li><em>to respect differences</em></li><li><em>to think critically</em></li><li><em>the teacher’s role is to…</em></li></ul>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ang-reading-pleasure",
+   "num": 4,
+   "domaine": "anglais",
+   "titre": "Screens and reading for pleasure",
+   "theme": "Écrans, lecture plaisir et enfance (Royaume-Uni)",
+   "officiel": false,
+   "source": "Sujet d’entraînement original (document rédigé pour l’entraînement ; interview fictive).",
+   "remarque": "Chiffre cité : enquête annuelle du National Literacy Trust (2024) – environ 35 % des 8-18 ans disaient aimer lire pendant leur temps libre, le niveau le plus bas depuis 2005.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Compréhension",
+     "short": "C",
+     "titre": "Compréhension – Reading for pleasure in a digital world",
+     "points": 10,
+     "intro": "<div class=\"doc\" lang=\"en\"><p class=\"doc-title\">Document – Reading for pleasure in a digital world (podcast transcript, extract)</p><p><strong>HOST:</strong> Welcome back. Today I’m talking to Sarah, a librarian in a primary school in Manchester. Sarah, are children reading less than before?</p><p><strong>SARAH:</strong> Sadly, yes. Every year, the National Literacy Trust, a UK charity, asks thousands of young people about reading. In 2024, only about one in three children and young people aged 8 to 18 said they enjoyed reading in their free time. That’s the lowest figure since the charity started asking the question in 2005.</p><p><strong>HOST:</strong> Are screens to blame?</p><p><strong>SARAH:</strong> Partly. Tablets and phones are designed to keep us watching. A video gives you instant pleasure; a book asks for a bit of effort at the beginning. But I don’t think screens are the enemy. Many children discover stories through films or audiobooks, and some reluctant readers love e-readers because they can make the text bigger.</p><p><strong>HOST:</strong> So what works?</p><p><strong>SARAH:</strong> Choice, first of all. Children must be allowed to choose what they read: comics, joke books, football magazines, anything! Reading for pleasure is not the same as reading for a test. Second, time: in our school, every class has fifteen minutes of quiet reading after lunch, and the teachers read too. And third, adults who read aloud. Even eleven-year-olds love being read to.</p><p><strong>HOST:</strong> And parents?</p><p><strong>SARAH:</strong> I tell them: don’t feel guilty, just be a model. If your child sees you scrolling all evening, why would they pick up a book? Put the phones in a basket at dinner time and share a story at bedtime. And on World Book Day, in March, come to school dressed as your favourite character. The children love it!</p><p class=\"doc-src\">Text written for training purposes, based on general knowledge (fictional interview; figures from the National Literacy Trust annual survey)</p></div><p>Answer the following questions in English and, unless asked to quote, in your own words.</p>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "comprehension",
+       "points": 2,
+       "enonce": "<p>Who is Sarah, and what worrying fact does she mention at the beginning of the interview?</p>",
+       "corrige": "<p class=\"answer\">Sarah works as a librarian in a primary school in Manchester. She explains that fewer and fewer young people like reading: in 2024, only one child out of three between 8 and 18 said they read for pleasure, which is the worst result since 2005.</p><p>1 pt pour l’identité de Sarah, 1 pt pour le constat chiffré (reformulé, avec la notion de record à la baisse).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>Why are screens only “partly” responsible, according to Sarah? Explain both sides of her answer in your own words.</p>",
+       "corrige": "<p class=\"answer\">On the one hand, screens are responsible because they are made to hold our attention and they give immediate pleasure, while a book needs some effort before you enjoy it. On the other hand, screens can also help: children find stories in films or audiobooks, and children who don’t like reading can use an e-reader to read the text in a bigger size.</p><p>1,5 pt par versant de l’argument. Valoriser les connecteurs <em>on the one hand / on the other hand</em>.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "c",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>Sarah gives three keys to help children enjoy reading. Explain them and justify each one with a quotation.</p>",
+       "corrige": "<p class=\"answer\">1) Freedom of choice: children should read what they like – “Children must be allowed to choose what they read”. 2) Regular time for reading at school – “every class has fifteen minutes of quiet reading after lunch”. 3) Reading aloud by adults, even for older children – “Even eleven-year-olds love being read to”.</p><p>1 pt par clé (0,5 explication + 0,5 citation exacte).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "d",
+       "type": "comprehension",
+       "points": 2,
+       "enonce": "<p>Explain the following expressions in context: “reluctant readers”, “be a model”, “scrolling”.</p>",
+       "corrige": "<p class=\"answer\">“Reluctant readers” are children who don’t want to read or who find reading difficult and boring. “Be a model” means that parents should show a good example, because children copy adults. “Scrolling” means moving quickly through content on a phone screen with your finger, for example on social media.</p><p>Barème indicatif : 0,75 + 0,5 + 0,75.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Expression",
+     "short": "E",
+     "titre": "Expression",
+     "points": 10,
+     "intro": "<p>Answer the following questions in English. Respect the number of words indicated (± 10 %).</p>",
+     "questions": [
+      {
+       "id": "e",
+       "type": "expression",
+       "points": 4,
+       "enonce": "<p>What is your best memory of a book from your childhood? (40 words)</p>",
+       "corrige": "<p><strong>Exemple de production (40 mots) :</strong></p><p class=\"answer\">My best memory is “Matilda” by Roald Dahl. My mother read it to me every evening when I was eight. I loved Matilda because she was clever and brave, and I laughed a lot at the terrible headmistress, Miss Trunchbull.</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Un livre identifié (titre, auteur) et un souvenir situé (âge, circonstances).</li><li>Expression des sentiments et justification (<em>I loved… because…</em>).</li><li>Correction du récit au passé.</li><li>Respect du nombre de mots (environ 40).</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>my favourite book was…</em></li><li><em>to read aloud / to be read to</em></li><li><em>at bedtime</em></li><li><em>the main character</em></li><li><em>I could not put it down</em></li><li><em>it made me laugh / cry</em></li></ul>",
+       "niveau": "c4"
+      },
+      {
+       "id": "f",
+       "type": "expression",
+       "points": 6,
+       "enonce": "<p>As a primary school teacher in France, how would you help your pupils to enjoy stories in English? Give concrete examples. (80 words)</p>",
+       "corrige": "<p><strong>Exemple de production (80 mots) :</strong></p><p class=\"answer\">First, I would read picture books aloud with lots of repetition, like “The Very Hungry Caterpillar” or “Brown Bear, Brown Bear, What Do You See?”. Pupils can join in with the repeated sentences and use flashcards or puppets. Then, I would create an English reading corner with simple books and audiobooks. Finally, pupils could act out a story or make their own mini-book. The goal is pleasure, not a test: when children feel successful, they want to discover more stories.</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Propositions concrètes, réalistes et adaptées à des élèves débutants (albums à structure répétitive, supports visuels).</li><li>Démarche progressive et organisée (<em>first, then, finally</em>).</li><li>Lien avec le texte ou avec la notion de plaisir de lire (motivation, réussite).</li><li>Correction de la langue : conditionnel, modaux, lexique de la classe.</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>a picture book, a big book</em></li><li><em>to read aloud</em></li><li><em>to join in</em></li><li><em>flashcards, puppets</em></li><li><em>a reading corner</em></li><li><em>to act out a story</em></li><li><em>repetitive structure / a repeated sentence</em></li><li><em>the goal is…</em></li></ul>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ang-wales-bilingual",
+   "num": 5,
+   "domaine": "anglais",
+   "titre": "Growing up bilingual in Wales",
+   "theme": "Le bilinguisme gallois-anglais à l’école (pays de Galles)",
+   "officiel": false,
+   "source": "Sujet d’entraînement original (document rédigé pour l’entraînement).",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Compréhension",
+     "short": "C",
+     "titre": "Compréhension – Growing up bilingual in Wales",
+     "points": 10,
+     "intro": "<div class=\"doc\" lang=\"en\"><p class=\"doc-title\">Document – “Bore da!”: growing up bilingual in Wales</p><p>At 8.45 on a Monday morning, the playground of a primary school in Cardiff is full of noise. “Bore da!” (“Good morning!”) says the head teacher at the gate. Most children answer in Welsh, although many of them speak only English at home. This is a Welsh-medium school: maths, science and history are all taught in Welsh, and English lessons usually start a little later, around the age of seven.</p><p>Welsh is one of the oldest living languages in Europe. But in the nineteenth and twentieth centuries, the number of speakers fell dramatically. In some schools in the 1800s, children caught speaking Welsh were punished with the “Welsh Not”, a piece of wood hung around their neck. The first state-funded Welsh-medium school only opened in 1947, in Llanelli.</p><p>Today, around a quarter of primary pupils in Wales attend a Welsh-medium school, and all pupils learn Welsh until the age of sixteen. The Welsh Government has an ambitious target called Cymraeg 2050: one million Welsh speakers by 2050. In the 2021 census, about 538,000 people – 17.8% of the population aged three or over – said they could speak Welsh.</p><p>Parents give different reasons for their choice. “Neither my husband nor I speak Welsh,” explains one mother. “But we wanted our son to feel part of the culture of the country he lives in. And we read that bilingual children often find it easier to learn a third language.” Others admit that helping with homework can be difficult, so many schools run Welsh classes for families.</p><p>Outside the classroom, the language is very much alive: children compete in singing, dancing and poetry at the Urdd Eisteddfod, one of the largest youth festivals in Europe, and watch cartoons on S4C, the Welsh-language TV channel.</p><p class=\"doc-src\">Text written for training purposes, based on general knowledge</p></div><p>Answer the following questions in English and, unless asked to quote, in your own words.</p>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "comprehension",
+       "points": 2,
+       "enonce": "<p>What is a “Welsh-medium school”? Explain in your own words, using the example of the school in Cardiff.</p>",
+       "corrige": "<p class=\"answer\">It is a school where Welsh is the language used to teach most subjects: children learn maths, science or history in Welsh, not in English. English is taught as a subject, but usually only from about seven. In the Cardiff school, even children from English-speaking families use Welsh every day.</p><p>1 pt pour la définition (langue d’enseignement ≠ langue enseignée), 1 pt pour l’exemple (salutation en gallois, élèves anglophones à la maison, anglais introduit vers 7 ans).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>Show how the situation of the Welsh language has changed from the past to the present, and what the future goal is. Use precise elements from the text.</p>",
+       "corrige": "<p class=\"answer\">In the past, Welsh was in danger: fewer and fewer people spoke it, and in the 1800s some schools even punished children for using it with the “Welsh Not”. The first public Welsh-medium school did not open until 1947. Today, the language is supported by schools: about 25% of primary pupils go to Welsh-medium schools and everyone studies Welsh until 16. In 2021, 17.8% of the population could speak it. For the future, the government wants one million Welsh speakers by 2050 (the Cymraeg 2050 plan).</p><p>1 pt par période (passé : déclin et répression ; présent : place à l’école et chiffres du recensement ; futur : objectif <em>Cymraeg 2050</em>).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "c",
+       "type": "comprehension",
+       "points": 3,
+       "enonce": "<p>Why do some parents choose a Welsh-medium school although they don’t speak Welsh? What difficulty can they face, and how do schools help? Quote the text.</p>",
+       "corrige": "<p class=\"answer\">They want their child to belong to Welsh culture – “to feel part of the culture of the country he lives in” – and they think bilingualism helps with other languages: “bilingual children often find it easier to learn a third language”. The difficulty is that they cannot always help with homework in Welsh; that is why “many schools run Welsh classes for families”.</p><p>1 pt par élément (deux raisons, une difficulté et la réponse des écoles), citations exactes exigées.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "d",
+       "type": "comprehension",
+       "points": 2,
+       "enonce": "<p>Find in the text a word or expression meaning: (1) “decreased a lot”; (2) “goal”; (3) “take part in a competition”. (4) Explain: “the language is very much alive”.</p>",
+       "corrige": "<p class=\"answer\">(1) “fell dramatically”. (2) “target”. (3) “compete”. (4) It means that Welsh is not only a school subject: people really use it in their free time, in festivals, music, poetry and on television.</p><p>Barème : 0,5 par réponse. Culture : l’<em>Urdd</em> (mouvement de jeunesse gallois fondé en 1922) organise chaque année son Eisteddfod, festival de concours artistiques en gallois.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Expression",
+     "short": "E",
+     "titre": "Expression",
+     "points": 10,
+     "intro": "<p>Answer the following questions in English. Respect the number of words indicated (± 10 %).</p>",
+     "questions": [
+      {
+       "id": "e",
+       "type": "expression",
+       "points": 4,
+       "enonce": "<p>Would you like your own children to grow up bilingual? Why or why not? (40 words)</p>",
+       "corrige": "<p><strong>Exemple de production (40 mots) :</strong></p><p class=\"answer\">Yes, I would love my children to grow up bilingual. Speaking two languages opens your mind to other cultures and makes travelling easier. It can also help at school and later at work. However, parents must be patient and consistent.</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Réponse claire et justifiée par au moins deux arguments.</li><li>Nuance ou limite évoquée (<em>however…</em>).</li><li>Correction de la langue : <em>would like / would love + to</em>, gérondif sujet (<em>speaking two languages…</em>).</li><li>Respect du nombre de mots (environ 40).</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>I would love my children to…</em></li><li><em>to grow up bilingual</em></li><li><em>to open your mind</em></li><li><em>a mother tongue / a native language</em></li><li><em>however</em></li><li><em>to be patient and consistent</em></li></ul>",
+       "niveau": "c4"
+      },
+      {
+       "id": "f",
+       "type": "expression",
+       "points": 6,
+       "enonce": "<p>In many French classrooms, some pupils speak another language at home. As a primary school teacher, how could you make these languages visible and use them to help all your pupils learn? (80 words)</p>",
+       "corrige": "<p><strong>Exemple de production (78 mots) :</strong></p><p class=\"answer\">I think home languages are a treasure for the whole class. First, I could display a “hello” poster with all the languages spoken by my pupils, and we could greet each other in a different language every morning. Then, I would invite parents to read a short story in their language. In English lessons, pupils could compare words in several languages. This way, bilingual children feel proud, and the others become curious and more open to learning languages.</p><p><strong>Critères d’évaluation :</strong></p><ul><li>Propositions concrètes et réalistes pour une classe de primaire (affichage, rituels, participation des familles).</li><li>Justification des bénéfices pour tous les élèves (estime de soi, curiosité, conscience linguistique).</li><li>Organisation logique (<em>first, then, this way</em>) et lien possible avec l’enseignement de l’anglais.</li><li>Correction de la langue : modaux (<em>could, would</em>), lexique de l’école.</li></ul><p><strong>Mots et tournures utiles :</strong></p><ul><li><em>a home language</em></li><li><em>to display a poster</em></li><li><em>to greet each other</em></li><li><em>to invite parents to…</em></li><li><em>to compare words</em></li><li><em>to feel proud</em></li><li><em>to be open to…</em></li><li><em>language awareness</em></li></ul>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

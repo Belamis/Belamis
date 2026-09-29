@@ -13,6 +13,12 @@
       title: "Partie A : un texte, <em>trois phases</em>.",
       intro: "Chaque sujet suit le modèle du CRPE BAC+3 : un texte de 500 mots au plus, puis l'étude de la langue (6 points), le lexique (4 points) et une réflexion rédigée d'une trentaine de lignes (10 points). Durée conseillée : 2 heures. Au concours, la partie est notée sur 10, et une note de 2,5 ou moins est éliminatoire.",
     },
+    epreuve2: {
+      data: window.BELAMIS_EPREUVE2,
+      eyebrow: "2e épreuve d'admissibilité · 3 domaines sur 4",
+      title: "Histoire-géo-EMC, sciences, arts, <em>langue vivante</em>.",
+      intro: "Le jour de l'épreuve (4 heures, coefficient 3), tu choisis trois domaines sur quatre. Chaque domaine repose sur un dossier documentaire et des questions ; le programme est celui du cycle 4, avec les notions des cycles 1 à 3. Commence par le guide « Ce qui peut tomber », puis filtre les sujets par domaine. Une note globale de 5 sur 20 ou moins est éliminatoire.",
+    },
     maths: {
       data: window.BELAMIS_MATHS,
       eyebrow: "Mathématiques · 1re épreuve d'admissibilité",
@@ -30,6 +36,7 @@
 
   let matiere = "francais"; // matière ouverte
   let DATA = null;
+  let domaine = "tous";      // filtre de la 2e épreuve
   let progress = {};         // progression de l'élève dans la matière ouverte, par sujet
   let current = null;        // sujet ouvert
   let saveTimer = 0;
@@ -105,7 +112,7 @@
     $("study-eyebrow").textContent = m.eyebrow;
     $("study-heading").innerHTML = m.title;
     $("study-desc").textContent = m.intro;
-    study.setAttribute("aria-label", matiere === "maths" ? "Sujets de mathématiques" : "Sujets de français");
+    study.setAttribute("aria-label", { maths: "Sujets de mathématiques", francais: "Sujets de français", epreuve2: "Sujets de la 2e épreuve" }[matiere]);
   }
 
   function cardHTML(s) {
@@ -114,9 +121,10 @@
     const status = sc.evaluated
       ? `<span class="chip chip-score">${fmtPts(sc.got)} / ${fmtPts(sc.evaluated)} pts évalués</span>`
       : sc.answered ? `<span class="chip">${sc.answered} / ${sc.total} réponses</span>` : `<span class="chip chip-new">Nouveau</span>`;
+    const kind = s.officiel ? "Annale officielle" : s.lycee ? "Approfondissement" : s.entrainement ? "Entraînement rapide" : "Sujet type";
     const top = s.texte
       ? `<span class="sujet-num">${sujetName(s)}</span><span class="sujet-genre">${esc(s.genre)}</span>`
-      : `<span class="sujet-num">${s.officiel ? "Annale officielle" : s.lycee ? "Approfondissement" : "Sujet type"}</span><span class="sujet-genre">noté sur ${sujetTotal(s)}</span>`;
+      : `<span class="sujet-num">${kind}</span><span class="sujet-genre">${DATA.domaines ? esc(DATA.domaines[s.domaine] || "") : `noté sur ${sujetTotal(s)}`}</span>`;
     const body = s.texte
       ? `<span class="sujet-title">${esc(s.oeuvre)}</span><span class="sujet-author">${esc(s.auteur)}, ${esc(s.date)}</span><span class="sujet-theme">Réflexion : ${esc(s.theme)}</span>`
       : `<span class="sujet-title">${esc(s.titre)}</span><span class="sujet-theme">${esc(s.theme)}</span>`;
@@ -126,13 +134,30 @@
     </button>`;
   }
 
+  const visibleSujets = () => DATA.sujets.filter((s) => !DATA.domaines || domaine === "tous" || s.domaine === domaine);
+
+  function renderDomains() {
+    const box = $("study-domains"), guide = $("study-guide");
+    if (!DATA.domaines) { box.hidden = true; guide.hidden = true; return; }
+    box.hidden = false;
+    const n = (d) => DATA.sujets.filter((s) => d === "tous" || s.domaine === d).length;
+    box.innerHTML = [["tous", "Tous les domaines"], ...Object.entries(DATA.domaines)].map(([k, label]) =>
+      `<button type="button" class="type-chip dom-chip" data-domaine="${k}" aria-pressed="${k === domaine}">${esc(label)} <small>${n(k)}</small></button>`).join("");
+    guide.hidden = !DATA.guide;
+    if (DATA.guide && !guide.dataset.filled) {
+      guide.innerHTML = `<summary>Ce qui peut tomber en histoire-géo-EMC : le programme passé au crible</summary><div class="guide-body">${DATA.guide}</div>`;
+      guide.dataset.filled = "1";
+    }
+  }
+
   function renderList() {
     renderIntro();
-    $("study-sujets").innerHTML = DATA.sujets.map(cardHTML).join("");
+    renderDomains();
+    $("study-sujets").innerHTML = visibleSujets().map(cardHTML).join("");
 
     const counts = {};
-    for (const s of DATA.sujets) for (const { q } of allQuestions(s)) counts[q.type] = (counts[q.type] || 0) + 1;
-    $("study-types").innerHTML = Object.entries(DATA.types).map(([k, label]) =>
+    for (const s of visibleSujets()) for (const { q } of allQuestions(s)) counts[q.type] = (counts[q.type] || 0) + 1;
+    $("study-types").innerHTML = Object.entries(DATA.types).filter(([k]) => counts[k]).map(([k, label]) =>
       `<button type="button" class="type-chip" data-type="${k}" aria-pressed="false">${esc(label)} <small>${counts[k] || 0}</small></button>`).join("");
     renderTypeList(null);
   }
@@ -145,7 +170,7 @@
       return;
     }
     const items = [];
-    for (const s of DATA.sujets) for (const { p, q } of allQuestions(s)) if (q.type === type) {
+    for (const s of visibleSujets()) for (const { p, q } of allQuestions(s)) if (q.type === type) {
       const done = progress[s.id] && progress[s.id].evals[qkey(p, q)];
       const where = s.texte ? `${esc(s.auteur)} · <em>${esc(s.oeuvre)}</em>` : esc(sujetName(s));
       items.push(`<li><button type="button" class="type-item" data-open="${s.id}" data-q="${qkey(p, q)}">
@@ -176,14 +201,14 @@
 
     const head = hasText ? "" : `<header class="sujet-head">
         ${s.source ? `<p class="sujet-source">${esc(s.source)}</p>` : ""}
-        <p class="sujet-meta">Calculatrice autorisée · noté sur ${sujetTotal(s)} · justifie tes réponses, sauf mention contraire.</p>
+        <p class="sujet-meta">${matiere === "maths" ? `Calculatrice autorisée · noté sur ${sujetTotal(s)} · justifie tes réponses, sauf mention contraire.` : s.entrainement ? `${allQuestions(s).length} questions · réponds de tête, puis vérifie.` : `${esc((DATA.domaines || {})[s.domaine] || "")} · noté sur ${sujetTotal(s)} · appuie-toi sur les documents et sur tes connaissances.`}</p>
         ${s.remarque ? `<p class="sujet-remarque">${esc(s.remarque)}</p>` : ""}
       </header>`;
 
     $("study-questions").innerHTML = head + s.parties.map((p) => `
       <section class="partie" aria-labelledby="partie-${p.id}">
         <header class="partie-head">
-          <h3 id="partie-${p.id}"><span>${esc(partLabel(p))}</span> ${esc(p.titre)}</h3>
+          <h3 id="partie-${p.id}"><span>${esc(partLabel(p))}</span> ${esc(p.titre || "")}</h3>
           <span class="partie-pts" data-partie="${p.id}">${pts(p.points)}</span>
         </header>
         ${p.intro ? `<div class="partie-intro math">${p.intro}</div>` : ""}
@@ -196,7 +221,7 @@
   function questionHTML(p, q, e) {
     const k = qkey(p, q);
     const ev = e.evals[k];
-    const big = q.type === "expression";
+    const big = q.type === "expression" && matiere === "francais";
     return `<article class="question" id="q-${k}" data-key="${k}">
       <header class="question-head">
         <span class="question-num">${partShort(p)} · ${esc(q.id)}</span>
@@ -208,7 +233,7 @@
       ${q.passage ? `<blockquote class="question-passage">${underline(q.passage)}</blockquote>` : ""}
       <label class="sr-only" for="a-${k}">Ta réponse</label>
       <textarea id="a-${k}" class="answer-input${big ? " big" : ""}" data-key="${k}" rows="${big ? 16 : 4}"
-        placeholder="${big ? "Rédige ton développement : introduction, deux ou trois parties, conclusion…" : matiere === "maths" ? "Écris ta démarche et ton résultat…" : "Écris ta réponse ici…"}">${esc(e.answers[k] || "")}</textarea>
+        placeholder="${big ? "Rédige ton développement : introduction, deux ou trois parties, conclusion…" : matiere === "maths" ? "Écris ta démarche et ton résultat…" : q.type === "expression" ? "Write your answer here…" : "Écris ta réponse ici…"}">${esc(e.answers[k] || "")}</textarea>
       <div class="question-actions">
         <button type="button" class="btn btn-ghost btn-sm reveal-btn" data-key="${k}" aria-expanded="${ev ? "true" : "false"}" aria-controls="c-${k}">
           ${ev ? "Masquer le corrigé" : "Voir le corrigé"}
@@ -243,10 +268,11 @@
       if (el) el.textContent = ev ? `${fmtPts(got)} / ${pts(p.points)}` : pts(p.points);
     }
     const sur10 = (sc.got / total) * 10;
+    const conversion = total !== 10 && matiere !== "epreuve2" && !current.entrainement;
     $("study-score").innerHTML = sc.evaluated
-      ? `<strong>${fmtPts(sc.got)}</strong> / ${total}${total !== 10 ? ` <small>soit ${fmtPts(sur10)} / 10 au concours</small>` : ""}`
+      ? `<strong>${fmtPts(sc.got)}</strong> / ${total}${conversion ? ` <small>soit ${fmtPts(sur10)} / 10 au concours</small>` : ""}`
       : `<small>${sc.answered} / ${sc.total} réponses</small>`;
-    const warn = Math.abs(sc.evaluated - total) < 1e-9 && sur10 <= 2.5;
+    const warn = Math.abs(sc.evaluated - total) < 1e-9 && sur10 <= 2.5 && matiere !== "epreuve2" && !current.entrainement;
     $("study-score").classList.toggle("danger", warn);
     $("study-score").title = warn ? "Une note égale ou inférieure à 2,5 / 10 est éliminatoire." : "";
   }
@@ -361,6 +387,8 @@
   study.addEventListener("click", (ev) => {
     const open = ev.target.closest("[data-open]");
     if (open) { openSujet(open.dataset.open, open.dataset.q); return; }
+    const dom = ev.target.closest(".dom-chip");
+    if (dom) { domaine = dom.dataset.domaine; renderList(); return; }
     const type = ev.target.closest(".type-chip");
     if (type) { renderTypeList(type.getAttribute("aria-pressed") === "true" ? null : type.dataset.type); return; }
     const reveal = ev.target.closest(".reveal-btn");

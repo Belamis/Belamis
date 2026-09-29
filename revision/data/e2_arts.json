@@ -1,0 +1,417 @@
+{
+ "sujets": [
+  {
+   "id": "arts-sujet0",
+   "num": 1,
+   "domaine": "arts",
+   "titre": "Sujet 0 officiel – Mère migrante, romantisme, danse en images",
+   "theme": "Questionner la ressemblance ; la période romantique en musique ; la danse en images",
+   "officiel": true,
+   "source": "Sujet 0 du CRPE externe bac+3, seconde épreuve d'admissibilité, domaine 2 – Arts (devenirenseignant.gouv.fr, 11 juin 2025). Énoncés retranscrits fidèlement ; les images sont remplacées par un cartel et une description.",
+   "remarque": "Le sujet 0 ne donne pas de barème. Barème indicatif proposé : arts plastiques 7 points (3,5 + 3,5), éducation musicale 7 points (4 + 3), histoire des arts 6 points. Au titre d'une session, seules deux des trois composantes sont retenues : le barème réel sera donc réparti autrement. Corrigés rédigés par le préparateur, non officiels.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Arts plastiques",
+     "short": "AP",
+     "titre": "Questionner la ressemblance (photographie, peinture, sculpture)",
+     "points": 7,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 1 – Dorothea Lange, <em>Migrant Mother</em></p><p class=\"cartel\">Dorothea LANGE (1895-1965), <em>Migrant mother, Nipoma, California</em> (Mère migrante, Nipoma, Californie), 1936, tirage gélatino-argentique, 28,3 x 21,8 cm, Museum of Modern Art, New York. <em>Destitute pea pickers in California. Mother of seven children. Age thirty-two, Nicoma, California</em> (Ramasseurs de pois ruinés en Californie. Mère de sept enfants, âgée de 32 ans).</p><p><strong>Description (l'image n'est pas reproduite ici).</strong> Photographie en noir et blanc, de format vertical, cadrée en plan rapproché. Au centre, une femme d'une trentaine d'années est vue de face, en buste ; son visage, marqué de rides au front et autour des yeux, est tourné légèrement vers la gauche de l'image et son regard se porte hors du cadre. Elle porte la main droite à son menton, les doigts repliés contre la joue. Ses cheveux sont tirés en arrière ; elle porte un vêtement à carreaux usé, à l'encolure ouverte.</p><p>De part et d'autre de la mère, deux jeunes enfants aux cheveux courts et ébouriffés sont appuyés contre ses épaules ; ils tournent le dos à l'objectif et cachent leur visage. Sur ses genoux, en bas de l'image, un nourrisson enveloppé dans une couverture claire est partiellement visible. À droite, un poteau vertical, au premier plan, borde l'image ; le fond, flou et clair, laisse deviner une toile de tente. La lumière, diffuse, éclaire surtout le visage et la main de la femme.</p><p>Remarque : la légende officielle reprend les graphies du sujet (« Nipoma », « Nicoma ») ; le lieu est en réalité Nipomo, en Californie. <a href=\"https://commons.wikimedia.org/wiki/File:Lange-MigrantMother02.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p><p class=\"doc-src\">Source : sujet 0 du CRPE externe bac+3, devenirenseignant.gouv.fr, 11 juin 2025 (image remplacée par une description).</p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "arts-plastiques",
+       "points": 3.5,
+       "enonce": "<p>Cette célèbre photographie de Dorothea Lange est-elle un témoignage objectif ou une mise en scène ?</p>",
+       "corrige": "<p><strong>Problématique.</strong> La photographie passe pour une empreinte fidèle du réel ; mais toute image résulte de choix. <em>Migrant Mother</em> est à la fois un document et une image construite.</p>\n<p><strong>1. Un témoignage.</strong> Dorothea Lange travaille en 1936 pour la Resettlement Administration (future Farm Security Administration), chargée de documenter la misère des travailleurs agricoles pendant la Grande Dépression. La photographie est prise sur le vif, dans un camp de cueilleurs de pois ; la légende, factuelle (lieu, âge, nombre d'enfants), relève du reportage. Le procédé photographique garantit l'existence du modèle : cette femme (identifiée plus tard comme Florence Owens Thompson) était bien là.</p>\n<p><strong>2. Une mise en scène.</strong> L'image est la dernière d'une courte série (six vues environ) : Lange s'est rapprochée progressivement, a choisi l'angle, le cadrage serré, et fait poser les enfants, qui détournent le visage. Elle a éliminé le contexte anecdotique pour ne garder que la figure maternelle. Le tirage a en outre été retouché (un pouce visible au premier plan a été effacé du négatif). La composition pyramidale et le geste de la main rappellent l'iconographie de la Vierge à l'Enfant ou de la <em>Mélancolie</em>.</p>\n<p class=\"answer\">Ce n'est donc ni un pur témoignage ni une fiction : c'est un <strong>témoignage mis en forme</strong>, une photographie documentaire qui assume des choix esthétiques pour rendre la misère visible et émouvoir le public (et les décideurs). Elle pose la question de la ressemblance : l'image est fidèle à un être réel mais devient un symbole universel.</p>\n<p><strong>En classe :</strong> comparer plusieurs vues de la série, faire recadrer une photographie pour en changer le sens, débattre : « une photo dit-elle toujours la vérité ? » (éducation aux médias).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "arts-plastiques",
+       "points": 3.5,
+       "enonce": "<p>Quels éléments (lumière, cadrage, expression du visage) renforcent l'effet de réalisme et de ressemblance ? Quels éléments sont au service de l'effet esthétique ?</p>",
+       "corrige": "<p><strong>Effets de réalisme et de ressemblance.</strong></p>\n<ul><li><strong>Le procédé</strong> : le tirage gélatino-argentique, la netteté et la précision des détails (rides, cheveux, tissu usé, ongles) produisent un effet de vérité ; le noir et blanc, associé au reportage, renforce le caractère documentaire.</li>\n<li><strong>Le cadrage</strong> serré, à hauteur de visage, installe une proximité avec le modèle ; le spectateur est placé face à elle, comme un témoin.</li>\n<li><strong>L'expression</strong> : front plissé, bouche tendue, regard perdu hors champ ; ce visage singulier, non idéalisé, est celui d'une personne réelle et reconnaissable.</li></ul>\n<p><strong>Effets esthétiques.</strong></p>\n<ul><li><strong>La lumière</strong> diffuse, douce, sculpte le visage et la main, laissant le reste dans des gris ; elle hiérarchise l'image et dramatise le visage.</li>\n<li><strong>La composition</strong> : structure pyramidale fermée, symétrie des deux enfants qui encadrent la mère, visage au centre ; les têtes détournées des enfants concentrent l'attention sur la mère et l'universalisent.</li>\n<li><strong>Le geste</strong> de la main au menton, traditionnel de la méditation et de la mélancolie dans la peinture, et les nombreuses lignes (bras, poteau, plis) rythment la surface.</li></ul>\n<p class=\"answer\">Les mêmes moyens servent les deux effets : le cadrage et la lumière qui rendent le visage « vrai » en font aussi une icône. La ressemblance individuelle se double d'une portée symbolique : « la mère migrante » représente toute une population.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Éducation musicale",
+     "short": "EM",
+     "titre": "La période romantique en musique",
+     "points": 7,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 2 – Citation</p><p>« Le romantisme représente avant tout l'aventure du son devenu subjectif : à la limpidité classique s'oppose l'obscurité d'un univers, dans laquelle l'âme erre par des chemins chaque fois différents. […] Le musicien revendique une certaine part d'incompréhension, propre à le rassurer sur sa spécificité et le conforter dans sa lutte pour l'existence. Son art s'adresse à des âmes d'élite, qui ont subi l'initiation par la souffrance. »</p><p class=\"doc-src\">Source : Marie-Claire Beltrando-Patier, <em>Histoire de la musique</em>, Bordas, 1982, pp. 371-372.</p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "musique",
+       "points": 4,
+       "enonce": "<p>En prenant appui sur la citation ci-dessus, donner trois exemples musicaux susceptibles de démontrer que l'on peut s'évader en musique pour affirmer sa subjectivité. Préciser les dates de la période concernée, les noms des compositeurs des œuvres choisies en exemple et en justifier la pertinence.</p>",
+       "corrige": "<p><strong>La période.</strong> Le romantisme musical couvre approximativement le XIXe siècle : il s'amorce avec les dernières œuvres de Beethoven et avec Schubert (années 1810-1820) et se prolonge jusqu'au tournant du XXe siècle (Mahler, Richard Strauss). Contre l'équilibre classique, le compositeur y exprime son moi, ses passions, ses rêves.</p>\n<p><strong>Trois exemples.</strong></p>\n<ol><li><strong>Franz Schubert, <em>Winterreise</em> (Le Voyage d'hiver), 1827</strong>, cycle de 24 lieder pour voix et piano sur des poèmes de Wilhelm Müller : un amoureux éconduit erre dans un paysage d'hiver. Le piano figure la marche, le vent, le tilleul ; l'errance extérieure traduit une errance intérieure (« l'âme erre »), la souffrance est la matière même de l'œuvre.</li>\n<li><strong>Hector Berlioz, <em>Symphonie fantastique</em>, 1830</strong> : symphonie à programme qui raconte les rêves d'un jeune artiste passionné, jusqu'au cauchemar du « Songe d'une nuit du sabbat ». Une « idée fixe » mélodique représente la femme aimée et revient transformée. L'œuvre est une autobiographie rêvée : le son devient subjectif, l'orchestre traduit des visions.</li>\n<li><strong>Frédéric Chopin, Nocturnes pour piano (années 1830-1840)</strong> ou <strong>Robert Schumann, <em>Scènes d'enfants</em>, 1838 (« Rêverie »)</strong> : pièces brèves, intimes, où la mélodie chantante, le rubato et les nuances délicates invitent à la rêverie et à la confidence ; le piano devient l'instrument du moi.</li></ol>\n<p class=\"answer\">Chaque exemple montre une évasion (voyage, rêve, nuit) mise au service de l'expression personnelle : c'est bien « l'aventure du son devenu subjectif ».</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "musique",
+       "points": 3,
+       "enonce": "<p>Questionner la place laissée à l'esprit romantique dans la musique de nos jours, exemples à l'appui.</p>",
+       "corrige": "<p><strong>Un héritage très présent.</strong></p>\n<ul><li><strong>La musique de film</strong> reprend l'orchestre symphonique post-romantique et le principe du leitmotiv hérité de Wagner : John Williams (<em>Star Wars</em>, à partir de 1977) ou Howard Shore (<em>Le Seigneur des anneaux</em>, 2001-2003) associent un thème à un personnage et cherchent à susciter l'émotion et l'évasion dans un monde imaginaire.</li>\n<li><strong>La chanson et les musiques actuelles</strong> cultivent l'expression du moi, la mélancolie, l'amour malheureux : la ballade, la chanson à texte (Barbara, Jacques Brel) ou certaines pièces pour piano « néoclassiques » (Ludovico Einaudi) prolongent la confidence et la rêverie du nocturne.</li>\n<li>La figure de l'artiste incompris, marginal, qui a souffert, reste un motif fort de l'image des musiciens (rock, rap).</li></ul>\n<p><strong>Des limites.</strong> Une partie de la création savante du XXe siècle s'est construite contre le romantisme (néoclassicisme de Stravinsky, sérialisme, musique répétitive), et la musique d'aujourd'hui s'adresse moins à des « âmes d'élite » qu'à un large public, via les industries culturelles.</p>\n<p class=\"answer\">L'esprit romantique survit surtout comme langage de l'émotion (grands orchestres, mélodies expressives, expression du moi), davantage que comme posture élitiste.</p>\n<p><strong>En classe :</strong> comparer une page de Berlioz et un thème de musique de film ; faire nommer les émotions ressenties et les éléments musicaux qui les produisent.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E3",
+     "label": "Histoire des arts",
+     "short": "HDA",
+     "titre": "La danse en images (photographie, peinture, sculpture)",
+     "points": 6,
+     "intro": "<p>Répondre à la question ci-dessous en formulant une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 3 – Bruno Réquillart, <em>Nijinsky, clown de Dieu</em></p><p class=\"cartel\">Bruno Réquillart (1947- ), <em>Nijinsky, clown de Dieu</em>, 1971, photographie d'un moment du ballet de Maurice Béjart créé en 1971.</p><p><strong>Description (l'image n'est pas reproduite ici ; œuvre protégée).</strong> Photographie en noir et blanc, de format horizontal. Sur un fond entièrement noir, une dizaine de danseurs sont saisis en plein saut, tous suspendus en l'air au même instant, au-dessus d'une bande claire horizontale qui figure le sol de la scène, en bas de l'image.</p><p>Les corps, clairs, vêtus de collants ou de justaucorps près du corps, sont vus de face ou de trois quarts et se chevauchent en partie. Les danseurs ont les genoux fléchis, les pieds tendus, la tête inclinée vers l'avant ; leurs bras sont largement écartés à l'horizontale ou levés, ce qui produit un enchevêtrement de lignes. Certaines figures, aux bords de l'image, sont coupées par le cadre. La lumière vient d'en haut et fait ressortir les corps sur le noir.</p><p class=\"doc-src\">Source : sujet 0 du CRPE externe bac+3, devenirenseignant.gouv.fr (image remplacée par une description).</p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "hda",
+       "points": 6,
+       "enonce": "<p>Selon vous, l'acte de photographier la danse relève-t-il d'une entreprise documentaire ou d'un geste artistique à part entière ?</p>",
+       "corrige": "<p><strong>Introduction.</strong> La danse est un art de l'éphémère : le mouvement disparaît dès qu'il est accompli. La photographie, qui fige un instant, paraît d'abord un moyen de conserver une trace ; mais elle transforme aussi ce qu'elle montre.</p>\n<p><strong>1. Une entreprise documentaire.</strong> Photographier un ballet permet de garder la mémoire d'une chorégraphie, d'une distribution, de costumes, d'une scénographie. Ici, la photographie atteste une création de Maurice Béjart (1971) et témoigne du travail collectif de sa troupe ; elle sert aux archives, à la presse, à l'histoire de la danse. Depuis les chronophotographies de Muybridge et de Marey (années 1880), la photographie sert aussi à analyser le mouvement.</p>\n<p><strong>2. Un geste artistique.</strong> Le photographe choisit l'instant (le sommet du saut, où tous les corps sont en apesanteur), le cadrage (des corps coupés qui suggèrent une foule sans limite), le contraste (corps clairs sur fond noir), le format horizontal qui accentue l'effet de frise. Il crée une image qui n'existe pas pour le spectateur de la salle : l'arrêt sur image rend visible ce que l'œil ne peut saisir, et donne l'illusion d'un vol collectif. L'image a sa propre composition, son rythme, comme un tableau ou un bas-relief.</p>\n<p class=\"answer\">Photographier la danse est donc d'abord documentaire mais devient un geste artistique dès que le photographe interprète le mouvement : l'image est alors une œuvre seconde, un dialogue entre deux arts (danse et photographie).</p>\n<p><strong>Ouverture :</strong> Degas peignant et sculptant les danseuses, les photographies de Lois Greenfield ; en classe, faire danser les élèves puis photographier « l'instant décisif » et comparer les choix.</p>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "arts-arnolfini-vivaldi",
+   "num": 2,
+   "domaine": "arts",
+   "titre": "Le miroir de Van Eyck, l'orage de Vivaldi, le corps idéal",
+   "theme": "Ressemblance et mimesis ; le paysage en musique (Vivaldi) ; la représentation de l'être humain (canon)",
+   "officiel": false,
+   "source": "Sujet original conforme au format du sujet 0 et au programme des sessions 2027 et suivantes.",
+   "remarque": "Les trois composantes sont proposées pour l'entraînement ; le jour du concours, seules deux seront retenues.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Arts plastiques",
+     "short": "AP",
+     "titre": "Questionner la ressemblance : le portrait peint",
+     "points": 7,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 1 – Jan van Eyck, <em>Les Époux Arnolfini</em></p><p class=\"cartel\">Jan van Eyck (vers 1390-1441), <em>Portrait de Giovanni Arnolfini et de son épouse</em>, dit <em>Les Époux Arnolfini</em>, 1434, huile sur panneau de chêne, 82,2 x 60 cm, National Gallery, Londres.</p><p><strong>Description.</strong> Dans une chambre, un homme et une femme se tiennent debout, en pied, de part et d'autre de l'axe central. L'homme, à gauche, porte un grand chapeau noir et un ample manteau sombre bordé de fourrure ; il lève la main droite, paume tournée vers le spectateur, et tient de sa main gauche la main droite de la femme. Celle-ci, à droite, porte une robe verte à longue traîne bordée de fourrure et une coiffe blanche ; de la main gauche, elle retient contre son ventre les plis de sa robe.</p><p>Au fond de la pièce, sur le mur, un miroir convexe rond, dont le cadre est orné de petits médaillons, reflète la pièce vue de dos : on y distingue le couple et, dans l'encadrement d'une porte, deux autres personnages. Au-dessus du miroir, une inscription latine peinte en lettres gothiques : « Johannes de eyck fuit hic 1434 » (« Jan van Eyck fut ici »). Un chapelet est suspendu à côté du miroir.</p><p>Un lustre de cuivre à une seule bougie allumée pend du plafond. À gauche, une fenêtre ouverte laisse entrer la lumière ; des oranges sont posées sur le rebord et sur un coffre. À droite, un lit aux tentures rouges. Au premier plan, un petit chien au poil ébouriffé ; à gauche, une paire de sabots de bois posés sur le plancher. Les matières (fourrure, étoffes, métal, bois) sont rendues avec une grande minutie. <a href=\"https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "arts-plastiques",
+       "points": 3.5,
+       "enonce": "<p>Par quels moyens plastiques Jan van Eyck produit-il un puissant effet de ressemblance, aussi bien pour les personnages que pour les objets ?</p>",
+       "corrige": "<p><strong>1. La technique de la peinture à l'huile.</strong> Van Eyck perfectionne la peinture à l'huile appliquée en fins glacis superposés : la couleur gagne en profondeur et en éclat, les transitions sont fondues, ce qui permet de rendre les reflets du cuivre, la douceur de la fourrure, la transparence du verre et le velouté des étoffes.</p>\n<p><strong>2. La minutie du détail.</strong> Chaque élément est décrit avec précision, au pinceau très fin : poils du chien, grains du chapelet, clous du plancher, médaillons du miroir. L'œil peut s'approcher sans que l'illusion se défasse.</p>\n<p><strong>3. La lumière.</strong> Une lumière naturelle, venue de la fenêtre à gauche, unifie la scène : ombres portées, modelé des visages et des mains, reflets sur le lustre et les oranges. Elle crée du volume et une atmosphère cohérente.</p>\n<p><strong>4. L'espace.</strong> La perspective empirique (lignes du plancher et des poutres convergeant vers le fond) et le miroir convexe, qui montre la pièce en entier, donnent l'impression d'une chambre réelle dans laquelle le spectateur pourrait entrer.</p>\n<p><strong>5. La singularité des visages.</strong> Les traits de l'homme (visage allongé, paupières lourdes) ne sont pas idéalisés : c'est un portrait individuel, reconnaissable.</p>\n<p class=\"answer\">La ressemblance naît de l'union d'une technique nouvelle (l'huile), d'une observation minutieuse, d'une lumière unifiée et d'un espace construit : c'est la <em>mimesis</em>, l'imitation fidèle du réel, portée à un très haut degré au XVe siècle flamand.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "arts-plastiques",
+       "points": 3.5,
+       "enonce": "<p>Le miroir convexe et l'inscription « Johannes de eyck fuit hic 1434 » invitent à dépasser la simple ressemblance. Expliquez pourquoi, puis proposez une situation d'apprentissage en arts plastiques, au cycle 3, autour du miroir et du reflet.</p>",
+       "corrige": "<p><strong>Au-delà de la ressemblance.</strong></p>\n<ul><li>Le <strong>miroir</strong> est un tour de force (l'image déformée d'une pièce entière dans un petit disque) mais aussi un commentaire sur la peinture elle-même : le tableau est, comme le miroir, une surface qui reflète le monde. Il fait apparaître des personnages absents de la scène principale, placés à l'endroit où se tient le spectateur, et élargit l'espace au-delà du cadre.</li>\n<li>L'<strong>inscription</strong>, écrite comme un graffiti ou un acte officiel, affirme la présence du peintre (« fut ici ») : elle fait du tableau un témoignage, une sorte d'attestation. Le peintre est à la fois témoin et auteur ; il signe son habileté.</li>\n<li>Les objets ont pu recevoir une portée symbolique (bougie unique, chien, sabots ôtés, chapelet) : la peinture ne se contente pas de copier, elle construit du sens. Leur interprétation reste discutée par les historiens de l'art.</li></ul>\n<p><strong>Situation d'apprentissage (cycle 3).</strong> Consigne : « Faites entrer dans votre dessin quelque chose qu'on ne devrait pas voir. » Les élèves observent leur reflet dans des surfaces courbes (cuillères, boules de Noël, papier miroir), en dessinent la déformation, puis intègrent un miroir dessiné ou collé dans une composition représentant la classe. Verbalisation : qu'est-ce qui ressemble ? qu'est-ce qui change ? Mise en relation avec l'œuvre de Van Eyck et, en ouverture, avec <em>Les Ménines</em> de Velázquez (1656).</p>\n<p class=\"answer\">Le miroir et l'inscription montrent que la ressemblance est aussi un discours du peintre sur son art et sur le regard.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Éducation musicale",
+     "short": "EM",
+     "titre": "Le paysage en musique : Vivaldi, « L'été », Presto",
+     "points": 7,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 2 – Antonio Vivaldi, « L'été », 3e mouvement</p><p class=\"cartel\">Antonio Vivaldi (1678-1741), « L'été » (<em>L'estate</em>), Concerto pour violon, cordes et basse continue en sol mineur, op. 8 n° 2, RV 315, 3e mouvement : Presto. Extrait du recueil <em>Il cimento dell'armonia e dell'inventione</em>, publié à Amsterdam en 1725.</p>\n<p>Chacun des quatre premiers concertos du recueil (<em>Les Quatre Saisons</em>) est précédé d'un sonnet, peut-être écrit par Vivaldi lui-même. Voici le dernier tercet du sonnet de « L'été », qui correspond au Presto :</p>\n<p><em>Ah che pur troppo i suoi timor son veri<br>Tuona e fulmina il Ciel e grandinoso<br>Tronca il capo alle spiche e a' grani alteri.</em></p>\n<p>Traduction : « Hélas ! ses craintes ne sont que trop fondées : le ciel tonne et lance des éclairs, et la grêle tranche la tête des épis et des blés altiers. » (Il s'agit des craintes du berger, évoquées au tercet précédent.)</p>\n<p class=\"doc-src\">Source : texte du sonnet publié avec la partition (1725, domaine public) ; traduction du préparateur.</p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "musique",
+       "points": 4,
+       "enonce": "<p>Présentez cette œuvre (contexte, genre, formation) puis montrez, en vous appuyant sur des éléments précis du langage musical, comment Vivaldi traduit en musique le paysage d'orage décrit par le sonnet.</p>",
+       "corrige": "<p><strong>Contexte et genre.</strong> Vivaldi, prêtre et violoniste virtuose vénitien, est l'une des grandes figures du baroque italien. Le recueil op. 8 (douze concertos), publié à Amsterdam en 1725, s'ouvre sur <em>Les Quatre Saisons</em>. « L'été » est un <strong>concerto de soliste</strong> en trois mouvements (vif – lent – vif) : un violon soliste dialogue avec l'orchestre (le <em>tutti</em>). Le Presto est construit sur le principe de la <strong>ritournelle</strong> : un refrain orchestral revient, entrecoupé d'épisodes virtuoses du soliste. C'est aussi une <strong>musique descriptive</strong>, à programme avant la lettre, puisque le sonnet guide l'écoute.</p>\n<p><strong>Formation.</strong> Violon solo, orchestre à cordes (violons I et II, altos) et basse continue (violoncelles, contrebasse, clavecin ou orgue).</p>\n<p><strong>La traduction de l'orage.</strong></p>\n<ul><li><strong>Tempo</strong> presto et <strong>mode mineur</strong> (sol mineur) : urgence, inquiétude, violence.</li>\n<li><strong>Notes répétées</strong> rapides en <strong>trémolo</strong> à l'orchestre : grondement du tonnerre, crépitement de la grêle ou de la pluie.</li>\n<li><strong>Gammes descendantes</strong> fulgurantes et <strong>arpèges</strong> brisés : zébrures des éclairs, chute de la grêle qui « tranche » les épis.</li>\n<li><strong>Nuances</strong> contrastées (forte / piano) et opposition tutti / solo : alternance des rafales et des accalmies ; le violon soliste, par sa virtuosité (traits rapides, grands sauts), incarne l'élément déchaîné.</li>\n<li>La <strong>pulsation</strong> motorique et implacable figure l'énergie continue de la tempête.</li></ul>\n<p class=\"answer\">Vivaldi ne décrit pas le paysage au sens pictural : il en traduit le mouvement et l'énergie par des figures musicales (figuralisme), que le sonnet permet d'identifier.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "musique",
+       "points": 3,
+       "enonce": "<p>Proposez une séquence brève permettant à des élèves de cycle 3 d'écouter ce mouvement de manière active et de s'engager dans une pratique musicale (voix, corps, percussions corporelles ou instruments simples).</p>",
+       "corrige": "<p><strong>Objectifs</strong> (programme de cycle 3 : écouter, comparer et commenter ; explorer, imaginer et créer ; chanter et interpréter) : identifier des éléments du langage musical (tempo, nuances, mode, alternance soliste / orchestre) et les relier à une intention descriptive.</p>\n<ol><li><strong>Écoute « à l'aveugle »</strong> sans donner le titre : « Quel temps fait-il dans cette musique ? » Relever les impressions, puis les justifier par des éléments entendus (c'est très rapide, ça gronde, ça descend…).</li>\n<li><strong>Écoute guidée</strong> avec une consigne précise : lever la main quand le violon joue seul, la baisser quand tout l'orchestre joue (repérage de la forme ritournelle). Construire au tableau un « musicogramme » simple (couleurs pour tutti / solo, flèches pour les gammes descendantes).</li>\n<li><strong>Lecture du sonnet</strong> traduit : mise en relation du texte et des procédés (éclairs = gammes rapides, tonnerre = notes répétées).</li>\n<li><strong>Pratique</strong> : créer collectivement un « orage sonore » en percussions corporelles (frottements, claquements de doigts, pieds, mains sur les cuisses) avec un chef d'orchestre qui indique crescendo et decrescendo ; enregistrer puis comparer avec Vivaldi.</li>\n<li><strong>Chant</strong> en ouverture : un chant à répertoire sur l'été ou la pluie, pour travailler nuances et tempo.</li></ol>\n<p class=\"answer\">La séquence articule écoute active, vocabulaire musical précis et pratique : l'élève comprend que la musique peut « peindre » un paysage par le mouvement.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E3",
+     "label": "Histoire des arts",
+     "short": "HDA",
+     "titre": "La représentation de l'être humain : le canon",
+     "points": 6,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 3 – Le Doryphore</p><p class=\"cartel\">D'après Polyclète (sculpteur grec, actif vers 450-420 av. J.-C.), <em>Le Doryphore</em> (« le porteur de lance »), copie romaine en marbre d'un original en bronze perdu (vers 440 av. J.-C.), hauteur environ 2 m, découverte à Pompéi, Musée archéologique national de Naples.</p><p><strong>Description.</strong> Statue en ronde-bosse d'un jeune homme nu, debout, grandeur plus que nature. Le poids du corps repose sur la jambe droite, tendue ; la jambe gauche est fléchie et ramenée en arrière, seul l'avant du pied touchant le sol. Le bras droit pend le long du corps ; le bras gauche est plié, la main semblant tenir un objet aujourd'hui disparu (une lance). La tête, aux cheveux courts, est légèrement tournée et inclinée vers la droite. La musculature est nettement dessinée. Un tronc d'arbre sculpté, contre la jambe droite, sert de support. <a href=\"https://commons.wikimedia.org/wiki/File:Doryphoros_MAN_Napoli_Inv6011-2.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div><div class=\"doc\"><p class=\"doc-title\">Document 4 – Léonard de Vinci, <em>L'Homme de Vitruve</em></p><p class=\"cartel\">Léonard de Vinci (1452-1519), <em>Étude des proportions du corps humain selon Vitruve</em>, dite <em>L'Homme de Vitruve</em>, vers 1490, plume et encre sur papier, environ 34 x 25 cm, Gallerie dell'Accademia, Venise.</p><p><strong>Description.</strong> Dessin à l'encre d'un homme nu, vu de face, représenté dans deux positions superposées : bras tendus à l'horizontale et jambes jointes, puis bras levés en oblique et jambes écartées. La figure est inscrite à la fois dans un carré et dans un cercle, dont le centre coïncide avec le nombril. Des traits fins marquent des divisions sur les bras et le corps. Au-dessus et au-dessous du dessin, un texte manuscrit, écrit en miroir, de droite à gauche. <a href=\"https://commons.wikimedia.org/wiki/File:Da_Vinci_Vitruve_Luc_Viatour.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "hda",
+       "points": 3,
+       "enonce": "<p>Qu'est-ce qu'un « canon » en art ? Montrez comment ces deux œuvres, séparées de près de deux millénaires, cherchent à représenter un être humain idéal plutôt qu'un individu singulier.</p>",
+       "corrige": "<p><strong>Définition.</strong> Un <strong>canon</strong> est un système de proportions idéales du corps humain, fondé sur un rapport mathématique entre les parties et le tout (par exemple, la hauteur de la tête par rapport à la taille totale). Polyclète a exposé le sien dans un traité, le <em>Canon</em>, aujourd'hui perdu, dont le Doryphore serait l'illustration.</p>\n<p><strong>Le Doryphore.</strong> Le corps est idéalisé : proportions harmonieuses, musculature équilibrée, visage impersonnel et calme. Le <strong>contrapposto</strong> (jambe d'appui / jambe libre, épaules et hanches inclinées en sens inverse) donne vie à la statue tout en respectant un équilibre. On ne représente pas un athlète précis mais le modèle de l'homme beau et bon (idéal grec de la <em>kalokagathia</em>).</p>\n<p><strong>L'Homme de Vitruve.</strong> Léonard illustre un passage de l'architecte romain Vitruve (Ier siècle av. J.-C.), qui affirme que le corps bien proportionné s'inscrit dans le cercle et le carré. Le dessin est une démonstration : l'homme est mesure de toute chose, et son corps relie les formes géométriques parfaites, image de l'harmonie du monde (humanisme de la Renaissance).</p>\n<p class=\"answer\">Dans les deux cas, la représentation de l'être humain relève de la recherche d'une beauté idéale, mesurable et universelle, et non de la ressemblance avec un modèle particulier.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "hda",
+       "points": 3,
+       "enonce": "<p>Comment faire découvrir ces deux œuvres à des élèves de cycle 3, en lien avec les mathématiques (mesure, géométrie) et avec la pratique artistique ?</p>",
+       "corrige": "<p><strong>Démarche.</strong></p>\n<ol><li><strong>Observer et décrire</strong> les deux œuvres (reproductions, puis vidéo tournant autour d'une copie du Doryphore) : position du corps, matériau, ce qui semble « parfait ». Situer les œuvres sur une frise chronologique (Antiquité grecque, Renaissance) et sur une carte.</li>\n<li><strong>Mesurer</strong> : par binômes, les élèves mesurent leur envergure (bras écartés) et leur taille avec une ficelle, puis comparent (elles sont proches, comme l'affirme Vitruve) ; ils cherchent combien de fois leur tête « entre » dans leur taille et découvrent que le rapport change avec l'âge (un enfant n'a pas les proportions d'un adulte).</li>\n<li><strong>Géométrie</strong> : reproduire le dispositif de Léonard (tracer un carré et un cercle au compas, y inscrire une silhouette), travail sur le centre et le rayon.</li>\n<li><strong>Pratique</strong> : prendre la pose du contrapposto, la photographier, puis modeler une petite figurine en argile en respectant une jambe d'appui et une jambe libre.</li>\n<li><strong>Trace</strong> dans le carnet culturel : fiche d'identité des œuvres et vocabulaire (canon, proportions, contrapposto, ronde-bosse, copie romaine).</li></ol>\n<p class=\"answer\">La démarche fait comprendre par l'expérience que l'idéal représenté est une construction, qui diffère des corps réels, et relie histoire des arts, mathématiques et pratique plastique.</p>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "arts-mueck-smetana",
+   "num": 3,
+   "domaine": "arts",
+   "titre": "Corps vrais et corps déformés, la Moldau, le roi et les glaneuses",
+   "theme": "Ressemblance en sculpture ; le paysage en musique (Smetana) ; la représentation de l'être humain (pouvoir et travail)",
+   "officiel": false,
+   "source": "Sujet original conforme au format du sujet 0 et au programme des sessions 2027 et suivantes.",
+   "remarque": "Les œuvres de Ron Mueck et d'Alberto Giacometti sont protégées : elles sont seulement décrites, sans lien. Rechercher des reproductions sur les sites des institutions qui les conservent.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Arts plastiques",
+     "short": "AP",
+     "titre": "Questionner la ressemblance : hyperréalisme et déformation",
+     "points": 7,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 1 – Ron Mueck, <em>A Girl</em></p><p class=\"cartel\">Ron Mueck (né en 1958), <em>A Girl</em>, 2006, techniques mixtes (sculpture hyperréaliste), environ 5 m de long, Scottish National Gallery of Modern Art, Édimbourg.</p><p><strong>Description (œuvre protégée, non reproduite).</strong> Sculpture d'un nouveau-né de très grande taille, couché sur le dos à même le sol. Le corps, nu, est rendu avec une grande précision : peau plissée et marbrée, traces de sang, cheveux fins et collés, ongles, cordon ombilical encore attaché. Le spectateur tourne autour de l'œuvre et se trouve, par comparaison, beaucoup plus petit que le bébé.</p></div><div class=\"doc\"><p class=\"doc-title\">Document 2 – Alberto Giacometti, <em>L'Homme qui marche I</em></p><p class=\"cartel\">Alberto Giacometti (1901-1966), <em>L'Homme qui marche I</em>, 1960, bronze, hauteur environ 1,80 m ; œuvre éditée en plusieurs épreuves, conservées dans des collections publiques et privées.</p><p><strong>Description (œuvre protégée, non reproduite).</strong> Figure d'homme nu, debout, en ronde-bosse, saisie en train de marcher : une jambe en avant, l'autre en arrière, le buste légèrement penché vers l'avant, les bras le long du corps. Le corps est extrêmement mince et allongé, la tête très petite. La surface du bronze est rugueuse, bosselée, portant les traces du modelage. Les pieds, de grande taille, sont pris dans un socle épais et bas.</p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "arts-plastiques",
+       "points": 3.5,
+       "enonce": "<p>Comparez les moyens par lesquels ces deux sculptures représentent le corps humain. Laquelle vous paraît la plus « ressemblante » ? Justifiez votre réponse.</p>",
+       "corrige": "<p><strong>Ron Mueck : l'hyperréalisme.</strong> Matériaux imitant la chair (silicone, résine, pigments), poils et cheveux implantés, détails anatomiques exacts (plis, veines, sang) : l'illusion du vivant est saisissante, comme chez Duane Hanson, qui moulait des personnages quotidiens grandeur nature dans les années 1970. Mais Mueck joue sur l'<strong>échelle</strong> : le nouveau-né, agrandi démesurément, provoque un malaise et un regard neuf. La ressemblance parfaite des détails se combine à une invraisemblance d'ensemble.</p>\n<p><strong>Giacometti : la déformation.</strong> Le corps est étiré, amaigri, la surface est accidentée ; aucun détail anatomique n'est précisé. Pourtant la figure capte l'essentiel : la silhouette humaine, l'élan de la marche, la solitude de l'individu dans l'espace. Giacometti disait chercher à rendre la figure telle qu'il la voyait à distance, et non telle qu'on la sait.</p>\n<p class=\"answer\">Mueck est plus ressemblant à l'échelle du détail (ressemblance mimétique, visuelle) ; Giacometti est ressemblant à l'échelle de la perception et de l'expérience (ressemblance « expressive » : c'est bien ainsi qu'on voit un homme au loin). La question de la ressemblance dépend donc de ce que l'on veut rendre : l'apparence ou la présence.</p>\n<p><strong>Vocabulaire mobilisé :</strong> ronde-bosse, modelage, moulage, échelle, matériau, surface, mimesis, déformation, expressivité.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "arts-plastiques",
+       "points": 3.5,
+       "enonce": "<p>Le changement d'échelle et le traitement de la matière modifient-ils la relation entre l'œuvre et le spectateur ? Vous proposerez un dispositif de pratique plastique pour le cycle 3.</p>",
+       "corrige": "<p><strong>Échelle.</strong> Face à <em>A Girl</em>, le spectateur, rapetissé, éprouve physiquement la puissance de la naissance ; l'agrandissement transforme l'attendrissement en étrangeté. Mueck réalise aussi des figures très réduites (<em>Dead Dad</em>, 1996-1997, corps de son père mort, à échelle réduite) : la ressemblance est troublée par la taille. Giacometti, avec une figure à taille humaine mais très mince, crée une distance : l'homme paraît lointain même de près.</p>\n<p><strong>Matière.</strong> La peau lisse de Mueck invite à s'approcher, presque à toucher, et produit un effet de présence inquiétant (le « vrai » semble vivant mais immobile). Le bronze rugueux de Giacometti garde l'empreinte des doigts du sculpteur : on voit le geste de l'artiste autant que l'homme représenté.</p>\n<p class=\"answer\">Oui : l'échelle et la matière déterminent la place du corps du spectateur (surplomb, proximité, distance) et ses émotions ; la ressemblance n'est jamais neutre.</p>\n<p><strong>Dispositif (cycle 3, « la représentation plastique et les dispositifs de présentation », « la matérialité de la production plastique ») :</strong> les élèves réalisent deux figurines du même personnage : l'une en pâte à modeler lisse, la plus fidèle possible ; l'autre en fil de fer et plâtre ou papier mâché, étirée et rugueuse. Ils les photographient à différentes hauteurs et distances (contre-plongée, gros plan, en situation dans la cour) pour jouer sur l'échelle, puis verbalisent : « laquelle ressemble le plus ? laquelle est la plus vivante ? ».</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Éducation musicale",
+     "short": "EM",
+     "titre": "Le paysage en musique : Smetana, « La Moldau »",
+     "points": 7,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 3 – Bedřich Smetana, « La Moldau »</p><p class=\"cartel\">Bedřich Smetana (1824-1884), <em>Vltava</em> (« La Moldau »), poème symphonique, 1874, deuxième des six poèmes symphoniques du cycle <em>Má vlast</em> (« Ma patrie »), composé entre 1874 et 1879. Durée : environ 12 minutes.</p>\n<p>Programme de l'œuvre, résumé d'après la préface du compositeur : deux sources, l'une froide, l'autre chaude, jaillissent dans la forêt de Bohême ; leurs eaux se rejoignent et forment la Vltava. La rivière traverse des forêts où résonne une chasse, puis des prairies où l'on célèbre une noce paysanne. La nuit, les nymphes dansent au clair de lune. La rivière franchit ensuite les rapides de Saint-Jean, s'élargit et arrive majestueusement à Prague, où elle passe au pied de l'antique forteresse de Vyšehrad, avant de disparaître au loin.</p>\n<p class=\"doc-src\">Source : programme résumé et reformulé par le préparateur.</p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "musique",
+       "points": 4,
+       "enonce": "<p>Qu'est-ce qu'un poème symphonique ? Montrez, à l'aide d'exemples précis de timbres, de nuances et de caractère, comment Smetana fait entendre le parcours de la rivière.</p>",
+       "corrige": "<p><strong>Le genre.</strong> Le <strong>poème symphonique</strong>, créé par Franz Liszt au milieu du XIXe siècle, est une œuvre pour orchestre en un seul mouvement, qui suit un <strong>programme</strong> extra-musical (poème, récit, tableau, paysage). C'est une forme de <strong>musique à programme</strong> caractéristique du romantisme.</p>\n<p><strong>Le parcours de la rivière.</strong></p>\n<ul><li><strong>Les sources</strong> : deux lignes rapides et ondoyantes confiées aux flûtes, puis aux clarinettes, sur des pizzicati de violons et des notes de harpe : timbres légers, nuance piano, texture transparente.</li>\n<li><strong>Le thème de la rivière</strong> (mi mineur, mesure à 6/8), large et chantant, aux violons, sur un accompagnement en croches continues qui figure l'écoulement : c'est le « fil conducteur » qui revient à plusieurs reprises.</li>\n<li><strong>La chasse</strong> : appels de cors et de trompettes, nuance forte.</li>\n<li><strong>La noce paysanne</strong> : rythme de <strong>polka</strong> en mode majeur, caractère joyeux et dansant, emprunté à la musique populaire.</li>\n<li><strong>Le clair de lune et les nymphes</strong> : tempo apaisé, nuances piano, cordes aiguës en valeurs longues, bois et harpe ; atmosphère suspendue, mystérieuse.</li>\n<li><strong>Les rapides de Saint-Jean</strong> : fortissimo, cuivres, timbales et cymbales, tourbillons des cordes : sommet dramatique.</li>\n<li><strong>L'arrivée à Prague</strong> : le thème de la rivière passe en mi majeur, puis les cuivres énoncent le thème de Vyšehrad (repris du premier poème du cycle) ; decrescendo final, comme si la rivière s'éloignait, conclu par deux accords forte.</li></ul>\n<p class=\"answer\">L'orchestre « raconte » un paysage en mouvement : chaque épisode a son timbre et son caractère, unifiés par le retour du thème de la rivière.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "musique",
+       "points": 3,
+       "enonce": "<p>En quoi « La Moldau » est-elle aussi une œuvre engagée ? Comment l'exploiter à l'école élémentaire, en lien avec la géographie et l'expression orale ?</p>",
+       "corrige": "<p><strong>Une œuvre nationale.</strong> Au XIXe siècle, la Bohême fait partie de l'Empire d'Autriche ; les Tchèques affirment leur identité culturelle (langue, histoire, musique). Smetana, figure de l'école nationale tchèque, compose <em>Ma patrie</em> comme un hymne à son pays : la rivière relie les paysages, les traditions populaires (la polka), les légendes (les nymphes) et l'histoire (Vyšehrad, lieu légendaire des origines de Prague). Le thème de la rivière est proche d'une mélodie populaire connue dans plusieurs pays d'Europe. Composée alors que Smetana devenait sourd (1874), l'œuvre est aussi un paysage intérieur.</p>\n<p><strong>Exploitation (cycles 2 et 3).</strong></p>\n<ol><li>Situer la Vltava sur une carte (source, Prague, confluence avec l'Elbe) et dessiner le trajet de la rivière.</li>\n<li>Écouter des extraits choisis sans commentaire et demander aux élèves d'imaginer le paysage ; puis lire le programme et associer chaque extrait à une étape (jeu d'appariement images / extraits).</li>\n<li>Réaliser collectivement un « musicogramme » sur une longue bande de papier : la rivière dessinée s'élargit, les épisodes sont illustrés, les nuances indiquées par l'épaisseur du trait.</li>\n<li>Expression orale : chaque groupe présente un épisode en justifiant par le vocabulaire musical (instruments, fort / doux, rapide / lent, joyeux / mystérieux).</li>\n<li>Chanter le thème de la rivière sur une syllabe ou sur des paroles inventées par la classe.</li></ol>\n<p class=\"answer\">L'œuvre permet de relier écoute, géographie, histoire et langage, en montrant qu'un paysage peut porter une identité collective.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E3",
+     "label": "Histoire des arts",
+     "short": "HDA",
+     "titre": "La représentation de l'être humain : le corps du roi, le corps au travail",
+     "points": 6,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 4 – Hyacinthe Rigaud, <em>Louis XIV</em></p><p class=\"cartel\">Hyacinthe Rigaud (1659-1743), <em>Louis XIV, roi de France, en costume de sacre</em>, 1701, huile sur toile, 277 x 194 cm, musée du Louvre, Paris.</p><p><strong>Description.</strong> Portrait en pied, de format vertical, grandeur nature. Le roi, âgé, se tient debout, le corps de trois quarts et le visage tourné vers le spectateur ; il porte une grande perruque brune bouclée. Il est vêtu du manteau du sacre en velours bleu semé de fleurs de lys d'or, doublé d'hermine, rejeté sur l'épaule pour dégager les jambes, gainées de bas blancs, et des souliers à talons rouges. Il porte l'épée au côté. De la main droite, il tient un sceptre retourné, pointe en bas, appuyé sur un coussin ; la main gauche est posée sur la hanche.</p><p>À gauche, sur un tabouret recouvert de velours, sont posées la couronne et la main de justice. À l'arrière-plan, à gauche, une colonne sur un haut socle orné d'un relief ; en haut, un lourd rideau rouge et or occupe toute la largeur du tableau. Le sol est dallé. <a href=\"https://commons.wikimedia.org/wiki/File:Hyacinthe_Rigaud,_Portrait_de_Louis_XIV_en_grand_manteau_royal,_1701-1702,_Paris,_mus%C3%A9e_du_Louvre.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div><div class=\"doc\"><p class=\"doc-title\">Document 5 – Jean-François Millet, <em>Des glaneuses</em></p><p class=\"cartel\">Jean-François Millet (1814-1875), <em>Des glaneuses</em>, 1857, huile sur toile, 83,5 x 110 cm, musée d'Orsay, Paris.</p><p><strong>Description.</strong> Au premier plan d'un champ moissonné, trois paysannes, vues de profil ou de dos, ramassent les épis restés au sol. Deux d'entre elles sont courbées jusqu'à terre, l'une la main tendue vers le sol, l'autre tenant une poignée d'épis dans le dos ; la troisième, à droite, est à demi penchée. Elles portent des vêtements simples et des coiffes de couleur (bleu, rouge, jaune). Leurs visages sont peu détaillés.</p><p>À l'arrière-plan, sous un ciel clair, s'étend une vaste plaine où l'on distingue de hautes meules, une charrette chargée, de nombreux moissonneurs et, à droite, un homme à cheval. La lumière chaude, dorée, baigne l'ensemble. <a href=\"https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "hda",
+       "points": 3,
+       "enonce": "<p>Analysez comment Hyacinthe Rigaud met en scène le corps du roi. Ce portrait cherche-t-il d'abord la ressemblance ou la représentation du pouvoir ?</p>",
+       "corrige": "<p><strong>Un portrait d'apparat.</strong> Le format monumental, la pose en pied, le point de vue légèrement en contre-plongée placent le spectateur en position de sujet face au souverain.</p>\n<p><strong>Les attributs du pouvoir.</strong> Manteau fleurdelisé et hermine (monarchie française), couronne, sceptre, main de justice, épée (l'épée dite de Charlemagne, symbole de la continuité dynastique) : le tableau énumère les insignes du sacre. La colonne évoque la stabilité et la grandeur ; le rideau, un décor de théâtre qui révèle le roi.</p>\n<p><strong>Un corps double.</strong> Le visage est ressemblant, sans flatterie : Louis XIV a 63 ans, les traits marqués, les joues creusées. Mais les jambes, fines et élégantes, mises en valeur par les bas blancs et la pose de danseur, rappellent le roi jeune, qui dansait dans les ballets de cour. Le tableau associe le corps mortel de l'homme et le corps immortel de la fonction royale.</p>\n<p class=\"answer\">La ressemblance du visage est au service d'un discours politique : le portrait est d'abord une image du pouvoir absolu, une « icône » de la monarchie, copiée et diffusée dans les résidences royales et les ambassades.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "hda",
+       "points": 3,
+       "enonce": "<p>Comparez la représentation de l'être humain chez Rigaud et chez Millet. Que révèle cette comparaison de l'évolution des sujets dignes d'être peints entre 1701 et 1857 ?</p>",
+       "corrige": "<p><strong>Oppositions.</strong></p>\n<ul><li><strong>Statut</strong> : un individu unique, nommé, au sommet de la société / des anonymes, au bas de l'échelle sociale (les glaneuses ramassent ce que laissent les moissonneurs, un droit accordé aux plus pauvres).</li>\n<li><strong>Posture</strong> : corps droit, immobile, qui se donne à voir / corps courbés vers le sol, absorbés dans un travail répétitif, qui ne regardent pas le spectateur.</li>\n<li><strong>Visage</strong> : portrait ressemblant / visages à peine esquissés : c'est le geste, non l'individu, qui compte.</li>\n<li><strong>Décor</strong> : palais théâtral / champ ouvert ; le contraste entre l'abondance de la moisson au fond et la pauvreté du premier plan.</li></ul>\n<p><strong>Évolution.</strong> Au XVIIe siècle, la hiérarchie des genres place en haut la peinture d'histoire et le portrait des grands. Au milieu du XIXe siècle, avec le réalisme (Courbet, Millet), le travailleur ordinaire devient un sujet digne du grand format et d'une composition solennelle : Millet donne aux glaneuses une monumentalité presque sculpturale. Au Salon de 1857, le tableau a d'ailleurs été critiqué par certains comme une image dérangeante de la misère.</p>\n<p class=\"answer\">La comparaison montre le passage d'une peinture qui célèbre le pouvoir à une peinture qui rend visible et digne le peuple au travail.</p>\n<p><strong>En classe :</strong> faire mimer les deux postures, puis nommer ce qu'elles expriment ; relier au programme d'histoire (monarchie absolue ; XIXe siècle, monde rural).</p>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "arts-portrait-nougaro",
+   "num": 4,
+   "domaine": "arts",
+   "titre": "Le portrait peint et photographié, « Toulouse » de Nougaro",
+   "theme": "Questionner la ressemblance (peinture, photographie) ; le paysage en musique (Nougaro)",
+   "officiel": false,
+   "source": "Sujet original conforme au format du sujet 0 et au programme des sessions 2027 et suivantes ; configuration à deux composantes, comme le jour du concours.",
+   "remarque": "Les paroles de « Toulouse » sont protégées : aucune n'est citée ; le contenu est présenté par une description. Écouter la chanson avant de traiter la partie Éducation musicale.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Arts plastiques",
+     "short": "AP",
+     "titre": "Questionner la ressemblance : portrait peint, portrait photographié",
+     "points": 10,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 1 – Élisabeth Vigée Le Brun, <em>Marie-Antoinette à la rose</em></p><p class=\"cartel\">Élisabeth Louise Vigée Le Brun (1755-1842), <em>Marie-Antoinette dite « à la rose »</em>, 1783, huile sur toile, château de Versailles.</p><p><strong>Description.</strong> Portrait de format vertical, cadré à mi-jambes. La reine se tient debout, le corps de trois quarts tourné vers la droite, le visage tourné vers le spectateur. Ses cheveux poudrés, gonflés, sont surmontés d'une coiffure de tissu gris-vert ornée de grandes plumes. Elle porte une robe de soie bleu-gris aux reflets brillants, décolletée, garnie de dentelles et d'un nœud rayé sur la poitrine, un double rang de perles au cou et des bracelets de perles.</p><p>D'une main, elle tient une rose rose épanouie, avec sa tige et ses feuilles ; de l'autre, un ruban. Le visage est clair, les joues rosées, la bouche esquisse un sourire. Le fond est un paysage de parc assombri : feuillages foncés, une trouée de ciel bleu, des roses dans un buisson en bas à droite. <a href=\"https://commons.wikimedia.org/wiki/File:Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div><div class=\"doc\"><p class=\"doc-title\">Document 2 – Nadar, <em>Sarah Bernhardt</em></p><p class=\"cartel\">Nadar (Gaspard-Félix Tournachon, 1820-1910), <em>Portrait de Sarah Bernhardt</em>, vers 1864, photographie (épreuve sur papier albuminé d'après un négatif sur verre).</p><p><strong>Description.</strong> Photographie monochrome, aux tons bruns, de format vertical, cadrée à mi-corps. Une jeune femme est vue à mi-corps, le buste tourné vers la droite, la tête de trois quarts, le regard dirigé hors du cadre. Sa chevelure sombre est abondante et frisée. Elle appuie la joue contre sa main droite, le coude posé sur un socle ou une colonne tronquée visible à gauche.</p><p>Elle est enveloppée dans une grande étoffe claire et épaisse, aux plis nombreux, bordée de franges, qui laisse une épaule nue. Le fond est neutre, uni, dégradé du clair au sombre ; aucun décor ni accessoire ne distrait du visage et du drapé. <a href=\"https://commons.wikimedia.org/wiki/File:Sarah_Bernhardt_by_F%C3%A9lix_Nadar.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "arts-plastiques",
+       "points": 5,
+       "enonce": "<p>Comparez ces deux portraits : quels moyens chacun met-il en œuvre pour produire la ressemblance ? En quoi le portrait est-il aussi une construction de l'image sociale du modèle ?</p>",
+       "corrige": "<p><strong>Le portrait peint : ressemblance et convention.</strong> Vigée Le Brun, peintre attitrée de la reine, rend les matières avec virtuosité (soie, dentelle, perles, plumes), fond les couleurs pour un modelé délicat du visage. Mais elle embellit : teint lumineux, sourire aimable, pose gracieuse. Le tableau a une histoire révélatrice : au Salon de 1783, un premier portrait montrait la reine dans une simple robe de mousseline blanche (« en gaule »), ce qui fut jugé indigne d'une reine ; Vigée Le Brun peignit alors cette version, en robe de soie. La ressemblance est donc encadrée par les règles du rang : il faut ressembler, mais à une reine.</p>\n<p><strong>Le portrait photographique : l'empreinte et la pose.</strong> La photographie enregistre mécaniquement les traits : la ressemblance semble garantie par le procédé. Pourtant Nadar construit l'image : fond neutre, lumière douce et latérale (venue de la verrière de son atelier), drapé ample qui évoque la sculpture antique, geste de la main à la joue, regard détourné qui suggère la rêverie. Il ne cherche pas à montrer le costume du rang social mais la personnalité, ce qu'il appelait « la ressemblance intime ». Sarah Bernhardt, jeune comédienne, y apparaît déjà comme une figure romantique.</p>\n<p><strong>Points communs.</strong> Pose étudiée, choix de l'éclairage, du cadrage et des accessoires (rose, perles / drapé, colonne) : les deux portraits fabriquent une image publique.</p>\n<p class=\"answer\">Peint ou photographié, le portrait ne se contente jamais d'enregistrer : il associe ressemblance physique et mise en scène d'une identité (reine gracieuse, artiste inspirée). La ressemblance est un effet construit.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "arts-plastiques",
+       "points": 5,
+       "enonce": "<p>La photographie d'identité est une forme de portrait régie par des normes. En vous appuyant sur les documents, proposez une séquence d'arts plastiques au cycle 3 qui conduise les élèves à passer du portrait « ressemblant » au portrait « expressif ».</p>",
+       "corrige": "<p><strong>Analyse préalable.</strong> La photo d'identité obéit à des normes strictes (fond uni clair, visage de face, expression neutre, bouche fermée, sans accessoire) : elle vise une ressemblance objective, utile à l'identification, en supprimant toute expression. À l'inverse, Nadar et Vigée Le Brun choisissent pose, lumière et attributs pour révéler un caractère ou un statut.</p>\n<p><strong>Séquence (quatre à cinq séances).</strong></p>\n<ol><li><strong>Déclencheur</strong> : les élèves se photographient mutuellement selon les normes de la photo d'identité (tablette, fond blanc). On observe : « Est-ce vraiment toi ? Qu'est-ce qui manque ? »</li>\n<li><strong>Expérimentation</strong> : même modèle, mais en faisant varier un seul paramètre à la fois : cadrage (gros plan, plan américain), angle (plongée, contre-plongée), lumière (lampe de poche latérale, contre-jour), pose (main à la joue comme chez Nadar), accessoire significatif (objet qu'on aime, comme la rose de la reine).</li>\n<li><strong>Production</strong> : chacun réalise un « portrait qui me ressemble vraiment » (photographie ou dessin à partir de la photographie), en choisissant ses moyens pour exprimer un trait de sa personnalité.</li>\n<li><strong>Mise en relation</strong> avec les œuvres : observer Vigée Le Brun et Nadar, puis un autoportrait déformant (Van Gogh, Picasso) pour ouvrir sur l'expression.</li>\n<li><strong>Verbalisation et exposition</strong> : accrochage face aux photos d'identité ; chaque élève explique ses choix avec le vocabulaire (cadrage, point de vue, lumière, pose, attribut).</li></ol>\n<p><strong>Compétences travaillées</strong> : expérimenter, produire, créer ; s'exprimer, analyser sa pratique ; se repérer dans les domaines liés aux arts plastiques. <strong>Vigilance</strong> : droit à l'image des élèves (autorisations, usage limité à la classe).</p>\n<p class=\"answer\">La séquence fait comprendre que la ressemblance « administrative » n'est qu'une forme de portrait et que l'artiste choisit ce qu'il donne à voir.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Éducation musicale",
+     "short": "EM",
+     "titre": "Le paysage en musique : Nougaro, « Toulouse »",
+     "points": 10,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 3 – Claude Nougaro, « Toulouse »</p><p class=\"cartel\">Claude Nougaro (1929-2004), « Toulouse » (paru d'abord sous le titre « Ô Toulouse »), chanson, texte de Claude Nougaro, arrangement et direction d'orchestre de Christian Chevallier, 45 tours Philips, 1967. Durée : environ 4 min 20.</p>\n<p><strong>Présentation (sans citation des paroles, protégées).</strong> Né à Toulouse, Claude Nougaro écrit cette chanson à Paris, loin de sa ville natale. Il y fait le portrait de la ville par une suite d'images sensibles : couleurs (la brique rouge, l'eau verte du canal du Midi, les violettes), monuments (la basilique Saint-Sernin, le Capitole), bruits et souvenirs d'enfance dans le quartier des Minimes, jusqu'aux avions de Blagnac. La ville y apparaît à la fois tendre et rude. Le refrain reprend l'exclamation d'un chant en occitan du XIXe siècle, <em>La Toulousaine</em>. Selon le chanteur, la mélodie trouve son origine dans le carillon de l'église des Minimes entendu dans son enfance. La chanson est devenue un hymne officieux de la ville.</p>\n<p class=\"doc-src\">Source : présentation rédigée par le préparateur.</p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "musique",
+       "points": 5,
+       "enonce": "<p>Situez cette œuvre (genre, auteur, époque) et montrez comment texte et musique s'unissent pour dessiner le « paysage » d'une ville. Quels éléments devriez-vous repérer à l'écoute ?</p>",
+       "corrige": "<p><strong>Genre et contexte.</strong> « Toulouse » appartient à la <strong>chanson française</strong> dite « à texte », où le poème est central. Nougaro, parolier et chanteur, est connu pour marier la chanson et le jazz et pour son travail sur les sonorités des mots (« motsicien »). En 1967, la chanson, portée par un arrangement orchestral de Christian Chevallier, s'inscrit dans l'âge d'or de la chanson d'auteur (Brel, Brassens, Ferré, Barbara).</p>\n<p><strong>Un paysage urbain et intime.</strong> Contrairement à Vivaldi ou Smetana, qui peignent la nature avec l'orchestre seul, Nougaro fait d'abord passer le paysage par les <strong>mots</strong> : couleurs, matières, lieux, sons. C'est un portrait de ville, filtré par la mémoire et l'émotion (nostalgie de l'exilé, fierté, souvenir d'une enfance difficile). La musique amplifie ce trajet.</p>\n<p><strong>À repérer à l'écoute.</strong></p>\n<ul><li><strong>La forme</strong> : couplets et refrain ; l'exclamation initiale du refrain, qui revient, sert de point d'ancrage (identité, hymne).</li>\n<li><strong>La voix</strong> : timbre chaud et rocailleux, accent du Sud-Ouest, articulation très marquée (consonnes appuyées, « r » roulés), alternance d'une diction proche de la parole et d'un chant plus lyrique.</li>\n<li><strong>La dynamique</strong> : progression par paliers, <strong>crescendo</strong> et intensification de l'orchestre vers les moments d'exaltation, qui donnent son caractère d'hymne.</li>\n<li><strong>Le tempo</strong> modéré, avec une souplesse expressive (rubato) au service du texte.</li>\n<li><strong>Les timbres</strong> de l'orchestre et le motif mélodique issu d'un carillon : la ville se fait entendre par ses cloches.</li></ul>\n<p class=\"answer\">Texte et musique construisent ensemble un paysage sonore et affectif : la ville devient un personnage, que la voix célèbre avec une ferveur croissante.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "musique",
+       "points": 5,
+       "enonce": "<p>Comment exploiter cette chanson en classe (cycle 3) pour écouter, chanter et créer, en tenant compte du fait qu'on ne peut pas faire apprendre toutes les chansons du répertoire adulte ? Vous mettrez cette œuvre en regard d'au moins une des deux autres œuvres du programme (Vivaldi, Smetana).</p>",
+       "corrige": "<p><strong>Choix pédagogiques.</strong> Le texte de Nougaro est dense, riche en images et en jeux sonores, parfois difficile ; le chant intégral n'est pas indispensable. On peut faire chanter le refrain seul (ambitus, souffle, nuances) ou un extrait choisi, après étude du sens.</p>\n<p><strong>Proposition de séquence.</strong></p>\n<ol><li><strong>Écoute</strong> : première écoute libre (« De quoi parle cette chanson ? Quel sentiment exprime le chanteur ? »), puis écoute ciblée : repérer le refrain, le crescendo, la voix parlée / chantée.</li>\n<li><strong>Étude du texte</strong> (lien avec le français) : relever les images des cinq sens, les couleurs, les lieux ; situer ces lieux sur un plan de Toulouse (lien avec la géographie).</li>\n<li><strong>Chant</strong> : apprendre le refrain par imitation, travailler la diction (articulation des consonnes), la justesse et un crescendo collectif.</li>\n<li><strong>Création</strong> : écrire, sur le modèle de Nougaro, un court texte « portrait de ma ville / de mon village » (images sensorielles), puis le dire en rythme ou le poser sur un motif mélodique simple ; enregistrer un paysage sonore du quartier (cloches, marché, cour de récréation).</li>\n<li><strong>Mise en réseau</strong> : comparer avec « La Moldau » de Smetana. Points communs : un hommage à un lieu aimé, la fierté d'une identité (nationale / locale), un parcours qui mène à la ville (Prague / Toulouse), une progression vers l'exaltation. Différences : orchestre sans paroles et programme écrit chez Smetana, chanson avec texte chez Nougaro ; nature et fleuve d'un côté, ville vécue de l'autre. On peut aussi opposer l'orage de Vivaldi, paysage naturel imité par des figures musicales.</li></ol>\n<p class=\"answer\">La chanson devient un support pour écouter, chanter, écrire et comparer différentes façons de faire entendre un paysage (imitation, programme, évocation poétique).</p>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "arts-trompe-oeil-paysage",
+   "num": 5,
+   "domaine": "arts",
+   "titre": "Illusion et expression, trois paysages en musique, le corps réinventé",
+   "theme": "Ressemblance : trompe-l'œil et expression ; le paysage en musique (synthèse Vivaldi, Smetana, Nougaro) ; la représentation de l'être humain (Préhistoire, Picasso)",
+   "officiel": false,
+   "source": "Sujet original conforme au format du sujet 0 et au programme des sessions 2027 et suivantes.",
+   "remarque": "La question d'éducation musicale suppose l'écoute préalable des trois œuvres du programme. L'œuvre de Picasso est protégée : elle est seulement décrite, sans lien.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Arts plastiques",
+     "short": "AP",
+     "titre": "Questionner la ressemblance : illusion et expression",
+     "points": 7,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 1 – Pere Borrell del Caso, <em>Échapper à la critique</em></p><p class=\"cartel\">Pere Borrell del Caso (1835-1910), <em>Huyendo de la crítica</em> (<em>Échapper à la critique</em>), 1874, huile sur toile, 75,7 x 61 cm, collection de la Banque d'Espagne, Madrid.</p><p><strong>Description.</strong> Un cadre doré est peint à l'intérieur de la toile. Un jeune garçon aux cheveux bruns en bataille semble en sortir : il enjambe le bord inférieur du cadre peint, un pied nu posé en avant sur la bordure, hors du cadre, et ses deux mains agrippent les montants latéraux. Il porte une chemise blanche ouverte sur la poitrine, aux manches retroussées, et un pantalon brun. Son visage, tourné vers la droite, a les yeux écarquillés et la bouche entrouverte. Derrière lui, le fond, à l'intérieur du cadre, est sombre et uni. La signature est visible en bas à gauche. <a href=\"https://commons.wikimedia.org/wiki/File:Flucht_vor_der_Kritik,_Pere_Borrell_del_Caso_-_9626.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div><div class=\"doc\"><p class=\"doc-title\">Document 2 – Vincent van Gogh, <em>Autoportrait</em></p><p class=\"cartel\">Vincent van Gogh (1853-1890), <em>Portrait de l'artiste</em>, septembre 1889, huile sur toile, environ 65 x 54 cm, musée d'Orsay, Paris.</p><p><strong>Description.</strong> Portrait en buste, de trois quarts. Le peintre porte une veste et un gilet bleu-gris. Sa chevelure et sa barbe sont roux orangé ; son visage, maigre, aux traits tendus, présente des ombres vertes et bleutées. Le regard est fixe, la bouche fermée. Le fond, bleu clair, est entièrement couvert de touches épaisses formant des volutes et des arabesques ; les mêmes touches ondulantes, de couleur voisine, se retrouvent dans la veste, si bien que le personnage et le fond semblent se fondre. <a href=\"https://commons.wikimedia.org/wiki/File:Self-Portrait_(Van_Gogh_September_1889).jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "arts-plastiques",
+       "points": 3.5,
+       "enonce": "<p>Qu'est-ce qu'un trompe-l'œil ? Expliquez comment Pere Borrell del Caso joue avec l'illusion de la ressemblance et avec les limites mêmes du tableau.</p>",
+       "corrige": "<p><strong>Définition.</strong> Le <strong>trompe-l'œil</strong> est une représentation si fidèle qu'elle donne l'illusion de la réalité et de la troisième dimension, au point de tromper un instant le regard. Il pousse la <em>mimesis</em> à son extrême ; la légende antique de Zeuxis, dont les raisins peints trompaient les oiseaux, en est la référence.</p>\n<p><strong>Moyens plastiques.</strong> Modelé très poussé (ombres et lumières sur les bras, les plis de la chemise), dessin anatomique précis, fond sombre qui fait « jaillir » le personnage clair (contraste), <strong>raccourcis</strong> (le pied et la main projetés vers nous), ombres portées sur le cadre peint.</p>\n<p><strong>Un jeu sur le cadre.</strong> Le cadre, élément qui sépare traditionnellement la fiction du monde réel, est lui-même peint : le personnage semble franchir la limite et entrer dans l'espace du spectateur. Le titre, humoristique, fait de l'œuvre une réflexion sur la peinture : l'enfant « échappe » au tableau et à ceux qui le jugent (la critique). C'est un tableau sur le tableau.</p>\n<p class=\"answer\">La ressemblance devient un jeu d'esprit : l'illusion est parfaite, mais elle ne fonctionne que parce que nous savons qu'il s'agit d'une peinture ; le plaisir naît de ce va-et-vient entre croyance et lucidité.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "arts-plastiques",
+       "points": 3.5,
+       "enonce": "<p>Opposez l'autoportrait de Van Gogh au tableau de Borrell del Caso : l'expression peut-elle être une autre forme de ressemblance ? Proposez une consigne de pratique pour le cycle 3.</p>",
+       "corrige": "<p><strong>Deux conceptions.</strong> Borrell del Caso cherche la ressemblance visuelle et efface la trace du pinceau pour que l'on oublie la peinture. Van Gogh, au contraire, rend la touche visible : empâtements, volutes, couleurs non naturelles (ombres vertes, fond bleu), contrastes de complémentaires (roux et bleu). Le visage est reconnaissable, mais le tableau montre surtout un état intérieur : tension du regard, agitation du fond qui semble envahir la figure. Van Gogh peint cet autoportrait en 1889, à Saint-Rémy-de-Provence, où il est soigné.</p>\n<p><strong>Une autre ressemblance.</strong> Le portrait expressif ne ressemble pas seulement à l'apparence, il cherche à ressembler à ce que ressent le modèle (ou l'artiste). La couleur et la touche deviennent des moyens d'expression, ce que les expressionnistes du XXe siècle prolongeront.</p>\n<p class=\"answer\">Oui : on peut opposer une ressemblance mimétique (l'apparence) et une ressemblance expressive (l'intériorité) ; les deux sont des choix de l'artiste.</p>\n<p><strong>Consigne (cycle 3) :</strong> « Réalise deux autoportraits à partir d'une même photographie de toi : le premier pour qu'on te reconnaisse, le second pour qu'on sache ce que tu ressens aujourd'hui. » Contraintes pour le second : choisir trois couleurs non naturelles, laisser voir la trace de l'outil (pinceau large, brosse, doigts), faire participer le fond à l'expression. Verbalisation : qu'est-ce qui a changé, qu'est-ce qui reste ressemblant ?</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Éducation musicale",
+     "short": "EM",
+     "titre": "Le paysage en musique : regards croisés",
+     "points": 6,
+     "intro": "<p>Répondre à la question ci-dessous en formulant une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 3 – Le paysage en musique : trois œuvres</p>\n<ul><li>Antonio Vivaldi (1678-1741), « L'été », Concerto pour violon en sol mineur op. 8 n° 2, 3e mouvement (Presto), publié en 1725.</li>\n<li>Bedřich Smetana (1824-1884), « La Moldau » (<em>Vltava</em>), poème symphonique extrait du cycle <em>Ma patrie</em>, 1874.</li>\n<li>Claude Nougaro (1929-2004), « Toulouse », chanson, 1967.</li></ul>\n<p class=\"doc-src\">Œuvres du programme d'éducation musicale des sessions 2027 et suivantes.</p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "musique",
+       "points": 6,
+       "enonce": "<p>À partir de ces trois œuvres, montrez que « faire entendre un paysage » peut prendre des formes très différentes selon l'époque, le genre et la formation. Vous conclurez en indiquant comment faire percevoir ces différences à des élèves de cycle 3.</p>",
+       "corrige": "<p><strong>Introduction.</strong> La musique ne montre rien : elle ne peut représenter un paysage que par analogie (imitation d'un bruit, d'un mouvement), par convention (un programme, un titre) ou par évocation (émotion, souvenir).</p>\n<p><strong>1. Vivaldi (baroque, 1725) : imiter les éléments.</strong> Concerto de soliste pour violon, cordes et basse continue. Le paysage est un phénomène naturel en action, l'orage d'été ; il est traduit par des <strong>figures</strong> musicales (notes répétées en trémolo, gammes descendantes rapides, tempo presto, mode mineur, contrastes forte / piano). Le sonnet qui accompagne la partition oriente l'écoute : c'est une musique descriptive.</p>\n<p><strong>2. Smetana (romantisme, 1874) : raconter un parcours.</strong> Poème symphonique pour grand orchestre, en un mouvement, suivant un programme. Le paysage est un <strong>trajet</strong> dans l'espace et le temps (sources, forêt, noce, nuit, rapides, Prague) ; chaque épisode a ses timbres (flûtes et clarinettes pour les sources, cors pour la chasse, cuivres et percussions pour les rapides), et le retour du thème de la rivière assure l'unité. Le paysage porte une identité nationale.</p>\n<p><strong>3. Nougaro (chanson, 1967) : évoquer une ville vécue.</strong> Chanson pour voix et orchestre : le paysage est urbain et intime ; il passe d'abord par les <strong>mots</strong> (couleurs, lieux, souvenirs) et par l'interprétation vocale (diction, accent, crescendo vers le refrain-hymne). La musique amplifie l'émotion plus qu'elle n'imite.</p>\n<p class=\"answer\">De l'imitation baroque à l'évocation poétique, en passant par le récit orchestral romantique, le « paysage en musique » glisse du monde extérieur vers le paysage intérieur et identitaire ; la présence ou non d'un texte (sonnet, programme, paroles) en est une clé.</p>\n<p><strong>En classe (cycle 3).</strong> Écouter trois courts extraits sans titre et demander : « Qu'est-ce que tu vois ? Qu'est-ce qui te le fait imaginer ? » ; construire un tableau comparatif (formation, tempo, nuances, présence de paroles, type de paysage) ; associer chaque extrait à une image (orage, rivière, ville) et justifier ; créer enfin un court paysage sonore de la classe (bruitages vocaux et corporels), en choisissant d'imiter, de raconter ou d'évoquer.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E3",
+     "label": "Histoire des arts",
+     "short": "HDA",
+     "titre": "La représentation de l'être humain : de la Préhistoire à Picasso",
+     "points": 7,
+     "intro": "<p>Répondre aux deux questions ci-dessous en formulant pour chacune d'elles une réponse courte (15 lignes maximum).</p><div class=\"doc\"><p class=\"doc-title\">Document 4 – La Vénus de Willendorf</p><p class=\"cartel\"><em>Vénus de Willendorf</em>, Paléolithique supérieur (Gravettien), environ 30 000 ans avant le présent, calcaire avec traces d'ocre rouge, hauteur environ 11 cm, découverte en 1908 à Willendorf (Autriche), Muséum d'histoire naturelle (Naturhistorisches Museum), Vienne.</p><p><strong>Description.</strong> Statuette en ronde-bosse d'une femme nue, debout, qui tient dans la main. Les seins, le ventre, les hanches et les cuisses sont très volumineux ; le sexe est marqué. Les bras, minces, reposent sur le haut des seins. Les jambes sont courtes et se terminent sans pieds. La tête, penchée en avant, n'a pas de visage : elle est entièrement couverte de rangées concentriques en relief, qui évoquent une coiffure ou un bonnet. Des traces de pigment rouge subsistent. <a href=\"https://commons.wikimedia.org/wiki/File:Venus_von_Willendorf_01.jpg\" target=\"_blank\" rel=\"noopener\">voir l'œuvre</a></p></div><div class=\"doc\"><p class=\"doc-title\">Document 5 – Pablo Picasso, <em>Les Demoiselles d'Avignon</em></p><p class=\"cartel\">Pablo Picasso (1881-1973), <em>Les Demoiselles d'Avignon</em>, 1907, huile sur toile, 243,9 x 233,7 cm, Museum of Modern Art, New York.</p><p><strong>Description (œuvre protégée, non reproduite).</strong> Grand tableau presque carré. Cinq femmes nues occupent toute la surface, dans un espace sans profondeur fait de draperies anguleuses bleues, blanches et ocre. Les corps, aux tons roses et ocre, sont construits en plans géométriques, avec des contours marqués et des angles vifs.</p><p>À gauche, une femme de profil écarte un rideau. Au centre, deux femmes font face au spectateur, un bras levé derrière la tête ; leurs yeux sont grands et en amande. À droite, les deux dernières figures ont des visages déformés, striés de hachures, qui évoquent des masques : l'une, debout, écarte une draperie ; l'autre, accroupie, est vue de dos mais tourne son visage vers le spectateur. En bas, au centre, une petite nature morte de fruits (raisin, poire, tranche de melon) posée sur une table en pointe.</p></div>",
+     "questions": [
+      {
+       "id": "a",
+       "type": "hda",
+       "points": 3.5,
+       "enonce": "<p>Ces deux œuvres représentent le corps féminin sans chercher la ressemblance avec un modèle. Que cherchent-elles à exprimer ? Appuyez-vous sur une description précise.</p>",
+       "corrige": "<p><strong>La Vénus de Willendorf.</strong> La statuette n'est pas un portrait : pas de visage, des pieds absents, des volumes exagérés (seins, ventre, hanches). Le sculpteur sélectionne et amplifie ce qui compte : la fécondité, l'abondance, peut-être la survie du groupe. Petite, transportable, elle a pu avoir une fonction symbolique ou rituelle, qu'on ignore : le nom de « Vénus », donné par les archéologues au XXe siècle, est un anachronisme. C'est l'une des plus anciennes représentations de l'être humain.</p>\n<p><strong>Les Demoiselles d'Avignon.</strong> Picasso rompt avec la perspective et le modelé hérités de la Renaissance : les corps sont fragmentés en plans, vus sous plusieurs angles à la fois (la femme accroupie, de dos et de face), les visages empruntent à la sculpture ibérique ancienne et aux masques africains et océaniens que Picasso découvre alors à Paris. Le tableau exprime une violence, une confrontation : les figures fixent le spectateur. Il annonce le cubisme.</p>\n<p class=\"answer\">Les deux œuvres privilégient la force symbolique et expressive sur la ressemblance : l'une condense une idée (la fécondité), l'autre invente un langage plastique nouveau pour représenter le corps.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "b",
+       "type": "hda",
+       "points": 3.5,
+       "enonce": "<p>En quoi la mise en relation d'œuvres séparées de plusieurs dizaines de millénaires est-elle pertinente en histoire des arts ? Proposez une démarche pour le cycle 3 qui évite les contresens (notamment sur le terme « primitif »).</p>",
+       "corrige": "<p><strong>Pertinence.</strong> L'histoire des arts ne se réduit pas à une chronologie : elle compare des réponses différentes à une même question, ici « comment représenter un corps humain ? ». Picasso lui-même a regardé des arts anciens ou non européens pour s'affranchir de la tradition académique ; au XXe siècle, de nombreux artistes (Brancusi, Matisse) s'intéressent aux arts préhistoriques et extra-européens. Rapprocher Willendorf et Picasso montre que la déformation n'est ni une maladresse ni une « évolution » vers le réalisme, mais un choix.</p>\n<p><strong>Précautions.</strong> Le terme « art primitif » est daté et porteur d'une hiérarchie : il suppose que certains arts seraient inférieurs ou enfantins. On préfère parler d'arts préhistoriques, d'arts d'Afrique, d'Océanie… et rappeler que les masques qui ont inspiré Picasso appartiennent à des cultures vivantes, avec leurs usages propres. De même, on évite de projeter nos critères de beauté sur la statuette paléolithique.</p>\n<p><strong>Démarche (cycle 3).</strong></p>\n<ol><li>Situer les œuvres sur une frise chronologique à grande échelle (faire mesurer l'écart : 30 000 ans / un peu plus d'un siècle).</li>\n<li>Décrire avant d'interpréter : matériau, taille (faire manipuler un galet de 11 cm), volumes, ce qui est exagéré ou absent.</li>\n<li>Formuler des hypothèses sur la fonction et le sens, puis les confronter aux connaissances des historiens (en disant aussi ce qu'on ne sait pas).</li>\n<li>Pratique : modeler en argile une figure en exagérant une partie du corps pour exprimer une idée (force, écoute, marche…).</li>\n<li>Trace dans le carnet culturel avec le vocabulaire (ronde-bosse, statuette, stylisation, déformation, cubisme).</li></ol>\n<p class=\"answer\">La comparaison apprend aux élèves que représenter l'être humain, c'est toujours choisir, et que chaque choix a un sens dans son contexte.</p>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

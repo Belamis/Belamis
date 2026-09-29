@@ -138,9 +138,9 @@
             <span class="matiere-name">Mathématiques</span>
             <span class="matiere-sub">Épreuve 1 · partie B · 7 sujets</span>
           </button>
-          <button class="matiere" type="button" disabled>
+          <button id="open-epreuve2" class="matiere" type="button" data-matiere="epreuve2">
             <span class="matiere-name">Épreuve 2</span>
-            <span class="matiere-sub">Bientôt</span>
+            <span class="matiere-sub">HG-EMC · sciences · arts · anglais</span>
           </button>
         </div>
       </div>
@@ -162,6 +162,8 @@
         <h2 id="study-heading">Partie A : un texte, <em>trois phases</em>.</h2>
         <p id="study-desc"></p>
       </div>
+      <details id="study-guide" class="study-guide" hidden></details>
+      <div id="study-domains" class="type-chips domains" hidden></div>
       <div class="list-tabs" role="tablist">
         <button class="list-tab" type="button" role="tab" data-panel="sujets" aria-selected="true">Sujets complets</button>
         <button class="list-tab" type="button" role="tab" data-panel="types" aria-selected="false">S'entraîner par type d'exercice</button>
@@ -250,6 +252,7 @@
   <script src="auth.js"></script>
   <script src="data/francais.js"></script>
   <script src="data/maths.js"></script>
+  <script src="data/epreuve2.js"></script>
   <script src="revise.js"></script>
 </body>
 </html>

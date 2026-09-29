@@ -1,0 +1,723 @@
+{
+ "sujets": [
+  {
+   "id": "sci-sujet0",
+   "num": 0,
+   "domaine": "sciences",
+   "titre": "Sujet 0 officiel – La planète bleue",
+   "theme": "Dissolution, masse volumique, circulation océanique, bouée instrumentée et algorithme, photosynthèse et respiration, réseau trophique, savoir et croyance, critères du vivant",
+   "officiel": true,
+   "source": "Sujet 0 du CRPE BAC+3 (devenirenseignant.gouv.fr, 2025), seconde épreuve d’admissibilité, domaine 1",
+   "remarque": "Énoncé officiel retranscrit ; figures redessinées ou décrites. Le sujet 0 ne donne pas de barème : la répartition des 20 points est indicative. Corrigé proposé (non officiel).",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Partie 1",
+     "short": "P. 1",
+     "titre": "Quelques propriétés de l’eau de mer",
+     "points": 5,
+     "intro": "<p><strong>La planète bleue.</strong> Les océans occupent 71 % de la surface de la Terre et constituent 97 % des réserves d’eau sur Terre.</p><p><strong>1.1 Quelques propriétés de l’eau de mer</strong></p><div class=\"doc\"><p class=\"doc-title\">Document 1 – Trois verres identiques</p><figure class=\"fig\"><svg viewBox=\"0 0 440 200\" role=\"img\" aria-label=\"Trois verres identiques : le verre 1 contient un volume v de sel, le verre 2 le même volume v d’eau, le verre 3 un volume V d’eau.\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"140\" width=\"100\" height=\"30\" class=\"shade\" stroke-width=\"0.8\"/><path d=\"M40,20 L40,170 L140,170 L140,20\" class=\"stroke\"/><text x=\"60\" y=\"130\" font-size=\"15\" text-anchor=\"middle\"><tspan font-weight=\"bold\">1</tspan></text><rect x=\"170\" y=\"140\" width=\"100\" height=\"30\" class=\"c-blue\" stroke-width=\"0.8\"/><path d=\"M170,20 L170,170 L270,170 L270,20\" class=\"stroke\"/><text x=\"190\" y=\"130\" font-size=\"15\" text-anchor=\"middle\"><tspan font-weight=\"bold\">2</tspan></text><rect x=\"300\" y=\"50\" width=\"100\" height=\"120\" class=\"c-blue\" stroke-width=\"0.8\"/><path d=\"M300,20 L300,170 L400,170 L400,20\" class=\"stroke\"/><text x=\"320\" y=\"40\" font-size=\"15\" text-anchor=\"middle\"><tspan font-weight=\"bold\">3</tspan></text><text x=\"90\" y=\"192\" font-size=\"12\" text-anchor=\"middle\">sel : volume v</text><text x=\"220\" y=\"192\" font-size=\"12\" text-anchor=\"middle\">eau : volume v</text><text x=\"350\" y=\"192\" font-size=\"12\" text-anchor=\"middle\">eau : volume V</text></svg></figure><ul><li>Le verre n°1 contient un volume <em>v</em> de sel de cuisine.</li><li>Le verre n°2 contient le même volume <em>v</em> d’eau.</li><li>Le verre n°3 contient un volume <em>V</em> d’eau.</li><li>Les trois verres sont identiques et contiennent un volume total <em>v</em> + <em>V</em>.</li></ul></div><div class=\"doc\"><p class=\"doc-title\">Document 2 – Masse volumique de l’eau pure en fonction de la température, à pression atmosphérique</p><figure class=\"fig\"><svg viewBox=\"0 0 560 340\" role=\"img\" aria-label=\"Courbe de la masse volumique de l’eau pure entre 0 et 30 °C : elle passe de 0,99984 g/cm³ à 0 °C à un maximum de 0,99997 g/cm³ vers 4 °C, puis diminue jusqu’à 0,99565 g/cm³ à 30 °C.\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"80.0\" y1=\"30\" x2=\"80.0\" y2=\"290\" class=\"grid\"/><text x=\"80\" y=\"307\" font-size=\"12\" text-anchor=\"middle\">0</text><line x1=\"156.7\" y1=\"30\" x2=\"156.7\" y2=\"290\" class=\"grid\"/><text x=\"156.667\" y=\"307\" font-size=\"12\" text-anchor=\"middle\">5</text><line x1=\"233.3\" y1=\"30\" x2=\"233.3\" y2=\"290\" class=\"grid\"/><text x=\"233.333\" y=\"307\" font-size=\"12\" text-anchor=\"middle\">10</text><line x1=\"310.0\" y1=\"30\" x2=\"310.0\" y2=\"290\" class=\"grid\"/><text x=\"310\" y=\"307\" font-size=\"12\" text-anchor=\"middle\">15</text><line x1=\"386.7\" y1=\"30\" x2=\"386.7\" y2=\"290\" class=\"grid\"/><text x=\"386.667\" y=\"307\" font-size=\"12\" text-anchor=\"middle\">20</text><line x1=\"463.3\" y1=\"30\" x2=\"463.3\" y2=\"290\" class=\"grid\"/><text x=\"463.333\" y=\"307\" font-size=\"12\" text-anchor=\"middle\">25</text><line x1=\"540.0\" y1=\"30\" x2=\"540.0\" y2=\"290\" class=\"grid\"/><text x=\"540\" y=\"307\" font-size=\"12\" text-anchor=\"middle\">30</text><line x1=\"80\" y1=\"262.9\" x2=\"540\" y2=\"262.9\" class=\"grid\"/><text x=\"73\" y=\"266.917\" font-size=\"12\" text-anchor=\"end\">0,996</text><line x1=\"80\" y1=\"208.8\" x2=\"540\" y2=\"208.8\" class=\"grid\"/><text x=\"73\" y=\"212.75\" font-size=\"12\" text-anchor=\"end\">0,997</text><line x1=\"80\" y1=\"154.6\" x2=\"540\" y2=\"154.6\" class=\"grid\"/><text x=\"73\" y=\"158.583\" font-size=\"12\" text-anchor=\"end\">0,998</text><line x1=\"80\" y1=\"100.4\" x2=\"540\" y2=\"100.4\" class=\"grid\"/><text x=\"73\" y=\"104.417\" font-size=\"12\" text-anchor=\"end\">0,999</text><line x1=\"80\" y1=\"46.2\" x2=\"540\" y2=\"46.2\" class=\"grid\"/><text x=\"73\" y=\"50.25\" font-size=\"12\" text-anchor=\"end\">1,000</text><line x1=\"80\" y1=\"290\" x2=\"540\" y2=\"290\" class=\"axis\"/><line x1=\"80\" y1=\"30\" x2=\"80\" y2=\"290\" class=\"axis\"/><text x=\"310\" y=\"330\" font-size=\"13\" text-anchor=\"middle\">Température (°C)</text><text x=\"16\" y=\"160.0\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90 16 160.0)\">Masse volumique (g·cm⁻³)</text><path d=\"M80.0,54.8 L83.8,53.9 L87.7,53.0 L91.5,52.3 L95.3,51.6 L99.2,50.9 L103.0,50.3 L106.8,49.8 L110.7,49.3 L114.5,48.9 L118.3,48.6 L122.2,48.3 L126.0,48.0 L129.8,47.8 L133.7,47.7 L137.5,47.6 L141.3,47.6 L145.2,47.6 L149.0,47.7 L152.8,47.9 L156.7,48.0 L160.5,48.3 L164.3,48.6 L168.2,48.9 L172.0,49.3 L175.8,49.8 L179.7,50.3 L183.5,50.8 L187.3,51.4 L191.2,52.1 L195.0,52.8 L198.8,53.5 L202.7,54.3 L206.5,55.1 L210.3,56.0 L214.2,57.0 L218.0,58.0 L221.8,59.0 L225.7,60.1 L229.5,61.2 L233.3,62.4 L237.2,63.6 L241.0,64.8 L244.8,66.1 L248.7,67.5 L252.5,68.9 L256.3,70.3 L260.2,71.8 L264.0,73.3 L267.8,74.9 L271.7,76.5 L275.5,78.1 L279.3,79.8 L283.2,81.6 L287.0,83.3 L290.8,85.2 L294.7,87.0 L298.5,88.9 L302.3,90.9 L306.2,92.8 L310.0,94.9 L313.8,96.9 L317.7,99.0 L321.5,101.2 L325.3,103.3 L329.2,105.6 L333.0,107.8 L336.8,110.1 L340.7,112.5 L344.5,114.8 L348.3,117.2 L352.2,119.7 L356.0,122.2 L359.8,124.7 L363.7,127.3 L367.5,129.9 L371.3,132.5 L375.2,135.2 L379.0,137.9 L382.8,140.6 L386.7,143.4 L390.5,146.2 L394.3,149.0 L398.2,151.9 L402.0,154.9 L405.8,157.8 L409.7,160.8 L413.5,163.8 L417.3,166.9 L421.2,170.0 L425.0,173.1 L428.8,176.3 L432.7,179.5 L436.5,182.7 L440.3,185.9 L444.2,189.2 L448.0,192.6 L451.8,195.9 L455.7,199.3 L459.5,202.7 L463.3,206.2 L467.2,209.7 L471.0,213.2 L474.8,216.8 L478.7,220.4 L482.5,224.0 L486.3,227.6 L490.2,231.3 L494.0,235.0 L497.8,238.8 L501.7,242.5 L505.5,246.3 L509.3,250.2 L513.2,254.0 L517.0,257.9 L520.8,261.9 L524.7,265.8 L528.5,269.8 L532.3,273.8 L536.2,277.9 L540.0,281.9\" class=\"stroke c1\"/></svg></figure><p>Lecture : 0,99984 g/cm³ à 0 °C ; maximum 0,99997 g/cm³ vers 4 °C ; 0,99970 g/cm³ à 10 °C ; 0,99821 g/cm³ à 20 °C ; 0,99565 g/cm³ à 30 °C.</p><p class=\"doc-src\">Source : d’après la base de données standard de référence NIST n° 69 (courbe redessinée)</p></div>",
+     "questions": [
+      {
+       "id": "1.1.1",
+       "type": "conceptions",
+       "points": 2,
+       "enonce": "<p>Pour étudier le comportement des océans, il peut être intéressant de fabriquer en classe un premier modèle de l’eau de mer en dissolvant du sel dans de l’eau, ce qui peut soulever quelques interrogations. Par exemple, un élève de cycle 3 veut verser le sel contenu dans le verre n°1 dans l’eau du verre n°3. Il pense que le niveau de l’eau atteindra alors le haut du verre (document 1).</p><p>Indiquer si la prévision de l’élève est correcte et justifier votre réponse.</p>",
+       "corrige": "<p class=\"answer\">La prévision est fausse : le niveau monte un peu, mais il n’atteint pas le haut du verre.</p><p>L’élève raisonne comme si les volumes s’additionnaient : <em>V</em> + <em>v</em> = volume du verre. Deux raisons l’interdisent.</p><ul><li><strong>Le sel en grains contient de l’air.</strong> Le volume <em>v</em> lu dans le verre n°1 est un volume apparent : il comprend les espaces vides entre les grains. Le volume réellement occupé par la matière « sel » est plus petit que <em>v</em> (la masse volumique du sel en vrac est d’environ 1,2 g/cm³, celle d’un cristal de sel est de 2,2 g/cm³).</li><li><strong>Le sel se dissout.</strong> Lors de la dissolution, le sel se disperse dans l’eau à l’échelle microscopique : les particules (ions) du sel s’insèrent entre les molécules d’eau. Le mélange obtenu est homogène et son volume est inférieur à la somme des volumes de l’eau et du sel solide. Il n’y a pas additivité des volumes.</li></ul><p>Ordre de grandeur : avec <em>V</em> = 200 mL d’eau et <em>v</em> = 50 mL de sel (environ 60 g), tout le sel se dissout (la solubilité est d’environ 360 g par litre d’eau) et le volume n’augmente que d’une vingtaine de millilitres.</p><p>En revanche, <strong>la masse se conserve</strong> : la masse de l’eau salée est égale à la masse de l’eau plus la masse du sel. On peut le montrer en classe par une pesée avant et après le mélange, puis faire tester la prévision de l’élève : c’est l’expérience qui tranche.</p><p>Piège : ne pas dire que le sel « disparaît » ni qu’il « fond ». Il est toujours présent (le goût salé le prouve, et on le récupère par évaporation).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "1.1.2 a",
+       "type": "physique",
+       "points": 1.25,
+       "enonce": "<p>En première approximation, l’analyse des variations de la masse volumique de l’eau pure en fonction de la température peut permettre d’apporter quelques éléments d’explication du comportement des masses d’eau océaniques (document 2).</p><p>a. Décrire l’évolution de la masse volumique de l’eau liquide pure entre 0 °C et 30 °C sous pression atmosphérique.</p>",
+       "corrige": "<ul><li>De 0 °C à 4 °C environ, la masse volumique <strong>augmente</strong> légèrement : de 0,99984 g/cm³ à 0,99997 g/cm³.</li><li>Elle passe par un <strong>maximum vers 4 °C</strong> (environ 1,000 g/cm³).</li><li>De 4 °C à 30 °C, elle <strong>diminue</strong>, de plus en plus vite : 0,99821 g/cm³ à 20 °C et 0,99565 g/cm³ à 30 °C.</li></ul><p class=\"answer\">La masse volumique de l’eau pure est maximale vers 4 °C ; elle diminue quand on s’éloigne de cette température, surtout vers les températures élevées.</p><p>Remarque : les variations sont faibles (moins de 0,5 %). L’échelle de l’axe des ordonnées ne commence pas à zéro, ce qui les amplifie visuellement.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "1.1.2 b",
+       "type": "physique",
+       "points": 1.75,
+       "enonce": "<p>b. Les courants marins de l’Atlantique Nord emmènent des eaux de surface tempérées vers le pôle Nord. On admet que la masse volumique de ces eaux évolue en fonction de la température comme celle de l’eau pure décrite dans le document 2. Expliquer, en détaillant le raisonnement suivi, le comportement de ces eaux de surface lorsqu’elles se refroidissent à l’approche du pôle.</p>",
+       "corrige": "<p>Raisonnement :</p><ol><li>Les eaux de surface tempérées (par exemple 15 à 20 °C) se refroidissent en remontant vers le nord.</li><li>D’après le document 2, entre 20 °C et 4 °C, la masse volumique de l’eau augmente quand la température baisse.</li><li>Un liquide plus dense que le liquide situé en dessous de lui <strong>coule</strong> : c’est le même principe que la flottabilité (un corps flotte s’il est moins dense que le liquide, il coule s’il est plus dense).</li><li>Ces eaux refroidies deviennent donc plus denses que les eaux sous-jacentes : elles <strong>plongent</strong> vers le fond et sont remplacées en surface par d’autres eaux.</li></ol><p class=\"answer\">En se refroidissant, les eaux de surface deviennent plus denses et plongent en profondeur. Ce mécanisme alimente les courants profonds qui repartent vers le sud (circulation océanique globale).</p><p>Limite du modèle : avec l’eau pure, l’eau plus froide que 4 °C redeviendrait moins dense et resterait en surface (c’est pourquoi un lac gèle par la surface). Dans l’eau de mer réelle, le sel change ce comportement : la masse volumique augmente jusqu’au point de congélation (vers −1,9 °C). De plus, la formation de la banquise rejette du sel et rend l’eau encore plus salée et plus dense. La plongée des eaux polaires dépend donc à la fois de la température et de la salinité (circulation « thermohaline »).</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Partie 2",
+     "short": "P. 2",
+     "titre": "Température des eaux de surface des océans",
+     "points": 4,
+     "intro": "<p><strong>1.2 Analyse de la température des eaux de surface des océans.</strong> La température de surface des océans est surveillée par des modules semblables à celui décrit ci-dessous.</p><div class=\"doc\"><p class=\"doc-title\">Document 3 – Bouée météo-océanographique (description de la photographie)</p><p>La photographie montre une bouée flottante de couleur jaune vif, posée sur une mer agitée. Elle comprend :</p><ul><li>une plate-forme flottante rectangulaire entourée d’un garde-corps ;</li><li>un <strong>panneau plat sombre et incliné</strong>, fait de cellules, fixé sur le pont ;</li><li>deux mâts : l’un porte des antennes, des capteurs et un feu de signalisation ; l’autre porte à son sommet une <strong>petite éolienne</strong> ;</li><li>des boîtiers étanches et, sous la ligne de flottaison, des capteurs immergés (non visibles).</li></ul><p class=\"doc-src\">Source : photographie d’une bouée (anfr.fr), remplacée ici par une description</p></div><div class=\"doc\"><p class=\"doc-title\">Document 4 – Algorithme du protocole de mesure</p><p>Répéter indéfiniment<br>  T1 ← mesure de la température de la surface de la mer<br>  Attendre 1 minute<br>  T2 ← mesure de la température de la surface de la mer<br>  Si valeur absolue (T1 – T2) < 0,1 °C<br>    Transmettre ( (T1 + T2)/2 )<br>    Attendre 4 heures<br>  Fin Si<br>Fin Répéter</p></div>",
+     "questions": [
+      {
+       "id": "1.2.1",
+       "type": "techno",
+       "points": 2,
+       "enonce": "<p>Le bon fonctionnement du module implique le respect de différentes contraintes (énergétiques, structurelles, environnementales, etc.). Proposer deux contraintes qui vous semblent essentielles au fonctionnement de ce module en argumentant votre choix.</p>",
+       "corrige": "<p>Plusieurs réponses sont possibles. Il faut <strong>nommer</strong> la contrainte puis <strong>justifier</strong> par le contexte (bouée isolée en pleine mer).</p><ul><li><strong>Contrainte énergétique – autonomie.</strong> La bouée est loin de tout réseau électrique et ne peut pas être rechargée souvent. Elle doit produire elle-même l’énergie électrique nécessaire aux capteurs, au traitement et à l’émission radio, de jour comme de nuit, en été comme en hiver. D’où le panneau photovoltaïque, l’éolienne (source complémentaire par temps couvert ou la nuit) et une batterie pour stocker l’énergie.</li><li><strong>Contrainte structurelle – flottabilité et stabilité.</strong> Le module doit flotter, rester droit et résister aux vagues, au vent et aux tempêtes ; il doit être ancré pour ne pas dériver. D’où une coque large, lestée, et un amarrage.</li><li><strong>Contrainte environnementale – milieu marin agressif.</strong> L’eau salée corrode les métaux, les embruns et les UV dégradent les matériaux, des algues et coquillages se fixent sur les parties immergées. Il faut des matériaux résistants, des boîtiers étanches et une maintenance.</li><li>Autres réponses acceptables : <strong>communication</strong> (transmettre les données à distance par radio ou satellite) ; <strong>sécurité de la navigation</strong> (couleur jaune bien visible, feu lumineux, pour éviter les collisions).</li></ul>",
+       "niveau": "c4"
+      },
+      {
+       "id": "1.2.2",
+       "type": "techno",
+       "points": 0.5,
+       "enonce": "<p>En observant la photographie du module (document 3), identifier le composant capable d’assurer la fonction technique « Transformer l’énergie lumineuse du soleil en énergie électrique ».</p>",
+       "corrige": "<p class=\"answer\">C’est le panneau solaire photovoltaïque (le panneau plat incliné, composé de cellules photovoltaïques).</p><p>Piège : l’éolienne produit aussi de l’énergie électrique, mais à partir de l’énergie cinétique (mécanique) du vent, pas de l’énergie lumineuse. Un panneau solaire <em>thermique</em>, lui, chaufferait un fluide et ne produirait pas d’électricité.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "1.2.3",
+       "type": "techno",
+       "points": 1.5,
+       "enonce": "<p>On donne l’algorithme du document 4, qui décrit le protocole de mesure de température. À quelle(s) condition(s) le module transmet-il une mesure de température ?</p>",
+       "corrige": "<p>Le module mesure la température T1, attend une minute, puis mesure T2. Il compare les deux mesures.</p><p class=\"answer\">Il transmet une valeur seulement si l’écart entre deux mesures faites à une minute d’intervalle est strictement inférieur à 0,1 °C en valeur absolue (température stable).</p><ul><li>La valeur transmise est la <strong>moyenne</strong> des deux mesures : (T1 + T2)/2.</li><li>Après une transmission, le module attend 4 heures avant de refaire des mesures : il transmet donc <strong>au plus une valeur toutes les 4 heures environ</strong> (4 h plus la minute d’attente entre T1 et T2).</li><li>Si l’écart est supérieur ou égal à 0,1 °C (mesure instable, capteur perturbé par une vague…), rien n’est transmis et le module recommence immédiatement un nouveau couple de mesures.</li></ul><p>Intérêt : on ne transmet que des mesures fiables, et on économise l’énergie de la bouée (l’émission radio est coûteuse).</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E3",
+     "label": "Partie 3",
+     "short": "P. 3",
+     "titre": "Les végétaux, acteurs majeurs de la vie océanique",
+     "points": 11,
+     "intro": "<p><strong>1.3 Les végétaux, des acteurs majeurs de la vie océanique.</strong> En assurant près de 45 % de la production primaire de matière organique de la planète, le phytoplancton est un acteur majeur de la production de biomasse au niveau océanique.</p><div class=\"doc\"><p class=\"doc-title\">Document 5 – Évolution de la concentration en dioxygène d’une culture d’algues vertes unicellulaires en fonction de l’éclairement</p><figure class=\"fig\"><svg viewBox=\"0 0 560 320\" role=\"img\" aria-label=\"Concentration en dioxygène d’une culture d’algues : environ 102 µmol/L au départ, baisse lente jusqu’à 86 µmol/L à 3 min dans l’obscurité, forte hausse jusqu’à 190 µmol/L vers 7 min à la lumière, puis baisse régulière jusqu’à 120 µmol/L à 15 min dans l’obscurité.\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"70.0\" y=\"30\" width=\"94.0\" height=\"240\" class=\"shade\" fill-opacity=\"0.25\"/><rect x=\"273.7\" y=\"30\" width=\"266.3\" height=\"240\" class=\"shade\" fill-opacity=\"0.25\"/><text x=\"70\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">0</text><text x=\"164\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">3</text><text x=\"258\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">6</text><text x=\"352\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">9</text><text x=\"446\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">12</text><text x=\"540\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">15</text><line x1=\"70\" y1=\"270.0\" x2=\"540\" y2=\"270.0\" class=\"grid\"/><text x=\"63\" y=\"274\" font-size=\"12\" text-anchor=\"end\">50</text><line x1=\"70\" y1=\"203.3\" x2=\"540\" y2=\"203.3\" class=\"grid\"/><text x=\"63\" y=\"207.333\" font-size=\"12\" text-anchor=\"end\">100</text><line x1=\"70\" y1=\"136.7\" x2=\"540\" y2=\"136.7\" class=\"grid\"/><text x=\"63\" y=\"140.667\" font-size=\"12\" text-anchor=\"end\">150</text><line x1=\"70\" y1=\"70.0\" x2=\"540\" y2=\"70.0\" class=\"grid\"/><text x=\"63\" y=\"74\" font-size=\"12\" text-anchor=\"end\">200</text><line x1=\"70\" y1=\"270\" x2=\"540\" y2=\"270\" class=\"axis\"/><line x1=\"70\" y1=\"30\" x2=\"70\" y2=\"270\" class=\"axis\"/><text x=\"305\" y=\"310\" font-size=\"13\" text-anchor=\"middle\">temps (min)</text><text x=\"16\" y=\"150.0\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90 16 150.0)\">concentration en dioxygène (µmol/L)</text><path d=\"M70.0,200.7 L85.7,204.7 L101.3,208.7 L117.0,211.3 L132.7,214.7 L148.3,218.0 L164.0,222.0 L173.4,222.0 L182.8,218.0 L195.3,208.7 L211.0,192.7 L226.7,171.3 L242.3,147.3 L258.0,120.7 L273.7,94.0 L283.1,84.7 L289.3,83.3 L305.0,86.0 L320.7,91.3 L352.0,103.3 L383.3,114.0 L414.7,126.0 L446.0,138.0 L477.3,150.0 L508.7,163.3 L540.0,176.7\" class=\"stroke c2\"/><text x=\"117\" y=\"46\" font-size=\"12\" text-anchor=\"middle\">[1] Obscurité</text><text x=\"218.833\" y=\"46\" font-size=\"12\" text-anchor=\"middle\">[2] Lumière</text><text x=\"406.833\" y=\"46\" font-size=\"12\" text-anchor=\"middle\">[3] Obscurité</text></svg></figure><p>Les zones grisées correspondent aux périodes d’obscurité ([1] de 0 à 3 min, [3] de 6,5 à 15 min). La zone claire [2] correspond à l’éclairement.</p><p class=\"doc-src\">Source : planet-vie.ens.fr (courbe redessinée d’après les valeurs lisibles)</p></div><div class=\"doc\"><p class=\"doc-title\">Document 6 – Schéma d’un réseau trophique au niveau océanique</p><figure class=\"fig\"><svg viewBox=\"0 0 730 436\" role=\"img\" aria-label=\"Schéma simplifié d’un réseau trophique océanique : le phytoplancton est mangé par le zooplancton phytophage, les tuniciers et les petits dinoflagellés hétérotrophes ; ceux-ci sont mangés par le zooplancton carnivore, les poissons planctivores et les cnidaires ; les poissons planctivores sont mangés par les poissons piscivores ; la nécromasse est dégradée par les bactéries hétérotrophes.\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ahtroph\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"fillink\"/></marker></defs><rect x=\"168\" y=\"340\" width=\"432\" height=\"42\" class=\"stroke dash thin\"/><text x=\"384\" y=\"398\" font-size=\"12\" text-anchor=\"middle\"><tspan font-weight=\"bold\">Phytoplancton</tspan></text><line x1=\"80\" y1=\"351\" x2=\"115\" y2=\"299\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"262\" y1=\"351\" x2=\"115\" y2=\"299\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"262\" y1=\"351\" x2=\"320\" y2=\"235\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"408\" y1=\"351\" x2=\"320\" y2=\"235\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"530\" y1=\"351\" x2=\"320\" y2=\"235\" class=\"stroke thin dash\" marker-end=\"url(#ahtroph)\"/><line x1=\"115\" y1=\"281\" x2=\"320\" y2=\"235\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"262\" y1=\"351\" x2=\"530\" y2=\"235\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"408\" y1=\"351\" x2=\"530\" y2=\"235\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"115\" y1=\"281\" x2=\"530\" y2=\"235\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"320\" y1=\"217\" x2=\"135\" y2=\"169\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"320\" y1=\"217\" x2=\"150\" y2=\"101\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"320\" y1=\"217\" x2=\"500\" y2=\"101\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"135\" y1=\"151\" x2=\"150\" y2=\"101\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"135\" y1=\"151\" x2=\"500\" y2=\"101\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"530\" y1=\"217\" x2=\"500\" y2=\"101\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"222.0\" y1=\"92\" x2=\"434.0\" y2=\"92\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><line x1=\"150\" y1=\"83\" x2=\"330\" y2=\"37\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><rect x=\"264.0\" y=\"19\" width=\"132\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"330\" y=\"32\" font-size=\"10.5\" text-anchor=\"middle\">Poissons piscivores</text><rect x=\"78.0\" y=\"83\" width=\"144\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"150\" y=\"96\" font-size=\"10.5\" text-anchor=\"middle\">Poissons planctivores</text><rect x=\"434.0\" y=\"83\" width=\"132\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"500\" y=\"96\" font-size=\"10.5\" text-anchor=\"middle\">Cnidaires (méduses)</text><rect x=\"17.0\" y=\"151\" width=\"236\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"135\" y=\"164\" font-size=\"10.5\" text-anchor=\"middle\">Zooplancton carnivore (chétognathes)</text><rect x=\"208.5\" y=\"217\" width=\"223\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"320\" y=\"230\" font-size=\"10.5\" text-anchor=\"middle\">Zooplancton phytophage (crustacés)</text><rect x=\"494.5\" y=\"217\" width=\"71\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"530\" y=\"230\" font-size=\"10.5\" text-anchor=\"middle\">Tuniciers</text><rect x=\"3.5\" y=\"281\" width=\"223\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"115\" y=\"294\" font-size=\"10.5\" text-anchor=\"middle\">Petits dinoflagellés hétérotrophes</text><rect x=\"2.0\" y=\"351\" width=\"156\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"80\" y=\"364\" font-size=\"10.5\" text-anchor=\"middle\">Bactéries hétérotrophes</text><rect x=\"174.5\" y=\"351\" width=\"175\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"262\" y=\"364\" font-size=\"10.5\" text-anchor=\"middle\">Pico- et nanophytoplancton</text><rect x=\"372.5\" y=\"351\" width=\"71\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"408\" y=\"364\" font-size=\"10.5\" text-anchor=\"middle\">Diatomées</text><rect x=\"461.0\" y=\"351\" width=\"138\" height=\"18\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"530\" y=\"364\" font-size=\"10.5\" text-anchor=\"middle\">Grands dinoflagellés</text><rect x=\"622\" y=\"150\" width=\"84\" height=\"22\" rx=\"4\" class=\"stroke paper thin\"/><text x=\"664\" y=\"165\" font-size=\"11\" text-anchor=\"middle\">Nécromasse</text><line x1=\"565\" y1=\"100\" x2=\"622\" y2=\"161\" class=\"stroke thin dash\" marker-end=\"url(#ahtroph)\"/><line x1=\"565\" y1=\"226\" x2=\"622\" y2=\"170\" class=\"stroke thin dash\" marker-end=\"url(#ahtroph)\"/><line x1=\"600\" y1=\"350\" x2=\"622\" y2=\"170\" class=\"stroke thin dash\" marker-end=\"url(#ahtroph)\"/><path d=\"M706,161 L716,161 L716,412 L22,412 L22,373\" class=\"stroke thin\" marker-end=\"url(#ahtroph)\"/><text x=\"366\" y=\"428\" font-size=\"11\" text-anchor=\"middle\">Une flèche signifie « est mangé par » (ou « est dégradé par » pour la nécromasse).</text></svg></figure><p>Relations représentées (« est mangé par ») :</p><ul><li>bactéries hétérotrophes et pico- et nanophytoplancton → petits dinoflagellés hétérotrophes ;</li><li>phytoplancton (pico- et nanophytoplancton, diatomées, grands dinoflagellés) et petits dinoflagellés hétérotrophes → zooplancton phytophage (crustacés) et tuniciers ;</li><li>zooplancton phytophage → zooplancton carnivore (chétognathes), poissons planctivores, cnidaires ;</li><li>chétognathes → poissons planctivores et cnidaires ; tuniciers → cnidaires ;</li><li>poissons planctivores → poissons piscivores et cnidaires ;</li><li>les organismes morts et les déchets (nécromasse) sont dégradés par les bactéries hétérotrophes.</li></ul><p class=\"doc-src\">Source : d’après Sommer et al. (2002), schéma simplifié et redessiné</p></div>",
+     "questions": [
+      {
+       "id": "1.3.1",
+       "type": "svt",
+       "points": 3,
+       "enonce": "<p>Décrire et interpréter les variations de la concentration en dioxygène au cours du temps sur le graphique du document 5.</p>",
+       "corrige": "<p><strong>Description</strong> (avec des valeurs lues sur le graphique) :</p><ul><li>Phase [1], obscurité (0 à 3 min) : la concentration en dioxygène <strong>diminue lentement</strong>, de 102 à 86 µmol/L environ (environ −5 µmol/L par minute).</li><li>Phase [2], lumière (3 à 6,5 min) : après un court délai, elle <strong>augmente fortement</strong>, jusqu’à 190 µmol/L environ vers 7 min (environ +30 µmol/L par minute).</li><li>Phase [3], obscurité (6,5 à 15 min) : elle <strong>diminue de nouveau</strong> régulièrement, jusqu’à 120 µmol/L environ à 15 min.</li></ul><p><strong>Interprétation :</strong></p><ul><li>Les algues, comme tous les êtres vivants, <strong>respirent en permanence</strong> : elles consomment du dioxygène (et rejettent du dioxyde de carbone). À l’obscurité, seule la respiration a lieu : le dioxygène diminue.</li><li>À la lumière, les algues chlorophylliennes réalisent la <strong>photosynthèse</strong> : à partir de dioxyde de carbone, d’eau et d’énergie lumineuse, elles fabriquent de la matière organique (glucides) et <strong>rejettent du dioxygène</strong>. La production de dioxygène par photosynthèse est supérieure à la consommation par la respiration : la concentration augmente. On mesure un bilan (production − consommation).</li><li>Au retour de l’obscurité, la photosynthèse s’arrête, la respiration continue : la concentration diminue.</li></ul><p class=\"answer\">La lumière est nécessaire à la photosynthèse, qui produit du dioxygène ; la respiration, qui en consomme, a lieu en permanence, à la lumière comme à l’obscurité.</p><p>On peut remarquer que la baisse de la phase [3] est plus rapide que celle de la phase [1] : la respiration semble plus intense juste après la période d’éclairement. Piège : ne pas écrire que « les plantes respirent la nuit et font la photosynthèse le jour ».</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "1.3.2",
+       "type": "svt",
+       "points": 2.5,
+       "enonce": "<p>En exploitant le document 6, décrire les conséquences d’une augmentation printanière de la biomasse de phytoplancton sur l’ensemble du réseau trophique.</p>",
+       "corrige": "<p>Le phytoplancton est un <strong>producteur primaire</strong> : il est à la base du réseau trophique, tous les autres êtres vivants du schéma en dépendent directement ou indirectement.</p><ul><li><strong>Consommateurs primaires</strong> : plus de phytoplancton signifie plus de nourriture pour le zooplancton phytophage (crustacés), les tuniciers et les petits dinoflagellés hétérotrophes. Leurs populations augmentent, avec un léger décalage dans le temps.</li><li><strong>Consommateurs secondaires et suivants</strong> : l’augmentation se transmet de maillon en maillon (chétognathes, poissons planctivores, cnidaires, puis poissons piscivores). L’effet est de plus en plus décalé dans le temps et de moins en moins fort, car une grande partie de la matière et de l’énergie est perdue à chaque niveau (respiration, déchets).</li><li><strong>Décomposeurs</strong> : plus de biomasse produit plus de cadavres et de déchets (nécromasse), donc plus de nourriture pour les bactéries hétérotrophes. Celles-ci recyclent la matière organique en matière minérale et nourrissent à leur tour les petits dinoflagellés.</li></ul><p class=\"answer\">Une augmentation printanière du phytoplancton entraîne, de proche en proche et avec un retard, une augmentation de la biomasse de tous les niveaux du réseau trophique, jusqu’aux poissons piscivores et aux décomposeurs.</p><p>Nuance : l’augmentation des consommateurs peut ensuite faire diminuer le phytoplancton (broutage) ; les populations s’autorégulent.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "1.3.3",
+       "type": "demarche",
+       "points": 2.75,
+       "enonce": "<p>On entend souvent que la forêt amazonienne serait le « poumon vert » de la planète à l’origine du dioxygène de l’atmosphère, en négligeant, d’une part, le rôle majeur exercé par le phytoplancton et en omettant les processus consommant le dioxygène dans la forêt (notamment la dégradation de la matière organique par les décomposeurs). Cette affirmation peut donc être qualifiée de malentendu, voire de croyance populaire.</p><p>À partir de vos connaissances, définir ce qu’est un savoir scientifique et quelles en sont les caractéristiques, en comparaison à une croyance.</p>",
+       "corrige": "<p><strong>Un savoir scientifique</strong> est une connaissance sur le monde réel, construite par une démarche rigoureuse et validée par la communauté scientifique. Ses caractéristiques :</p><ul><li>il s’appuie sur des <strong>faits</strong> observables et mesurables (observations, expériences, mesures) ;</li><li>il est issu d’une <strong>démarche</strong> : question, hypothèses, tests (expérience avec témoin, modélisation), analyse des résultats, conclusion ;</li><li>il est <strong>reproductible</strong> et <strong>vérifiable</strong> par d’autres ;</li><li>il est <strong>réfutable</strong> : on peut imaginer une expérience ou une observation qui le contredirait ;</li><li>il est <strong>validé collectivement</strong> (publication, critique par les pairs) et non par l’autorité d’une personne ;</li><li>il est <strong>provisoire et révisable</strong> : il peut être corrigé ou précisé si de nouvelles données l’exigent ;</li><li>il a un <strong>domaine de validité</strong>, que l’on précise.</li></ul><p><strong>Une croyance</strong> est une adhésion à une idée sans preuve suffisante. Elle repose sur l’intuition, la tradition, l’autorité, l’émotion ou la répétition. Elle n’est pas soumise à l’épreuve des faits, elle résiste souvent aux contre-exemples et ne se remet pas en question.</p><p>Application : l’idée du « poumon vert » repose sur une intuition (une forêt produit du dioxygène par photosynthèse). Mais les mesures montrent qu’une forêt mature consomme presque autant de dioxygène qu’elle en produit (respiration des plantes, des animaux et surtout des décomposeurs). Le bilan net est proche de zéro. Le phytoplancton, lui, assure une part majeure de la production primaire. Le savoir scientifique corrige ici une croyance répandue.</p><p class=\"answer\">Le savoir scientifique est fondé sur des preuves, testable, réfutable, partagé et révisable ; la croyance n’exige pas de preuve et n’est pas soumise à l’épreuve des faits.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "1.3.4",
+       "type": "conceptions",
+       "points": 2.75,
+       "enonce": "<p>Dans une classe de CP-CE1 (6 à 8 ans), une séance a été menée sur les caractéristiques des êtres vivants. Pour certains enfants, l’arbre n’est pas vivant, car « ça ne bouge même pas ou quand il y a du vent » (Romain, CE1) ; pour Anne (CP), une plante verte n’est pas vivante « car ça ne sent pas » (propos d’élèves tirés d’un article de C. Orange, 2009).</p><p>Décrire le raisonnement de chacun des deux élèves et expliquer en quoi les végétaux sont des êtres vivants afin de leur répondre.</p>",
+       "corrige": "<p><strong>Raisonnement de Romain.</strong> Il utilise le <strong>mouvement</strong> comme critère du vivant : est vivant ce qui bouge par soi-même. L’arbre ne se déplace pas ; s’il bouge, c’est à cause du vent, donc pas de lui-même. C’est une conception fréquente : le modèle du vivant, pour le jeune enfant, est l’animal ou l’humain.</p><p><strong>Raisonnement d’Anne.</strong> Elle utilise la <strong>sensibilité</strong> (« sentir », percevoir, ressentir) comme critère. Elle prête au vivant les caractéristiques humaines : elle raisonne par analogie avec elle-même (anthropomorphisme). Comme la plante ne semble pas percevoir ni ressentir, elle la classe parmi les non-vivants.</p><p>Les deux élèves ont un point commun : ils prennent un caractère propre aux animaux pour un caractère de tous les êtres vivants.</p><p><strong>Pourquoi les végétaux sont vivants.</strong> Un être vivant naît, se nourrit, grandit (se développe), se reproduit et meurt. La plante :</p><ul><li><strong>naît</strong> d’une graine qui germe ;</li><li><strong>se nourrit</strong> : elle a besoin d’eau, de sels minéraux, de lumière et d’air (sinon elle se fane et meurt) ;</li><li><strong>grandit</strong> : tige, feuilles et racines se développent ;</li><li><strong>se reproduit</strong> : fleurs, fruits, graines ;</li><li><strong>meurt</strong>.</li></ul><p>Les plantes bougent aussi, mais lentement : la tige se tourne vers la lumière, les fleurs s’ouvrent et se ferment.</p><p><strong>Réponse aux élèves (activités) :</strong> semer des graines et suivre leur croissance dans un carnet d’observation ; photographier une plante chaque jour pour montrer qu’elle grandit et s’oriente vers une fenêtre ; comparer une plante arrosée et une plante privée d’eau ; observer une fleur qui donne un fruit puis des graines. On construit avec la classe une liste de critères du vivant valables pour les animaux <em>et</em> les végétaux.</p>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sci-energie",
+   "num": 1,
+   "domaine": "sciences",
+   "titre": "L’énergie à l’école",
+   "theme": "Formes et conversions d’énergie, ressources renouvelables, circuits en série et en dérivation, court-circuit, conducteurs et isolants, puissance et énergie (E = P × t), saisons et énergie solaire, chaînes d’énergie et d’information, algorithme, protocole avec témoin",
+   "officiel": false,
+   "remarque": "Sujet original d’entraînement. Données fictives réalistes sauf mention contraire.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Partie 1",
+     "short": "P. 1",
+     "titre": "Formes et sources d’énergie",
+     "points": 3,
+     "intro": "<p>Une école élémentaire lance le projet « École sobre en énergie ». Les enseignants veulent faire comprendre aux élèves d’où vient l’énergie qu’ils utilisent et comment l’économiser.</p><div class=\"doc\"><p class=\"doc-title\">Document 1 – La lampe de poche à manivelle</p><p>Dans la classe de CM1, les élèves utilisent une lampe de poche sans pile. En tournant une manivelle, on fait tourner un petit générateur (une dynamo) qui alimente une DEL (diode électroluminescente). Après quelques minutes d’utilisation, la lampe est légèrement tiède.</p></div><div class=\"doc\"><p class=\"doc-title\">Document 2 – Quelques ressources énergétiques</p><p>pétrole ; vent ; uranium ; rayonnement solaire ; charbon ; bois ; gaz naturel ; eau des barrages ; chaleur de la Terre (géothermie).</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "physique",
+       "points": 1.25,
+       "enonce": "<p>À l’aide du document 1, représenter la chaîne d’énergie de la lampe à manivelle. Préciser les formes d’énergie en jeu et les convertisseurs.</p>",
+       "corrige": "<p>Chaîne d’énergie (réservoir ou source → convertisseur → forme d’énergie) :</p><p>Utilisateur (muscles) → <strong>énergie mécanique</strong> (mouvement de la manivelle, énergie cinétique) → <strong>dynamo</strong> (convertisseur) → <strong>énergie électrique</strong> → <strong>DEL</strong> (convertisseur) → <strong>énergie lumineuse</strong> (utile) + <strong>énergie thermique</strong> (chaleur, « perdue »).</p><p>À l’origine, l’énergie mécanique vient de l’énergie chimique stockée dans les muscles, elle-même issue des aliments.</p><p class=\"answer\">Mécanique → (dynamo) → électrique → (DEL) → lumineuse + thermique.</p><p>La lampe tiédit : une partie de l’énergie est convertie en énergie thermique, transférée à l’air. Cette part n’est pas utile, mais elle n’est pas détruite.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "2",
+       "type": "physique",
+       "points": 0.75,
+       "enonce": "<p>Classer les ressources du document 2 en ressources renouvelables et non renouvelables. Justifier le classement de l’uranium.</p>",
+       "corrige": "<ul><li><strong>Renouvelables</strong> (reconstituées à l’échelle humaine) : vent, rayonnement solaire, bois (s’il est exploité durablement : on replante), eau des barrages, géothermie.</li><li><strong>Non renouvelables</strong> (stocks limités, formés en millions d’années ou non reconstitués) : pétrole, charbon, gaz naturel (ressources fossiles), uranium.</li></ul><p>L’uranium est un minerai extrait du sous-sol en quantité finie : il est <strong>non renouvelable</strong>. Mais ce n’est <strong>pas une énergie fossile</strong> (il ne provient pas de la décomposition d’êtres vivants) et son utilisation dans les centrales nucléaires émet très peu de dioxyde de carbone.</p><p>Piège : ne pas confondre « renouvelable », « non fossile » et « peu émetteur de CO<sub>2</sub> ».</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "3",
+       "type": "conceptions",
+       "points": 1,
+       "enonce": "<p>Une élève de CM2 affirme : « La centrale électrique fabrique de l’énergie, et quand on allume la lampe, l’énergie est consommée : elle disparaît. » Expliquer ce qui est erroné dans cette affirmation et proposer une façon d’y répondre en classe.</p>",
+       "corrige": "<p>L’élève confond le langage courant (« consommer », « produire ») et le concept scientifique. En physique, <strong>l’énergie se conserve</strong> : elle ne se crée pas et ne disparaît pas. Elle est seulement <strong>convertie</strong> d’une forme à une autre et <strong>transférée</strong> d’un système à un autre.</p><ul><li>La centrale ne « fabrique » pas d’énergie : elle convertit une énergie disponible (énergie de l’uranium, du vent, de l’eau…) en énergie électrique.</li><li>La lampe ne fait pas « disparaître » l’énergie : elle la convertit en énergie lumineuse et thermique, qui réchauffent un peu la pièce.</li></ul><p>Ce qui « s’use », c’est la part d’énergie <strong>utilisable</strong> : l’énergie thermique dispersée dans la pièce ne peut plus guère servir.</p><p><strong>En classe :</strong> faire toucher une lampe à incandescence restée allumée (sous surveillance) ou la lampe à manivelle : l’énergie n’a pas disparu, elle s’est dispersée sous forme de chaleur. Faire tracer des chaînes d’énergie où chaque flèche part de quelque part et arrive quelque part. Employer le vocabulaire « convertir », « transférer ».</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Partie 2",
+     "short": "P. 2",
+     "titre": "Les circuits électriques de la classe",
+     "points": 4.5,
+     "intro": "<p>En classe, les élèves réalisent des circuits avec des piles plates de 4,5 V et des lampes identiques adaptées à cette tension.</p><div class=\"doc\"><p class=\"doc-title\">Document 3 – Trois circuits réalisés par les élèves</p><figure class=\"fig\"><svg viewBox=\"0 0 840 200\" role=\"img\" aria-label=\"Trois schémas électriques. Circuit A : une pile, deux lampes L1 et L2 et un interrupteur K1 ouvert, en série. Circuit B : une pile alimente deux branches en dérivation, l’une avec la lampe L3, l’autre avec la lampe L4 et un interrupteur K2 ouvert. Circuit C : une pile et deux lampes L5 et L6 en série ; un fil de connexion relie les deux bornes de la lampe L6.\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M40,84 L40,30 L220,30 L220,150 L150,150\" class=\"stroke\"/><path d=\"M110,150 L40,150 L40,96\" class=\"stroke\"/><line x1=\"24\" y1=\"85\" x2=\"56\" y2=\"85\" class=\"stroke\"/><line x1=\"32\" y1=\"95\" x2=\"48\" y2=\"95\" class=\"stroke\" stroke-width=\"4\"/><text x=\"18\" y=\"88\" font-size=\"13\" text-anchor=\"end\">+</text><text x=\"18\" y=\"104\" font-size=\"13\" text-anchor=\"end\">−</text><text x=\"60\" y=\"95\" font-size=\"11\" text-anchor=\"start\">pile</text><circle cx=\"130\" cy=\"30\" r=\"11\" class=\"stroke paper\"/><line x1=\"122.2\" y1=\"22.2\" x2=\"137.8\" y2=\"37.8\" class=\"stroke\"/><line x1=\"122.2\" y1=\"37.8\" x2=\"137.8\" y2=\"22.2\" class=\"stroke\"/><text x=\"130\" y=\"12\" font-size=\"12\" text-anchor=\"middle\">L1</text><circle cx=\"220\" cy=\"90\" r=\"11\" class=\"stroke paper\"/><line x1=\"212.2\" y1=\"82.2\" x2=\"227.8\" y2=\"97.8\" class=\"stroke\"/><line x1=\"212.2\" y1=\"97.8\" x2=\"227.8\" y2=\"82.2\" class=\"stroke\"/><text x=\"242\" y=\"94\" font-size=\"12\" text-anchor=\"middle\">L2</text><circle cx=\"110\" cy=\"150\" r=\"2.5\" class=\"fillink\"/><circle cx=\"150\" cy=\"150\" r=\"2.5\" class=\"fillink\"/><line x1=\"110\" y1=\"150\" x2=\"146\" y2=\"134\" class=\"stroke\"/><text x=\"130\" y=\"168\" font-size=\"12\" text-anchor=\"middle\">K1</text><text x=\"130\" y=\"190\" font-size=\"13\" text-anchor=\"middle\"><tspan font-weight=\"bold\">Circuit A</tspan></text><path d=\"M310,84 L310,30 L500,30 L500,72\" class=\"stroke\"/><path d=\"M500,108 L500,150 L310,150 L310,96\" class=\"stroke\"/><path d=\"M405,30 L405,150\" class=\"stroke\"/><circle cx=\"405\" cy=\"30\" r=\"3\" class=\"fillink\"/><circle cx=\"405\" cy=\"150\" r=\"3\" class=\"fillink\"/><line x1=\"294\" y1=\"85\" x2=\"326\" y2=\"85\" class=\"stroke\"/><line x1=\"302\" y1=\"95\" x2=\"318\" y2=\"95\" class=\"stroke\" stroke-width=\"4\"/><text x=\"288\" y=\"88\" font-size=\"13\" text-anchor=\"end\">+</text><text x=\"288\" y=\"104\" font-size=\"13\" text-anchor=\"end\">−</text><text x=\"330\" y=\"95\" font-size=\"11\" text-anchor=\"start\">pile</text><circle cx=\"405\" cy=\"90\" r=\"11\" class=\"stroke paper\"/><line x1=\"397.2\" y1=\"82.2\" x2=\"412.8\" y2=\"97.8\" class=\"stroke\"/><line x1=\"397.2\" y1=\"97.8\" x2=\"412.8\" y2=\"82.2\" class=\"stroke\"/><text x=\"427\" y=\"94\" font-size=\"12\" text-anchor=\"middle\">L3</text><circle cx=\"500\" cy=\"55\" r=\"11\" class=\"stroke paper\"/><line x1=\"492.2\" y1=\"47.2\" x2=\"507.8\" y2=\"62.8\" class=\"stroke\"/><line x1=\"492.2\" y1=\"62.8\" x2=\"507.8\" y2=\"47.2\" class=\"stroke\"/><text x=\"522\" y=\"59\" font-size=\"12\" text-anchor=\"middle\">L4</text><circle cx=\"500\" cy=\"108\" r=\"2.5\" class=\"fillink\"/><circle cx=\"500\" cy=\"72\" r=\"2.5\" class=\"fillink\"/><line x1=\"500\" y1=\"108\" x2=\"516\" y2=\"76\" class=\"stroke\"/><text x=\"526\" y=\"96\" font-size=\"12\" text-anchor=\"start\">K2</text><text x=\"405\" y=\"190\" font-size=\"13\" text-anchor=\"middle\"><tspan font-weight=\"bold\">Circuit B</tspan></text><path d=\"M580,84 L580,30 L750,30 L750,150 L580,150 L580,96\" class=\"stroke\"/><path d=\"M750,55 L795,55 L795,125 L750,125\" class=\"stroke\"/><circle cx=\"750\" cy=\"55\" r=\"3\" class=\"fillink\"/><circle cx=\"750\" cy=\"125\" r=\"3\" class=\"fillink\"/><line x1=\"564\" y1=\"85\" x2=\"596\" y2=\"85\" class=\"stroke\"/><line x1=\"572\" y1=\"95\" x2=\"588\" y2=\"95\" class=\"stroke\" stroke-width=\"4\"/><text x=\"558\" y=\"88\" font-size=\"13\" text-anchor=\"end\">+</text><text x=\"558\" y=\"104\" font-size=\"13\" text-anchor=\"end\">−</text><text x=\"600\" y=\"95\" font-size=\"11\" text-anchor=\"start\">pile</text><circle cx=\"665\" cy=\"30\" r=\"11\" class=\"stroke paper\"/><line x1=\"657.2\" y1=\"22.2\" x2=\"672.8\" y2=\"37.8\" class=\"stroke\"/><line x1=\"657.2\" y1=\"37.8\" x2=\"672.8\" y2=\"22.2\" class=\"stroke\"/><text x=\"665\" y=\"12\" font-size=\"12\" text-anchor=\"middle\">L5</text><circle cx=\"750\" cy=\"90\" r=\"11\" class=\"stroke paper\"/><line x1=\"742.2\" y1=\"82.2\" x2=\"757.8\" y2=\"97.8\" class=\"stroke\"/><line x1=\"742.2\" y1=\"97.8\" x2=\"757.8\" y2=\"82.2\" class=\"stroke\"/><text x=\"728\" y=\"94\" font-size=\"12\" text-anchor=\"middle\">L6</text><text x=\"804\" y=\"94\" font-size=\"11\" text-anchor=\"start\">fil</text><text x=\"675\" y=\"190\" font-size=\"13\" text-anchor=\"middle\"><tspan font-weight=\"bold\">Circuit C</tspan></text></svg></figure><p>Dans le circuit C, un fil de connexion relie directement les deux bornes de la lampe L6.</p></div>",
+     "questions": [
+      {
+       "id": "4",
+       "type": "physique",
+       "points": 1.5,
+       "enonce": "<p>Pour les circuits A et B du document 3 :</p><p>a. Indiquer l’état (allumée ou éteinte) de chaque lampe quand l’interrupteur est ouvert, puis quand il est fermé.</p><p>b. On dévisse la lampe L1 dans le circuit A, puis la lampe L3 dans le circuit B (interrupteur fermé). Que se passe-t-il pour l’autre lampe ? Justifier.</p>",
+       "corrige": "<p><strong>a.</strong></p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Circuit</th><th>Interrupteur ouvert</th><th>Interrupteur fermé</th></tr></thead><tbody><tr><th>A (série)</th><td>L1 et L2 éteintes</td><td>L1 et L2 allumées</td></tr><tr><th>B (dérivation)</th><td>L3 allumée, L4 éteinte</td><td>L3 et L4 allumées</td></tr></tbody></table></div><p>Dans le circuit A, il n’y a qu’une seule boucle : l’interrupteur ouvert coupe le circuit pour les deux lampes. Dans le circuit B, l’interrupteur K2 est seulement dans la branche de L4 : L3 forme avec la pile une boucle fermée indépendante de K2.</p><p><strong>b.</strong> Dans le circuit A, si L1 est dévissée, le circuit est ouvert : <strong>L2 s’éteint</strong>. Dans le circuit B, si L3 est dévissée, la branche de L4 reste une boucle fermée avec la pile : <strong>L4 reste allumée</strong>, avec le même éclat.</p><p class=\"answer\">En série, les dipôles dépendent les uns des autres ; en dérivation, chaque branche fonctionne indépendamment. C’est pourquoi les appareils d’une maison sont branchés en dérivation.</p><p>Remarque : en série, deux lampes identiques alimentées par une pile de 4,5 V brillent moins qu’une lampe seule, car la tension de la pile se partage entre elles.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "5",
+       "type": "conceptions",
+       "points": 1.5,
+       "enonce": "<p>Devant le circuit A, interrupteur fermé, Hugo (CM2) affirme : « L1 brille plus fort que L2, parce qu’elle reçoit le courant en premier. Elle en utilise une partie, et il en reste moins pour L2. »</p><p>Analyser le raisonnement d’Hugo, puis proposer une manière de lui montrer qu’il se trompe.</p>",
+       "corrige": "<p><strong>Analyse.</strong> Hugo a un raisonnement <strong>séquentiel</strong> : il imagine que le courant part de la pile, arrive d’abord à L1, puis à L2, et qu’il « s’use » en traversant les lampes. Il confond le courant électrique (qui circule sans être consommé) et l’énergie (qui est transférée aux lampes). Deux lampes identiques en série brillent en fait <strong>de la même façon</strong> ; si l’on voit une petite différence, elle vient d’une différence de fabrication entre les lampes.</p><p><strong>Savoir en jeu.</strong> Dans un circuit en série, l’intensité du courant est <strong>la même en tout point</strong> (loi d’unicité de l’intensité, cycle 4). Le courant ne s’use pas : la pile met en mouvement l’ensemble des charges électriques du circuit en même temps, comme une chaîne de vélo qui se met à tourner partout à la fois.</p><p><strong>Pour le lui montrer :</strong></p><ul><li>faire <strong>échanger</strong> L1 et L2, ou <strong>retourner</strong> la pile : si Hugo avait raison, la lampe « la plus proche » de la borne d’où sort le courant devrait toujours briller le plus ; ce n’est pas le cas ;</li><li>au cycle 4 (ou en démonstration), mesurer l’intensité avec un ampèremètre avant L1, entre L1 et L2, et après L2 : on trouve la même valeur ;</li><li>utiliser une analogie : une chaîne de vélo ou une corde fermée qui tourne entre les mains des élèves.</li></ul>",
+       "niveau": "c4"
+      },
+      {
+       "id": "6",
+       "type": "physique",
+       "points": 0.75,
+       "enonce": "<p>Dans le circuit C, indiquer l’état des lampes L5 et L6. Expliquer pourquoi on interdit aux élèves de relier directement les deux bornes de la pile par un fil.</p>",
+       "corrige": "<p><strong>L6 est court-circuitée</strong> : le fil de connexion qui relie ses bornes ne présente presque aucune résistance. Le courant passe par le fil et presque plus par L6, qui est <strong>éteinte</strong>. <strong>L5 est allumée</strong>, et même plus brillante qu’avant, car elle reçoit seule toute la tension de la pile.</p><p>Relier directement les deux bornes de la pile, c’est <strong>court-circuiter le générateur</strong> : l’intensité devient très grande, le fil et la pile chauffent fortement (risque de brûlure, voire d’incendie) et la pile se décharge très vite.</p><p>Règle de sécurité associée : ne jamais faire d’expérience avec les prises du secteur (230 V), qui présentent un risque d’électrocution mortelle.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "7",
+       "type": "physique",
+       "points": 0.75,
+       "enonce": "<p>Pour tester des matériaux, les élèves insèrent différents objets entre deux pinces crocodiles dans un circuit comportant une pile et une lampe : un trombone en acier, une gomme, une mine de crayon à papier, une pièce de monnaie, une règle en plastique, une feuille d’aluminium. Prévoir les résultats et préciser ce qu’on peut conclure du test de la mine de crayon.</p>",
+       "corrige": "<ul><li>La lampe s’allume avec : le trombone, la pièce de monnaie, la feuille d’aluminium (des <strong>métaux</strong>) et la mine de crayon.</li><li>La lampe ne s’allume pas avec : la gomme, la règle en plastique (<strong>isolants</strong>).</li></ul><p>La mine de crayon est en <strong>graphite</strong> (une forme de carbone) : ce n’est pas un métal, et pourtant elle conduit le courant. On en conclut que <strong>les métaux ne sont pas les seuls conducteurs</strong>. La lampe brille moins, car le graphite conduit moins bien que les métaux.</p><p>Limite du test : si la lampe ne s’allume pas, on ne peut pas affirmer que le courant ne passe pas du tout ; il peut être trop faible pour allumer la lampe (c’est le cas de l’eau du robinet, ou du corps humain, qui conduisent assez pour être dangereux sous 230 V).</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E3",
+     "label": "Partie 3",
+     "short": "P. 3",
+     "titre": "Puissance et consommation d’énergie",
+     "points": 4.5,
+     "intro": "<p>L’école fait le bilan de la consommation électrique d’une classe. On compte 144 jours de classe par an (36 semaines de 4 jours). On prend comme prix de l’électricité 0,20 € le kilowattheure (valeur arrondie).</p><div class=\"doc\"><p class=\"doc-title\">Document 4 – Appareils électriques d’une classe (données fictives réalistes)</p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Appareil</th><th>Nombre</th><th>Puissance d’un appareil</th><th>Durée d’utilisation par jour de classe</th></tr></thead><tbody><tr><th>Luminaire à tubes fluorescents</th><td>10</td><td>58 W</td><td>7 h</td></tr><tr><th>Vidéoprojecteur</th><td>1</td><td>250 W</td><td>3 h</td></tr><tr><th>Ordinateur portable</th><td>1</td><td>60 W</td><td>6 h</td></tr><tr><th>Radiateur électrique d’appoint</th><td>1</td><td>1 500 W</td><td>2 h</td></tr></tbody></table></div><p>Rappels : l’énergie E consommée par un appareil de puissance P fonctionnant pendant une durée t vaut E = P × t. Avec P en watts (W) et t en heures (h), E est en wattheures (Wh). 1 kWh = 1 000 Wh ; 1 Wh = 3 600 J.</p></div>",
+     "questions": [
+      {
+       "id": "8",
+       "type": "physique",
+       "points": 1.25,
+       "enonce": "<p>Calculer l’énergie électrique consommée en un jour de classe par chaque type d’appareil du document 4, puis l’énergie totale, en kWh.</p>",
+       "corrige": "<div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Appareil</th><th>Calcul</th><th>Énergie par jour</th></tr></thead><tbody><tr><th>Luminaires</th><td>10 × 58 W × 7 h</td><td>4 060 Wh</td></tr><tr><th>Vidéoprojecteur</th><td>250 W × 3 h</td><td>750 Wh</td></tr><tr><th>Ordinateur</th><td>60 W × 6 h</td><td>360 Wh</td></tr><tr><th>Radiateur</th><td>1 500 W × 2 h</td><td>3 000 Wh</td></tr><tr><th>Total</th><td></td><td>8 170 Wh</td></tr></tbody></table></div><p class=\"answer\">La classe consomme environ 8 170 Wh, soit 8,17 kWh par jour de classe. L’éclairage est le premier poste (4 060 Wh, soit environ la moitié).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "9",
+       "type": "physique",
+       "points": 1,
+       "enonce": "<p>a. Exprimer l’énergie totale consommée en un jour de classe en joules.</p><p>b. Calculer le coût annuel de l’éclairage de la classe.</p>",
+       "corrige": "<p><strong>a.</strong> E = 8 170 Wh = 8 170 × 3 600 J = 29 412 000 J.</p><p class=\"answer\">E ≈ 2,94 × 10<sup>7</sup> J, soit environ 29,4 MJ.</p><p><strong>b.</strong> Énergie annuelle de l’éclairage : 4 060 Wh × 144 = 584 640 Wh ≈ 584,6 kWh. Coût : 584,64 × 0,20 ≈ 116,93 €.</p><p class=\"answer\">L’éclairage de la classe coûte environ 117 € par an.</p><p>Piège : le kilowattheure est une unité d’<strong>énergie</strong>, pas de puissance (1 kWh = 3,6 × 10<sup>6</sup> J).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "10",
+       "type": "physique",
+       "points": 1.25,
+       "enonce": "<p>On propose de remplacer les 10 luminaires par des luminaires à DEL de 24 W chacun, qui éclairent autant. Chaque luminaire à DEL coûte 45 €. Calculer l’économie annuelle en kWh et en euros, le pourcentage d’économie sur l’éclairage, puis le nombre d’années nécessaires pour que l’achat soit remboursé par les économies.</p>",
+       "corrige": "<ul><li>Nouvelle énergie par jour : 10 × 24 W × 7 h = 1 680 Wh.</li><li>Économie par jour : 4 060 − 1 680 = 2 380 Wh.</li><li>Économie par an : 2 380 × 144 = 342 720 Wh ≈ 342,7 kWh, soit 342,72 × 0,20 ≈ 68,54 €.</li><li>Pourcentage d’économie : 2 380 / 4 060 ≈ 0,586, soit environ <strong>59 %</strong> (c’est aussi (58 − 24)/58, car les durées sont les mêmes).</li><li>Coût de l’achat : 10 × 45 = 450 €. Durée de remboursement : 450 / 68,54 ≈ 6,6 ans.</li></ul><p class=\"answer\">Économie : environ 343 kWh et 69 € par an (−59 %) ; l’achat est remboursé en un peu plus de 6 ans et demi.</p><p>À nuancer : le prix de l’électricité peut augmenter (remboursement plus rapide) ; les DEL durent aussi plus longtemps que les tubes.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "11",
+       "type": "physique",
+       "points": 1,
+       "enonce": "<p>Lors d’une réunion, un parent affirme : « Il faut d’abord supprimer le radiateur : avec ses 1 500 W, c’est lui qui consomme le plus dans la classe. » Discuter cette affirmation.</p>",
+       "corrige": "<p>Le parent confond <strong>puissance</strong> et <strong>énergie</strong>. La puissance (en W) indique l’énergie consommée <em>à chaque seconde</em> ; l’énergie consommée dépend aussi de la <strong>durée d’utilisation</strong> : E = P × t.</p><p>Le radiateur a bien la plus grande puissance (1 500 W contre 580 W pour l’ensemble des luminaires), mais il fonctionne 2 h par jour : 3 000 Wh. Les luminaires fonctionnent 7 h : 4 060 Wh.</p><p class=\"answer\">L’affirmation est fausse : c’est l’éclairage, et non le radiateur, qui consomme le plus d’énergie par jour dans cette classe.</p><p>De plus, le radiateur ne sert qu’en hiver : sur l’année, l’écart est encore plus grand.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E4",
+     "label": "Partie 4",
+     "short": "P. 4",
+     "titre": "Des panneaux solaires sur le toit",
+     "points": 3,
+     "intro": "<p>La commune a installé des panneaux photovoltaïques sur le toit de l’école (surface 20 m²). L’installation comprend des panneaux, un onduleur qui transforme le courant continu produit par les panneaux en courant alternatif (230 V, 50 Hz), et un compteur relié au réseau électrique.</p><div class=\"doc\"><p class=\"doc-title\">Document 5 – Production mensuelle de l’installation, en kWh (données fictives réalistes, école située en France métropolitaine)</p><figure class=\"fig\"><svg viewBox=\"0 0 560 300\" role=\"img\" aria-label=\"Diagramme en barres de la production mensuelle d’électricité photovoltaïque, en kWh : janvier 120, février 170, mars 270, avril 340, mai 380, juin 400, juillet 420, août 380, septembre 300, octobre 210, novembre 130, décembre 100.\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"64\" y1=\"250.0\" x2=\"540\" y2=\"250.0\" class=\"grid\"/><text x=\"57\" y=\"254\" font-size=\"12\" text-anchor=\"end\">0</text><line x1=\"64\" y1=\"201.1\" x2=\"540\" y2=\"201.1\" class=\"grid\"/><text x=\"57\" y=\"205.111\" font-size=\"12\" text-anchor=\"end\">100</text><line x1=\"64\" y1=\"152.2\" x2=\"540\" y2=\"152.2\" class=\"grid\"/><text x=\"57\" y=\"156.222\" font-size=\"12\" text-anchor=\"end\">200</text><line x1=\"64\" y1=\"103.3\" x2=\"540\" y2=\"103.3\" class=\"grid\"/><text x=\"57\" y=\"107.333\" font-size=\"12\" text-anchor=\"end\">300</text><line x1=\"64\" y1=\"54.4\" x2=\"540\" y2=\"54.4\" class=\"grid\"/><text x=\"57\" y=\"58.4444\" font-size=\"12\" text-anchor=\"end\">400</text><line x1=\"64\" y1=\"250\" x2=\"540\" y2=\"250\" class=\"axis\"/><line x1=\"64\" y1=\"30\" x2=\"64\" y2=\"250\" class=\"axis\"/><text x=\"302\" y=\"290\" font-size=\"13\" text-anchor=\"middle\">Mois</text><text x=\"16\" y=\"140.0\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90 16 140.0)\">Production (kWh)</text><rect x=\"72.4\" y=\"191.3\" width=\"30\" height=\"58.7\" class=\"shade stroke thin\"/><text x=\"87.4098\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">J</text><text x=\"87.4098\" y=\"186.333\" font-size=\"11\" text-anchor=\"middle\">120</text><rect x=\"111.4\" y=\"166.9\" width=\"30\" height=\"83.1\" class=\"shade stroke thin\"/><text x=\"126.426\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"126.426\" y=\"161.889\" font-size=\"11\" text-anchor=\"middle\">170</text><rect x=\"150.4\" y=\"118.0\" width=\"30\" height=\"132.0\" class=\"shade stroke thin\"/><text x=\"165.443\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">M</text><text x=\"165.443\" y=\"113\" font-size=\"11\" text-anchor=\"middle\">270</text><rect x=\"189.5\" y=\"83.8\" width=\"30\" height=\"166.2\" class=\"shade stroke thin\"/><text x=\"204.459\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"204.459\" y=\"78.7778\" font-size=\"11\" text-anchor=\"middle\">340</text><rect x=\"228.5\" y=\"64.2\" width=\"30\" height=\"185.8\" class=\"shade stroke thin\"/><text x=\"243.475\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">M</text><text x=\"243.475\" y=\"59.2222\" font-size=\"11\" text-anchor=\"middle\">380</text><rect x=\"267.5\" y=\"54.4\" width=\"30\" height=\"195.6\" class=\"shade stroke thin\"/><text x=\"282.492\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">J</text><text x=\"282.492\" y=\"49.4444\" font-size=\"11\" text-anchor=\"middle\">400</text><rect x=\"306.5\" y=\"44.7\" width=\"30\" height=\"205.3\" class=\"shade stroke thin\"/><text x=\"321.508\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">J</text><text x=\"321.508\" y=\"39.6667\" font-size=\"11\" text-anchor=\"middle\">420</text><rect x=\"345.5\" y=\"64.2\" width=\"30\" height=\"185.8\" class=\"shade stroke thin\"/><text x=\"360.525\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"360.525\" y=\"59.2222\" font-size=\"11\" text-anchor=\"middle\">380</text><rect x=\"384.5\" y=\"103.3\" width=\"30\" height=\"146.7\" class=\"shade stroke thin\"/><text x=\"399.541\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">S</text><text x=\"399.541\" y=\"98.3333\" font-size=\"11\" text-anchor=\"middle\">300</text><rect x=\"423.6\" y=\"147.3\" width=\"30\" height=\"102.7\" class=\"shade stroke thin\"/><text x=\"438.557\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"438.557\" y=\"142.333\" font-size=\"11\" text-anchor=\"middle\">210</text><rect x=\"462.6\" y=\"186.4\" width=\"30\" height=\"63.6\" class=\"shade stroke thin\"/><text x=\"477.574\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">N</text><text x=\"477.574\" y=\"181.444\" font-size=\"11\" text-anchor=\"middle\">130</text><rect x=\"501.6\" y=\"201.1\" width=\"30\" height=\"48.9\" class=\"shade stroke thin\"/><text x=\"516.59\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"516.59\" y=\"196.111\" font-size=\"11\" text-anchor=\"middle\">100</text></svg></figure><p>Production annuelle : 3 220 kWh.</p></div>",
+     "questions": [
+      {
+       "id": "12",
+       "type": "physique",
+       "points": 1.5,
+       "enonce": "<p>Décrire l’évolution de la production au cours de l’année (document 5), puis l’expliquer à l’aide de vos connaissances sur les saisons.</p>",
+       "corrige": "<p><strong>Description.</strong> La production est maximale en été (420 kWh en juillet) et minimale en hiver (100 kWh en décembre, 120 kWh en janvier). Elle augmente régulièrement de janvier à juillet puis diminue jusqu’en décembre. En juillet, elle est plus de 4 fois plus grande qu’en décembre (420/100 = 4,2).</p><p><strong>Explication.</strong> L’axe de rotation de la Terre est incliné d’environ 23° par rapport à la perpendiculaire au plan de son orbite, et garde la même direction au cours de l’année. Dans l’hémisphère Nord, en été :</p><ul><li>les <strong>journées sont plus longues</strong> (environ 16 h de jour en juin contre 8 h en décembre, à la latitude de Paris) : les panneaux reçoivent de la lumière plus longtemps ;</li><li>le <strong>Soleil monte plus haut</strong> dans le ciel : les rayons arrivent moins inclinés, l’énergie reçue par mètre carré est plus grande, et ils traversent une moins grande épaisseur d’atmosphère ;</li><li>le ciel est en moyenne moins nuageux.</li></ul><p class=\"answer\">La production suit l’ensoleillement : elle est forte en été (jours longs, Soleil haut) et faible en hiver.</p><p>Piège : ce n’est pas la distance Terre-Soleil qui explique les saisons (la Terre est au plus près du Soleil début janvier).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "13",
+       "type": "physique",
+       "points": 0.75,
+       "enonce": "<p>Calculer la part de la production annuelle réalisée en juillet et en août. Commenter ce résultat dans le cas d’une école.</p>",
+       "corrige": "<p>(420 + 380) / 3 220 = 800 / 3 220 ≈ 0,248.</p><p class=\"answer\">Environ 25 % de la production annuelle a lieu en juillet et août.</p><p>Or l’école est fermée pendant les vacances d’été : un quart de l’électricité est produite quand l’école n’en a presque pas besoin. Cette énergie est injectée dans le réseau (revendue) ou devrait être stockée. À l’inverse, la production est faible en hiver, quand l’éclairage et le chauffage sont les plus utilisés. Production et consommation sont décalées.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "14",
+       "type": "techno",
+       "points": 0.75,
+       "enonce": "<p>Pour l’installation photovoltaïque, préciser le rôle des panneaux et de l’onduleur, en indiquant pour chacun la forme de l’énergie reçue et de l’énergie fournie.</p>",
+       "corrige": "<div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Élément</th><th>Fonction</th><th>Énergie reçue</th><th>Énergie fournie</th></tr></thead><tbody><tr><th>Panneaux photovoltaïques</th><td>Convertir</td><td>Lumineuse (rayonnement solaire)</td><td>Électrique (courant continu) + thermique (pertes)</td></tr><tr><th>Onduleur</th><td>Adapter, convertir le courant</td><td>Électrique (courant continu)</td><td>Électrique (courant alternatif 230 V, 50 Hz) + thermique (pertes)</td></tr></tbody></table></div><p>L’onduleur rend l’énergie électrique compatible avec les appareils de l’école et avec le réseau. Le réseau assure ensuite la fonction « distribuer / transmettre ». Un panneau photovoltaïque ne convertit qu’environ 20 % de l’énergie lumineuse reçue en énergie électrique.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E5",
+     "label": "Partie 5",
+     "short": "P. 5",
+     "titre": "Un éclairage automatique",
+     "points": 2.5,
+     "intro": "<p>Pour économiser l’énergie, la classe est équipée d’un éclairage automatique. Un capteur de présence (infrarouge) et un capteur de luminosité sont reliés à une carte programmable. Celle-ci commande un relais qui alimente ou non les luminaires.</p><div class=\"doc\"><p class=\"doc-title\">Document 6 – Programme de l’éclairage automatique</p><p>Répéter indéfiniment<br>  Si présence détectée alors<br>    sans_presence ← 0<br>    Si luminosité < 300 lux alors<br>      Allumer les luminaires<br>    Fin Si<br>  Sinon<br>    sans_presence ← sans_presence + 1<br>  Fin Si<br>  Si sans_presence ≥ 600 alors<br>    Éteindre les luminaires<br>  Fin Si<br>  Attendre 1 seconde<br>Fin Répéter</p><p>Le lux est l’unité d’éclairement. On recommande environ 300 lux sur les tables d’une salle de classe.</p></div>",
+     "questions": [
+      {
+       "id": "15",
+       "type": "techno",
+       "points": 1,
+       "enonce": "<p>Classer les éléments du système (capteur de présence, capteur de luminosité, carte programmable, relais, luminaires, réseau électrique) selon qu’ils appartiennent à la chaîne d’information ou à la chaîne d’énergie, et préciser la fonction de chacun.</p>",
+       "corrige": "<p><strong>Chaîne d’information</strong> (acquérir, traiter, communiquer) :</p><ul><li>capteur de présence et capteur de luminosité : <strong>acquérir</strong> les informations ;</li><li>carte programmable : <strong>traiter</strong> les informations (exécuter le programme) et <strong>communiquer</strong> l’ordre au relais.</li></ul><p><strong>Chaîne d’énergie</strong> (alimenter, distribuer, convertir) :</p><ul><li>réseau électrique : <strong>alimenter</strong> ;</li><li>relais : <strong>distribuer</strong> (laisser passer ou couper l’énergie vers les luminaires) ;</li><li>luminaires : <strong>convertir</strong> l’énergie électrique en énergie lumineuse.</li></ul><p>Le relais fait le lien entre les deux chaînes : il reçoit un ordre (information) et agit sur l’énergie.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "16",
+       "type": "techno",
+       "points": 1.5,
+       "enonce": "<p>a. Décrire le comportement de l’éclairage dans les trois situations suivantes : (1) un matin d’hiver, les élèves entrent dans la classe, la luminosité est de 150 lux ; (2) pendant une récréation de 15 minutes, la classe est vide ; (3) un après-midi de juin, les luminaires sont allumés et le soleil revient : la luminosité atteint 800 lux avec des élèves présents.</p><p>b. La situation (3) révèle un défaut du programme. Proposer une modification.</p>",
+       "corrige": "<p><strong>a.</strong></p><ol><li>Présence détectée et luminosité inférieure à 300 lux : le compteur est remis à 0 et <strong>les luminaires s’allument</strong>.</li><li>Plus de présence : le compteur augmente de 1 chaque seconde. Au bout de 600 s, soit <strong>10 minutes</strong>, les luminaires s’éteignent. Ils restent donc allumés pendant les 10 premières minutes de la récréation, puis s’éteignent.</li><li>Présence détectée : le programme teste seulement si la luminosité est inférieure à 300 lux pour <em>allumer</em> ; aucune instruction n’éteint les luminaires quand il y a du monde. <strong>Les luminaires restent allumés</strong> malgré les 800 lux.</li></ol><p><strong>b.</strong> Ajouter, dans la branche « présence détectée », un test d’extinction :</p><p>Si luminosité > 500 lux alors<br>  Éteindre les luminaires<br>Fin Si</p><p>On choisit un seuil d’extinction (500 lux) plus élevé que le seuil d’allumage (300 lux). Sinon, autour de 300 lux, l’éclairage des luminaires eux-mêmes ferait passer la luminosité au-dessus du seuil et les lampes s’allumeraient et s’éteindraient sans cesse (clignotement).</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E6",
+     "label": "Partie 6",
+     "short": "P. 6",
+     "titre": "Démarche expérimentale : chauffer de l’eau au soleil",
+     "points": 2.5,
+     "intro": "<p>Pour préparer une séance sur l’énergie solaire, l’enseignant veut montrer que l’on peut chauffer de l’eau avec le Soleil. Les élèves se demandent : « La couleur d’une bouteille a-t-elle une influence sur l’échauffement de l’eau au soleil ? »</p>",
+     "questions": [
+      {
+       "id": "17",
+       "type": "demarche",
+       "points": 1.5,
+       "enonce": "<p>Proposer un protocole expérimental permettant de répondre à la question des élèves. Préciser la variable testée, les paramètres à maintenir identiques, le témoin, les mesures à effectuer et les résultats attendus.</p>",
+       "corrige": "<p><strong>Hypothèse</strong> : l’eau d’une bouteille noire chauffe plus que celle d’une bouteille blanche.</p><p><strong>Matériel</strong> : bouteilles en plastique identiques (même forme, même taille) ; peinture noire et blanche ; thermomètres ; eau du robinet ; chronomètre.</p><p><strong>Protocole :</strong></p><ul><li>On peint une bouteille en noir, une en blanc ; une troisième reste transparente : c’est le <strong>témoin</strong> (bouteille non modifiée, qui sert de référence).</li><li><strong>Seule la couleur varie.</strong> On garde identiques : le volume d’eau (500 mL par exemple), la température initiale de l’eau (même eau, même récipient de départ), l’exposition au soleil (même endroit, même orientation, même moment), la durée d’exposition, la position du thermomètre.</li><li>On mesure la température initiale, puis toutes les 10 minutes pendant 30 minutes (ou plus). On note les résultats dans un tableau, puis on trace des courbes.</li><li>On peut ajouter une bouteille noire placée à l’ombre, pour montrer que c’est bien le rayonnement solaire qui chauffe l’eau.</li><li>On répète l’expérience (plusieurs jours ou plusieurs groupes) pour vérifier que les résultats sont reproductibles.</li></ul><p><strong>Résultat attendu</strong> : la température de l’eau de la bouteille noire augmente le plus, celle de la bouteille blanche le moins.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "18",
+       "type": "demarche",
+       "points": 1,
+       "enonce": "<p>Les élèves obtiennent les résultats suivants, avec une eau initialement à 20 °C, après 30 minutes au soleil : bouteille noire 36 °C, bouteille transparente 28 °C, bouteille blanche 26 °C, bouteille noire à l’ombre 21 °C. Un élève conclut : « La peinture noire fabrique de la chaleur. » Interpréter les résultats et corriger la conclusion de l’élève.</p>",
+       "corrige": "<p>Augmentations de température : noire au soleil +16 °C ; transparente +8 °C ; blanche +6 °C ; noire à l’ombre +1 °C.</p><ul><li>Au soleil, la bouteille noire chauffe deux fois plus que le témoin : la couleur a une influence.</li><li>La bouteille noire à l’ombre chauffe à peine : la peinture noire seule ne produit pas de chaleur. Il faut la lumière du Soleil.</li></ul><p class=\"answer\">Une surface noire <strong>absorbe</strong> davantage le rayonnement solaire (lumière) et le convertit en énergie thermique ; une surface blanche en <strong>réfléchit</strong> la plus grande partie. La peinture ne fabrique pas d’énergie : elle convertit l’énergie lumineuse reçue.</p><p>Limites : une seule série de mesures ; les résultats doivent être confirmés par des répétitions. Application : les capteurs des chauffe-eau solaires sont noirs.</p>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sci-corps",
+   "num": 2,
+   "domaine": "sciences",
+   "titre": "Le corps en mouvement",
+   "theme": "Énergie des aliments, digestion et enzymes, respiration et circulation, fréquence et débit cardiaques, hygiène de vie, muscles et articulations, maquette, micro-organismes, hygiène, vaccination et antibiotiques",
+   "officiel": false,
+   "remarque": "Sujet original d’entraînement. Données fictives réalistes sauf mention contraire.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Partie 1",
+     "short": "P. 1",
+     "titre": "Des aliments à l’énergie",
+     "points": 4.5,
+     "intro": "<p>Une école prépare son cross annuel. L’enseignant de CM2 en profite pour étudier avec ses élèves le fonctionnement du corps pendant l’effort.</p><div class=\"doc\"><p class=\"doc-title\">Document 1 – Étiquette nutritionnelle d’une barre de céréales (valeurs pour 100 g ; données fictives réalistes)</p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Pour 100 g</th><th>Valeur</th></tr></thead><tbody><tr><th>Énergie</th><td>1 708 kJ (406 kcal)</td></tr><tr><th>Glucides</th><td>65 g</td></tr><tr><th>dont sucres</th><td>28 g</td></tr><tr><th>Lipides</th><td>12 g</td></tr><tr><th>Protéines</th><td>7 g</td></tr><tr><th>Fibres alimentaires</th><td>5 g</td></tr></tbody></table></div><p>Une barre pèse 25 g. Un adulte de 70 kg qui court à allure modérée dépense environ 2 400 kJ par heure.</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "svt",
+       "points": 1,
+       "enonce": "<p>Calculer l’énergie apportée par une barre de céréales, puis la durée de course modérée qui correspond à cette énergie pour un adulte de 70 kg.</p>",
+       "corrige": "<p>Énergie d’une barre : 1 708 kJ × 25/100 = 427 kJ (soit 406 × 0,25 ≈ 101,5 kcal).</p><p>Durée de course : 427 / 2 400 ≈ 0,178 h, soit 0,178 × 60 ≈ 10,7 min.</p><p class=\"answer\">Une barre apporte 427 kJ, ce qui correspond à environ 11 minutes de course modérée.</p><p>Remarque : le joule (J) est l’unité légale d’énergie ; la kilocalorie est une unité usuelle (1 kcal ≈ 4,18 kJ).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "2",
+       "type": "svt",
+       "points": 1.5,
+       "enonce": "<p>Décrire le devenir des aliments de la barre dans l’appareil digestif, depuis la bouche jusqu’au passage des nutriments dans le sang.</p>",
+       "corrige": "<ul><li><strong>Trajet</strong> dans le tube digestif : bouche → pharynx → œsophage → estomac → intestin grêle → gros intestin (côlon) → rectum → anus.</li><li><strong>Transformation mécanique</strong> : les dents broient les aliments, les muscles de l’estomac et de l’intestin les brassent.</li><li><strong>Transformation chimique</strong> : les sucs digestifs (salive, suc gastrique, suc pancréatique, suc intestinal), produits par des glandes (glandes salivaires, pancréas…), contiennent des <strong>enzymes</strong> qui découpent les grosses molécules en petites molécules : l’amidon en glucose, les protéines en acides aminés, les lipides en acides gras et glycérol. La bile, produite par le foie, facilite la digestion des lipides.</li><li><strong>Absorption</strong> : dans l’intestin grêle, les nutriments traversent la paroi, très repliée (villosités) et très irriguée, et passent dans le sang (et la lymphe). Le sang les distribue à tous les organes.</li><li>Les fibres, non digérées, forment avec l’eau les selles, éliminées par l’anus.</li></ul><p>Piège : les aliments ne passent pas par le foie, le pancréas ou les glandes salivaires ; ce sont des glandes annexes qui déversent leurs sucs dans le tube digestif.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "3",
+       "type": "demarche",
+       "points": 2,
+       "enonce": "<p>Les élèves se demandent si la salive transforme l’amidon (principal glucide des céréales). Pour des raisons d’hygiène, on utilise en classe une solution d’amylase, l’enzyme présente dans la salive. On dispose d’empois d’amidon, d’eau iodée (qui devient bleu-noir en présence d’amidon), de tubes à essai et d’un bain-marie à 37 °C.</p><p>Proposer un protocole expérimental comportant un témoin, et indiquer les résultats attendus si l’amylase digère l’amidon.</p>",
+       "corrige": "<p><strong>Hypothèse</strong> : l’amylase transforme l’amidon.</p><p><strong>Protocole :</strong></p><ul><li><strong>Tube A (expérience)</strong> : 5 mL d’empois d’amidon + 2 mL de solution d’amylase.</li><li><strong>Tube B (témoin)</strong> : 5 mL d’empois d’amidon + 2 mL d’eau.</li><li>Les deux tubes sont placés en même temps au bain-marie à 37 °C (température du corps) pendant 20 minutes. Tout est identique sauf la présence d’amylase : c’est la seule variable.</li><li>On ajoute ensuite quelques gouttes d’eau iodée dans chaque tube et on observe la couleur.</li><li>Variante : on prélève une goutte de chaque tube toutes les 5 minutes et on la teste à l’eau iodée sur une coupelle, pour suivre la disparition de l’amidon.</li></ul><p><strong>Résultats attendus :</strong> tube B bleu-noir (l’amidon est toujours présent) ; tube A jaune-orangé, couleur de l’eau iodée (l’amidon a disparu).</p><p class=\"answer\">Le témoin montre que l’amidon ne disparaît pas tout seul en 20 minutes à 37 °C : c’est donc l’amylase qui l’a transformé.</p><p>Pour aller plus loin (collège) : un test à la liqueur de Fehling à chaud (précipité rouge brique) montre l’apparition de sucres simples dans le tube A. On peut ajouter un tube C avec de l’amylase à 0 °C (dans la glace) pour montrer l’effet de la température.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Partie 2",
+     "short": "P. 2",
+     "titre": "Respirer et faire circuler le sang",
+     "points": 4.5,
+     "intro": "<div class=\"doc\"><p class=\"doc-title\">Document 2 – Composition du sang qui entre dans un muscle de la cuisse et qui en sort (données réalistes simplifiées)</p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th></th><th>Dioxygène (mL par L de sang)</th><th>Dioxyde de carbone (mL par L de sang)</th><th>Glucose (g par L de sang)</th></tr></thead><tbody><tr><th>Sang entrant (artère), repos et effort</th><td>200</td><td>490</td><td>1,00</td></tr><tr><th>Sang sortant (veine), au repos</th><td>150</td><td>530</td><td>0,95</td></tr><tr><th>Sang sortant (veine), pendant l’effort</th><td>50</td><td>640</td><td>0,85</td></tr></tbody></table></div><p>Débit sanguin dans le muscle : 0,5 L/min au repos ; 10 L/min pendant un effort intense.</p></div>",
+     "questions": [
+      {
+       "id": "4",
+       "type": "svt",
+       "points": 1.5,
+       "enonce": "<p>Exploiter le document 2 : comparer la composition du sang entrant et sortant du muscle, au repos et à l’effort. Calculer le volume de dioxygène prélevé par le muscle en une minute, au repos puis à l’effort.</p>",
+       "corrige": "<ul><li>Le sang qui sort du muscle contient <strong>moins de dioxygène et de glucose</strong> et <strong>plus de dioxyde de carbone</strong> que le sang qui entre : le muscle prélève du dioxygène et du glucose et rejette du dioxyde de carbone.</li><li>Ces échanges sont plus importants à l’effort. Pour 1 L de sang, le muscle prélève 200 − 150 = 50 mL de dioxygène au repos et 200 − 50 = 150 mL à l’effort, soit 3 fois plus.</li></ul><p>Volume de dioxygène prélevé par minute :</p><ul><li>au repos : 0,5 L/min × 50 mL/L = 25 mL/min ;</li><li>à l’effort : 10 L/min × 150 mL/L = 1 500 mL/min.</li></ul><p class=\"answer\">À l’effort, le muscle consomme 1 500 / 25 = 60 fois plus de dioxygène par minute qu’au repos. Cette hausse vient à la fois d’un prélèvement plus important dans chaque litre de sang (×3) et d’un débit sanguin plus élevé (×20).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "5",
+       "type": "svt",
+       "points": 1.5,
+       "enonce": "<p>Expliquer pourquoi le muscle a besoin de dioxygène et de glucose. Décrire ensuite le trajet du dioxygène depuis l’air extérieur jusqu’aux cellules du muscle.</p>",
+       "corrige": "<p>Les cellules du muscle ont besoin d’énergie pour se contracter. Elles l’obtiennent par la <strong>respiration cellulaire</strong> : le glucose réagit avec le dioxygène ; cette réaction libère de l’énergie et produit du dioxyde de carbone et de l’eau.</p><p>glucose + dioxygène → dioxyde de carbone + eau (+ énergie utilisable par la cellule, et chaleur)</p><p>Plus l’effort est intense, plus le muscle consomme de glucose et de dioxygène.</p><p><strong>Trajet du dioxygène :</strong> air inspiré → fosses nasales ou bouche → trachée → bronches → bronchioles → <strong>alvéoles pulmonaires</strong>. Au niveau des alvéoles, dont la paroi est très fine et entourée de capillaires, le dioxygène passe dans le sang (il est transporté surtout par les globules rouges). Le sang oxygéné revient au cœur (partie gauche), qui l’envoie dans l’aorte puis les artères jusqu’au muscle. Dans les capillaires du muscle, le dioxygène passe dans les cellules.</p><p>Piège : ne pas confondre la <strong>respiration cellulaire</strong> (réaction dans les cellules) et la <strong>ventilation pulmonaire</strong> (mouvements d’inspiration et d’expiration).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "6",
+       "type": "conceptions",
+       "points": 1.5,
+       "enonce": "<p>Pendant la séance, Tom (CM1) dessine des tuyaux qui partent des poumons et apportent l’air jusque dans les jambes. Léa affirme : « On inspire du dioxygène et on expire du dioxyde de carbone. »</p><p>Expliquer l’erreur de chacun des deux élèves et proposer une activité pour faire évoluer leurs représentations.</p>",
+       "corrige": "<p><strong>Tom</strong> pense que l’air lui-même circule dans tout le corps, par un réseau de tuyaux. Il ne connaît pas le rôle du sang comme intermédiaire. En réalité, l’air reste dans l’appareil respiratoire (voies respiratoires et poumons). Seul le dioxygène passe dans le sang au niveau des alvéoles ; c’est le sang, mis en mouvement par le cœur, qui le transporte jusqu’aux muscles.</p><p><strong>Léa</strong> oppose deux gaz purs. En réalité, on inspire de l’air (environ 78 % de diazote, 21 % de dioxygène, 0,04 % de dioxyde de carbone) et on expire de l’air appauvri en dioxygène et enrichi en dioxyde de carbone (environ 16 % de dioxygène et 4 % de dioxyde de carbone). Le diazote n’est pas utilisé. L’air expiré contient donc encore beaucoup de dioxygène (c’est ce qui rend possible le bouche-à-bouche).</p><p><strong>Activités :</strong></p><ul><li>Pour Tom : comparer son dessin avec des schémas et des vidéos de l’appareil respiratoire et circulatoire ; faire un schéma fonctionnel reliant poumons, cœur et muscles par le sang ; observer que le sang circule partout (on se blesse n’importe où, on saigne).</li><li>Pour Léa : faire barboter de l’air expiré dans de l’eau de chaux, qui se trouble plus vite qu’avec de l’air ambiant (plus de dioxyde de carbone) ; comparer la durée de combustion d’une bougie sous un bocal rempli d’air ambiant et sous un bocal rempli d’air expiré (elle brûle moins longtemps mais brûle encore : il reste du dioxygène). Ces expériences se font en présence de l’enseignant.</li></ul>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E3",
+     "label": "Partie 3",
+     "short": "P. 3",
+     "titre": "La fréquence cardiaque pendant l’effort",
+     "points": 4,
+     "intro": "<p>Deux adultes du même âge, Paul (sportif entraîné) et Marc (sédentaire), accompagnent le cross. On mesure leur fréquence cardiaque avec un cardiofréquencemètre avant, pendant et après une course de 10 minutes à la même vitesse (10 km/h).</p><div class=\"doc\"><p class=\"doc-title\">Document 3 – Fréquence cardiaque de Paul et de Marc (données fictives réalistes)</p><figure class=\"fig\"><svg viewBox=\"0 0 580 330\" role=\"img\" aria-label=\"Fréquence cardiaque de deux adultes. Paul (sportif) : 60 battements par minute au repos, plateau à 140 pendant la course de la 5e à la 15e minute, retour à 67 à 20 minutes et à 60 à 30 minutes. Marc (sédentaire) : 78 au repos, plateau à 170-172 pendant la course, 112 à 20 minutes et 86 à 30 minutes.\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"148.3\" y=\"30\" width=\"164.7\" height=\"250\" class=\"shade\" fill-opacity=\"0.3\"/><line x1=\"66.0\" y1=\"30\" x2=\"66.0\" y2=\"280\" class=\"grid\"/><text x=\"66\" y=\"297\" font-size=\"12\" text-anchor=\"middle\">0</text><line x1=\"148.3\" y1=\"30\" x2=\"148.3\" y2=\"280\" class=\"grid\"/><text x=\"148.333\" y=\"297\" font-size=\"12\" text-anchor=\"middle\">5</text><line x1=\"230.7\" y1=\"30\" x2=\"230.7\" y2=\"280\" class=\"grid\"/><text x=\"230.667\" y=\"297\" font-size=\"12\" text-anchor=\"middle\">10</text><line x1=\"313.0\" y1=\"30\" x2=\"313.0\" y2=\"280\" class=\"grid\"/><text x=\"313\" y=\"297\" font-size=\"12\" text-anchor=\"middle\">15</text><line x1=\"395.3\" y1=\"30\" x2=\"395.3\" y2=\"280\" class=\"grid\"/><text x=\"395.333\" y=\"297\" font-size=\"12\" text-anchor=\"middle\">20</text><line x1=\"477.7\" y1=\"30\" x2=\"477.7\" y2=\"280\" class=\"grid\"/><text x=\"477.667\" y=\"297\" font-size=\"12\" text-anchor=\"middle\">25</text><line x1=\"560.0\" y1=\"30\" x2=\"560.0\" y2=\"280\" class=\"grid\"/><text x=\"560\" y=\"297\" font-size=\"12\" text-anchor=\"middle\">30</text><line x1=\"66\" y1=\"280.0\" x2=\"560\" y2=\"280.0\" class=\"grid\"/><text x=\"59\" y=\"284\" font-size=\"12\" text-anchor=\"end\">40</text><line x1=\"66\" y1=\"246.7\" x2=\"560\" y2=\"246.7\" class=\"grid\"/><text x=\"59\" y=\"250.667\" font-size=\"12\" text-anchor=\"end\">60</text><line x1=\"66\" y1=\"213.3\" x2=\"560\" y2=\"213.3\" class=\"grid\"/><text x=\"59\" y=\"217.333\" font-size=\"12\" text-anchor=\"end\">80</text><line x1=\"66\" y1=\"180.0\" x2=\"560\" y2=\"180.0\" class=\"grid\"/><text x=\"59\" y=\"184\" font-size=\"12\" text-anchor=\"end\">100</text><line x1=\"66\" y1=\"146.7\" x2=\"560\" y2=\"146.7\" class=\"grid\"/><text x=\"59\" y=\"150.667\" font-size=\"12\" text-anchor=\"end\">120</text><line x1=\"66\" y1=\"113.3\" x2=\"560\" y2=\"113.3\" class=\"grid\"/><text x=\"59\" y=\"117.333\" font-size=\"12\" text-anchor=\"end\">140</text><line x1=\"66\" y1=\"80.0\" x2=\"560\" y2=\"80.0\" class=\"grid\"/><text x=\"59\" y=\"84\" font-size=\"12\" text-anchor=\"end\">160</text><line x1=\"66\" y1=\"46.7\" x2=\"560\" y2=\"46.7\" class=\"grid\"/><text x=\"59\" y=\"50.6667\" font-size=\"12\" text-anchor=\"end\">180</text><line x1=\"66\" y1=\"280\" x2=\"560\" y2=\"280\" class=\"axis\"/><line x1=\"66\" y1=\"30\" x2=\"66\" y2=\"280\" class=\"axis\"/><text x=\"313\" y=\"320\" font-size=\"13\" text-anchor=\"middle\">Temps (min)</text><text x=\"16\" y=\"155.0\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90 16 155.0)\">Fréquence cardiaque (battements/min)</text><path d=\"M66.0,246.7 L148.3,246.7 L164.8,188.3 L181.3,155.0 L197.7,133.3 L214.2,121.7 L230.7,116.7 L247.1,113.3 L313.0,113.3 L329.5,155.0 L345.9,188.3 L362.4,213.3 L378.9,226.7 L395.3,235.0 L428.3,241.7 L477.7,245.0 L560.0,246.7\" class=\"stroke c1\"/><path d=\"M66.0,216.7 L148.3,216.7 L164.8,155.0 L181.3,113.3 L197.7,88.3 L214.2,75.0 L230.7,66.7 L247.1,63.3 L263.6,61.7 L313.0,60.0 L329.5,88.3 L345.9,113.3 L362.4,133.3 L395.3,160.0 L428.3,176.7 L477.7,190.0 L560.0,203.3\" class=\"stroke c3\"/><text x=\"107.167\" y=\"46.6667\" font-size=\"12\" text-anchor=\"middle\">repos</text><text x=\"230.667\" y=\"46.6667\" font-size=\"12\" text-anchor=\"middle\">course (effort)</text><text x=\"436.5\" y=\"46.6667\" font-size=\"12\" text-anchor=\"middle\">récupération</text><line x1=\"403.56666666666666\" y1=\"83.33333333333334\" x2=\"436.5\" y2=\"83.33333333333334\" class=\"stroke c3\"/><text x=\"444.733\" y=\"88.3333\" font-size=\"12\" text-anchor=\"start\">Marc (sédentaire)</text><line x1=\"403.56666666666666\" y1=\"105.0\" x2=\"436.5\" y2=\"105.0\" class=\"stroke c1\"/><text x=\"444.733\" y=\"110\" font-size=\"12\" text-anchor=\"start\">Paul (sportif)</text></svg></figure><p>La zone grisée correspond à la course (de la 5<sup>e</sup> à la 15<sup>e</sup> minute).</p></div><div class=\"doc\"><p class=\"doc-title\">Document 4 – Volume d’éjection systolique (VES)</p><p>Le VES est le volume de sang éjecté par le ventricule gauche à chaque battement. Le débit cardiaque (volume de sang envoyé par le cœur en une minute) est égal à : fréquence cardiaque × VES.</p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th></th><th>VES au repos</th><th>VES pendant la course</th></tr></thead><tbody><tr><th>Paul</th><td>85 mL</td><td>125 mL</td></tr><tr><th>Marc</th><td>65 mL</td><td>102 mL</td></tr></tbody></table></div></div>",
+     "questions": [
+      {
+       "id": "7",
+       "type": "svt",
+       "points": 1.5,
+       "enonce": "<p>Décrire l’évolution de la fréquence cardiaque de Paul et de Marc (document 3). Comparer les deux courbes.</p>",
+       "corrige": "<p>On distingue trois phases pour les deux personnes :</p><ul><li><strong>Repos</strong> (0 à 5 min) : fréquence stable, 60 battements/min pour Paul, 78 pour Marc.</li><li><strong>Effort</strong> (5 à 15 min) : augmentation rapide pendant les 4 à 5 premières minutes, puis plateau : 140 battements/min pour Paul, environ 170 pour Marc.</li><li><strong>Récupération</strong> (après 15 min) : diminution rapide puis plus lente. Paul revient à 67 battements/min dès 20 min et à sa valeur de repos (60) à 30 min. Marc est encore à 112 à 20 min et à 86 à 30 min : il n’a pas retrouvé sa fréquence de repos.</li></ul><p class=\"answer\">Pour un même effort, le sportif a une fréquence cardiaque plus basse au repos (60 contre 78) et à l’effort (140 contre environ 170), et il récupère plus vite.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "8",
+       "type": "svt",
+       "points": 1.25,
+       "enonce": "<p>À l’aide du document 4, calculer le débit cardiaque de Paul et de Marc au repos et pendant la course. Expliquer l’intérêt de l’augmentation du débit cardiaque pendant l’effort et la différence entre les deux hommes.</p>",
+       "corrige": "<div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th></th><th>Au repos</th><th>Pendant la course</th></tr></thead><tbody><tr><th>Paul</th><td>60 × 85 = 5 100 mL/min ≈ 5,1 L/min</td><td>140 × 125 = 17 500 mL/min = 17,5 L/min</td></tr><tr><th>Marc</th><td>78 × 65 = 5 070 mL/min ≈ 5,1 L/min</td><td>172 × 102 = 17 544 mL/min ≈ 17,5 L/min</td></tr></tbody></table></div><p>Pendant l’effort, le débit cardiaque est multiplié par environ 3,4. Le cœur envoie plus de sang aux muscles, donc plus de dioxygène et de glucose, et évacue plus vite le dioxyde de carbone produit.</p><p class=\"answer\">Pour le même effort, les deux hommes ont besoin du même débit cardiaque (environ 17,5 L/min). Le cœur de Paul, entraîné, éjecte plus de sang à chaque battement : il atteint ce débit avec une fréquence plus faible. Son cœur travaille de façon plus économique.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "9",
+       "type": "svt",
+       "points": 1.25,
+       "enonce": "<p>À partir de ces résultats et de vos connaissances, présenter les bénéfices d’une activité physique régulière et les principales recommandations d’hygiène de vie pour des enfants de l’école élémentaire.</p>",
+       "corrige": "<p><strong>Bénéfices de l’activité physique régulière :</strong> le cœur, qui est un muscle, se renforce (VES plus grand, fréquence de repos plus basse, récupération plus rapide) ; les muscles et les os se renforcent ; la capacité respiratoire s’améliore ; le risque de surpoids, de diabète et de maladies cardiovasculaires diminue ; le sommeil, la concentration et le bien-être s’améliorent.</p><p><strong>Recommandations</strong> (d’après l’Organisation mondiale de la santé) : pour les 5-17 ans, au moins 60 minutes par jour en moyenne d’activité physique d’intensité modérée à soutenue ; limiter le temps passé assis et devant les écrans.</p><p><strong>Autres éléments d’hygiène de vie :</strong> une alimentation variée et équilibrée, répartie en plusieurs repas (petit-déjeuner compris) ; boire de l’eau, surtout pendant l’effort ; un sommeil suffisant (environ 9 à 12 heures par nuit entre 6 et 12 ans) ; l’hygiène corporelle et dentaire ; s’échauffer avant l’effort et récupérer après.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E4",
+     "label": "Partie 4",
+     "short": "P. 4",
+     "titre": "Muscles, os et articulations",
+     "points": 3,
+     "intro": "<p>Pour courir, il faut que les membres bougent. En classe, les élèves palpent leur bras quand ils le plient et quand ils le tendent.</p><div class=\"doc\"><p class=\"doc-title\">Document 5 – Schéma simplifié du bras plié</p><figure class=\"fig\"><svg viewBox=\"0 0 580 240\" role=\"img\" aria-label=\"Schéma simplifié d’un bras plié : l’humérus relié à l’avant-bras (radius et cubitus) par l’articulation du coude ; le biceps, à l’avant de l’humérus, est fixé par des tendons à l’épaule et à l’avant-bras ; le triceps est à l’arrière de l’humérus.\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(150,0)\"><path d=\"M72,34 L90,34 L88,196 L74,196 Z\" class=\"stroke paper\"/><circle cx=\"81\" cy=\"34\" r=\"12\" class=\"stroke paper\"/><path d=\"M84,204 L292,122 L296,132 L88,214 Z\" class=\"stroke paper\"/><path d=\"M70,210 L90,218 L300,138 L296,132\" class=\"stroke thin\"/><circle cx=\"80\" cy=\"205\" r=\"11\" class=\"stroke paper\"/><path d=\"M92,50 C150,80 150,160 124,188 C112,165 104,90 92,50 Z\" class=\"c-red\"/><line x1=\"90\" y1=\"38\" x2=\"92\" y2=\"50\" class=\"stroke\"/><line x1=\"124\" y1=\"188\" x2=\"128\" y2=\"196\" class=\"stroke\"/><path d=\"M70,48 C36,90 36,170 64,206 C62,165 60,90 70,48 Z\" class=\"c-red\"/><line x1=\"72\" y1=\"40\" x2=\"70\" y2=\"48\" class=\"stroke\"/><line x1=\"128\" y1=\"118\" x2=\"180\" y2=\"92\" class=\"stroke thin dash\"/><text x=\"184\" y=\"96\" font-size=\"12\" text-anchor=\"start\">biceps</text><line x1=\"48\" y1=\"130\" x2=\"-12\" y2=\"118\" class=\"stroke thin dash\"/><text x=\"-16\" y=\"122\" font-size=\"12\" text-anchor=\"end\">triceps</text><line x1=\"82\" y1=\"150\" x2=\"-12\" y2=\"160\" class=\"stroke thin dash\"/><text x=\"-16\" y=\"164\" font-size=\"12\" text-anchor=\"end\">humérus</text><line x1=\"240\" y1=\"157\" x2=\"262\" y2=\"204\" class=\"stroke thin dash\"/><text x=\"266\" y=\"208\" font-size=\"12\" text-anchor=\"start\">radius et cubitus (ulna)</text><line x1=\"127\" y1=\"193\" x2=\"150\" y2=\"230\" class=\"stroke thin dash\"/><text x=\"154\" y=\"234\" font-size=\"12\" text-anchor=\"start\">tendon</text><line x1=\"72\" y1=\"210\" x2=\"-12\" y2=\"214\" class=\"stroke thin dash\"/><text x=\"-16\" y=\"218\" font-size=\"12\" text-anchor=\"end\">articulation du coude</text><line x1=\"90\" y1=\"30\" x2=\"130\" y2=\"16\" class=\"stroke thin dash\"/><text x=\"134\" y=\"20\" font-size=\"12\" text-anchor=\"start\">épaule</text></g></svg></figure></div>",
+     "questions": [
+      {
+       "id": "10",
+       "type": "svt",
+       "points": 1.25,
+       "enonce": "<p>Expliquer comment se produit la flexion de l’avant-bras (document 5), puis son extension.</p>",
+       "corrige": "<ul><li>Les muscles sont fixés aux os par des <strong>tendons</strong>, de part et d’autre d’une <strong>articulation</strong> (ici le coude, qui relie l’humérus au radius et au cubitus).</li><li><strong>Flexion</strong> : le biceps se <strong>contracte</strong> : il se raccourcit, devient plus épais et plus dur. Il tire sur l’avant-bras par son tendon et le fait tourner autour du coude. Pendant ce temps, le triceps se <strong>relâche</strong> et s’allonge.</li><li><strong>Extension</strong> : c’est le triceps qui se contracte et tire l’avant-bras vers le bas ; le biceps se relâche.</li></ul><p class=\"answer\">Un muscle ne peut que tirer, jamais pousser. Il faut donc deux muscles aux actions opposées (muscles antagonistes) pour plier puis tendre le bras.</p><p>La commande vient du système nerveux : le cerveau envoie un message par les nerfs jusqu’au muscle.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "11",
+       "type": "conceptions",
+       "points": 1,
+       "enonce": "<p>Un élève de CM1 explique : « Pour tendre le bras, le biceps pousse l’avant-bras vers le bas. » Un autre dit : « Quand je plie le bras, c’est l’os qui se plie. » Identifier les erreurs et indiquer comment y répondre.</p>",
+       "corrige": "<ul><li>Le premier élève attribue au muscle une capacité à <strong>pousser</strong>. Or un muscle ne fait que se contracter (se raccourcir) et donc tirer ; le biceps se relâche pendant l’extension et c’est le triceps qui travaille.</li><li>Le second élève pense que les os sont souples. Or les os sont rigides : le mouvement a lieu au niveau de l’<strong>articulation</strong>, où deux os mobiles l’un par rapport à l’autre se rejoignent.</li></ul><p><strong>Réponse :</strong> faire palper le bras (le biceps durcit et se gonfle en flexion, le triceps en extension) ; observer une radiographie du coude ; faire construire une maquette du bras (voir question suivante) et montrer qu’un élastique ou une ficelle qui tire ne peut pas pousser.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "12",
+       "type": "techno",
+       "points": 0.75,
+       "enonce": "<p>Les élèves doivent construire une maquette fonctionnelle du bras. Proposer des matériaux pour représenter les os, l’articulation, les muscles et les tendons, puis indiquer une limite de la maquette.</p>",
+       "corrige": "<ul><li><strong>Os</strong> : deux bandes de carton épais ou deux baguettes de bois (rigides).</li><li><strong>Articulation</strong> : une attache parisienne ou une vis avec écrou qui relie les deux pièces et permet la rotation.</li><li><strong>Muscles</strong> : deux ficelles (ou élastiques) placées de part et d’autre ; on tire sur l’une ou l’autre.</li><li><strong>Tendons</strong> : les points d’attache des ficelles sur les « os » (trous, agrafes), qui doivent être situés sur l’autre os, au-delà de l’articulation.</li></ul><p><strong>Limites</strong> : dans la maquette, c’est la main de l’élève qui tire sur la ficelle ; le vrai muscle se contracte seul, sur ordre du système nerveux. La ficelle ne gonfle pas et ne durcit pas. L’articulation réelle a des limites de mouvement, des cartilages et des ligaments.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E5",
+     "label": "Partie 5",
+     "short": "P. 5",
+     "titre": "Microbes, hygiène et vaccination",
+     "points": 4,
+     "intro": "<div class=\"doc\"><p class=\"doc-title\">Document 6 – Multiplication des bactéries</p><p>Dans des conditions favorables (nourriture, humidité, température de 30 à 37 °C), certaines bactéries se divisent en deux toutes les 20 minutes. Au réfrigérateur (4 °C), la plupart se multiplient beaucoup plus lentement.</p></div><div class=\"doc\"><p class=\"doc-title\">Document 7 – L’expérience de Jenner (1796)</p><p>Le médecin anglais Edward Jenner observe que les personnes qui traient les vaches et qui ont contracté la « vaccine », une maladie bénigne transmise par les vaches, ne tombent pas malades de la variole, une maladie grave. Il inocule à un enfant du liquide prélevé sur une lésion de vaccine. Quelques semaines plus tard, il lui inocule la variole : l’enfant ne tombe pas malade. La variole a été déclarée éradiquée dans le monde par l’OMS en 1980, grâce à la vaccination.</p><p class=\"doc-src\">Source : faits historiques, texte rédigé pour le sujet</p></div>",
+     "questions": [
+      {
+       "id": "13",
+       "type": "svt",
+       "points": 1,
+       "enonce": "<p>À partir du document 6, calculer le nombre de bactéries obtenues à partir d’une seule bactérie au bout de 3 heures, puis de 6 heures, dans des conditions favorables. En déduire deux règles d’hygiène alimentaire.</p>",
+       "corrige": "<p>En 3 h, il y a 180 / 20 = 9 divisions : 2<sup>9</sup> = 512 bactéries. En 6 h, 18 divisions : 2<sup>18</sup> = 262 144 bactéries.</p><p class=\"answer\">Une bactérie donne 512 bactéries en 3 h et plus de 260 000 en 6 h : la croissance est exponentielle (doublement à intervalle régulier).</p><p>Règles d’hygiène : conserver les aliments périssables au froid (réfrigérateur) et ne pas rompre la chaîne du froid ; ne pas laisser un plat cuisiné plusieurs heures à température ambiante ; se laver les mains avant de manipuler des aliments ; respecter les dates limites de consommation.</p><p>Piège : doubler 18 fois ne revient pas à multiplier par 18 × 2 = 36.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "14",
+       "type": "demarche",
+       "points": 1.5,
+       "enonce": "<p>Pour montrer aux élèves l’intérêt du lavage des mains, un enseignant veut utiliser des tranches de pain de mie. Proposer un protocole expérimental avec un témoin et indiquer les résultats attendus.</p>",
+       "corrige": "<p><strong>Question</strong> : se laver les mains réduit-il la quantité de micro-organismes qu’on dépose en touchant un aliment ?</p><p><strong>Protocole :</strong></p><ul><li>Trois tranches de pain de mie identiques (même paquet), manipulées avec une pince propre.</li><li>Tranche 1 : touchée avec les mains non lavées, après la récréation.</li><li>Tranche 2 : touchée avec les mêmes mains, lavées à l’eau et au savon pendant 30 secondes.</li><li>Tranche 3 : <strong>témoin</strong>, non touchée.</li><li>Chaque tranche est placée dans un sachet de congélation fermé et étiqueté, avec quelques gouttes d’eau, au même endroit (à température ambiante, à l’abri). On observe chaque jour pendant une à deux semaines, en dessinant ou photographiant les tranches, <strong>sans jamais ouvrir les sachets</strong>. À la fin, on les jette fermés.</li><li>Seule varie la façon dont la tranche a été touchée ; tout le reste est identique.</li></ul><p><strong>Résultats attendus :</strong> des moisissures (colonies de champignons microscopiques, et de bactéries) apparaissent plus tôt et en plus grand nombre sur la tranche 1, moins sur la tranche 2 ; la tranche 3 reste la plus saine le plus longtemps. Le témoin montre ce qui se développe sans contact avec les mains.</p><p class=\"answer\">Les mains non lavées transportent des micro-organismes invisibles ; le lavage au savon en élimine une grande partie.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "15",
+       "type": "svt",
+       "points": 1.5,
+       "enonce": "<p>a. À partir du document 7 et de vos connaissances, expliquer le principe de la vaccination.</p><p>b. Un parent d’élève affirme : « Quand mon enfant a la grippe, je lui donne des antibiotiques pour qu’il guérisse plus vite. » Que peut-on lui répondre ?</p>",
+       "corrige": "<p><strong>a.</strong> Lors d’une première rencontre avec un micro-organisme (ou une toxine), le système immunitaire met un certain temps à réagir ; pendant ce temps, on peut tomber malade. Il garde ensuite une <strong>mémoire</strong> de cet agent (lymphocytes mémoire). Lors d’une seconde rencontre, la réponse est plus rapide et plus forte : la personne ne tombe pas malade, ou peu.</p><p>Le vaccin consiste à introduire dans l’organisme un agent rendu <strong>inoffensif</strong> (micro-organisme tué ou atténué, fragment, toxine inactivée, ou ARN qui fait produire un fragment) mais qui garde ses caractéristiques de reconnaissance. L’organisme fabrique des anticorps et des cellules mémoire <strong>sans subir la maladie</strong>. Chez Jenner, le virus de la vaccine, proche de celui de la variole mais bénin, a joué ce rôle. Le mot « vaccin » vient d’ailleurs de <em>vacca</em>, la vache.</p><p>La vaccination protège la personne vaccinée et, quand une grande partie de la population est vaccinée, elle limite la circulation de l’agent et protège aussi les personnes fragiles : c’est une protection collective.</p><p><strong>b.</strong> La grippe est due à un <strong>virus</strong>. Les antibiotiques agissent sur les <strong>bactéries</strong> et sont sans effet sur les virus. Les donner inutilement expose à des effets indésirables et favorise l’apparition de bactéries résistantes aux antibiotiques. Contre la grippe, on traite les symptômes (repos, boisson, médicament contre la fièvre sur avis médical) et on peut se protéger par la vaccination et les gestes barrières.</p>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sci-terre",
+   "num": 3,
+   "domaine": "sciences",
+   "titre": "La Terre et le vivant",
+   "theme": "Système solaire, vitesse de la lumière, saisons, géocentrisme et héliocentrisme, volcans et séismes, risques, classification du vivant, biodiversité, reproduction des plantes à fleurs, germination (protocole avec témoin), reproduction asexuée, changements d’état, masse volumique, dissolution, séparation des mélanges",
+   "officiel": false,
+   "remarque": "Sujet original d’entraînement. Données fictives réalistes sauf mention contraire.",
+   "total": 20,
+   "parties": [
+    {
+     "id": "E1",
+     "label": "Partie 1",
+     "short": "P. 1",
+     "titre": "La Terre dans le système solaire",
+     "points": 4.5,
+     "intro": "<p>Une classe de CM2 prépare une exposition intitulée « La Terre et le vivant ». Elle commence par situer la Terre dans le système solaire.</p><div class=\"doc\"><p class=\"doc-title\">Document 1 – Quelques planètes du système solaire</p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Planète</th><th>Distance moyenne au Soleil (UA)</th><th>Diamètre équatorial (km)</th><th>Période de révolution</th><th>Température moyenne de surface</th></tr></thead><tbody><tr><th>Mercure</th><td>0,39</td><td>4 879</td><td>88 jours</td><td>167 °C</td></tr><tr><th>Vénus</th><td>0,72</td><td>12 104</td><td>225 jours</td><td>464 °C</td></tr><tr><th>Terre</th><td>1,00</td><td>12 756</td><td>365,25 jours</td><td>15 °C</td></tr><tr><th>Mars</th><td>1,52</td><td>6 792</td><td>687 jours</td><td>−65 °C</td></tr><tr><th>Jupiter</th><td>5,20</td><td>142 984</td><td>11,9 ans</td><td>−110 °C (sommet des nuages)</td></tr></tbody></table></div><p>1 UA (unité astronomique) ≈ 150 millions de km : c’est la distance moyenne Terre-Soleil (149,6 millions de km). Vénus possède une atmosphère très épaisse, composée à 96 % de dioxyde de carbone. Mercure n’a presque pas d’atmosphère.</p><p class=\"doc-src\">Source : données d’après la NASA (valeurs arrondies)</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "physique",
+       "points": 1.25,
+       "enonce": "<p>Exploiter le document 1 : quelle relation observe-t-on entre la distance au Soleil et la période de révolution ? Entre la distance au Soleil et la température ? Expliquer l’exception.</p>",
+       "corrige": "<ul><li>Plus une planète est éloignée du Soleil, plus sa <strong>période de révolution est longue</strong> : 88 jours pour Mercure, 11,9 ans pour Jupiter. (La relation n’est pas proportionnelle : Jupiter est 5,2 fois plus loin que la Terre mais met 11,9 fois plus de temps.)</li><li>En général, plus la planète est éloignée, plus elle est <strong>froide</strong>, car elle reçoit moins d’énergie du Soleil par mètre carré.</li><li><strong>Exception</strong> : Vénus (464 °C) est plus chaude que Mercure (167 °C), pourtant plus proche du Soleil. Son atmosphère épaisse, riche en dioxyde de carbone, produit un <strong>effet de serre</strong> très intense : le rayonnement infrarouge émis par le sol est retenu et la surface se réchauffe fortement. Mercure, sans atmosphère, ne retient pas la chaleur.</li></ul><p class=\"answer\">La distance n’est pas le seul facteur : la composition de l’atmosphère joue un rôle majeur dans la température d’une planète.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "2",
+       "type": "physique",
+       "points": 1,
+       "enonce": "<p>La lumière se propage dans le vide à environ 300 000 km/s. Calculer la durée mise par la lumière du Soleil pour atteindre la Terre. Exprimer le résultat en minutes et secondes.</p>",
+       "corrige": "<p>t = d / v = 149,6 × 10<sup>6</sup> km / (3 × 10<sup>5</sup> km/s) ≈ 499 s.</p><p>499 s = 8 × 60 s + 19 s.</p><p class=\"answer\">La lumière du Soleil met environ 8 min 19 s (environ 500 s) pour nous parvenir.</p><p>Conséquence : on voit le Soleil tel qu’il était il y a un peu plus de 8 minutes. Piège : convertir les distances dans la même unité que la vitesse (km et km/s).</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "3",
+       "type": "conceptions",
+       "points": 1.25,
+       "enonce": "<p>Un élève affirme : « En été, il fait chaud parce que la Terre est plus proche du Soleil. » Expliquer pourquoi ce raisonnement est faux, donner l’explication scientifique des saisons et proposer une activité pour la classe.</p>",
+       "corrige": "<p>Le raisonnement de l’élève semble logique (plus près d’une source de chaleur, on a plus chaud), mais il est contredit par les faits :</p><ul><li>la Terre est <strong>au plus près du Soleil début janvier</strong> (environ 147 millions de km) et au plus loin début juillet (environ 152 millions de km) : c’est l’hiver en France quand la Terre est la plus proche ;</li><li>quand c’est l’été dans l’hémisphère Nord, c’est l’hiver dans l’hémisphère Sud, alors que les deux hémisphères sont à la même distance du Soleil.</li></ul><p><strong>Explication</strong> : l’axe de rotation de la Terre est incliné d’environ 23° par rapport à la perpendiculaire au plan de l’orbite, et il garde une direction fixe pendant la révolution. En été, l’hémisphère Nord est incliné vers le Soleil : les journées sont plus longues et le Soleil monte plus haut ; les rayons arrivent moins inclinés et l’énergie reçue par mètre carré est plus grande. En hiver, c’est l’inverse.</p><p><strong>Activités</strong> : modéliser avec une lampe (le Soleil) et un globe à axe incliné qu’on déplace autour de la lampe, en gardant l’axe dans la même direction ; montrer avec une lampe de poche qu’un faisceau incliné éclaire une surface plus grande, donc moins intensément ; relever la longueur de l’ombre d’un bâton (gnomon) à midi au fil des mois ; comparer les heures de lever et de coucher du Soleil.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "4",
+       "type": "demarche",
+       "points": 1,
+       "enonce": "<p>Pendant des siècles, on a pensé que la Terre était immobile au centre de l’Univers et que le Soleil tournait autour d’elle (géocentrisme). Expliquer pourquoi cette idée paraissait évidente, et comment elle a été abandonnée. Qu’illustre cet exemple sur la nature du savoir scientifique ?</p>",
+       "corrige": "<p>Le géocentrisme s’appuyait sur l’observation quotidienne : on voit le Soleil se lever à l’est, traverser le ciel et se coucher à l’ouest, et l’on ne sent pas la Terre bouger. En réalité, c’est la <strong>rotation de la Terre sur elle-même</strong> (un tour en 24 h environ, d’ouest en est) qui produit l’alternance du jour et de la nuit et le mouvement apparent du Soleil.</p><p>Au XVI<sup>e</sup> siècle, Copernic propose un modèle héliocentrique (1543), plus simple pour expliquer le mouvement des planètes. Au début du XVII<sup>e</sup> siècle, Galilée observe avec une lunette les phases de Vénus et les satellites de Jupiter (1610) : ces observations sont incompatibles avec le modèle géocentrique. Kepler décrit les orbites elliptiques des planètes.</p><p class=\"answer\">Le savoir scientifique ne se fonde pas sur l’évidence ni sur l’autorité : il est construit à partir d’observations et de mesures, il est provisoire et il est révisé quand de nouveaux faits contredisent le modèle admis.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E2",
+     "label": "Partie 2",
+     "short": "P. 2",
+     "titre": "Une Terre active : volcans et séismes",
+     "points": 3.5,
+     "intro": "<p>L’exposition présente ensuite l’activité interne de la Terre.</p><div class=\"doc\"><p class=\"doc-title\">Document 2 – Deux volcans français</p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th></th><th>Piton de la Fournaise (La Réunion)</th><th>Montagne Pelée (Martinique)</th></tr></thead><tbody><tr><th>Lave</th><td>Très fluide, pauvre en silice</td><td>Très visqueuse, riche en silice</td></tr><tr><th>Type d’éruption</th><td>Coulées de lave et fontaines de lave</td><td>Explosions, dômes de lave et nuées ardentes (écoulements de gaz, cendres et blocs brûlants)</td></tr><tr><th>Forme du relief</th><td>Volcan très large, pentes douces</td><td>Relief plus pentu, dôme au sommet</td></tr><tr><th>Exemple</th><td>Éruptions fréquentes, souvent plusieurs fois par an</td><td>8 mai 1902 : une nuée ardente détruit la ville de Saint-Pierre (environ 28 000 morts)</td></tr></tbody></table></div><p class=\"doc-src\">Source : faits connus, tableau rédigé pour le sujet</p></div><div class=\"doc\"><p class=\"doc-title\">Document 3 – Le séisme du 6 février 2023 en Turquie et en Syrie</p><p>Un séisme de magnitude 7,8 a frappé le sud-est de la Turquie et le nord de la Syrie. Il est dû à un brusque déplacement le long d’une grande faille, à la limite de plaques lithosphériques. Les ondes sismiques les plus rapides (ondes P) se propagent dans la croûte à environ 6 km/s.</p></div>",
+     "questions": [
+      {
+       "id": "5",
+       "type": "svt",
+       "points": 1.25,
+       "enonce": "<p>Comparer les deux types d’éruptions du document 2 et les relier aux caractéristiques de la lave.</p>",
+       "corrige": "<ul><li><strong>Éruption effusive</strong> (Piton de la Fournaise) : la lave est fluide ; les gaz s’échappent facilement ; la lave s’écoule en coulées sur de longues distances. Le danger est limité et localisé (on peut évacuer les zones menacées). Les coulées successives construisent un volcan large aux pentes douces.</li><li><strong>Éruption explosive</strong> (Montagne Pelée) : la lave est visqueuse ; les gaz restent piégés, la pression augmente et provoque des explosions ; la lave s’accumule en dôme au sommet ; des nuées ardentes dévalent les pentes à grande vitesse. Le danger est très grand.</li></ul><p class=\"answer\">La viscosité de la lave, liée à sa teneur en silice, et la facilité avec laquelle les gaz s’échappent déterminent le type d’éruption.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "6",
+       "type": "svt",
+       "points": 1.25,
+       "enonce": "<p>a. Expliquer ce qu’est un séisme en employant les mots : foyer, épicentre, faille, ondes sismiques.</p><p>b. Une station sismique est située à 300 km du foyer. Calculer la durée mise par les ondes P pour l’atteindre.</p>",
+       "corrige": "<p><strong>a.</strong> Les roches en profondeur subissent des contraintes dues au mouvement des plaques lithosphériques. Elles se déforment, puis se rompent brutalement le long d’une <strong>faille</strong>. Le point de départ de la rupture, en profondeur, est le <strong>foyer</strong> (ou hypocentre). L’énergie libérée se propage dans toutes les directions sous forme d’<strong>ondes sismiques</strong>, qui font vibrer le sol. L’<strong>épicentre</strong> est le point de la surface situé à la verticale du foyer ; c’est en général là que les secousses sont les plus fortes.</p><p>La plupart des séismes et des volcans se situent aux limites des plaques. La magnitude mesure l’énergie libérée par le séisme ; l’intensité décrit ses effets en un lieu donné.</p><p><strong>b.</strong> t = d / v = 300 km / (6 km/s) = 50 s.</p><p class=\"answer\">Les ondes P atteignent la station 50 secondes après le début de la rupture.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "7",
+       "type": "svt",
+       "points": 1,
+       "enonce": "<p>Définir le risque sismique. Indiquer comment une école peut s’y préparer et les consignes à donner aux élèves en cas de séisme.</p>",
+       "corrige": "<p>Le <strong>risque</strong> naît de la rencontre d’un <strong>aléa</strong> (la probabilité qu’un séisme d’une certaine force se produise en un lieu) et d’<strong>enjeux</strong> (personnes, bâtiments, activités exposés). Un fort séisme dans un désert représente un risque faible ; un séisme moyen dans une ville dense, un risque élevé. On ne peut pas prévoir un séisme, mais on peut réduire la vulnérabilité.</p><p><strong>Prévention</strong> : construction parasismique ; plan particulier de mise en sûreté (PPMS) de l’école ; exercices réguliers ; information des élèves.</p><p><strong>Consignes</strong> : pendant la secousse, s’abriter sous une table solide et se protéger la tête, s’éloigner des fenêtres ; à l’extérieur, s’éloigner des bâtiments et des fils électriques. Après la secousse, évacuer dans le calme, sans prendre l’ascenseur, et se regrouper dans un espace dégagé ; se préparer aux répliques.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E3",
+     "label": "Partie 3",
+     "short": "P. 3",
+     "titre": "Classer le vivant, préserver la biodiversité",
+     "points": 4,
+     "intro": "<div class=\"doc\"><p class=\"doc-title\">Document 4 – Caractères de quelques êtres vivants observés par la classe</p><div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Être vivant</th><th>Squelette interne (vertèbres)</th><th>Quatre membres</th><th>Poils</th><th>Plumes</th><th>Squelette externe et pattes articulées</th><th>Six pattes</th><th>Huit pattes</th><th>Coquille et pied musclé</th></tr></thead><tbody><tr><th>Chat</th><td>oui</td><td>oui</td><td>oui</td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>Chauve-souris</th><td>oui</td><td>oui</td><td>oui</td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>Pigeon</th><td>oui</td><td>oui</td><td></td><td>oui</td><td></td><td></td><td></td><td></td></tr><tr><th>Lézard</th><td>oui</td><td>oui</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>Truite</th><td>oui</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>Papillon</th><td></td><td></td><td></td><td></td><td>oui</td><td>oui</td><td></td><td></td></tr><tr><th>Araignée</th><td></td><td></td><td></td><td></td><td>oui</td><td></td><td>oui</td><td></td></tr><tr><th>Escargot</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>oui</td></tr></tbody></table></div><p>Les ailes du pigeon et de la chauve-souris sont des membres antérieurs transformés.</p></div>",
+     "questions": [
+      {
+       "id": "8",
+       "type": "svt",
+       "points": 1.5,
+       "enonce": "<p>À partir du document 4, construire une classification en groupes emboîtés de ces huit animaux. Nommer chaque groupe et indiquer le caractère qui le définit.</p>",
+       "corrige": "<p>On regroupe les êtres vivants selon les <strong>caractères qu’ils possèdent en commun</strong> (attributs), et non selon ce qu’ils n’ont pas.</p><ul><li><strong>Vertébrés</strong> (squelette interne avec vertèbres) : chat, chauve-souris, pigeon, lézard, truite.<ul><li><strong>Tétrapodes</strong> (quatre membres) : chat, chauve-souris, pigeon, lézard.<ul><li><strong>Mammifères</strong> (poils ; et mamelles) : chat, chauve-souris.</li><li><strong>Oiseaux</strong> (plumes) : pigeon.</li><li>Le lézard reste dans le groupe des tétrapodes (écailles : groupe des « reptiles » au sens usuel).</li></ul></li><li>La truite est un vertébré sans quatre membres (nageoires).</li></ul></li><li><strong>Arthropodes</strong> (squelette externe, pattes articulées) : papillon, araignée.<ul><li><strong>Insectes</strong> (six pattes) : papillon.</li><li><strong>Arachnides</strong> (huit pattes) : araignée.</li></ul></li><li><strong>Mollusques</strong> (corps mou, pied musclé, souvent une coquille) : escargot.</li></ul><p>On peut présenter cette classification sous forme d’ensembles emboîtés (boîtes dans des boîtes) ou d’arbre.</p><p>Piège : « invertébrés » n’est pas un groupe de la classification scientifique, car il est défini par l’absence d’un caractère.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "9",
+       "type": "conceptions",
+       "points": 1.25,
+       "enonce": "<p>Lors de la séance, Inès (CM1) range la chauve-souris avec le pigeon « parce qu’ils volent », et Nathan affirme que « la baleine est un poisson parce qu’elle vit dans l’eau et qu’elle nage ». Analyser ces erreurs et proposer une façon d’y répondre.</p>",
+       "corrige": "<p>Les deux élèves classent selon le <strong>milieu de vie</strong> ou le <strong>mode de déplacement</strong>, des critères visibles et intuitifs. Ce sont des critères de tri utiles pour d’autres questions (écologie), mais pas pour la classification scientifique, qui repose sur des <strong>caractères partagés</strong> hérités d’ancêtres communs (parenté).</p><ul><li>La chauve-souris a des poils et allaite ses petits : c’est un <strong>mammifère</strong>. Ses ailes sont des membranes de peau tendues entre les doigts, alors que l’aile du pigeon porte des plumes.</li><li>La baleine respire avec des poumons (elle remonte en surface), allaite ses petits et possède quelques poils : c’est un <strong>mammifère</strong>. Sa forme ressemble à celle d’un poisson parce que les deux vivent dans l’eau (adaptation au même milieu), pas parce qu’ils sont proches parents.</li></ul><p><strong>Réponse</strong> : faire remplir un tableau de caractères (poils, plumes, mamelles, poumons, branchies…) à partir de photos et de documents ; comparer les squelettes de l’aile de chauve-souris, de l’aile d’oiseau et du bras humain ; rappeler la règle : on classe avec « ce qu’ils ont », pas avec « ce qu’ils font » ni « où ils vivent ».</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "10",
+       "type": "svt",
+       "points": 1.25,
+       "enonce": "<p>Définir la biodiversité, citer les principales causes de son érosion et proposer deux actions réalisables dans une école.</p>",
+       "corrige": "<p>La <strong>biodiversité</strong> est la diversité du vivant à trois niveaux : la diversité des <strong>écosystèmes</strong> (milieux), la diversité des <strong>espèces</strong> et la diversité <strong>génétique</strong> au sein de chaque espèce (différences entre individus). Elle comprend aussi les interactions entre les êtres vivants et avec leur milieu.</p><p><strong>Causes de son érosion</strong> (identifiées par l’IPBES en 2019, par ordre d’importance au niveau mondial) : la destruction et la transformation des milieux (urbanisation, déforestation, agriculture intensive) ; la surexploitation des espèces (pêche, chasse) ; le changement climatique ; les pollutions (pesticides, plastiques, lumière) ; les espèces exotiques envahissantes.</p><p><strong>Actions à l’école</strong> : installer un hôtel à insectes et des nichoirs ; créer une mare, un potager ou une haie d’espèces locales ; laisser une zone de la cour non tondue ; participer à un programme de sciences participatives (comptage des oiseaux, des papillons…).</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E4",
+     "label": "Partie 4",
+     "short": "P. 4",
+     "titre": "La reproduction des plantes",
+     "points": 4,
+     "intro": "<div class=\"doc\"><p class=\"doc-title\">Document 5 – Coupe simplifiée d’une fleur</p><figure class=\"fig\"><svg viewBox=\"0 0 360 260\" role=\"img\" aria-label=\"Coupe longitudinale simplifiée d’une fleur avec sept légendes repérées par des lettres : A une pièce colorée externe, B une petite pièce sous la fleur, C un organe en forme de sac porté par un filament, D le sommet du pistil, E la partie allongée du pistil, F la partie renflée du pistil, G les petites structures rondes contenues dans F.\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"180\" y1=\"250\" x2=\"180\" y2=\"192\" class=\"stroke\" stroke-width=\"4\"/><path d=\"M158,178 C120,160 70,110 86,70 C110,70 150,120 166,170 Z\" class=\"stroke paper\"/><path d=\"M202,178 C240,160 290,110 274,70 C250,70 210,120 194,170 Z\" class=\"stroke paper\"/><path d=\"M150,186 C130,186 112,178 104,168 C122,166 140,172 156,180 Z\" class=\"stroke paper\"/><path d=\"M210,186 C230,186 248,178 256,168 C238,166 220,172 204,180 Z\" class=\"stroke paper\"/><ellipse cx=\"180\" cy=\"186\" rx=\"34\" ry=\"9\" class=\"stroke paper\"/><line x1=\"165\" y1=\"178\" x2=\"138\" y2=\"104\" class=\"stroke\"/><ellipse cx=\"138\" cy=\"97\" rx=\"6\" ry=\"10\" class=\"stroke paper\"/><line x1=\"195\" y1=\"178\" x2=\"222\" y2=\"104\" class=\"stroke\"/><ellipse cx=\"222\" cy=\"97\" rx=\"6\" ry=\"10\" class=\"stroke paper\"/><ellipse cx=\"180\" cy=\"160\" rx=\"20\" ry=\"20\" class=\"stroke paper\"/><circle cx=\"172\" cy=\"154\" r=\"4\" class=\"stroke thin\"/><circle cx=\"188\" cy=\"154\" r=\"4\" class=\"stroke thin\"/><circle cx=\"180\" cy=\"168\" r=\"4\" class=\"stroke thin\"/><path d=\"M176,141 L177,84 L183,84 L184,141\" class=\"stroke paper\"/><ellipse cx=\"180\" cy=\"80\" rx=\"9\" ry=\"5\" class=\"stroke paper\"/><line x1=\"95\" y1=\"90\" x2=\"40\" y2=\"60\" class=\"stroke thin dash\"/><text x=\"32\" y=\"65\" font-size=\"14\" text-anchor=\"middle\"><tspan font-weight=\"bold\">A</tspan></text><line x1=\"110\" y1=\"170\" x2=\"40\" y2=\"200\" class=\"stroke thin dash\"/><text x=\"32\" y=\"205\" font-size=\"14\" text-anchor=\"middle\"><tspan font-weight=\"bold\">B</tspan></text><line x1=\"138\" y1=\"92\" x2=\"100\" y2=\"30\" class=\"stroke thin dash\"/><text x=\"92\" y=\"35\" font-size=\"14\" text-anchor=\"middle\"><tspan font-weight=\"bold\">C</tspan></text><line x1=\"186\" y1=\"78\" x2=\"250\" y2=\"28\" class=\"stroke thin dash\"/><text x=\"258\" y=\"33\" font-size=\"14\" text-anchor=\"middle\"><tspan font-weight=\"bold\">D</tspan></text><line x1=\"182\" y1=\"115\" x2=\"320\" y2=\"110\" class=\"stroke thin dash\"/><text x=\"328\" y=\"115\" font-size=\"14\" text-anchor=\"middle\"><tspan font-weight=\"bold\">E</tspan></text><line x1=\"198\" y1=\"162\" x2=\"320\" y2=\"170\" class=\"stroke thin dash\"/><text x=\"328\" y=\"175\" font-size=\"14\" text-anchor=\"middle\"><tspan font-weight=\"bold\">F</tspan></text><line x1=\"184\" y1=\"168\" x2=\"320\" y2=\"220\" class=\"stroke thin dash\"/><text x=\"328\" y=\"225\" font-size=\"14\" text-anchor=\"middle\"><tspan font-weight=\"bold\">G</tspan></text></svg></figure></div>",
+     "questions": [
+      {
+       "id": "11",
+       "type": "svt",
+       "points": 1.25,
+       "enonce": "<p>a. Nommer les éléments repérés par les lettres A à G sur le document 5.</p><p>b. Expliquer comment, à partir d’une fleur, se forment un fruit et des graines.</p>",
+       "corrige": "<p><strong>a.</strong> A : pétale ; B : sépale ; C : étamine (anthère portée par un filet) ; D : stigmate ; E : style ; F : ovaire ; G : ovules. D, E et F forment le pistil (organe femelle) ; les étamines sont les organes mâles et produisent le pollen.</p><p><strong>b.</strong></p><ol><li><strong>Pollinisation</strong> : le pollen est transporté des étamines jusqu’au stigmate d’une fleur de la même espèce, par des insectes (abeilles, papillons…) ou par le vent.</li><li><strong>Fécondation</strong> : le grain de pollen germe, un tube pollinique descend dans le style ; la cellule reproductrice mâle s’unit à la cellule reproductrice femelle contenue dans l’ovule.</li><li><strong>Transformation</strong> : l’ovule fécondé devient une <strong>graine</strong> (contenant un embryon) ; l’ovaire devient le <strong>fruit</strong>. Pétales et étamines fanent et tombent.</li><li><strong>Dissémination</strong> des graines (vent, animaux, eau), puis germination.</li></ol><p>Piège : au sens scientifique, un fruit est issu de l’ovaire et contient des graines : la tomate, le haricot vert ou le poivron sont des fruits.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "12",
+       "type": "demarche",
+       "points": 1.75,
+       "enonce": "<p>Les élèves se demandent si les graines ont besoin de lumière pour germer.</p><p>a. Proposer un protocole expérimental avec un témoin, en utilisant des graines de lentille.</p><p>b. Après 5 jours, les élèves obtiennent : lot à la lumière, 18 graines germées sur 20 ; lot à l’obscurité, 19 graines germées sur 20. Les plantules de l’obscurité sont longues, fines et jaunâtres. Interpréter ces résultats.</p>",
+       "corrige": "<p><strong>a.</strong></p><ul><li>Deux lots de 20 graines de lentille (même paquet), posées sur du coton humide dans deux coupelles identiques.</li><li>Lot 1, <strong>témoin</strong> : à la lumière. Lot 2 : à l’obscurité (sous une boîte opaque ou dans un placard).</li><li><strong>Seul facteur qui varie : la lumière</strong>. On garde identiques la quantité d’eau (on arrose de la même façon), la température (même pièce, en vérifiant que la boîte ne chauffe pas au soleil), l’air, le type et le nombre de graines.</li><li>On compte chaque jour les graines germées (apparition de la radicule) pendant une semaine. On utilise plusieurs graines par lot pour limiter l’effet des variations individuelles (une graine peut ne pas germer).</li></ul><p><strong>b.</strong> Les graines germent aussi bien à l’obscurité (19/20, soit 95 %) qu’à la lumière (18/20, soit 90 %) ; la différence d’une graine n’est pas significative.</p><p class=\"answer\">La lumière n’est pas nécessaire à la germination des lentilles : la graine utilise ses réserves.</p><p>En revanche, les plantules de l’obscurité sont étiolées (longues, fines, jaunâtres) : elles n’ont pas fabriqué de chlorophylle. Quand les réserves de la graine seront épuisées, elles ne pourront pas fabriquer leur matière organique par photosynthèse et mourront. La lumière est nécessaire à la <strong>croissance</strong> de la plante, pas à la germination. Il ne faut pas confondre germination et croissance. (Pour les graines de certaines espèces, la lumière influence tout de même la germination : la conclusion vaut pour la lentille.)</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "13",
+       "type": "svt",
+       "points": 1,
+       "enonce": "<p>Les plantes peuvent aussi se reproduire sans fleur ni graine. Donner deux exemples de reproduction asexuée chez les végétaux et préciser une caractéristique des nouveaux individus obtenus.</p>",
+       "corrige": "<ul><li><strong>Bouturage</strong> : un fragment de tige (géranium, saule) placé dans l’eau ou la terre forme des racines et donne une nouvelle plante.</li><li><strong>Stolons</strong> : le fraisier produit des tiges rampantes qui s’enracinent et donnent de nouveaux pieds.</li><li><strong>Tubercules</strong> : une pomme de terre plantée donne une nouvelle plante ; <strong>bulbes</strong> (tulipe, oignon) ; <strong>marcottage</strong>.</li></ul><p class=\"answer\">Les individus obtenus par reproduction asexuée sont génétiquement identiques à la plante mère : ce sont des clones.</p><p>Cette reproduction est rapide, mais elle ne produit pas de diversité génétique, contrairement à la reproduction sexuée.</p>",
+       "niveau": "c4"
+      }
+     ]
+    },
+    {
+     "id": "E5",
+     "label": "Partie 5",
+     "short": "P. 5",
+     "titre": "L’eau : états et mélanges",
+     "points": 4,
+     "intro": "<p>Pour la dernière partie de l’exposition, les élèves étudient l’eau et ses états.</p><div class=\"doc\"><p class=\"doc-title\">Document 6 – Chauffage de glaçons sortis du congélateur (données fictives réalistes)</p><figure class=\"fig\"><svg viewBox=\"0 0 560 320\" role=\"img\" aria-label=\"Courbe de chauffage de glace : la température passe de −18 °C à 0 °C en 1 minute (segment A), reste à 0 °C de 1 à 9 minutes (palier B), augmente de 0 à 100 °C de 9 à 19 minutes (segment C), puis reste à 100 °C de 19 à 30 minutes (palier D).\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60.0\" y1=\"30\" x2=\"60.0\" y2=\"270\" class=\"grid\"/><text x=\"60\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">0</text><line x1=\"140.0\" y1=\"30\" x2=\"140.0\" y2=\"270\" class=\"grid\"/><text x=\"140\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">5</text><line x1=\"220.0\" y1=\"30\" x2=\"220.0\" y2=\"270\" class=\"grid\"/><text x=\"220\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">10</text><line x1=\"300.0\" y1=\"30\" x2=\"300.0\" y2=\"270\" class=\"grid\"/><text x=\"300\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">15</text><line x1=\"380.0\" y1=\"30\" x2=\"380.0\" y2=\"270\" class=\"grid\"/><text x=\"380\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">20</text><line x1=\"460.0\" y1=\"30\" x2=\"460.0\" y2=\"270\" class=\"grid\"/><text x=\"460\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">25</text><line x1=\"540.0\" y1=\"30\" x2=\"540.0\" y2=\"270\" class=\"grid\"/><text x=\"540\" y=\"287\" font-size=\"12\" text-anchor=\"middle\">30</text><line x1=\"60\" y1=\"270.0\" x2=\"540\" y2=\"270.0\" class=\"grid\"/><text x=\"53\" y=\"274\" font-size=\"12\" text-anchor=\"end\">−20</text><line x1=\"60\" y1=\"233.1\" x2=\"540\" y2=\"233.1\" class=\"grid\"/><text x=\"53\" y=\"237.077\" font-size=\"12\" text-anchor=\"end\">0</text><line x1=\"60\" y1=\"196.2\" x2=\"540\" y2=\"196.2\" class=\"grid\"/><text x=\"53\" y=\"200.154\" font-size=\"12\" text-anchor=\"end\">20</text><line x1=\"60\" y1=\"159.2\" x2=\"540\" y2=\"159.2\" class=\"grid\"/><text x=\"53\" y=\"163.231\" font-size=\"12\" text-anchor=\"end\">40</text><line x1=\"60\" y1=\"122.3\" x2=\"540\" y2=\"122.3\" class=\"grid\"/><text x=\"53\" y=\"126.308\" font-size=\"12\" text-anchor=\"end\">60</text><line x1=\"60\" y1=\"85.4\" x2=\"540\" y2=\"85.4\" class=\"grid\"/><text x=\"53\" y=\"89.3846\" font-size=\"12\" text-anchor=\"end\">80</text><line x1=\"60\" y1=\"48.5\" x2=\"540\" y2=\"48.5\" class=\"grid\"/><text x=\"53\" y=\"52.4615\" font-size=\"12\" text-anchor=\"end\">100</text><line x1=\"60\" y1=\"270\" x2=\"540\" y2=\"270\" class=\"axis\"/><line x1=\"60\" y1=\"30\" x2=\"60\" y2=\"270\" class=\"axis\"/><text x=\"300\" y=\"310\" font-size=\"13\" text-anchor=\"middle\">Temps (min)</text><text x=\"16\" y=\"150.0\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90 16 150.0)\">Température (°C)</text><path d=\"M60.0,266.3 L76.0,233.1 L204.0,233.1 L364.0,48.5 L540.0,48.5\" class=\"stroke c1\"/><text x=\"74.4\" y=\"255.231\" font-size=\"13\" text-anchor=\"start\">A</text><text x=\"140\" y=\"223.846\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"271.2\" y=\"150\" font-size=\"13\" text-anchor=\"end\">C</text><text x=\"452\" y=\"39.2308\" font-size=\"13\" text-anchor=\"middle\">D</text></svg></figure><p>Des glaçons (eau pure) sont chauffés régulièrement dans un bécher, sous pression atmosphérique normale ; on agite et on relève la température toutes les 30 secondes.</p></div>",
+     "questions": [
+      {
+       "id": "14",
+       "type": "physique",
+       "points": 1.25,
+       "enonce": "<p>Pour chaque partie A, B, C et D de la courbe du document 6, indiquer l’état (ou les états) de l’eau et nommer les changements d’état. Que remarque-t-on pendant les changements d’état ?</p>",
+       "corrige": "<div class=\"table-wrap\"><table class=\"mtable\"><thead><tr><th>Partie</th><th>Durée</th><th>État de l’eau</th><th>Phénomène</th></tr></thead><tbody><tr><th>A</th><td>0 à 1 min</td><td>Solide (glace)</td><td>La glace se réchauffe de −18 °C à 0 °C</td></tr><tr><th>B</th><td>1 à 9 min</td><td>Solide et liquide</td><td>Fusion</td></tr><tr><th>C</th><td>9 à 19 min</td><td>Liquide</td><td>L’eau liquide se réchauffe de 0 °C à 100 °C</td></tr><tr><th>D</th><td>après 19 min</td><td>Liquide et gaz (vapeur d’eau)</td><td>Ébullition (vaporisation)</td></tr></tbody></table></div><p class=\"answer\">Pendant un changement d’état d’un corps pur, la température reste constante (palier), bien que l’on continue à chauffer : 0 °C pour la fusion de la glace, 100 °C pour l’ébullition de l’eau, sous la pression atmosphérique normale.</p><p>L’énergie reçue sert à changer d’état, pas à élever la température. Un palier de température est une caractéristique d’un corps pur ; pour de l’eau salée, la température ne reste pas constante. Piège : les bulles et la « fumée » blanche au-dessus de l’eau ne sont pas de la vapeur d’eau (invisible) mais de fines gouttelettes d’eau liquide, formées par condensation.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "15",
+       "type": "physique",
+       "points": 0.75,
+       "enonce": "<p>La masse volumique de la glace est de 0,917 g/cm³, celle de l’eau liquide de 1,00 g/cm³. On remplit à ras bord une bouteille en verre avec 1 L d’eau et on la place au congélateur. Calculer le volume de glace obtenu et expliquer ce qui risque de se passer.</p>",
+       "corrige": "<p>La masse se conserve lors d’un changement d’état : 1 L d’eau liquide = 1 000 cm³ ont une masse de 1 000 g. La glace formée a aussi une masse de 1 000 g.</p><p>Volume de glace : V = m / ρ = 1 000 / 0,917 ≈ 1 090 cm³.</p><p class=\"answer\">L’eau en gelant occupe environ 1,09 L, soit 9 % de plus : la bouteille pleine risque d’éclater.</p><p>C’est aussi pour cela que la glace flotte (elle est moins dense que l’eau) et que le gel fait éclater les roches (gélifraction) et les canalisations.</p>",
+       "niveau": "c4"
+      },
+      {
+       "id": "16",
+       "type": "conceptions",
+       "points": 1.25,
+       "enonce": "<p>En préparant de l’eau salée, un élève déclare : « Le sel a fondu dans l’eau, il a disparu. » Identifier les deux erreurs de l’élève et proposer deux expériences pour l’aider à faire évoluer sa représentation.</p>",
+       "corrige": "<ul><li><strong>Première erreur : « fondu ».</strong> L’élève confond <strong>fusion</strong> et <strong>dissolution</strong>. La fusion est le passage de l’état solide à l’état liquide d’un seul corps, sous l’effet de la chaleur (le sel fond à 801 °C). La dissolution est la dispersion d’un solide (le soluté) dans un liquide (le solvant) : on obtient un mélange homogène, une solution.</li><li><strong>Seconde erreur : « disparu ».</strong> Le sel n’est plus visible, mais il est toujours présent, dispersé à l’échelle microscopique. La matière se conserve.</li></ul><p><strong>Expériences :</strong></p><ul><li><strong>Pesée</strong> : peser l’eau, puis le sel, puis la solution obtenue : la masse de la solution est égale à la somme des masses (par exemple 200 g + 10 g = 210 g).</li><li><strong>Évaporation</strong> : laisser s’évaporer l’eau salée dans une coupelle, près d’une source de chaleur ou au soleil : des cristaux de sel réapparaissent (principe des marais salants).</li><li>On peut aussi goûter (avec l’accord de l’enseignant et de l’eau propre) : l’eau est salée.</li></ul>",
+       "niveau": "c4"
+      },
+      {
+       "id": "17",
+       "type": "physique",
+       "points": 0.75,
+       "enonce": "<p>On dispose d’un mélange d’eau, de sable et de sel. Proposer, dans l’ordre, les techniques qui permettent de récupérer séparément le sable et le sel. Préciser à chaque étape s’il s’agit d’un mélange homogène ou hétérogène.</p>",
+       "corrige": "<ol><li>Le mélange eau + sable + sel est <strong>hétérogène</strong> : on distingue le sable à l’œil nu.</li><li><strong>Décantation</strong> (on laisse reposer, le sable tombe au fond) puis <strong>filtration</strong> (filtre à café dans un entonnoir) : le sable reste dans le filtre ; le filtrat est de l’eau salée.</li><li>L’eau salée est un mélange <strong>homogène</strong> : la filtration ne peut pas en séparer le sel.</li><li><strong>Évaporation</strong> (ou chauffage doux) de l’eau salée : l’eau passe à l’état gazeux, le sel reste dans la coupelle.</li></ol><p class=\"answer\">Décantation et filtration pour le sable, puis évaporation pour le sel.</p>",
+       "niveau": "c4"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

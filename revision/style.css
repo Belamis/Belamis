@@ -1164,6 +1164,44 @@ body.studying .launch-layer .space-ui { visibility: hidden; }
 .sb-ctrl .sb-in { border-color: #e0a21a; }
 .sb-v { display: inline-block; min-width: 22px; padding: 0 8px; margin: 0 2px; border-radius: 999px; background: #fff; color: #333; text-align: center; font-weight: 600; }
 
+/* ---------- 2e épreuve : documents, cartes, guide ---------- */
+
+.doc { display: grid; gap: 8px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--glass-line); background: rgba(255, 255, 255, 0.035); }
+.doc-title { margin: 0; font-weight: 700; color: var(--gold); font-size: 0.92rem; }
+.doc-src { margin: 0; font-size: 0.8rem; color: var(--ink-faint); font-style: italic; }
+.doc blockquote, .corrige blockquote { margin: 0; padding: 8px 14px; border-left: 3px solid var(--gold); background: rgba(255, 200, 100, 0.06); border-radius: 0 10px 10px 0; font-family: var(--read); line-height: 1.6; }
+.doc ul, .partie-intro ul { margin: 0; padding-left: 1.2em; }
+.cartel { font-size: 0.88rem; color: var(--ink-soft); }
+.doc a, .corrige a { color: var(--cyan); }
+.fig.map { max-width: 760px; padding: 10px; }
+.fig figcaption { margin-top: 6px; font-size: 0.82rem; color: #5a4b33; text-align: center; }
+.fig .land { fill: #e6dcc6; stroke: #7a6c50; stroke-width: 0.6; }
+.fig .ville { fill: #c0392b; fill-opacity: 0.75; stroke: #6b1a12; stroke-width: 1; }
+.fig .faible { fill: #7fae57; fill-opacity: 0.45; stroke: none; }
+.fig .axe-dense { stroke: #c0392b; stroke-width: 7; stroke-opacity: 0.22; stroke-linecap: round; }
+.fig .montagne { fill: none; stroke: #7a5c2e; stroke-width: 1.4; stroke-dasharray: 4 3; }
+.fig .eu { fill: #7d9be0; stroke: #fff; stroke-width: 0.5; }
+.fig .eu-f { fill: #2b4fa6; stroke: #fff; stroke-width: 0.5; }
+.fig .hl { fill: #2b4fa6; }
+.fig .drom { fill: #c0392b; stroke: #fff; }
+.fig .com { fill: #e0a21a; stroke: #fff; }
+.fig .route { fill: none; stroke: #2b4fa6; stroke-width: 2; }
+.fig .port { fill: #c0392b; }
+.fig .detroit { fill: none; stroke: #231d12; stroke-width: 1.6; }
+.fig .fleche { fill: none; stroke: #c0392b; stroke-width: 2.5; }
+.fig .fleche-h { fill: #c0392b; }
+.fig .legend-box { fill: #fff; fill-opacity: 0.9; stroke: #b8ab8f; }
+.fig .it { font-style: italic; }
+.fig .title { font-weight: 700; }
+.study-guide { margin: 26px 0 0; border: 1px solid var(--gold-line); border-radius: 16px; background: rgba(255, 200, 100, 0.05); }
+.study-guide summary { cursor: pointer; padding: 14px 18px; font-weight: 600; color: var(--gold); }
+.study-guide summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 16px; }
+.guide-body { padding: 0 18px 16px; line-height: 1.6; color: var(--ink-soft); }
+.guide-body h4 { margin: 18px 0 6px; color: var(--ink); }
+.guide-body ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.guide-body strong { color: var(--ink); }
+.domains { margin: 22px 0 0; }
+
 /* ---------- Pied de page ---------- */
 
 .footer {

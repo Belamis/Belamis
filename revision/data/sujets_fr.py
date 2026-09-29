@@ -55,7 +55,7 @@ SUJETS.append({
     "enonce": "Donner la nature des six mots soulignés. Justifier les réponses.",
     "passage": "« Le lendemain, il [[lui]] redemanda les clefs, et elle [[les]] lui donna, mais d’une main si tremblante qu’il devina sans peine tout ce qui s’était passé. « D’où vient, lui dit-il, que [[la]] clef du cabinet n’est point avec les autres ? – Il faut, dit-elle, que je l’aie laissée là-haut sur [[ma]] table. – Ne manquez pas, dit-il, de me [[la]] donner tantôt. » […] « Pourquoi y a-t-il [[du]] sang sur cette clef ? »",
     "corrige": """<ul>
-<li><strong>lui</strong> (il lui redemanda) : <strong>pronom personnel</strong> de 3e personne du singulier ; il remplace « à sa femme » et est complément d’objet second (COS) de <em>redemanda</em>.</li>
+<li><strong>lui</strong> (il lui redemanda) : <strong>pronom personnel</strong> de 3e personne du singulier ; il remplace « à sa femme » et est <strong>complément d’objet indirect</strong> (COI) de <em>redemanda</em>, second complément d’objet du verbe (la <em>Grammaire du français</em> n’emploie pas le terme « COS »).</li>
 <li><strong>les</strong> (elle les lui donna) : <strong>pronom personnel</strong> ; placé devant le verbe, il remplace « les clefs » (COD de <em>donna</em>).</li>
 <li><strong>la</strong> (la clef du cabinet) : <strong>déterminant</strong> (article défini) ; il introduit le nom <em>clef</em>.</li>
 <li><strong>la</strong> (me la donner) : <strong>pronom personnel</strong> ; placé devant le verbe, il remplace « la clef » (COD de <em>donner</em>).</li>
@@ -69,7 +69,7 @@ SUJETS.append({
 <li><strong>Ils sont supprimables</strong> : <em>Le facteur distribue le courrier.</em> La phrase reste correcte et garde son sens de base.</li>
 <li><strong>Ils sont déplaçables</strong> : <em>Tous les matins, le facteur distribue le courrier.</em></li>
 </ul>
-<p>À l’inverse, le COD <em>le courrier</em> ne peut ni être déplacé en tête de phrase ni être supprimé sans changer la construction du verbe. Dans la terminologie grammaticale de 2020, on parle de <strong>complément de phrase</strong>.</p>"""},
+<p>À l’inverse, le COD <em>le courrier</em> ne peut ni être déplacé en tête de phrase ni être supprimé sans changer la construction du verbe. La <em>Grammaire du français</em> (Eduscol) et le programme de cycle 3 de 2025 emploient le terme <strong>complément circonstanciel</strong> ; les programmes de 2015 parlaient de « complément de phrase ».</p>"""},
    {"id": "3b", "type": "fonction", "points": 1,
     "enonce": "Identifier les compléments circonstanciels présents dans la phrase suivante. Donner pour chacun d’eux la nuance de sens exprimée.",
     "passage": "« Puisqu’il faut mourir, répondit-elle en le regardant les yeux baignés de larmes, donnez-moi un peu de temps pour prier Dieu. »",
@@ -465,7 +465,7 @@ SUJETS.append({
     "passage": "« soyez-[[le]] pour tous les états » ; « en [[leur]] ôtant le peu d’instants que la nature leur donne » ; « faites qu’ils [[en]] jouissent »",
     "corrige": """<ul>
 <li><strong>le</strong> (soyez-le) : <strong>pronom personnel</strong> neutre, invariable ; il reprend l’adjectif <em>humains</em>. Il est <strong>attribut du sujet</strong> (le sujet sous-entendu de l’impératif : <em>vous</em>).</li>
-<li><strong>leur</strong> (en leur ôtant) : <strong>pronom personnel</strong> (3e personne du pluriel), mis pour <em>vos enfants</em> ; <strong>complément d’objet second</strong> (COS) du verbe <em>ôter</em> (ôter quelque chose <em>à</em> quelqu’un). Il est invariable : ce n’est pas le déterminant possessif.</li>
+<li><strong>leur</strong> (en leur ôtant) : <strong>pronom personnel</strong> (3e personne du pluriel), mis pour <em>vos enfants</em> ; <strong>complément d’objet indirect</strong> (COI) du verbe <em>ôter</em>, second complément d’objet (ôter quelque chose <em>à</em> quelqu’un). Il est invariable : ce n’est pas le déterminant possessif.</li>
 <li><strong>en</strong> (qu’ils en jouissent) : <strong>pronom</strong> (dit adverbial), mis pour « du plaisir d’être » ; <strong>COI</strong> du verbe <em>jouir</em> (jouir <em>de</em> quelque chose).</li>
 </ul>"""},
    {"id": "3", "type": "propositions", "points": 1.5,

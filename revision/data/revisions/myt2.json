@@ -1,0 +1,1657 @@
+{
+ "sujets": [
+  {
+   "id": "rev-myt2-fr-lire",
+   "num": 1,
+   "domaine": "francais",
+   "titre": "Apprendre à lire et comprendre",
+   "theme": "Décodage, fluence, compréhension, vocabulaire (Dehaene, guide orange, Cèbe et Goigoux) et stratégie pour le QCM de compréhension orale",
+   "revision": true,
+   "duree": 2400,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>Cette séance te prépare à deux choses : la <strong>première partie de l’épreuve de français</strong> (compréhension orale d’un texte didactique, 8 points, QCM « la ou les réponses correctes ») dont le texte porte très souvent sur l’apprentissage de la lecture, et les questions de didactique où l’on te demande d’expliquer comment un élève apprend à lire.</p>\n\n<h4>1. Lire = décoder × comprendre</h4>\n<p>Le modèle de la « lecture simple » (<em>simple view of reading</em>, Gough et Tunmer, 1986) résume l’essentiel : <strong>L = D × C</strong>. La lecture (L) est le <em>produit</em> de l’identification des mots (D, décodage) et de la compréhension de la langue (C). C’est un produit, pas une somme : si l’un des deux facteurs vaut zéro, il n’y a pas de lecture. Un élève qui décode parfaitement un texte en shimaoré sans connaître la langue ne « lit » pas ; un élève qui comprend très bien une histoire racontée mais ne décode pas non plus.</p>\n<p>Le programme de français du cycle 2 (BOEN n° 41 du 31 octobre 2024, en vigueur du CP au CE2) organise l’enseignement de la lecture en <strong>trois entrées</strong> « menées de manière parallèle et complémentaire » : l’apprentissage puis l’automatisation du décodage ; la lecture à voix haute ; la compréhension de textes dans toutes les disciplines. Il affirme : « La compréhension est la finalité de l’apprentissage de la lecture. »</p>\n\n<h4>2. Le décodage</h4>\n<ul>\n<li><strong>Principe alphabétique</strong> : les lettres ou groupes de lettres (<em>graphèmes</em>) codent des sons (<em>phonèmes</em>). Il y a environ 36 phonèmes en français mais bien plus de graphèmes (« o », « au », « eau » codent le même son).</li>\n<li><strong>Conscience phonologique</strong> (construite à l’école maternelle) : manipuler des unités sonores de plus en plus petites, de la syllabe à la rime puis au phonème.</li>\n<li><strong>Apports des neurosciences</strong> : Stanislas Dehaene (<em>Les Neurones de la lecture</em>, 2007) montre que la lecture « recycle » une région du cerveau visuel, dans l’hémisphère gauche, qui se spécialise dans la reconnaissance des lettres et des mots écrits (la « boîte aux lettres du cerveau »). Cette spécialisation se construit par un enseignement <strong>explicite et systématique</strong> des correspondances graphème-phonème (CGP) ; les approches « globales » qui font deviner les mots ne la favorisent pas.</li>\n<li><strong>Au CP</strong> (programme 2024) : apprentissage des CGP « systématique, intensif, structuré et quotidien », « environ deux correspondances par semaine » ; 12 à 15 CGP en fin de période 1, 25 à 30 en milieu d’année ; lecture de textes <em>déchiffrables</em> (composés des CGP déjà étudiées) ; l’écriture (encodage) accompagne toujours le décodage.</li>\n</ul>\n\n<h4>3. La fluence</h4>\n<p>La fluence (ou fluidité) combine trois dimensions : <strong>précision</strong> (lire sans erreur), <strong>vitesse</strong> (mots correctement lus en une minute, MCLM) et <strong>prosodie</strong> (lecture expressive, respectant la ponctuation et les groupes de sens). Un décodage automatisé libère l’attention pour comprendre.</p>\n<table class=\"tab\">\n<tr><th>Niveau</th><th>Repère du programme (lecture à voix haute d’un texte adapté)</th></tr>\n<tr><td>Fin de CP</td><td>30 mots par minute au minimum sans préparation, 50 après préparation</td></tr>\n<tr><td>Fin de CE1</td><td>70 mots par minute</td></tr>\n<tr><td>Fin de CE2</td><td>90 mots par minute</td></tr>\n</table>\n<p>Pour l’entraîner : lectures répétées d’un même texte, lecture en binôme, lecture « en écho », théâtre lu ; mesure régulière de la vitesse pour constituer des groupes de besoin (le programme demande au professeur de mesurer la vitesse de lecture « afin de constituer des groupes »).</p>\n\n<h4>4. La compréhension s’enseigne</h4>\n<p>Comprendre, c’est construire une <strong>représentation mentale cohérente</strong> du texte. Sylvie Cèbe et Roland Goigoux distinguent plusieurs familles de compétences :</p>\n<table class=\"tab\">\n<tr><th>Compétences</th><th>Exemples</th></tr>\n<tr><td>de décodage</td><td>identifier les mots sans effort</td></tr>\n<tr><td>linguistiques</td><td>vocabulaire, syntaxe</td></tr>\n<tr><td>textuelles</td><td>genre du texte, ponctuation, reprises anaphoriques (« il », « le petit garçon »)</td></tr>\n<tr><td>référentielles</td><td>connaissances sur le monde, culture</td></tr>\n<tr><td>stratégiques</td><td>contrôler et réguler sa lecture, revenir en arrière, se faire un « film »</td></tr>\n</table>\n<p>Idées clés : <strong>questionner n’est pas enseigner</strong> (des questions après lecture évaluent la compréhension, elles n’apprennent pas à comprendre) ; il faut apprendre aux élèves à produire des <strong>inférences</strong> (ce que le texte ne dit pas explicitement), à suivre la <strong>chaîne anaphorique</strong>, à <strong>reformuler</strong> et à <strong>raconter</strong>. Outils : <em>Narramus</em> (maternelle, 2017), <em>Lectorino &amp; Lectorinette</em> (CE1-CE2), <em>Lector &amp; Lectrix</em> (cycle 3, 2009). Le programme 2024 demande de lire aux élèves, chaque semaine, des textes « plus longs et résistants » que ceux qu’ils peuvent lire seuls.</p>\n\n<h4>5. Le vocabulaire</h4>\n<p>Le vocabulaire est un facteur majeur de la compréhension. Le guide <em>Pour enseigner le vocabulaire à l’école maternelle</em> (Éduscol, 2020) préconise un enseignement <strong>structuré</strong> : choix de mots cibles, rencontres multiples dans des contextes variés, <strong>catégorisation</strong> (fruits, outils…), mise en réseau (familles de mots, synonymes, contraires), <strong>réemploi</strong> actif et mémorisation. En contexte plurilingue comme à Mayotte, le lexique scolaire (consignes, mots des disciplines) doit être enseigné explicitement, en prenant appui sur les langues des élèves.</p>\n<p>Références à citer : guide <em>Pour enseigner la lecture et l’écriture au CP</em> (dit « guide orange », 2018) ; guide <em>Pour enseigner la lecture et l’écriture au CE1</em> ; évaluations nationales du CP au CM2 ; enseignement explicite (Rosenshine).</p>\n\n<h4>6. Stratégie pour le QCM de compréhension orale</h4>\n<ul>\n<li><strong>Avant</strong> : prépare ta feuille en colonnes (idées / noms et dates / chiffres). Tu ne vois pas les questions avant d’écouter : note ce qui se prête à des questions.</li>\n<li><strong>Première lecture</strong> : note la structure (idée par paragraphe), les <strong>auteurs, titres, dates, chiffres</strong>, les <strong>énumérations</strong> (« trois entrées », « deux conditions »), les <strong>oppositions</strong> (« non pas… mais… », « encore faut-il… »). Abrège : « compr. », « ens. », « él. », flèches.</li>\n<li><strong>Seconde lecture</strong> : complète les trous, vérifie les chiffres, repère les nuances (« souvent », « jamais », « seulement »).</li>\n<li><strong>Au QCM</strong> : il peut y avoir <strong>plusieurs</strong> bonnes réponses. Méfie-toi des distracteurs classiques : nom ou date inversés, formulation absolue (« toujours », « uniquement »), idée vraie en général mais <em>non dite dans le texte</em>, idée du texte présentée comme son contraire. Réponds « selon le texte », pas selon tes opinions.</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>L = D × C. Décodage : CGP systématiques, textes déchiffrables, encodage. Fluence : précision, vitesse, prosodie (30/50 fin CP, 70 fin CE1, 90 fin CE2). Compréhension : elle s’enseigne explicitement (inférences, anaphores, reformulation). Vocabulaire : structuré, catégorisé, réemployé. QCM oral : notes en colonnes, chiffres et noms, plusieurs réponses possibles.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Selon le modèle de Gough et Tunmer (1986), la lecture est :</p>",
+       "options": [
+        "la somme du décodage et de la compréhension",
+        "le produit du décodage et de la compréhension de la langue",
+        "la seule maîtrise du décodage",
+        "un processus où, si le décodage est nul, la lecture est nulle"
+       ],
+       "bonnes": [
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2 et 4.</strong> L = D × C : c’est un produit, donc si l’un des facteurs vaut zéro, la lecture vaut zéro, même si l’autre est excellent.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>D’après le programme du cycle 2 de 2024, quelles sont les trois entrées de l’enseignement de la lecture ?</p>",
+       "options": [
+        "le décodage (apprentissage puis automatisation)",
+        "la lecture à voix haute",
+        "la compréhension de textes dans toutes les disciplines",
+        "la mémorisation globale de mots-outils"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> Le programme demande au contraire de réduire « au minimum » l’usage des mots-outils non déchiffrables.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels repères de fluence le programme fixe-t-il ?</p>",
+       "options": [
+        "30 mots par minute au minimum en fin de CP, sans préparation",
+        "70 mots par minute en fin de CE1",
+        "90 mots par minute en fin de CE1",
+        "90 mots par minute en fin de CE2"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong> Fin CP : 30 sans préparation (50 après préparation) ; fin CE1 : 70 ; fin CE2 : 90.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La fluence de lecture comprend :</p>",
+       "options": [
+        "la précision",
+        "la vitesse",
+        "la prosodie",
+        "la rapidité d’écriture"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> Lire vite sans comprendre ni respecter la ponctuation n’est pas être fluent : la prosodie montre que l’élève comprend ce qu’il lit.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un texte « déchiffrable » au CP est :</p>",
+       "options": [
+        "un texte court",
+        "un texte composé de mots contenant uniquement des correspondances déjà étudiées",
+        "un texte que l’enseignant lit à la classe",
+        "un texte illustré permettant de deviner les mots"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse 2.</strong> Le texte déchiffrable permet à l’élève de lire seul en appliquant ce qu’il a appris ; deviner les mots à partir de l’image est une stratégie à éviter.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans la phrase « Nafissa a vu un maki. <em>Il</em> dormait sur une branche. », le travail sur « il » relève :</p>",
+       "options": [
+        "des compétences textuelles (chaîne anaphorique)",
+        "du décodage",
+        "des compétences stratégiques uniquement",
+        "de la compréhension, qui s’enseigne explicitement"
+       ],
+       "bonnes": [
+        0,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1 et 4.</strong> Relier le pronom à son référent (la chaîne anaphorique) est une compétence textuelle que le programme demande de travailler explicitement.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels outils de Sylvie Cèbe et Roland Goigoux sont associés au bon niveau ?</p>",
+       "options": [
+        "<em>Narramus</em> : école maternelle",
+        "<em>Lector &amp; Lectrix</em> : cycle 3",
+        "<em>Lectorino &amp; Lectorinette</em> : école maternelle",
+        "<em>Lector &amp; Lectrix</em> : CP"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> <em>Lectorino &amp; Lectorinette</em> vise le CE1-CE2.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Pendant la compréhension orale de l’épreuve, quelle attitude est efficace ?</p>",
+       "options": [
+        "Tout noter mot à mot pendant la première lecture",
+        "Noter en priorité noms, dates, chiffres, énumérations et oppositions",
+        "Utiliser la seconde lecture pour vérifier et compléter",
+        "Répondre selon ses propres connaissances quand le texte ne dit rien"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Tout noter est impossible et fait perdre le fil ; les questions portent sur ce que dit <em>le texte</em>.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Voici un extrait de texte didactique, tel qu’il pourrait être lu à l’épreuve (lis-le une fois, cache-le, puis réponds).</p>\n<div class=\"doc\"><p class=\"doc-title\">Extrait lu</p><p>« Beaucoup d’enseignants pensent que la compréhension viendra d’elle-même lorsque le décodage sera automatisé. Les observations montrent qu’il n’en est rien : dans une classe de CM1 suivie pendant un an, six des neuf élèves faibles compreneurs décodaient correctement. Encore faut-il leur apprendre à se fabriquer une représentation mentale du texte. Deux conditions sont décisives : lire aux élèves des textes plus difficiles que ceux qu’ils peuvent lire seuls, et leur apprendre à raconter avec leurs mots. »</p><p class=\"doc-src\">Texte rédigé pour Belamis.</p></div>\n<p>1. Écris les notes que tu aurais prises (en abrégé). 2. Rédige deux questions de QCM sur ce passage, avec une ou plusieurs bonnes réponses et un distracteur de chaque type : chiffre modifié, formulation absolue.</p>",
+       "corrige": "<p><strong>1. Notes possibles :</strong> « idée reçue : compr. vient seule qd décod. auto → FAUX / CM1 suivi 1 an : 6 sur 9 faibles compren. décodent bien / apprendre à construire représ. mentale / 2 conditions : ① lire textes + diff. que niveau autonome ② apprendre à raconter avec ses mots ». On a gardé : l’opposition, le chiffre, l’énumération.</p>\n<p><strong>2. Exemples de questions :</strong></p>\n<ul><li>« Selon le texte, dans la classe observée : a) six des neuf faibles compreneurs décodaient correctement ; b) trois des neuf faibles compreneurs décodaient correctement (chiffre modifié) ; c) aucun faible compreneur ne décodait correctement (formulation absolue). » Bonne réponse : a.</li>\n<li>« Quelles conditions le texte juge-t-il décisives ? a) lire aux élèves des textes plus difficiles que ceux qu’ils lisent seuls ; b) apprendre aux élèves à raconter avec leurs mots ; c) ne travailler la compréhension qu’une fois le décodage automatisé (contraire du texte) ; d) toujours faire lire les élèves seuls (formulation absolue). » Bonnes réponses : a et b.</li></ul>\n<p>Construire soi-même des distracteurs est le meilleur moyen d’apprendre à les repérer.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>En fin de CE1, dans une école de Koungou, Zaïnaba lit 72 mots par minute mais répond mal aux questions sur le texte ; Ibrahim lit 38 mots par minute, avec beaucoup d’arrêts, et raconte très bien les histoires qu’on lui lit. Analyse le profil des deux élèves à l’aide du modèle L = D × C et propose une aide pour chacun.</p>",
+       "corrige": "<p><strong>Zaïnaba</strong> : D est correct (72 MCLM, au-dessus du repère de 70 en fin de CE1) mais C est faible. Elle « lit » les mots sans construire le sens. Hypothèses : vocabulaire insuffisant en français, difficulté à faire des inférences ou à suivre les reprises, lecture rapide sans contrôle. Aides : séances explicites de compréhension (raconter l’histoire avec ses mots, se faire un « film », repérer qui est « il »), travail du vocabulaire du texte avant la lecture, lecture expressive (prosodie) qui oblige à tenir compte du sens, questions inférentielles en petit groupe.</p>\n<p><strong>Ibrahim</strong> : C est bonne (compréhension orale réussie) mais D est très insuffisant (38 MCLM, loin des 70 attendus). Hypothèse : CGP complexes non maîtrisées, décodage non automatisé. Aides : évaluer précisément les CGP connues, reprise systématique des correspondances non sues, entraînement quotidien à la fluence sur textes courts (lectures répétées, lecture en binôme), mesure régulière et graphique des progrès pour le motiver ; continuer à lui lire des textes riches pour nourrir sa compréhension.</p>\n<p>Conclusion : un même score global en lecture peut cacher deux profils opposés ; l’évaluation doit distinguer décodage et compréhension pour cibler l’aide (APC, groupes de besoin).</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-myt2-fr-production",
+   "num": 2,
+   "domaine": "francais",
+   "titre": "Analyser une production d’élève",
+   "theme": "Typologie des erreurs (Catach), hypothèses, annotations et remédiation à partir d’un écrit d’élève",
+   "revision": true,
+   "duree": 2100,
+   "total": 13,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>La troisième partie de l’épreuve de français (14 points) part presque toujours d’une <strong>production d’élève</strong>. On te demande de relever et classer les erreurs, d’analyser des phrases, puis de proposer des annotations, une remédiation ou une séance. Le jury attend une analyse <strong>méthodique</strong> et des termes précis.</p>\n\n<h4>1. La démarche en quatre temps</h4>\n<ol>\n<li><strong>Lire la consigne donnée à l’élève</strong> : qu’est-ce qu’on lui demandait (type de texte, destinataire, longueur) ? On juge la production au regard de la consigne.</li>\n<li><strong>Relever les réussites</strong> avant les erreurs : respect de la consigne, organisation, idées, vocabulaire, phrases correctes.</li>\n<li><strong>Relever et classer les erreurs</strong> avec une typologie nommée, puis faire des <strong>hypothèses</strong> sur leur origine.</li>\n<li><strong>Prioriser et remédier</strong> : on ne peut pas tout traiter ; on choisit 2 ou 3 objectifs.</li>\n</ol>\n\n<h4>2. Une typologie des erreurs d’orthographe (d’après Nina Catach)</h4>\n<table class=\"tab\">\n<tr><th>Type</th><th>Définition</th><th>Exemple</th></tr>\n<tr><td>Phonogrammique</td><td>la transcription ne restitue pas l’oral (altère la prononciation)</td><td>« cheval » écrit « chval », « fleur » écrit « feur »</td></tr>\n<tr><td>Phonogrammique (valeur de lettre)</td><td>la prononciation est respectée mais la valeur de la lettre selon sa position est ignorée</td><td>« garçon » écrit « garcon » (se lirait [k])</td></tr>\n<tr><td>Morphogrammique grammaticale</td><td>marques d’accord (genre, nombre) et de conjugaison</td><td>« des fruit », « ils mange », « les makis son protéger »</td></tr>\n<tr><td>Morphogrammique lexicale</td><td>lettres muettes liées à la famille du mot</td><td>« forê » (forestier), « gran » (grande)</td></tr>\n<tr><td>Logogrammique</td><td>confusion d’homophones</td><td>« a / à », « son / sont », « et / est »</td></tr>\n<tr><td>Idéogrammique</td><td>ponctuation, majuscules, apostrophes</td><td>« dune branche » pour « d’une branche »</td></tr>\n<tr><td>Non fonctionnelle (lexicale)</td><td>lettres étymologiques ou doubles consonnes</td><td>« rythme », « home » pour « homme »</td></tr>\n</table>\n<p>À cela s’ajoutent les erreurs de <strong>syntaxe</strong> (double sujet « Le maki il vit », phrase sans verbe), de <strong>segmentation</strong> (« lécole », « il savent »), de <strong>lexique</strong> (mot impropre, répétitions) et de <strong>cohérence textuelle</strong> (reprises ambiguës, temps verbaux mélangés, absence de connecteurs).</p>\n\n<h4>3. Formuler des hypothèses</h4>\n<p>Une erreur est un <strong>indice</strong> du raisonnement de l’élève (Jean-Pierre Astolfi, <em>L’Erreur, un outil pour enseigner</em>, 1997), pas une faute morale. Hypothèses fréquentes :</p>\n<ul>\n<li><strong>Règle non connue ou non automatisée</strong> : l’élève sait réciter la règle mais ne l’applique pas en situation d’écriture (surcharge cognitive).</li>\n<li><strong>Règle surgénéralisée</strong> : « ils mangent » → « ils partent » juste, mais « il mangent » (le -nt associé à « il »).</li>\n<li><strong>Influence de l’oral</strong> : ce qui ne s’entend pas ne s’écrit pas (« des fruit »).</li>\n<li><strong>Interférence avec une autre langue</strong> : en shimaoré, langue bantoue, le nom se range dans des classes nominales et il n’y a pas de genre masculin/féminin ; des erreurs comme « un longue queue » peuvent en découler. Pose-le comme une <em>hypothèse</em>, à vérifier.</li>\n</ul>\n\n<h4>4. Annoter une copie</h4>\n<ul>\n<li><strong>Positive</strong> d’abord : dire ce qui est réussi, précisément (« Tu as bien présenté l’animal : son lieu de vie, son aspect, sa nourriture. »).</li>\n<li><strong>Ciblée</strong> : 2 ou 3 points prioritaires, en lien avec les critères de la consigne.</li>\n<li><strong>Utile</strong> : l’annotation dit quoi faire (« Vérifie les accords dans les groupes nominaux soulignés : cherche le déterminant et accorde le nom. »), pas seulement « attention à l’orthographe ».</li>\n<li><strong>Codée</strong> si un code de correction a été appris avec la classe (G pour accord, C pour conjugaison…), pour que l’élève corrige lui-même.</li>\n</ul>\n\n<h4>5. Remédier</h4>\n<p>Une bonne remédiation part de l’erreur prioritaire et propose une <strong>activité précise</strong> : manipulation de groupes nominaux (changer le déterminant et observer ce qui change), transformation de phrases (singulier → pluriel), dictée négociée ou « phrase du jour » (les élèves justifient chaque accord), réécriture guidée avec une grille de relecture, affichage référent. L’enseignement doit être explicite (modélisation à voix haute : « je cherche le verbe, je cherche qui fait l’action, j’accorde »). Terminologie : utilise celle de la <em>Grammaire du français</em> (Éduscol) : <strong>déterminant, nom, adjectif, groupe nominal, sujet, complément du verbe, complément de phrase, attribut du sujet</strong>.</p>\n\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Consigne → réussites → erreurs classées avec une typologie nommée → hypothèses → priorités → remédiation concrète. Annoter positivement, précisément, utilement. L’erreur est un outil (Astolfi).</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans « Les makis son protéger », l’erreur « son » pour « sont » est :</p>",
+       "options": [
+        "logogrammique (confusion d’homophones)",
+        "phonogrammique",
+        "idéogrammique",
+        "liée à la confusion entre déterminant possessif et verbe"
+       ],
+       "bonnes": [
+        0,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1 et 4.</strong> « son » (déterminant possessif) et « sont » (verbe être) se prononcent pareil : c’est une confusion d’homophones grammaticaux.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« des mangue » et « ils mange » sont des erreurs :</p>",
+       "options": [
+        "morphogrammiques grammaticales",
+        "morphogrammiques lexicales",
+        "liées au fait que ces marques ne s’entendent pas à l’oral",
+        "phonogrammiques"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> Les marques du pluriel -s et -nt sont muettes : l’élève transcrit l’oral.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« forê » pour « forêt » est une erreur morphogrammique lexicale. Quelle aide est pertinente ?</p>",
+       "options": [
+        "chercher un mot de la même famille (forestier)",
+        "faire répéter le mot à voix haute dix fois",
+        "expliquer que le t s’entend dans « forestier »",
+        "dire que c’est une exception à apprendre par cœur"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> La famille de mots justifie la lettre muette finale.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une bonne annotation de copie est :</p>",
+       "options": [
+        "centrée sur deux ou trois priorités",
+        "formulée pour dire à l’élève quoi faire",
+        "exhaustive : toutes les erreurs sont corrigées en rouge",
+        "d’abord positive et précise"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong> Corriger toutes les erreurs décourage et n’apprend pas à l’élève à se relire.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans « Mon cousin il a voulu », l’élève :</p>",
+       "options": [
+        "reprend le sujet par un pronom (double sujet), construction fréquente à l’oral",
+        "fait une erreur d’orthographe",
+        "fait une erreur de syntaxe à l’écrit",
+        "utilise correctement une phrase emphatique à l’écrit"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> Cette dislocation est courante à l’oral familier ; à l’écrit, on attend « Mon cousin a voulu ».</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans la phrase (2) de la production de Faïza ci-dessous, « nageait » devrait s’écrire « nageaient ». Pourquoi ?</p><div class=\"copie-eleve\"><p class=\"copie-titre\">Production de Faïza (CM1, école de Chirongui) – consigne : « Raconte ce que tu as vu à la plage de Sakouli »</p>\n<p>(1) Samedi on é allé a la plage avec mes cousine. (2) On a vu des tortue qui nageait près des rocher. (3) Mon cousin il a voulu les touché mais ma tante a dit non sait interdit. (4) Après on a mangé des mangue et on é rentré.</p></div>",
+       "options": [
+        "le verbe s’accorde avec le sujet « qui », dont l’antécédent est « des tortues » (pluriel)",
+        "le verbe s’accorde avec « rochers »",
+        "c’est une erreur de temps",
+        "c’est une erreur morphogrammique grammaticale"
+       ],
+       "bonnes": [
+        0,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1 et 4.</strong> Le pronom relatif « qui » reprend « des tortues » : 3e personne du pluriel, terminaison -aient à l’imparfait.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans la même production, « non sait interdit » pour « non, c’est interdit » révèle :</p>",
+       "options": [
+        "une erreur de segmentation et une confusion d’homophones",
+        "un problème de ponctuation (absence de virgule et de discours rapporté marqué)",
+        "une erreur purement phonogrammique",
+        "une réussite : la phrase se prononce correctement"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> « c’est » (pronom élidé + verbe) est écrit « sait » (verbe savoir) ; la parole de la tante n’est pas signalée (virgule, deux-points, guillemets).</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelle remédiation vise le mieux l’accord dans le groupe nominal ?</p>",
+       "options": [
+        "Faire changer le déterminant (une tortue / des tortues) et observer tout ce qui change dans le groupe nominal",
+        "Faire recopier la règle trois fois",
+        "Une phrase du jour où les élèves justifient chaque accord à voix haute",
+        "Supprimer les dictées"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> La manipulation et la verbalisation du raisonnement (enseignement explicite) sont efficaces ; recopier une règle ne garantit pas son application.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 5,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Analyse la production de Faïza ci-dessous : 1. relève ses réussites ; 2. relève et classe toutes les erreurs avec une typologie nommée ; 3. rédige l’annotation que tu écrirais sur sa copie.</p><div class=\"copie-eleve\"><p class=\"copie-titre\">Production de Faïza (CM1, école de Chirongui) – consigne : « Raconte ce que tu as vu à la plage de Sakouli »</p>\n<p>(1) Samedi on é allé a la plage avec mes cousine. (2) On a vu des tortue qui nageait près des rocher. (3) Mon cousin il a voulu les touché mais ma tante a dit non sait interdit. (4) Après on a mangé des mangue et on é rentré.</p></div>",
+       "corrige": "<p><strong>1. Réussites.</strong> La consigne est respectée : un récit au passé, dans l’ordre chronologique (« Samedi », « Après »), avec des personnages, un lieu (la plage), un événement (les tortues, l’interdiction de les toucher) et une fin (« on é rentré »). Le passé composé est globalement bien choisi ; les phrases ont un verbe ; la règle de protection des tortues est comprise.</p>\n<p><strong>2. Erreurs classées.</strong></p>\n<table class=\"tab\">\n<tr><th>Type</th><th>Erreurs (forme attendue)</th></tr>\n<tr><td>Morphogrammiques grammaticales (nombre)</td><td>mes cousine (cousines), des tortue (tortues), des rocher (rochers), des mangue (mangues), qui nageait (nageaient)</td></tr>\n<tr><td>Morphogrammiques grammaticales (verbe)</td><td>on é allé (on est allés, ou « on est allé » admis), on é rentré (on est rentrés), les touché (les toucher : infinitif après « voulu »)</td></tr>\n<tr><td>Logogrammiques (homophones)</td><td>a la plage (à), sait (c’est)</td></tr>\n<tr><td>Idéogrammiques / ponctuation</td><td>absence de virgule et de marques du discours rapporté : « ma tante a dit : “Non, c’est interdit.” »</td></tr>\n<tr><td>Syntaxe</td><td>double sujet « Mon cousin il »</td></tr>\n</table>\n<p>Hypothèses : les marques muettes du pluriel ne sont pas encore automatisées en situation d’écriture ; « é » transcrit le son de « est » (l’auxiliaire n’est pas reconnu) ; la confusion é / er après un verbe conjugué (« voulu les touché ») est classique : on peut remplacer par « mordre » pour entendre l’infinitif.</p>\n<p><strong>3. Annotation possible.</strong> « Bravo Faïza : ton récit est clair, dans l’ordre, et on comprend bien pourquoi on ne touche pas les tortues. Pour l’améliorer : 1) relis les groupes soulignés : quand il y a “des” ou “mes”, le nom prend un s ; 2) “on é” s’écrit “on est” (verbe être) ; 3) écris ce que dit ta tante entre guillemets. »</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Choisis l’erreur prioritaire de Faïza et propose une activité de remédiation de 20 minutes, en précisant l’objectif, le déroulement et la trace écrite.</p>",
+       "corrige": "<p><strong>Priorité</strong> : l’accord en nombre dans le groupe nominal (5 erreurs sur un texte court, notion au programme du cycle 3 et fréquente dans les écrits).</p>\n<p><strong>Objectif</strong> : marquer le pluriel dans le groupe nominal (déterminant + nom + adjectif) en situation de relecture.</p>\n<p><strong>Déroulement</strong> : 1) modélisation (5 min) : au tableau, l’enseignant réécrit « des tortue » et pense à voix haute : « Je repère le déterminant “des” : il indique le pluriel. Le nom qui va avec doit porter la marque du pluriel : j’ajoute s. » ; 2) pratique guidée (8 min) : en binôme, les élèves transforment des GN du singulier au pluriel (une mangue verte → des mangues vertes) et entourent les chaînes d’accord par des flèches ; 3) pratique autonome (5 min) : Faïza relit sa propre production et corrige les GN soulignés ; 4) bilan (2 min) : formulation par les élèves.</p>\n<p><strong>Trace écrite</strong> : « Dans le groupe nominal, le déterminant donne le nombre ; le nom et l’adjectif s’accordent avec lui. Au pluriel, on ajoute le plus souvent -s. » avec un exemple tiré du texte. Réinvestissement : phrase du jour quotidienne pendant une semaine.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-myt2-fr-synthese",
+   "num": 3,
+   "domaine": "francais",
+   "titre": "Réussir la synthèse sur corpus",
+   "theme": "Méthode de la réponse construite : analyse de la question, tableau de confrontation, problématique, plan, introduction et conclusion",
+   "revision": true,
+   "duree": 2100,
+   "total": 10,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>La deuxième partie de l’épreuve de français (12 points) demande une <strong>réponse construite et rédigée</strong> à une question portant sur un corpus de 2 à 4 textes (littéraires, documentaires ou de sciences humaines). C’est un exercice de <strong>synthèse</strong> : on confronte les textes pour répondre à une question, on ne les résume pas l’un après l’autre.</p>\n\n<h4>1. Analyser la question (10 min)</h4>\n<ul>\n<li>Souligne les <strong>mots clés</strong> et définis-les. « Quelles figures du maître… » : « figure » = image, portrait, rôle.</li>\n<li>Repère le <strong>nombre de volets</strong> : « Quelles images… et que révèlent-elles… ? » = deux volets à traiter ensemble.</li>\n<li>Repère les verbes qui orientent : « montrer », « comparer », « en quoi », « doit » (dimension normative).</li>\n</ul>\n\n<h4>2. Lire le corpus avec un tableau de confrontation (40 min)</h4>\n<table class=\"tab\">\n<tr><th>Idée / axe</th><th>Texte 1</th><th>Texte 2</th><th>Texte 3</th></tr>\n<tr><td>Idée A</td><td>oui : citation courte</td><td>s’oppose : citation</td><td>–</td></tr>\n<tr><td>Idée B</td><td>–</td><td>nuance</td><td>oui</td></tr>\n</table>\n<p>Note aussi pour chaque texte : auteur, date, <strong>genre</strong> (récit, poème, texte officiel, essai) et point de vue. Les convergences et les divergences font naître le plan.</p>\n\n<h4>3. Formuler une problématique</h4>\n<p>La problématique <strong>reformule la question en faisant apparaître une tension</strong>. Elle n’est pas une simple répétition. Exemple : question « Quelle place les textes donnent-ils aux langues des enfants à l’école ? » → problématique : « La langue de la famille est-elle un obstacle à l’apprentissage du français ou une ressource sur laquelle l’école peut s’appuyer ? »</p>\n\n<h4>4. Construire un plan thématique (20 min)</h4>\n<ul>\n<li>2 ou 3 parties, chacune avec 2 ou 3 sous-parties ; <strong>chaque sous-partie croise au moins deux textes</strong>.</li>\n<li>Plan progressif : du constat à l’analyse, ou de l’opposition au dépassement. Évite le plan « texte 1, texte 2, texte 3 » : il est sanctionné.</li>\n<li>Chaque paragraphe : idée directrice → preuves tirées des textes (citations courtes entre guillemets, avec le nom de l’auteur) → analyse → phrase de transition.</li>\n</ul>\n\n<h4>5. Rédiger</h4>\n<table class=\"tab\">\n<tr><th>Partie</th><th>Contenu</th></tr>\n<tr><td>Introduction</td><td>amorce (contexte, enjeu) ; présentation du corpus (auteur, titre, date, genre, en une phrase par texte ou en une phrase pour tous) ; problématique ; annonce du plan</td></tr>\n<tr><td>Développement</td><td>2 ou 3 parties séparées par un saut de ligne ; connecteurs (« de même », « en revanche », « ainsi ») ; citations intégrées</td></tr>\n<tr><td>Conclusion</td><td>réponse nette à la problématique ; ouverture (autre texte, enjeu actuel, lien avec l’école)</td></tr>\n</table>\n<p>Ta <strong>culture personnelle</strong> est valorisée mais ne doit pas remplacer l’étude des textes. Garde 15 à 20 minutes pour <strong>relire</strong> : 6 points de l’épreuve portent sur la correction de la langue.</p>\n\n<h4>6. Gestion du temps (épreuve de 4 h)</h4>\n<p>30 min imposées pour la compréhension orale, puis environ <strong>1 h 30</strong> pour la synthèse, <strong>1 h 30</strong> pour la troisième partie et <strong>30 min</strong> de relecture et de marge.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Question analysée → tableau de confrontation → problématique (une tension) → plan thématique croisant les textes → introduction complète, paragraphes argumentés, conclusion avec ouverture → relecture. Jamais de résumé texte par texte.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une réponse construite sur corpus consiste à :</p>",
+       "options": [
+        "résumer chaque texte dans l’ordre",
+        "confronter les textes pour répondre à une question",
+        "donner uniquement son avis personnel",
+        "s’appuyer sur des citations précises"
+       ],
+       "bonnes": [
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2 et 4.</strong> La synthèse confronte ; l’avis personnel n’est pas attendu, la culture personnelle peut compléter.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Parmi ces formulations, lesquelles sont de véritables problématiques ?</p>",
+       "options": [
+        "« Nous allons étudier trois textes sur l’école. »",
+        "« La langue de la famille est-elle un obstacle ou une ressource pour apprendre le français ? »",
+        "« Le maître doit-il seulement instruire, ou aussi éduquer ? »",
+        "« Le texte 1 parle du maître. »"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Une problématique fait apparaître une tension ; les autres formulations sont des annonces ou des constats.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quel plan est à éviter ?</p>",
+       "options": [
+        "I. Texte 1 – II. Texte 2 – III. Texte 3",
+        "I. Un constat partagé – II. Des divergences – III. Un dépassement",
+        "I. Le maître redouté – II. Le maître respecté",
+        "un plan dont chaque sous-partie croise au moins deux textes"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse 1.</strong> Le plan « texte par texte » est une juxtaposition de résumés, sanctionnée.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Que doit contenir l’introduction ?</p>",
+       "options": [
+        "une amorce",
+        "la présentation du corpus",
+        "la problématique et l’annonce du plan",
+        "la réponse détaillée à la question"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> La réponse détaillée vient dans le développement ; la réponse nette est donnée en conclusion.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La conclusion :</p>",
+       "options": [
+        "répond clairement à la problématique",
+        "résume à nouveau chaque texte",
+        "peut s’ouvrir sur un enjeu actuel ou un autre texte",
+        "introduit un argument nouveau et important oublié dans le développement"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> Un argument important doit figurer dans le développement.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Comment citer correctement ?</p>",
+       "options": [
+        "Citation courte entre guillemets, intégrée à la phrase",
+        "Recopier un paragraphe entier",
+        "Signaler une coupure par […]",
+        "Nommer l’auteur ou le texte"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 3, 4.</strong> Les longues citations remplacent l’analyse et font perdre du temps.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le rapport de jury 2025 reproche souvent aux candidats :</p>",
+       "options": [
+        "la paraphrase des documents",
+        "l’absence de problématique",
+        "des références trop précises",
+        "une lecture trop superficielle du sujet"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong> Les rapports 2023 et 2025 regrettent une lecture superficielle des sujets, la paraphrase et l’absence de problématique.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 3,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 3,
+       "enonce": "<p>Corpus (présenté en résumé) : <strong>Texte 1</strong> – Alphonse Daudet, « La Dernière classe », <em>Contes du lundi</em> (1873) : un maître alsacien fait sa dernière leçon de français, la langue devient un bien précieux. <strong>Texte 2</strong> – Jules Ferry, <em>Lettre aux instituteurs</em> (17 novembre 1883) : l’instituteur doit transmettre une morale commune, sans heurter les convictions des familles. <strong>Texte 3</strong> – texte documentaire actuel sur le plurilinguisme à Mayotte : s’appuyer sur le shimaoré et le kibushi aide à apprendre le français, langue de scolarisation.</p>\n<p>Question : « Que doit transmettre l’école, selon ces textes, et à quelles conditions cette transmission peut-elle réussir ? »</p>\n<p>1. Analyse la question. 2. Formule une problématique. 3. Propose un plan détaillé en deux ou trois parties, en indiquant quels textes nourrissent chaque sous-partie. 4. Rédige l’introduction.</p>",
+       "corrige": "<p><strong>1. Analyse.</strong> Deux volets : le <em>contenu</em> de la transmission (une langue, une morale, des valeurs) et ses <em>conditions</em> (respect des familles, prise en compte de la langue des élèves, engagement du maître). « Doit » : dimension normative. Genres différents : récit, lettre officielle, texte documentaire.</p>\n<p><strong>2. Problématique.</strong> « Transmettre une langue et des valeurs communes suppose-t-il d’effacer ce que l’enfant apporte de chez lui, ou au contraire de s’appuyer sur lui ? »</p>\n<p><strong>3. Plan détaillé.</strong></p>\n<ul>\n<li>I. L’école transmet d’abord une langue commune. a) La langue, un héritage précieux (texte 1 : la dernière leçon rend le français inestimable ; texte 3 : le français, langue de scolarisation et de réussite). b) Une langue qui unit une communauté (textes 1 et 2 : la nation, la République).</li>\n<li>II. Elle transmet aussi des valeurs. a) Une morale commune (texte 2) ; b) un attachement porté par le maître lui-même, par son exemple (textes 1 et 2).</li>\n<li>III. Cette transmission ne réussit que si elle respecte l’enfant et sa famille. a) Respect des convictions des familles (texte 2 : ne rien dire à quoi un père de famille de bonne foi pourrait refuser son assentiment) ; b) s’appuyer sur les langues des élèves au lieu de les exclure (texte 3), ce qui prolonge la leçon du texte 1 : priver quelqu’un de sa langue est une violence.</li>\n</ul>\n<p><strong>4. Introduction rédigée.</strong> « Depuis les lois scolaires des années 1880, l’école française s’est donné pour mission de transmettre à tous les enfants une langue et des valeurs communes. Trois textes éclairent cette ambition : le récit d’Alphonse Daudet, “La Dernière classe” (<em>Contes du lundi</em>, 1873), qui met en scène l’ultime leçon de français d’un maître alsacien ; la lettre adressée par Jules Ferry aux instituteurs le 17 novembre 1883, qui définit leur mission morale ; enfin un texte documentaire consacré au plurilinguisme des élèves de Mayotte. Transmettre une langue et des valeurs communes suppose-t-il d’effacer ce que l’enfant apporte de chez lui, ou au contraire de s’appuyer sur lui ? Nous verrons d’abord que l’école transmet une langue commune, puis des valeurs partagées, avant de montrer que cette transmission ne réussit qu’en respectant l’enfant et sa famille. »</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-myt2-ms-probleme",
+   "num": 4,
+   "domaine": "maths",
+   "titre": "Le problème complexe",
+   "theme": "Extraire l’information de documents, pourcentages, taux d’évolution, coefficients multiplicateurs et conversions",
+   "revision": true,
+   "duree": 2400,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>La première partie de l’épreuve de mathématiques (10 points) est un <strong>problème complexe</strong> : 4 à 6 documents, souvent sur Mayotte (eau, population, énergie, barge…), dans lesquels il faut <strong>rechercher, extraire et organiser l’information utile</strong> (rapports de jury 2023 et 2025).</p>\n\n<h4>1. La méthode</h4>\n<ol>\n<li><strong>Lire toutes les questions d’abord</strong>, puis les documents : pour chaque question, note le ou les documents utiles. Certains documents ou données ne servent à rien : c’est voulu.</li>\n<li><strong>Surligner les unités</strong> (L, m³, kWh, km/h, %) et les périodes (par jour, par an, par élève).</li>\n<li><strong>Écrire le raisonnement</strong> : phrase qui dit ce que l’on calcule, calcul, résultat avec unité, phrase-réponse. Un résultat juste sans justification rapporte peu.</li>\n<li><strong>Contrôler la vraisemblance</strong> : ordre de grandeur, arrondi cohérent (on ne donne pas 846,4 élèves).</li>\n</ol>\n\n<h4>2. Pourcentages</h4>\n<ul>\n<li>Prendre p % d’une quantité : multiplier par <span class=\"frac\"><span>p</span><span>100</span></span>. 15 % de 480 = 480 × 0,15 = 72.</li>\n<li>Calculer une proportion : <span class=\"frac\"><span>partie</span><span>total</span></span> × 100. 36 élèves sur 480 : 36 ÷ 480 = 0,075, soit 7,5 %.</li>\n<li>Pourcentage de pourcentage : 1/3 des 45 % d’élèves = 15 % du total.</li>\n</ul>\n\n<h4>3. Taux d’évolution et coefficient multiplicateur</h4>\n<p>Taux d’évolution = <span class=\"frac\"><span>valeur d’arrivée − valeur de départ</span><span>valeur de départ</span></span>. Coefficient multiplicateur : augmenter de t % revient à multiplier par (1 + t/100) ; diminuer de t %, par (1 − t/100).</p>\n<p>Exemple vérifié : Mayotte comptait 256 518 habitants au recensement de 2017 et 323 153 au 1er janvier 2026 (Insee). Augmentation : 66 635 habitants ; taux : 66 635 ÷ 256 518 ≈ 0,26, soit environ <strong>+26 %</strong> ; coefficient ≈ 1,26. Piège : diviser par 323 153 donnerait 20,6 %, ce qui est faux (on divise toujours par la valeur de <em>départ</em>).</p>\n<figure class=\"fig\"><svg viewBox=\"0 0 360 110\" role=\"img\" aria-label=\"Schéma en barres : la population 2017 est une barre de 256 518, la population 2026 est la même barre prolongée d’une augmentation inconnue\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"70\" y=\"15\" width=\"200\" height=\"26\" class=\"shade stroke\"/>\n<text x=\"5\" y=\"33\">2017</text><text x=\"115\" y=\"33\">256 518</text>\n<rect x=\"70\" y=\"60\" width=\"200\" height=\"26\" class=\"shade stroke\"/>\n<rect x=\"270\" y=\"60\" width=\"52\" height=\"26\" class=\"c-yellow stroke\"/>\n<text x=\"5\" y=\"78\">2026</text><text x=\"115\" y=\"78\">256 518</text><text x=\"286\" y=\"78\">?</text>\n<line x1=\"70\" y1=\"100\" x2=\"322\" y2=\"100\" class=\"stroke thin\"/><text x=\"160\" y=\"110\">323 153</text>\n</svg><figcaption>Le schéma aide à voir que l’augmentation (?) se rapporte à la valeur de départ.</figcaption></figure>\n<p><strong>Évolutions successives</strong> : les coefficients se <em>multiplient</em>, les taux ne s’additionnent pas. +20 % puis −20 % : 1,2 × 0,8 = 0,96, soit une <strong>baisse de 4 %</strong>. +10 % deux fois : 1,1 × 1,1 = 1,21, soit +21 %.</p>\n\n<h4>4. Conversions indispensables</h4>\n<table class=\"tab\">\n<tr><th>Grandeur</th><th>Équivalences</th></tr>\n<tr><td>Volume / contenance</td><td>1 m³ = 1 000 dm³ = 1 000 L ; 1 dm³ = 1 L ; 1 L = 100 cL = 1 000 mL ; 1 cm³ = 1 mL</td></tr>\n<tr><td>Durée</td><td>1 h = 60 min = 3 600 s ; 1 h 45 min = 1,75 h (45 min = 45/60 h = 0,75 h) ; attention, 1,45 h ≠ 1 h 45 min</td></tr>\n<tr><td>Vitesse</td><td>v = d ÷ t ; km/h → m/s : diviser par 3,6 (90 km/h = 25 m/s)</td></tr>\n<tr><td>Énergie</td><td>E (Wh) = P (W) × t (h) ; 1 kWh = 1 000 Wh</td></tr>\n<tr><td>Aire</td><td>1 m² = 100 dm² = 10 000 cm² ; 1 ha = 10 000 m²</td></tr>\n<tr><td>Pluie</td><td>1 mm de pluie = 1 L par m²</td></tr>\n</table>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Questions d’abord, documents ensuite. Toujours une phrase, un calcul, une unité. Taux = écart ÷ valeur de départ. Évolutions successives : on multiplie les coefficients. 1 m³ = 1 000 L ; 45 min = 0,75 h ; km/h ÷ 3,6 = m/s.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le prix d’un ticket de barge passe de 80 centimes à 92 centimes (données fictives). Le taux d’évolution est :</p>",
+       "options": [
+        "+12 %",
+        "+15 %",
+        "+13 %",
+        "un coefficient multiplicateur de 1,15"
+       ],
+       "bonnes": [
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2 et 4.</strong> (92 − 80) ÷ 80 = 12 ÷ 80 = 0,15 = 15 % ; 80 × 1,15 = 92.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un prix augmente de 20 % puis baisse de 20 %. Au total :</p>",
+       "options": [
+        "il revient au prix de départ",
+        "il baisse de 4 %",
+        "le coefficient global est 0,96",
+        "il augmente de 4 %"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> 1,2 × 0,8 = 0,96 : la baisse de 20 % s’applique à un prix plus élevé.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une citerne contient 2,5 m³. Cela correspond à :</p>",
+       "options": [
+        "250 L",
+        "2 500 L",
+        "2 500 dm³",
+        "25 000 L"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> 1 m³ = 1 000 dm³ = 1 000 L.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une durée de 1 h 45 min est égale à :</p>",
+       "options": [
+        "1,45 h",
+        "1,75 h",
+        "105 min",
+        "6 300 s"
+       ],
+       "bonnes": [
+        1,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2, 3, 4.</strong> 45 min = 0,75 h ; 60 + 45 = 105 min ; 105 × 60 = 6 300 s.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Population de Mayotte : 256 518 habitants en 2017, 323 153 au 1er janvier 2026 (Insee). L’évolution est :</p>",
+       "options": [
+        "d’environ +26 %",
+        "un coefficient multiplicateur d’environ 1,26",
+        "d’environ +20,6 %",
+        "de +66 635 %"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> 66 635 ÷ 256 518 ≈ 0,26. Le 20,6 % vient d’une division par la valeur d’arrivée (erreur classique).</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une vitesse de 90 km/h correspond à :</p>",
+       "options": [
+        "25 m/s",
+        "1,5 km/min",
+        "324 m/s",
+        "9 m/s"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> 90 ÷ 3,6 = 25 m/s ; 90 ÷ 60 = 1,5 km par minute.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une école compte 480 élèves ; 45 % sont en CP ou CE1 et, parmi eux, un tiers est en CP. Le nombre d’élèves de CP :</p>",
+       "options": [
+        "est 72",
+        "est 144",
+        "représente 15 % des élèves de l’école",
+        "représente 45 % des élèves de l’école"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> 480 × 0,45 = 216 ; 216 ÷ 3 = 72 ; 72 ÷ 480 = 0,15.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Face à un problème complexe à plusieurs documents, quelles attitudes sont attendues ?</p>",
+       "options": [
+        "repérer pour chaque question les documents utiles",
+        "utiliser obligatoirement toutes les données",
+        "rédiger une phrase-réponse avec l’unité",
+        "vérifier la vraisemblance du résultat"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 3, 4.</strong> Des données inutiles sont souvent présentes : savoir les écarter fait partie de la compétence évaluée.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 4,
+       "enonce": "<p><em>Données simplifiées pour l’exercice.</em> Une école élémentaire du sud de Mayotte accueillait 640 élèves à la rentrée 2023 et 736 à la rentrée 2026. Elle fonctionne en rotation : chaque élève est présent une demi-journée par jour. Pour faire face aux coupures d’eau, elle dispose de 3 cuves de 1,2 m³ chacune, pleines. On compte, par élève présent et par demi-journée, 0,5 L d’eau à boire et 2 lavages de mains de 0,25 L chacun.</p>\n<ol><li>Calcule le taux d’évolution des effectifs entre 2023 et 2026.</li>\n<li>Si les effectifs évoluaient au même taux entre 2026 et 2029, combien d’élèves l’école accueillerait-elle en 2029 ?</li>\n<li>Calcule la consommation d’eau quotidienne de l’école (en litres) en 2026.</li>\n<li>Pendant combien de jours complets de classe les cuves permettent-elles de tenir en cas de coupure ? Quel pourcentage du stock est utilisé chaque jour ?</li></ol>",
+       "corrige": "<ol>\n<li>Augmentation : 736 − 640 = 96 élèves. Taux : 96 ÷ 640 = 0,15. Les effectifs ont augmenté de <strong>15 %</strong> entre 2023 et 2026.</li>\n<li>Coefficient 1,15 : 736 × 1,15 = 846,4. L’école accueillerait environ <strong>846 élèves</strong> en 2029 (on arrondit à l’unité : un nombre d’élèves est entier). Remarque : ce n’est qu’une projection, qui suppose que la tendance se maintient.</li>\n<li>Par élève et par jour : 0,5 + 2 × 0,25 = 1 L. Pour 736 élèves : 736 × 1 = <strong>736 L par jour</strong>.</li>\n<li>Stock : 3 × 1,2 = 3,6 m³ = 3 600 L. 3 600 ÷ 736 ≈ 4,89 : les cuves permettent de tenir <strong>4 jours complets</strong> (le 5e jour, il manquerait de l’eau : on arrondit à l’unité inférieure). Part du stock utilisée chaque jour : 736 ÷ 3 600 ≈ 0,204, soit environ <strong>20,4 %</strong>.</li>\n</ol>\n<p>Points de méthode valorisés : phrase-réponse, unités, arrondi justifié par le contexte (élèves entiers, jours <em>complets</em>).</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-myt2-ms-erreurs",
+   "num": 5,
+   "domaine": "maths",
+   "titre": "Analyser les erreurs d’élèves en mathématiques",
+   "theme": "Didactique : erreurs typiques en numération, décimaux et résolution de problèmes (schéma en barres) et remédiations",
+   "revision": true,
+   "duree": 2400,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>La troisième partie de l’épreuve (14 points) est une analyse de <strong>productions d’élèves</strong> en mathématiques, de la maternelle au cycle 3. Il faut savoir : résoudre soi-même, décrire les procédures, <strong>identifier les erreurs et leur origine probable</strong>, proposer une remédiation. Le rapport 2025 note que des candidats « ne maîtrisent pas les savoirs savants liés aux notions à enseigner (nombres, chiffres…) ».</p>\n\n<h4>1. Vocabulaire indispensable</h4>\n<ul>\n<li><strong>Chiffre / nombre</strong> : il y a dix chiffres (0 à 9), qui servent à écrire les nombres, comme les lettres servent à écrire les mots. Dans 305, le chiffre des dizaines est 0, le nombre de dizaines est 30.</li>\n<li><strong>Numération décimale de position</strong> : la valeur d’un chiffre dépend de sa position ; 10 unités d’un rang font 1 unité du rang supérieur. Les <strong>unités de numération</strong> (unités, dizaines, centaines, dixièmes…) sont au cœur des programmes de 2024 et 2025.</li>\n<li><strong>Procédure</strong> (la façon de faire) et <strong>erreur</strong> (indice d’une conception, J.-P. Astolfi) ; <strong>conception erronée</strong> (règle personnelle fausse mais cohérente).</li>\n</ul>\n\n<h4>2. Erreurs typiques en numération entière</h4>\n<table class=\"tab\">\n<tr><th>Erreur</th><th>Origine probable</th><th>Remédiation</th></tr>\n<tr><td>« trois cent quatre » écrit <strong>3004</strong> ou « 300 4 »</td><td>transcription juxtaposée de l’oral (300 puis 4) : le rôle du 0 n’est pas compris</td><td>matériel (plaques de centaines, barres de dizaines, cubes), tableau de numération, décomposition 304 = 3 centaines 0 dizaine 4 unités</td></tr>\n<tr><td>« soixante-douze » écrit 6012</td><td>irrégularités de la numération orale française (soixante-dix, quatre-vingts)</td><td>travail explicite de la comptine et des correspondances orales/écrites ; compter de 10 en 10</td></tr>\n<tr><td>4 dizaines et 12 unités = 412</td><td>pas de groupement : 12 unités ne sont pas converties en 1 dizaine et 2 unités</td><td>échanges « 10 contre 1 » avec le matériel ; 4 d 12 u = 52</td></tr>\n<tr><td>52 − 27 = 35</td><td>en colonne, « on enlève le plus petit du plus grand » (7 − 2 au lieu de 12 − 7)</td><td>revenir au sens (casser une dizaine avec le matériel), estimer l’ordre de grandeur</td></tr>\n</table>\n\n<h4>3. Erreurs typiques sur les nombres décimaux</h4>\n<ul>\n<li><strong>Règle du « nombre entier »</strong> : 2,15 &gt; 2,8 « car 15 &gt; 8 ». L’élève voit le nombre décimal comme deux entiers séparés par une virgule.</li>\n<li><strong>Règle inverse</strong> : « plus il y a de chiffres après la virgule, plus le nombre est petit » (les centièmes sont plus petits que les dixièmes). Cette règle donne parfois la bonne réponse par hasard : il faut des items qui la mettent en défaut (3,5 et 3,52).</li>\n<li><strong>Multiplication par 10</strong> : 3,5 × 10 = 3,50 (« on ajoute un zéro », règle des entiers surgénéralisée). En réalité chaque chiffre prend une valeur 10 fois plus grande : 35.</li>\n<li><strong>Intercalation</strong> : « il n’y a pas de nombre entre 2,3 et 2,4 » (conçus comme des entiers consécutifs). Il y en a une infinité (2,35 ; 2,31…).</li>\n<li><strong>0,5 + 0,7 = 0,12</strong> : calcul séparé des « parties après la virgule ».</li>\n</ul>\n<p>Remède de fond : introduire les décimaux à partir des <strong>fractions décimales</strong> (<span class=\"frac\"><span>1</span><span>10</span></span>, <span class=\"frac\"><span>1</span><span>100</span></span>), lire « 2 unités et 15 centièmes », placer sur une <strong>droite graduée</strong>, utiliser le tableau de numération étendu (guide Éduscol <em>Fractions et nombres décimaux au cycle 3</em>).</p>\n\n<h4>4. Résolution de problèmes</h4>\n<p>Le programme de mathématiques du cycle 2 (2024) demande un <strong>enseignement explicite</strong> appuyé sur un modèle en quatre phases : <strong>comprendre</strong> (reformuler « l’histoire » du problème), <strong>modéliser</strong>, <strong>calculer</strong>, <strong>répondre</strong>. Il met en garde contre les automatismes déclenchés par les mots de l’énoncé : proposer régulièrement des problèmes contenant « plus » alors qu’il faut soustraire.</p>\n<p>Typologie (d’après Gérard Vergnaud) : problèmes additifs <strong>parties-tout</strong> (composition), de <strong>transformation</strong> (état initial, transformation, état final), de <strong>comparaison</strong> ; problèmes multiplicatifs (produit, partage, groupement). Le <strong>schéma en barres</strong> aide à modéliser :</p>\n<figure class=\"fig\"><svg viewBox=\"0 0 360 100\" role=\"img\" aria-label=\"Schéma de comparaison à deux barres : la barre d’Anli mesure 145, celle de Riziki est plus courte, l’écart de 38 est marqué\" xmlns=\"http://www.w3.org/2000/svg\">\n<text x=\"5\" y=\"30\">Anli</text><rect x=\"70\" y=\"12\" width=\"250\" height=\"26\" class=\"shade stroke\"/><text x=\"175\" y=\"30\">145</text>\n<text x=\"5\" y=\"75\">Riziki</text><rect x=\"70\" y=\"57\" width=\"185\" height=\"26\" class=\"c-blue stroke\"/><text x=\"155\" y=\"75\">?</text>\n<rect x=\"255\" y=\"57\" width=\"65\" height=\"26\" class=\"dash stroke\"/><text x=\"275\" y=\"75\">38</text>\n</svg><figcaption>« Anli a 145 billes. Il en a 38 de plus que Riziki. Combien Riziki a-t-il de billes ? » : le schéma montre qu’il faut soustraire (145 − 38 = 107), malgré les mots « de plus ».</figcaption></figure>\n<p>Le guide <em>La résolution de problèmes mathématiques au cours moyen</em> (2021) précise que le schéma doit faire l’objet d’un enseignement explicite mais ne doit pas être exigé systématiquement.</p>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Analyser une production : résoudre soi-même, décrire la procédure, identifier l’erreur, formuler une hypothèse (conception, procédure, inattention), proposer une remédiation concrète (matériel, représentation, verbalisation). Numération : groupements par 10 et unités de numération. Décimaux : fractions décimales et droite graduée. Problèmes : 4 phases, schéma en barres, pas de mots inducteurs.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans le nombre 4 728 :</p>",
+       "options": [
+        "le chiffre des centaines est 7",
+        "le nombre de centaines est 47",
+        "le nombre de centaines est 7",
+        "le chiffre des dizaines est 72"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> 4 728 = 47 centaines et 28 unités. Le chiffre des dizaines est 2 ; le nombre de dizaines est 472.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un élève de CE1 écrit « deux cent six » ainsi : 2006. Cette erreur :</p>",
+       "options": [
+        "vient d’une transcription juxtaposée de l’oral (200 puis 6)",
+        "est une simple erreur d’inattention sans intérêt",
+        "montre que le rôle du zéro dans l’écriture de position n’est pas compris",
+        "se remédie avec un tableau de numération et du matériel de groupement"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 3, 4.</strong> C’est une erreur de transcodage très fréquente, révélatrice d’une conception.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un élève affirme que 2,15 &gt; 2,8. Quelle conception est probablement en jeu ?</p>",
+       "options": [
+        "il compare les parties décimales comme des entiers (15 &gt; 8)",
+        "il pense que plus il y a de chiffres après la virgule, plus le nombre est petit",
+        "il considère le nombre décimal comme deux entiers séparés par une virgule",
+        "il a bien compris les dixièmes"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> La règle « plus de chiffres = plus petit » conduirait à la réponse inverse (2,15 &lt; 2,8).</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un élève écrit 3,5 × 10 = 3,50. Quelle remédiation est adaptée ?</p>",
+       "options": [
+        "lui rappeler « on ajoute un zéro »",
+        "utiliser le tableau de numération : chaque chiffre prend une valeur dix fois plus grande",
+        "raisonner sur le sens : 10 fois 3,5 €, c’est 35 €",
+        "lui dire que c’est une exception"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> « On ajoute un zéro » est justement la règle des entiers surgénéralisée qui cause l’erreur.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Combien existe-t-il de nombres décimaux entre 2,3 et 2,4 ?</p>",
+       "options": [
+        "aucun",
+        "un seul : 2,35",
+        "une infinité",
+        "exactement neuf : 2,31 à 2,39"
+       ],
+       "bonnes": [
+        2
+       ],
+       "corrige": "<p><strong>Réponse 3.</strong> 2,31 ; 2,315 ; 2,3151… : entre deux décimaux distincts, on peut toujours en intercaler d’autres.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>« Anli a 145 billes. Il en a 38 de plus que Riziki. Combien Riziki a-t-il de billes ? » Ce problème :</p>",
+       "options": [
+        "est un problème de comparaison",
+        "se résout par 145 + 38",
+        "se résout par 145 − 38 = 107",
+        "contient un « mot inducteur » qui pousse à tort vers l’addition"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 3, 4.</strong> Riziki a moins que Anli : 145 − 38 = 107.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Les quatre phases du modèle de résolution de problèmes du programme du cycle 2 (2024) sont :</p>",
+       "options": [
+        "comprendre",
+        "modéliser",
+        "calculer",
+        "répondre"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Toutes les réponses.</strong> Le modèle permet aussi à l’enseignant d’identifier la phase où l’élève bloque.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un élève calcule 52 − 27 en colonnes et trouve 35. Il a probablement :</p>",
+       "options": [
+        "soustrait le plus petit chiffre du plus grand dans chaque colonne",
+        "oublié de « casser » une dizaine (ou d’utiliser la retenue)",
+        "commis une erreur de table",
+        "bien compris la soustraction posée"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> Aux unités, il calcule 7 − 2 = 5 au lieu de 12 − 7 (qui donne aussi 5 : pure coïncidence) ; aux dizaines, il calcule 5 − 2 = 3 sans tenir compte de la dizaine « cassée » (4 − 2 = 2). Le bon résultat est 25. Estimer l’ordre de grandeur (50 − 30 = 20) aide à détecter l’erreur.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Consigne donnée en CM1 : « Range dans l’ordre croissant : 3,4 ; 3,15 ; 3,7 ; 3,09. »</p>\n<div class=\"copie-eleve\"><p class=\"copie-titre\">Nassim (CM1)</p><p>3,4 &lt; 3,7 &lt; 3,09 &lt; 3,15</p></div>\n<div class=\"copie-eleve\"><p class=\"copie-titre\">Zaïnaba (CM1)</p><p>3,09 &lt; 3,15 &lt; 3,4 &lt; 3,7</p><p class=\"annot\">Explication orale : « Ceux qui ont deux chiffres après la virgule, c’est des centièmes, c’est plus petit. »</p></div>\n<div class=\"copie-eleve\"><p class=\"copie-titre\">Hadidja (CM1)</p><p>3,09 &lt; 3,15 &lt; 3,4 &lt; 3,7</p><p class=\"annot\">Explication orale : « J’ai regardé les dixièmes : 0, 1, 4, 7. »</p></div>\n<p>1. Analyse chaque production. 2. Propose un exercice qui permettrait de distinguer la réussite de Zaïnaba de celle de Hadidja. 3. Propose une remédiation pour Nassim.</p>",
+       "corrige": "<p><strong>1.</strong> Ordre correct : 3,09 &lt; 3,15 &lt; 3,4 &lt; 3,7.</p>\n<ul><li><strong>Nassim</strong> : erreur. Il compare les parties décimales comme des entiers (4 &lt; 7 &lt; 9 &lt; 15) : conception « deux entiers séparés par une virgule ».</li>\n<li><strong>Zaïnaba</strong> : réponse juste, mais fondée sur une règle fausse (« plus de chiffres après la virgule = plus petit »). Cette réussite est fragile : elle tient à la liste choisie.</li>\n<li><strong>Hadidja</strong> : réponse juste avec une procédure correcte : elle compare le chiffre des dixièmes, rang par rang (la partie entière étant égale).</li></ul>\n<p><strong>2.</strong> Proposer des nombres qui mettent en défaut la règle de Zaïnaba : « Compare 3,5 et 3,52 » ou « range 2,8 ; 2,75 ; 2,9 ». Avec sa règle, elle dira 3,52 &lt; 3,5, ce qui est faux (3,52 = 3,50 + 0,02).</p>\n<p><strong>3. Remédiation pour Nassim</strong> : revenir au sens des écritures avec les fractions décimales (3,15 = 3 + <span class=\"frac\"><span>1</span><span>10</span></span> + <span class=\"frac\"><span>5</span><span>100</span></span>) ; placer les nombres sur une droite graduée entre 3 et 4 ; utiliser un tableau de numération (unités, dixièmes, centièmes) pour comparer rang par rang ; contexte de la monnaie ou des mesures (3,4 m = 3 m 40 cm, 3,15 m = 3 m 15 cm) ; verbaliser : « 3,4, c’est 3 unités et 4 dixièmes, c’est-à-dire 40 centièmes ».</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Dans une classe de CE1 de Mamoudzou, Riziki doit écrire en chiffres les nombres dictés « trois cent quatre » et « deux cent soixante-dix ». Il écrit : 3004 et 20070. Analyse ces erreurs et propose deux activités de remédiation.</p>",
+       "corrige": "<p><strong>Analyse.</strong> Riziki écrit ce qu’il entend, morceau par morceau : « trois cent » → 300, « quatre » → 4, collés : 3004 ; « deux cent » → 200, « soixante-dix » → 70 : 20070. Il ne mobilise pas le principe de position : dans un nombre de trois chiffres, chaque chiffre occupe un rang (centaines, dizaines, unités). Il maîtrise en revanche l’écriture de 300, 200, 4 et 70 et l’ordre des mots. Pour un élève dont la langue familiale n’est pas le français, les irrégularités de la numération orale (soixante-dix) ajoutent une difficulté.</p>\n<p><strong>Activités.</strong> 1) Avec le matériel (plaques de 100, barres de 10, cubes) : représenter « trois cent quatre » (3 plaques, aucune barre, 4 cubes), puis compléter un tableau de numération centaines/dizaines/unités : 3 | 0 | 4. Verbaliser : « 3 centaines, 0 dizaine, 4 unités ». 2) Jeu des étiquettes superposées (cartes 300, 70, 4 que l’on superpose pour obtenir 374), qui montre que les chiffres « prennent la place » des zéros. Puis dictées de nombres quotidiennes, avec validation par le matériel.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-myt2-ms-sciences",
+   "num": 6,
+   "domaine": "maths",
+   "titre": "Sciences de base pour l’épreuve",
+   "theme": "Corps humain, états et cycle de l’eau, énergie, la Terre et le ciel : connaissances exactes, conceptions d’élèves et démarche expérimentale",
+   "revision": true,
+   "duree": 2400,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>La deuxième partie de l’épreuve de mathématiques contient souvent des questions de <strong>sciences</strong> (corps humain, états de l’eau, énergie, astronomie, séismes). Il faut répondre avec des connaissances <strong>exactes</strong>, un vocabulaire précis, et souvent proposer une <strong>expérience</strong> ou identifier une <strong>conception erronée</strong> d’élève.</p>\n\n<h4>1. Le corps humain</h4>\n<table class=\"tab\">\n<tr><th>Fonction</th><th>L’essentiel</th><th>Conception fréquente d’élève</th></tr>\n<tr><td>Digestion</td><td>bouche → œsophage → estomac → intestin grêle → gros intestin. Les aliments sont transformés en <strong>nutriments</strong>, qui passent dans le sang au niveau de l’<strong>intestin grêle</strong> (absorption). Les restes non digérés forment les excréments.</td><td>« Il y a un tuyau pour la boisson et un autre pour la nourriture. »</td></tr>\n<tr><td>Respiration</td><td>l’air inspiré arrive dans les poumons ; dans les alvéoles, le dioxygène passe dans le sang et le dioxyde de carbone en sort. L’air contient environ 21 % de dioxygène.</td><td>« On respire pour avoir de l’air dans le ventre. »</td></tr>\n<tr><td>Circulation</td><td>le <strong>cœur</strong>, muscle creux à quatre cavités, met le sang en mouvement ; les artères partent du cœur, les veines y reviennent. Le sang apporte aux organes nutriments et dioxygène et emporte les déchets.</td><td>« Le sang reste immobile dans le corps. »</td></tr>\n<tr><td>Mouvement</td><td>le squelette de l’adulte compte 206 os. Un <strong>muscle</strong> se contracte (il raccourcit et gonfle) et tire sur l’os par un <strong>tendon</strong> ; le mouvement se fait au niveau d’une <strong>articulation</strong>. Deux muscles antagonistes (biceps, triceps) permettent de plier et de tendre le bras.</td><td>« Le muscle pousse l’os. »</td></tr>\n</table>\n\n<h4>2. L’eau et la matière</h4>\n<ul>\n<li>Trois états : <strong>solide, liquide, gazeux</strong> (la vapeur d’eau est invisible ; la « fumée » blanche au-dessus d’une casserole est faite de fines gouttelettes : de l’eau liquide).</li>\n<li>Changements d’état : fusion (solide → liquide), solidification (liquide → solide), vaporisation (liquide → gaz, par évaporation ou ébullition), condensation ou liquéfaction (gaz → liquide).</li>\n<li>Sous la pression atmosphérique normale, l’eau pure fond à 0 °C et bout à 100 °C ; pendant un changement d’état, la température reste constante (palier).</li>\n<li>Lors d’un changement d’état, <strong>la masse se conserve</strong> ; le volume change (la glace occupe un volume plus grand que l’eau liquide, d’environ 9 %, c’est pourquoi une bouteille pleine éclate au congélateur).</li>\n<li><strong>Cycle de l’eau</strong> : évaporation (océan, lagon, sols, végétaux), condensation en nuages, précipitations, ruissellement, infiltration vers les nappes. À Mayotte, les retenues collinaires se remplissent surtout pendant la saison des pluies (été austral), d’où les tensions en saison sèche (crise de l’eau de 2023).</li>\n<li>Mélanges : l’eau salée est un mélange homogène (on ne voit plus le sel dissous) ; l’eau boueuse, un mélange hétérogène ; on sépare par décantation, filtration, évaporation.</li>\n</ul>\n\n<h4>3. L’énergie</h4>\n<ul>\n<li><strong>Sources renouvelables</strong> : soleil, vent, eau en mouvement, biomasse, géothermie. <strong>Non renouvelables</strong> : pétrole, gaz, charbon, uranium.</li>\n<li><strong>Chaîne énergétique</strong> : pile (énergie chimique) → énergie électrique → lampe (lumière + chaleur). On ne « crée » pas d’énergie : on la convertit, avec des pertes (souvent en chaleur).</li>\n<li>Unités : joule (J), watt (W) pour la puissance, kilowattheure (kWh) ; E = P × t (1 kW pendant 1 h = 1 kWh).</li>\n<li>Mayotte : l’électricité est produite très majoritairement par des centrales thermiques au gazole et au fioul (Longoni, Badamiers) ; l’objectif affiché est de développer fortement le photovoltaïque.</li>\n<li>Sécurité : les expériences d’électricité à l’école se font uniquement avec des piles ; jamais avec le secteur.</li>\n</ul>\n\n<h4>4. La Terre et le ciel</h4>\n<ul>\n<li>La Terre tourne <strong>sur elle-même</strong> en environ 24 h (alternance jour/nuit : le Soleil ne « se couche » pas, c’est la Terre qui tourne) et <strong>autour du Soleil</strong> en environ 365,25 jours.</li>\n<li>Les <strong>saisons</strong> sont dues à l’<strong>inclinaison de l’axe</strong> de la Terre (environ 23,4°), pas à la distance au Soleil. Elles sont inversées dans l’hémisphère sud : à Mayotte (vers 12° 50′ de latitude sud), l’été austral, chaud et pluvieux, correspond à l’hiver en métropole.</li>\n<li>La <strong>Lune</strong> ne produit pas de lumière : elle est éclairée par le Soleil ; ses phases durent environ 29,5 jours. Dans l’hémisphère sud, le croissant apparaît inversé par rapport à la métropole.</li>\n<li><strong>Séismes et volcans</strong> : depuis mai 2018, Mayotte connaît une crise sismo-volcanique ; le volcan sous-marin Fani Maoré a été découvert en 2019 à environ 50 km à l’est de l’île.</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Nutriments absorbés dans l’intestin grêle ; échanges gazeux dans les alvéoles ; le muscle tire l’os par le tendon. Masse conservée lors des changements d’état ; vapeur d’eau invisible. Énergie convertie, jamais créée. Saisons = inclinaison de l’axe ; Lune éclairée par le Soleil. Toujours partir des conceptions des élèves et proposer une expérience.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Où les nutriments passent-ils dans le sang ?</p>",
+       "options": [
+        "dans l’estomac",
+        "dans l’intestin grêle",
+        "dans le gros intestin",
+        "dans l’œsophage"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse 2.</strong> La paroi de l’intestin grêle, très repliée (villosités), offre une grande surface d’absorption.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quand on plie le bras :</p>",
+       "options": [
+        "le biceps se contracte",
+        "le muscle pousse l’os",
+        "le muscle tire sur l’os par l’intermédiaire d’un tendon",
+        "le mouvement se fait au niveau de l’articulation du coude"
+       ],
+       "bonnes": [
+        0,
+        2,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 3, 4.</strong> Un muscle ne peut que tirer (en se contractant) ; le triceps, antagoniste, permet de tendre le bras.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>On fait fondre 200 g de glaçons dans un récipient fermé. On obtient :</p>",
+       "options": [
+        "200 g d’eau liquide",
+        "moins de 200 g, car la glace est plus légère",
+        "un volume d’eau liquide un peu plus petit que le volume de glace",
+        "plus de 200 g, car l’eau liquide est plus lourde"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> La masse se conserve ; la glace occupe un peu plus de volume que l’eau liquide.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La « fumée » blanche au-dessus d’une casserole d’eau bouillante est :</p>",
+       "options": [
+        "de la vapeur d’eau",
+        "de fines gouttelettes d’eau liquide",
+        "le résultat de la condensation de la vapeur d’eau au contact de l’air plus froid",
+        "du dioxyde de carbone"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> La vapeur d’eau est un gaz invisible ; ce que l’on voit, c’est de l’eau liquide condensée.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Parmi ces sources d’énergie, lesquelles sont renouvelables ?</p>",
+       "options": [
+        "le soleil",
+        "le gazole",
+        "le vent",
+        "l’uranium"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> Gazole (issu du pétrole) et uranium sont des ressources non renouvelables.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une lampe de 60 W reste allumée 5 heures. Elle consomme :</p>",
+       "options": [
+        "300 Wh",
+        "0,3 kWh",
+        "12 Wh",
+        "300 kWh"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses 1 et 2.</strong> E = P × t = 60 W × 5 h = 300 Wh = 0,3 kWh.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Les saisons s’expliquent par :</p>",
+       "options": [
+        "l’inclinaison de l’axe de rotation de la Terre",
+        "le fait que la Terre est plus proche du Soleil en été",
+        "le mouvement de la Terre autour du Soleil, son axe gardant la même inclinaison",
+        "la rotation de la Terre sur elle-même en 24 h"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> La distance n’explique pas les saisons (elles seraient d’ailleurs les mêmes dans les deux hémisphères) ; la rotation en 24 h explique le jour et la nuit.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>À propos de la Lune :</p>",
+       "options": [
+        "elle produit sa propre lumière",
+        "elle est éclairée par le Soleil",
+        "un cycle complet de phases dure environ 29,5 jours",
+        "ses phases sont dues à l’ombre de la Terre"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Les phases viennent de la position de la Lune par rapport à la Terre et au Soleil : on voit plus ou moins de sa moitié éclairée. L’ombre de la Terre explique les éclipses de Lune, pas les phases.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>En CM1, après une averse à Dzaoudzi, des élèves observent que les flaques de la cour ont disparu en fin de matinée. Anli dit : « L’eau est partie dans le ciel, elle n’existe plus. » Faïza dit : « Elle est rentrée dans le sol. »</p>\n<p>1. Analyse ces deux conceptions. 2. Propose une démarche expérimentale permettant de tester l’hypothèse de l’évaporation, avec le matériel et les résultats attendus.</p>",
+       "corrige": "<p><strong>1.</strong> Anli a une intuition juste (l’eau passe dans l’air) mais une conception erronée : l’eau « n’existe plus ». Il ne sait pas que l’eau devient un <strong>gaz invisible</strong>, la vapeur d’eau (la matière se conserve). Faïza propose une autre explication juste en partie : sur un sol perméable, une partie de l’eau s’infiltre. Les deux phénomènes coexistent ; il faut les distinguer par l’expérience.</p>\n<p><strong>2. Démarche.</strong> Question : « Où va l’eau des flaques ? » Hypothèses des élèves (infiltration, évaporation). Expérience : deux récipients identiques, <em>imperméables</em>, avec la même quantité d’eau (repère au feutre ou pesée : 200 g), l’un couvert d’un couvercle, l’autre ouvert, placés au soleil ; un troisième ouvert à l’ombre. Un seul facteur change à la fois. Observations sur plusieurs jours (mesure du niveau ou de la masse, tableau). Résultats attendus : le récipient ouvert au soleil perd de l’eau le plus vite, celui à l’ombre moins vite ; le récipient couvert ne perd presque rien et de la buée se forme sous le couvercle (condensation : l’eau était bien dans l’air sous forme de vapeur). Comme le récipient est imperméable, l’eau n’a pas pu s’infiltrer : elle s’est évaporée. Conclusion institutionnalisée : « L’eau liquide peut se transformer en vapeur d’eau, un gaz invisible : c’est l’évaporation, plus rapide quand il fait chaud. » Prolongement : le cycle de l’eau à Mayotte et les économies d’eau.</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Un élève de CM2 de Mamoudzou déclare : « En décembre, c’est l’été à Mayotte parce que la Terre est plus près du Soleil. » Un camarade lui répond : « Mais en France, en décembre, c’est l’hiver ! » Explique ce qui est juste et faux, et propose une modélisation utilisable en classe.</p>",
+       "corrige": "<p><strong>Juste</strong> : en décembre, c’est l’été austral à Mayotte (saison chaude et des pluies) et l’hiver en métropole. <strong>Faux</strong> : l’explication par la distance. D’ailleurs, l’argument du camarade la réfute : si la distance expliquait les saisons, il ferait été en même temps dans les deux hémisphères. (La Terre est même au plus près du Soleil début janvier.)</p>\n<p><strong>Explication</strong> : l’axe de rotation de la Terre est incliné (environ 23,4°) et garde la même direction pendant la révolution autour du Soleil. En décembre, l’hémisphère sud est tourné vers le Soleil : les rayons y arrivent plus verticalement (ils chauffent une surface plus petite, donc plus fortement) et les journées sont plus longues.</p>\n<p><strong>Modélisation</strong> : une lampe au centre (le Soleil), un globe terrestre incliné que l’on fait tourner autour de la lampe sans changer la direction de l’axe ; repérer Mayotte et la métropole avec des gommettes, observer quelle zone reçoit la lumière de face en décembre et en juin. Compléter avec une lampe torche éclairant une feuille quadrillée, verticalement puis en biais : la tache lumineuse s’étale quand les rayons sont inclinés. Discuter les limites du modèle (distances et tailles non respectées).</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-myt2-oral-systeme",
+   "num": 7,
+   "domaine": "oral",
+   "titre": "Le système éducatif et Mayotte",
+   "theme": "Organisation, instances, dispositifs d’aide, éducation prioritaire et spécificités de Mayotte (rotations, langues, crises)",
+   "revision": true,
+   "duree": 2400,
+   "total": 10,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>L’épreuve d’<strong>étude de cas</strong> évalue la connaissance « du système éducatif français et [de] ses particularités à Mayotte » (rapports 2023 et 2025). Les jurys regrettent une connaissance « très lacunaire » de l’organisation et des « particularismes de Mayotte peu connus ». Voici les repères à maîtriser.</p>\n\n<h4>1. L’organisation, du ministère à la classe</h4>\n<table class=\"tab\">\n<tr><th>Niveau</th><th>Qui ? Quoi ?</th></tr>\n<tr><td>National</td><td>ministère de l’Éducation nationale : programmes, statut des personnels, Code de l’éducation</td></tr>\n<tr><td>Académie</td><td>le <strong>recteur</strong>. Mayotte, ancien vice-rectorat, est devenue au 1er janvier 2020 un <strong>rectorat et une région académique de plein exercice</strong>.</td></tr>\n<tr><td>Circonscription</td><td>l’<strong>inspecteur de l’Éducation nationale (IEN)</strong>, supérieur hiérarchique des professeurs des écoles, aidé des <strong>conseillers pédagogiques</strong></td></tr>\n<tr><td>École</td><td>le <strong>directeur</strong> (loi du 21 décembre 2021, dite loi Rilhac : il dispose d’une autorité fonctionnelle), l’équipe pédagogique, la commune (bâtiments, cantine, personnels municipaux comme les ATSEM)</td></tr>\n</table>\n\n<h4>2. Les instances de l’école</h4>\n<ul>\n<li><strong>Conseil d’école</strong> : directeur, enseignants, représentants élus des parents, maire (ou son représentant), IEN. Il se réunit au moins une fois par trimestre ; il vote le règlement intérieur, adopte le projet d’école, donne son avis sur la vie de l’école.</li>\n<li><strong>Conseil des maîtres</strong> : les enseignants de l’école ; organisation du service, vie de l’école.</li>\n<li><strong>Conseil de cycle</strong> : il se concerte sur la progression, les acquis et les besoins des élèves.</li>\n<li><strong>Conseil école-collège</strong> : continuité du cycle 3 (CM1, CM2, 6e).</li>\n</ul>\n<p>Cycles : cycle 1 (école maternelle, PS-MS-GS), cycle 2 (CP-CE1-CE2), cycle 3 (CM1-CM2-6e). Instruction obligatoire de 3 à 16 ans (loi du 26 juillet 2019). 24 heures d’enseignement par semaine, plus les <strong>activités pédagogiques complémentaires</strong> (APC, 36 heures par an).</p>\n\n<h4>3. Les dispositifs d’aide et d’inclusion</h4>\n<table class=\"tab\">\n<tr><th>Sigle</th><th>Pour qui ?</th><th>Qui le met en place ?</th></tr>\n<tr><td>PPRE</td><td>élève risquant de ne pas maîtriser les attendus de fin de cycle</td><td>l’équipe pédagogique, avec la famille</td></tr>\n<tr><td>PAP</td><td>élève avec des troubles des apprentissages (dys…)</td><td>sur avis du médecin scolaire</td></tr>\n<tr><td>PPS</td><td>élève en situation de handicap</td><td>décision de la MDPH (AESH possible)</td></tr>\n<tr><td>PAI</td><td>élève malade (allergie, asthme, diabète…)</td><td>famille, médecin, directeur</td></tr>\n<tr><td>RASED</td><td>élèves en difficulté persistante</td><td>enseignants spécialisés et psychologue de l’Éducation nationale</td></tr>\n<tr><td>UPE2A / CASNAV</td><td>élèves allophones nouvellement arrivés</td><td>l’académie de Mayotte dispose d’un CASNAV ; l’UPE2A complète la classe ordinaire, elle ne la remplace pas</td></tr>\n</table>\n<p>Pilotage pédagogique : <strong>évaluations nationales</strong> de début d’année du CP au CM2 ; socle commun de connaissances, de compétences et de culture (5 domaines) ; guides fondamentaux (Éduscol) ; référentiel de compétences des professeurs (arrêté du 1er juillet 2013).</p>\n\n<h4>4. L’éducation prioritaire</h4>\n<p>Principe : donner plus à ceux qui ont moins (article L. 111-1 du Code de l’éducation). Réseaux <strong>REP</strong> et <strong>REP+</strong> (refondation de 2014), organisés autour d’un collège et de ses écoles. Moyens : dédoublement des classes de GS, CP et CE1, temps de formation et de concertation en REP+, pilotage de réseau, petits-déjeuners gratuits. À Mayotte, <strong>100 % des écoles et collèges</strong> sont en éducation prioritaire (115 écoles en REP, 73 en REP+ : réponse ministérielle publiée au JO du 21 novembre 2023). Trois <strong>cités éducatives</strong> : Kawéni, Dzoumogné, Petite-Terre.</p>\n\n<h4>5. Les spécificités de Mayotte</h4>\n<ul>\n<li><strong>Statut</strong> : département depuis le 31 mars 2011.</li>\n<li><strong>Pression démographique et rotations</strong> : faute de salles, de nombreuses écoles accueillent une classe le matin et une autre l’après-midi. Selon la chambre régionale des comptes (rapport publié le 11 juin 2025), 57 % des enfants des 13 communes contrôlées sont scolarisés en rotation ; le rectorat estime le déficit à environ 1 200 salles. La loi n° 2025-797 du 11 août 2025 de programmation pour la refondation de Mayotte fixe l’objectif de mettre fin aux rotations d’ici 2031.</li>\n<li><strong>Non-scolarisation</strong> : des milliers d’enfants en âge d’être scolarisés ne le sont pas (manque de places, difficultés d’inscription).</li>\n<li><strong>Langues</strong> : selon l’Insee (2022), 75 % des habitants de 15 ans ou plus déclarent maîtriser le shimaoré, 18 % le kibushi, 55 % le français. Le français est souvent d’abord la <strong>langue de l’école</strong>. Le shimaoré et le kibushi sont reconnus comme langues régionales (circulaire du 14 décembre 2021) et l’article L. 312-11 permet aux enseignants d’y recourir « dès lors qu’ils en tirent profit pour leur enseignement ».</li>\n<li><strong>Crises</strong> : crise de l’eau (2023), cyclone Chido (14 décembre 2024), crise sismo-volcanique (depuis 2018) : sécurité (PPMS), continuité pédagogique, soutien psychologique.</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Recteur → IEN → directeur ; conseil d’école, conseil des maîtres, conseil de cycle, conseil école-collège. PPRE, PAP, PPS, PAI, RASED, UPE2A. Mayotte : académie de plein exercice (2020), 100 % éducation prioritaire, rotations (57 % dans les communes contrôlées, fin visée en 2031), plurilinguisme (shimaoré, kibushi), crises. Toujours relier une situation au cadre légal et au contexte mahorais.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le supérieur hiérarchique direct d’un professeur des écoles est :</p>",
+       "options": [
+        "le directeur d’école",
+        "l’inspecteur de l’Éducation nationale de la circonscription",
+        "le maire",
+        "le conseiller pédagogique"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse 2.</strong> Le directeur a une autorité fonctionnelle (loi de 2021) mais n’est pas le supérieur hiérarchique ; le maire gère les bâtiments.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le conseil d’école :</p>",
+       "options": [
+        "réunit notamment enseignants, représentants des parents et maire",
+        "vote le règlement intérieur",
+        "se réunit au moins une fois par trimestre",
+        "décide seul du passage des élèves dans la classe supérieure"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> Les décisions de parcours relèvent du conseil des maîtres, en dialogue avec la famille.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un élève atteint de diabète a besoin, à l’école, d’un :</p>",
+       "options": [
+        "PPRE",
+        "PAI",
+        "PPS",
+        "PAP"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse 2.</strong> Le projet d’accueil individualisé concerne les troubles de santé ; le PPS relève du handicap (MDPH), le PAP des troubles des apprentissages, le PPRE de la difficulté scolaire.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Le cycle 3 regroupe :</p>",
+       "options": [
+        "CE2, CM1, CM2",
+        "CM1, CM2, 6e",
+        "des classes d’école et de collège, d’où le conseil école-collège",
+        "la grande section, le CP et le CE1"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Depuis 2016, le cycle 3 (cycle de consolidation) comprend CM1, CM2 et 6e.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>À Mayotte :</p>",
+       "options": [
+        "toutes les écoles publiques sont en éducation prioritaire",
+        "l’académie est un rectorat de plein exercice depuis le 1er janvier 2020",
+        "la loi du 11 août 2025 fixe l’objectif de mettre fin aux rotations scolaires d’ici 2031",
+        "les rotations ont disparu depuis 2020"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> Les rotations restent massives (57 % des enfants des communes contrôlées par la CRC en 2025).</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une UPE2A :</p>",
+       "options": [
+        "accueille les élèves allophones nouvellement arrivés",
+        "remplace la classe ordinaire toute la journée",
+        "complète l’inclusion en classe ordinaire, qui reste la modalité principale",
+        "est une structure pour les élèves en situation de handicap"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1 et 3.</strong> Circulaire n° 2012-141 : l’inclusion en classe ordinaire « constitue la modalité principale de scolarisation ».</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Peut-on utiliser le shimaoré en classe ?</p>",
+       "options": [
+        "non, c’est interdit par la loi",
+        "oui, l’article L. 312-11 autorise le recours aux langues régionales quand l’enseignant en tire profit pour son enseignement",
+        "oui, le shimaoré est reconnu comme langue régionale",
+        "oui, et il peut remplacer le français comme langue d’enseignement"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Le français reste la langue de l’enseignement (L. 121-3) ; le shimaoré est un appui.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Les activités pédagogiques complémentaires (APC) :</p>",
+       "options": [
+        "représentent 36 heures par an",
+        "s’ajoutent aux 24 heures hebdomadaires d’enseignement",
+        "remplacent le RASED",
+        "peuvent être ciblées sur la lecture et le langage"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong> Les APC sont organisées par les enseignants de l’école ; le RASED est un dispositif distinct.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 2,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Situation : dans une école de Koungou en REP+ qui fonctionne en rotation, Mme Nafissa, professeure de CE1, constate en novembre que Soilihi, 7 ans, ne décode toujours pas les syllabes simples, parle peu en classe et est souvent absent. Sa famille parle kibushi.</p>\n<p>Quels acteurs, instances et dispositifs l’enseignante peut-elle mobiliser ? Classe ta réponse du plus proche (la classe) au plus large (les partenaires), en disant pour chacun à quoi il sert.</p>",
+       "corrige": "<ul>\n<li><strong>Dans la classe</strong> : évaluer précisément (évaluations nationales de CE1 comme repère, puis évaluation fine des CGP et du langage oral) ; différencier (groupe de besoin, textes déchiffrables, entraînement quotidien) ; s’appuyer sur la langue familiale pour le vocabulaire.</li>\n<li><strong>APC</strong> (36 h par an) : petit groupe ciblé sur le décodage et le langage oral.</li>\n<li><strong>Conseil des maîtres / conseil de cycle</strong> : partager le constat, décider d’un <strong>PPRE</strong> (actions ciblées, objectifs, durée, bilan), en informer la famille.</li>\n<li><strong>Directeur</strong> : suivi de l’assiduité (registre d’appel ; au-delà de quatre demi-journées d’absence non justifiées dans le mois, signalement à l’autorité académique) et lien avec la famille.</li>\n<li><strong>RASED</strong> si la difficulté persiste (enseignant spécialisé, psychologue de l’Éducation nationale), avec l’accord des parents pour le bilan.</li>\n<li><strong>Circonscription</strong> : IEN, conseiller pédagogique (outils, formation).</li>\n<li><strong>Famille</strong> : entretien avec un interprète adulte ; explication des horaires de rotation ; encourager les échanges riches dans la langue familiale.</li>\n<li><strong>Partenaires</strong> : cité éducative ou programme de réussite éducative, associations, services sociaux si l’absentéisme cache une difficulté plus grave.</li>\n</ul>\n<p>À l’oral, nomme chaque dispositif, dis en une phrase à quoi il sert et qui le décide : le jury 2025 conseille de « connaître les principaux dispositifs et le cadre réglementaire au sein d’une école ».</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-myt2-oral-laicite",
+   "num": 8,
+   "domaine": "oral",
+   "titre": "Laïcité, valeurs de la République et posture du fonctionnaire",
+   "theme": "Neutralité, statuts des élèves, des parents et des personnels, contestation d’enseignements, obligations et droits du fonctionnaire",
+   "revision": true,
+   "duree": 2100,
+   "total": 12,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>Dans l’étude de cas, <strong>10 points sur 50</strong> portent sur les <strong>valeurs de la République</strong>. Le jury 2025 note que « certains candidats ne parviennent pas à se positionner par rapport au principe de laïcité » : il attend une position <strong>nette</strong>, fondée sur les textes, pas une opinion personnelle.</p>\n\n<h4>1. Les valeurs et les symboles</h4>\n<p>Devise : <strong>Liberté, Égalité, Fraternité</strong>. La République est « indivisible, laïque, démocratique et sociale » (Constitution de 1958, article 1er). Le Code de l’éducation impose l’affichage de la devise et des drapeaux tricolore et européen sur la façade des écoles, de la Déclaration des droits de l’homme et du citoyen de 1789 dans les locaux et, depuis la loi du 26 juillet 2019, du drapeau, de la devise et des paroles de l’hymne national dans chaque salle de classe. L’enseignement moral et civique (nouveau programme publié au BOEN n° 24 du 13 juin 2024) fait vivre ces valeurs.</p>\n\n<h4>2. La laïcité : trois statuts, trois règles</h4>\n<table class=\"tab\">\n<tr><th>Qui ?</th><th>Règle</th><th>Texte</th></tr>\n<tr><td><strong>Enseignant</strong> (titulaire ou contractuel)</td><td>devoir de <strong>stricte neutralité</strong> : aucune manifestation de ses convictions religieuses ou politiques dans ses fonctions</td><td>charte de la laïcité à l’École (art. 11) ; Code général de la fonction publique (art. L. 121-2)</td></tr>\n<tr><td><strong>Élèves</strong></td><td>interdiction des signes ou tenues manifestant <strong>ostensiblement</strong> une appartenance religieuse ; liberté de conscience protégée</td><td>loi du 15 mars 2004 (art. L. 141-5-1) ; charte (art. 14)</td></tr>\n<tr><td><strong>Parents accompagnateurs</strong></td><td>usagers du service public, non soumis par principe à la neutralité (étude du Conseil d’État, 2013) ; mais <strong>tout prosélytisme est interdit</strong></td><td>vademecum « La laïcité à l’école » ; art. L. 141-5-2 (pressions sur les croyances interdites)</td></tr>\n</table>\n<p>Les enseignements sont laïques : « Aucun élève ne peut invoquer une conviction religieuse ou politique pour contester à un enseignant le droit de traiter une question au programme » (charte, art. 12). L’enseignant apprend à <strong>distinguer savoir, opinion et croyance</strong> (référentiel 2013, compétence 1).</p>\n<p>Nuance à connaître : la loi de 1905 ne s’applique pas à Mayotte (régime des cultes différent), mais cela ne change rien à l’école : la laïcité de l’école publique s’y applique pleinement. L’islam y est très majoritaire : la laïcité n’est dirigée contre aucune religion ; elle protège chaque élève, y compris minoritaire, de toute pression. « Tout le monde est musulman ici » n’est pas un argument recevable.</p>\n\n<h4>3. Les obligations du fonctionnaire</h4>\n<table class=\"tab\">\n<tr><th>Obligation</th><th>Contenu</th></tr>\n<tr><td>Neutralité, laïcité</td><td>ne manifester aucune conviction ; traiter également tous les usagers</td></tr>\n<tr><td>Dignité, impartialité, intégrité, probité</td><td>comportement exemplaire, pas de conflit d’intérêts</td></tr>\n<tr><td>Obéissance hiérarchique</td><td>appliquer les programmes et les instructions, sauf ordre manifestement illégal et gravement compromettant pour l’intérêt public</td></tr>\n<tr><td>Secret et discrétion professionnels</td><td>ne pas divulguer les informations sur les élèves et les familles (y compris sur les réseaux sociaux)</td></tr>\n<tr><td>Devoir de réserve</td><td>mesure dans l’expression publique, même hors service</td></tr>\n<tr><td>Protection de l’enfance</td><td>transmettre une <strong>information préoccupante</strong> (cellule départementale, 119) ; signaler au procureur tout crime ou délit (article 40 du Code de procédure pénale)</td></tr>\n</table>\n<p>En contrepartie, le fonctionnaire a des <strong>droits</strong> : liberté d’opinion, protection fonctionnelle (l’administration le protège s’il est menacé ou attaqué dans ses fonctions), formation.</p>\n\n<h4>4. La posture attendue</h4>\n<ul>\n<li><strong>Exemplarité</strong> : « L’engagement et l’exemplarité des personnels de l’éducation nationale confortent leur autorité » (art. L. 111-3-1). Langage soutenu, tenue adaptée, ponctualité.</li>\n<li><strong>Bienveillance et exigence</strong> : tous les élèves peuvent apprendre (art. L. 111-1) ; pas de propos dévalorisant sur les élèves ou les familles.</li>\n<li><strong>Réponse graduée</strong> : dialoguer, expliquer la règle, en référer au directeur et à l’IEN ; ne pas rester seul (équipe académique « Valeurs de la République », référents laïcité).</li>\n<li><strong>Pédagogie de la laïcité</strong> : présenter la charte aux parents à la réunion de rentrée, la faire expliquer par les élèves, célébrer le 9 décembre (journée de la laïcité).</li>\n</ul>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>Enseignant : neutralité stricte. Élèves : pas de signe ostensible. Parents accompagnateurs : pas de neutralité imposée par principe, mais aucun prosélytisme. Aucun élève ne peut contester un contenu au programme. Fonctionnaire : neutralité, discrétion, réserve, obéissance, signalement. Toujours : un texte, une position claire, une réponse graduée et bienveillante.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 8,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un enseignant contractuel peut-il porter un signe religieux en classe ?</p>",
+       "options": [
+        "oui, car il n’est pas titulaire",
+        "non : tout agent public est soumis à l’obligation de neutralité",
+        "oui, si la majorité des élèves partage sa religion",
+        "non, en vertu de l’article 11 de la charte de la laïcité à l’École"
+       ],
+       "bonnes": [
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2 et 4.</strong> Le statut (titulaire ou contractuel) ne change rien ; l’argument majoritaire est irrecevable.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une mère d’élève portant un foulard propose d’accompagner une sortie scolaire. En principe :</p>",
+       "options": [
+        "elle ne peut pas accompagner, au nom de la laïcité",
+        "elle peut accompagner : les parents sont des usagers, non soumis par principe à la neutralité",
+        "elle doit s’abstenir de tout prosélytisme",
+        "elle doit retirer son foulard pendant la sortie"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Étude du Conseil d’État (2013), reprise par le vademecum « La laïcité à l’école ».</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un parent accompagnateur propose de faire la prière avec les élèves pendant la pause d’une sortie scolaire. L’enseignant :</p>",
+       "options": [
+        "accepte, puisque c’est sur le temps de pause",
+        "refuse, car les pressions sur les croyances des élèves sont interdites pendant toute activité liée à l’enseignement",
+        "explique la règle au parent et en informe le directeur",
+        "accepte si tous les élèves sont d’accord"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Article L. 141-5-2 du Code de l’éducation ; la sortie est une activité scolaire.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un élève conteste la leçon sur l’histoire de la Terre « parce que c’est contre la religion ». L’enseignant :</p>",
+       "options": [
+        "supprime la leçon pour éviter le conflit",
+        "maintient la leçon, qui est au programme",
+        "distingue savoir scientifique et croyance, sans ridiculiser l’élève",
+        "engage un débat théologique"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Charte, article 12 ; référentiel 2013, compétence 1 (distinguer les savoirs des opinions ou des croyances).</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Publier sur un réseau social la photo d’un élève et un commentaire sur sa famille est :</p>",
+       "options": [
+        "un manquement à la discrétion professionnelle",
+        "une atteinte au droit à l’image",
+        "autorisé si le compte est privé",
+        "contraire au devoir de réserve et au respect dû aux familles"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong> Un compte « privé » ne supprime ni la faute ni le risque de diffusion.</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Un élève confie qu’il est frappé à la maison. L’enseignant :</p>",
+       "options": [
+        "attend d’avoir des preuves avant d’agir",
+        "en informe sans délai le directeur et transmet une information préoccupante (ou signale au procureur en cas de danger grave et immédiat)",
+        "mène lui-même l’enquête auprès de la famille",
+        "note les propos exacts de l’enfant, sans l’interroger de façon insistante"
+       ],
+       "bonnes": [
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2 et 4.</strong> L’enseignant n’enquête pas : il protège et transmet ; le 119 peut aussi conseiller.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>La laïcité à Mayotte :</p>",
+       "options": [
+        "ne s’applique pas à l’école, puisque la loi de 1905 n’y est pas en vigueur",
+        "s’applique pleinement à l’école publique (neutralité des personnels et des enseignements, loi de 2004)",
+        "protège aussi les élèves minoritaires de toute pression",
+        "est dirigée contre l’islam"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Le régime des cultes diffère, pas les règles de l’école publique.</p>"
+      },
+      {
+       "id": "8",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quels éléments figurent parmi les obligations d’affichage à l’école ?</p>",
+       "options": [
+        "la devise de la République",
+        "les drapeaux tricolore et européen",
+        "la Déclaration des droits de l’homme et du citoyen de 1789",
+        "la photographie du ministre"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> Depuis 2019, les paroles de l’hymne national sont aussi affichées dans chaque classe.</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 4,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Question du jury : « Un collègue affirme en salle des maîtres : “Ces élèves-là ne réussiront jamais, ce n’est pas la peine de s’épuiser.” Comment réagissez-vous, en tant que fonctionnaire ? » Rédige une réponse orale structurée (2 à 3 minutes).</p>",
+       "corrige": "<p><strong>Structure</strong> : poser le cadre → analyser → dire ce que je fais → conclure.</p>\n<p>« Ce propos, même prononcé sous le coup de la fatigue, est contraire aux principes du service public. L’article L. 111-1 du Code de l’éducation affirme que le service public “reconnaît que tous les enfants partagent la capacité d’apprendre et de progresser” et qu’il contribue à l’égalité des chances. Le référentiel de compétences de 2013 demande aussi d’éviter toute forme de dévalorisation à l’égard des élèves et des familles.</p>\n<p>Je ne réagirais ni par le silence, ni par un conflit ouvert. Je recentrerais la discussion sur des faits : “Qu’ont-ils déjà appris depuis la rentrée ? Qu’est-ce qui fonctionne ?” Je proposerais un travail d’équipe : analyser ensemble les évaluations, organiser des groupes de besoin, des APC, et solliciter le conseiller pédagogique. À Mayotte, où les rotations réduisent le temps de classe et où beaucoup d’élèves apprennent en français, langue seconde, ce découragement se comprend, mais il ne peut pas devenir une attitude professionnelle.</p>\n<p>Si ces propos se répétaient devant les élèves ou les familles, ou prenaient un caractère discriminatoire, j’en parlerais au directeur, voire à l’IEN. En conclusion, l’exemplarité fait partie de nos obligations : “l’engagement et l’exemplarité des personnels” confortent leur autorité (article L. 111-3-1). »</p>"
+      },
+      {
+       "id": "2",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Pour chacune des situations suivantes, dis si la règle est respectée ou non, et cite le texte : a) une élève de CM2 porte une grande croix visible par-dessus son tee-shirt ; b) un enseignant explique en EMC les fêtes des différentes religions présentes à Mayotte et en métropole ; c) un directeur refuse par principe toute mère voilée comme accompagnatrice ; d) un enseignant dit à la classe : « Je jeûne en ce moment, comme vous. »</p>",
+       "corrige": "<ul>\n<li><strong>a)</strong> Non respectée : une grande croix est un signe manifestant ostensiblement une appartenance religieuse, interdit aux élèves (loi du 15 mars 2004, art. L. 141-5-1). Réponse : dialogue avec l’élève et la famille avant toute procédure.</li>\n<li><strong>b)</strong> Respectée : l’enseignement laïque des faits religieux, présenté de façon neutre et objective, fait partie des enseignements ; il nourrit la connaissance mutuelle et le respect (charte, art. 12).</li>\n<li><strong>c)</strong> Non conforme : les parents accompagnateurs ne sont pas soumis par principe à la neutralité ; un refus systématique n’est pas justifié (étude du Conseil d’État de 2013, vademecum). Des restrictions ne sont possibles que pour des motifs précis (prosélytisme, bon fonctionnement du service).</li>\n<li><strong>d)</strong> Non respectée : l’enseignant manifeste une conviction religieuse dans l’exercice de ses fonctions et crée une connivence qui peut faire pression sur les élèves qui ne jeûnent pas (charte, art. 11 ; CGFP, art. L. 121-2).</li>\n</ul>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rev-myt2-oral-methode",
+   "num": 9,
+   "domaine": "oral",
+   "titre": "Méthode de l’exposé et de l’entretien",
+   "theme": "Préparation en une heure, problématique, plan, références institutionnelles, conduite de l’entretien et erreurs relevées par les jurys",
+   "revision": true,
+   "duree": 2100,
+   "total": 9,
+   "parties": [
+    {
+     "id": "R",
+     "label": "Rappel",
+     "short": "R",
+     "titre": "L’essentiel à retenir",
+     "points": 0,
+     "intro": "\n<p>Les deux premières épreuves d’admission ont la même forme : <strong>1 heure de préparation, 10 minutes d’exposé, 20 minutes d’entretien</strong>, notées sur 50.</p>\n<table class=\"tab\">\n<tr><th>Épreuve</th><th>Support</th><th>Barème</th></tr>\n<tr><td>Mise en situation professionnelle</td><td>dossier de 5 pages maximum, choisi parmi trois disciplines ou domaines</td><td>exposé 20, entretien 30</td></tr>\n<tr><td>Étude de cas (système éducatif, dimension éthique)</td><td>dossier de 4 pages maximum sur une situation ordinaire de l’école, avec trois questions</td><td>exposé 15, entretien 25, valeurs de la République 10</td></tr>\n</table>\n\n<h4>1. Utiliser l’heure de préparation</h4>\n<table class=\"tab\">\n<tr><th>Temps</th><th>Tâche</th></tr>\n<tr><td>10 min</td><td>lire les questions, puis le dossier, crayon en main ; repérer les enjeux et les textes officiels</td></tr>\n<tr><td>10 min</td><td>formuler la <strong>problématique</strong> ; relier les documents entre eux</td></tr>\n<tr><td>25 min</td><td>construire le <strong>plan</strong> (2 ou 3 parties) avec exemples concrets et références</td></tr>\n<tr><td>10 min</td><td>rédiger <strong>seulement</strong> l’introduction et la conclusion ; le reste en mots clés</td></tr>\n<tr><td>5 min</td><td>anticiper 3 ou 4 questions du jury</td></tr>\n</table>\n<p>Le jury 2025 conseille d’« éviter de rédiger tout ce qui va être énoncé à l’oral » et d’« éviter d’effectuer une lecture de ses notes pendant l’exposé ».</p>\n\n<h4>2. Construire l’exposé (10 minutes)</h4>\n<ul>\n<li><strong>Introduction (1 min 30)</strong> : accroche à partir de la situation ; présentation <em>rapide</em> du dossier (pas de liste de sources) ; <strong>problématique</strong> ; annonce du plan.</li>\n<li><strong>Développement (7 min)</strong> : 2 ou 3 parties ; chaque partie répond à la problématique et s’appuie sur les documents (« comme le rappelle l’article L. 131-1… ») et sur des propositions concrètes (organisation de la classe, activité précise, rôle des acteurs). Le plan « peut être différent d’un découpage en trois parties correspondant à la réponse apportée aux trois questions » (rapport 2025), à condition de <strong>répondre aux trois questions</strong>.</li>\n<li><strong>Conclusion (1 min 30)</strong> : réponse claire à la problématique ; ouverture (autre dispositif, enjeu à Mayotte, lien avec une autre discipline).</li>\n</ul>\n<p><strong>Une bonne problématique</strong> reformule l’enjeu du dossier sous forme de question qui contient une tension : « Comment l’école peut-elle garantir à tous la maîtrise du français tout en s’appuyant sur les langues des élèves ? »</p>\n\n<h4>3. Réussir l’entretien (20 minutes)</h4>\n<ul>\n<li><strong>Écouter</strong> la question jusqu’au bout, la reformuler si besoin, répondre directement puis développer.</li>\n<li>Structure d’une réponse : <strong>définir</strong> → <strong>référer</strong> (texte, programme, guide) → <strong>illustrer</strong> (exemple de classe) → <strong>relier</strong> à Mayotte.</li>\n<li>Reconnaître honnêtement ce qu’on ne sait pas, puis raisonner ; ne pas utiliser un mot qu’on ne sait pas définir (le jury demandera de l’expliciter).</li>\n<li>Langue orale soignée : le jury 2025 relève des erreurs d’accord et de syntaxe (« je leurs explique ») et un registre familier.</li>\n</ul>\n\n<h4>4. Les références institutionnelles à connaître</h4>\n<ul>\n<li>Programmes en vigueur (maternelle 2026 ; français et mathématiques du cycle 2 de 2024 et du cycle 3 de 2025 ; nouveaux programmes de 2026 au CP et au CM1 en sciences, histoire-géographie, EPS et langues vivantes) ; socle commun ; EMC (2024).</li>\n<li>Guides fondamentaux (Éduscol) : lecture et écriture au CP (« guide orange ») et au CE1, vocabulaire à l’école maternelle, nombres et calcul au CP, résolution de problèmes au cours moyen, fractions et nombres décimaux au cycle 3.</li>\n<li>Référentiel de compétences des métiers du professorat (1er juillet 2013) ; Code de l’éducation ; charte de la laïcité ; évaluations nationales.</li>\n<li>Didactique : enseignement explicite (modélisation, pratique guidée, pratique autonome), différenciation, évaluation.</li>\n</ul>\n<p>Le rapport 2025 regrette qu’« aucun candidat n’a cité les différents guides fondamentaux », des confusions entre BO et programmes, et des candidats qui proposent des vidéos YouTube au lieu d’Éduscol.</p>\n\n<h4>5. Les erreurs relevées par les jurys</h4>\n<table class=\"tab\">\n<tr><th>Erreur</th><th>Ce qu’il faut faire</th></tr>\n<tr><td>Paraphrase des documents un à un</td><td>utiliser les documents comme preuves au service d’un raisonnement</td></tr>\n<tr><td>Absence de problématique, de plan, d’introduction</td><td>annoncer clairement la problématique et le plan</td></tr>\n<tr><td>Conclusion rapide sans ouverture</td><td>répondre, puis ouvrir</td></tr>\n<tr><td>Confusion programmation / progression</td><td>programmation = quand ; progression = dans quel ordre et pourquoi</td></tr>\n<tr><td>Méconnaissance de Mayotte et du 1er degré</td><td>chiffres vérifiés, dispositifs, instances</td></tr>\n<tr><td>Position floue sur la laïcité</td><td>position nette, fondée sur un texte</td></tr>\n</table>\n<div class=\"doc\"><p class=\"doc-title\">À retenir</p>\n<p>1 h : lire, problématiser, planifier, rédiger seulement introduction et conclusion. 10 min : introduction avec problématique et plan, développement argumenté et concret, conclusion avec ouverture. 20 min : écouter, définir, référer, illustrer, relier à Mayotte. Citer les guides et Éduscol.</p></div>\n",
+     "questions": []
+    },
+    {
+     "id": "Q",
+     "label": "Quiz",
+     "short": "Q",
+     "titre": "Vérifie que tu as compris",
+     "points": 7,
+     "questions": [
+      {
+       "id": "1",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Dans l’étude de cas, comment se répartissent les 50 points ?</p>",
+       "options": [
+        "exposé 15, entretien 25, valeurs de la République 10",
+        "exposé 20, entretien 30",
+        "exposé 25, entretien 25",
+        "tous les points sur l’entretien"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse 1.</strong> La répartition exposé 20 / entretien 30 est celle de la mise en situation professionnelle.</p>"
+      },
+      {
+       "id": "2",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Pendant l’heure de préparation, il est conseillé de :</p>",
+       "options": [
+        "rédiger intégralement l’exposé",
+        "rédiger l’introduction et la conclusion, le reste en mots clés",
+        "prévoir quelques questions probables du jury",
+        "recopier les sources des documents"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Le rapport 2025 déconseille de tout rédiger et relève que détailler les sources ne montre aucun esprit de synthèse.</p>"
+      },
+      {
+       "id": "3",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelle formulation est une problématique ?</p>",
+       "options": [
+        "« Je vais vous présenter les quatre documents. »",
+        "« Comment accueillir un élève non francophone en CP sans renoncer à l’exigence d’apprentissage du français ? »",
+        "« Le document 2 est un extrait du Code de l’éducation. »",
+        "« Comment concilier laïcité de l’école et relation de confiance avec les familles ? »"
+       ],
+       "bonnes": [
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2 et 4.</strong> Une problématique pose une question qui contient une tension.</p>"
+      },
+      {
+       "id": "4",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Selon le rapport 2025, le plan de l’exposé :</p>",
+       "options": [
+        "doit obligatoirement suivre les trois questions dans l’ordre",
+        "peut être différent d’un découpage calqué sur les trois questions",
+        "doit répondre aux trois questions",
+        "peut se limiter à résumer les documents"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 2 et 3.</strong> Libre dans sa forme, le plan doit répondre explicitement aux questions.</p>"
+      },
+      {
+       "id": "5",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Face à une question du jury dont tu ne connais pas la réponse :</p>",
+       "options": [
+        "tu inventes une référence pour ne pas perdre la face",
+        "tu le reconnais honnêtement, puis tu raisonnes à partir de ce que tu sais",
+        "tu changes de sujet",
+        "tu demandes éventuellement une reformulation"
+       ],
+       "bonnes": [
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 2 et 4.</strong> Le rapport 2025 conseille de « parler de ce qui est vraiment connu ou maîtrisé ».</p>"
+      },
+      {
+       "id": "6",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Quelles ressources sont des références institutionnelles ?</p>",
+       "options": [
+        "le guide « Pour enseigner la lecture et l’écriture au CP »",
+        "le site Éduscol",
+        "une vidéo YouTube d’un enseignant",
+        "le référentiel de compétences professionnelles de 2013"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 4.</strong> Le rapport 2025 critique les candidats qui proposent des vidéos YouTube faute de connaître Éduscol.</p>"
+      },
+      {
+       "id": "7",
+       "type": "quiz",
+       "points": 1,
+       "enonce": "<p>Une bonne réponse à une question du jury :</p>",
+       "options": [
+        "définit la notion",
+        "s’appuie sur un texte ou un programme",
+        "donne un exemple concret de classe",
+        "est la plus longue possible, pour montrer ses connaissances"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses 1, 2, 3.</strong> La clarté et la précision comptent plus que la longueur ; le jury conseille de « ne pas chercher la complexité ».</p>"
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "label": "Application",
+     "short": "A",
+     "titre": "Applique",
+     "points": 2,
+     "questions": [
+      {
+       "id": "1",
+       "type": "application",
+       "points": 2,
+       "enonce": "<p>Dossier d’étude de cas (résumé) : dans une école de Sada, une classe de CM1 fonctionne en rotation (après-midi). Les parents se plaignent que leurs enfants « n’ont pas assez de classe » ; l’enseignant, M. Ibrahim, constate une grande fatigue des élèves l’après-midi. Documents : extraits du Code de l’éducation (instruction obligatoire, égalité des chances), données de la chambre régionale des comptes sur les rotations (2025), extrait du programme de français du cycle 3 (2025).</p>\n<p>Questions : 1. Quels sont les enjeux des rotations pour les apprentissages des élèves ? 2. Comment l’enseignant peut-il organiser son temps de classe pour aller à l’essentiel ? 3. Comment associer les familles ?</p>\n<p>Rédige la problématique, le plan détaillé (avec au moins une référence et un exemple concret par partie) et l’introduction de ton exposé.</p>",
+       "corrige": "<p><strong>Problématique</strong> : « Comment garantir à chaque élève les apprentissages fondamentaux lorsque le temps scolaire est contraint par les rotations ? »</p>\n<p><strong>Plan détaillé</strong></p>\n<ul>\n<li><strong>I. Les rotations, un enjeu d’égalité</strong> (question 1). Constat : 57 % des enfants des 13 communes contrôlées sont scolarisés en rotation (CRC, 2025) ; temps d’exposition au français réduit, fatigue l’après-midi, difficultés pour les familles. Cadre : le service public contribue à « l’égalité des chances » (L. 111-1) ; objectif légal de fin des rotations d’ici 2031 (loi du 11 août 2025).</li>\n<li><strong>II. Faire de chaque minute une minute d’apprentissage</strong> (question 2). Prioriser lecture, écriture, calcul et résolution de problèmes (priorités nationales) ; emploi du temps qui place les apprentissages exigeants en début de séance ; rituels courts et automatismes quotidiens (fluence, calcul mental) ; enseignement explicite (modélisation, pratique guidée, autonome) ; pauses actives ; APC ciblées. Exemple : 15 minutes de fluence en binôme chaque jour.</li>\n<li><strong>III. Faire des familles des alliées</strong> (question 3). Parents membres de la communauté éducative (L. 111-4) ; réunion avec interprète pour expliquer l’organisation et les priorités ; lecture partagée à la maison, y compris dans la langue familiale ; lien avec la cité éducative ou les associations d’accompagnement à la scolarité.</li>\n</ul>\n<p><strong>Introduction</strong> : « Dans une école de Sada, les élèves de CM1 de M. Ibrahim ne viennent en classe que l’après-midi : l’école fonctionne en rotation, comme beaucoup d’écoles de Mayotte. Les familles s’en inquiètent, l’enseignant constate la fatigue des élèves. Le dossier réunit des extraits du Code de l’éducation, des données de la chambre régionale des comptes et le programme de français du cycle 3. Il pose une question centrale : comment garantir à chaque élève les apprentissages fondamentaux lorsque le temps scolaire est contraint ? Nous verrons d’abord que les rotations sont un enjeu d’égalité, puis comment l’enseignant peut concentrer son action sur l’essentiel, enfin comment associer les familles. »</p>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

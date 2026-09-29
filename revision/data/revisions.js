@@ -1,0 +1,2 @@
+/* Généré par data/build_revisions.py : séances de révision conseillées, par concours. */
+window.BELAMIS_REV = {"bac3": {"domaines": {}, "types": {"quiz": "Quiz", "application": "Application"}, "sujets": []}, "myt2": {"domaines": {}, "types": {"quiz": "Quiz", "application": "Application"}, "sujets": []}, "p1": {"domaines": {}, "types": {"quiz": "Quiz", "application": "Application"}, "sujets": []}};

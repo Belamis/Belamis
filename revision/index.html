@@ -127,25 +127,29 @@
       <div class="space-center">
         <span class="eyebrow gold"><i class="pulse-dot"></i>Espace de révision</span>
         <h2>Raphaël <em>s'éveille.</em></h2>
-        <p>Ton guide de révision est prêt. Choisis une matière pour commencer.</p>
+        <p id="space-lead">Ton guide de révision est prêt. Choisis d'abord ton concours.</p>
         <p id="space-note" class="space-note"></p>
-        <div class="matieres" role="group" aria-label="Matières">
-          <button id="open-francais" class="matiere" type="button" data-matiere="francais">
-            <span class="matiere-name">Français</span>
-            <span class="matiere-sub">Épreuve 1 · partie A · 6 sujets</span>
+        <div id="concours-choice" class="matieres concours-choice" role="group" aria-label="Concours">
+          <button class="matiere concours" type="button" data-concours="bac3">
+            <span class="matiere-name">CRPE BAC+3</span>
+            <span class="matiere-sub">Concours externe · français, maths, épreuve 2</span>
           </button>
-          <button id="open-maths" class="matiere" type="button" data-matiere="maths">
-            <span class="matiere-name">Mathématiques</span>
-            <span class="matiere-sub">Épreuve 1 · partie B · 7 sujets</span>
+          <button class="matiere concours" type="button" data-concours="myt2">
+            <span class="matiere-name">2nd concours interne</span>
+            <span class="matiere-sub">Spécifique Mayotte · écrits et oraux</span>
           </button>
-          <button id="open-epreuve2" class="matiere" type="button" data-matiere="epreuve2">
-            <span class="matiere-name">Épreuve 2</span>
-            <span class="matiere-sub">HG-EMC · sciences · arts · anglais</span>
+          <button class="matiere concours" type="button" data-concours="p1">
+            <span class="matiere-name">1er concours interne</span>
+            <span class="matiere-sub">Instituteurs titulaires · écrit et oral</span>
           </button>
-          <button id="open-mayotte" class="matiere" type="button" data-matiere="mayotte">
-            <span class="matiere-name">Concours Mayotte</span>
-            <span class="matiere-sub">1er et 2nd concours internes</span>
+        </div>
+        <div id="concours-blocs" class="concours-blocs" hidden>
+          <button id="concours-change" class="btn btn-ghost btn-sm concours-change" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+            Changer de concours
           </button>
+          <div id="concours-list" class="matieres" role="group" aria-label="Épreuves du concours"></div>
+          <div id="concours-rev" class="concours-rev"></div>
         </div>
       </div>
       <button id="skip" class="btn btn-ghost btn-sm skip" type="button">Passer ›</button>
@@ -258,6 +262,7 @@
   <script src="data/maths.js"></script>
   <script src="data/epreuve2.js"></script>
   <script src="data/mayotte.js"></script>
+  <script src="data/revisions.js"></script>
   <script src="revise.js"></script>
 </body>
 </html>

@@ -28,10 +28,98 @@
     mayotte: {
       data: window.BELAMIS_MAYOTTE,
       eyebrow: "2nd concours interne · spécifique Mayotte",
-      title: "Deux concours internes, <em>un seul cap</em>.",
-      intro: "Sujets construits sur le modèle des annales 2019-2025 de l'académie de Mayotte. Le 2nd concours interne comporte deux écrits de 4 heures sur 40 (français ; maths-sciences), éliminatoires à 10 ou moins, puis des oraux préparés en 1 heure. Le 1er concours interne, réservé aux instituteurs titulaires, comporte un écrit de 4 heures (analyse d'un dossier, programmation, séquence) et un oral sur dossier personnel. Filtre par concours, et commence par le guide tiré des textes officiels et des rapports de jury.",
+      title: "Deux écrits sur 40, <em>trois oraux</em>.",
+      intro: "Sujets construits sur le modèle des annales 2019-2025 de l'académie de Mayotte : français (compréhension orale, synthèse, langue et productions d'élèves) et maths-sciences (problème complexe, exercices, didactique), 4 heures chacun, une note de 10 sur 40 ou moins étant éliminatoire. Les oraux d'admission (étude de cas et mise en situation professionnelle) se préparent en 1 heure. Commence par le guide tiré des rapports de jury.",
+    },
+    interne1: {
+      data: window.BELAMIS_INTERNE1,
+      eyebrow: "1er concours interne · instituteurs titulaires",
+      title: "Un dossier à analyser, <em>une classe à construire</em>.",
+      intro: "Sujets construits sur le modèle des annales 2019-2025 de l'académie de Mayotte. L'écrit (4 heures, noté sur 40) demande d'analyser un dossier, puis de proposer une programmation et une séquence. L'oral (noté sur 40) s'appuie sur ton dossier personnel de 10 pages ; une épreuve facultative porte sur l'éducation prioritaire. Commence par le guide.",
+    },
+    "rev-bac3": {
+      data: (window.BELAMIS_REV || {}).bac3,
+      eyebrow: "CRPE BAC+3 · séances de révision conseillées",
+      title: "Choisis un thème, <em>révise l'essentiel</em>.",
+      intro: "Chaque séance dure 20 à 40 minutes : un rappel de cours, un quiz corrigé tout de suite, puis un ou deux exercices d'application. Rien n'est obligatoire : fais celles qui te manquent avant de t'attaquer aux sujets.",
+    },
+    "rev-myt2": {
+      data: (window.BELAMIS_REV || {}).myt2,
+      eyebrow: "2nd concours interne · séances de révision conseillées",
+      title: "Choisis un thème, <em>révise l'essentiel</em>.",
+      intro: "Chaque séance dure 20 à 40 minutes : un rappel de cours, un quiz corrigé tout de suite, puis un ou deux exercices d'application. Rien n'est obligatoire : fais celles qui te manquent avant les sujets d'écrit et d'oral.",
+    },
+    "rev-p1": {
+      data: (window.BELAMIS_REV || {}).p1,
+      eyebrow: "1er concours interne · séances de révision conseillées",
+      title: "Choisis un thème, <em>révise l'essentiel</em>.",
+      intro: "Chaque séance dure 20 à 40 minutes : un rappel de cours, un quiz corrigé tout de suite, puis un ou deux exercices d'application. Rien n'est obligatoire : fais celles qui te manquent avant l'écrit et la préparation de ton dossier.",
     },
   };
+
+  // ---------- Concours : on choisit d'abord son concours, puis ses épreuves ----------
+  const CONCOURS = {
+    bac3: {
+      nom: "CRPE BAC+3", lead: "CRPE BAC+3 : choisis une épreuve.",
+      blocs: [
+        { m: "francais", name: "Français", sub: "Épreuve 1 · partie A" },
+        { m: "maths", name: "Mathématiques", sub: "Épreuve 1 · partie B" },
+        { m: "epreuve2", name: "Épreuve 2", sub: "HG-EMC · sciences · arts · anglais" },
+      ],
+      rev: "rev-bac3",
+    },
+    myt2: {
+      nom: "2nd concours interne", lead: "2nd concours interne spécifique Mayotte : choisis une épreuve.",
+      blocs: [
+        { m: "mayotte", dom: "francais", name: "Écrit de français", sub: "4 h · noté sur 40" },
+        { m: "mayotte", dom: "maths", name: "Écrit de maths-sciences", sub: "4 h · noté sur 40" },
+        { m: "mayotte", dom: "oral", name: "Oraux d'admission", sub: "Étude de cas · mise en situation" },
+      ],
+      rev: "rev-myt2",
+    },
+    p1: {
+      nom: "1er concours interne", lead: "1er concours interne : choisis une épreuve.",
+      blocs: [
+        { m: "interne1", dom: "p1-ecrit", name: "Écrit d'admissibilité", sub: "4 h · analyse, programmation, séquence" },
+        { m: "interne1", dom: "p1-oral", name: "Oral sur dossier", sub: "Exposé et entretien · noté sur 40" },
+        { m: "interne1", dom: "p1-facultatif", name: "Épreuve facultative", sub: "Éducation prioritaire · sur 10" },
+      ],
+      rev: "rev-p1",
+    },
+  };
+  const CONCOURS_KEY = "belamis-concours";
+
+  function countSujets(m, dom) {
+    const d = MATIERES[m] && MATIERES[m].data;
+    if (!d) return 0;
+    return d.sujets.filter((x) => !dom || x.domaine === dom).length;
+  }
+
+  function showConcours(id) {
+    const c = CONCOURS[id];
+    const choice = $("concours-choice"), blocs = $("concours-blocs"), lead = $("space-lead");
+    if (!c) {
+      choice.hidden = false; blocs.hidden = true;
+      lead.textContent = "Ton guide de révision est prêt. Choisis d'abord ton concours.";
+      try { localStorage.removeItem(CONCOURS_KEY); } catch (_) {}
+      return;
+    }
+    try { localStorage.setItem(CONCOURS_KEY, id); } catch (_) {}
+    choice.hidden = true; blocs.hidden = false;
+    lead.textContent = c.lead;
+    $("concours-list").innerHTML = c.blocs.map((b) => {
+      const n = countSujets(b.m, b.dom);
+      return `<button class="matiere" type="button" data-matiere="${b.m}"${b.dom ? ` data-dom="${b.dom}"` : ""}>
+        <span class="matiere-name">${esc(b.name)}</span>
+        <span class="matiere-sub">${esc(b.sub)}${n ? ` · ${n} sujet${n > 1 ? "s" : ""}` : ""}</span>
+      </button>`;
+    }).join("");
+    const nr = countSujets(c.rev);
+    $("concours-rev").innerHTML = `<button class="matiere matiere-rev" type="button" data-matiere="${c.rev}"${nr ? "" : " disabled"}>
+        <span class="matiere-name">Séances de révision <small>conseillé</small></span>
+        <span class="matiere-sub">${nr ? `Rappels de cours et quiz par thème, à faire quand tu veux · ${nr} thèmes` : "En préparation"}</span>
+      </button>`;
+  }
 
   const $ = (id) => document.getElementById(id);
   const study = $("study");
@@ -118,7 +206,7 @@
     $("study-eyebrow").textContent = m.eyebrow;
     $("study-heading").innerHTML = m.title;
     $("study-desc").textContent = m.intro;
-    study.setAttribute("aria-label", { maths: "Sujets de mathématiques", francais: "Sujets de français", epreuve2: "Sujets de la 2e épreuve", mayotte: "Sujets du concours spécifique Mayotte" }[matiere]);
+    study.setAttribute("aria-label", ({ maths: "Sujets de mathématiques", francais: "Sujets de français", epreuve2: "Sujets de la 2e épreuve", mayotte: "Sujets du 2nd concours interne", interne1: "Sujets du 1er concours interne" }[matiere] || "Séances de révision"));
   }
 
   function cardHTML(s) {
@@ -127,7 +215,7 @@
     const status = sc.evaluated
       ? `<span class="chip chip-score">${fmtPts(sc.got)} / ${fmtPts(sc.evaluated)} pts évalués</span>`
       : sc.answered ? `<span class="chip">${sc.answered} / ${sc.total} réponses</span>` : `<span class="chip chip-new">Nouveau</span>`;
-    const kind = s.officiel ? "Annale officielle" : s.lycee ? "Approfondissement" : s.entrainement ? "Entraînement rapide" : s.domaine === "oral" ? "Oral d'admission" : "Sujet type";
+    const kind = s.revision ? `Séance · ${Math.round((s.duree || 1800) / 60)} min` : s.officiel ? "Annale officielle" : s.lycee ? "Approfondissement" : s.entrainement ? "Entraînement rapide" : /oral/.test(s.domaine) ? "Oral d'admission" : "Sujet type";
     const top = s.texte
       ? `<span class="sujet-num">${sujetName(s)}</span><span class="sujet-genre">${esc(s.genre)}</span>`
       : `<span class="sujet-num">${kind}</span><span class="sujet-genre">${DATA.domaines ? esc(DATA.domaines[s.domaine] || "") : `noté sur ${sujetTotal(s)}`}</span>`;
@@ -170,7 +258,7 @@
   }
 
   function renderTypeList(type) {
-    document.querySelectorAll(".type-chip").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.type === type)));
+    document.querySelectorAll(".type-chip[data-type]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.type === type)));
     const box = $("study-type-list");
     if (!type) {
       box.innerHTML = `<p class="muted">Choisis un type d'exercice pour voir toutes les questions de ce type, tous sujets confondus.</p>`;
@@ -208,7 +296,7 @@
 
     const head = hasText ? "" : `<header class="sujet-head">
         ${s.source ? `<p class="sujet-source">${esc(s.source)}</p>` : ""}
-        <p class="sujet-meta">${matiere === "mayotte" ? metaMayotte(s) : matiere === "maths" ? `Calculatrice autorisée · noté sur ${sujetTotal(s)} · justifie tes réponses, sauf mention contraire.` : s.entrainement ? `${allQuestions(s).length} questions · réponds de tête, puis vérifie.` : `${esc((DATA.domaines || {})[s.domaine] || "")} · noté sur ${sujetTotal(s)} · appuie-toi sur les documents et sur tes connaissances.`}</p>
+        <p class="sujet-meta">${s.revision ? `Séance de révision conseillée · environ ${Math.round((s.duree || 1800) / 60)} minutes · lis le rappel, puis fais le quiz : il se corrige dès que tu ouvres la correction.` : matiere === "mayotte" || matiere === "interne1" ? metaMayotte(s) : matiere === "maths" ? `Calculatrice autorisée · noté sur ${sujetTotal(s)} · justifie tes réponses, sauf mention contraire.` : s.entrainement ? `${allQuestions(s).length} questions · réponds de tête, puis vérifie.` : `${esc((DATA.domaines || {})[s.domaine] || "")} · noté sur ${sujetTotal(s)} · appuie-toi sur les documents et sur tes connaissances.`}</p>
         ${s.remarque ? `<p class="sujet-remarque">${esc(s.remarque)}</p>` : ""}
       </header>`;
 
@@ -216,7 +304,7 @@
       <section class="partie" aria-labelledby="partie-${p.id}">
         <header class="partie-head">
           <h3 id="partie-${p.id}"><span>${esc(partLabel(p))}</span> ${esc(p.titre || "")}</h3>
-          <span class="partie-pts" data-partie="${p.id}">${pts(p.points)}</span>
+          ${p.points ? `<span class="partie-pts" data-partie="${p.id}">${pts(p.points)}</span>` : ""}
         </header>
         ${p.intro ? `<div class="partie-intro math">${p.intro}</div>` : ""}
         ${p.audio ? audioHTML(p) : ""}
@@ -410,7 +498,8 @@
     $("chrono-time").textContent = fmtTime(sec);
     const lim = (current && current.duree) || 7200;
     $("chrono").classList.toggle("over", sec > lim);
-    $("chrono-btn").textContent = chrono.running ? "Pause" : sec ? "Reprendre" : `Lancer le chrono (${lim / 3600} h)`;
+    const lab = lim >= 3600 ? `${lim / 3600} h` : `${Math.round(lim / 60)} min`;
+    $("chrono-btn").textContent = chrono.running ? "Pause" : sec ? "Reprendre" : `Lancer le chrono (${lab})`;
   }
 
   function toggleChrono() {
@@ -444,10 +533,11 @@
     study.scrollTop = 0;
   }
 
-  async function openStudy(which) {
+  async function openStudy(which, dom) {
+    if (!MATIERES[which] || !MATIERES[which].data) return;
     matiere = which;
     DATA = MATIERES[which].data;
-    if (!DATA) return;
+    domaine = dom || "tous";
     document.body.classList.add("studying");
     study.hidden = false;
     requestAnimationFrame(() => study.classList.add("open"));
@@ -498,7 +588,14 @@
   }
 
   // ---------- Événements ----------
-  document.querySelectorAll("[data-matiere]").forEach((b) => b.addEventListener("click", () => openStudy(b.dataset.matiere)));
+  document.addEventListener("click", (ev) => {
+    const c = ev.target.closest("[data-concours]");
+    if (c) { showConcours(c.dataset.concours); return; }
+    if (ev.target.closest("#concours-change")) { showConcours(null); return; }
+    const b = ev.target.closest("[data-matiere]");
+    if (b && !study.contains(b)) openStudy(b.dataset.matiere, b.dataset.dom);
+  });
+  try { showConcours(localStorage.getItem(CONCOURS_KEY)); } catch (_) { showConcours(null); }
   $("study-close").addEventListener("click", closeStudy);
   $("study-back").addEventListener("click", backToList);
   $("chrono-btn").addEventListener("click", toggleChrono);

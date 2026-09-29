@@ -7,12 +7,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DOSSIER = os.environ.get("MAYOTTE_DIR") or os.path.join(HERE, "mayotte")
 
 DOMAINES = {
-    "francais": "2nd interne · français",
-    "maths": "2nd interne · maths-sciences",
-    "oral": "2nd interne · oraux",
-    "p1-ecrit": "1er interne · écrit",
-    "p1-oral": "1er interne · oral sur dossier",
-    "p1-facultatif": "1er interne · épreuve facultative",
+    "francais": "Écrit de français",
+    "maths": "Écrit de maths-sciences",
+    "oral": "Oraux d’admission",
+    "p1-ecrit": "Écrit d’admissibilité",
+    "p1-oral": "Oral sur dossier",
+    "p1-facultatif": "Épreuve facultative",
 }
 TYPES = {
     "oral-qcm": "Compréhension orale (QCM)",
@@ -32,6 +32,24 @@ TYPES = {
     "sequence": "Séquence",
     "dossier": "Construire son dossier",
 }
+
+GUIDE_1 = """
+<p>Le <strong>1<sup>er</sup> concours interne</strong> est ouvert aux <strong>instituteurs titulaires</strong> qui justifient de trois années de services effectifs (arrêté du 24 décembre 1992 modifié). Il ne comporte que deux épreuves :</p>
+<ul>
+<li><strong>Écrit d’admissibilité</strong> (4 h, /40, deux sujets au choix) : un dossier de 3 à 5 documents sur une question d’actualité de l’école primaire. Première partie (20 points, 4 pages au plus) : analyser et commenter le dossier en précisant ses enjeux, sans paraphrase. Deuxième partie (20 points, 4 pages au plus) : une programmation d’activités (12 points), de préférence pluridisciplinaire, puis une séquence détaillée (8 points).</li>
+<li><strong>Oral d’admission</strong> (/40) : un dossier personnel de 10 pages au plus (sans annexes, avec sommaire et pagination, en Arial 11 à double interligne) et une fiche descriptive d’une page, envoyés avant l’épreuve. Il présente des observations, des pratiques et des analyses de pratiques. Le jour de l’épreuve : 15 min de préparation, 10 min d’exposé sur les questions du jury, 10 min d’entretien.</li>
+<li><strong>Épreuve facultative</strong> (/10, 10 min) : des questions sur la politique de la ville et l’éducation prioritaire ; seuls les points au-dessus de la moyenne comptent.</li>
+</ul>
+<p>Sujets tombés à Mayotte de 2019 à 2025 : lecture et écriture, neurosciences et fonctions cognitives, parcours d’éducation artistique et culturelle, grandeurs et mesures, l’oral, la lecture littéraire, l’esprit critique, le dénombrement, l’éducation au développement durable, la manipulation en mathématiques, la droite graduée au CP, le lexique et la lecture de la maternelle au cycle 2.</p>
+
+<h4>Conseils</h4>
+<ul>
+<li>À l’écrit, <strong>problématise</strong> : situe la question dans ses contextes (programmes, recherche, pratiques de classe, spécificités de Mayotte) au lieu de résumer les documents un par un.</li>
+<li>Ne confonds pas <strong>programmation</strong> (répartition des apprentissages sur l’année ou le cycle), <strong>progression</strong> (ordre raisonné des apprentissages) et <strong>séquence</strong> (ensemble de séances vers un objectif).</li>
+<li>Pour l’oral, ton dossier doit montrer une <strong>analyse réflexive</strong> de ta pratique, pas seulement la décrire : ce que tu as observé, ce que tu en as compris, ce que tu as changé.</li>
+</ul>
+<p class="doc-src">Sources : académie de Mayotte, page « 1er concours interne de recrutement de professeurs des écoles » et « Consultation des sujets antérieurs » ; devenirenseignant.gouv.fr (épreuves et précisions du premier concours interne) ; arrêté du 24 décembre 1992 modifié. Les sujets de Belamis sont des sujets originaux construits sur ce modèle, pas des annales.</p>
+"""
 
 GUIDE = """
 <p>Le <strong>second concours interne spécifique à Mayotte</strong> est organisé par l’académie de Mayotte selon l’arrêté du 19 juillet 2016 et le décret n° 2007-1290 du 29 août 2007 (modifié par le décret n° 2023-928 du 7 octobre 2023). Son format n’est <strong>pas</strong> celui du CRPE BAC+3 : deux écrits sur 40 points, puis trois oraux.</p>
@@ -84,15 +102,6 @@ GUIDE = """
 <li>Session 2025 : 81 inscrits, 10 admissibles, 8 admis. Moyenne à l’admissibilité : 9,13/20 ; à l’admission : 11,63/20.</li>
 <li>Session 2027 (calendrier de l’académie) : inscriptions du 1<sup>er</sup> octobre au 25 novembre 2026 ; écrits les 5 et 6 avril 2027 ; oraux du 24 mai au 3 juin 2027.</li>
 </ul>
-<h4>Le 1<sup>er</sup> concours interne (instituteurs titulaires)</h4>
-<p>Il est ouvert aux <strong>instituteurs titulaires</strong> qui justifient de trois années de services effectifs (arrêté du 24 décembre 1992 modifié). Il ne comporte que deux épreuves :</p>
-<ul>
-<li><strong>Écrit d’admissibilité</strong> (4 h, /40, deux sujets au choix) : un dossier de 3 à 5 documents sur une question d’actualité de l’école primaire. Première partie (20 points, 4 pages au plus) : analyser et commenter le dossier en précisant ses enjeux, sans paraphrase. Deuxième partie (20 points, 4 pages au plus) : une programmation d’activités (12 points), de préférence pluridisciplinaire, puis une séquence détaillée (8 points).</li>
-<li><strong>Oral d’admission</strong> (/40) : un dossier personnel de 10 pages au plus (sans annexes, avec sommaire et pagination, en Arial 11 à double interligne) et une fiche descriptive d’une page, envoyés avant l’épreuve. Il présente des observations, des pratiques et des analyses de pratiques. Le jour de l’épreuve : 15 min de préparation, 10 min d’exposé sur les questions du jury, 10 min d’entretien.</li>
-<li><strong>Épreuve facultative</strong> (/10, 10 min) : des questions sur la politique de la ville et l’éducation prioritaire ; seuls les points au-dessus de la moyenne comptent.</li>
-</ul>
-<p>Sujets tombés à Mayotte de 2019 à 2025 : lecture et écriture, neurosciences et fonctions cognitives, parcours d’éducation artistique et culturelle, grandeurs et mesures, l’oral, la lecture littéraire, l’esprit critique, le dénombrement, l’éducation au développement durable, la manipulation en mathématiques, la droite graduée au CP, le lexique et la lecture de la maternelle au cycle 2.</p>
-
 <p class="doc-src">Sources : académie de Mayotte, pages « 2nd concours interne de recrutement de professeurs des écoles – spécifique Mayotte » et « Consultation des sujets antérieurs » ; rapports de jury 2023 et 2025 ; devenirenseignant.gouv.fr (épreuves et précisions du premier concours interne). Les sujets de Belamis sont des sujets originaux construits sur ce modèle, pas des annales.</p>
 """
 
@@ -139,16 +148,27 @@ ordre = {d: i for i, d in enumerate(DOMAINES)}
 sujets = charger()
 verifier(sujets)
 sujets.sort(key=lambda s: (ordre[s["domaine"]], s["id"]))
-data = {
-    "domaines": DOMAINES,
-    "types": TYPES,
-    "guide": GUIDE,
-    "guideTitre": "Les deux concours internes de Mayotte : format, annales et conseils des jurys",
-    "sujets": sujets,
-}
+P1 = ("p1-ecrit", "p1-oral", "p1-facultatif")
+
+
+def paquet(doms, guide, titre):
+    ss = [s for s in sujets if s["domaine"] in doms]
+    used = {q["type"] for s in ss for p in s["parties"] for q in p["questions"]}
+    return {
+        "domaines": {d: DOMAINES[d] for d in doms},
+        "types": {k: v for k, v in TYPES.items() if k in used},
+        "guide": guide,
+        "guideTitre": titre,
+        "sujets": ss,
+    }
+
+
+data = paquet(("francais", "maths", "oral"), GUIDE, "Le 2nd concours interne spécifique Mayotte : format, annales 2023-2025 et conseils des jurys")
+data1 = paquet(P1, GUIDE_1, "Le 1er concours interne : format, sujets tombés et conseils")
 sortie = os.environ.get("MAYOTTE_OUT") or os.path.join(HERE, "mayotte.js")
 with open(sortie, "w", encoding="utf-8") as f:
     f.write("/* Généré par data/build_mayotte.py : 2nd concours interne spécifique Mayotte. */\n")
     f.write("window.BELAMIS_MAYOTTE = " + json.dumps(data, ensure_ascii=False) + ";\n")
+    f.write("window.BELAMIS_INTERNE1 = " + json.dumps(data1, ensure_ascii=False) + ";\n")
 n = {d: sum(1 for s in sujets if s["domaine"] == d) for d in DOMAINES}
 print(n, "questions :", sum(len(p["questions"]) for s in sujets for p in s["parties"]), "taille :", os.path.getsize(sortie) // 1024, "Ko")

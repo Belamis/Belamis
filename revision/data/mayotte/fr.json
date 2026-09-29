@@ -1,0 +1,1072 @@
+{
+ "sujets": [
+  {
+   "id": "myt-fr-1",
+   "num": 1,
+   "domaine": "francais",
+   "titre": "Sujet 1 · Le maître et l’école",
+   "theme": "Enseigner explicitement la compréhension ; figures du maître (Daudet, Hugo, Ferry) ; récit de sortie à la mangrove (CM1)",
+   "source": "Sujet original construit sur le modèle des sessions 2023 à 2025 (académie de Mayotte)",
+   "remarque": "Textes littéraires et lettre de Jules Ferry cités d’après fr.wikisource.org ; texte de compréhension orale et production d’élève rédigés pour Belamis.",
+   "total": 40,
+   "eliminatoire": 10,
+   "duree": 14400,
+   "parties": [
+    {
+     "id": "P1",
+     "label": "Première partie",
+     "short": "P1",
+     "titre": "Compréhension orale d’un texte didactique",
+     "points": 8,
+     "intro": "<p>Le texte est lu <strong>deux fois</strong>, titre compris, par deux lecteurs différents. Vous pouvez prendre des notes pendant les lectures. Le questionnaire est ensuite retourné : cochez <strong>la ou les réponse(s) correcte(s)</strong>. Durée de la partie : 30 minutes, lectures comprises.</p><p><em>Sur Belamis : écoutez (ou faites-vous lire) le texte deux fois sans le regarder, puis répondez.</em></p>",
+     "audio": {
+      "titre": "Comprendre, cela s’enseigne",
+      "texte": [
+       "Pendant longtemps, l’école a considéré que la compréhension des textes découlait presque naturellement de la maîtrise du déchiffrage : une fois le code acquis, il suffisait de lire beaucoup et de répondre à des questions pour devenir un lecteur compétent. Les travaux conduits depuis une trentaine d’années ont profondément remis en cause cette idée. Comme l’a montré la conférence de consensus « Lire, comprendre, apprendre », organisée en 2016 par le Cnesco et l’Institut français de l’éducation, un élève peut identifier correctement tous les mots d’un texte sans parvenir à en construire une représentation cohérente. La compréhension n’est donc pas un produit dérivé du décodage : c’est une compétence qui s’enseigne.",
+       "Encore faut-il distinguer enseigner et évaluer. Poser des questions après la lecture permet de vérifier ce qu’un élève a compris ; cela ne lui apprend pas comment faire pour comprendre. Roland Goigoux et Sylvie Cèbe, auteurs de l’outil Lector & Lectrix, publié chez Retz en 2009, rappellent que les faibles compreneurs ne savent souvent pas ce que l’on attend d’eux : ils croient que lire consiste à prélever des informations, sans percevoir qu’il faut relier ces informations entre elles, combler les blancs du texte et contrôler sans cesse sa propre compréhension. Ces chercheurs recommandent de rendre visibles les procédures des lecteurs experts, qui restent le plus souvent cachées parce qu’elles se déroulent dans la tête.",
+       "C’est précisément l’objet de l’enseignement explicite. Ce terme ne désigne pas une leçon magistrale, mais une démarche structurée en plusieurs étapes. L’enseignant commence par le modelage : il lit à voix haute et « pense tout haut », montrant par exemple comment il déduit qu’un personnage a peur alors que le texte ne le dit pas. Vient ensuite la pratique guidée, au cours de laquelle les élèves s’essaient à la même stratégie avec l’aide du maître, qui questionne, reformule et corrige. La pratique autonome n’intervient qu’en dernier lieu, lorsque la réussite est suffisamment assurée. Barak Rosenshine, dans ses Principles of Instruction diffusés en 2010 par le Bureau international d’éducation de l’Unesco, insiste sur deux conditions : présenter les contenus nouveaux par petites étapes et vérifier fréquemment la compréhension de tous les élèves, et non de quelques volontaires.",
+       "Quelles stratégies enseigner ? Les chercheurs en citent plusieurs, qui ne s’excluent pas : se donner un but de lecture, se représenter mentalement la scène, faire des inférences, identifier les reprises d’un même personnage par des pronoms ou des substituts, reformuler ou résumer ce que l’on vient de lire. La reformulation occupe une place centrale : raconter une histoire avec ses propres mots oblige à hiérarchiser les informations et révèle immédiatement les malentendus. À l’inverse, les chercheurs mettent en garde contre la tentation de multiplier les stratégies sans les relier à des textes qui résistent : une stratégie apprise à vide ne se transfère pas.",
+       "Le texte joue lui aussi un rôle décisif. Pour que les élèves aient quelque chose à comprendre, il faut leur proposer des textes suffisamment riches, que l’enseignant lit d’abord à voix haute afin de soulager ceux dont le décodage n’est pas encore automatisé. Cette précaution est essentielle : elle permet de travailler la compréhension dès le début de la scolarité, y compris à l’école maternelle, comme le fait Narramus, un autre outil conçu par les mêmes auteurs en 2017.",
+       "Enfin, comprendre ne s’improvise pas en une séance. Les guides publiés par le ministère depuis 2018, dont le guide Pour enseigner la lecture et l’écriture au CP, soulignent la nécessité d’un enseignement régulier, planifié sur l’année, dans lequel les élèves reviennent souvent sur les mêmes stratégies avec des textes de plus en plus complexes. Autrement dit, la compréhension relève d’un apprentissage continu, et non d’un exercice occasionnel."
+      ],
+      "source": "Texte rédigé pour Belamis d’après la conférence de consensus Cnesco-Ifé « Lire, comprendre, apprendre » (2016), R. Goigoux et S. Cèbe (Lector & Lectrix, Retz, 2009 ; Narramus, Retz, 2017), B. Rosenshine (Principles of Instruction, Académie internationale de l’éducation / BIE-Unesco, 2010) et le guide Pour enseigner la lecture et l’écriture au CP (MEN, 2018)."
+     },
+     "questions": [
+      {
+       "id": "1",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, la compréhension en lecture :</p>",
+       "options": [
+        "découle automatiquement de la maîtrise du déchiffrage",
+        "est une compétence qui s’enseigne",
+        "dépend essentiellement de la quantité de textes lus"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« est une compétence qui s’enseigne »).</strong></p><p><em>Justification</em> : « La compréhension n’est donc pas un produit dérivé du décodage : c’est une compétence qui s’enseigne. »</p><p>Les réponses A et C correspondent à la conception ancienne que le texte présente justement comme « remise en cause ».</p>"
+      },
+      {
+       "id": "2",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>La conférence de consensus « Lire, comprendre, apprendre » a été organisée :</p>",
+       "options": [
+        "par le Cnesco et l’Institut français de l’éducation",
+        "en 2016",
+        "par le Bureau international d’éducation de l’Unesco",
+        "en 2009"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses : A (« par le Cnesco et l’Institut français de l’éducation »), B (« en 2016 »).</strong></p><p><em>Justification</em> : « organisée en 2016 par le Cnesco et l’Institut français de l’éducation »</p><p>Pièges : l’Unesco est citée à propos de Rosenshine (2010) ; 2009 est la date de Lector & Lectrix.</p>"
+      },
+      {
+       "id": "3",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, poser des questions après la lecture :</p>",
+       "options": [
+        "permet de vérifier ce que l’élève a compris",
+        "suffit à enseigner la compréhension",
+        "n’apprend pas à l’élève comment faire pour comprendre"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : A (« permet de vérifier ce que l’élève a compris »), C (« n’apprend pas à l’élève comment faire pour comprendre »).</strong></p><p><em>Justification</em> : « Poser des questions après la lecture permet de vérifier ce qu’un élève a compris ; cela ne lui apprend pas comment faire pour comprendre. »</p><p>C’est la distinction entre <strong>évaluer</strong> et <strong>enseigner</strong> la compréhension.</p>"
+      },
+      {
+       "id": "4",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Dans l’ordre, les étapes de l’enseignement explicite décrites dans le texte sont :</p>",
+       "options": [
+        "pratique autonome, modelage, pratique guidée",
+        "modelage, pratique guidée, pratique autonome",
+        "pratique guidée, modelage, évaluation"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« modelage, pratique guidée, pratique autonome »).</strong></p><p><em>Justification</em> : « L’enseignant commence par le modelage […]. Vient ensuite la pratique guidée […]. La pratique autonome n’intervient qu’en dernier lieu »</p>"
+      },
+      {
+       "id": "5",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Qu’apprend-on au sujet de Retz ?</p>",
+       "options": [
+        "C’est un chercheur spécialiste de l’enseignement explicite.",
+        "C’est l’éditeur de l’outil Lector & Lectrix.",
+        "C’est le coauteur de Narramus avec Sylvie Cèbe."
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« C’est l’éditeur de l’outil Lector & Lectrix. »).</strong></p><p><em>Justification</em> : « l’outil Lector & Lectrix, publié chez Retz en 2009 »</p><p>Comme « Odile Jacob » dans le sujet 2024, le nom d’une maison d’édition est ici un piège : Retz n’est pas une personne.</p>"
+      },
+      {
+       "id": "6",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, Barak Rosenshine insiste sur la nécessité :</p>",
+       "options": [
+        "de présenter les contenus nouveaux par petites étapes",
+        "de vérifier fréquemment la compréhension de tous les élèves",
+        "d’interroger en priorité les élèves volontaires",
+        "de multiplier les stratégies de lecture"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses : A (« de présenter les contenus nouveaux par petites étapes »), B (« de vérifier fréquemment la compréhension de tous les élèves »).</strong></p><p><em>Justification</em> : « présenter les contenus nouveaux par petites étapes et vérifier fréquemment la compréhension de tous les élèves, et non de quelques volontaires »</p><p>La réponse D est contredite par le paragraphe suivant (mise en garde contre la multiplication des stratégies).</p>"
+      },
+      {
+       "id": "7",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Parmi les stratégies de compréhension citées dans le texte figurent :</p>",
+       "options": [
+        "faire des inférences",
+        "identifier les reprises d’un personnage par des pronoms ou des substituts",
+        "apprendre des listes de mots difficiles",
+        "reformuler ou résumer ce que l’on vient de lire"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses : A (« faire des inférences »), B (« identifier les reprises d’un personnage par des pronoms ou des substituts »), D (« reformuler ou résumer ce que l’on vient de lire »).</strong></p><p><em>Justification</em> : « se donner un but de lecture, se représenter mentalement la scène, faire des inférences, identifier les reprises d’un même personnage par des pronoms ou des substituts, reformuler ou résumer ce que l’on vient de lire »</p><p>L’apprentissage de listes de mots n’est jamais évoqué (idée reçue).</p>"
+      },
+      {
+       "id": "8",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, l’enseignement de la compréhension :</p>",
+       "options": [
+        "doit être régulier et planifié sur l’année",
+        "est réservé au cycle 3, une fois le décodage maîtrisé",
+        "peut commencer dès l’école maternelle",
+        "peut se concentrer sur une séance par période"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : A (« doit être régulier et planifié sur l’année »), C (« peut commencer dès l’école maternelle »).</strong></p><p><em>Justification</em> : « elle permet de travailler la compréhension dès le début de la scolarité, y compris à l’école maternelle »</p><p><em>Justification</em> : « un enseignement régulier, planifié sur l’année »</p>"
+      }
+     ]
+    },
+    {
+     "id": "P2",
+     "label": "Deuxième partie",
+     "short": "P2",
+     "titre": "Compréhension écrite et rédaction",
+     "points": 12,
+     "intro": "<p><strong>Corpus</strong></p><ul><li>Texte 1 : Alphonse Daudet, « La Dernière classe (récit d’un petit Alsacien) », <em>Contes du lundi</em>, 1873.</li><li>Texte 2 : Victor Hugo, « À propos d’Horace », <em>Les Contemplations</em>, livre I, poème XIII, 1856 (extraits).</li><li>Texte 3 : Jules Ferry, Lettre adressée aux instituteurs, 17 novembre 1883 (extrait).</li></ul><div class=\"doc\"><p class=\"doc-title\">Texte 1 – Alphonse Daudet, « La Dernière classe », <em>Contes du lundi</em> (1873)</p><p><em>Après la défaite de 1870, l’Alsace est annexée par l’Empire allemand. Le narrateur, le petit Franz, assiste à la dernière leçon de français de son maître, M. Hamel ; il vient d’être incapable de réciter la règle des participes.</em></p><p>« Je ne te gronderai pas, mon petit Franz, tu dois être assez puni… Voilà ce que c’est. Tous les jours on se dit : Bah ! j’ai bien le temps. J’apprendrai demain. Et puis tu vois ce qui arrive… Ah ! ç’a été le grand malheur de notre Alsace de toujours remettre son instruction à demain. Maintenant ces gens-là sont en droit de nous dire : Comment ! Vous prétendiez être Français, et vous ne savez ni parler ni écrire votre langue !… Dans tout ça, mon pauvre Franz, ce n’est pas encore toi le plus coupable. Nous avons tous notre bonne part de reproches à nous faire.</p><p>« Vos parents n’ont pas assez tenu à vous voir instruits. Ils aimaient mieux vous envoyer travailler à la terre ou aux filatures pour avoir quelques sous de plus. Moi-même, n’ai-je rien à me reprocher ? Est-ce que je ne vous ai pas souvent fait arroser mon jardin au lieu de travailler ? Et quand je voulais aller pêcher des truites, est-ce que je me gênais pour vous donner congé ?… »</p><p>Alors, d’une chose à l’autre, M. Hamel se mit à nous parler de la langue française, disant que c’était la plus belle langue du monde, la plus claire, la plus solide : qu’il fallait la garder entre nous et ne jamais l’oublier, parce que, quand un peuple tombe esclave, tant qu’il tient bien sa langue, c’est comme s’il tenait la clef de sa prison… Puis il prit une grammaire et nous lut notre leçon. J’étais étonné de voir comme je comprenais. Tout ce qu’il disait me semblait facile, facile. Je crois aussi que je n’avais jamais si bien écouté, et que lui, non plus, n’avait jamais mis autant de patience à ses explications. On aurait dit qu’avant de s’en aller le pauvre homme voulait nous donner tout son savoir, nous le faire entrer dans la tête d’un seul coup.</p><p>La leçon finie, on passa à l’écriture. Pour ce jour-là, M. Hamel nous avait préparé des exemples tout neufs, sur lesquels était écrit en belle ronde : France, Alsace, France, Alsace. Cela faisait comme des petits drapeaux qui flottaient tout autour de la classe, pendus à la tringle de nos pupitres. Il fallait voir comme chacun s’appliquait, et quel silence ! On n’entendait rien que le grincement des plumes sur le papier. Un moment des hannetons entrèrent ; mais personne n’y fit attention, pas même les tout petits qui s’appliquaient à tracer leurs bâtons, avec un cœur, une conscience, comme si cela encore était du français…</p><p class=\"doc-src\">Alphonse Daudet, <em>Les Contes du lundi</em>, Paris, A. Lemerre, 1880, p. 1-9 (texte établi sur fr.wikisource.org).</p></div><div class=\"doc\"><p class=\"doc-title\">Texte 2 – Victor Hugo, « À propos d’Horace », <em>Les Contemplations</em> (1856)</p><p><em>Le poète se souvient de ses années de collège, où un maître l’avait puni en lui faisant copier « cinq cents vers d’Horace ».</em></p><p>Marchands de grec ! marchands de latin ! cuistres ! dogues !<br>Philistins ! magisters ! je vous hais, pédagogues !<br>Car, dans votre aplomb grave, infaillible, hébété,<br>Vous niez l’idéal, la grâce et la beauté !<br>Car vos textes, vos lois, vos règles sont fossiles !<br>Car, avec l’air profond, vous êtes imbéciles !<br>Car vous enseignez tout, et vous ignorez tout !<br>Car vous êtes mauvais et méchants ! — Mon sang bout</p><p>[…]</p><p>De là mes cris. Un jour, quand l’homme sera sage,<br>Lorsqu’on n’instruira plus les oiseaux par la cage,<br>Quand les sociétés difformes sentiront<br>Dans l’enfant mieux compris se redresser leur front,<br>Que, des libres essors ayant sondé les règles,<br>On connaîtra la loi de croissance des aigles,<br>Et que le plein midi rayonnera pour tous,<br>Savoir étant sublime, apprendre sera doux.<br>Alors, tout en laissant au sommet des études<br>Les grands livres latins et grecs, ces solitudes<br>Où l’éclair gronde, où luit la mer, où l’astre rit,<br>Et qu’emplissent les vents immenses de l’esprit,<br>C’est en les pénétrant d’explication tendre,<br>En les faisant aimer, qu’on les fera comprendre.<br>Homère emportera dans son vaste reflux<br>L’écolier ébloui ; l’enfant ne sera plus<br>Une bête de somme attelée à Virgile ;<br>Et l’on ne verra plus ce vif esprit agile<br>Devenir, sous le fouet d’un cuistre ou d’un abbé,<br>Le lourd cheval poussif du pensum embourbé.<br>Chaque village aura, dans un temple rustique,<br>Dans la lumière, au lieu du magister antique,<br>Trop noir pour que jamais le jour y pénétrât,<br>L’instituteur lucide et grave, magistrat<br>Du progrès, médecin de l’ignorance, et prêtre<br>De l’idée ; et dans l’ombre on verra disparaître<br>L’éternel écolier et l’éternel pédant.<br>L’aube vient en chantant, et non pas en grondant.</p><p class=\"doc-src\">Victor Hugo, <em>Les Contemplations</em>, I, XIII, Paris, Nelson, 1911, p. 46-52 (fr.wikisource.org). « Magister » : maître d’école ; « cuistre » : pédant ; « pensum » : devoir supplémentaire infligé comme punition.</p></div><div class=\"doc\"><p class=\"doc-title\">Texte 3 – Jules Ferry, Lettre aux instituteurs (1883)</p><p><em>Ministre de l’Instruction publique, Jules Ferry écrit aux instituteurs pour préciser comment comprendre l’enseignement moral et civique institué par la loi du 28 mars 1882, qui rend l’instruction primaire obligatoire et laïque.</em></p><p>Vous êtes l’auxiliaire et, à certains égards, le suppléant du père de famille ; parlez donc à son enfant comme vous voudriez que l’on parlât au vôtre ; avec force et autorité, toutes les fois qu’il s’agit d’une vérité incontestée, d’un précepte de la morale commune ; avec la plus grande réserve, dès que vous risquez d’effleurer un sentiment religieux dont vous n’êtes pas juge.</p><p>Si parfois vous étiez embarrassé pour savoir jusqu’où il vous est permis d’aller dans votre enseignement moral, voici une règle pratique à laquelle vous pourrez vous tenir : avant de proposer à vos élèves un précepte, une maxime quelconque, demandez-vous s’il se trouve, à votre connaissance, un seul honnête homme qui puisse être froissé de ce que vous allez dire. Demandez-vous si un père de famille, je dis un seul, présent à votre classe et vous écoutant, pourrait de bonne foi refuser son assentiment à ce qu’il vous entendrait dire. Si oui, abstenez-vous de le dire ; sinon, parlez hardiment, car ce que vous allez communiquer à l’enfant, ce n’est pas votre propre sagesse, c’est la sagesse du genre humain, c’est une de ces idées d’ordre universel que plusieurs siècles de civilisation ont fait entrer dans le patrimoine de l’humanité. Si étroit que vous semble, peut-être, un cercle d’action ainsi tracé, faites-vous un devoir d’honneur de n’en jamais sortir, restez en deçà de cette limite plutôt que de vous exposer à la franchir : vous ne toucherez jamais avec trop de scrupule à cette chose délicate et sacrée, qui est la conscience de l’enfant.</p><p>Mais une fois que vous vous êtes ainsi loyalement enfermé dans l’humble et sûre région de la morale usuelle, que vous demande-t-on ? Des discours ? Des dissertations savantes ? De brillants exposés, un docte enseignement ? Non, la famille et la société vous demandent de les aider à bien élever leurs enfants, à en faire des honnêtes gens. C’est dire qu’elles attendent de vous non des paroles, mais des actes, non pas un enseignement de plus à inscrire au programme, mais un service tout pratique que vous pourrez rendre au pays plutôt encore comme homme que comme professeur.</p><p class=\"doc-src\">Jules Ferry, « Lettre adressée aux instituteurs », 17 novembre 1883, dans <em>Discours et opinions de Jules Ferry</em>, t. IV, éd. P. Robiquet, Paris, 1896, p. 275-283 (fr.wikisource.org).</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "synthese",
+       "points": 12,
+       "enonce": "<p>Quelles figures du maître ces trois textes dessinent-ils, et que révèlent-ils de ce que l’école doit transmettre aux enfants ?</p><p>Vous répondrez à la question de manière argumentée et structurée, en vous appuyant sur les textes du corpus et sur votre culture personnelle, en veillant à ce qu’elle ne se substitue pas à l’étude des textes.</p>",
+       "corrige": "\n<p><strong>1. Analyser la question.</strong> Elle comporte deux volets à traiter ensemble : 1) les <em>figures</em> du maître (portraits, images, rôles : le maître redouté, le maître aimé, le maître fonctionnaire de la République) ; 2) ce que l’école <em>doit transmettre</em> (des savoirs, une langue, des valeurs, une manière d’apprendre). Le verbe « doit » invite à dégager une dimension normative : les textes ne se contentent pas de décrire, ils disent ce que l’école devrait être. Le corpus mêle un récit (Daudet), un poème satirique puis utopique (Hugo) et un texte officiel (Ferry) : il faut tenir compte de ces genres différents.</p>\n<p><strong>2. Problématique possible.</strong> <em>Du pédant redouté à l’instituteur « médecin de l’ignorance », comment ces textes font-ils du maître bien plus qu’un dispensateur de savoirs, et à quelles conditions sa transmission peut-elle réussir ?</em></p>\n<p><strong>3. Introduction rédigée (exemple).</strong></p>\n<blockquote>Le XIX<sup>e</sup> siècle a vu naître l’école primaire moderne, et avec elle une figure nouvelle, celle de l’instituteur. Trois textes en portent témoignage : le récit que fait Alphonse Daudet, dans « La Dernière classe » (<em>Contes du lundi</em>, 1873), de l’ultime leçon de français donnée par M. Hamel dans une Alsace annexée ; le poème « À propos d’Horace » (<em>Les Contemplations</em>, 1856), où Victor Hugo règle ses comptes avec les « pédagogues » de sa jeunesse avant d’imaginer l’école de l’avenir ; enfin la lettre que Jules Ferry adresse aux instituteurs le 17 novembre 1883 pour définir leur mission morale. Récit, poème et texte officiel se rejoignent pour poser une même question : si le maître est bien plus qu’un dispensateur de savoirs, que doit-il transmettre, et comment ? Nous verrons d’abord que ces textes opposent deux figures du maître, avant de montrer que la mission de l’école dépasse l’instruction, puis d’examiner la manière de transmettre qu’ils préconisent.</blockquote>\n<p><strong>4. Plan détaillé.</strong></p>\n<p><strong>I. Deux figures opposées du maître : le pédant redouté et l’instituteur respecté.</strong></p>\n<ul>\n<li><em>Le maître qui punit et humilie.</em> Hugo multiplie les invectives (« Marchands de grec ! marchands de latin ! cuistres ! dogues ! », « je vous hais, pédagogues ! ») : l’énumération, les exclamations et l’anaphore de « Car » dénoncent un savoir « fossile » transmis par la contrainte (« sous le fouet d’un cuistre ou d’un abbé », « pensum »). Chez Daudet, le maître est d’abord celui qui gronde et punit : « Je ne te gronderai pas, mon petit Franz, tu dois être assez puni… » laisse deviner l’ordinaire de la classe, fait de réprimandes.</li>\n<li><em>Un maître humain, faillible et aimé.</em> M. Hamel reconnaît ses torts (« Moi-même, n’ai-je rien à me reprocher ? ») et renonce à gronder : « Je ne te gronderai pas, mon petit Franz ». Le narrateur perçoit son émotion au moment où il s’en va : « On aurait dit qu’avant de s’en aller le pauvre homme voulait nous donner tout son savoir ».</li>\n<li><em>Le maître comme figure publique.</em> Hugo annonce « l’instituteur lucide et grave, magistrat / Du progrès, médecin de l’ignorance » ; Ferry fait de l’instituteur « l’auxiliaire et, à certains égards, le suppléant du père de famille ». Ces métaphores (magistrat, médecin, prêtre « de l’idée ») élèvent le maître au rang de serviteur de la collectivité.</li>\n</ul>\n<p><em>Transition</em> : si la figure du maître change, c’est que la mission qui lui est confiée dépasse la simple instruction.</p>\n<p><strong>II. Transmettre plus que des savoirs : une langue, des valeurs, une appartenance.</strong></p>\n<ul>\n<li><em>La langue comme patrimoine et comme liberté.</em> Pour M. Hamel, « tant qu’il tient bien sa langue, c’est comme s’il tenait la clef de sa prison » : c’était « la plus belle langue du monde » et « il fallait la garder entre nous et ne jamais l’oublier » : la langue est le lien avec la patrie perdue. Les exemples d’écriture « France, Alsace » deviennent « comme des petits drapeaux ».</li>\n<li><em>Une morale commune et respectueuse des consciences.</em> Ferry demande à l’instituteur de parler « avec force et autorité » quand il s’agit d’« un précepte de la morale commune », mais « avec la plus grande réserve, dès que vous risquez d’effleurer un sentiment religieux dont vous n’êtes pas juge ». La règle du « père de famille » présent dans la classe fixe la limite : transmettre « la sagesse du genre humain », non « votre propre sagesse » ; respecter « cette chose délicate et sacrée, qui est la conscience de l’enfant ». On reconnaît les fondements de la laïcité scolaire.</li>\n<li><em>Une ouverture à la culture.</em> Hugo ne rejette pas les humanités : il veut garder « au sommet des études / Les grands livres latins et grecs », mais pour que « Homère » emporte « l’écolier ébloui ».</li>\n<li><em>Nuance critique</em> : ces textes portent la marque de leur époque ; l’éloge par M. Hamel de « la plus belle langue du monde » s’inscrit dans un contexte patriotique. Aujourd’hui, l’école transmet le français tout en reconnaissant les langues des élèves (à Mayotte, le shimaoré et le kibushi), ce qui n’était pas le cas au XIX<sup>e</sup> siècle, où les langues régionales étaient souvent proscrites à l’école.</li>\n</ul>\n<p><strong>III. Comment transmettre : par l’exemple, la patience et le désir d’apprendre.</strong></p>\n<ul>\n<li><em>Faire aimer pour faire comprendre.</em> Hugo : « Savoir étant sublime, apprendre sera doux » ; « C’est en les pénétrant d’explication tendre, / En les faisant aimer, qu’on les fera comprendre » ; le dernier vers oppose deux pédagogies : « L’aube vient en chantant, et non pas en grondant. »</li>\n<li><em>L’exemplarité plus que le discours.</em> Ferry : la société attend « non des paroles, mais des actes » ; l’instituteur rend un service « plutôt encore comme homme que comme professeur ».</li>\n<li><em>La patience et l’attention.</em> Le jour de la dernière classe, M. Hamel n’a « jamais mis autant de patience à ses explications », et Franz s’étonne : « J’étais étonné de voir comme je comprenais ». Daudet suggère ainsi que l’apprentissage dépend autant de l’engagement de l’élève (« je n’avais jamais si bien écouté ») que de la qualité du maître, et que la transmission engage aussi les familles (« Vos parents n’ont pas assez tenu à vous voir instruits »).</li>\n<li><em>Ouverture professionnelle</em> : le référentiel de compétences des métiers du professorat (2013) demande d’« agir en éducateur responsable et selon des principes éthiques » ; la relation école-familles, la bienveillance associée à l’exigence et l’enseignement moral et civique prolongent directement ces textes.</li>\n</ul>\n<p><strong>5. Conclusion rédigée (exemple).</strong></p>\n<blockquote>Qu’il soit caricaturé en « cuistre » par Hugo, célébré dans sa dignité blessée par Daudet ou investi par Ferry d’une mission morale, le maître apparaît dans ces trois textes comme une figure décisive, parce qu’il transmet bien plus que des connaissances : une langue, des valeurs partagées, un rapport au savoir. Tous s’accordent sur une conviction : la transmission ne réussit que si elle respecte l’enfant et lui fait désirer d’apprendre. Cette exigence reste d’actualité pour le professeur des écoles d’aujourd’hui, en particulier dans des contextes plurilingues comme celui de Mayotte, où il s’agit de conduire chaque élève vers la maîtrise du français sans nier les langues qu’il apporte avec lui.</blockquote>\n<p><strong>6. Erreurs à éviter.</strong></p>\n<ul>\n<li>Le <strong>catalogue</strong> : « Dans le texte 1… Dans le texte 2… Dans le texte 3… » ; chaque partie doit croiser au moins deux textes.</li>\n<li>La <strong>paraphrase</strong> : raconter « La Dernière classe » au lieu d’en tirer une idée ; toute citation doit être courte, entre guillemets, et commentée.</li>\n<li>Les <strong>contresens</strong> : faire de Hugo un ennemi de toute culture classique (il condamne la manière d’enseigner, non les auteurs anciens) ; lire la lettre de Ferry comme hostile aux religions (elle demande au contraire « la plus grande réserve »).</li>\n<li>Oublier le second volet de la question (« ce que l’école doit transmettre »), ou substituer à l’analyse un exposé général sur Jules Ferry.</li>\n</ul>\n<p><strong>7. Barème indicatif (12 points).</strong> Introduction (présentation du corpus, problématique, annonce du plan) : 2 pts ; développement : pertinence et progression des idées 4 pts, exploitation précise et croisée des trois textes 3 pts, culture personnelle pertinente 1 pt ; conclusion (réponse nette, ouverture) : 1 pt ; clarté de l’organisation (paragraphes, transitions) : 1 pt. <em>La qualité de la langue est évaluée à part, dans les 6 points de la dernière partie.</em></p>\n"
+      }
+     ]
+    },
+    {
+     "id": "P3",
+     "label": "Troisième partie",
+     "short": "P3",
+     "titre": "Connaissance de la langue et approche didactique du français",
+     "points": 14,
+     "intro": "<p>Dans une classe de CM1 de Chirongui, après une sortie pédagogique dans la mangrove, l’enseignante a demandé aux élèves de rédiger individuellement le récit de la journée. Voici le texte de Faïza, tel qu’elle l’a rendu (les numéros de phrases ont été ajoutés).</p><div class=\"copie-eleve\"><p class=\"copie-titre\">Production de Faïza (CM1, école de Chirongui) – deuxième période</p>\n<p><strong>La sortie à la mangrove</strong></p>\n<p>(1) Mardi matin, nous somme partis en bus avec la maîtresse et deux mamans pour aller voir la mangrove. (2) Quand nous sommes arrivés, un guide nous a expliquer que les palétuviers vivent les pieds dans l’eau salé. (3) Il nous a montré des crabes qui sortait de leurs trous et qui faisait des bulles. (4) Nassim a voulu en attrapé un, mais le crabe lui a pincé le doigt. Tout le monde a rigolé sauf lui.</p>\n<p>(5) Ensuite nous avons marcher sur un petit pont en bois. La marée montait doucement et l’eau devenait de plus en plus clair. (6) Soudain, Riziki a crié : « Regardez, un héron ! » L’oiseau s’envola au-dessus des arbres. (7) A midi, nous avons mangés nos sandwichs a l’ombre des grands arbres.</p>\n<p>(8) Le guide nous a dit qu’il faut protéger la mangrove parce qu’elle protège la côte des vagues et qu’elle abrite beaucoup d’animaux. (9) Je suis rentrer fatiguée mais très contente. J’aimerais y retourné avec ma famille.</p>\n<p class=\"annot\">Annotations de l’enseignant – en marge de la phrase 2 : « é ou er ? » ; phrase 4 : « familier » ; phrase 6 : « temps ? » ; en bas de la copie : « Beaucoup d’erreurs de conjugaison ! Revois tes leçons. 12/20 »</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "langue",
+       "points": 3,
+       "enonce": "<p>Relevez l’ensemble des erreurs d’orthographe de la production de Faïza. Classez-les dans un tableau (erreur relevée, forme corrigée, catégorie d’erreur) et justifiez chaque correction.</p>",
+       "corrige": "<table class=\"tab\"><tr><th>Erreur</th><th>Correction</th><th>Catégorie et justification</th></tr>\n<tr><td>(1) nous somme partis</td><td>nous sommes partis</td><td>Accord sujet-verbe : l’auxiliaire <em>être</em> au présent s’accorde avec « nous » (1<sup>re</sup> personne du pluriel, terminaison -mes).</td></tr>\n<tr><td>(2) nous a expliquer</td><td>nous a expliqué</td><td>Confusion infinitif / participe passé en [e] : après l’auxiliaire <em>avoir</em>, on emploie le participe passé (test : remplacer par un verbe du 3<sup>e</sup> groupe : « nous a dit »).</td></tr>\n<tr><td>(2) l’eau salé</td><td>l’eau salée</td><td>Accord dans le groupe nominal : l’adjectif épithète s’accorde avec le nom « eau », féminin singulier.</td></tr>\n<tr><td>(3) qui sortait / qui faisait</td><td>qui sortaient / qui faisaient</td><td>Accord sujet-verbe avec le pronom relatif « qui », qui a pour antécédent « des crabes » (3<sup>e</sup> personne du pluriel : -aient).</td></tr>\n<tr><td>(4) a voulu en attrapé</td><td>a voulu en attraper</td><td>Confusion participe / infinitif : un verbe qui suit un autre verbe conjugué (« a voulu ») est à l’infinitif (test : « a voulu en prendre »).</td></tr>\n<tr><td>(5) nous avons marcher</td><td>nous avons marché</td><td>Même confusion : participe passé après <em>avoir</em> (test : « nous avons couru »).</td></tr>\n<tr><td>(5) l’eau devenait […] clair</td><td>claire</td><td>Accord de l’adjectif attribut du sujet avec « l’eau », féminin singulier.</td></tr>\n<tr><td>(7) A midi</td><td>À midi</td><td>Préposition « à » : l’accent se maintient sur la majuscule (recommandation de l’Académie et de l’Imprimerie nationale).</td></tr>\n<tr><td>(7) nous avons mangés</td><td>nous avons mangé</td><td>Participe passé employé avec <em>avoir</em> : il ne s’accorde pas avec le sujet ; le COD « nos sandwichs » est placé après le verbe, donc pas d’accord.</td></tr>\n<tr><td>(7) a l’ombre</td><td>à l’ombre</td><td>Homophone grammatical : préposition « à » (on ne peut pas remplacer par « avait »).</td></tr>\n<tr><td>(9) Je suis rentrer</td><td>Je suis rentrée</td><td>Participe passé employé avec <em>être</em> : il s’accorde avec le sujet « je », qui désigne Faïza (féminin singulier) ; « fatiguée » et « contente », eux, sont bien accordés.</td></tr>\n<tr><td>(9) y retourné</td><td>y retourner</td><td>Infinitif après le verbe conjugué « aimerais » (test : « y aller »).</td></tr></table>\n<p><strong>Bilan</strong> : l’orthographe lexicale est très bien maîtrisée (palétuviers, héron, sandwichs, au-dessus) ; les erreurs relèvent presque toutes de l’<strong>orthographe grammaticale</strong>, et surtout de deux problèmes : la finale en [e] des verbes du 1<sup>er</sup> groupe (infinitif / participe passé, 5 occurrences) et les accords à distance (relative, attribut, participe avec <em>être</em>). On peut ajouter, hors orthographe, deux remarques : « rigolé » relève d’un registre familier, et « s’envola » rompt le système des temps (voir question 5).</p>\n<p><em>Barème</em> : 0,2 point par erreur correctement relevée et corrigée (12 erreurs, plafonné à 2 points), 1 point pour la pertinence du classement et des justifications.</p>"
+      },
+      {
+       "id": "2",
+       "type": "langue",
+       "points": 1,
+       "enonce": "<p>Phrase (3) : « Il nous a montré des crabes qui sortait de leurs trous. » Donnez la nature et la fonction de la proposition « qui sortait de leurs trous » et expliquez en quoi cette analyse permet de comprendre l’erreur de Faïza.</p>",
+       "corrige": "<p>« qui sortai(en)t de leurs trous » est une <strong>proposition subordonnée relative</strong>, introduite par le pronom relatif « qui ». Elle est <strong>complément du nom</strong> « crabes », son antécédent (on parle aussi d’expansion du nom).</p>\n<p>Dans la relative, « qui » est <strong>sujet</strong> du verbe « sortir ». Or « qui » prend la personne et le nombre de son antécédent « des crabes » : le verbe doit donc être à la 3<sup>e</sup> personne du pluriel (« sortaient »). Faïza a sans doute accordé avec le singulier implicite du pronom ou par simple oubli de la chaîne d’accord : l’enseignant peut lui faire remplacer « qui » par l’antécédent (« des crabes sortaient de leurs trous ») pour retrouver le sujet.</p>"
+      },
+      {
+       "id": "3",
+       "type": "langue",
+       "points": 1.5,
+       "enonce": "<p>Phrase (8) : « Le guide nous a dit qu’il faut protéger la mangrove parce qu’elle protège la côte des vagues et qu’elle abrite beaucoup d’animaux. » Délimitez les propositions à l’aide de crochets, donnez leur nature et indiquez comment elles sont reliées.</p>",
+       "corrige": "<p>[Le guide nous a dit] [qu’il faut protéger la mangrove] [parce qu’elle protège la côte des vagues] et [qu’elle abrite beaucoup d’animaux].</p>\n<ul>\n<li>« Le guide nous a dit » : <strong>proposition principale</strong>.</li>\n<li>« qu’il faut protéger la mangrove » : <strong>proposition subordonnée conjonctive complétive</strong>, introduite par la conjonction de subordination « que » ; elle est complément (d’objet direct) du verbe « a dit ».</li>\n<li>« parce qu’elle protège la côte des vagues » : <strong>proposition subordonnée conjonctive circonstancielle de cause</strong>, introduite par la locution conjonctive « parce que » ; elle dépend du verbe « faut protéger ».</li>\n<li>« qu’elle abrite beaucoup d’animaux » : seconde <strong>subordonnée circonstancielle de cause</strong> ; « que » y reprend « parce que » pour éviter la répétition.</li>\n</ul>\n<p><strong>Liaisons</strong> : la complétive et la première causale sont reliées par <strong>subordination</strong> (conjonctions « que », « parce que ») ; les deux causales sont reliées entre elles par <strong>coordination</strong> (conjonction de coordination « et »). La phrase est donc complexe, avec quatre verbes conjugués (a dit, faut, protège, abrite) et quatre propositions.</p>\n<p><em>Remarque</em> : au discours indirect, le présent « il faut » est acceptable, car il exprime une vérité toujours valable (présent de vérité générale) ; la concordance stricte donnerait « qu’il fallait ».</p>"
+      },
+      {
+       "id": "4",
+       "type": "langue",
+       "points": 2,
+       "enonce": "<p>Réécrivez les phrases (5) et (9), après en avoir corrigé l’orthographe, en remplaçant « nous » et « je » par « elles » (Faïza et sa camarade Hadidja). Soulignez les modifications.</p>",
+       "corrige": "<p><strong>Phrase (5)</strong> : « Ensuite <u>elles ont</u> <u>marché</u> sur un petit pont en bois. La marée montait doucement et l’eau devenait de plus en plus claire. »</p>\n<p><strong>Phrase (9)</strong> : « <u>Elles sont rentrées fatiguées</u> mais très <u>contentes</u>. <u>Elles aimeraient</u> y retourner avec <u>leur famille</u> » (ou « <u>leurs familles</u> » si l’on considère que chaque fillette a la sienne).</p>\n<p><strong>Points de vigilance</strong> :</p><ul>\n<li>« ont marché » : le participe passé employé avec <em>avoir</em> reste invariable.</li>\n<li>La seconde phrase de (5) ne change pas : son sujet est « la marée » puis « l’eau », pas « nous » (piège classique : ne transformer que ce qui dépend du pronom).</li>\n<li>« sont rentrées » : participe passé avec <em>être</em>, accordé au féminin pluriel ; les adjectifs « fatiguées » et « contentes » s’accordent aussi.</li>\n<li>« aimeraient » : conditionnel présent, 3<sup>e</sup> personne du pluriel ; « retourner » reste à l’infinitif.</li>\n<li>Le déterminant possessif « ma » devient « leur » (ou « leurs »).</li></ul>\n<p><em>Barème</em> : 0,25 point par transformation correcte, 0,25 point pour la phrase non modifiée.</p>"
+      },
+      {
+       "id": "5",
+       "type": "langue",
+       "points": 1.25,
+       "enonce": "<p>Identifiez les temps verbaux employés dans les phrases (5) et (6), précisez leur valeur et commentez l’emploi de « s’envola ».</p>",
+       "corrige": "<ul>\n<li>« avons marché », « a crié » : <strong>passé composé</strong> de l’indicatif ; temps du récit ancré dans la situation d’énonciation (l’élève raconte une sortie qu’elle a vécue) ; il exprime les actions de <strong>premier plan</strong>, qui font avancer le récit.</li>\n<li>« montait », « devenait » : <strong>imparfait</strong> ; valeur descriptive et durative : il exprime l’<strong>arrière-plan</strong>, une action en cours, non délimitée, ici une transformation progressive (« de plus en plus »).</li>\n<li>« Regardez » : <strong>impératif présent</strong> dans le discours direct.</li>\n<li>« s’envola » : <strong>passé simple</strong>. Il a, comme le passé composé, une valeur de premier plan, mais il appartient au système du récit coupé de la situation d’énonciation. Son irruption dans un texte au passé composé crée une <strong>incohérence du système des temps</strong> : il faut écrire « s’est envolé ». C’est probablement ce que signale l’annotation « temps ? », trop allusive pour que l’élève comprenne. Faïza a sans doute réemployé une forme rencontrée dans ses lectures, ce qui est plutôt un signe positif à valoriser.</li></ul>"
+      },
+      {
+       "id": "6",
+       "type": "langue",
+       "points": 0.75,
+       "enonce": "<p>Expliquez la formation des mots « doucement » (phrase 5) et « ensuite » (phrase 5).</p>",
+       "corrige": "<ul><li><strong>doucement</strong> : adverbe de manière formé par <strong>dérivation</strong> : adjectif « doux » au féminin (« douce ») + suffixe <strong>-ment</strong> (règle générale de formation des adverbes : féminin de l’adjectif + -ment).</li>\n<li><strong>ensuite</strong> : adverbe formé par <strong>composition</strong> : préposition « en » + nom « suite », les deux éléments s’étant soudés en un seul mot (composition soudée) ; il sert ici de connecteur temporel qui organise le récit.</li></ul>"
+      },
+      {
+       "id": "7",
+       "type": "didactique-fr",
+       "points": 1.5,
+       "enonce": "<p>Que pensez-vous des annotations et de la note de l’enseignant ? Argumentez.</p>",
+       "corrige": "<p><strong>Points positifs</strong> : les annotations marginales sont <strong>localisées</strong> et portent sur des problèmes réels (« é ou er ? » vise la confusion principale de Faïza ; « familier » signale un écart de registre ; « temps ? » repère l’incohérence du passé simple).</p>\n<p><strong>Limites</strong> :</p><ul>\n<li>Elles sont <strong>allusives</strong> : « temps ? » ou « é ou er ? » supposent que l’élève sache déjà quoi faire ; aucune procédure n’est rappelée (remplacer par « prendre / pris », chercher le sujet de « qui »…).</li>\n<li>Elles sont <strong>exclusivement négatives</strong> : rien ne valorise les réussites pourtant nombreuses (récit chronologique, connecteurs « Ensuite », « Soudain », « À midi », discours direct bien ponctué, vocabulaire précis — palétuviers, marée, héron —, explication du rôle de la mangrove, fin qui exprime un ressenti).</li>\n<li>L’appréciation générale est <strong>inexacte</strong> et peu utile : il ne s’agit pas tant d’« erreurs de conjugaison » que d’erreurs d’accord et de confusion infinitif/participe ; « Revois tes leçons » ne donne pas de piste concrète.</li>\n<li>La <strong>note chiffrée</strong> sur 20 mêle sans critères explicites le contenu et l’orthographe ; elle ne dit pas à l’élève ce qui est réussi et ce qui reste à travailler. Au primaire, l’évaluation par compétences (acquis / en cours d’acquisition) et par critères connus de l’élève est préférable, conformément au principe d’évaluation positive.</li></ul>\n<p><strong>Ce qu’on attendrait</strong> : une appréciation qui valorise d’abord la qualité du récit, puis cible un ou deux objectifs prioritaires (« Tu confonds souvent -é et -er : utilise le test du verbe <em>prendre</em> et corrige les phrases 2, 4, 5 et 9 »), et invite à une <strong>réécriture</strong> plutôt qu’à une note définitive.</p>"
+      },
+      {
+       "id": "8",
+       "type": "didactique-fr",
+       "points": 1.5,
+       "enonce": "<p>a) Rédigez la consigne qui a vraisemblablement été donnée aux élèves. b) Proposez une grille d’autoévaluation (5 à 6 critères) que l’élève aurait pu utiliser pour relire son texte.</p>",
+       "corrige": "<p><strong>a) Consigne probable</strong> : « Raconte notre sortie à la mangrove à un élève d’une autre classe qui n’est pas venu. Ton récit, écrit au passé composé, suivra l’ordre chronologique de la journée ; tu utiliseras des mots pour organiser ton texte (d’abord, ensuite, soudain…), tu insèreras au moins une parole rapportée entre guillemets, tu réemploieras deux mots appris pendant la sortie et tu termineras en disant ce que tu as ressenti. » (0,75 point : destinataire, type de texte, temps, organisation, contenu attendu.)</p>\n<p><strong>b) Grille d’autoévaluation</strong> (formulée pour l’élève, avec des cases « oui / pas encore ») :</p>\n<table class=\"tab\"><tr><th>Critères</th><th>Oui</th><th>Pas encore</th></tr>\n<tr><td>J’ai raconté les moments de la sortie dans l’ordre.</td><td></td><td></td></tr>\n<tr><td>J’ai utilisé des mots pour dire quand les choses se passent (ensuite, soudain, à midi…).</td><td></td><td></td></tr>\n<tr><td>J’ai écrit au passé composé et à l’imparfait pour décrire.</td><td></td><td></td></tr>\n<tr><td>J’ai mis une parole entre guillemets avec les deux points.</td><td></td><td></td></tr>\n<tr><td>J’ai réemployé des mots appris (palétuvier, marée…).</td><td></td><td></td></tr>\n<tr><td>J’ai vérifié chaque verbe en -é / -er avec le test « prendre / pris ».</td><td></td><td></td></tr>\n<tr><td>J’ai dit ce que j’ai ressenti à la fin.</td><td></td><td></td></tr></table>\n<p>Une grille efficace est courte, formulée à la première personne, construite avec les élèves à partir de textes observés, et limitée à ce qui a été enseigné.</p>"
+      },
+      {
+       "id": "9",
+       "type": "didactique-fr",
+       "points": 1.5,
+       "enonce": "<p>Proposez une séance de remédiation ciblée sur la principale difficulté orthographique de Faïza.</p>",
+       "corrige": "<p><strong>Objectif</strong> : distinguer la finale en [e] des verbes du 1<sup>er</sup> groupe : infinitif en -er / participe passé en -é (-ée, -és, -ées).</p>\n<ol>\n<li><strong>Observation et tri</strong> (collectif, 10 min) : à partir de phrases tirées des textes de la classe (anonymisées), les élèves classent les formes en [e] et formulent ce qu’ils observent (« après <em>a</em>, <em>ont</em>, <em>est</em>… », « après un autre verbe, après <em>à</em>, <em>de</em>, <em>pour</em> »).</li>\n<li><strong>Enseignement explicite de la procédure</strong> (modelage, 10 min) : l’enseignant pense tout haut : « Je remplace par un verbe du 3<sup>e</sup> groupe comme <em>prendre</em>. Si j’entends <em>prendre</em>, j’écris -er ; si j’entends <em>pris</em>, j’écris -é et je me demande s’il faut accorder. » Trace écrite avec l’affiche-outil.</li>\n<li><strong>Pratique guidée</strong> (15 min) : phrases à compléter, puis <strong>dictée négociée</strong> en binômes où chaque choix doit être justifié oralement par le test.</li>\n<li><strong>Réinvestissement autonome</strong> : Faïza corrige elle-même les phrases 2, 4, 5 et 9 de son texte en appliquant la procédure, puis recopie la version finale ; « phrase du jour » les jours suivants pour automatiser.</li>\n</ol>\n<p><strong>Évaluation</strong> : repérage de la procédure dans la production suivante. On pourra traiter ensuite, dans une autre séance, l’accord du verbe avec « qui » (remplacer le relatif par son antécédent).</p>"
+      }
+     ]
+    },
+    {
+     "id": "Q",
+     "label": "Qualité de l’écrit",
+     "short": "Q",
+     "titre": "Correction syntaxique et qualité écrite",
+     "points": 6,
+     "questions": [
+      {
+       "id": "1",
+       "type": "qualite",
+       "points": 6,
+       "enonce": "<p>La correction syntaxique et la qualité écrite de l’ensemble de votre copie sont évaluées sur <strong>6 points</strong>. Réservez 10 à 15 minutes en fin d’épreuve pour relire votre copie, en particulier votre réponse à la deuxième partie, puis attribuez-vous une note à l’aide de la grille du corrigé.</p>",
+       "corrige": "<p><strong>Grille de relecture et répartition indicative des 6 points</strong></p><table class=\"tab\"><tr><th>Critère</th><th>Ce que l’on vérifie</th><th>Points</th></tr><tr><td>Orthographe grammaticale</td><td>Accords dans le groupe nominal (déterminant, nom, adjectif), accord sujet-verbe (sujet inversé, éloigné, pronom relatif « qui »), accord du participe passé avec « être » et avec « avoir » (COD placé avant), homophones grammaticaux (a/à, et/est, ce/se, ces/ses, on/ont, leur/leurs, quel(le)/qu’elle, -é/-er).</td><td>2</td></tr><tr><td>Conjugaison et syntaxe</td><td>Formes verbales exactes (passé simple, subjonctif après « bien que », « il faut que »), concordance des temps, phrases complètes et bien construites, négation complète (« ne… pas »), interrogation indirecte sans inversion ni point d’interrogation, pronoms relatifs corrects (« dont », « auquel »).</td><td>1,5</td></tr><tr><td>Ponctuation et présentation</td><td>Majuscules, points, virgules devant les connecteurs et autour des incises, guillemets pour chaque citation, titres d’œuvres soulignés à la main, alinéas marquant les paragraphes, écriture lisible, absence de ratures multiples.</td><td>1</td></tr><tr><td>Lexique et registre</td><td>Vocabulaire précis et varié (pas de « chose », « truc », « faire » répété), registre soutenu, terminologie grammaticale et didactique exacte, absence de tournures orales (« du coup », « ça »).</td><td>1</td></tr><tr><td>Structuration du propos</td><td>Introduction, développement en parties annoncées, connecteurs logiques (« en effet », « cependant », « en outre », « ainsi »), transitions, conclusion ; réponses de la troisième partie rédigées en phrases.</td><td>0,5</td></tr></table><p><strong>Barème d’usage</strong> : en pratique, les correcteurs retirent environ 0,25 à 0,5 point par type d’erreur récurrente ; une copie qui présente plus d’une dizaine d’erreurs de langue sur l’ensemble ne peut guère dépasser 2/6, une copie presque sans faute, bien ponctuée et bien structurée obtient 5 ou 6/6.</p><p><strong>Point de vigilance pour ce sujet</strong> : dans une synthèse sur l’école, vérifiez l’orthographe des mots du domaine (instituteur, laïcité, pédagogue, apprentissage, exemplarité), l’accord des participes dans les phrases complexes et la présentation des citations poétiques (barre oblique / entre deux vers).</p><p><strong>Méthode de relecture efficace</strong> : relisez en trois passages ciblés plutôt qu’une seule fois : 1) les verbes (repérer chaque verbe, chercher son sujet, vérifier la terminaison) ; 2) les groupes nominaux et les participes passés ; 3) la ponctuation et les homophones. Le rapport de jury 2023 rappelle que la présentation et la graphie « mériteraient d’être plus soignées » : un futur professeur écrit au tableau devant ses élèves.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "myt-fr-2",
+   "num": 2,
+   "domaine": "francais",
+   "titre": "Sujet 2 · L’île et les langues",
+   "theme": "Plurilinguisme et français langue de scolarisation ; l’île, lieu d’apprentissage (Defoe, Rousseau, Bernardin de Saint-Pierre, Verne) ; texte documentaire sur le maki (CE2)",
+   "source": "Sujet original construit sur le modèle des sessions 2023 à 2025 (académie de Mayotte)",
+   "remarque": "Textes littéraires cités d’après fr.wikisource.org (orthographe d’origine conservée pour Paul et Virginie) ; texte de compréhension orale et production d’élève rédigés pour Belamis.",
+   "total": 40,
+   "eliminatoire": 10,
+   "duree": 14400,
+   "parties": [
+    {
+     "id": "P1",
+     "label": "Première partie",
+     "short": "P1",
+     "titre": "Compréhension orale d’un texte didactique",
+     "points": 8,
+     "intro": "<p>Le texte est lu <strong>deux fois</strong>, titre compris, par deux lecteurs différents. Vous pouvez prendre des notes pendant les lectures. Le questionnaire est ensuite retourné : cochez <strong>la ou les réponse(s) correcte(s)</strong>. Durée de la partie : 30 minutes, lectures comprises.</p><p><em>Sur Belamis : écoutez (ou faites-vous lire) le texte deux fois sans le regarder, puis répondez.</em></p>",
+     "audio": {
+      "titre": "Apprendre en français quand on parle d’autres langues",
+      "texte": [
+       "Dans de nombreux territoires, et singulièrement à Mayotte, une grande partie des élèves arrive à l’école en parlant une ou plusieurs langues autres que le français. Le sociolinguiste Foued Laroussi, qui a dirigé l’ouvrage Langues, identités et insularité : regards sur Mayotte, paru en 2009 aux Presses universitaires de Rouen et du Havre, décrit une situation où coexistent deux langues locales, le shimaoré, d’origine bantoue, et le kibushi, d’origine malgache, aux côtés du français, langue officielle et langue de l’école. Pour ces enfants, le français n’est pas seulement une langue que l’on étudie : c’est la langue dans laquelle on apprend les mathématiques, les sciences ou l’histoire. Les didacticiens parlent alors de français langue de scolarisation, notion développée notamment par Michèle Verdelhan-Bourgade dans Le Français de scolarisation, publié aux Presses universitaires de France en 2002.",
+       "Cette distinction a des conséquences très concrètes. Le chercheur canadien Jim Cummins a proposé, dès la fin des années 1970, de distinguer deux types de compétences. Les premières, qu’il appelle compétences de communication interpersonnelle, permettent de converser dans la cour, de demander un objet ou de raconter un événement vécu ; elles s’acquièrent en deux ans environ. Les secondes, les compétences langagières cognitives et scolaires, sont celles qu’exigent la compréhension d’une consigne complexe, la lecture d’un texte documentaire ou la rédaction d’une explication ; leur maîtrise demande en moyenne cinq à sept ans. Un élève qui parle aisément français avec ses camarades peut donc être encore très démuni face au langage des disciplines. L’enseignant qui confond ces deux niveaux risque d’interpréter comme un manque de capacités ce qui n’est qu’un manque de langue.",
+       "Cummins a également formulé l’hypothèse de l’interdépendance linguistique : les compétences construites dans une langue ne sont pas perdues quand l’enfant en apprend une autre ; elles forment un socle commun qui facilite les nouveaux apprentissages. Savoir raconter une histoire dans sa langue première, savoir qu’un mot peut avoir plusieurs sens ou qu’une phrase se découpe en unités, ce sont autant de connaissances transférables. Loin d’être un obstacle, la langue de la maison peut donc devenir un point d’appui.",
+       "C’est dans cet esprit que se sont développées les approches dites plurielles. L’éveil aux langues, expérimenté dans plusieurs pays européens à la fin des années 1990 sous la direction de Michel Candelier, invite les élèves à comparer des langues variées, y compris celles de la classe, pour mieux comprendre le fonctionnement du langage. Le Cadre de référence pour les approches plurielles des langues et des cultures, publié par le Centre européen pour les langues vivantes du Conseil de l’Europe, en décrit les objectifs. La chercheuse Christine Hélot, dans Du bilinguisme en famille au plurilinguisme à l’école, paru chez L’Harmattan en 2007, montre combien la reconnaissance des langues familiales renforce l’estime de soi des enfants et le lien entre l’école et les familles.",
+       "Reconnaître les langues des élèves ne signifie pas pour autant renoncer à l’exigence en français. Les chercheurs s’accordent au contraire sur la nécessité d’un enseignement explicite de la langue de scolarisation : enseigner le vocabulaire des disciplines, faire reformuler, exposer les élèves à des structures de phrases plus complexes que celles de l’oral quotidien, lire à voix haute des textes riches. Il s’agit de construire des ponts entre les langues, non de les opposer. Comparer la manière dont le shimaoré et le français marquent le pluriel, par exemple, peut aider un élève à comprendre pourquoi, en français, le pluriel s’entend si peu et s’écrit tant.",
+       "En définitive, le plurilinguisme des élèves n’est ni un handicap ni un simple folklore : c’est une réalité avec laquelle l’enseignant doit composer, en s’appuyant sur ce que les enfants savent déjà pour les conduire vers la maîtrise du français écrit et scolaire."
+      ],
+      "source": "Texte rédigé pour Belamis d’après F. Laroussi (dir.), Langues, identités et insularité : regards sur Mayotte (PURH, 2009) ; M. Verdelhan-Bourgade, Le Français de scolarisation (PUF, 2002) ; les travaux de J. Cummins ; M. Candelier (programme Evlang) ; le CARAP (CELV, Conseil de l’Europe) ; C. Hélot, Du bilinguisme en famille au plurilinguisme à l’école (L’Harmattan, 2007)."
+     },
+     "questions": [
+      {
+       "id": "1",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, les deux langues locales de Mayotte sont :</p>",
+       "options": [
+        "le shimaoré, d’origine bantoue",
+        "le kibushi, d’origine malgache",
+        "le kibushi, d’origine arabe",
+        "le shimaoré, d’origine malgache"
+       ],
+       "bonnes": [
+        0,
+        1
+       ],
+       "corrige": "<p><strong>Réponses : A (« le shimaoré, d’origine bantoue »), B (« le kibushi, d’origine malgache »).</strong></p><p><em>Justification</em> : « deux langues locales, le shimaoré, d’origine bantoue, et le kibushi, d’origine malgache »</p>"
+      },
+      {
+       "id": "2",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Qu’apprend-on au sujet des Presses universitaires de Rouen et du Havre ?</p>",
+       "options": [
+        "Elles ont publié l’ouvrage dirigé par Foued Laroussi.",
+        "Elles ont publié Le Français de scolarisation.",
+        "C’est le laboratoire où travaille Jim Cummins."
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse : A (« Elles ont publié l’ouvrage dirigé par Foued Laroussi. »).</strong></p><p><em>Justification</em> : « Langues, identités et insularité : regards sur Mayotte, paru en 2009 aux Presses universitaires de Rouen et du Havre »</p><p>Le Français de scolarisation a paru aux Presses universitaires de France (PUF) : piège sur deux éditeurs aux noms voisins.</p>"
+      },
+      {
+       "id": "3",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>L’expression « français langue de scolarisation » désigne :</p>",
+       "options": [
+        "le français étudié comme une langue étrangère parmi d’autres",
+        "le français comme langue dans laquelle on apprend les disciplines scolaires",
+        "le français parlé dans la cour de récréation"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« le français comme langue dans laquelle on apprend les disciplines scolaires »).</strong></p><p><em>Justification</em> : « le français n’est pas seulement une langue que l’on étudie : c’est la langue dans laquelle on apprend les mathématiques, les sciences ou l’histoire »</p>"
+      },
+      {
+       "id": "4",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon Jim Cummins, les compétences langagières cognitives et scolaires :</p>",
+       "options": [
+        "s’acquièrent en deux ans environ",
+        "demandent en moyenne cinq à sept ans",
+        "sont nécessaires pour comprendre une consigne complexe",
+        "suffisent pour converser dans la cour"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : B (« demandent en moyenne cinq à sept ans »), C (« sont nécessaires pour comprendre une consigne complexe »).</strong></p><p><em>Justification</em> : « celles qu’exigent la compréhension d’une consigne complexe […] ; leur maîtrise demande en moyenne cinq à sept ans »</p><p>Les réponses A et D concernent les compétences de communication interpersonnelle.</p>"
+      },
+      {
+       "id": "5",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, un élève qui parle aisément français avec ses camarades :</p>",
+       "options": [
+        "maîtrise nécessairement le langage des disciplines",
+        "peut encore être très démuni face au langage des disciplines",
+        "présente, s’il échoue, un manque de capacités"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« peut encore être très démuni face au langage des disciplines »).</strong></p><p><em>Justification</em> : « Un élève qui parle aisément français avec ses camarades peut donc être encore très démuni face au langage des disciplines. »</p><p>La réponse C est précisément l’erreur d’interprétation contre laquelle le texte met en garde (« ce qui n’est qu’un manque de langue »).</p>"
+      },
+      {
+       "id": "6",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>L’hypothèse de l’interdépendance linguistique affirme que :</p>",
+       "options": [
+        "apprendre une nouvelle langue fait perdre la langue première",
+        "les compétences construites dans une langue forment un socle commun transférable",
+        "la langue de la maison est un obstacle aux apprentissages scolaires"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« les compétences construites dans une langue forment un socle commun transférable »).</strong></p><p><em>Justification</em> : « les compétences construites dans une langue ne sont pas perdues quand l’enfant en apprend une autre ; elles forment un socle commun »</p>"
+      },
+      {
+       "id": "7",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Quelles affirmations découlent du texte ?</p>",
+       "options": [
+        "L’éveil aux langues a été expérimenté sous la direction de Michel Candelier.",
+        "Christine Hélot a publié son ouvrage chez L’Harmattan en 2007.",
+        "Le Cadre de référence pour les approches plurielles a été publié par le ministère de l’Éducation nationale.",
+        "La reconnaissance des langues familiales renforce l’estime de soi des enfants."
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses : A (« L’éveil aux langues a été expérimenté sous la direction de Michel Candelier. »), B (« Christine Hélot a publié son ouvrage chez L’Harmattan en 2007. »), D (« La reconnaissance des langues familiales renforce l’estime de soi des enfants. »).</strong></p><p><em>Justification</em> : « L’éveil aux langues, expérimenté […] sous la direction de Michel Candelier »</p><p><em>Justification</em> : « paru chez L’Harmattan en 2007, montre combien la reconnaissance des langues familiales renforce l’estime de soi des enfants »</p><p>Le CARAP a été publié par le Centre européen pour les langues vivantes du Conseil de l’Europe, non par le ministère.</p>"
+      },
+      {
+       "id": "8",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, reconnaître les langues des élèves :</p>",
+       "options": [
+        "suppose de renoncer à l’exigence en français",
+        "va de pair avec un enseignement explicite de la langue de scolarisation",
+        "consiste à construire des ponts entre les langues"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : B (« va de pair avec un enseignement explicite de la langue de scolarisation »), C (« consiste à construire des ponts entre les langues »).</strong></p><p><em>Justification</em> : « Reconnaître les langues des élèves ne signifie pas pour autant renoncer à l’exigence en français. Les chercheurs s’accordent au contraire sur la nécessité d’un enseignement explicite de la langue de scolarisation »</p><p><em>Justification</em> : « Il s’agit de construire des ponts entre les langues, non de les opposer. »</p>"
+      }
+     ]
+    },
+    {
+     "id": "P2",
+     "label": "Deuxième partie",
+     "short": "P2",
+     "titre": "Compréhension écrite et rédaction",
+     "points": 12,
+     "intro": "<p><strong>Corpus</strong></p><ul><li>Texte 1 : Daniel Defoe, <em>Robinson Crusoé</em> (1719), traduction de Pétrus Borel (1836).</li><li>Texte 2 : Jean-Jacques Rousseau, <em>Émile ou De l’éducation</em>, livre III (1762).</li><li>Texte 3 : Jacques-Henri Bernardin de Saint-Pierre, <em>Paul et Virginie</em> (1788).</li><li>Texte 4 : Jules Verne, Préface de <em>Deux Ans de vacances</em> (1888).</li></ul><div class=\"doc\"><p class=\"doc-title\">Texte 1 – Daniel Defoe, <em>Robinson Crusoé</em> (1719), trad. Pétrus Borel</p><p><em>Seul survivant d’un naufrage, Robinson s’est installé sur une île déserte. Après avoir sauvé du vaisseau échoué tout ce qu’il pouvait, il fait le point sur sa situation.</em></p><p>Je commençai dès lors à examiner sérieusement ma position et les circonstances où j’étais réduit. Je dressai, par écrit, un état de mes affaires, non pas tant pour les laisser à ceux qui viendraient après moi, car il n’y avait pas d’apparence que je dusse avoir beaucoup d’héritiers, que pour délivrer mon esprit des pensées qui l’assiégeaient et l’accablaient chaque jour. Comme ma raison commençait alors à me rendre maître de mon abattement, j’essayais à me consoler moi-même du mieux que je pouvais, en balançant mes biens et mes maux, afin que je pusse bien me convaincre que mon sort n’était pas le pire ; et, comme débiteur et créancier, j’établis, ainsi qu’il suit, un compte très fidèle de mes jouissances en regard des misères que je souffrais :</p><table class=\"tab\"><tr><th>LE MAL.</th><th>LE BIEN,</th></tr><tr><td>Je suis jeté sur une île horrible et désolée, sans aucun espoir de délivrance.</td><td>Mais je suis vivant ; mais je n’ai pas été noyé comme le furent tous mes compagnons de voyage.</td></tr><tr><td>Je suis écarté et séparé, en quelque sorte, du monde entier pour être misérable.</td><td>Mais j’ai été séparé du reste de l’équipage pour être préservé de la mort ; et Celui qui m’a miraculeusement sauvé de la mort peut aussi me délivrer de cette condition.</td></tr><tr><td>Je suis retranché du nombre des hommes ; je suis un solitaire, un banni de la société humaine.</td><td>Mais je ne suis point mourant de faim et expirant sur une terre stérile qui ne produise pas de subsistances.</td></tr><tr><td>Je n’ai point de vêtements pour me couvrir.</td><td>Mais je suis dans un climat chaud, où, si j’avais des vêtements, je pourrais à peine les porter.</td></tr><tr><td>[…]</td><td>[…]</td></tr><tr><td>Je n’ai pas une seule âme à qui parler, ou qui puisse me consoler.</td><td>Mais Dieu, par un prodige, a envoyé le vaisseau assez près du rivage pour que je pusse en tirer tout ce qui m’était nécessaire pour suppléer à mes besoins ou me rendre capable d’y suppléer moi-même aussi longtemps que je vivrai.</td></tr></table><p>En somme, il en résultait ce témoignage indubitable, que, dans le monde, il n’est point de condition si misérable où il n’y ait quelque chose de positif ou de négatif dont on doive être reconnaissant. Que ceci demeure donc comme une leçon tirée de la plus affreuse de toutes les conditions humaines, qu’il est toujours en notre pouvoir de trouver quelques consolations qui peuvent être placées dans notre bilan des biens et des maux au crédit de ce compte.</p><p class=\"doc-src\">Daniel Defoe, <em>Robinson Crusoé</em>, trad. Pétrus Borel, Paris, Borel et Varenne, 1836, t. 1, chapitre « La Chaise », p. 97-104 (fr.wikisource.org).</p></div><div class=\"doc\"><p class=\"doc-title\">Texte 2 – Jean-Jacques Rousseau, <em>Émile ou De l’éducation</em> (1762), livre III</p><p><em>Rousseau, qui écrit un peu plus haut « Je hais les livres ; ils n’apprennent qu’à parler de ce qu’on ne sait pas », se demande pourtant quel livre donner à son élève imaginaire, Émile, âgé d’environ douze ans. Il annonce qu’un seul ouvrage fournit « le plus heureux traité d’éducation naturelle » : « Ce livre sera le premier que lira mon Émile ». Il vient d’écarter Aristote, Pline et Buffon.</em></p><p>Robinson Crusoé dans son île, seul, dépourvu de l’assistance de ses semblables et des instruments de tous les arts, pourvoyant cependant à sa subsistance, à sa conservation, et se procurant même une sorte de bien-être, voilà un objet intéressant pour tout âge, et qu’on a mille moyens de rendre agréable aux enfants. Voilà comment nous réalisons l’île déserte qui me servait d’abord de comparaison. Cet état n’est pas, j’en conviens, celui de l’homme social ; vraisemblablement il ne doit pas être celui d’Émile : mais c’est sur ce même état qu’il doit apprécier tous les autres. Le plus sûr moyen de s’élever au-dessus des préjugés et d’ordonner ses jugements sur les vrais rapports des choses, est de se mettre à la place d’un homme isolé, et de juger de tout comme cet homme en doit juger lui-même, eu égard à sa propre utilité.</p><p>Ce roman, débarrassé de tout son fatras, commençant au naufrage de Robinson près de son île, et finissant à l’arrivée du vaisseau qui vient l’en tirer, sera tout à la fois l’amusement et l’instruction d’Émile durant l’époque dont il est ici question. Je veux que la tête lui en tourne, qu’il s’occupe sans cesse de son château, de ses chèvres, de ses plantations ; qu’il apprenne en détail, non dans des livres, mais sur les choses, tout ce qu’il faut savoir en pareil cas ; qu’il pense être Robinson lui-même ; […] car ne doutez point qu’il ne projette d’aller faire un établissement semblable ; c’est le vrai château en Espagne de cet heureux âge, où l’on ne connaît d’autre bonheur que le nécessaire et la liberté.</p><p>Quelle ressource que cette folie pour un homme habile, qui n’a su la faire naître qu’afin de la mettre à profit ! L’enfant, pressé de se faire un magasin pour son île, sera plus ardent pour apprendre que le maître pour enseigner. Il voudra savoir tout ce qui est utile, et ne voudra savoir que cela ; vous n’aurez plus besoin de le guider, vous n’aurez qu’à le retenir. Au reste, dépêchons-nous de l’établir dans cette île, tandis qu’il y borne sa félicité ; car le jour approche où, s’il y veut vivre encore, il n’y voudra plus vivre seul, et où Vendredi, qui maintenant ne le touche guère, ne lui suffira pas longtemps.</p><p class=\"doc-src\">Jean-Jacques Rousseau, <em>Émile ou De l’éducation</em>, livre III, édition de 1852 (fr.wikisource.org).</p></div><div class=\"doc\"><p class=\"doc-title\">Texte 3 – Bernardin de Saint-Pierre, <em>Paul et Virginie</em> (1788)</p><p><em>À l’île de France (l’actuelle île Maurice, dans l’océan Indien), deux enfants, Paul et Virginie, grandissent loin de la société, élevés par leurs mères dans un vallon isolé. Orthographe de l’édition de 1806 conservée (« n’avoient » = n’avaient, « disoit » = disait).</em></p><p>Paul et Virginie n’avoient ni horloges, ni almanachs, ni livres de chronologie, d’histoire, et de philosophie. Les périodes de leur vie se régloient sur celles de la nature. Ils connoissoient les heures du jour par l’ombre des arbres ; les saisons, par les temps où ils donnent leurs fleurs ou leurs fruits ; et les années, par le nombre de leurs récoltes. Ces douces images répandoient les plus grands charmes dans leurs conversations. « Il est temps de dîner, disoit Virginie à la famille, les ombres des bananiers sont à leurs pieds » ; ou bien : « La nuit s’approche, les tamarins ferment leurs feuilles. — Quand viendrez-vous nous voir ? lui disoient quelques amies du voisinage. — Aux cannes de sucre, répondoit Virginie. — Votre visite nous sera encore plus douce et plus agréable, reprenoient ces jeunes filles ». Quand on l’interrogeoit sur son âge et sur celui de Paul : « Mon frere, disoit-elle, est de l’âge du grand cocotier de la fontaine, et moi de celui du plus petit. Les manguiers ont donné douze fois leurs fruits, et les orangers vingt-quatre fois leurs fleurs depuis que je suis au monde ». Leur vie sembloit attachée à celle des arbres comme celle des faunes et des dryades : ils ne connoissoient d’autres époques historiques que celles de la vie de leurs meres, d’autre chronologie que celle de leurs vergers, et d’autre philosophie que de faire du bien à tout le monde, et de se résigner à la volonté de Dieu.</p><p class=\"doc-src\">Bernardin de Saint-Pierre, <em>Paul et Virginie</em>, Paris, P. Didot l’aîné, 1806 (fr.wikisource.org). Tamarin, manguier, cocotier : arbres tropicaux familiers aux lecteurs mahorais.</p></div><div class=\"doc\"><p class=\"doc-title\">Texte 4 – Jules Verne, Préface de <em>Deux Ans de vacances</em> (1888)</p><p>Bien des Robinsons ont déjà tenu en éveil la curiosité de nos jeunes lecteurs. Daniel de Foë, dans son immortel Robinson Crusoé, a mis en scène l’homme seul ; Wyss, dans son Robinson suisse, la famille ; Cooper, dans le Cratère, la société avec ses éléments multiples. Dans l’Île mystérieuse, j’ai mis des savants aux prises avec les nécessités de cette situation. On a imaginé encore le Robinson de douze ans, le Robinson des glaces, le Robinson des jeunes filles, etc. Malgré le nombre infini des romans qui composent le cycle des Robinsons, il m’a paru que, pour le parfaire, il restait à montrer une troupe d’enfants de huit à treize ans, abandonnés dans une île, luttant pour la vie au milieu des passions entretenues par les différences de nationalité, — en un mot, un pensionnat de Robinsons.</p><p>D’autre part, dans le Capitaine de quinze ans, j’avais entrepris de montrer ce que peuvent la bravoure et l’intelligence d’un enfant aux prises avec les périls et les difficultés d’une responsabilité au-dessus de son âge. Or, j’ai pensé que si l’enseignement contenu dans ce livre pouvait être profitable à tous, il devait être complété.</p><p>C’est dans ce double but qu’a été fait ce nouvel ouvrage.</p><p class=\"doc-src\">Jules Verne, <em>Deux Ans de vacances</em>, Paris, Hetzel, 1909, p. i-ii (fr.wikisource.org). Wyss : auteur suisse du <em>Robinson suisse</em> (1812) ; Cooper : romancier américain.</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "synthese",
+       "points": 12,
+       "enonce": "<p>En quoi l’île, réelle ou rêvée, apparaît-elle dans ces textes comme un lieu d’apprentissage ? Vous vous demanderez également pourquoi ce motif a tant séduit les éducateurs et les jeunes lecteurs.</p><p>Vous répondrez de manière argumentée et structurée, en vous appuyant sur les textes du corpus et sur votre culture personnelle, en veillant à ce qu’elle ne se substitue pas à l’étude des textes.</p>",
+       "corrige": "\n<p><strong>1. Analyser la question.</strong> Mots-clés : « l’île » (lieu clos, isolé, entouré par la mer), « réelle ou rêvée » (l’île de France est un lieu réel idéalisé ; l’île de Robinson est fictive ; chez Rousseau, elle devient un « château en Espagne » imaginé par l’enfant), « lieu d’apprentissage » (que l’on apprend : survivre, raisonner, connaître la nature, vivre avec les autres ; comment on apprend : par l’expérience, par la nécessité). Second volet : pourquoi ce motif séduit à la fois les <em>éducateurs</em> (Rousseau, Verne qui revendique un « enseignement ») et les <em>jeunes lecteurs</em> (« la curiosité de nos jeunes lecteurs »). Le corpus combine un roman d’aventures, un traité d’éducation, un roman pastoral et une préface : trois textes sont des récits, deux textes (Rousseau, Verne) sont des discours sur la lecture.</p>\n<p><strong>2. Problématique possible.</strong> <em>Comment l’isolement insulaire, qui prive l’homme de la société et de ses savoirs, devient-il paradoxalement une école de la vie, et pourquoi cette fiction a-t-elle paru si formatrice aux yeux des éducateurs comme des enfants ?</em></p>\n<p><strong>3. Introduction rédigée (exemple).</strong></p>\n<blockquote>Depuis que Daniel Defoe a fait échouer son héros sur une île déserte en 1719, l’île est devenue l’un des motifs favoris de la littérature, et particulièrement de la littérature destinée à la jeunesse. Le corpus en témoigne : Robinson Crusoé, dans la traduction de Pétrus Borel (1836), dresse le bilan de sa situation de naufragé ; Rousseau, dans le livre III d’<em>Émile ou De l’éducation</em> (1762), fait de ce roman le premier livre de son élève ; Bernardin de Saint-Pierre, dans <em>Paul et Virginie</em> (1788), montre deux enfants grandissant à l’île de France au rythme de la nature ; enfin, Jules Verne explique dans la préface de <em>Deux Ans de vacances</em> (1888) pourquoi il a voulu écrire « un pensionnat de Robinsons ». Ces textes invitent à se demander comment l’isolement insulaire, qui prive l’homme de la société et de ses livres, peut devenir une école, et pourquoi cette fiction séduit tant éducateurs et jeunes lecteurs. Nous montrerons d’abord que l’île est un lieu d’épreuve qui oblige à apprendre, puis qu’elle propose un autre rapport au savoir, fondé sur l’expérience et la nature, avant de nous interroger sur les raisons pédagogiques et imaginaires de son succès.</blockquote>\n<p><strong>4. Plan détaillé.</strong></p>\n<p><strong>I. L’île, une épreuve qui oblige à apprendre.</strong></p>\n<ul>\n<li><em>Un isolement radical.</em> Robinson se dit « jeté sur une île horrible et désolée », « retranché du nombre des hommes » ; Rousseau insiste sur le fait qu’il est « seul, dépourvu de l’assistance de ses semblables et des instruments de tous les arts » ; Verne place des enfants « abandonnés dans une île, luttant pour la vie ».</li>\n<li><em>Apprendre à raisonner sur sa situation.</em> Le tableau « LE MAL / LE BIEN » est un exercice de raisonnement : Robinson compense chaque malheur par un avantage, « comme débiteur et créancier », et en tire « une leçon » générale. L’île enseigne la maîtrise de soi (« ma raison commençait alors à me rendre maître de mon abattement »).</li>\n<li><em>Apprendre la responsabilité.</em> Verne veut montrer, comme dans <em>Un capitaine de quinze ans</em>, « ce que peuvent la bravoure et l’intelligence d’un enfant aux prises avec […] une responsabilité au-dessus de son âge » ; la troupe d’enfants doit aussi apprendre à vivre ensemble malgré « les différences de nationalité ».</li>\n</ul>\n<p><strong>II. Un autre rapport au savoir : l’expérience, l’utile et la nature.</strong></p>\n<ul>\n<li><em>Le savoir par les choses, non par les livres.</em> Rousseau veut qu’Émile apprenne « non dans des livres, mais sur les choses » ; l’enfant « voudra savoir tout ce qui est utile, et ne voudra savoir que cela ». La nécessité crée la motivation : il « sera plus ardent pour apprendre que le maître pour enseigner ».</li>\n<li><em>Un savoir réglé sur la nature.</em> Paul et Virginie « n’avoient ni horloges, ni almanachs, ni livres » : ils lisent l’heure dans l’ombre des arbres (« les ombres des bananiers sont à leurs pieds »), comptent leur âge par les floraisons des orangers. Leur savoir est concret, sensible, et même poétique (« Mon frere […] est de l’âge du grand cocotier de la fontaine »).</li>\n<li><em>Une morale de l’action.</em> Chez Bernardin, leur seule « philosophie » est « de faire du bien à tout le monde » ; chez Robinson, la conclusion morale naît de l’expérience vécue.</li>\n<li><em>Nuance</em> : cette éducation idéale a ses limites. Rousseau reconnaît que « cet état n’est pas […] celui de l’homme social » et annonce que Vendredi « ne lui suffira pas longtemps » ; l’ignorance de Paul et Virginie, heureuse sur l’île, les laissera démunis face à la société (dans la suite du roman, Virginie, envoyée en France, avoue qu’elle ne sait « ni lire ni écrire »). L’île est une étape, non une fin.</li>\n</ul>\n<p><strong>III. Pourquoi l’île séduit éducateurs et jeunes lecteurs.</strong></p>\n<ul>\n<li><em>Pour les éducateurs, un dispositif pédagogique.</em> Rousseau voit dans <em>Robinson Crusoé</em> « le plus heureux traité d’éducation naturelle » : l’île simplifie le monde et permet à l’enfant d’« ordonner ses jugements sur les vrais rapports des choses ». Verne revendique explicitement « l’enseignement contenu dans ce livre » : la fiction instruit en divertissant.</li>\n<li><em>Pour les enfants, un rêve d’autonomie.</em> Rousseau parle du « vrai château en Espagne de cet heureux âge » ; il veut que « la tête lui en tourne », qu’Émile « pense être Robinson lui-même » : l’identification au héros est le moteur de l’apprentissage. Verne évoque « la curiosité de nos jeunes lecteurs » et la longue série des robinsonnades.</li>\n<li><em>Un genre fécond.</em> Culture personnelle : <em>Le Robinson suisse</em> de Wyss (1812), <em>L’Île mystérieuse</em> (1875), <em>Vendredi ou la Vie sauvage</em> de Michel Tournier (1971), très lu à l’école ; au cycle 3, les programmes invitent à lire des récits d’aventures.</li>\n<li><em>Ouverture mahoraise</em> : pour des élèves qui vivent sur une île de l’océan Indien, ces textes peuvent être l’occasion de confronter l’île rêvée des romans (île déserte, paradis naturel) à l’île réelle, habitée, plurilingue, reliée au monde.</li>\n</ul>\n<p><strong>5. Conclusion rédigée (exemple).</strong></p>\n<blockquote>Dans ces quatre textes, l’île n’est pas seulement un décor exotique : en retranchant l’homme ou l’enfant de la société, elle l’oblige à raisonner, à agir, à observer la nature et à tirer lui-même les leçons de son expérience. C’est pourquoi elle a séduit les éducateurs, de Rousseau, qui fait de <em>Robinson Crusoé</em> le premier livre d’Émile, à Jules Verne, qui revendique l’enseignement de ses romans, autant que les jeunes lecteurs, qui y trouvent un rêve d’autonomie. Mais ces auteurs savent aussi que l’île n’est qu’un moment : on n’y apprend vraiment que pour revenir parmi les hommes. Pour le professeur des écoles, ces robinsonnades offrent un support précieux pour faire lire, débattre et écrire, à condition d’aider les élèves à mesurer l’écart entre l’île des livres et celle où ils vivent.</blockquote>\n<p><strong>6. Erreurs à éviter.</strong></p>\n<ul><li>Traiter les textes un par un (catalogue) ou raconter <em>Robinson Crusoé</em> et <em>Paul et Virginie</em> au lieu d’analyser les extraits.</li>\n<li>Oublier le second volet de la question (pourquoi ce motif séduit-il ?), ou négliger la préface de Verne et le texte de Rousseau, qui sont des discours <em>sur</em> la lecture.</li>\n<li>Corriger ou moquer l’orthographe ancienne de <em>Paul et Virginie</em> : elle est celle de l’édition de 1806.</li>\n<li>Faire de Rousseau un partisan de la lecture en général : il écrit « Je hais les livres » et n’en retient qu’un, précisément parce qu’il enseigne par les choses.</li></ul>\n<p><strong>7. Barème indicatif (12 points).</strong> Introduction : 2 pts ; problématique effectivement traitée et progression du plan : 4 pts ; exploitation précise et croisée des quatre textes : 3 pts ; culture personnelle et ouverture pertinentes : 1 pt ; conclusion : 1 pt ; organisation (paragraphes, transitions) : 1 pt.</p>\n"
+      }
+     ]
+    },
+    {
+     "id": "P3",
+     "label": "Troisième partie",
+     "short": "P3",
+     "titre": "Connaissance de la langue et approche didactique du français",
+     "points": 14,
+     "intro": "<p>Dans une classe de CE2 de Sada, au cours d’une séquence de sciences sur les animaux de l’île, les élèves ont lu plusieurs fiches documentaires, puis ont reçu la consigne suivante : « Écris un petit texte documentaire pour présenter un animal de Mayotte aux correspondants de la classe, qui habitent en métropole. » Anli, dont la langue familiale est le shimaoré, a produit le texte ci-dessous (numéros de phrases ajoutés).</p><div class=\"copie-eleve\"><p class=\"copie-titre\">Production d’Anli (CE2, école de Sada) – premier jet</p>\n<p><strong>Le maki</strong></p>\n<p>(1) Le maki il vi dans les arbre de la forê. (2) Il a un poil marron et un longue queu. (3) Ses yeux sont grand. (4) Il mange des fruit, des feuille et des fleur. (5) Les maki son protéger a Mayotte. (6) On a pas le droit de les attrapé. (7) Moi j’aime le maki parce que il est jolie et il saute dune branche a lautre.</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "langue",
+       "points": 3,
+       "enonce": "<p>Relevez les erreurs orthographiques de la production d’Anli et classez-les à l’aide d’une typologie que vous nommerez. Proposez la forme correcte.</p>",
+       "corrige": "<p>On peut utiliser la typologie de <strong>Nina Catach</strong> (<em>L’Orthographe française</em>, Nathan, 1980), qui distingue les erreurs selon la fonction des graphèmes concernés.</p>\n<table class=\"tab\"><tr><th>Catégorie</th><th>Erreurs d’Anli</th><th>Correction et commentaire</th></tr>\n<tr><td>Erreurs <strong>phonogrammiques</strong> (transcription des sons)</td><td>« queu »</td><td>queue : la graphie « eu » transcrit correctement [ø] ; le -e final muet est une particularité lexicale. L’erreur conserve la valeur sonore.</td></tr>\n<tr><td>Erreurs <strong>morphogrammiques grammaticales</strong> (marques d’accord et de conjugaison)</td><td>« vi », « arbre », « grand », « fruit », « feuille », « fleur », « maki » (5), « protéger », « jolie »</td><td>vit (3<sup>e</sup> personne du singulier du présent de <em>vivre</em>) ; les arbres, des fruits, des feuilles, des fleurs, les makis (marque -s du pluriel du nom) ; grands (adjectif attribut accordé avec « ses yeux ») ; protégés (participe passé accordé avec le sujet « les makis ») ; joli (masculin, accordé avec « il »).</td></tr>\n<tr><td>Erreurs <strong>morphogrammiques lexicales</strong> (lettres muettes liées à la famille du mot)</td><td>« forê »</td><td>forêt : le -t se retrouve dans « forestier » ; l’accent circonflexe marque la disparition d’un -s ancien.</td></tr>\n<tr><td>Erreurs <strong>logogrammiques</strong> (homophones)</td><td>« son », « a » (2 fois), « attrapé »</td><td>sont (verbe <em>être</em>, remplaçable par « étaient ») ; à (préposition, non remplaçable par « avait ») ; attraper (infinitif après « le droit de »).</td></tr>\n<tr><td>Erreurs <strong>idéogrammiques</strong> (signes : apostrophe, ponctuation)</td><td>« dune », « lautre »</td><td>d’une, l’autre : l’élision est marquée par l’apostrophe ; erreur de segmentation, fréquente quand les mots grammaticaux ne sont pas identifiés à l’écrit.</td></tr>\n<tr><td>Erreurs relevant de la <strong>morphosyntaxe</strong> (au-delà de l’orthographe)</td><td>« un longue queu », « On a pas », « parce que il », « Le maki il vi »</td><td>une longue queue (genre du déterminant) ; On n’a pas (négation complète) ; parce qu’il (élision obligatoire) ; « Le maki vit » (reprise pronominale propre à l’oral).</td></tr></table>\n<p><strong>Bilan</strong> : l’orthographe phonétique est globalement acquise (presque toutes les erreurs conservent la prononciation) ; les difficultés portent sur les <strong>marques morphologiques muettes</strong> (pluriel, accords, terminaisons verbales) et sur le <strong>genre</strong>, ce qui est cohérent avec le profil d’un élève qui apprend le français comme langue seconde.</p>"
+      },
+      {
+       "id": "2",
+       "type": "didactique-fr",
+       "points": 1.5,
+       "enonce": "<p>Les erreurs « un longue queu » et « il est jolie » concernent le genre. Formulez une hypothèse sur leur origine en tenant compte du profil d’Anli, puis proposez deux activités pour l’aider.</p>",
+       "corrige": "<p><strong>Hypothèse</strong> : en français, le genre des noms inanimés est arbitraire (rien ne justifie que « queue » soit féminin) et doit être mémorisé mot par mot, avec son déterminant. Le shimaoré, langue bantoue, ne connaît pas de genre masculin/féminin : les noms y sont répartis en <strong>classes nominales</strong> marquées par des préfixes, qui servent aussi à marquer le pluriel. Anli ne peut donc pas s’appuyer sur sa langue première pour attribuer le genre ; il généralise ou hésite (« un longue », « jolie » pour un masculin). Ce n’est pas un défaut d’attention mais une <strong>interlangue</strong> en construction.</p>\n<p><strong>Activités</strong> :</p><ol>\n<li><strong>Mémoriser les noms avec leur déterminant</strong> : répertoire lexical illustré où chaque nom est noté avec « un / une » et une couleur ; jeux de loto ou de « Qui a… ? » où l’on doit toujours dire le déterminant ; manipulation de substitutions (« une longue queue / un long museau »).</li>\n<li><strong>Approche comparative (éveil aux langues)</strong> : comparer comment le shimaoré et le français disent « un maki / des makis », « une feuille / des feuilles » ; les élèves constatent qu’en shimaoré le changement se fait au début du mot et s’entend, alors qu’en français il est souvent à la fin et muet. Cette comparaison valorise la langue d’Anli et rend explicite la logique du français.</li></ol>"
+      },
+      {
+       "id": "3",
+       "type": "langue",
+       "points": 1,
+       "enonce": "<p>Phrase (1) : « Le maki il vi dans les arbre de la forê. » Analysez la construction de cette phrase et indiquez comment l’expliquer à un élève de CE2.</p>",
+       "corrige": "<p>La phrase présente une <strong>dislocation à gauche</strong> : le groupe nominal « Le maki » est détaché en tête de phrase, puis repris par le pronom personnel « il », qui occupe la fonction de <strong>sujet</strong> du verbe « vit ». Cette construction, très fréquente à l’oral (« Mon frère, il… »), met en valeur le thème de la phrase. À l’écrit, et plus encore dans un texte documentaire, on attend une seule expression du sujet : « Le maki vit dans les arbres de la forêt. »</p>\n<p>À un élève de CE2, on explique qu’à l’écrit on ne « dit pas deux fois » qui fait l’action : on cherche <strong>qui vit dans les arbres</strong> (« le maki ») et on supprime « il ». On peut comparer des phrases de l’oral et de l’écrit sur une affiche (« À l’oral on dit… / À l’écrit on écrit… »), sans dévaloriser la langue orale.</p>"
+      },
+      {
+       "id": "4",
+       "type": "langue",
+       "points": 1.5,
+       "enonce": "<p>Dans la version corrigée des phrases (5) et (6) : « Les makis sont protégés à Mayotte. On n’a pas le droit de les attraper. » a) Donnez la nature et la fonction de « protégés ». b) Donnez la nature et la fonction de « les » dans « de les attraper ». c) Donnez la nature de « à Mayotte » et sa fonction.</p>",
+       "corrige": "<ul>\n<li><strong>protégés</strong> : participe passé du verbe <em>protéger</em>. Deux analyses sont recevables : avec l’auxiliaire <em>être</em>, il forme la <strong>voix passive</strong> (« sont protégés » = présent passif ; « par la loi » est sous-entendu), ou il est employé comme adjectif, <strong>attribut du sujet</strong> « les makis ». Dans les deux cas, il s’accorde avec le sujet (masculin pluriel).</li>\n<li><strong>les</strong> : <strong>pronom personnel</strong> de la 3<sup>e</sup> personne du pluriel, qui reprend « les makis » ; il est <strong>complément d’objet direct (complément du verbe)</strong> « attraper ». Ce n’est pas un déterminant : il est placé devant un verbe, non devant un nom.</li>\n<li><strong>à Mayotte</strong> : groupe nominal prépositionnel (préposition « à » + nom propre) ; <strong>complément de phrase</strong> de lieu : il est déplaçable (« À Mayotte, les makis sont protégés ») et supprimable.</li></ul>"
+      },
+      {
+       "id": "5",
+       "type": "langue",
+       "points": 2,
+       "enonce": "<p>Réécrivez le texte suivant (phrases 1, 2 et 7 corrigées et reformulées) en remplaçant « le maki » par « les makis » et faites toutes les modifications nécessaires : « Le maki vit dans les arbres de la forêt. Il a un pelage marron et une longue queue. Il est joli et il saute d’une branche à l’autre. » Justifiez les accords et expliquez l’intérêt de cet exercice.</p>",
+       "corrige": "<p>« Les makis <u>vivent</u> dans les arbres de la forêt. <u>Ils ont</u> un pelage <u>marron</u> et une longue queue. <u>Ils sont jolis</u> et <u>ils sautent</u> d’une branche à l’autre. »</p>\n<ul><li>« vivent », « ont », « sont », « sautent » : le verbe s’accorde avec son sujet à la 3<sup>e</sup> personne du pluriel (-nt).</li>\n<li>« jolis » : l’adjectif attribut s’accorde avec le sujet « ils ».</li>\n<li>« marron » reste invariable : adjectif de couleur issu d’un nom (comme « orange », « noisette »).</li>\n<li>« un pelage », « une longue queue » peuvent rester au singulier (chaque maki a un pelage et une queue ; le pluriel distributif « de longues queues » est aussi acceptable).</li>\n<li>« d’une branche à l’autre » ne change pas.</li></ul>\n<p><strong>Intérêt</strong> : cet exercice de <strong>transposition</strong> met en évidence les <strong>chaînes d’accord</strong> : l’élève observe que changer un seul mot entraîne une série de modifications, souvent inaudibles à l’oral (« il saute / ils sautent »). C’est un outil privilégié pour faire comprendre que l’orthographe grammaticale du français repose sur des marques muettes, particulièrement déroutantes pour un élève allophone.</p>"
+      },
+      {
+       "id": "6",
+       "type": "langue",
+       "points": 1,
+       "enonce": "<p>Proposez quatre mots de la famille de « forêt » et expliquez comment cette famille peut aider Anli à orthographier le mot.</p>",
+       "corrige": "<p><strong>Famille</strong> : forestier / forestière, déforestation, reforestation, forêt-galerie (mot composé) ; on peut aussi citer « déforester ».</p>\n<p>Ces mots font entendre un [t] (et un [s]) absents de « forêt » : ils justifient la lettre muette finale <strong>-t</strong> (morphogramme lexical). L’accent circonflexe de « forêt » rappelle le -s qui apparaît dans « forestier » (ancien « forest »). Apprendre à chercher un mot de la même famille (« Pour savoir comment finit un mot, je cherche un mot de sa famille ») est une <strong>procédure</strong> transférable : lit / literie, fruit / fruitier, bois / boiser. La déforestation, qui menace l’habitat du maki à Mayotte, peut être étudiée en sciences et fournir un contexte signifiant.</p>"
+      },
+      {
+       "id": "7",
+       "type": "didactique-fr",
+       "points": 2,
+       "enonce": "<p>Au regard de la consigne, quelles caractéristiques du texte documentaire la production d’Anli respecte-t-elle, et lesquelles ne respecte-t-elle pas encore ? Proposez trois critères de réécriture adaptés.</p>",
+       "corrige": "<p><strong>Réussites</strong> : Anli respecte le thème (un animal de Mayotte) ; il présente des informations variées et exactes organisées en rubriques implicites (habitat, description, alimentation, protection) ; il utilise le <strong>présent de vérité générale</strong> et la 3<sup>e</sup> personne ; il a réemployé du lexique lu dans les fiches (« protégés »).</p>\n<p><strong>Écarts</strong> : la phrase (7) introduit un point de vue personnel (« Moi j’aime… il est joli ») qui relève de l’expression de soi et non du texte documentaire ; le destinataire (des correspondants de métropole qui ne connaissent pas le maki) n’est pas pris en compte (le maki n’est pas défini : « un lémurien », « un animal qui ressemble à un petit singe ») ; il n’y a pas de titre intermédiaire, d’illustration légendée ou de mise en page propre au documentaire ; le registre oral (« Le maki il », « Moi j’aime ») apparaît.</p>\n<p><strong>Critères de réécriture</strong> (en nombre limité) :</p><ol>\n<li>« J’explique ce qu’est le maki à quelqu’un qui ne l’a jamais vu (phrase de définition au début). »</li>\n<li>« Je regroupe mes informations en petites parties avec un titre : où il vit, à quoi il ressemble, ce qu’il mange, pourquoi il est protégé. »</li>\n<li>« Je relis chaque groupe nominal au pluriel pour vérifier les marques (les makis, des fruits). »</li></ol>\n<p>On peut proposer à Anli de garder son avis personnel pour une bulle ou une rubrique « Le savais-tu ? », afin de ne pas nier son engagement.</p>"
+      },
+      {
+       "id": "8",
+       "type": "didactique-fr",
+       "points": 2,
+       "enonce": "<p>Proposez une séance de 45 minutes permettant de travailler le pluriel du groupe nominal avec les élèves de cette classe, en vous appuyant sur leur plurilinguisme.</p>",
+       "corrige": "<p><strong>Objectif</strong> : identifier et produire les marques du pluriel dans le groupe nominal (déterminant, nom, adjectif) ; prendre conscience que le pluriel se marque surtout à l’écrit en français.</p>\n<ol>\n<li><strong>Découverte comparative (10 min)</strong> : l’enseignant écrit au tableau « un maki / des makis », « une feuille / des feuilles » ; il demande aux élèves comment on dit ces mots au singulier et au pluriel en shimaoré, en kibushi ou dans d’autres langues de la classe (les élèves locuteurs sont les experts). On constate : en shimaoré, le pluriel s’<em>entend</em>, car il se marque au début du mot (changement de préfixe) ; en kibushi, comme en malgache, le nom ne change pas et c’est le contexte ou un autre mot qui indique la quantité ; en français, on l’entend surtout dans le déterminant (« le / les », « un / des ») et on l’<em>écrit</em> à la fin du nom.</li>\n<li><strong>Formulation de la règle (5 min)</strong> : trace écrite collective : « En français, pour savoir si un nom est au pluriel, je regarde le déterminant. Au pluriel, j’ajoute -s (ou -x) au nom et à l’adjectif, même si je ne l’entends pas. »</li>\n<li><strong>Pratique guidée (15 min)</strong> : manipulation d’étiquettes (déterminants, noms, adjectifs) pour construire des groupes nominaux au singulier et au pluriel ; les élèves entourent le déterminant et relient par une flèche les mots qui « prennent la marque » (chaîne d’accord).</li>\n<li><strong>Réinvestissement (10 min)</strong> : chaque élève relit son texte documentaire en surlignant les déterminants pluriels et vérifie les noms et adjectifs qui en dépendent.</li>\n<li><strong>Bilan (5 min)</strong> : verbalisation de la procédure ; affichage de l’outil.</li></ol>\n<p>Cette démarche s’inscrit dans les approches plurielles (éveil aux langues) : elle valorise les langues premières sans renoncer à l’exigence en français écrit.</p>"
+      }
+     ]
+    },
+    {
+     "id": "Q",
+     "label": "Qualité de l’écrit",
+     "short": "Q",
+     "titre": "Correction syntaxique et qualité écrite",
+     "points": 6,
+     "questions": [
+      {
+       "id": "1",
+       "type": "qualite",
+       "points": 6,
+       "enonce": "<p>La correction syntaxique et la qualité écrite de l’ensemble de votre copie sont évaluées sur <strong>6 points</strong>. Réservez 10 à 15 minutes en fin d’épreuve pour relire votre copie, en particulier votre réponse à la deuxième partie, puis attribuez-vous une note à l’aide de la grille du corrigé.</p>",
+       "corrige": "<p><strong>Grille de relecture et répartition indicative des 6 points</strong></p><table class=\"tab\"><tr><th>Critère</th><th>Ce que l’on vérifie</th><th>Points</th></tr><tr><td>Orthographe grammaticale</td><td>Accords dans le groupe nominal (déterminant, nom, adjectif), accord sujet-verbe (sujet inversé, éloigné, pronom relatif « qui »), accord du participe passé avec « être » et avec « avoir » (COD placé avant), homophones grammaticaux (a/à, et/est, ce/se, ces/ses, on/ont, leur/leurs, quel(le)/qu’elle, -é/-er).</td><td>2</td></tr><tr><td>Conjugaison et syntaxe</td><td>Formes verbales exactes (passé simple, subjonctif après « bien que », « il faut que »), concordance des temps, phrases complètes et bien construites, négation complète (« ne… pas »), interrogation indirecte sans inversion ni point d’interrogation, pronoms relatifs corrects (« dont », « auquel »).</td><td>1,5</td></tr><tr><td>Ponctuation et présentation</td><td>Majuscules, points, virgules devant les connecteurs et autour des incises, guillemets pour chaque citation, titres d’œuvres soulignés à la main, alinéas marquant les paragraphes, écriture lisible, absence de ratures multiples.</td><td>1</td></tr><tr><td>Lexique et registre</td><td>Vocabulaire précis et varié (pas de « chose », « truc », « faire » répété), registre soutenu, terminologie grammaticale et didactique exacte, absence de tournures orales (« du coup », « ça »).</td><td>1</td></tr><tr><td>Structuration du propos</td><td>Introduction, développement en parties annoncées, connecteurs logiques (« en effet », « cependant », « en outre », « ainsi »), transitions, conclusion ; réponses de la troisième partie rédigées en phrases.</td><td>0,5</td></tr></table><p><strong>Barème d’usage</strong> : en pratique, les correcteurs retirent environ 0,25 à 0,5 point par type d’erreur récurrente ; une copie qui présente plus d’une dizaine d’erreurs de langue sur l’ensemble ne peut guère dépasser 2/6, une copie presque sans faute, bien ponctuée et bien structurée obtient 5 ou 6/6.</p><p><strong>Point de vigilance pour ce sujet</strong> : attention aux titres d’œuvres (<em>Émile ou De l’éducation</em>, <em>Paul et Virginie</em>, <em>Deux Ans de vacances</em>) à souligner dans une copie manuscrite, à l’accord de « robinsonnade(s) » et aux citations d’un texte à l’orthographe ancienne, qu’il faut recopier telles quelles.</p><p><strong>Méthode de relecture efficace</strong> : relisez en trois passages ciblés plutôt qu’une seule fois : 1) les verbes (repérer chaque verbe, chercher son sujet, vérifier la terminaison) ; 2) les groupes nominaux et les participes passés ; 3) la ponctuation et les homophones. Le rapport de jury 2023 rappelle que la présentation et la graphie « mériteraient d’être plus soignées » : un futur professeur écrit au tableau devant ses élèves.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "myt-fr-3",
+   "num": 3,
+   "domaine": "francais",
+   "titre": "Sujet 3 · Raconter, lire à voix haute",
+   "theme": "Le langage oral à l’école maternelle ; la voix qui raconte et transmet (Sand, Proust, Anatole France) ; encodage en fin de CP",
+   "source": "Sujet original construit sur le modèle des sessions 2023 à 2025 (académie de Mayotte)",
+   "remarque": "Textes littéraires cités d’après fr.wikisource.org ; texte de compréhension orale et productions d’élèves rédigés pour Belamis.",
+   "total": 40,
+   "eliminatoire": 10,
+   "duree": 14400,
+   "parties": [
+    {
+     "id": "P1",
+     "label": "Première partie",
+     "short": "P1",
+     "titre": "Compréhension orale d’un texte didactique",
+     "points": 8,
+     "intro": "<p>Le texte est lu <strong>deux fois</strong>, titre compris, par deux lecteurs différents. Vous pouvez prendre des notes pendant les lectures. Le questionnaire est ensuite retourné : cochez <strong>la ou les réponse(s) correcte(s)</strong>. Durée de la partie : 30 minutes, lectures comprises.</p><p><em>Sur Belamis : écoutez (ou faites-vous lire) le texte deux fois sans le regarder, puis répondez.</em></p>",
+     "audio": {
+      "titre": "Faire parler les jeunes enfants : un enseignement à part entière",
+      "texte": [
+       "L’école maternelle a pour première mission de permettre à chaque enfant d’entrer dans le langage. Les programmes applicables depuis la rentrée 2025 le rappellent en intitulant leur premier domaine « Le développement et la structuration du langage oral et écrit ». Ce programme, publié au Bulletin officiel du 31 octobre 2024, remplace l’ancien domaine « Mobiliser le langage dans toutes ses dimensions ». Le changement n’est pas anodin : il signifie que le langage oral ne se développe pas spontanément par le seul fait de vivre en collectivité, mais qu’il fait l’objet d’un enseignement structuré.",
+       "Les recherches de la psychologue Agnès Florin, menées dès les années 1980, ont montré que les grands moments collectifs de langage, où la classe entière discute avec l’enseignant, profitent surtout aux enfants qui parlent déjà beaucoup. Dans ces échanges, quelques « grands parleurs » monopolisent la parole tandis que les « petits parleurs » se taisent ou se contentent de répondre par un mot. Agnès Florin, auteure de Parler ensemble en maternelle, paru chez Ellipses en 1995, recommande donc de multiplier les situations en petits groupes, dans lesquelles chaque enfant est sollicité et entendu.",
+       "Philippe Boisseau, inspecteur de l’Éducation nationale, a prolongé ces constats dans Enseigner la langue orale en maternelle, publié chez Retz en 2005. Il insiste sur la notion de progression : l’adulte doit parler à l’enfant en utilisant des phrases légèrement plus complexes que celles que l’enfant produit lui-même. Lorsqu’un enfant de trois ans dit « le chien, il court », l’enseignant reprend : « Oui, le chien court après le chat. » Cette reformulation n’est pas une correction sèche ; elle offre un modèle, juste au-dessus de ce que l’enfant sait faire. Boisseau a également conçu les albums-échos : des livres fabriqués en classe à partir de photographies des enfants en activité, dont le texte est écrit au niveau de langage que l’on vise pour chacun.",
+       "Le vocabulaire constitue un deuxième enjeu majeur. Deux chercheurs américains, Betty Hart et Todd Risley, ont souligné en 1995 les écarts considérables de quantité de mots entendus par les jeunes enfants selon leur milieu familial. Même si l’ampleur de ces écarts a depuis été discutée, le constat a conforté une idée simple : l’école doit enseigner le lexique de manière explicite, organisée et répétée, et non se contenter d’y exposer les élèves. Un mot n’est véritablement acquis que lorsque l’enfant l’a rencontré plusieurs fois, dans des contextes variés, et qu’il l’a lui-même réemployé.",
+       "Mireille Brigaudiot, spécialiste des sciences du langage, rappelle enfin dans Langage et école maternelle, paru chez Hatier en 2015, que le langage de l’école n’est pas celui de la maison. À la maison, on parle surtout de ce qui est là, sous les yeux ; à l’école, il faut apprendre à évoquer ce qui est absent, à raconter une histoire entendue, à expliquer ce que l’on a fait. Ce langage d’évocation est déterminant pour la suite de la scolarité, car il prépare directement à la compréhension des textes écrits. La lecture régulière d’albums par l’enseignant, suivie de reformulations par les enfants, en constitue l’un des principaux leviers.",
+       "Encore faut-il que l’enseignant soit lui-même un modèle. Le programme de l’école maternelle précise que « les professeurs s’expriment dans une langue riche, adaptée et explicite ». Parler lentement, articuler, nommer précisément les objets et les actions, varier les structures de phrases : autant de gestes professionnels qui paraissent simples, mais qui, répétés chaque jour, font une grande différence pour les élèves les plus éloignés de la langue de l’école."
+      ],
+      "source": "Texte rédigé pour Belamis d’après le programme de l’école maternelle (BO n° 41 du 31 octobre 2024 pour le langage oral et écrit ; programme de cycle 1 applicable à la rentrée 2025), A. Florin (Parler ensemble en maternelle, Ellipses, 1995), P. Boisseau (Enseigner la langue orale en maternelle, Retz, 2005), B. Hart et T. Risley (Meaningful Differences…, 1995) et M. Brigaudiot (Langage et école maternelle, Hatier, 2015)."
+     },
+     "questions": [
+      {
+       "id": "1",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Dans les programmes de l’école maternelle applicables depuis la rentrée 2025, le domaine consacré au langage s’intitule :</p>",
+       "options": [
+        "« Mobiliser le langage dans toutes ses dimensions »",
+        "« Le développement et la structuration du langage oral et écrit »",
+        "« Découvrir le monde du langage »"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« « Le développement et la structuration du langage oral et écrit » »).</strong></p><p><em>Justification</em> : « en intitulant leur premier domaine « Le développement et la structuration du langage oral et écrit » »</p><p>La réponse A est l’intitulé de l’<strong>ancien</strong> domaine (programme de 2015, modifié en 2021), que le texte dit remplacé : c’est le piège de la question.</p>"
+      },
+      {
+       "id": "2",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, le langage oral à l’école maternelle :</p>",
+       "options": [
+        "se développe spontanément par la vie en collectivité",
+        "fait l’objet d’un enseignement structuré",
+        "relève d’abord de la responsabilité des familles"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« fait l’objet d’un enseignement structuré »).</strong></p><p><em>Justification</em> : « le langage oral ne se développe pas spontanément par le seul fait de vivre en collectivité, mais […] il fait l’objet d’un enseignement structuré »</p>"
+      },
+      {
+       "id": "3",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon les recherches d’Agnès Florin, les grands moments collectifs de langage :</p>",
+       "options": [
+        "profitent surtout aux enfants qui parlent déjà beaucoup",
+        "sont le meilleur moyen de faire parler les « petits parleurs »",
+        "sont souvent monopolisés par quelques « grands parleurs »"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : A (« profitent surtout aux enfants qui parlent déjà beaucoup »), C (« sont souvent monopolisés par quelques « grands parleurs » »).</strong></p><p><em>Justification</em> : « profitent surtout aux enfants qui parlent déjà beaucoup. Dans ces échanges, quelques « grands parleurs » monopolisent la parole »</p>"
+      },
+      {
+       "id": "4",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Qu’apprend-on au sujet d’Ellipses ?</p>",
+       "options": [
+        "C’est l’éditeur de Parler ensemble en maternelle.",
+        "C’est une figure de style que l’enseignant doit éviter en reformulant.",
+        "C’est le nom des albums conçus par Philippe Boisseau."
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse : A (« C’est l’éditeur de Parler ensemble en maternelle. »).</strong></p><p><em>Justification</em> : « Parler ensemble en maternelle, paru chez Ellipses en 1995 »</p><p>Piège : « ellipse » est aussi un terme de grammaire et de rhétorique ; les albums de Boisseau s’appellent « albums-échos ».</p>"
+      },
+      {
+       "id": "5",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Dans l’exemple du texte, la réponse de l’enseignant « Oui, le chien court après le chat » est :</p>",
+       "options": [
+        "une correction sèche de l’erreur de l’enfant",
+        "une reformulation qui offre un modèle légèrement plus complexe",
+        "une évaluation de la production orale de l’enfant"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« une reformulation qui offre un modèle légèrement plus complexe »).</strong></p><p><em>Justification</em> : « Cette reformulation n’est pas une correction sèche ; elle offre un modèle, juste au-dessus de ce que l’enfant sait faire. »</p>"
+      },
+      {
+       "id": "6",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Les albums-échos :</p>",
+       "options": [
+        "sont fabriqués à partir de photographies des enfants en activité",
+        "sont des albums du commerce lus chaque jour à la classe",
+        "ont un texte écrit au niveau de langage visé pour chaque enfant",
+        "ont été conçus par Mireille Brigaudiot"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : A (« sont fabriqués à partir de photographies des enfants en activité »), C (« ont un texte écrit au niveau de langage visé pour chaque enfant »).</strong></p><p><em>Justification</em> : « des livres fabriqués en classe à partir de photographies des enfants en activité, dont le texte est écrit au niveau de langage que l’on vise pour chacun »</p><p>Ils ont été conçus par Philippe Boisseau, non par Mireille Brigaudiot.</p>"
+      },
+      {
+       "id": "7",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, un mot est véritablement acquis lorsque l’enfant :</p>",
+       "options": [
+        "l’a entendu une fois dans une histoire lue",
+        "l’a rencontré plusieurs fois, dans des contextes variés",
+        "l’a lui-même réemployé",
+        "l’a recopié dans un répertoire"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : B (« l’a rencontré plusieurs fois, dans des contextes variés »), C (« l’a lui-même réemployé »).</strong></p><p><em>Justification</em> : « Un mot n’est véritablement acquis que lorsque l’enfant l’a rencontré plusieurs fois, dans des contextes variés, et qu’il l’a lui-même réemployé. »</p>"
+      },
+      {
+       "id": "8",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon Mireille Brigaudiot, le langage d’évocation :</p>",
+       "options": [
+        "permet de parler de ce qui est absent",
+        "est surtout celui de la maison",
+        "prépare à la compréhension des textes écrits"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : A (« permet de parler de ce qui est absent »), C (« prépare à la compréhension des textes écrits »).</strong></p><p><em>Justification</em> : « il faut apprendre à évoquer ce qui est absent […] Ce langage d’évocation […] prépare directement à la compréhension des textes écrits »</p><p>À la maison, au contraire, « on parle surtout de ce qui est là, sous les yeux ».</p>"
+      }
+     ]
+    },
+    {
+     "id": "P2",
+     "label": "Deuxième partie",
+     "short": "P2",
+     "titre": "Compréhension écrite et rédaction",
+     "points": 12,
+     "intro": "<p><strong>Corpus</strong></p><ul><li>Texte 1 : George Sand, Avant-propos de <em>François le Champi</em> (1850).</li><li>Texte 2 : Marcel Proust, <em>Du côté de chez Swann</em>, « Combray » (1913).</li><li>Texte 3 : Anatole France, <em>Le Livre de mon ami</em>, « Le Livre de Suzanne » (1885).</li></ul><div class=\"doc\"><p class=\"doc-title\">Texte 1 – George Sand, Avant-propos de <em>François le Champi</em> (1850)</p><p><em>Le narrateur (George Sand elle-même, qui s’exprime ici au masculin) et son ami R*** se promènent dans la campagne du Berry. Ils s’interrogent sur la manière dont un écrivain peut faire entrer dans la littérature la vie et la parole des paysans. C’est l’ami qui parle le premier.</em></p><p>— Par exemple, dit-il, nous avons assisté hier à une veillée rustique à la ferme. Le chanvreur a conté des histoires jusqu’à deux heures du matin. La servante du curé l’aidait ou le reprenait ; c’était une paysanne un peu cultivée ; lui, un paysan inculte, mais heureusement doué et fort éloquent à sa manière. À eux deux, ils nous ont raconté une histoire vraie, assez longue, et qui avait l’air d’un roman intime. L’as-tu retenue ?</p><p>— Parfaitement, et je pourrais la redire mot à mot dans leur langage.</p><p>— Mais leur langage exige une traduction ; il faut écrire en français, et ne pas se permettre un mot qui ne le soit pas, à moins qu’il ne soit si intelligible qu’une note devienne inutile pour le lecteur.</p><p>— Je le vois, tu m’imposes un travail à perdre l’esprit, et dans lequel je ne me suis jamais plongé que pour en sortir mécontent de moi-même et pénétré de mon impuissance.</p><p>— N’importe ! tu t’y plongeras encore, car je vous connais, vous autres artistes ; vous ne vous passionnez que devant les obstacles, et vous faites mal ce que vous faites sans souffrir. Tiens, commence, raconte-moi l’histoire du Champi, non pas telle que je l’ai entendue avec toi. C’était un chef-d’œuvre de narration pour nos esprits et pour nos oreilles du terroir. Mais raconte-la-moi comme si tu avais à ta droite un Parisien parlant la langue moderne, et à ta gauche un paysan devant lequel tu ne voudrais pas dire une phrase, un mot où il ne pourrait pas pénétrer. Ainsi tu dois parler clairement pour le Parisien, naïvement pour le paysan. L’un te reprochera de manquer de couleur, l’autre d’élégance. Mais je serai là aussi ; moi qui cherche par quel rapport l’art, sans cesser d’être l’art pour tous, peut entrer dans le mystère de la simplicité primitive, et communiquer à l’esprit le charme répandu dans la nature.</p><p class=\"doc-src\">George Sand, <em>François le Champi</em>, Avant-propos, dans <em>Œuvres illustrées de George Sand</em>, vol. 3, Paris, J. Hetzel, 1853, p. 2-4 (fr.wikisource.org). Chanvreur : ouvrier qui travaille le chanvre ; veillée : réunion du soir où l’on travaille et où l’on raconte.</p></div><div class=\"doc\"><p class=\"doc-title\">Texte 2 – Marcel Proust, <em>Du côté de chez Swann</em> (1913)</p><p><em>Un soir, à Combray, l’enfant narrateur ne parvient pas à s’endormir ; sa mère accepte exceptionnellement de passer la nuit dans sa chambre et lui lit l’un des romans de George Sand que sa grand-mère lui destinait pour sa fête.</em></p><p>Maman s’assit à côté de mon lit ; elle avait pris François le Champi à qui sa couverture rougeâtre et son titre incompréhensible donnaient pour moi une personnalité distincte et un attrait mystérieux. Je n’avais jamais lu encore de vrais romans. J’avais entendu dire que George Sand était le type du romancier. Cela me disposait déjà à imaginer dans François le Champi quelque chose d’indéfinissable et de délicieux. Les procédés de narration destinés à exciter la curiosité ou l’attendrissement, certaines façons de dire qui éveillent l’inquiétude et la mélancolie, et qu’un lecteur un peu instruit reconnaît pour communs à beaucoup de romans, me paraissaient simples — à moi qui considérais un livre nouveau non comme une chose ayant beaucoup de semblables, mais comme une personne unique, n’ayant de raison d’exister qu’en soi — une émanation troublante de l’essence particulière à François le Champi. Sous ces événements si journaliers, ces choses si communes, ces mots si courants, je sentais comme une intonation, une accentuation étrange. L’action s’engagea ; elle me parut d’autant plus obscure que dans ce temps-là, quand je lisais, je rêvassais souvent, pendant des pages entières, à tout autre chose. Et aux lacunes que cette distraction laissait dans le récit, s’ajoutait, quand c’était maman qui me lisait à haute voix, qu’elle passait toutes les scènes d’amour. Aussi tous les changements bizarres qui se produisent dans l’attitude respective de la meunière et de l’enfant et qui ne trouvent leur explication que dans les progrès d’un amour naissant me paraissaient empreints d’un profond mystère dont je me figurais volontiers que la source devait être dans ce nom inconnu et si doux de « Champi » qui mettait sur l’enfant, qui le portait sans que je susse pourquoi, sa couleur vive, empourprée et charmante.</p><p>[…] Si ma mère était une lectrice infidèle, c’était aussi, pour les ouvrages où elle trouvait l’accent d’un sentiment vrai, une lectrice admirable par le respect et la simplicité de l’interprétation, par la beauté et la douceur du son. […] Elle retrouvait pour les attaquer dans le ton qu’il faut l’accent cordial qui leur préexiste et les dicta, mais que les mots n’indiquent pas ; grâce à lui elle amortissait au passage toute crudité dans les temps des verbes, donnait à l’imparfait et au passé défini la douceur qu’il y a dans la bonté, la mélancolie qu’il y a dans la tendresse, dirigeait la phrase qui finissait vers celle qui allait commencer, tantôt pressant, tantôt ralentissant la marche des syllabes pour les faire entrer, quoique leurs quantités fussent différentes, dans un rythme uniforme, elle insufflait à cette prose si commune une sorte de vie sentimentale et continue.</p><p class=\"doc-src\">Marcel Proust, <em>À la recherche du temps perdu</em>, t. 1, <em>Du côté de chez Swann</em>, première partie, « Combray », Paris, Gallimard, 1946 (fr.wikisource.org). « Passé défini » : ancien nom du passé simple.</p></div><div class=\"doc\"><p class=\"doc-title\">Texte 3 – Anatole France, <em>Le Livre de mon ami</em> (1885)</p><p><em>Le narrateur, Pierre Nozière, réfléchit aux livres qu’il convient de donner à sa petite fille Suzanne ; dans la seconde partie de l’extrait, un personnage, Raymond, évoque l’origine des contes de fées.</em></p><p>Il faut des contes aux petits et aux grands enfants, de beaux contes en vers ou en prose, des écrits qui nous donnent à rire ou à pleurer, et qui nous mettent dans l’enchantement.</p><p>[…] Eh bien, ce besoin de rêver, l’enfant l’éprouve. Il sent son imagination qui travaille, et c’est pour cela qu’il veut des contes.</p><p>Les conteurs refont le monde à leur manière et ils donnent aux faibles, aux simples, aux petits, l’occasion de le refaire à la leur. Aussi ont-ils l’influence la plus sympathique. Ils aident à imaginer, à sentir, à aimer.</p><p>[…]</p><p>[…] partout, dans la cabane, ou sous la tente, ou devant le feu de broussailles allumé dans la plaine, l’enfant d’autrefois, devenue aïeule à son tour, répétait aux petits les contes qu’elle avait entendus dans son enfance. C’étaient les mêmes personnages et la même aventure ; seulement la conteuse donnait, sans le savoir, à son récit les teintes de l’air qu’elle avait si longtemps respiré et de la terre qui l’avait nourrie et qui allait bientôt la recevoir. La tribu reprenait sa marche à travers les fatigues et les périls, laissant derrière elle, du côté de l’Orient, l’aïeule couchée au milieu des morts jeunes ou vieux. Mais les contes sortis de ses lèvres, maintenant glacées, s’envolaient comme les papillons de Psyché, et ces frêles immortels, se posant de nouveau sur la bouche des vieilles filandières, étincelaient aux yeux agrandis des nouveaux nourrissons de l’antique race. […] Qu’est-ce que Ma Mère l’Oie, sinon notre aïeule à tous et les aïeules de nos aïeules, femmes au cœur simple, aux bras noueux, qui firent leur tâche quotidienne avec une humble grandeur et qui, desséchées par l’âge, n’ayant, comme les cigales, ni chair ni sang, devisaient encore au coin de l’âtre, sous la poutre enfumée, et tenaient à tous les marmots de la maisonnée ces longs discours qui leur faisaient voir mille choses ? Et la poésie rustique, la poésie des champs, des bois et des fontaines, sortait fraîche des lèvres de la vieille édentée.</p><p class=\"doc-src\">Anatole France, <em>Le Livre de mon ami</em>, « Le Livre de Suzanne », Paris, Calmann-Lévy, 1890, p. 257-316 (fr.wikisource.org). Filandière : fileuse ; Psyché : figure mythologique de l’âme, souvent représentée avec des ailes de papillon ; Ma Mère l’Oie : conteuse légendaire à qui Perrault attribue ses contes.</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "synthese",
+       "points": 12,
+       "enonce": "<p>Comment ces textes montrent-ils que la voix qui raconte ou qui lit participe pleinement à la transmission des histoires aux enfants ? Que transmet-elle, au-delà du récit lui-même ?</p><p>Vous répondrez de manière argumentée et structurée, en vous appuyant sur les textes du corpus et sur votre culture personnelle, en veillant à ce qu’elle ne se substitue pas à l’étude des textes.</p>",
+       "corrige": "\n<p><strong>1. Analyser la question.</strong> Elle associe deux idées : 1) la <em>voix</em> (celle du conteur de veillée, de la mère qui lit, de l’aïeule) n’est pas un simple support, elle « participe » à l’histoire : elle la modifie, l’adapte, la colore ; 2) cette voix <em>transmet</em> autre chose que l’intrigue : une langue, une tendresse, des valeurs, une mémoire collective, le goût de rêver. Il faut tenir compte de la diversité du corpus : dialogue sur l’art du récit (Sand), souvenir d’enfance romanesque (Proust), réflexion d’un écrivain-père sur les contes (France).</p>\n<p><strong>2. Problématique possible.</strong> <em>En quoi la transmission orale des histoires, du conteur de veillée à la mère qui lit à voix haute, fait-elle de la voix une véritable interprète, et quel héritage affectif, linguistique et culturel confie-t-elle à l’enfant ?</em></p>\n<p><strong>3. Introduction rédigée (exemple).</strong></p>\n<blockquote>Avant de savoir lire, l’enfant découvre les histoires par la voix des autres. Trois écrivains se sont attachés à ce moment de transmission : dans l’avant-propos de <em>François le Champi</em> (1850), George Sand se demande comment restituer par écrit une histoire contée lors d’une veillée par un chanvreur berrichon ; dans <em>Du côté de chez Swann</em> (1913), Marcel Proust se souvient de sa mère lui lisant ce même roman ; dans <em>Le Livre de mon ami</em> (1885), Anatole France défend les contes de fées que les aïeules répètent aux petits depuis des siècles. Ces textes invitent à se demander en quoi la voix qui raconte ou qui lit ne se contente pas de transmettre une histoire, mais l’interprète, et ce qu’elle confie à l’enfant au-delà du récit. Nous verrons que la voix fait vivre le texte, qu’elle transmet une affection et une langue, et qu’elle inscrit enfin l’enfant dans une chaîne de mémoire collective.</blockquote>\n<p><strong>4. Plan détaillé.</strong></p>\n<p><strong>I. La voix donne vie au récit : raconter, c’est interpréter.</strong></p>\n<ul>\n<li><em>Le conteur, un artiste.</em> Chez Sand, le chanvreur, « paysan inculte, mais heureusement doué et fort éloquent à sa manière », tient son auditoire « jusqu’à deux heures du matin » ; l’histoire est « un chef-d’œuvre de narration pour nos esprits et pour nos oreilles du terroir » : l’oralité a son propre art.</li>\n<li><em>La lectrice, une interprète.</em> La mère de Proust est une « lectrice admirable par le respect et la simplicité de l’interprétation, par la beauté et la douceur du son » ; elle « donnait à l’imparfait et au passé défini la douceur qu’il y a dans la bonté », règle le rythme des phrases (« tantôt pressant, tantôt ralentissant la marche des syllabes ») et « insufflait à cette prose si commune une sorte de vie sentimentale et continue ».</li>\n<li><em>Une voix qui transforme le texte.</em> La conteuse d’Anatole France donne « sans le savoir, à son récit les teintes de l’air qu’elle avait si longtemps respiré » ; la mère de Proust est aussi une « lectrice infidèle » qui « passait toutes les scènes d’amour », ce qui rend l’histoire mystérieuse à l’enfant. Transmettre, c’est aussi adapter à son auditoire.</li>\n</ul>\n<p><strong>II. Au-delà du récit : une affection, une langue, une manière de voir le monde.</strong></p>\n<ul>\n<li><em>La tendresse.</em> Chez Proust, la lecture est une consolation : elle a lieu le soir où la mère accepte de rester ; la voix maternelle, qui « amortissait au passage toute crudité », est celle de la tendresse. Chez France, les contes « aident à imaginer, à sentir, à aimer ».</li>\n<li><em>Une langue.</em> Sand pose le problème de la traduction entre deux langues : « leur langage exige une traduction » ; il faut parler « clairement pour le Parisien, naïvement pour le paysan ». Le récit oral porte une langue régionale et populaire que l’écrit risque de trahir (« Champi n’est pas français », objecte l’ami ; Sand défend le mot par l’usage et par Montaigne, dans la suite de l’avant-propos).</li>\n<li><em>Le goût de rêver et d’apprendre.</em> France : « ce besoin de rêver, l’enfant l’éprouve » ; « Il faut des contes aux petits et aux grands enfants ». Les contes « refont le monde » et donnent « aux faibles, aux simples, aux petits, l’occasion de le refaire à la leur ».</li>\n</ul>\n<p><strong>III. Une chaîne de transmission entre les générations.</strong></p>\n<ul>\n<li><em>Des contes qui traversent les siècles.</em> Chez France, « l’enfant d’autrefois, devenue aïeule à son tour, répétait aux petits les contes qu’elle avait entendus dans son enfance » ; les contes, comme « les papillons de Psyché », survivent à la conteuse. Ma Mère l’Oie devient « notre aïeule à tous ».</li>\n<li><em>Du conteur à l’écrivain, de l’oral à l’écrit.</em> Sand transforme en roman le récit entendu à la veillée ; Proust reçoit ce roman par la voix de sa mère et le choix de sa grand-mère (qui « ne pourrait se décider à donner à cet enfant quelque chose de mal écrit », selon le passage qui précède l’extrait) : la chaîne va de la veillée berrichonne à la chambre de l’enfant, de l’oral à l’écrit puis de nouveau à l’oral.</li>\n<li><em>Ouverture</em> : à Mayotte, les contes transmis en shimaoré ou en kibushi dans les familles relèvent de cette même tradition orale ; l’école peut les accueillir (recueil auprès des familles, contes racontés en langue première puis en français), et le programme de l’école maternelle fait de la lecture d’histoires et de leur reformulation par les élèves un levier majeur du langage. La lecture à voix haute quotidienne par l’enseignant prolonge, à l’école, le geste de la mère de Proust.</li>\n</ul>\n<p><strong>5. Conclusion rédigée (exemple).</strong></p>\n<blockquote>Qu’il s’agisse du chanvreur de la veillée, de la mère qui lit <em>François le Champi</em> ou des aïeules qui répètent les contes de Ma Mère l’Oie, la voix n’est jamais un simple intermédiaire : elle interprète, adapte, colore le récit, et transmet avec lui une tendresse, une langue et le goût de rêver. Chaque enfant qui écoute devient ainsi le maillon d’une chaîne qui relie les générations. C’est une responsabilité que le professeur des écoles partage aujourd’hui avec les familles : lire et raconter chaque jour, avec une voix qui fait vivre les textes, c’est offrir à tous les enfants, et d’abord à ceux qui n’entendent pas d’histoires chez eux, ce que la mère de Proust offrait à son fils.</blockquote>\n<p><strong>6. Erreurs à éviter.</strong></p>\n<ul><li>Résumer successivement les trois textes ; il faut au contraire croiser les textes dans chaque partie.</li>\n<li>Confondre l’auteur et le narrateur (le narrateur de Proust n’est pas simplement « Proust enfant » ; Pierre Nozière est le narrateur d’Anatole France ; chez Sand, c’est « mon ami » qui parle d’abord).</li>\n<li>Oublier le second volet (« que transmet-elle au-delà du récit ? »).</li>\n<li>Négliger la dimension linguistique du texte de Sand, particulièrement éclairante dans un contexte plurilingue.</li></ul>\n<p><strong>7. Barème indicatif (12 points).</strong> Introduction : 2 pts ; problématique traitée et progression : 4 pts ; références précises et croisées aux trois textes : 3 pts ; culture personnelle et ouverture pertinentes : 1 pt ; conclusion : 1 pt ; organisation : 1 pt.</p>\n"
+      }
+     ]
+    },
+    {
+     "id": "P3",
+     "label": "Troisième partie",
+     "short": "P3",
+     "titre": "Connaissance de la langue et approche didactique du français",
+     "points": 14,
+     "intro": "<p>Dans une classe de CP de Dzaoudzi, en fin d’année, l’enseignant a lu plusieurs versions du <em>Petit Chaperon rouge</em>. Il a ensuite demandé aux élèves d’écrire seuls, sans modèle, « une phrase pour dire le moment de l’histoire que tu as préféré ». Voici deux productions, reproduites avec leur orthographe.</p><div class=\"copie-eleve\"><p class=\"copie-titre\">Production d’Ibrahim (CP) – juin</p>\n<p>le lou a manjé la granmer. le chaseur a ouver le vente du lou.</p>\n<p class=\"annot\">Annotation de l’enseignant : « Attention à l’orthographe ! Recopie. »</p></div>\n<div class=\"copie-eleve\"><p class=\"copie-titre\">Production de Nafissa (CP) – juin</p>\n<p>Ma parti préféré ces quan la petite fille done le gatau a sa grand mère et le lou et caché dan le li.</p>\n<p class=\"annot\">Annotation de l’enseignant : « Très bien ! Tu as écrit une longue phrase. »</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "didactique-fr",
+       "points": 2.5,
+       "enonce": "<p>Pour chacune des deux productions, relevez les erreurs et classez-les en distinguant celles qui respectent la valeur sonore des mots (erreurs phonologiquement plausibles) et celles qui ne la respectent pas. Que pouvez-vous en conclure sur les compétences d’encodage de chaque élève ?</p>",
+       "corrige": "<table class=\"tab\"><tr><th>Élève</th><th>Erreurs qui respectent la valeur sonore</th><th>Erreurs qui altèrent la valeur sonore</th></tr>\n<tr><td>Ibrahim</td><td>lou (loup), manjé (mangé), granmer (grand-mère), ouver (ouvert) ; absence de majuscule en début de phrase</td><td>vente pour <em>ventre</em> (omission du [ʁ] dans le groupe consonantique [tʁ]) ; « chaseur » : un seul <em>s</em> entre deux voyelles se lit [z] ; l’élève a pourtant voulu écrire [s] (erreur de valeur de position)</td></tr>\n<tr><td>Nafissa</td><td>parti (partie), préféré (préférée), ces (c’est), quan (quand), done (donne), gatau (gâteau), a (à), grand mère (grand-mère), et (est), dan (dans), li (lit), lou (loup)</td><td>aucune</td></tr></table>\n<p><strong>Conclusion.</strong> Les deux élèves ont compris le <strong>principe alphabétique</strong> et maîtrisent la plupart des correspondances graphèmes-phonèmes, y compris des graphèmes complexes (« ch », « an », « é », « au »). <strong>Nafissa</strong> produit une phrase longue et syntaxiquement complexe (proposition introduite par « quand », coordination) et toutes ses erreurs sont phonologiquement plausibles : elles relèvent de l’orthographe lexicale (lettres muettes, doubles consonnes, accents, trait d’union) et grammaticale (homophones c’est/ces, est/et, à/a ; accord de « partie préférée »), ce qui est normal en fin de CP. <strong>Ibrahim</strong> encode globalement bien, mais deux erreurs montrent une fragilité phonologique : le groupe consonantique [tʁ] (syllabe complexe CCV) n’est pas totalement segmenté, et la valeur du <em>s</em> entre deux voyelles n’est pas maîtrisée. Il faudra vérifier qu’il ne s’agit pas d’une difficulté plus générale d’analyse des syllabes complexes (tr, pl, br…).</p>"
+      },
+      {
+       "id": "2",
+       "type": "langue",
+       "points": 1,
+       "enonce": "<p>Définissez les notions de phonème et de graphème. Indiquez le nombre de phonèmes et de graphèmes des mots « chasseur » et « gâteau » en les écrivant (API ou notation usuelle).</p>",
+       "corrige": "<p>Un <strong>phonème</strong> est la plus petite unité sonore distinctive de la langue orale (elle permet de distinguer deux mots : /p/ et /b/ dans « pain / bain »). Un <strong>graphème</strong> est la plus petite unité de l’écrit qui transcrit un phonème ; il peut comporter une ou plusieurs lettres (« ch », « eau », « ss »).</p>\n<ul><li><strong>chasseur</strong> [ʃasœʁ] : 5 phonèmes /ʃ/ /a/ /s/ /œ/ /ʁ/ ; 5 graphèmes : ch – a – ss – eu – r.</li>\n<li><strong>gâteau</strong> [gato] : 4 phonèmes /g/ /a/ /t/ /o/ ; 4 graphèmes : g – â – t – eau (le « â » est souvent prononcé [a] aujourd’hui ; la prononciation [ɑ] est aussi admise).</li></ul>\n<p>Ces exemples montrent que le nombre de lettres (8 et 6) ne correspond pas au nombre de sons : c’est une source majeure de difficulté pour l’apprenti scripteur.</p>"
+      },
+      {
+       "id": "3",
+       "type": "langue",
+       "points": 1.5,
+       "enonce": "<p>Nafissa confond « ces / c’est » et « et / est ». Précisez la nature de chacun de ces mots et indiquez une procédure que l’on peut enseigner aux élèves pour les distinguer.</p>",
+       "corrige": "<ul><li><strong>ces</strong> : déterminant démonstratif pluriel (« ces gâteaux ») ; <strong>c’est</strong> : pronom démonstratif élidé « c’ » + verbe <em>être</em> au présent (présentatif « c’est »).</li>\n<li><strong>et</strong> : conjonction de coordination ; <strong>est</strong> : verbe <em>être</em> au présent de l’indicatif, 3<sup>e</sup> personne du singulier (ici auxiliaire ou verbe d’état : « le loup est caché »).</li></ul>\n<p><strong>Procédures</strong> : remplacer par l’imparfait : si l’on peut dire « c’était » ou « était », on écrit « c’est » ou « est » ; si l’on peut remplacer par « et puis », on écrit « et ». Pour « ces », on vérifie qu’il est suivi d’un nom au pluriel (« ces / ce » + nom). Au cycle 2, ces homophones grammaticaux fréquents font l’objet d’un apprentissage progressif, d’abord en situation d’écriture guidée, avec des phrases-repères affichées (« Le loup <em>est</em> méchant. Le loup <em>et</em> la fillette »).</p>"
+      },
+      {
+       "id": "4",
+       "type": "langue",
+       "points": 1.5,
+       "enonce": "<p>Voici la phrase de Nafissa corrigée : « Ma partie préférée, c’est quand la petite fille donne le gâteau à sa grand-mère et que le loup est caché dans le lit. » a) Donnez la nature et la fonction de « le gâteau » et de « à sa grand-mère ». b) Donnez la nature et la fonction de « préférée » et justifiez son orthographe.</p>",
+       "corrige": "<ul><li><strong>le gâteau</strong> : groupe nominal (déterminant + nom), <strong>complément d’objet direct</strong> du verbe « donne » (complément du verbe, non déplaçable, non supprimable sans changer le sens).</li>\n<li><strong>à sa grand-mère</strong> : groupe nominal prépositionnel (préposition « à » + GN) ; <strong>complément d’objet second</strong> (ou indirect) du verbe « donne » : on donne <em>quelque chose</em> <em>à quelqu’un</em>. C’est aussi un complément du verbe.</li>\n<li><strong>préférée</strong> : participe passé du verbe <em>préférer</em> employé comme <strong>adjectif</strong> ; <strong>épithète</strong> du nom « partie ». Il s’accorde en genre et en nombre avec ce nom, féminin singulier : -ée. « Partie » prend lui-même un -e : c’est un nom féminin (lexique), à distinguer du participe « parti ».</li></ul>"
+      },
+      {
+       "id": "5",
+       "type": "langue",
+       "points": 1.5,
+       "enonce": "<p>Réécrivez la seconde phrase d’Ibrahim, corrigée, en remplaçant « le chasseur » par « les chasseurs » et en mettant le verbe au présent. Justifiez les modifications et expliquez comment faire percevoir à un élève de CP ou de CE1 la marque du pluriel du verbe.</p>",
+       "corrige": "<p>Phrase corrigée : « Le chasseur a ouvert le ventre du loup. » → « <u>Les chasseurs ouvrent</u> le ventre du loup. »</p>\n<ul><li>« Les » : déterminant pluriel ; « chasseurs » : marque -s du pluriel du nom.</li>\n<li>« ouvrent » : présent de l’indicatif du verbe <em>ouvrir</em> (qui se conjugue au présent comme un verbe en -er), 3<sup>e</sup> personne du pluriel : terminaison <strong>-ent</strong>, qui ne se prononce pas.</li>\n<li>« le ventre du loup » ne change pas : ce groupe ne dépend pas du sujet.</li></ul>\n<p><strong>Pour un jeune élève</strong> : l’oral ne permet pas d’entendre la différence entre « il ouvre » et « ils ouvrent ». On fait donc repérer que le sujet est pluriel (« les chasseurs » = « ils »), puis on enseigne explicitement la « marque muette » -nt du verbe, en contraste avec le -s du nom, par des manipulations (étiquettes « le chasseur ouvre / les chasseurs ouvrent »), un affichage et des flèches reliant le sujet au verbe. On peut aussi utiliser des verbes où le pluriel s’entend (« il prend / ils prennent », « il est / ils sont ») pour montrer que le verbe change bien avec le sujet.</p>"
+      },
+      {
+       "id": "6",
+       "type": "didactique-fr",
+       "points": 2,
+       "enonce": "<p>Analysez les annotations de l’enseignant sur les deux productions. Quelle forme de retour proposeriez-vous à chacun des deux élèves ?</p>",
+       "corrige": "<p><strong>Analyse.</strong> Pour Ibrahim, « Attention à l’orthographe ! Recopie. » est une injonction <strong>générale et négative</strong> : elle ne désigne aucune erreur, ne distingue pas ce qui est réussi (tous les mots sont lisibles, le récit est juste) de ce qui ne l’est pas, et la recopie d’un texte erroné sans correction préalable n’apprend rien (voire fixe les erreurs). Pour Nafissa, « Très bien ! Tu as écrit une longue phrase. » valorise à juste titre la <strong>complexité syntaxique</strong>, mais ne donne aucune piste de progrès ; l’élève ignore que son texte comporte des erreurs qu’elle pourrait corriger seule.</p>\n<p><strong>Propositions.</strong> En fin de CP, on distingue les erreurs que l’élève peut corriger avec ses outils de celles qui relèvent d’apprentissages ultérieurs ; on en cible <strong>deux ou trois</strong>.</p>\n<ul><li><strong>Ibrahim</strong> : entretien individuel ; l’enseignant lit la phrase avec lui et lui fait entendre « ventre » en frappant les syllabes et en isolant les sons [v] [ɑ̃] [t] [ʁ] ; il lui fait retrouver « loup » dans l’album ou sur l’affichage des mots du conte ; il valorise « Tu as bien raconté le moment où le chasseur sauve la grand-mère ». Puis réécriture de la phrase corrigée, avec majuscule et point.</li>\n<li><strong>Nafissa</strong> : on souligne d’un trait les mots à vérifier et on lui donne des indices (« Cherche <em>gâteau</em> et <em>grand-mère</em> dans le texte de l’histoire », « Remplace par <em>était</em> : peux-tu le dire ? ») ; elle corrige elle-même, ce qui développe la <strong>vigilance orthographique</strong>.</li></ul>\n<p>Dans les deux cas, le retour doit rester <strong>bienveillant et exigeant</strong> : il valorise la prise de risque de l’écriture autonome, conformément au principe d’évaluation positive, et vise l’amélioration du texte.</p>"
+      },
+      {
+       "id": "7",
+       "type": "didactique-fr",
+       "points": 2,
+       "enonce": "<p>Quelle place les instructions officielles et le guide <em>Pour enseigner la lecture et l’écriture au CP</em> (2018) accordent-ils à l’écriture au CP ? Proposez trois types d’activités régulières qui auraient pu préparer les élèves à cette production autonome.</p>",
+       "corrige": "<p>Le guide <em>Pour enseigner la lecture et l’écriture au CP</em> (dit « guide orange », 2018) insiste sur le fait que <strong>lecture et écriture s’apprennent ensemble</strong> : l’encodage renforce la connaissance des correspondances graphèmes-phonèmes et la mémorisation de l’orthographe des mots ; il recommande des activités d’écriture <strong>quotidiennes</strong> (copie, encodage, production de phrases), et ce dès le début de l’année. Les programmes du cycle 2 font également de la production d’écrits une composante à part entière de l’enseignement du français, articulée à l’étude de la langue.</p>\n<p><strong>Activités régulières</strong> :</p><ol>\n<li><strong>Encodage guidé</strong> de syllabes, de mots, puis de courtes phrases dictées, construites avec les correspondances déjà étudiées ; correction immédiate et explicitée (« Quels sons entends-tu dans <em>ventre</em> ? »).</li>\n<li><strong>Phrase du jour / dictée négociée</strong> : une phrase est produite collectivement, les élèves proposent des graphies et justifient leurs choix ; on construit ainsi des raisonnements orthographiques (pluriel, homophones, mots-outils).</li>\n<li><strong>Production de phrases en lien avec les lectures</strong>, d’abord en dictée à l’adulte puis de plus en plus seule, avec des outils disponibles : affichage des sons, répertoire des mots du conte, mots-outils (et, est, dans, quand) appris par cœur ; relecture guidée avec un ou deux critères (majuscule, point, mots du répertoire).</li></ol>"
+      },
+      {
+       "id": "8",
+       "type": "didactique-fr",
+       "points": 2,
+       "enonce": "<p>Proposez une séance de remédiation pour Ibrahim et un petit groupe d’élèves présentant la même difficulté que dans « vente » (pour <em>ventre</em>).</p>",
+       "corrige": "<p><strong>Objectif</strong> : percevoir, segmenter et encoder les syllabes complexes comportant un groupe consonantique (tr, br, pr, cr, gr, dr, pl, bl…).</p>\n<ol>\n<li><strong>Phonologie à l’oral (10 min)</strong> : l’enseignant dit des paires minimales (« vente / ventre », « tente / trente », « pain / plein ») ; les élèves disent s’ils entendent le son [ʁ] ou [l] et à quel endroit ; on frappe les syllabes, puis on isole chaque phonème de la syllabe [tʁə] avec des jetons (un jeton par son).</li>\n<li><strong>Du son à la lettre (10 min)</strong> : avec des lettres mobiles, les élèves construisent « tre », « tra », « tri », puis des mots connus (« ventre », « quatre », « trois »), en verbalisant chaque son posé.</li>\n<li><strong>Encodage (10 min)</strong> : dictée de mots et d’une courte phrase (« Le loup a un gros ventre. ») sur ardoise, correction immédiate en montrant la procédure : « Je dis le mot lentement, je compte les sons, je vérifie que chaque son est écrit. »</li>\n<li><strong>Retour au texte</strong> : Ibrahim relit sa phrase et la corrige lui-même, puis l’enseignant note sa réussite.</li></ol>\n<p><strong>Suivi</strong> : des séances courtes et fréquentes (15 minutes plusieurs fois par semaine, par exemple dans le cadre des activités pédagogiques complémentaires) sont plus efficaces qu’une séance longue ; si la difficulté persiste sur d’autres groupes consonantiques, un repérage plus approfondi est à envisager avec le RASED ou les partenaires.</p>"
+      }
+     ]
+    },
+    {
+     "id": "Q",
+     "label": "Qualité de l’écrit",
+     "short": "Q",
+     "titre": "Correction syntaxique et qualité écrite",
+     "points": 6,
+     "questions": [
+      {
+       "id": "1",
+       "type": "qualite",
+       "points": 6,
+       "enonce": "<p>La correction syntaxique et la qualité écrite de l’ensemble de votre copie sont évaluées sur <strong>6 points</strong>. Réservez 10 à 15 minutes en fin d’épreuve pour relire votre copie, en particulier votre réponse à la deuxième partie, puis attribuez-vous une note à l’aide de la grille du corrigé.</p>",
+       "corrige": "<p><strong>Grille de relecture et répartition indicative des 6 points</strong></p><table class=\"tab\"><tr><th>Critère</th><th>Ce que l’on vérifie</th><th>Points</th></tr><tr><td>Orthographe grammaticale</td><td>Accords dans le groupe nominal (déterminant, nom, adjectif), accord sujet-verbe (sujet inversé, éloigné, pronom relatif « qui »), accord du participe passé avec « être » et avec « avoir » (COD placé avant), homophones grammaticaux (a/à, et/est, ce/se, ces/ses, on/ont, leur/leurs, quel(le)/qu’elle, -é/-er).</td><td>2</td></tr><tr><td>Conjugaison et syntaxe</td><td>Formes verbales exactes (passé simple, subjonctif après « bien que », « il faut que »), concordance des temps, phrases complètes et bien construites, négation complète (« ne… pas »), interrogation indirecte sans inversion ni point d’interrogation, pronoms relatifs corrects (« dont », « auquel »).</td><td>1,5</td></tr><tr><td>Ponctuation et présentation</td><td>Majuscules, points, virgules devant les connecteurs et autour des incises, guillemets pour chaque citation, titres d’œuvres soulignés à la main, alinéas marquant les paragraphes, écriture lisible, absence de ratures multiples.</td><td>1</td></tr><tr><td>Lexique et registre</td><td>Vocabulaire précis et varié (pas de « chose », « truc », « faire » répété), registre soutenu, terminologie grammaticale et didactique exacte, absence de tournures orales (« du coup », « ça »).</td><td>1</td></tr><tr><td>Structuration du propos</td><td>Introduction, développement en parties annoncées, connecteurs logiques (« en effet », « cependant », « en outre », « ainsi »), transitions, conclusion ; réponses de la troisième partie rédigées en phrases.</td><td>0,5</td></tr></table><p><strong>Barème d’usage</strong> : en pratique, les correcteurs retirent environ 0,25 à 0,5 point par type d’erreur récurrente ; une copie qui présente plus d’une dizaine d’erreurs de langue sur l’ensemble ne peut guère dépasser 2/6, une copie presque sans faute, bien ponctuée et bien structurée obtient 5 ou 6/6.</p><p><strong>Point de vigilance pour ce sujet</strong> : veillez aux homophones que vous analysez dans la troisième partie (c’est / ces, et / est) : les commettre dans votre propre copie serait particulièrement pénalisant ; soignez aussi l’orthographe des termes techniques (phonème, graphème, phonologique, consonantique).</p><p><strong>Méthode de relecture efficace</strong> : relisez en trois passages ciblés plutôt qu’une seule fois : 1) les verbes (repérer chaque verbe, chercher son sujet, vérifier la terminaison) ; 2) les groupes nominaux et les participes passés ; 3) la ponctuation et les homophones. Le rapport de jury 2023 rappelle que la présentation et la graphie « mériteraient d’être plus soignées » : un futur professeur écrit au tableau devant ses élèves.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "myt-fr-4",
+   "num": 4,
+   "domaine": "francais",
+   "titre": "Sujet 4 · Écrire ses souvenirs d’enfance",
+   "theme": "Écrire et réviser (Hayes et Flower, Fabre, Cnesco 2018) ; premiers souvenirs d’enfance (Loti, Stendhal, Hugo) ; premier et second jets d’un récit de souvenir (CM2)",
+   "source": "Sujet original construit sur le modèle des sessions 2023 à 2025 (académie de Mayotte)",
+   "remarque": "Textes littéraires cités d’après fr.wikisource.org ; texte de compréhension orale et productions d’élève rédigés pour Belamis.",
+   "total": 40,
+   "eliminatoire": 10,
+   "duree": 14400,
+   "parties": [
+    {
+     "id": "P1",
+     "label": "Première partie",
+     "short": "P1",
+     "titre": "Compréhension orale d’un texte didactique",
+     "points": 8,
+     "intro": "<p>Le texte est lu <strong>deux fois</strong>, titre compris, par deux lecteurs différents. Vous pouvez prendre des notes pendant les lectures. Le questionnaire est ensuite retourné : cochez <strong>la ou les réponse(s) correcte(s)</strong>. Durée de la partie : 30 minutes, lectures comprises.</p><p><em>Sur Belamis : écoutez (ou faites-vous lire) le texte deux fois sans le regarder, puis répondez.</em></p>",
+     "audio": {
+      "titre": "Écrire, c’est réécrire",
+      "texte": [
+       "On a longtemps enseigné l’écriture comme une activité en un seul temps : l’enseignant donnait un sujet, l’élève rédigeait, puis la copie était corrigée et notée. Les recherches menées en psychologie cognitive et en didactique ont profondément modifié cette représentation. En 1980, deux chercheurs américains, John Hayes et Linda Flower, ont proposé un modèle devenu classique, qui décrit l’écriture comme un ensemble de processus : la planification, qui consiste à rechercher et organiser des idées en fonction d’un but ; la mise en texte, qui transforme ces idées en phrases ; la révision, qui permet de relire et d’améliorer ce qui a été écrit. Ces processus ne se succèdent pas de façon linéaire : le scripteur expert revient constamment de l’un à l’autre.",
+       "Or ces opérations représentent une charge considérable pour un jeune scripteur. Tant que le geste graphique et l’orthographe ne sont pas automatisés, ils mobilisent une grande partie de son attention, au détriment de la planification et de la révision. C’est pourquoi les chercheurs recommandent d’alléger la tâche : écrire à plusieurs, dicter un texte à l’adulte, disposer d’outils, séparer dans le temps le moment où l’on invente et le moment où l’on corrige.",
+       "La révision, justement, a fait l’objet de travaux précis. Claudine Fabre, dans Les Brouillons d’écoliers, publié en 1990, a étudié les ratures d’élèves de l’école élémentaire. Elle y distingue quatre opérations de réécriture : l’ajout, la suppression, le remplacement et le déplacement. Ses analyses montrent que les jeunes élèves pratiquent surtout le remplacement de mots isolés et les corrections orthographiques, alors que les modifications qui touchent l’organisation du texte restent rares. Réviser ne se réduit donc pas à corriger : c’est reprendre son texte pour le rendre plus clair, plus complet, plus adapté à son destinataire.",
+       "Pour apprendre à réviser, les élèves ont besoin de critères. Les travaux du groupe EVA, conduits à l’Institut national de recherche pédagogique au début des années 1990, ont montré l’intérêt de grilles de relecture élaborées avec les élèves à partir de l’observation de textes. Encore faut-il que ces grilles restent courtes : une liste de vingt critères décourage plus qu’elle n’aide. Mieux vaut cibler, pour chaque projet d’écriture, deux ou trois points précis, en lien avec ce qui a été enseigné.",
+       "La conférence de consensus « Écrire et rédiger », organisée par le Cnesco en 2018, a insisté sur un autre point : les élèves n’écrivent pas assez. Pour progresser, ils doivent écrire souvent, des textes courts comme des textes longs, et pas seulement lors de rares séances de rédaction. Jean-Charles Chabanne et Dominique Bucheton ont ainsi défendu la place des écrits intermédiaires, ces écrits de travail qui servent à penser, à garder une trace, à formuler une hypothèse, et qui n’ont pas vocation à être évalués.",
+       "Enfin, l’enseignant joue un rôle déterminant par la manière dont il annote les textes. Une annotation utile désigne un problème précis et indique une piste pour le résoudre ; une remarque générale, comme « À revoir » ou « Fais attention », laisse l’élève démuni. Le retour sur le premier jet peut aussi prendre la forme d’un échange oral, ou d’une lecture du texte à des camarades qui disent ce qu’ils ont compris. Écrire devient alors ce qu’il est pour tout écrivain : un travail, fait d’essais, de retours et de réécritures successives."
+      ],
+      "source": "Texte rédigé pour Belamis d’après J. R. Hayes et L. S. Flower (1980), C. Fabre, Les Brouillons d’écoliers ou l’entrée dans l’écriture (1990), le groupe EVA (INRP), la conférence de consensus Cnesco « Écrire et rédiger » (2018) et J.-C. Chabanne et D. Bucheton, Parler et écrire pour penser, apprendre et se construire (PUF, 2002)."
+     },
+     "questions": [
+      {
+       "id": "1",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le modèle de Hayes et Flower présenté dans le texte, l’écriture comprend :</p>",
+       "options": [
+        "la planification",
+        "la mise en texte",
+        "la révision",
+        "la calligraphie"
+       ],
+       "bonnes": [
+        0,
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : A (« la planification »), B (« la mise en texte »), C (« la révision »).</strong></p><p><em>Justification</em> : « la planification […] ; la mise en texte […] ; la révision, qui permet de relire et d’améliorer ce qui a été écrit »</p>"
+      },
+      {
+       "id": "2",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, ces processus :</p>",
+       "options": [
+        "se succèdent dans un ordre fixe",
+        "sont parcourus en allers-retours constants par le scripteur expert",
+        "sont automatisés dès la fin du CP"
+       ],
+       "bonnes": [
+        1
+       ],
+       "corrige": "<p><strong>Réponse : B (« sont parcourus en allers-retours constants par le scripteur expert »).</strong></p><p><em>Justification</em> : « Ces processus ne se succèdent pas de façon linéaire : le scripteur expert revient constamment de l’un à l’autre. »</p>"
+      },
+      {
+       "id": "3",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Pour alléger la tâche du jeune scripteur, le texte mentionne :</p>",
+       "options": [
+        "dicter un texte à l’adulte",
+        "écrire à plusieurs",
+        "supprimer l’étape de révision",
+        "séparer le moment où l’on invente et le moment où l’on corrige"
+       ],
+       "bonnes": [
+        0,
+        1,
+        3
+       ],
+       "corrige": "<p><strong>Réponses : A (« dicter un texte à l’adulte »), B (« écrire à plusieurs »), D (« séparer le moment où l’on invente et le moment où l’on corrige »).</strong></p><p><em>Justification</em> : « écrire à plusieurs, dicter un texte à l’adulte, disposer d’outils, séparer dans le temps le moment où l’on invente et le moment où l’on corrige »</p>"
+      },
+      {
+       "id": "4",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Qu’apprend-on au sujet de Claudine Fabre ?</p>",
+       "options": [
+        "Elle est l’auteure des Brouillons d’écoliers (1990).",
+        "Elle a fondé le groupe EVA.",
+        "Elle a étudié les ratures d’élèves de l’école élémentaire.",
+        "Elle a présidé la conférence de consensus du Cnesco."
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : A (« Elle est l’auteure des Brouillons d’écoliers (1990). »), C (« Elle a étudié les ratures d’élèves de l’école élémentaire. »).</strong></p><p><em>Justification</em> : « Claudine Fabre, dans Les Brouillons d’écoliers, publié en 1990, a étudié les ratures d’élèves de l’école élémentaire. »</p>"
+      },
+      {
+       "id": "5",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Les quatre opérations de réécriture distinguées par Claudine Fabre sont :</p>",
+       "options": [
+        "l’ajout, la suppression, le remplacement et le déplacement",
+        "la planification, la mise en texte, la révision et la relecture",
+        "l’ajout, la correction, la recopie et le déplacement"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse : A (« l’ajout, la suppression, le remplacement et le déplacement »).</strong></p><p><em>Justification</em> : « Elle y distingue quatre opérations de réécriture : l’ajout, la suppression, le remplacement et le déplacement. »</p>"
+      },
+      {
+       "id": "6",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, les jeunes élèves qui révisent leur texte :</p>",
+       "options": [
+        "pratiquent surtout le remplacement de mots isolés et les corrections orthographiques",
+        "modifient souvent l’organisation de leur texte",
+        "ne raturent jamais"
+       ],
+       "bonnes": [
+        0
+       ],
+       "corrige": "<p><strong>Réponse : A (« pratiquent surtout le remplacement de mots isolés et les corrections orthographiques »).</strong></p><p><em>Justification</em> : « les jeunes élèves pratiquent surtout le remplacement de mots isolés et les corrections orthographiques, alors que les modifications qui touchent l’organisation du texte restent rares »</p>"
+      },
+      {
+       "id": "7",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Selon le texte, les grilles de relecture :</p>",
+       "options": [
+        "doivent comporter une vingtaine de critères pour être complètes",
+        "gagnent à être élaborées avec les élèves",
+        "doivent cibler deux ou trois points par projet d’écriture"
+       ],
+       "bonnes": [
+        1,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : B (« gagnent à être élaborées avec les élèves »), C (« doivent cibler deux ou trois points par projet d’écriture »).</strong></p><p><em>Justification</em> : « grilles de relecture élaborées avec les élèves […] une liste de vingt critères décourage plus qu’elle n’aide. Mieux vaut cibler, pour chaque projet d’écriture, deux ou trois points précis »</p>"
+      },
+      {
+       "id": "8",
+       "type": "oral-qcm",
+       "points": 1,
+       "enonce": "<p>Les écrits intermédiaires :</p>",
+       "options": [
+        "servent à penser et à garder une trace",
+        "doivent être systématiquement évalués",
+        "ont été défendus par Jean-Charles Chabanne et Dominique Bucheton"
+       ],
+       "bonnes": [
+        0,
+        2
+       ],
+       "corrige": "<p><strong>Réponses : A (« servent à penser et à garder une trace »), C (« ont été défendus par Jean-Charles Chabanne et Dominique Bucheton »).</strong></p><p><em>Justification</em> : « Jean-Charles Chabanne et Dominique Bucheton ont ainsi défendu la place des écrits intermédiaires, ces écrits de travail qui servent à penser, à garder une trace […] et qui n’ont pas vocation à être évalués. »</p>"
+      }
+     ]
+    },
+    {
+     "id": "P2",
+     "label": "Deuxième partie",
+     "short": "P2",
+     "titre": "Compréhension écrite et rédaction",
+     "points": 12,
+     "intro": "<p><strong>Corpus</strong></p><ul><li>Texte 1 : Pierre Loti, <em>Le Roman d’un enfant</em>, chapitre I (1890).</li><li>Texte 2 : Stendhal, <em>Vie de Henry Brulard</em>, chapitre III (rédigé en 1835-1836, publié en 1890).</li><li>Texte 3 : Victor Hugo, « Aux Feuillantines », <em>Les Contemplations</em> (1856).</li></ul><div class=\"doc\"><p class=\"doc-title\">Texte 1 – Pierre Loti, <em>Le Roman d’un enfant</em> (1890), chapitre I</p><p>C’est avec une sorte de crainte que je touche à l’énigme de mes impressions du commencement de la vie, — incertain si bien réellement je les éprouvais moi-même ou si plutôt elles n’étaient pas des ressouvenirs mystérieusement transmis… J’ai comme une hésitation religieuse à sonder cet abîme…</p><p>Au sortir de ma nuit première, mon esprit ne s’est pas éclairé progressivement, par lueurs graduées ; mais par jets de clartés brusques — qui devaient dilater tout à coup mes yeux d’enfant et m’immobiliser dans des rêveries attentives — puis qui s’éteignaient, me replongeant dans l’inconscience absolue des petits animaux qui viennent de naître, des petites plantes à peine germées.</p><p>Au début de l’existence, mon histoire serait simplement celle d’un enfant très choyé, très tenu, très obéissant et toujours convenable dans ses petites manières, auquel rien n’arrivait, dans son étroite sphère ouatée, qui ne fût prévu, et qu’aucun coup n’atteignait qui ne fût amorti avec une sollicitude tendre.</p><p>Aussi voudrais-je ne pas écrire cette histoire qui serait fastidieuse ; mais seulement noter, sans suite ni transitions, des instants qui m’ont frappé d’une étrange manière, — qui m’ont frappé tellement que je m’en souviens encore avec une netteté complète, aujourd’hui que j’ai oublié déjà tant de choses poignantes, et tant de lieux, tant d’aventures, tant de visages.</p><p>J’étais en ce temps-là un peu comme serait une hirondelle, née d’hier, très haut à l’angle d’un toit, qui commencerait à ouvrir de temps à autre au bord du nid son petit œil d’oiseau et s’imaginerait, de là, en regardant simplement une cour ou une rue, voir les profondeurs du monde et de l’espace, — les grandes étendues de l’air que plus tard il lui faudra parcourir. Ainsi, durant ces minutes de clairvoyance, j’apercevais furtivement toutes sortes d’infinis, dont je possédais déjà sans doute, dans ma tête, antérieurement à ma propre existence, les conceptions latentes ; puis, refermant malgré moi l’œil encore trouble de mon esprit, je retombais pour des jours entiers dans ma tranquille nuit initiale.</p><p>Au début, ma tête toute neuve et encore obscure pourrait aussi être comparée à un appareil de photographe rempli de glaces sensibilisées. Sur ces plaques vierges, les objets insuffisamment éclairés ne donnent rien ; tandis que, au contraire, quand tombe sur elles une vive clarté quelconque, elles se cernent de larges taches claires, où les choses inconnues du dehors viennent se graver. — Mes premiers souvenirs en effet sont toujours de plein été lumineux, de midis étincelants, — ou bien de feux de branches à grandes flammes roses.</p><p class=\"doc-src\">Pierre Loti, <em>Le Roman d’un enfant</em>, Paris, Calmann Lévy, 1895, p. 1-3 (fr.wikisource.org).</p></div><div class=\"doc\"><p class=\"doc-title\">Texte 2 – Stendhal, <em>Vie de Henry Brulard</em>, chapitre III</p><p><em>Stendhal (Henri Beyle, né à Grenoble en 1783) raconte son enfance sous le nom d’Henry Brulard. Le glacis de la porte de Bonne est un pré situé alors aux portes de Grenoble.</em></p><p>Mon premier souvenir est d’avoir mordu à la joue ou au front madame Pison-Dugalland, ma cousine, femme de l’homme d’esprit député à l’Assemblée constituante. Je la vois encore, une femme de vingt-cinq ans qui avait de l’embonpoint et beaucoup de rouge. Ce fut apparemment ce rouge qui me piqua. Assise au milieu du pré qu’on appelait le glacis de la porte de Bonne, sa joue se trouvait précisément à ma hauteur.</p><p>« Embrasse-moi, Henri », me disait-elle. Je ne voulus pas, elle se fâcha, je mordis ferme. Je vois la scène, mais sans doute parce que sur-le-champ on m’en fit un crime et que sans cesse on m’en parlait.</p><p>[…]</p><p>Le second trait de caractère fut bien autrement noir.</p><p>J’avais fait une collection de joncs, toujours sur le glacis de la porte de Bonne (Bonne de Lesdiguières. Demander le nom botanique du jonc, herbe de forme cylindrique comme une plume de poulet et d’un pied de long).</p><p>On m’avait ramené à la maison, dont une fenêtre au premier étage donnait sur la Grande-rue, à l’angle de la place Grenette. Je faisais un jardin en coupant ces joncs en morceaux de deux pouces de long que je plaçais dans l’intervalle entre le balcon et le jet d’eau de la croisée. Le couteau de cuisine dont je me servais m’échappa et tomba dans la rue, c’est-à-dire d’une douzaine de pieds, près d’une madame Chenevaz. […]</p><p>Ma tante Séraphie dit que j’avais voulu tuer madame Chenavaz ; je fus déclaré pourvu d’un caractère atroce, grondé par mon excellent grand-père, M. Gagnon, qui avait peur de sa fille Séraphie, la dévote la plus en crédit dans la ville, grondé même par ce caractère élevé et espagnol, mon excellente grande tante, Mlle Elisabeth Gagnon. Je me révoltai, je pouvais avoir quatre ans.</p><p class=\"doc-src\">Stendhal, <em>Vie de Henri Brulard</em>, t. I, chapitre III, éd. H. Debraye, Paris, Champion, 1913, p. 31-41 (fr.wikisource.org). L’orthographe des noms propres (Chenevaz / Chenavaz) est celle de cette édition.</p></div><div class=\"doc\"><p class=\"doc-title\">Texte 3 – Victor Hugo, « Aux Feuillantines », <em>Les Contemplations</em> (1856)</p><p><em>Le poète, exilé à Jersey, se souvient de son enfance à Paris, dans le jardin de l’ancien couvent des Feuillantines, avec ses frères Abel et Eugène.</em></p><p>Mes deux frères et moi, nous étions tout enfants.<br>Notre mère disait : Jouez, mais je défends<br>Qu’on marche dans les fleurs et qu’on monte aux échelles.<br>Abel était l’aîné, j’étais le plus petit.<br>Nous mangions notre pain de si bon appétit,<br>Que les femmes riaient quand nous passions près d’elles.</p><p>Nous montions pour jouer au grenier du couvent.<br>Et, là, tout en jouant, nous regardions souvent<br>Sur le haut d’une armoire un livre inaccessible.<br>Nous grimpâmes un jour jusqu’à ce livre noir ;<br>Je ne sais pas comment nous fîmes pour l’avoir,<br>Mais je me souviens bien que c’était une Bible.</p><p>Ce vieux livre sentait une odeur d’encensoir.<br>Nous allâmes ravis dans un coin nous asseoir.<br>Des estampes partout ! quel bonheur ! quel délire !<br>Nous l’ouvrîmes alors tout grand sur nos genoux,<br>Et, dès le premier mot, il nous parut si doux<br>Qu’oubliant de jouer, nous nous mîmes à lire.</p><p>Nous lûmes tous les trois ainsi, tout le matin,<br>Joseph, Ruth et Booz, le bon Samaritain,<br>Et, toujours plus charmés, le soir nous le relûmes.<br>Tels des enfants, s’ils ont pris un oiseau des cieux,<br>S’appellent en riant et s’étonnent, joyeux,<br>De sentir dans leur main la douceur de ses plumes.</p><p><em>Marine-Terrace, août 1855.</em></p><p class=\"doc-src\">Victor Hugo, <em>Les Contemplations</em>, livre V, poème X, Paris, Nelson, 1911, p. 299 (fr.wikisource.org). Estampes : gravures, images.</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "synthese",
+       "points": 12,
+       "enonce": "<p>Que cherchent à retrouver ces auteurs en évoquant leurs premiers souvenirs d’enfance, et comment l’écriture leur permet-elle de le faire ?</p><p>Vous répondrez de manière argumentée et structurée, en vous appuyant sur les textes du corpus et sur votre culture personnelle, en veillant à ce qu’elle ne se substitue pas à l’étude des textes.</p>",
+       "corrige": "\n<p><strong>1. Analyser la question.</strong> Deux volets : 1) <em>ce que les auteurs cherchent à retrouver</em> : un moment fondateur, une émotion, une origine de leur personnalité, un paradis perdu, la vérité d’un souvenir ; 2) <em>comment l’écriture le permet</em> : choix de la prose ou du vers, métaphores, temps verbaux, regard de l’adulte sur l’enfant, aveux d’incertitude. Le corpus associe deux récits autobiographiques en prose (Loti, Stendhal) et un poème lyrique (Hugo). On attend une réflexion sur l’écriture de soi (autobiographie : « récit rétrospectif en prose qu’une personne réelle fait de sa propre existence […] », selon la définition de Philippe Lejeune, <em>Le Pacte autobiographique</em>, 1975).</p>\n<p><strong>2. Problématique possible.</strong> <em>Pourquoi des écrivains adultes éprouvent-ils le besoin de revenir à leurs premiers souvenirs, et comment l’écriture parvient-elle à ressaisir une mémoire d’enfance fragmentaire et incertaine ?</em></p>\n<p><strong>3. Introduction rédigée (exemple).</strong></p>\n<blockquote>Tout écrivain qui raconte sa vie se heurte à une difficulté : comment retrouver l’enfant qu’il a été, alors que les premiers souvenirs sont rares, confus, parfois reconstruits ? Trois textes du XIX<sup>e</sup> siècle affrontent cette énigme. Pierre Loti ouvre <em>Le Roman d’un enfant</em> (1890) par une réflexion sur « l’énigme de [s]es impressions du commencement de la vie » ; Stendhal, dans la <em>Vie de Henry Brulard</em>, rédigée en 1835-1836, rapporte ses premiers souvenirs grenoblois et les colères qu’ils lui valurent ; Victor Hugo, exilé, se souvient dans « Aux Feuillantines » (<em>Les Contemplations</em>, 1856) de la découverte d’une Bible avec ses frères. Nous nous demanderons ce que ces auteurs cherchent à retrouver dans ces premiers souvenirs et comment l’écriture leur permet de le faire. Nous verrons qu’ils y cherchent l’origine de ce qu’ils sont devenus, puis que l’écriture affronte les incertitudes de la mémoire, avant de montrer qu’elle transforme le souvenir en une expérience partageable.</blockquote>\n<p><strong>4. Plan détaillé.</strong></p>\n<p><strong>I. Retrouver une origine : les souvenirs qui fondent la personnalité.</strong></p>\n<ul>\n<li><em>L’éveil de la conscience.</em> Loti décrit ses premiers souvenirs comme des « jets de clartés brusques » qui l’arrachaient à « l’inconscience absolue des petits animaux qui viennent de naître » : il y cherche la naissance de son esprit et de sa sensibilité (« j’apercevais furtivement toutes sortes d’infinis »).</li>\n<li><em>La naissance du caractère.</em> Stendhal fait de ses premiers souvenirs des « traits de caractère » : la morsure, le couteau tombé ; l’injustice (« je fus déclaré pourvu d’un caractère atroce ») provoque la révolte : « Je me révoltai, je pouvais avoir quatre ans. » Le souvenir explique l’adulte.</li>\n<li><em>La naissance d’une vocation.</em> Chez Hugo, la découverte de la Bible, « livre inaccessible » conquis en grimpant, fait naître le goût de lire : « dès le premier mot, il nous parut si doux / Qu’oubliant de jouer, nous nous mîmes à lire ». Le poète retrouve l’origine de son rapport aux livres.</li>\n</ul>\n<p><strong>II. Écrire malgré les incertitudes de la mémoire.</strong></p>\n<ul>\n<li><em>Une mémoire fragmentaire.</em> Loti renonce à une histoire continue et veut « noter, sans suite ni transitions, des instants qui [l’]ont frappé » ; Stendhal procède par « traits » isolés ; Hugo condense un souvenir en une scène unique.</li>\n<li><em>Une mémoire incertaine, parfois reconstruite.</em> Loti est « incertain si bien réellement [il] les éprouvai[t] [lui]-même ou si plutôt elles n’étaient pas des ressouvenirs mystérieusement transmis » ; Stendhal soupçonne que son souvenir est entretenu par les récits familiaux : « Je vois la scène, mais sans doute parce que sur-le-champ on m’en fit un crime et que sans cesse on m’en parlait. » Hugo avoue : « Je ne sais pas comment nous fîmes pour l’avoir, / Mais je me souviens bien que c’était une Bible. » L’honnêteté du mémorialiste consiste à signaler ces limites (modalisateurs : « peut-être », « sans doute », « je pouvais avoir quatre ans »).</li>\n<li><em>Le double regard.</em> Le narrateur adulte commente l’enfant : Stendhal juge sa tante Séraphie avec ironie ; les parenthèses et incises (« Demander le nom botanique du jonc ») montrent l’adulte au travail d’écriture.</li>\n</ul>\n<p><strong>III. Transformer le souvenir en expérience partagée : le travail de l’écriture.</strong></p>\n<ul>\n<li><em>Les images.</em> Loti compare l’enfant à « une hirondelle, née d’hier » et sa tête à « un appareil de photographe rempli de glaces sensibilisées » : la métaphore rend sensible ce que la mémoire ne peut expliquer. Hugo compare les enfants lisant à ceux qui tiennent « un oiseau des cieux » : la lecture devient une expérience de douceur et d’émerveillement.</li>\n<li><em>Les formes.</em> Le poème en sizains d’alexandrins donne au souvenir une musicalité et une clôture ; la datation « Marine-Terrace, août 1855 » rappelle que ce souvenir heureux est écrit en exil. La prose de Stendhal, vive et familière, restitue au contraire la spontanéité d’un récit oral.</li>\n<li><em>Les temps.</em> Présent de l’écriture (« Je la vois encore », « je m’en souviens encore ») et passés du souvenir (passé simple, imparfait) se croisent : l’écriture relie l’enfant et l’adulte.</li>\n<li><em>Ouverture</em> : à l’école, écrire un souvenir personnel (« Raconte un souvenir de ta petite enfance ») mobilise les mêmes enjeux ; les programmes de cycle 3 invitent à pratiquer l’écriture de textes variés, dont les récits de soi, en lien avec la lecture de textes littéraires. Pour des élèves mahorais, c’est aussi l’occasion de faire entrer dans la classe les lieux, les langues et les personnes de leur enfance, à la condition que l’enseignant respecte ce qu’ils souhaitent garder pour eux.</li>\n</ul>\n<p><strong>5. Conclusion rédigée (exemple).</strong></p>\n<blockquote>En revenant à leurs premiers souvenirs, Loti, Stendhal et Hugo cherchent moins à raconter leur enfance qu’à en retrouver les moments fondateurs : l’éveil d’une conscience, la naissance d’un caractère, la découverte de la lecture. Ils savent pourtant que la mémoire est lacunaire et parfois reconstruite, et c’est l’écriture, par ses images, ses formes et le dialogue qu’elle établit entre l’enfant et l’adulte, qui donne à ces fragments leur sens et les rend partageables. Chaque lecteur peut alors y reconnaître quelque chose de sa propre enfance, ce qui explique la place de ces textes dans les classes, où ils peuvent devenir des modèles pour les élèves qui écrivent à leur tour leurs souvenirs.</blockquote>\n<p><strong>6. Erreurs à éviter.</strong></p>\n<ul><li>Juxtaposer trois résumés ; il faut confronter les textes dans chaque partie.</li>\n<li>Ne traiter que le premier volet (le contenu des souvenirs) sans analyser l’écriture (images, temps, versification, modalisation).</li>\n<li>Confondre autobiographie et roman : <em>Le Roman d’un enfant</em> est bien un récit autobiographique malgré son titre ; « Aux Feuillantines » est un poème lyrique, non une autobiographie au sens strict.</li>\n<li>Citer sans commenter, ou citer faux (un vers mal recopié est pénalisé).</li></ul>\n<p><strong>7. Barème indicatif (12 points).</strong> Introduction : 2 pts ; problématique traitée et progression : 4 pts ; références précises et croisées aux trois textes, analyse de l’écriture : 3 pts ; culture personnelle : 1 pt ; conclusion : 1 pt ; organisation : 1 pt.</p>\n"
+      }
+     ]
+    },
+    {
+     "id": "P3",
+     "label": "Troisième partie",
+     "short": "P3",
+     "titre": "Connaissance de la langue et approche didactique du français",
+     "points": 14,
+     "intro": "<p>Dans une classe de CM2 de Mamoudzou, après la lecture d’extraits de récits d’enfance, l’enseignante a proposé la consigne suivante : « Raconte un souvenir de ta petite enfance qui t’a marqué. Tu écris à la première personne et au passé ; ton lecteur doit pouvoir imaginer la scène et comprendre ce que tu as ressenti. » Voici le premier jet de Soilihi, l’annotation de l’enseignante, puis le second jet écrit une semaine plus tard (phrases numérotées).</p><div class=\"copie-eleve\"><p class=\"copie-titre\">Soilihi (CM2) – premier jet</p>\n<p>(1) Quand j’était petit, j’avais peut-être cinq ans, mon grand-père m’a amené a la pêche en pirogue. (2) On est partit tôt le matin. (3) La mer étais calme. (4) Mon grand-père ma donner une ligne et il m’a dit de pas bougé. (5) J’ai attendu longtemps et j’ai attrapé un poisson. (6) Il était gros. (7) J’étais content. (8) Mon grand-père a rigolé et il a dit que j’étais un vrai pêcheur. (9) Le soir, ma mère a cuisiné le poisson.</p>\n<p class=\"annot\">Annotation de l’enseignante : « Ton souvenir est intéressant. Aide ton lecteur à voir la scène : où êtes-vous ? quels bruits, quelles couleurs ? Que ressentais-tu quand le poisson a mordu ? Vérifie les verbes au passé (critère 3 de la grille). »</p></div>\n<div class=\"copie-eleve\"><p class=\"copie-titre\">Soilihi (CM2) – second jet</p>\n<p>(1) Quand j’étais petit, je devais avoir cinq ans, mon grand-père m’a emmené à la pêche dans sa pirogue. (2) Nous sommes partis très tôt, quand le ciel était encore rose au-dessus de Petite-Terre. (3) La mer était calme et on entendait seulement le bruit de la pagaie dans l’eau. (4) Mon grand-père m’a donné une ligne et il m’a dit de ne pas bouger. (5) J’ai attendu longtemps, si longtemps que je commençais a m’endormir. (6) Soudain la ligne a tiré tres fort ! (7) J’avais peur que le poisson m’emporte, mais mon grand-père a posé sa grande main sur la mienne. (8) Ensemble nous avons remonté un gros poisson argenté qui se débattait au fond de la pirogue. (9) Mon grand-père a éclaté de rire : « Tu es un vrai pêcheur maintenant ! » (10) Le soir, ma mère a fait griller le poisson et toute la famille la mangé. (11) Aujourd’hui encore, quand je sens l’odeur du poisson grillé, je repense à ce matin-là.</p></div>",
+     "questions": [
+      {
+       "id": "1",
+       "type": "didactique-fr",
+       "points": 2.5,
+       "enonce": "<p>Comparez les deux jets. En vous appuyant sur une typologie des opérations de réécriture que vous nommerez, relevez les principales modifications apportées par Soilihi et indiquez sur quels plans du texte elles portent.</p>",
+       "corrige": "<p>On utilise la typologie de <strong>Claudine Fabre</strong> (<em>Les Brouillons d’écoliers</em>, 1990) : ajout, suppression, remplacement, déplacement.</p>\n<table class=\"tab\"><tr><th>Opération</th><th>Exemples</th><th>Plan concerné</th></tr>\n<tr><td><strong>Ajout</strong></td><td>« quand le ciel était encore rose au-dessus de Petite-Terre » ; « on entendait seulement le bruit de la pagaie dans l’eau » ; « si longtemps que je commençais à m’endormir » ; phrases 6-7 (la ligne qui tire, la peur, la main du grand-père) ; « argenté qui se débattait au fond de la pirogue » ; phrase 11 (retour au présent de l’adulte)</td><td>Contenu et cohérence du récit : description (lieu, couleurs, bruits), émotions, dramatisation (« Soudain »), portée du souvenir.</td></tr>\n<tr><td><strong>Remplacement</strong></td><td>« peut-être » → « je devais avoir » ; « amené » → « emmené » ; « en pirogue » → « dans sa pirogue » ; « On est partit » → « Nous sommes partis » ; « a rigolé » → « a éclaté de rire » ; « a cuisiné » → « a fait griller » ; « il a dit que j’étais un vrai pêcheur » → discours direct</td><td>Lexique (précision, registre), syntaxe, énonciation (discours direct plus vivant).</td></tr>\n<tr><td><strong>Suppression</strong></td><td>« Il était gros. J’étais content. » (phrases 6-7 du premier jet) : l’information est intégrée ailleurs (« un gros poisson argenté ») et l’émotion est montrée plutôt que nommée.</td><td>Style : suppression de phrases juxtaposées très courtes.</td></tr>\n<tr><td><strong>Déplacement / restructuration</strong></td><td>L’information « gros » passe de la phrase 6 à l’expansion du nom « poisson » (phrase 8).</td><td>Organisation de la phrase.</td></tr>\n<tr><td><strong>Corrections orthographiques</strong></td><td>j’étais, étais → était, partit → partis, ma donner → m’a donné, pas bougé → ne pas bouger, a → à</td><td>Orthographe grammaticale.</td></tr></table>\n<p><strong>Bilan</strong> : contrairement à ce qu’observe Fabre chez beaucoup de jeunes scripteurs, Soilihi ne s’est pas limité à corriger l’orthographe : il a surtout <strong>enrichi</strong> son texte, en répondant précisément aux questions de l’annotation (lieu, bruits, couleurs, ressenti). La réécriture porte sur le texte (cohérence, intérêt pour le lecteur) autant que sur la langue. On note qu’il reste trois erreurs nouvelles (a, tres, la mangé), fréquentes dans les passages ajoutés.</p>"
+      },
+      {
+       "id": "2",
+       "type": "langue",
+       "points": 1.5,
+       "enonce": "<p>Relevez, corrigez et classez les erreurs d’orthographe grammaticale du premier jet.</p>",
+       "corrige": "<table class=\"tab\"><tr><th>Erreur</th><th>Correction</th><th>Catégorie et justification</th></tr>\n<tr><td>(1) j’était</td><td>j’étais</td><td>Conjugaison : imparfait, 1<sup>re</sup> personne du singulier : -ais.</td></tr>\n<tr><td>(3) La mer étais</td><td>était</td><td>Accord sujet-verbe : 3<sup>e</sup> personne du singulier : -ait.</td></tr>\n<tr><td>(1) a la pêche</td><td>à la pêche</td><td>Homophone grammatical : préposition « à ».</td></tr>\n<tr><td>(2) On est partit</td><td>On est parti(s)</td><td>Participe passé avec <em>être</em> (et non 3<sup>e</sup> personne du passé simple « partit ») ; avec « on » = nous, l’accord au pluriel est admis : « partis ».</td></tr>\n<tr><td>(4) ma donner</td><td>m’a donné</td><td>Homophone (pronom élidé « m’ » + auxiliaire « a » / déterminant « ma ») et confusion infinitif / participe passé.</td></tr>\n<tr><td>(4) de pas bougé</td><td>de ne pas bouger</td><td>Infinitif après la préposition « de » ; négation complète « ne… pas » à l’écrit.</td></tr></table>\n<p>Les erreurs portent surtout sur les <strong>terminaisons verbales</strong> et les <strong>homophones</strong>, et plusieurs sont corrigées dans le second jet : la grille (critère 3) a été efficace.</p>"
+      },
+      {
+       "id": "3",
+       "type": "langue",
+       "points": 1,
+       "enonce": "<p>Soilihi a remplacé « m’a amené » par « m’a emmené ». Expliquez la différence de sens entre ces deux verbes et justifiez ce choix.</p>",
+       "corrige": "<p><strong>Amener</strong> (a- + mener) signifie conduire quelqu’un vers un lieu, en insistant sur le point d’arrivée (« Amène ton frère à l’école »). <strong>Emmener</strong> (en- + mener) signifie mener avec soi en partant d’un lieu, en insistant sur le départ et l’accompagnement (« Il m’a emmené à la pêche »). Ici, le grand-père part avec l’enfant et l’accompagne pendant toute l’activité : « emmener » est le verbe juste. La même opposition existe entre <em>apporter</em> et <em>emporter</em> (pour les objets). Ce remplacement témoigne d’un travail sur le <strong>lexique</strong> (préfixes a- / en-), sans doute conduit en classe.</p>"
+      },
+      {
+       "id": "4",
+       "type": "langue",
+       "points": 1.5,
+       "enonce": "<p>Identifiez les temps et modes des verbes soulignés dans le second jet et précisez leur valeur : « <u>devais</u> avoir » (1), « <u>entendait</u> » (3), « <u>a tiré</u> » (6), « <u>m’emporte</u> » (7), « <u>repense</u> » (11).</p>",
+       "corrige": "<ul>\n<li><strong>devais</strong> (avoir) : imparfait de l’indicatif du verbe <em>devoir</em>, employé comme <strong>semi-auxiliaire de modalité</strong> : il exprime la <strong>probabilité</strong> (« je devais avoir cinq ans » = j’avais probablement cinq ans). Il remplace avantageusement « peut-être » et montre l’incertitude du souvenir.</li>\n<li><strong>entendait</strong> : imparfait de l’indicatif ; valeur <strong>descriptive</strong>, d’arrière-plan et de durée.</li>\n<li><strong>a tiré</strong> : passé composé de l’indicatif ; action ponctuelle de <strong>premier plan</strong>, qui fait avancer le récit (renforcée par « Soudain »).</li>\n<li><strong>m’emporte</strong> : présent du <strong>subjonctif</strong>, imposé par la locution verbale « avoir peur que », qui exprime un sentiment (crainte) ; le mode subjonctif présente le procès comme envisagé, non réalisé.</li>\n<li><strong>repense</strong> : présent de l’indicatif ; <strong>présent d’énonciation</strong> (moment où Soilihi écrit) avec une valeur <strong>d’habitude</strong> (« quand je sens… ») : il relie le souvenir au présent du narrateur, comme chez les écrivains du corpus.</li></ul>"
+      },
+      {
+       "id": "5",
+       "type": "langue",
+       "points": 1.5,
+       "enonce": "<p>Phrases (5) et (8) du second jet : délimitez les propositions à l’aide de crochets, donnez leur nature et indiquez comment elles sont reliées. « J’ai attendu longtemps, si longtemps que je commençais à m’endormir. » ; « Ensemble nous avons remonté un gros poisson argenté qui se débattait au fond de la pirogue. »</p>",
+       "corrige": "<ul>\n<li>[J’ai attendu longtemps, si longtemps] [que je commençais à m’endormir]. « J’ai attendu longtemps, si longtemps » : <strong>proposition principale</strong> ; « que je commençais à m’endormir » : <strong>proposition subordonnée circonstancielle de conséquence</strong>, introduite par « que » en <strong>corrélation</strong> avec l’adverbe d’intensité « si » (système corrélatif « si… que »). Liaison : <strong>subordination</strong>. (« à m’endormir » est un groupe infinitif complément du verbe « commençais », non une proposition conjuguée.)</li>\n<li>[Ensemble nous avons remonté un gros poisson argenté [qui se débattait au fond de la pirogue]]. « Ensemble nous avons remonté un gros poisson argenté » : <strong>proposition principale</strong> ; « qui se débattait au fond de la pirogue » : <strong>proposition subordonnée relative</strong>, introduite par le pronom relatif « qui » (sujet), complément du nom « poisson » (son antécédent). Liaison : <strong>subordination</strong> par un pronom relatif ; la relative est enchâssée dans le groupe nominal.</li></ul>"
+      },
+      {
+       "id": "6",
+       "type": "langue",
+       "points": 1.5,
+       "enonce": "<p>Transposez au discours indirect la phrase (9) : « Mon grand-père a éclaté de rire : « Tu es un vrai pêcheur maintenant ! » » Justifiez les transformations.</p>",
+       "corrige": "<p>Proposition : « Mon grand-père a éclaté de rire et <strong>s’est exclamé que j’étais désormais un vrai pêcheur</strong>. » (autres formulations acceptées : « …et m’a dit que j’étais à présent un vrai pêcheur »).</p>\n<ul><li><strong>Verbe introducteur</strong> : il faut un verbe de parole (« s’exclamer », « déclarer », « affirmer »), qui rend aussi la valeur exclamative ; les deux points et les guillemets disparaissent au profit d’une subordonnée complétive introduite par « que ».</li>\n<li><strong>Personnes</strong> : « tu » (l’enfant à qui l’on parle) devient « je » (le narrateur).</li>\n<li><strong>Temps</strong> : le verbe introducteur étant au passé (passé composé), le présent « es » devient l’imparfait « étais » (<strong>concordance des temps</strong> : simultanéité dans le passé).</li>\n<li><strong>Repères temporels</strong> : « maintenant », lié à la situation d’énonciation, devient « désormais », « à présent » ou « dès lors ».</li>\n<li>Le point d’exclamation disparaît : la phrase devient déclarative.</li></ul>"
+      },
+      {
+       "id": "7",
+       "type": "langue",
+       "points": 0.75,
+       "enonce": "<p>Expliquez la formation des mots « argenté » (8) et « endormir » (5).</p>",
+       "corrige": "<ul><li><strong>argenté</strong> : adjectif (participe passé du verbe « argenter ») formé par <strong>dérivation suffixale</strong> sur le nom « argent » (radical « argent » + suffixe verbal -er → « argenter », participe « argenté ») ; il signifie « qui a la couleur, l’éclat de l’argent ».</li>\n<li><strong>endormir</strong> : verbe formé par <strong>dérivation préfixale</strong> : préfixe <strong>en-</strong> (qui marque l’entrée dans un état) + verbe « dormir » ; employé ici à la forme pronominale (« s’endormir »).</li></ul>"
+      },
+      {
+       "id": "8",
+       "type": "didactique-fr",
+       "points": 1.25,
+       "enonce": "<p>Analysez l’annotation de l’enseignante sur le premier jet. En quoi a-t-elle favorisé la réécriture ?</p>",
+       "corrige": "<p>L’annotation est efficace pour plusieurs raisons :</p><ul>\n<li>Elle commence par une <strong>valorisation</strong> (« Ton souvenir est intéressant ») qui encourage l’élève à reprendre son texte sans le vivre comme un échec.</li>\n<li>Elle se place du point de vue du <strong>lecteur</strong> (« Aide ton lecteur à voir la scène ») : elle rappelle le but de l’écrit et fait comprendre que réviser, c’est améliorer l’effet du texte, pas seulement corriger.</li>\n<li>Elle pose des <strong>questions précises</strong> (où ? quels bruits, quelles couleurs ? que ressentais-tu ?) qui fournissent des pistes concrètes ; Soilihi y a répondu point par point.</li>\n<li>Elle renvoie à un <strong>critère connu</strong> de la grille (« critère 3 ») pour l’orthographe, sans corriger à la place de l’élève : il doit chercher lui-même, ce qui développe l’autonomie.</li>\n<li>Elle est <strong>limitée</strong> : deux objectifs seulement, ce qui rend la tâche réalisable.</li></ul>\n<p>On pourrait seulement regretter l’absence de remarque sur la fin du texte (qui reste plate dans le premier jet) : Soilihi l’a pourtant améliorée seul (phrase 11), sans doute grâce aux textes lus en classe.</p>"
+      },
+      {
+       "id": "9",
+       "type": "didactique-fr",
+       "points": 2.5,
+       "enonce": "<p>Construisez une grille d’autoévaluation adaptée à cette situation d’écriture, puis décrivez l’organisation de la séance de réécriture qui a pu conduire au second jet (durée, modalités, outils, liens avec la lecture).</p>",
+       "corrige": "<p><strong>Grille d’autoévaluation</strong> (co-construite avec les élèves à partir des récits d’enfance lus) :</p>\n<table class=\"tab\"><tr><th>Critères</th><th>Oui</th><th>À améliorer</th></tr>\n<tr><td>1. Je raconte un seul souvenir, à la première personne, dans l’ordre des événements.</td><td></td><td></td></tr>\n<tr><td>2. Mon lecteur peut imaginer la scène : je dis où et quand, et je donne au moins deux détails (couleurs, bruits, odeurs).</td><td></td><td></td></tr>\n<tr><td>3. J’utilise correctement les temps du passé : passé composé pour les actions, imparfait pour les descriptions ; j’ai vérifié les terminaisons.</td><td></td><td></td></tr>\n<tr><td>4. Je montre ce que j’ai ressenti.</td><td></td><td></td></tr>\n<tr><td>5. Ma fin dit pourquoi ce souvenir est important pour moi.</td><td></td><td></td></tr>\n<tr><td>6. J’ai relu en vérifiant les homophones (a / à, et / est, ma / m’a).</td><td></td><td></td></tr></table>\n<p><strong>Organisation possible de la séance de réécriture (50 min)</strong> :</p><ol>\n<li><strong>Retour aux textes littéraires (10 min)</strong> : relecture d’un court extrait (par exemple le début du <em>Roman d’un enfant</em> de Loti ou « Aux Feuillantines » de Hugo) ; les élèves repèrent comment l’auteur fait « voir » la scène (détails sensoriels, comparaisons) et comment il exprime ses émotions ; on enrichit une « boîte à outils » (verbes de perception, expressions des sentiments).</li>\n<li><strong>Lecture de l’annotation et du texte en binôme (10 min)</strong> : chaque élève lit son premier jet à un camarade qui dit ce qu’il a compris et ce qu’il aimerait savoir de plus ; l’auteur note les questions.</li>\n<li><strong>Réécriture individuelle (20 min)</strong> : l’élève réécrit en sautant des lignes, en utilisant l’annotation, la grille et la boîte à outils ; l’enseignante circule et aide les élèves les plus fragiles (dictée à l’adulte d’un passage, étayage oral).</li>\n<li><strong>Relecture orthographique ciblée (10 min)</strong> : relecture avec les critères 3 et 6 seulement, en utilisant les outils de la classe (tableaux de conjugaison, affiche des homophones).</li></ol>\n<p>Le texte final peut être publié dans un recueil de « souvenirs d’enfance » de la classe, lu aux familles : la <strong>destination réelle</strong> de l’écrit motive la réécriture. On respecte le choix des élèves qui ne souhaitent pas partager un souvenir personnel (possibilité d’écrire un souvenir inventé ou celui d’un proche).</p>"
+      }
+     ]
+    },
+    {
+     "id": "Q",
+     "label": "Qualité de l’écrit",
+     "short": "Q",
+     "titre": "Correction syntaxique et qualité écrite",
+     "points": 6,
+     "questions": [
+      {
+       "id": "1",
+       "type": "qualite",
+       "points": 6,
+       "enonce": "<p>La correction syntaxique et la qualité écrite de l’ensemble de votre copie sont évaluées sur <strong>6 points</strong>. Réservez 10 à 15 minutes en fin d’épreuve pour relire votre copie, en particulier votre réponse à la deuxième partie, puis attribuez-vous une note à l’aide de la grille du corrigé.</p>",
+       "corrige": "<p><strong>Grille de relecture et répartition indicative des 6 points</strong></p><table class=\"tab\"><tr><th>Critère</th><th>Ce que l’on vérifie</th><th>Points</th></tr><tr><td>Orthographe grammaticale</td><td>Accords dans le groupe nominal (déterminant, nom, adjectif), accord sujet-verbe (sujet inversé, éloigné, pronom relatif « qui »), accord du participe passé avec « être » et avec « avoir » (COD placé avant), homophones grammaticaux (a/à, et/est, ce/se, ces/ses, on/ont, leur/leurs, quel(le)/qu’elle, -é/-er).</td><td>2</td></tr><tr><td>Conjugaison et syntaxe</td><td>Formes verbales exactes (passé simple, subjonctif après « bien que », « il faut que »), concordance des temps, phrases complètes et bien construites, négation complète (« ne… pas »), interrogation indirecte sans inversion ni point d’interrogation, pronoms relatifs corrects (« dont », « auquel »).</td><td>1,5</td></tr><tr><td>Ponctuation et présentation</td><td>Majuscules, points, virgules devant les connecteurs et autour des incises, guillemets pour chaque citation, titres d’œuvres soulignés à la main, alinéas marquant les paragraphes, écriture lisible, absence de ratures multiples.</td><td>1</td></tr><tr><td>Lexique et registre</td><td>Vocabulaire précis et varié (pas de « chose », « truc », « faire » répété), registre soutenu, terminologie grammaticale et didactique exacte, absence de tournures orales (« du coup », « ça »).</td><td>1</td></tr><tr><td>Structuration du propos</td><td>Introduction, développement en parties annoncées, connecteurs logiques (« en effet », « cependant », « en outre », « ainsi »), transitions, conclusion ; réponses de la troisième partie rédigées en phrases.</td><td>0,5</td></tr></table><p><strong>Barème d’usage</strong> : en pratique, les correcteurs retirent environ 0,25 à 0,5 point par type d’erreur récurrente ; une copie qui présente plus d’une dizaine d’erreurs de langue sur l’ensemble ne peut guère dépasser 2/6, une copie presque sans faute, bien ponctuée et bien structurée obtient 5 ou 6/6.</p><p><strong>Point de vigilance pour ce sujet</strong> : dans un sujet sur la révision des textes, appliquez à votre copie ce que vous préconisez pour les élèves : prévoyez une relecture ciblée (verbes, accords, homophones), ne recopiez pas un brouillon intégral faute de temps, et citez les vers exactement, avec la barre oblique entre deux vers.</p><p><strong>Méthode de relecture efficace</strong> : relisez en trois passages ciblés plutôt qu’une seule fois : 1) les verbes (repérer chaque verbe, chercher son sujet, vérifier la terminaison) ; 2) les groupes nominaux et les participes passés ; 3) la ponctuation et les homophones. Le rapport de jury 2023 rappelle que la présentation et la graphie « mériteraient d’être plus soignées » : un futur professeur écrit au tableau devant ses élèves.</p>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

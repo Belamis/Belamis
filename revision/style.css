@@ -1280,3 +1280,22 @@ body.studying .launch-layer .space-ui { visibility: hidden; }
 .matiere-rev:hover:not(:disabled) { border-color: var(--cyan); background: rgba(10, 36, 40, 0.7); box-shadow: 0 10px 40px -10px rgba(92, 225, 230, 0.55); }
 .matiere-rev small { margin-left: 6px; padding: 1px 8px; border-radius: 999px; border: 1px solid rgba(92, 225, 230, 0.55); color: var(--cyan); font-size: 0.72rem; font-weight: 600; vertical-align: middle; }
 .partie-intro pre, .corrige pre, .question-enonce pre { white-space: pre-wrap; overflow-x: auto; max-width: 100%; margin: 6px 0; padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); font-size: 0.88rem; }
+
+/* lisibilité du texte posé sur le cercle lumineux */
+.space-center h2 em { filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 18px rgba(0, 0, 0, 0.7)); }
+#space-lead {
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(6, 8, 14, 0.72);
+  color: #fff4dc;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.space-note:not(:empty) {
+  padding: 5px 14px;
+  border-radius: 12px;
+  background: rgba(6, 8, 14, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}

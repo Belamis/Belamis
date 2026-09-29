@@ -722,7 +722,6 @@
     } else {
       begin();
     }
-    try { if (location.hash !== "#revision") history.replaceState(null, "", "#revision"); } catch (_) { /* cadre restreint */ }
   }
 
   function skip() {
@@ -766,6 +765,6 @@
   });
 
   updateSoundBtn();
-  // lien direct vers l'espace de révision (sans son : le navigateur exige un clic)
-  if (location.hash === "#revision") launch({ withSound: false, direct: true });
+  // un ancien lien « #revision » ramène désormais à l'accueil : l'animation se joue à chaque lancement
+  if (location.hash === "#revision") { try { history.replaceState(null, "", location.pathname + location.search); } catch (_) { /* cadre restreint */ } }
 })();

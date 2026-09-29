@@ -1245,3 +1245,28 @@ body.studying .launch-layer .space-ui { visibility: hidden; }
   html { scroll-behavior: auto; }
 }
 .fig .axe-com { stroke: #6b4f2a; stroke-width: 3; stroke-dasharray: 8 4; stroke-linecap: round; }
+
+/* ---------- Concours spécifique Mayotte : compréhension orale, QCM, copies d'élèves ---------- */
+.audio-box { display: grid; gap: 10px; margin: 4px 0 18px; padding: 16px 18px; border-radius: 16px; border: 1px solid rgba(92, 225, 230, 0.35); background: rgba(92, 225, 230, 0.06); }
+.audio-title { margin: 0; font-weight: 700; color: var(--cyan); }
+.audio-help { margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
+.audio-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.audio-state { font-size: 0.85rem; color: var(--cyan); }
+.audio-text { padding: 12px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); font-size: 0.95rem; line-height: 1.6; }
+.audio-text p { margin: 0 0 0.7em; }
+.audio-text-title { font-weight: 700; }
+.qcm { display: grid; gap: 8px; margin: 10px 0 0; padding: 0; border: 0; min-width: 0; }
+.qcm-opt { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--glass-line); background: rgba(255, 255, 255, 0.03); cursor: pointer; line-height: 1.45; }
+.qcm-opt:hover { border-color: rgba(255, 255, 255, 0.3); }
+.qcm-opt input { margin-top: 3px; accent-color: var(--gold); width: 17px; height: 17px; flex: none; }
+.qcm-opt.is-good { border-color: rgba(120, 220, 120, 0.7); background: rgba(120, 220, 120, 0.1); }
+.qcm-opt.is-bad { border-color: rgba(240, 110, 90, 0.7); background: rgba(240, 110, 90, 0.1); }
+.copie-eleve { margin: 6px 0; padding: 16px 18px 16px 44px; border-radius: 12px; background: repeating-linear-gradient(#fbf8ef 0 27px, #cfe0f2 27px 28px); color: #1f2a44; font-family: "Comic Sans MS", "Segoe Print", "Bradley Hand", cursive; line-height: 28px; position: relative; max-width: 680px; }
+.copie-eleve::before { content: ""; position: absolute; top: 0; bottom: 0; left: 32px; border-left: 2px solid #e8a3a3; }
+.copie-eleve p { margin: 0 0 4px; }
+.copie-eleve .copie-titre { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; color: #5a4b33; line-height: 1.5; margin-bottom: 8px; }
+.copie-eleve .annot { font-family: var(--sans); color: #c0392b; font-size: 0.88rem; line-height: 1.5; }
+.tab { border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 0.92rem; margin: 4px 0; }
+.tab th, .tab td { padding: 6px 10px; border: 1px solid rgba(255, 255, 255, 0.22); text-align: center; }
+.tab th { background: rgba(255, 200, 100, 0.1); font-weight: 600; }
+.doc .tab, .corrige .tab, .partie-intro .tab { display: block; overflow-x: auto; max-width: 100%; }

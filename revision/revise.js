@@ -25,6 +25,12 @@
       title: "Partie B : des exercices, <em>du raisonnement</em>.",
       intro: "Le programme du concours est celui du cycle 4 (5e, 4e, 3e). Tu trouveras le sujet 0 officiel, les deux sujets de la session 2026, puis des sujets originaux inspirés des annales du CRPE et du brevet. Les questions marquées « Lycée » (programme de 2de et 1re) sont des approfondissements. Durée conseillée : 2 heures, calculatrice autorisée. La rédaction et la justification comptent dans la note.",
     },
+    mayotte: {
+      data: window.BELAMIS_MAYOTTE,
+      eyebrow: "2nd concours interne · spécifique Mayotte",
+      title: "Deux écrits sur 40, <em>trois oraux</em>.",
+      intro: "Sujets construits sur le modèle des annales 2019-2025 de l'académie de Mayotte : français (compréhension orale, synthèse, langue et productions d'élèves) et maths-sciences (problème complexe, exercices, didactique), 4 heures chacun, une note de 10 sur 40 ou moins étant éliminatoire. Les oraux d'admission (étude de cas et mise en situation professionnelle) se préparent en 1 heure. Commence par le guide tiré des rapports de jury.",
+    },
   };
 
   const $ = (id) => document.getElementById(id);
@@ -112,7 +118,7 @@
     $("study-eyebrow").textContent = m.eyebrow;
     $("study-heading").innerHTML = m.title;
     $("study-desc").textContent = m.intro;
-    study.setAttribute("aria-label", { maths: "Sujets de mathématiques", francais: "Sujets de français", epreuve2: "Sujets de la 2e épreuve" }[matiere]);
+    study.setAttribute("aria-label", { maths: "Sujets de mathématiques", francais: "Sujets de français", epreuve2: "Sujets de la 2e épreuve", mayotte: "Sujets du concours spécifique Mayotte" }[matiere]);
   }
 
   function cardHTML(s) {
@@ -121,7 +127,7 @@
     const status = sc.evaluated
       ? `<span class="chip chip-score">${fmtPts(sc.got)} / ${fmtPts(sc.evaluated)} pts évalués</span>`
       : sc.answered ? `<span class="chip">${sc.answered} / ${sc.total} réponses</span>` : `<span class="chip chip-new">Nouveau</span>`;
-    const kind = s.officiel ? "Annale officielle" : s.lycee ? "Approfondissement" : s.entrainement ? "Entraînement rapide" : "Sujet type";
+    const kind = s.officiel ? "Annale officielle" : s.lycee ? "Approfondissement" : s.entrainement ? "Entraînement rapide" : s.domaine === "oral" ? "Oral d'admission" : "Sujet type";
     const top = s.texte
       ? `<span class="sujet-num">${sujetName(s)}</span><span class="sujet-genre">${esc(s.genre)}</span>`
       : `<span class="sujet-num">${kind}</span><span class="sujet-genre">${DATA.domaines ? esc(DATA.domaines[s.domaine] || "") : `noté sur ${sujetTotal(s)}`}</span>`;
@@ -144,9 +150,10 @@
     box.innerHTML = [["tous", "Tous les domaines"], ...Object.entries(DATA.domaines)].map(([k, label]) =>
       `<button type="button" class="type-chip dom-chip" data-domaine="${k}" aria-pressed="${k === domaine}">${esc(label)} <small>${n(k)}</small></button>`).join("");
     guide.hidden = !DATA.guide;
-    if (DATA.guide && !guide.dataset.filled) {
-      guide.innerHTML = `<summary>Ce qui peut tomber en histoire-géo-EMC : le programme passé au crible</summary><div class="guide-body">${DATA.guide}</div>`;
-      guide.dataset.filled = "1";
+    if (DATA.guide && guide.dataset.filled !== matiere) {
+      guide.innerHTML = `<summary>${esc(DATA.guideTitre || "Ce qui peut tomber en histoire-géo-EMC : le programme passé au crible")}</summary><div class="guide-body">${DATA.guide}</div>`;
+      guide.dataset.filled = matiere;
+      guide.open = false;
     }
   }
 
@@ -201,7 +208,7 @@
 
     const head = hasText ? "" : `<header class="sujet-head">
         ${s.source ? `<p class="sujet-source">${esc(s.source)}</p>` : ""}
-        <p class="sujet-meta">${matiere === "maths" ? `Calculatrice autorisée · noté sur ${sujetTotal(s)} · justifie tes réponses, sauf mention contraire.` : s.entrainement ? `${allQuestions(s).length} questions · réponds de tête, puis vérifie.` : `${esc((DATA.domaines || {})[s.domaine] || "")} · noté sur ${sujetTotal(s)} · appuie-toi sur les documents et sur tes connaissances.`}</p>
+        <p class="sujet-meta">${matiere === "mayotte" ? metaMayotte(s) : matiere === "maths" ? `Calculatrice autorisée · noté sur ${sujetTotal(s)} · justifie tes réponses, sauf mention contraire.` : s.entrainement ? `${allQuestions(s).length} questions · réponds de tête, puis vérifie.` : `${esc((DATA.domaines || {})[s.domaine] || "")} · noté sur ${sujetTotal(s)} · appuie-toi sur les documents et sur tes connaissances.`}</p>
         ${s.remarque ? `<p class="sujet-remarque">${esc(s.remarque)}</p>` : ""}
       </header>`;
 
@@ -212,16 +219,114 @@
           <span class="partie-pts" data-partie="${p.id}">${pts(p.points)}</span>
         </header>
         ${p.intro ? `<div class="partie-intro math">${p.intro}</div>` : ""}
+        ${p.audio ? audioHTML(p) : ""}
         ${p.questions.map((q) => questionHTML(p, q, e)).join("")}
       </section>`).join("");
 
     updateTotals();
   }
 
+  function metaMayotte(s) {
+    const h = (s.duree || 7200) / 3600;
+    if (s.domaine === "oral") return `Préparation : ${h} h · noté sur ${sujetTotal(s)} · exposé de 10 minutes puis entretien de 20 minutes avec le jury.`;
+    return `Durée : ${h} heures${s.domaine === "maths" ? " · calculatrice autorisée" : " · sans document ni calculatrice"} · noté sur ${sujetTotal(s)} · une note de ${s.eliminatoire} ou moins est éliminatoire.`;
+  }
+
+  // ---------- Compréhension orale : le texte est lu deux fois par la synthèse vocale ----------
+  const speech = { on: false, key: null };
+
+  function audioHTML(p) {
+    const a = p.audio;
+    const ok = "speechSynthesis" in window;
+    return `<div class="audio-box" data-audio="${p.id}">
+      <p class="audio-title">Texte entendu : « ${esc(a.titre)} »</p>
+      <p class="audio-help">${ok
+        ? "Comme au concours, le texte est lu deux fois de suite (titre compris). Prends des notes, puis réponds au questionnaire sans relire le texte : 30 minutes en tout à partir de la première lecture."
+        : "Ton navigateur ne propose pas de lecture à voix haute : fais-toi lire le texte par quelqu'un, ou lis-le une seule fois avant de le masquer."}</p>
+      <div class="audio-actions">
+        ${ok ? `<button type="button" class="btn btn-primary btn-sm audio-play" data-audio="${p.id}">Écouter les deux lectures</button>` : ""}
+        <button type="button" class="btn btn-ghost btn-sm audio-show" data-audio="${p.id}" aria-expanded="false">Afficher le texte</button>
+        <span class="audio-state" data-audio-state="${p.id}" aria-live="polite"></span>
+      </div>
+      <div class="audio-text" data-audio-text="${p.id}" hidden>
+        <p class="audio-text-title">${esc(a.titre)}</p>
+        ${a.texte.map((t) => `<p>${esc(t)}</p>`).join("")}
+        ${a.source ? `<p class="doc-src">${esc(a.source)}</p>` : ""}
+      </div>
+    </div>`;
+  }
+
+  function frenchVoice() {
+    const vs = window.speechSynthesis.getVoices().filter((v) => /^fr(-|_|$)/i.test(v.lang));
+    return vs.find((v) => /fr-FR/i.test(v.lang) && v.localService) || vs.find((v) => /fr-FR/i.test(v.lang)) || vs[0] || null;
+  }
+
+  function stopSpeech() {
+    if (!("speechSynthesis" in window)) return;
+    speech.on = false;
+    window.speechSynthesis.cancel();
+    document.querySelectorAll(".audio-play").forEach((b) => { b.textContent = "Écouter les deux lectures"; });
+    document.querySelectorAll("[data-audio-state]").forEach((el) => { el.textContent = ""; });
+  }
+
+  function playAudio(id) {
+    const p = current && current.parties.find((x) => x.id === id);
+    if (!p || !p.audio) return;
+    if (speech.on) { stopSpeech(); return; }
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const voice = frenchVoice();
+    const state = document.querySelector(`[data-audio-state="${id}"]`);
+    const btn = document.querySelector(`.audio-play[data-audio="${id}"]`);
+    const chunks = [p.audio.titre, ...p.audio.texte];
+    const utter = (text, lecture, i) => {
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = "fr-FR";
+      if (voice) u.voice = voice;
+      u.rate = lecture === 1 ? 0.95 : 1;
+      u.onstart = () => { if (state) state.textContent = `Lecture ${lecture} sur 2 · paragraphe ${i} sur ${chunks.length - 1 || 1}`; };
+      return u;
+    };
+    speech.on = true;
+    btn.textContent = "Arrêter la lecture";
+    if (!voice && state) state.textContent = "Aucune voix française trouvée : la lecture utilise la voix par défaut.";
+    for (const lecture of [1, 2]) chunks.forEach((t, i) => synth.speak(utter(t, lecture, i)));
+    const last = new SpeechSynthesisUtterance(" ");
+    last.onend = () => { if (!speech.on) return; stopSpeech(); if (state) state.textContent = "Fin des deux lectures : réponds maintenant au questionnaire."; };
+    synth.speak(last);
+  }
+
+  // ---------- QCM (« la ou les réponses correctes ») ----------
+  const qcmChoice = (v) => (v || "").split(",").filter(Boolean).map(Number).sort((a, b) => a - b);
+
+  function qcmHTML(q, k, e, shown) {
+    const chosen = qcmChoice(e.answers[k]);
+    return `<fieldset class="qcm" data-key="${k}"><legend class="sr-only">Coche la ou les bonnes réponses</legend>
+      ${q.options.map((o, i) => {
+        const mark = shown ? (q.bonnes.includes(i) ? " is-good" : chosen.includes(i) ? " is-bad" : "") : "";
+        return `<label class="qcm-opt${mark}"><input type="checkbox" class="qcm-input" data-key="${k}" value="${i}" ${chosen.includes(i) ? "checked" : ""}><span>${o}</span></label>`;
+      }).join("")}
+    </fieldset>`;
+  }
+
+  function markQcm(k, q, show) {
+    const chosen = qcmChoice(entry(current.id).answers[k]);
+    document.querySelectorAll(`.qcm[data-key="${k}"] .qcm-opt`).forEach((lab, i) => {
+      lab.classList.toggle("is-good", show && q.bonnes.includes(i));
+      lab.classList.toggle("is-bad", show && !q.bonnes.includes(i) && chosen.includes(i));
+    });
+  }
+
+  function findQuestion(k) {
+    for (const { p, q } of allQuestions(current)) if (qkey(p, q) === k) return q;
+    return null;
+  }
+
   function questionHTML(p, q, e) {
     const k = qkey(p, q);
     const ev = e.evals[k];
-    const big = q.type === "expression" && matiere === "francais";
+    const big = (q.type === "expression" && matiere === "francais") || q.type === "synthese";
+    const isQcm = Array.isArray(q.options);
     return `<article class="question" id="q-${k}" data-key="${k}">
       <header class="question-head">
         <span class="question-num">${partShort(p)} · ${esc(q.id)}</span>
@@ -231,9 +336,9 @@
       </header>
       <div class="question-enonce math">${q.enonce}</div>
       ${q.passage ? `<blockquote class="question-passage">${underline(q.passage)}</blockquote>` : ""}
-      <label class="sr-only" for="a-${k}">Ta réponse</label>
+      ${isQcm ? qcmHTML(q, k, e, Boolean(ev)) : `<label class="sr-only" for="a-${k}">Ta réponse</label>
       <textarea id="a-${k}" class="answer-input${big ? " big" : ""}" data-key="${k}" rows="${big ? 16 : 4}"
-        placeholder="${big ? "Rédige ton développement : introduction, deux ou trois parties, conclusion…" : matiere === "maths" ? "Écris ta démarche et ton résultat…" : q.type === "expression" ? "Write your answer here…" : "Écris ta réponse ici…"}">${esc(e.answers[k] || "")}</textarea>
+        placeholder="${placeholder(q, big)}">${esc(e.answers[k] || "")}</textarea>`}
       <div class="question-actions">
         <button type="button" class="btn btn-ghost btn-sm reveal-btn" data-key="${k}" aria-expanded="${ev ? "true" : "false"}" aria-controls="c-${k}">
           ${ev ? "Masquer le corrigé" : "Voir le corrigé"}
@@ -249,6 +354,15 @@
         </div>
       </div>
     </article>`;
+  }
+
+  function placeholder(q, big) {
+    if (big) return q.type === "synthese" ? "Rédige ta réponse : introduction avec la problématique, développement en deux ou trois parties qui croisent les textes, conclusion…" : "Rédige ton développement : introduction, deux ou trois parties, conclusion…";
+    if (q.type === "expose") return "Note ton plan d'exposé : problématique, deux ou trois parties, conclusion (pas de phrases entières, comme le jour de l'oral)…";
+    if (q.type === "entretien" || q.type === "valeurs") return "Réponds comme devant le jury, en quelques phrases précises et argumentées…";
+    if (q.type === "qualite") return "Relis ta copie avec la grille du corrigé et note ici ce que tu dois corriger…";
+    if (matiere === "maths" || ["calcul", "probleme"].includes(q.type)) return "Écris ta démarche et ton résultat…";
+    return q.type === "expression" ? "Write your answer here…" : "Écris ta réponse ici…";
   }
 
   const words = (t) => (t || "").trim().split(/\s+/).filter(Boolean).length;
@@ -268,13 +382,15 @@
       if (el) el.textContent = ev ? `${fmtPts(got)} / ${pts(p.points)}` : pts(p.points);
     }
     const sur10 = (sc.got / total) * 10;
-    const conversion = total !== 10 && matiere !== "epreuve2" && !current.entrainement;
+    const conversion = total !== 10 && (matiere === "francais" || matiere === "maths") && !current.entrainement;
     $("study-score").innerHTML = sc.evaluated
       ? `<strong>${fmtPts(sc.got)}</strong> / ${total}${conversion ? ` <small>soit ${fmtPts(sur10)} / 10 au concours</small>` : ""}`
       : `<small>${sc.answered} / ${sc.total} réponses</small>`;
-    const warn = Math.abs(sc.evaluated - total) < 1e-9 && sur10 <= 2.5 && matiere !== "epreuve2" && !current.entrainement;
+    const seuil = current.eliminatoire;
+    const warn = Math.abs(sc.evaluated - total) < 1e-9 && !current.entrainement
+      && (seuil != null ? sc.got <= seuil : conversion && sur10 <= 2.5);
     $("study-score").classList.toggle("danger", warn);
-    $("study-score").title = warn ? "Une note égale ou inférieure à 2,5 / 10 est éliminatoire." : "";
+    $("study-score").title = warn ? (seuil != null ? `Une note égale ou inférieure à ${seuil} / ${total} est éliminatoire.` : "Une note égale ou inférieure à 2,5 / 10 est éliminatoire.") : "";
   }
 
   // ---------- Chrono (2 h conseillées) ----------
@@ -287,8 +403,9 @@
   function renderChrono() {
     const sec = chronoSeconds();
     $("chrono-time").textContent = fmtTime(sec);
-    $("chrono").classList.toggle("over", sec > 7200);
-    $("chrono-btn").textContent = chrono.running ? "Pause" : sec ? "Reprendre" : "Lancer le chrono (2 h)";
+    const lim = (current && current.duree) || 7200;
+    $("chrono").classList.toggle("over", sec > lim);
+    $("chrono-btn").textContent = chrono.running ? "Pause" : sec ? "Reprendre" : `Lancer le chrono (${lim / 3600} h)`;
   }
 
   function toggleChrono() {
@@ -336,6 +453,7 @@
   }
 
   function closeStudy() {
+    stopSpeech();
     if (current) { stopChrono(); saveNow(); current = null; }
     study.classList.remove("open");
     study.hidden = true;
@@ -345,6 +463,7 @@
   function openSujet(id, focusKey) {
     const s = DATA.sujets.find((x) => x.id === id);
     if (!s) return;
+    stopSpeech();
     current = s;
     stopChrono();
     chrono.base = entry(s.id).seconds || 0;
@@ -360,6 +479,7 @@
   }
 
   function backToList() {
+    stopSpeech();
     stopChrono();
     saveNow();
     current = null;
@@ -391,10 +511,32 @@
     if (dom) { domaine = dom.dataset.domaine; renderList(); return; }
     const type = ev.target.closest(".type-chip");
     if (type) { renderTypeList(type.getAttribute("aria-pressed") === "true" ? null : type.dataset.type); return; }
+    const play = ev.target.closest(".audio-play");
+    if (play) { playAudio(play.dataset.audio); return; }
+    const showTxt = ev.target.closest(".audio-show");
+    if (showTxt) {
+      const box = document.querySelector(`[data-audio-text="${showTxt.dataset.audio}"]`);
+      box.hidden = !box.hidden;
+      showTxt.textContent = box.hidden ? "Afficher le texte" : "Masquer le texte";
+      showTxt.setAttribute("aria-expanded", String(!box.hidden));
+      return;
+    }
     const reveal = ev.target.closest(".reveal-btn");
     if (reveal) {
       const box = $(`c-${reveal.dataset.key}`);
       box.hidden = !box.hidden;
+      const q = current && findQuestion(reveal.dataset.key);
+      if (q && Array.isArray(q.options)) {
+        markQcm(reveal.dataset.key, q, !box.hidden);
+        const e = entry(current.id), k = reveal.dataset.key;
+        if (!box.hidden && !e.evals[k] && e.answers[k]) {
+          const ok = qcmChoice(e.answers[k]).join() === [...q.bonnes].sort((a, b) => a - b).join();
+          e.evals[k] = ok ? "ok" : "ko";
+          document.querySelectorAll(`.eval-btn[data-key="${k}"]`).forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.eval === e.evals[k])));
+          updateTotals();
+          scheduleSave();
+        }
+      }
       reveal.textContent = box.hidden ? "Voir le corrigé" : "Masquer le corrigé";
       reveal.setAttribute("aria-expanded", String(!box.hidden));
       return;
@@ -409,6 +551,16 @@
       updateTotals();
       scheduleSave();
     }
+  });
+
+  study.addEventListener("change", (ev) => {
+    const c = ev.target.closest(".qcm-input");
+    if (!c || !current) return;
+    const k = c.dataset.key;
+    const vals = [...document.querySelectorAll(`.qcm-input[data-key="${k}"]`)].filter((x) => x.checked).map((x) => x.value);
+    entry(current.id).answers[k] = vals.join(",");
+    updateTotals();
+    scheduleSave();
   });
 
   study.addEventListener("input", (ev) => {

@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Unbounded";
+        src: url("assets/fonts/unbounded-latin-wght-normal.woff2") format("woff2");
+        font-weight: 200 900;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Outfit";
+        src: url("assets/fonts/outfit-latin-wght-normal.woff2") format("woff2");
+        font-weight: 100 900;
+        font-display: block;
+      }
+      :root {
+        --space-top: #0b0620;
+        --space-bottom: #130a2e;
+        --ink: #f2eeff;
+        --ink-muted: #b9b0d8;
+        --line: rgba(159, 232, 255, 0.28);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--space-top);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Outfit", sans-serif;
+        color: var(--ink);
+      }
+      .layer {
+        position: absolute;
+        inset: 0;
+      }
+
+      /* ---------- Fond spatial ---------- */
+      #bg {
+        background: linear-gradient(180deg, var(--space-top) 0%, var(--space-bottom) 100%);
+      }
+      .nebula {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+      }
+      #neb-a {
+        width: 900px;
+        height: 700px;
+        left: -200px;
+        top: -180px;
+        background: radial-gradient(circle, rgba(154, 76, 255, 0.42), transparent 70%);
+      }
+      #neb-b {
+        width: 1000px;
+        height: 760px;
+        left: 1100px;
+        top: 420px;
+        background: radial-gradient(circle, rgba(52, 214, 192, 0.22), transparent 70%);
+      }
+      #neb-c {
+        width: 700px;
+        height: 600px;
+        left: 700px;
+        top: -260px;
+        background: radial-gradient(circle, rgba(255, 79, 176, 0.18), transparent 70%);
+      }
+      .star {
+        position: absolute;
+        border-radius: 50%;
+        background: #fff;
+      }
+
+      /* ---------- Corps célestes (fidèles au rendu Canvas du jeu) ---------- */
+      .orb {
+        position: absolute;
+        width: calc(var(--r) * 2px);
+        height: calc(var(--r) * 2px);
+        margin-left: calc(var(--r) * -1px);
+        margin-top: calc(var(--r) * -1px);
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 36% 32%,
+          #ffffff 0%,
+          var(--core) 16%,
+          var(--edge) 72%,
+          var(--deep) 100%
+        );
+        box-shadow:
+          0 0 calc(var(--r) * 0.9px) var(--glow),
+          inset 0 0 0 2px rgba(255, 255, 255, 0.22),
+          inset calc(var(--r) * -0.22px) calc(var(--r) * -0.28px) calc(var(--r) * 0.5px)
+            rgba(11, 6, 32, 0.45);
+      }
+      .orb::after {
+        content: "";
+        position: absolute;
+        left: 22%;
+        top: 16%;
+        width: 30%;
+        height: 20%;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.55);
+        filter: blur(calc(var(--r) * 0.06px));
+      }
+      .hole {
+        position: absolute;
+        width: calc(var(--r) * 2px);
+        height: calc(var(--r) * 2px);
+        margin-left: calc(var(--r) * -1px);
+        margin-top: calc(var(--r) * -1px);
+        border-radius: 50%;
+        box-shadow: 0 0 calc(var(--r) * 0.8px) rgba(177, 76, 255, 0.55);
+      }
+      .hole .disk {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: conic-gradient(
+          from 0deg,
+          #7a3cff,
+          #e7c4ff 12%,
+          #ffcb4d 20%,
+          #b14cff 34%,
+          #3a1a80 52%,
+          #7a3cff 66%,
+          #ff4fb0 80%,
+          #7a3cff
+        );
+        -webkit-mask: radial-gradient(circle, transparent 54%, #000 57%, #000 70%, transparent 100%);
+        mask: radial-gradient(circle, transparent 54%, #000 57%, #000 70%, transparent 100%);
+      }
+      .hole .horizon {
+        position: absolute;
+        inset: 22%;
+        border-radius: 50%;
+        background: radial-gradient(circle at 50% 50%, #05020d 0%, #1a1030 78%, #7a3cff 100%);
+        box-shadow: 0 0 18px 4px rgba(122, 60, 255, 0.6);
+      }
+
+      /* ---------- Scène 1 : le conteneur ---------- */
+      #well {
+        position: absolute;
+        left: 1020px;
+        top: 280px;
+        width: 560px;
+        height: 620px;
+        border: 2px solid var(--line);
+        border-top: none;
+        border-radius: 0 0 32px 32px;
+        background: linear-gradient(180deg, transparent, rgba(159, 232, 255, 0.05));
+      }
+      #danger {
+        position: absolute;
+        left: 1020px;
+        top: 360px;
+        width: 560px;
+        height: 0;
+        border-top: 2px dashed rgba(255, 79, 176, 0.5);
+      }
+      .flash {
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        margin-left: -120px;
+        margin-top: -120px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 65%);
+        opacity: 0;
+      }
+      .spark {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        margin-left: -5px;
+        margin-top: -5px;
+        border-radius: 50%;
+        opacity: 0;
+      }
+      .score {
+        position: absolute;
+        font-family: "Unbounded", sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        width: 200px;
+        margin-left: -100px;
+        text-align: center;
+        opacity: 0;
+      }
+
+      /* ---------- Typo ---------- */
+      .display {
+        font-family: "Unbounded", sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.08;
+      }
+      #verbs {
+        position: absolute;
+        left: 160px;
+        top: 318px;
+      }
+      #verbs .verb {
+        display: block;
+        font-size: 104px;
+        opacity: 0;
+      }
+      #ladder-copy {
+        position: absolute;
+        left: 160px;
+        top: 190px;
+      }
+      #ladder-title {
+        display: block;
+        font-size: 96px;
+        opacity: 0;
+      }
+      #ladder-sub {
+        display: block;
+        margin-top: 22px;
+        font-size: 36px;
+        font-weight: 400;
+        color: var(--ink-muted);
+        opacity: 0;
+      }
+      .tier-name {
+        position: absolute;
+        top: 862px;
+        width: 320px;
+        margin-left: -160px;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 500;
+        color: var(--ink-muted);
+        opacity: 0;
+      }
+
+      /* ---------- Lockup final ---------- */
+      #lockup {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #wordmark {
+        display: flex;
+        align-items: center;
+        font-family: "Unbounded", sans-serif;
+        font-weight: 800;
+        font-size: 236px;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+      #wordmark .ch {
+        display: block;
+        opacity: 0;
+      }
+      #o-slot {
+        display: block;
+        width: 210px;
+        height: 210px;
+        margin: 0 14px;
+      }
+      #tagline {
+        margin-top: 40px;
+        font-size: 48px;
+        font-weight: 500;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: #9fe8ff;
+        opacity: 0;
+      }
+      #byline {
+        margin-top: 28px;
+        font-size: 30px;
+        font-weight: 400;
+        color: var(--ink-muted);
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="10"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div id="bg" class="layer clip" data-start="0" data-duration="10" data-track-index="0">
+        <div id="nebulae" class="layer">
+          <div id="neb-a" class="nebula"></div>
+          <div id="neb-b" class="nebula"></div>
+          <div id="neb-c" class="nebula"></div>
+        </div>
+        <div id="stars" class="layer"></div>
+      </div>
+
+      <div id="stage" class="layer clip" data-start="0" data-duration="10" data-track-index="1">
+        <div id="world" class="layer">
+          <div id="well"></div>
+          <div id="danger"></div>
+          <div id="bodies" class="layer"></div>
+          <div id="fx" class="layer"></div>
+        </div>
+
+        <div id="verbs">
+          <span class="verb display" id="v1">Lâche.</span>
+          <span class="verb display" id="v2">Fusionne.</span>
+          <span class="verb display" id="v3">Grandis.</span>
+        </div>
+
+        <div id="ladder-copy">
+          <span id="ladder-title" class="display">11 paliers.</span>
+          <span id="ladder-sub">De la poussière d'étoile au trou noir.</span>
+        </div>
+        <div id="ladder-names" class="layer">
+          <span class="tier-name" id="name-first">Poussière</span>
+          <span class="tier-name" id="name-last">Trou noir</span>
+        </div>
+
+        <div id="lockup">
+          <div id="wordmark">
+            <span class="ch" id="ch-n">N</span>
+            <span id="o-slot"></span>
+            <span class="ch" id="ch-v">V</span>
+            <span class="ch" id="ch-a">A</span>
+          </div>
+          <div id="tagline">Cosmic Merge</div>
+          <div id="byline">Un jeu Belamis pour Android</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Palette des 11 paliers, reprise telle quelle de game/Tier.kt.
+      const TIERS = [
+        { name: "Poussière", frac: 0.04, core: "#FFFFFF", edge: "#9FE8FF", glow: "rgba(144,224,255,.45)" },
+        { name: "Braise", frac: 0.052, core: "#FFE0A8", edge: "#FF9A3C", glow: "rgba(255,138,44,.45)" },
+        { name: "Astéroïde", frac: 0.066, core: "#C7D2E4", edge: "#6B7A96", glow: "rgba(122,138,166,.45)" },
+        { name: "Comète", frac: 0.081, core: "#CFFFF4", edge: "#34D6C0", glow: "rgba(52,214,192,.5)" },
+        { name: "Lune", frac: 0.098, core: "#F2F4FA", edge: "#AAB4CC", glow: "rgba(192,204,230,.45)" },
+        { name: "Planète", frac: 0.117, core: "#9FD0FF", edge: "#2E7DE0", glow: "rgba(46,125,224,.5)" },
+        { name: "Monde corail", frac: 0.138, core: "#FFC2E8", edge: "#FF4FB0", glow: "rgba(255,79,176,.5)" },
+        { name: "Géante", frac: 0.161, core: "#FFE7A8", edge: "#F0A93A", glow: "rgba(240,169,58,.5)" },
+        { name: "Étoile", frac: 0.187, core: "#FFFFFF", edge: "#FFCB4D", glow: "rgba(255,210,77,.55)" },
+        { name: "Nébuleuse", frac: 0.215, core: "#E7C4FF", edge: "#9A4CFF", glow: "rgba(154,76,255,.55)" },
+        { name: "Trou noir", frac: 0.246 },
+      ];
+
+      // PRNG à graine : rendu déterministe image par image.
+      function mulberry32(a) {
+        return function () {
+          a |= 0;
+          a = (a + 0x6d2b79f5) | 0;
+          let t = Math.imul(a ^ (a >>> 15), 1 | a);
+          t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+      }
+      const rand = mulberry32(20261006);
+
+      function deepen(hex) {
+        const n = parseInt(hex.slice(1), 16);
+        const k = 0.42;
+        const r = Math.round(((n >> 16) & 255) * k);
+        const g = Math.round(((n >> 8) & 255) * k);
+        const b = Math.round((n & 255) * k);
+        return `rgb(${r},${g},${b})`;
+      }
+
+      const bodies = document.getElementById("bodies");
+      const fx = document.getElementById("fx");
+
+      function makeOrb(id, tier, r, x, y) {
+        const el = document.createElement("div");
+        const t = TIERS[tier];
+        el.id = id;
+        if (tier === 10) {
+          el.className = "hole";
+          el.innerHTML = '<div class="disk"></div><div class="horizon"></div>';
+        } else {
+          el.className = "orb";
+          el.style.setProperty("--core", t.core);
+          el.style.setProperty("--edge", t.edge);
+          el.style.setProperty("--deep", deepen(t.edge));
+          el.style.setProperty("--glow", t.glow);
+        }
+        el.style.setProperty("--r", r);
+        el.style.left = x + "px";
+        el.style.top = y + "px";
+        bodies.appendChild(el);
+        return el;
+      }
+
+      // Champ d'étoiles
+      const stars = document.getElementById("stars");
+      const starEls = [];
+      for (let i = 0; i < 150; i++) {
+        const s = document.createElement("div");
+        const size = 1 + rand() * (i % 9 === 0 ? 3.2 : 1.8);
+        s.className = "star";
+        s.style.width = size + "px";
+        s.style.height = size + "px";
+        s.style.left = rand() * 1920 + "px";
+        s.style.top = rand() * 1080 + "px";
+        s.style.opacity = (0.25 + rand() * 0.6).toFixed(2);
+        stars.appendChild(s);
+        starEls.push(s);
+      }
+
+      document.fonts.ready.then(build);
+      function build() {
+      const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+
+      // ---- Fond vivant : dérive des nébuleuses, scintillement, parallaxe ----
+      tl.fromTo("#neb-a", { x: 0, y: 0 }, { x: 160, y: 60, duration: 10, ease: "none" }, 0);
+      tl.fromTo("#neb-b", { x: 0, y: 0 }, { x: -180, y: -40, duration: 10, ease: "none" }, 0);
+      tl.fromTo("#neb-c", { x: 0, y: 0 }, { x: -60, y: 90, duration: 10, ease: "none" }, 0);
+      tl.fromTo("#stars", { y: 0 }, { y: -70, duration: 10, ease: "none" }, 0);
+      starEls.forEach((s, i) => {
+        if (i % 4 !== 0) return;
+        const base = parseFloat(s.style.opacity);
+        tl.to(
+          s,
+          { opacity: base * 0.2, duration: 0.6 + rand() * 0.6, ease: "sine.inOut", yoyo: true, repeat: 5 },
+          rand() * 2
+        );
+      });
+
+      // ---- Effets de fusion ----
+      let fxId = 0;
+      function merge(t, x, y, color, power, points) {
+        const flash = document.createElement("div");
+        flash.className = "flash";
+        flash.id = "flash-" + fxId;
+        flash.style.left = x + "px";
+        flash.style.top = y + "px";
+        fx.appendChild(flash);
+        tl.set(flash, { scale: 0.2, opacity: 0.95 }, t);
+        tl.to(flash, { scale: 1 + power, opacity: 0, duration: 0.45, ease: "power2.out" }, t);
+
+        const count = 10 + Math.round(power * 8);
+        for (let i = 0; i < count; i++) {
+          const p = document.createElement("div");
+          p.className = "spark";
+          p.id = "spark-" + fxId + "-" + i;
+          p.style.left = x + "px";
+          p.style.top = y + "px";
+          p.style.background = i % 3 === 0 ? "#ffffff" : color;
+          p.style.boxShadow = `0 0 12px ${color}`;
+          fx.appendChild(p);
+          const a = (i / count) * Math.PI * 2 + rand() * 0.4;
+          const d = 90 + rand() * 130 * (0.6 + power);
+          tl.set(p, { x: 0, y: 0, scale: 0.6 + rand() * 0.9, opacity: 1 }, t);
+          tl.to(
+            p,
+            { x: Math.cos(a) * d, y: Math.sin(a) * d, scale: 0, opacity: 0, duration: 0.7 + rand() * 0.3, ease: "expo.out" },
+            t
+          );
+        }
+
+        if (!points) {
+          fxId++;
+          return shake(t, power);
+        }
+        const sc = document.createElement("div");
+        sc.className = "score";
+        sc.id = "score-" + fxId;
+        sc.textContent = "+" + points;
+        sc.style.left = x + "px";
+        sc.style.top = y - 150 + "px";
+        sc.style.color = "#ffffff";
+        sc.style.textShadow = `0 0 18px ${color}, 0 0 4px ${color}`;
+        fx.appendChild(sc);
+        tl.fromTo(sc, { y: 20, opacity: 0 }, { y: -30, opacity: 1, duration: 0.35 }, t + 0.05);
+        tl.to(sc, { y: -60, opacity: 0, duration: 0.35, ease: "power2.in" }, t + 0.55);
+
+        shake(t, power);
+        fxId++;
+      }
+
+      // Secousse proportionnelle à l'importance de la fusion
+      function shake(t, power) {
+        const amp = 4 + power * 8;
+        tl.to("#world", { x: amp, y: -amp * 0.6, duration: 0.05, ease: "none" }, t);
+        tl.to("#world", { x: -amp * 0.7, y: amp * 0.5, duration: 0.06, ease: "none" }, t + 0.05);
+        tl.to("#world", { x: amp * 0.3, y: -amp * 0.2, duration: 0.06, ease: "none" }, t + 0.11);
+        tl.to("#world", { x: 0, y: 0, duration: 0.1, ease: "power2.out" }, t + 0.17);
+      }
+
+      function pop(el, t) {
+        tl.fromTo(el, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2.2)" }, t);
+      }
+      function drop(el, t, fromY) {
+        tl.fromTo(el, { y: fromY, opacity: 0 }, { y: 0, opacity: 1, duration: 0.42, ease: "bounce.out" }, t);
+      }
+
+      // ================= Scène 1 : Lâche. Fusionne. Grandis. =================
+      const FLOOR = 900;
+      tl.fromTo("#well", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6 }, 0.05);
+      tl.fromTo("#danger", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.3);
+      tl.to("#danger", { opacity: 0.35, duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, 0.7);
+
+      const dA = makeOrb("dust-a", 0, 34, 1230, FLOOR - 34);
+      const dB = makeOrb("dust-b", 0, 34, 1298, FLOOR - 34);
+      const cA = makeOrb("comet-a", 3, 60, 1264, FLOOR - 60);
+      const cB = makeOrb("comet-b", 3, 60, 1384, FLOOR - 60);
+      const pA = makeOrb("planet-a", 5, 88, 1324, FLOOR - 88);
+      const pB = makeOrb("planet-b", 5, 88, 1492, FLOOR - 88);
+      const coral = makeOrb("coral", 6, 118, 1408, FLOOR - 118);
+
+      tl.fromTo("#v1", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.55 }, 0.25);
+      drop(dA, 0.35, -560);
+      drop(dB, 0.7, -560);
+
+      // Fusion 1 : poussière + poussière -> comète
+      tl.to(dA, { x: 34, scale: 0.4, opacity: 0, duration: 0.14, ease: "power2.in" }, 1.1);
+      tl.to(dB, { x: -34, scale: 0.4, opacity: 0, duration: 0.14, ease: "power2.in" }, 1.1);
+      pop(cA, 1.22);
+      merge(1.22, 1264, FLOOR - 60, "#34D6C0", 0.3, 6);
+      tl.to("#v1", { opacity: 0.28, duration: 0.3 }, 1.22);
+      tl.fromTo("#v2", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.55 }, 1.22);
+
+      // Fusion 2 : comète + comète -> planète
+      drop(cB, 1.55, -520);
+      tl.to(cA, { x: 60, scale: 0.4, opacity: 0, duration: 0.14, ease: "power2.in" }, 2.05);
+      tl.to(cB, { x: -60, scale: 0.4, opacity: 0, duration: 0.14, ease: "power2.in" }, 2.05);
+      pop(pA, 2.17);
+      merge(2.17, 1324, FLOOR - 88, "#2E7DE0", 0.6, 15);
+
+      // Fusion 3 : planète + planète -> monde corail
+      drop(pB, 2.45, -500);
+      tl.to(pA, { x: 84, scale: 0.4, opacity: 0, duration: 0.14, ease: "power2.in" }, 2.95);
+      tl.to(pB, { x: -84, scale: 0.4, opacity: 0, duration: 0.14, ease: "power2.in" }, 2.95);
+      pop(coral, 3.07);
+      merge(3.07, 1408, FLOOR - 118, "#FF4FB0", 1, 21);
+      tl.to("#v2", { opacity: 0.28, duration: 0.3 }, 3.07);
+      tl.fromTo("#v3", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.55 }, 3.07);
+
+      // Sortie scène 1
+      tl.to("#verbs", { opacity: 0, y: -40, duration: 0.4, ease: "power2.in" }, 3.75);
+      tl.to(["#well", "#danger"], { opacity: 0, y: 30, duration: 0.4, ease: "power2.in" }, 3.75);
+
+      // ================= Scène 2 : l'échelle des 11 paliers =================
+      const K = 521;
+      const GAP = 24;
+      const BASE = 820;
+      let cursor = (1920 - (TIERS.reduce((s, t) => s + t.frac * 2 * K, 0) + GAP * 10)) / 2;
+      const ladder = TIERS.map((t, i) => {
+        const r = Math.round(t.frac * K);
+        const x = cursor + r;
+        cursor += r * 2 + GAP;
+        return { r, x, y: BASE - r };
+      });
+
+      const ladderEls = ladder.map((p, i) => {
+        if (i === 6) return coral; // le monde corail de la scène 1 rejoint l'échelle
+        return makeOrb("tier-" + i, i, p.r, p.x, p.y);
+      });
+
+      tl.fromTo("#ladder-title", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.55 }, 4.0);
+      tl.fromTo("#ladder-sub", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.55 }, 4.2);
+
+      const coralHome = ladder[6];
+      tl.to(
+        coral,
+        {
+          x: coralHome.x - 1408,
+          y: coralHome.y - (FLOOR - 118),
+          scale: coralHome.r / 118,
+          duration: 0.8,
+          ease: "power3.inOut",
+        },
+        3.85
+      );
+      ladderEls.forEach((el, i) => {
+        if (i === 6) return;
+        const t = 4.05 + i * 0.09;
+        tl.fromTo(el, { scale: 0, opacity: 0, y: 40 }, { scale: 1, opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.8)" }, t);
+      });
+      const holeEl = ladderEls[10];
+      tl.fromTo(holeEl.querySelector(".disk"), { rotation: 0 }, { rotation: 1080, duration: 6, ease: "none" }, 4.0);
+
+      document.getElementById("name-first").style.left = ladder[0].x + "px";
+      document.getElementById("name-last").style.left = ladder[10].x + "px";
+      tl.fromTo(["#name-first", "#name-last"], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.35 }, 4.6);
+
+      // ================= Scène 3 : tout est aspiré, le trou noir devient le O =================
+      tl.to(["#ladder-copy", "#ladder-names"], { opacity: 0, y: -30, duration: 0.4, ease: "power2.in" }, 6.45);
+      ladderEls.slice(0, 10).forEach((el, i) => {
+        const p = ladder[i];
+        const t = 6.55 + (9 - i) * 0.035;
+        tl.to(
+          el,
+          {
+            x: (ladder[10].x - p.x) + (i === 6 ? coralHome.x - 1408 : 0),
+            y: (ladder[10].y - p.y) + (i === 6 ? coralHome.y - (FLOOR - 118) : 0),
+            scale: 0,
+            opacity: 0,
+            duration: 0.55,
+            ease: "power3.in",
+          },
+          t
+        );
+      });
+      tl.fromTo(holeEl, { scale: 1 }, { scale: 1.25, duration: 0.25, ease: "power2.out", immediateRender: false }, 7.05);
+      merge(7.1, ladder[10].x, ladder[10].y, "#B14CFF", 1.2, 0);
+
+      // Le trou noir glisse dans l'emplacement du O
+      const slot = document.getElementById("o-slot").getBoundingClientRect();
+      const slotX = slot.left + slot.width / 2;
+      const slotY = slot.top + slot.height / 2;
+      tl.to(
+        holeEl,
+        {
+          x: slotX - ladder[10].x,
+          y: slotY - ladder[10].y,
+          scale: slot.width / 2 / ladder[10].r,
+          duration: 0.9,
+          ease: "power3.inOut",
+        },
+        7.35
+      );
+      tl.fromTo("#ch-n", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.6 }, 7.95);
+      tl.fromTo("#ch-v", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.6 }, 8.0);
+      tl.fromTo("#ch-a", { opacity: 0, x: -90 }, { opacity: 1, x: 0, duration: 0.6 }, 8.05);
+      tl.fromTo("#tagline", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6 }, 8.35);
+      tl.fromTo("#byline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.6 }, 8.65);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+      }
+    </script>
+  </body>
+</html>

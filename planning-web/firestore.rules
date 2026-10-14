@@ -11,6 +11,8 @@ rules_version = '2';
 // - Messages : le fil « chat » est lu par toute l'équipe ; un message individuel (« dms ») n'est lu
 //   que par son expéditeur et son destinataire. Chacun n'efface que ses propres messages.
 // - Présence : chacun signale lui-même qu'il est en ligne (« presence »).
+// - Salle de réunion (« salle ») : réservations visibles par toute l'équipe ; seule la personne
+//   qui a réservé peut modifier ou supprimer sa réservation.
 // - Chacun ne peut créer, modifier ou supprimer QUE son propre profil, SES créneaux et SES annonces.
 // - Le motif exact d'une absence (ex. arrêt maladie) est rangé dans « prive » : lisible par la seule personne concernée.
 // - Les activités et motifs créés sont partagés : tout membre peut en ajouter, personne ne peut les effacer.
@@ -133,6 +135,25 @@ service cloud.firestore {
       allow create, update: if isMe(uid) && request.resource.data.keys().hasOnly(['at', 'on'])
         && request.resource.data.at is number && request.resource.data.on is bool;
       allow delete: if isMe(uid);
+    }
+
+    // Réservations de la salle de réunion de la circonscription
+    function validResa() {
+      return request.resource.data.keys().hasOnly(['by', 'date', 'start', 'end', 'objet', 'at'])
+        && request.resource.data.by == request.auth.uid
+        && request.resource.data.date is string && request.resource.data.date.size() == 10
+        && request.resource.data.start is string && request.resource.data.start.matches('^[0-2][0-9]:[0-5][0-9]$')
+        && request.resource.data.end is string && request.resource.data.end.matches('^[0-2][0-9]:[0-5][0-9]$')
+        && request.resource.data.start < request.resource.data.end
+        && request.resource.data.objet is string
+        && request.resource.data.objet.size() > 0 && request.resource.data.objet.size() <= 80
+        && request.resource.data.at is number;
+    }
+    match /salle/{id} {
+      allow read: if member();
+      allow create: if member() && validResa();
+      allow update: if member() && resource.data.by == request.auth.uid && validResa();
+      allow delete: if member() && resource.data.by == request.auth.uid;
     }
 
     // Code d'équipe : modifiable seulement depuis la console Firebase.

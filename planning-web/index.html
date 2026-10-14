@@ -117,45 +117,96 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .room-now{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:1px solid var(--side-line);background:var(--side-card);color:var(--side-ink);border-radius:12px;padding:9px 12px;font-size:12.5px;font-weight:700}
 .room-now:hover{background:rgba(255,255,255,.1)}
 .room-now .rn-ic{font-size:18px;line-height:1}
+.room-now > span:not(.rn-ic){min-width:0;flex:1}
 .room-now b{display:block;font-size:13px}
+.room-now span span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .room-now span span{color:var(--side-muted);font-weight:600}
 .room-now i{width:9px;height:9px;border-radius:50%;flex:none;margin-left:auto;background:var(--st-on);box-shadow:0 0 0 3px color-mix(in srgb,var(--st-on) 30%,transparent)}
 .room-now.busy i{background:var(--danger);box-shadow:0 0 0 3px color-mix(in srgb,var(--danger) 30%,transparent)}
-.room{display:flex;flex-direction:column}
-.room-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--line);background:var(--surface-2)}
-.room-bar .rb-t{display:flex;flex-direction:column;margin-right:auto}
-.room-bar .rb-t b{font:800 16px/1.2 var(--display)}
-.room-bar .rb-t span{font-size:12.5px;color:var(--muted);font-weight:700}
-.room-head,.room-row{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line-2)}
-.room-head{font-size:11.5px;font-weight:800;color:var(--muted)}
-.room-head .hrs{position:relative;height:30px}
-.room-head .hrs span{position:absolute;top:8px;transform:translateX(-50%)}
-.room-row .rd{padding:10px 12px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line)}
-.room-row .rd b{font-size:13.5px}
-.room-row .rd small{font-size:11.5px;color:var(--muted);font-weight:700}
-.room-row.today .rd b{color:var(--accent)}
-.room-row.off .track{background-color:var(--surface-2)}
-.room-row .track{position:relative;min-height:72px;cursor:copy;background-image:repeating-linear-gradient(to right,var(--line-2) 0 1px,transparent 1px calc(100% / var(--nh)))}
-.room-row .track.ro{cursor:default}
-.resa{position:absolute;top:5px;bottom:5px;font-size:11.5px!important;border:0;border-radius:9px;padding:5px 6px 5px 8px;text-align:left;overflow:hidden;background:color-mix(in srgb,var(--p-reunion) 16%,var(--surface));box-shadow:inset 3px 0 0 var(--p-reunion);color:var(--ink);font-size:12px;line-height:1.25;cursor:pointer}
-.resa.mine{background:var(--p-reunion);color:#fff;box-shadow:none}
-.resa b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.resa span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.85}
-.room-list{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
-.room-list h3{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
-.rl-item{display:flex;align-items:center;gap:12px;padding:9px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-align:left;width:100%;color:var(--ink)}
-.rl-item .when{min-width:170px;font-weight:800;font-size:13px}
-.rl-item .what{flex:1;min-width:0;font-weight:700;font-size:13px}
-.rl-item .what small{display:block;color:var(--muted);font-weight:700;font-size:12px}
-.rl-item .mine-tag{font-size:11px;font-weight:800;color:var(--p-reunion);border:1px solid currentColor;border-radius:999px;padding:1px 8px}
-.room-empty{color:var(--muted);font-weight:700;font-size:13px;margin:0}
-.room-ag{display:flex;flex-direction:column}
-.room-ag .rag-day{border-bottom:1px solid var(--line-2);padding:10px 14px;display:flex;flex-direction:column;gap:6px}
-.room-ag .rag-h{display:flex;align-items:center;justify-content:space-between;font-weight:800}
-.room-ag .rag-h.today{color:var(--accent)}
-.room-ag .rag-free{font-size:12.5px;color:var(--muted);font-weight:700}
+/* Page « Salle » : carte d'état en direct, choix du jour, frise verticale 6 h 50 – 18 h 30 */
+.rm{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:18px;padding:18px;align-items:start}
+.rm-main{display:flex;flex-direction:column;gap:14px;min-width:0}
+.rm-side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.rm-days{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:8px}
+.rm-day{border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:10px 12px 11px;text-align:left;display:flex;flex-direction:column;gap:3px;color:var(--ink);transition:border-color .15s,box-shadow .15s,transform .15s;min-width:0}
+.rm-day:hover{border-color:var(--muted);transform:translateY(-1px)}
+.rm-day[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);box-shadow:0 6px 18px -8px color-mix(in srgb,var(--accent) 60%,transparent)}
+.rm-day .dn{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.rm-day .dd{font:800 22px/1 var(--display)}
+.rm-day.today .dn,.rm-day.today .dd{color:var(--accent)}
+.rm-day .occ{position:relative;height:6px;border-radius:99px;background:color-mix(in srgb,var(--st-on) 22%,var(--surface-2));overflow:hidden;margin-top:5px}
+.rm-day .occ i{position:absolute;top:0;bottom:0;background:var(--p-reunion);border-radius:99px}
+.rm-day small{font-size:11.5px;font-weight:700;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rm-day.off{opacity:.6}
+.rm-dayhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rm-dayhead h3{margin:0;font:800 20px/1.2 var(--display);margin-right:auto}
+.rm-dayhead .tag{font-size:11.5px}
+.rm-tlwrap{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px 14px 12px 0;box-shadow:var(--shadow)}
+.rm-tl{position:relative;margin-left:62px;cursor:copy}
+.rm-tl.ro{cursor:default}
+.rm-hr{position:absolute;left:0;right:0;border-top:1px solid var(--line-2);pointer-events:none}
+.rm-hr.half{border-top-style:dashed;opacity:.6}
+.rm-hr span{position:absolute;left:-58px;top:-8px;width:50px;text-align:right;font-size:11.5px;font-weight:800;color:var(--muted);white-space:nowrap}
+.rm-hr.edge span{color:var(--accent)}
+.rm-ev{position:absolute;left:6px;right:8px;border:0;border-radius:12px;padding:6px 10px 6px 12px;text-align:left;overflow:hidden;color:var(--ink);background:color-mix(in srgb,var(--p-reunion) 13%,var(--surface));box-shadow:inset 4px 0 0 var(--p-reunion),0 1px 2px rgba(0,0,0,.05);display:flex;gap:10px;align-items:flex-start;transition:transform .12s,box-shadow .12s;cursor:pointer}
+.rm-ev:hover{transform:translateX(2px);box-shadow:inset 4px 0 0 var(--p-reunion),0 6px 16px -8px rgba(0,0,0,.35)}
+.rm-ev.mine{background:linear-gradient(135deg,var(--p-reunion),color-mix(in srgb,var(--p-reunion) 70%,var(--accent)));color:#fff;box-shadow:0 6px 16px -8px color-mix(in srgb,var(--p-reunion) 80%,transparent)}
+.rm-ev .av{width:26px;height:26px;flex:none;font-size:10px}
+.rm-ev .tx{min-width:0;display:flex;flex-direction:column}
+.rm-ev .t{font-size:11.5px;font-weight:800;opacity:.85}
+.rm-ev b{font-size:13.5px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rm-ev .who{font-size:12px;font-weight:700;opacity:.8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rm-ev.short{align-items:center;padding-top:2px;padding-bottom:2px}
+.rm-ev.short .av{width:20px;height:20px}
+.rm-ev.short .tx{flex-direction:row;gap:8px;align-items:baseline}
+.rm-free{position:absolute;left:6px;right:8px;border:1.5px dashed color-mix(in srgb,var(--st-on) 60%,transparent);border-radius:12px;background:color-mix(in srgb,var(--st-on) 6%,transparent);color:color-mix(in srgb,var(--st-on) 75%,var(--ink));display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 12px;font-size:12.5px;font-weight:800;text-align:left;transition:background .15s}
+.rm-free:hover{background:color-mix(in srgb,var(--st-on) 14%,transparent)}
+.rm-free span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rm-free em{font-style:normal;white-space:nowrap;flex:none;border-radius:99px;padding:3px 10px;background:var(--st-on);color:#fff;font-size:12px}
+.rm-free.short em{display:none}
+.rm-now{position:absolute;left:-8px;right:0;height:0;border-top:2px solid var(--danger);z-index:1;pointer-events:none}
+.rm-ev,.rm-free{z-index:2}
+.rm-now::before{content:"";position:absolute;left:-5px;top:-6px;width:10px;height:10px;border-radius:50%;background:var(--danger)}
+.rm-closed{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);font-weight:800;background:repeating-linear-gradient(135deg,var(--surface-2) 0 10px,transparent 10px 20px);border-radius:12px}
+.rm-status{border-radius:22px;padding:20px;color:#fff;position:relative;overflow:hidden;background:linear-gradient(140deg,color-mix(in srgb,var(--st-on) 92%,#000),color-mix(in srgb,var(--st-on) 55%,var(--accent)));box-shadow:0 18px 40px -18px color-mix(in srgb,var(--st-on) 80%,transparent)}
+.rm-status.busy{background:linear-gradient(140deg,color-mix(in srgb,var(--danger) 92%,#000),color-mix(in srgb,var(--danger) 60%,var(--p-reunion)));box-shadow:0 18px 40px -18px color-mix(in srgb,var(--danger) 80%,transparent)}
+.rm-status.closed{background:linear-gradient(140deg,var(--side),var(--side-2));box-shadow:var(--shadow)}
+.rm-status::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.12)}
+.rm-status .lab{font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.85;display:flex;align-items:center;gap:8px}
+.rm-status .lab i{width:9px;height:9px;border-radius:50%;background:#fff;animation:rmpulse 1.8s ease-out infinite}
+@keyframes rmpulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}100%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+.rm-status h3{margin:8px 0 2px;font:800 38px/1 var(--display);letter-spacing:-.02em}
+.rm-status p{margin:0;font-weight:700;opacity:.92}
+.rm-status .who{display:flex;align-items:center;gap:10px;margin-top:12px;background:rgba(255,255,255,.14);border-radius:14px;padding:8px 10px}
+.rm-status .who .av{width:30px;height:30px}
+.rm-status .who b{display:block;font-size:14px}
+.rm-status .who small{font-weight:700;opacity:.85}
+.rm-status .bar{height:6px;border-radius:99px;background:rgba(255,255,255,.25);margin-top:12px;overflow:hidden}
+.rm-status .bar i{display:block;height:100%;background:#fff;border-radius:99px}
+.rm-status .quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;position:relative;z-index:1}
+.rm-status .quick button{border:0;border-radius:99px;padding:9px 14px;font-weight:800;font-size:13px;background:#fff;color:color-mix(in srgb,var(--st-on) 70%,#000)}
+.rm-status .quick button.ghost{background:rgba(255,255,255,.18);color:#fff}
+.rm-status .quick button:disabled{opacity:.45}
+.rm-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+.rm-card h4{margin:0 0 10px;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.rm-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.rm-kpis div{background:var(--surface-2);border-radius:12px;padding:10px}
+.rm-kpis b{display:block;font:800 22px/1 var(--display)}
+.rm-kpis span{font-size:11.5px;font-weight:700;color:var(--muted)}
+.rm-up{display:flex;flex-direction:column;gap:6px}
+.rm-up-d{font-size:11.5px;font-weight:800;color:var(--muted);margin:6px 0 0;text-transform:uppercase;letter-spacing:.08em}
+.rm-up-item{display:flex;align-items:center;gap:10px;border:0;background:transparent;border-radius:12px;padding:7px 8px;text-align:left;width:100%;color:var(--ink)}
+.rm-up-item:hover{background:var(--surface-2)}
+.rm-up-item .av{width:30px;height:30px;flex:none}
+.rm-up-item .tx{min-width:0;flex:1}
+.rm-up-item b{display:block;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rm-up-item small{font-size:12px;color:var(--muted);font-weight:700}
+.rm-up-item .mine-tag{font-size:10.5px;font-weight:800;color:var(--p-reunion);border:1px solid currentColor;border-radius:99px;padding:1px 7px}
+.rm-empty{color:var(--muted);font-weight:700;font-size:13px;margin:0}
+@media (max-width:1180px){.rm{grid-template-columns:1fr}.rm-side{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));order:-1}}
+@media (max-width:700px){.rm{padding:12px;gap:14px}.rm-side{display:flex;order:0}.rm-days{display:flex;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.rm-days::-webkit-scrollbar{display:none}.rm-day{flex:0 0 96px;padding:9px 10px}.rm-day .dd{font-size:19px}.rm-status h3{font-size:32px}.rm-tl{margin-left:58px}.rm-hr span{left:-56px;width:50px;font-size:11px}.rm-free{font-size:12px;padding:0 8px}.rm-free em{padding:3px 8px;font-size:11.5px}}
+@media (prefers-reduced-motion:reduce){.rm-status .lab i{animation:none}}
 .room-conflict{background:color-mix(in srgb,var(--danger) 10%,var(--surface));border:1px solid color-mix(in srgb,var(--danger) 40%,var(--line));color:var(--ink);border-radius:12px;padding:10px 12px;font-weight:700;font-size:13px;margin:10px 0 0}
-@media (max-width:700px){.room-head,.room-row{grid-template-columns:96px 1fr}.rl-item{flex-wrap:wrap;gap:4px 10px}.rl-item .when{min-width:0;flex:1 1 100%}.resa{padding:7px 10px}}
 
 /* ===== Messages ===== */
 .chat-modal{width:min(920px,100%)!important;height:min(680px,calc(100% - 24px))}
@@ -1448,7 +1499,8 @@ window.QEO_PAL = (() => {
       <div class="frow"><span class="lab">Horaires</span>
         <div>
           <div class="inline"><input type="time" id="room-start" required aria-label="Début"> <span>–</span> <input type="time" id="room-end" required aria-label="Fin"></div>
-          <div class="presets" style="margin-top:8px"><button type="button" class="preset" data-r="08:00-12:00">Matin</button><button type="button" class="preset" data-r="13:30-17:00">Après-midi</button><button type="button" class="preset" data-r="08:00-17:00">Journée</button></div>
+          <div class="presets" style="margin-top:8px"><button type="button" class="preset" data-r="06:50-12:00">Matin</button><button type="button" class="preset" data-r="12:00-18:30">Après-midi</button><button type="button" class="preset" data-r="06:50-18:30">Journée</button></div>
+          <p class="hint">Salle ouverte de 6 h 50 à 18 h 30.</p>
         </div>
       </div>
       <div class="frow"><label for="room-objet">Objet</label><input type="text" id="room-objet" maxlength="80" placeholder="Ex. Réunion des CPC, conseil de cycle, entretien…"></div>
@@ -2348,8 +2400,10 @@ window.QEO_PAL = (() => {
       { id:"g3", from:"d7", text:"Je prépare les tablettes pour l'animation de vendredi 🙂", at: t - 40*60000 },
     ];
     S.room = [
-      { id:"s1", by:"d1", date: iso(new Date()), start:"09:00", end:"11:30", objet:"Réunion des conseillers pédagogiques", at: t },
-      { id:"s2", by:"d2", date: iso(addDays(new Date(),1)), start:"14:00", end:"16:00", objet:"Conseil de cycle 3", at: t },
+      { id:"s1", by:"d1", date: iso(new Date()), start:"08:00", end:"09:00", objet:"Point hebdomadaire IEN", at: t },
+      { id:"s2", by:"d2", date: iso(new Date()), start:"09:30", end:"11:30", objet:"Réunion des conseillers pédagogiques", at: t },
+      { id:"s3", by:"d7", date: iso(new Date()), start:"14:00", end:"15:30", objet:"Formation numérique ENT", at: t },
+      { id:"s4", by:"d2", date: iso(addDays(new Date(),1)), start:"13:30", end:"16:00", objet:"Conseil de cycle 3", at: t },
     ];
     CH.dm.set("p1", { id:"p1", from:"d2", to:"d0", text:"Tu peux passer à l'école Kangani mardi matin avec moi ?", at: t - 15*60000 });
     ["d1","d2","d7"].forEach(u => CH.online.set(u, { on:true, at: t }));
@@ -2535,87 +2589,145 @@ window.QEO_PAL = (() => {
   // ---------- écoles et lieux ----------
   const lieuKey = t => norm(String(t||"")).replace(/[^a-z0-9]+/g," ").trim();
   // ---------- salle de réunion de la circonscription ----------
-  const ROOM_H0 = 7, ROOM_H1 = 19;
+  // Horaires d'ouverture de la salle : 6 h 50 – 18 h 30.
+  const ROOM_OPEN = 6*60+50, ROOM_CLOSE = 18*60+30, ROOM_OPEN_S = "06:50", ROOM_CLOSE_S = "18:30";
   const hm = () => pad(new Date().getHours())+":"+pad(new Date().getMinutes());
+  const m2s = m => pad(Math.floor(m/60))+":"+pad(m%60);
+  const hLabel = s => { const [h,m] = s.split(":"); return (+h)+" h"+(m!=="00" ? " "+m : ""); };
+  const durLabel = m => m < 60 ? m+" min" : Math.floor(m/60)+" h"+(m%60 ? " "+pad(m%60) : "");
   const resaOf = k => S.room.filter(r => r.date===k).sort((a,b) => a.start.localeCompare(b.start));
   function roomConflicts(date, start, end, skipId){ return S.room.filter(r => r.date===date && r.id!==skipId && r.start < end && start < r.end); }
   const resaLabel = r => r.start+" – "+r.end;
+  // État de la salle à l'instant : ouverte ou non, réservation en cours, prochaine, fin du créneau libre
+  function roomState(){
+    const k = iso(new Date()), now = nowMin(), list = resaOf(k), inf = dayInfo(new Date());
+    const cur = list.find(r => toMin(r.start) <= now && now < toMin(r.end)), next = list.find(r => toMin(r.start) > now);
+    return { k, now, list, cur, next, closed: inf.we || inf.ferie || now >= ROOM_CLOSE, early: now < ROOM_OPEN, inf };
+  }
   function renderRoomNow(){
     const b = $("room-now"); if (!b) return; b.textContent = "";
-    const k = iso(new Date()), m = hm(), today = resaOf(k);
-    const cur = today.find(r => r.start <= m && m < r.end), next = today.find(r => r.start > m);
-    const t = el("span"); b.classList.toggle("busy", !!cur);
-    if (cur) t.append(el("b",null,"Salle occupée jusqu'à "+cur.end), el("span",null,cur.objet+" · "+fullName(cur.by)));
-    else t.append(el("b",null,"Salle de réunion libre"), el("span",null, next ? "Prochaine réservation à "+next.start+" · "+next.objet : "Aucune autre réservation aujourd'hui"));
+    const st = roomState(), t = el("span"); b.classList.toggle("busy", !!st.cur);
+    if (st.cur) t.append(el("b",null,"Salle occupée jusqu'à "+hLabel(st.cur.end)), el("span",null,st.cur.objet+" · "+fullName(st.cur.by)));
+    else if (st.closed) t.append(el("b",null,"Salle fermée"), el("span",null, st.inf.we || st.inf.ferie ? "Ouverte du lundi au vendredi, 6 h 50 – 18 h 30" : "Réouverture demain à 6 h 50"));
+    else t.append(el("b",null,"Salle de réunion libre"), el("span",null, st.next ? "Prochaine réservation à "+hLabel(st.next.start)+" · "+st.next.objet : "Libre jusqu'à 18 h 30"));
     b.append(el("span","rn-ic","🚪"), t, el("i"));
   }
-  $("room-now").onclick = () => { S.anchor = new Date(); setView("salle"); };
-  function resaBlock(r){
-    const mine = r.by===S.me, x = el("button","resa"+(mine?" mine":"")); x.type = "button";
-    x.append(el("b",null,toMin(r.end)-toMin(r.start) <= 90 ? r.start+"–"+r.end : resaLabel(r)), el("span",null,r.objet), el("span",null, mine ? "Vous" : fullName(r.by)));
+  $("room-now").onclick = () => { S.anchor = new Date(); S.roomDay = iso(new Date()); setView("salle"); };
+  function statusCard(can){
+    const st = roomState(), c = el("section","rm-status"+(st.cur ? " busy" : st.closed ? " closed" : ""));
+    const lab = el("div","lab"); lab.append(el("i"), "En direct · "+hm()); c.append(lab);
+    if (st.cur) {
+      const a = toMin(st.cur.start), z = toMin(st.cur.end);
+      c.append(el("h3",null,"Occupée"), el("p",null,"Se libère à "+hLabel(st.cur.end)+" · dans "+durLabel(z - st.now)));
+      const w = el("div","who"); const tx = el("div"); tx.append(el("b",null,st.cur.objet), el("small",null,(st.cur.by===S.me ? "Vous" : fullName(st.cur.by))+" · "+resaLabel(st.cur)));
+      w.append(avatar(st.cur.by, true), tx); c.append(w);
+      const bar = el("div","bar"), i = el("i"); i.style.width = Math.round((st.now - a)/(z - a)*100)+"%"; bar.append(i); c.append(bar);
+    } else if (st.closed) {
+      c.append(el("h3",null,"Fermée"), el("p",null, st.inf.we || st.inf.ferie ? "La salle est ouverte du lundi au vendredi, de 6 h 50 à 18 h 30." : "Réouverture demain à 6 h 50."));
+    } else {
+      const from = Math.max(st.now, ROOM_OPEN), until = st.next ? toMin(st.next.start) : ROOM_CLOSE;
+      c.append(el("h3",null,"Libre"), el("p",null, st.early ? "Ouverture à 6 h 50 · libre jusqu'à "+hLabel(m2s(until)) : "Jusqu'à "+hLabel(m2s(until))+" · encore "+durLabel(until - st.now)));
+      if (st.next) { const w = el("div","who"); const tx = el("div"); tx.append(el("b",null,"Ensuite : "+st.next.objet), el("small",null,(st.next.by===S.me ? "Vous" : fullName(st.next.by))+" · "+resaLabel(st.next))); w.append(avatar(st.next.by, true), tx); c.append(w); }
+      if (can) {
+        const q = el("div","quick"), start = Math.ceil(from/5)*5;
+        [[30,"30 min"],[60,"1 h"],[120,"2 h"]].forEach(([d,l], i) => {
+          const b = el("button", i ? "ghost" : null, "Réserver "+l); b.type = "button"; b.disabled = start + d > until;
+          b.onclick = () => openResa({ date: st.k, start: m2s(start), end: m2s(start + d) }); q.append(b);
+        });
+        c.append(q);
+      }
+    }
+    return c;
+  }
+  function evBlock(r, top, h){
+    const mine = r.by===S.me, short = h < 46, x = el("button","rm-ev"+(mine?" mine":"")+(short?" short":"")); x.type = "button";
+    x.style.top = top+"px"; x.style.height = Math.max(h - 3, 22)+"px";
+    const tx = el("div","tx"); tx.append(el("span","t",resaLabel(r)), el("b",null,r.objet)); if (!short) tx.append(el("span","who", mine ? "Vous" : fullName(r.by)));
+    x.append(avatar(r.by, true), tx);
     x.title = resaLabel(r)+" · "+r.objet+" · réservée par "+(mine ? "vous" : fullName(r.by));
     x.onclick = e => { e.stopPropagation(); openResa(r); };
     return x;
   }
   function roomView(mon){
     const n = S.weekend ? 7 : 5, ds = Array.from({length:n}, (_,i) => addDays(mon,i)), todayK = iso(new Date()), can = !!S.me && !S.readOnly;
-    const box = el("div","room");
-    const bar = el("div","room-bar"), bt = el("div","rb-t");
-    const wk = S.room.filter(r => ds.some(d => iso(d)===r.date));
-    bt.append(el("b",null,"🚪 Salle de réunion de la circonscription"), el("span",null, wk.length ? wk.length+" réservation"+(wk.length>1?"s":"")+" cette semaine" : "Aucune réservation cette semaine"));
-    bar.append(bt);
-    if (can) { const nb = el("button","btn primary round","+ Réserver la salle"); nb.type = "button"; nb.id = "room-new"; nb.onclick = () => openResa({ date: ds.some(d => iso(d)===todayK) ? todayK : iso(ds[0]) }); bar.append(nb); }
-    box.append(bar);
-    if (phoneMQ.matches) {
-      const ag = el("div","room-ag");
-      ds.forEach(d => {
-        const k = iso(d), inf = dayInfo(d), list = resaOf(k), day = el("div","rag-day");
-        const h = el("div","rag-h"+(k===todayK?" today":"")); h.append(el("span",null,longDate(d)));
-        if (can && !inf.off) { const a = el("button","btn link","+ Réserver"); a.type = "button"; a.onclick = () => openResa({ date:k }); h.append(a); }
-        day.append(h);
-        if (!list.length) day.append(el("span","rag-free", inf.ferie ? "Jour férié" : inf.vac ? "Vacances scolaires · salle libre" : "Salle libre toute la journée"));
-        list.forEach(r => { const x = resaBlock(r); x.style.position = "static"; x.style.width = "100%"; day.append(x); });
-        ag.append(day);
-      });
-      box.append(ag);
-    } else {
-      const nh = ROOM_H1 - ROOM_H0, span = nh*60, pos = m => Math.min(100, Math.max(0, (m - ROOM_H0*60)/span*100));
-      const head = el("div","room-head"); head.append(el("div"));
-      const hrs = el("div","hrs"); for (let h = ROOM_H0+1; h < ROOM_H1; h++) { const sp = el("span",null,h+" h"); sp.style.left = ((h-ROOM_H0)/nh*100)+"%"; hrs.append(sp); }
-      head.append(hrs); box.append(head);
-      ds.forEach(d => {
-        const k = iso(d), inf = dayInfo(d), list = resaOf(k), row = el("div","room-row"+(k===todayK?" today":"")+(inf.off?" off":""));
-        const rd = el("div","rd"); rd.append(el("b",null,cap(DOW_L[dowIdx(d)])+" "+d.getDate()+" "+MON[d.getMonth()]));
-        rd.append(el("small",null, inf.ferie ? "Jour férié" : inf.vac ? "Vacances" : list.length ? list.length+" réservation"+(list.length>1?"s":"") : "Libre"));
-        const tr = el("div","track"+(can ? "" : " ro")); tr.style.setProperty("--nh", nh); tr.dataset.date = k;
-        if (can) { tr.title = "Cliquez pour réserver à cette heure"; tr.onclick = e => {
-          const rc = tr.getBoundingClientRect(), mm = ROOM_H0*60 + Math.floor(((e.clientX - rc.left)/rc.width*span)/30)*30, st = Math.min(Math.max(mm, ROOM_H0*60), ROOM_H1*60 - 60);
-          openResa({ date:k, start: pad(Math.floor(st/60))+":"+pad(st%60), end: pad(Math.floor((st+60)/60))+":"+pad((st+60)%60) });
-        }; }
-        list.forEach(r => { const x = resaBlock(r), a = pos(toMin(r.start)), z = pos(toMin(r.end)); x.style.left = "calc("+a+"% + 2px)"; x.style.width = "calc("+Math.max(z-a, 3)+"% - 4px)"; tr.append(x); });
-        if (k===todayK) { const m = nowMin(); if (m > ROOM_H0*60 && m < ROOM_H1*60) { const nl = el("i","nowline"); nl.style.left = pos(m)+"%"; tr.append(nl); } }
-        row.append(rd, tr); box.append(row);
-      });
-    }
-    const now = hm(), up = S.room.filter(r => r.date > todayK || (r.date===todayK && r.end > now)).sort((a,b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start)).slice(0,12);
-    const ls = el("div","room-list"); ls.append(el("h3",null,"Prochaines réservations"));
-    if (!up.length) ls.append(el("p","room-empty","Aucune réservation à venir : la salle est libre."));
-    up.forEach(r => {
-      const d = parse(r.date), it = el("button","rl-item"); it.type = "button";
-      it.append(el("span","when", cap(DOW_L[dowIdx(d)])+" "+d.getDate()+" "+MON[d.getMonth()]+" · "+resaLabel(r)));
-      const w = el("span","what",r.objet); w.append(el("small",null, r.by===S.me ? "Réservée par vous" : "Réservée par "+fullName(r.by))); it.append(w);
-      if (r.by===S.me) it.append(el("span","mine-tag","Moi"));
-      it.onclick = () => openResa(r); ls.append(it);
+    if (!S.roomDay || !ds.some(d => iso(d)===S.roomDay)) S.roomDay = ds.some(d => iso(d)===todayK) ? todayK : iso(ds[0]);
+    const span = ROOM_CLOSE - ROOM_OPEN, wrap = el("div","rm");
+    // ----- colonne principale : jours, puis frise du jour choisi
+    const main = el("section","rm-main");
+    const days = el("div","rm-days"); days.style.setProperty("--n", n);
+    ds.forEach(d => {
+      const k = iso(d), inf = dayInfo(d), list = resaOf(k);
+      const b = el("button","rm-day"+(k===todayK?" today":"")+(inf.off?" off":"")); b.type = "button"; b.setAttribute("aria-pressed", String(k===S.roomDay));
+      b.append(el("span","dn",DOW[dowIdx(d)]+(k===todayK?" · auj.":"")), el("span","dd",d.getDate()+" "+MON[d.getMonth()]));
+      const occ = el("div","occ"); list.forEach(r => { const i = el("i"), a = Math.max(0,(toMin(r.start)-ROOM_OPEN)/span*100), z = Math.min(100,(toMin(r.end)-ROOM_OPEN)/span*100); i.style.left = a+"%"; i.style.width = Math.max(z-a,2)+"%"; occ.append(i); });
+      const ph = phoneMQ.matches;
+      b.append(occ, el("small",null, inf.ferie ? "Férié" : list.length ? list.length+(ph ? " résa." : " réservation"+(list.length>1?"s":"")) : ph ? "Libre" : inf.vac ? "Vacances · libre" : "Libre toute la journée"));
+      b.onclick = () => { S.roomDay = k; render(); };
+      days.append(b);
     });
-    box.append(ls);
-    return box;
+    main.append(days);
+    const sel = parse(S.roomDay), selInf = dayInfo(sel), selList = resaOf(S.roomDay), past = S.roomDay < todayK;
+    const dh = el("div","rm-dayhead"); dh.append(el("h3",null,longDate(sel))); dh.append(...tagsFor(selInf, false));
+    if (can && !past && !selInf.we && !selInf.ferie) { const nb = el("button","btn primary round","+ Réserver la salle"); nb.type = "button"; nb.id = "room-new"; nb.onclick = () => openResa({ date: S.roomDay }); dh.append(nb); }
+    main.append(dh);
+    const tw = el("div","rm-tlwrap"), PX = phoneMQ.matches ? 1.05 : 1.15, H = Math.round(span*PX), tl = el("div","rm-tl"+(can && !past ? "" : " ro"));
+    tl.style.height = H+"px"; const y = m => Math.round((m - ROOM_OPEN)*PX);
+    const line = (m, cls, label) => { const l = el("div","rm-hr"+(cls?" "+cls:"")); l.style.top = y(m)+"px"; if (label) l.append(el("span",null,label)); tl.append(l); };
+    line(ROOM_OPEN, "edge", "6 h 50");
+    for (let h = 7; h <= 18; h++) { line(h*60, "", h===7 ? "" : h+" h"); if (h < 18) line(h*60+30, "half", ""); }
+    line(ROOM_CLOSE, "edge", "18 h 30");
+    if (selInf.we || selInf.ferie) tl.append(el("div","rm-closed", selInf.ferie ? "Jour férié · salle fermée" : "Week-end · salle fermée"));
+    else {
+      // créneaux libres (aujourd'hui et jours à venir)
+      if (can && !past) {
+        let t = S.roomDay===todayK ? Math.max(ROOM_OPEN, Math.ceil(nowMin()/10)*10) : ROOM_OPEN;
+        const gaps = [];
+        selList.forEach(r => { const a = toMin(r.start), z = toMin(r.end); if (a - t >= 20) gaps.push([t, a]); t = Math.max(t, z); });
+        if (ROOM_CLOSE - t >= 20) gaps.push([t, ROOM_CLOSE]);
+        gaps.forEach(([a,z]) => {
+          const g = el("button","rm-free"+((z-a)*PX < 40 ? " short" : "")); g.type = "button"; g.style.top = (y(a)+2)+"px"; g.style.height = Math.max((z-a)*PX - 5, 18)+"px";
+          g.append(el("span",null,(phoneMQ.matches ? "" : "Libre · ")+hLabel(m2s(a))+" – "+hLabel(m2s(z))), el("em",null,"+ Réserver")); g.setAttribute("aria-label","Salle libre de "+hLabel(m2s(a))+" à "+hLabel(m2s(z))+" : réserver");
+          g.onclick = e => { e.stopPropagation(); openResa({ date: S.roomDay, start: m2s(a), end: m2s(Math.min(a+60, z)) }); };
+          tl.append(g);
+        });
+      }
+      selList.forEach(r => { const a = Math.max(toMin(r.start), ROOM_OPEN), z = Math.min(toMin(r.end), ROOM_CLOSE); if (z > a) tl.append(evBlock(r, y(a)+2, (z-a)*PX)); });
+      if (S.roomDay===todayK) { const m = nowMin(); if (m > ROOM_OPEN && m < ROOM_CLOSE) { const nl = el("div","rm-now"); nl.style.top = y(m)+"px"; tl.append(nl); } }
+      if (can && !past) tl.onclick = e => {
+        const rc = tl.getBoundingClientRect(), m = ROOM_OPEN + Math.floor((e.clientY - rc.top)/PX/10)*10, a = Math.min(Math.max(m, ROOM_OPEN), ROOM_CLOSE - 30);
+        openResa({ date: S.roomDay, start: m2s(a), end: m2s(Math.min(a+60, ROOM_CLOSE)) });
+      };
+    }
+    tw.append(tl); main.append(tw);
+    // ----- colonne de droite : état en direct, chiffres de la semaine, prochaines réservations
+    const side = el("aside","rm-side");
+    if (phoneMQ.matches) main.prepend(statusCard(can)); else side.append(statusCard(can));
+    const wk = S.room.filter(r => ds.some(d => iso(d)===r.date)), mins = wk.reduce((t,r) => t + toMin(r.end) - toMin(r.start), 0), open = ds.filter(d => !dayInfo(d).we && !dayInfo(d).ferie).length * span;
+    const kc = el("div","rm-card"); kc.append(el("h4",null,"Cette semaine"));
+    const kp = el("div","rm-kpis");
+    [[String(wk.length), "réservation"+(wk.length>1?"s":"")],[fmtH(mins), "occupée"],[(open ? Math.round(mins/open*100) : 0)+" %", "d'occupation"]].forEach(([v,l]) => { const d = el("div"); d.append(el("b",null,v), el("span",null,l)); kp.append(d); });
+    kc.append(kp); side.append(kc);
+    const now = hm(), up = S.room.filter(r => r.date > todayK || (r.date===todayK && r.end > now)).sort((a,b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start)).slice(0,8);
+    const uc = el("div","rm-card"); uc.append(el("h4",null,"Prochaines réservations"));
+    const ul = el("div","rm-up"); let day = "";
+    if (!up.length) ul.append(el("p","rm-empty","Aucune réservation à venir : la salle est libre."));
+    up.forEach(r => {
+      if (r.date!==day) { day = r.date; ul.append(el("p","rm-up-d", r.date===todayK ? "Aujourd'hui" : longDate(parse(r.date)))); }
+      const it = el("button","rm-up-item"); it.type = "button";
+      const tx = el("div","tx"); tx.append(el("b",null,r.objet), el("small",null, resaLabel(r)+" · "+(r.by===S.me ? "vous" : fullName(r.by))));
+      it.append(avatar(r.by, true), tx); if (r.by===S.me) it.append(el("span","mine-tag","Moi"));
+      it.onclick = () => { S.roomDay = r.date; S.anchor = parse(r.date); openResa(r); }; ul.append(it);
+    });
+    uc.append(ul); side.append(uc);
+    wrap.append(main, side);
+    return wrap;
   }
   let resaEd = null;
   function openResa(r){
     resaEd = { ...r };
     const mine = !r.id || r.by===S.me, ro = !mine || S.readOnly || !S.me;
     $("room-title").textContent = !r.id ? "Réserver la salle de réunion" : ro ? "Réservation de la salle" : "Modifier ma réservation";
-    $("room-date").value = r.date || iso(new Date()); $("room-start").value = r.start || "09:00"; $("room-end").value = r.end || "12:00"; $("room-objet").value = r.objet || "";
+    $("room-date").value = r.date || iso(new Date()); $("room-start").value = r.start || "09:00"; $("room-end").value = r.end || "10:00"; $("room-objet").value = r.objet || "";
     ["room-date","room-start","room-end","room-objet"].forEach(id => $(id).disabled = ro);
     document.querySelectorAll("#room-form .preset").forEach(b => b.hidden = ro);
     $("room-save").hidden = ro; $("room-save").textContent = r.id ? "Enregistrer" : "Réserver";
@@ -2647,10 +2759,11 @@ window.QEO_PAL = (() => {
     const err = t => { $("room-conflict").textContent = t; $("room-conflict").hidden = false; };
     if (!date || !start || !end) return err("Indiquez la date et les horaires.");
     if (start >= end) return err("L'heure de fin doit être après l'heure de début.");
+    if (start < ROOM_OPEN_S || end > ROOM_CLOSE_S) return err("La salle est ouverte de 6 h 50 à 18 h 30 : choisissez un horaire dans cette plage.");
     if (!objet) { $("room-objet").focus(); return err("Indiquez l'objet de la réservation (ex. réunion des CPC)."); }
     if (checkResa().length) return;
     $("room-save").disabled = true;
-    try { await putResa(id, { by: S.me, date, start, end, objet, at: Date.now() }); closeResa(); sfx("reunion"); toast(id ? "Réservation modifiée" : "Salle réservée le "+longDate(parse(date)).toLowerCase()+" de "+start+" à "+end); }
+    try { await putResa(id, { by: S.me, date, start, end, objet, at: Date.now() }); closeResa(); sfx("reunion"); S.roomDay = date; toast(id ? "Réservation modifiée" : "Salle réservée le "+longDate(parse(date)).toLowerCase()+" de "+hLabel(start)+" à "+hLabel(end)); }
     catch(e2) { err("La réservation n'a pas pu être enregistrée. Vérifiez votre connexion et réessayez."); }
     finally { $("room-save").disabled = false; }
   });
@@ -2665,6 +2778,7 @@ window.QEO_PAL = (() => {
   async function bookFromShift(body, dates){
     if (!$("ed-salle").checked || $("row-salle").hidden) return "";
     if (!body.start || !body.end) return " · salle non réservée : indiquez un horaire";
+    if (body.start < ROOM_OPEN_S || body.end > ROOM_CLOSE_S) return " · salle non réservée : elle est ouverte de 6 h 50 à 18 h 30";
     const objet = (posteOf(body.poste).name + (body.note ? " · "+body.note : "")).slice(0,80), ok = [], ko = [];
     for (const date of dates) { if (roomConflicts(date, body.start, body.end).length) ko.push(date); else { await putResa(null, { by: S.me, date, start: body.start, end: body.end, objet, at: Date.now() }); ok.push(date); } }
     return ko.length ? " · salle déjà prise le "+ko.map(d => { const x = parse(d); return x.getDate()+" "+MON[x.getMonth()]; }).join(", ") : ok.length ? " · salle réservée" : "";
@@ -2956,7 +3070,7 @@ window.QEO_PAL = (() => {
   $("ed-allday").onchange = syncAllDay;
   ["ed-start","ed-end","ed-pause"].forEach(id => $(id).addEventListener("input", syncDur));
   $("ed-day").addEventListener("change", e => { if (ed && e.target.value) { ed.date = e.target.value; syncDate(); } });
-  document.querySelectorAll(".preset").forEach(b => b.onclick = () => { $("ed-start").value = b.dataset.s; $("ed-end").value = b.dataset.e; $("ed-pause").value = b.dataset.p; syncDur(); });
+  document.querySelectorAll("#edform .preset").forEach(b => b.onclick = () => { $("ed-start").value = b.dataset.s; $("ed-end").value = b.dataset.e; $("ed-pause").value = b.dataset.p; syncDur(); });
 
   // création d'une activité ou d'un motif
   function openBox(p){ $(p+"-box").hidden = false; $(p+"-open").hidden = true; $(p+"-name").value = ""; $(p+"-name").focus(); }

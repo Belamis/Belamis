@@ -226,6 +226,28 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .mc-more{font-size:11px;font-weight:800;color:var(--muted);padding-left:4px}
 .rm-mc .occ{position:relative;height:5px;border-radius:99px;background:color-mix(in srgb,var(--st-on) 22%,var(--surface-2));overflow:hidden}
 .rm-mc .occ i{position:absolute;top:0;bottom:0;background:var(--p-reunion);border-radius:99px}
+.ry{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:12px}
+.ry-m{border:1px solid var(--line-2);border-radius:14px;padding:10px;background:var(--surface)}
+.ry-m.now{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.ry-h{border:0;background:transparent;padding:2px 2px 8px;width:100%;text-align:left;display:flex;flex-direction:column;color:var(--ink)}
+.ry-h b{font:800 15px/1.2 var(--display)}
+.ry-h span{font-size:11.5px;font-weight:700;color:var(--muted)}
+.ry-h:hover b{color:var(--accent)}
+.ry-g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.ry-dn{font-size:9.5px;font-weight:800;color:var(--faint);text-align:center}
+.ry-d{position:relative;border:0;border-radius:7px;aspect-ratio:1;font-size:11px;font-weight:700;color:var(--ink);background:var(--surface-2);padding:0;display:grid;place-items:center;max-width:100%}
+.ry-d.has{background:color-mix(in srgb,var(--p-reunion) var(--o),var(--surface));color:var(--ink)}
+.ry-d.has{font-weight:800}
+.ry-d.hi{color:#fff}
+.ry-d.vac{box-shadow:inset 0 -3px 0 color-mix(in srgb,var(--vac) 80%,transparent)}
+.ry-d.off{background:transparent;color:var(--faint)}
+.ry-d.today{outline:2px solid var(--accent);outline-offset:1px}
+.ry-d sup{position:absolute;top:-4px;right:-3px;font-size:9px;line-height:1;background:var(--p-reunion);color:#fff;border-radius:99px;padding:2px 4px}
+.ry-d:hover{outline:2px solid var(--p-reunion);outline-offset:1px}
+.ry-leg{display:flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;color:var(--muted);margin-right:auto}
+.ry-leg i{width:14px;height:14px;border-radius:4px;background:color-mix(in srgb,var(--p-reunion) var(--o),var(--surface));border:1px solid var(--line-2)}
+.ry-leg span{margin:0 4px}
+@media (max-width:700px){.ry{grid-template-columns:1fr 1fr;gap:8px}.ry-m{padding:7px}.ry-d{font-size:10px;border-radius:5px}.ry-leg{display:none}}
 @media (max-width:700px){.rm-month{gap:4px}.rm-mc{min-height:64px;padding:6px;border-radius:10px}.rm-mc .mc-list{display:none}.rm-mc .mc-h{flex-direction:column;align-items:flex-start;gap:4px}.rm-mc .mc-h b{font-size:14px}.rm-mwrap{padding:8px}}
 @media (max-width:1180px){.rm{grid-template-columns:1fr}.rm-side{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));order:-1}}
 @media (max-width:700px){.rm{padding:12px;gap:14px}.rm-side{display:flex;order:0}.rm-days{display:flex;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.rm-days::-webkit-scrollbar{display:none}.rm-day{flex:0 0 96px;padding:9px 10px}.rm-day .dd{font-size:19px}.rm-status h3{font-size:32px}.rm-tl{margin-left:58px}.rm-hr span{left:-56px;width:50px;font-size:11px}.rm-free{font-size:12px;padding:0 8px}.rm-free em{padding:3px 8px;font-size:11.5px}}
@@ -1754,8 +1776,8 @@ window.QEO_PAL = (() => {
   function range(){
     const a = S.anchor;
     if (S.view==="day") { const d = new Date(a.getFullYear(),a.getMonth(),a.getDate()); return [d,d]; }
-    if (S.view==="week" || (S.view==="salle" && S.roomMode!=="month")) { const m = monday(a); return [m, addDays(m,6)]; }
-    if (S.view==="year" || S.view==="ecoles" || (S.view==="synth" && S.synth==="year")) return [new Date(CAL.first[0],CAL.first[1],1), new Date(CAL.last[0],CAL.last[1]+1,0)];
+    if (S.view==="week" || (S.view==="salle" && (S.roomMode||"week")==="week")) { const m = monday(a); return [m, addDays(m,6)]; }
+    if (S.view==="year" || S.view==="ecoles" || (S.view==="salle" && S.roomMode==="year") || (S.view==="synth" && S.synth==="year")) return [new Date(CAL.first[0],CAL.first[1],1), new Date(CAL.last[0],CAL.last[1]+1,0)];
     if (S.view==="synth" && S.synth==="week") { const m = monday(a); return [m, addDays(m,6)]; }
     if (S.view==="synth") return [new Date(a.getFullYear(),a.getMonth(),1), new Date(a.getFullYear(),a.getMonth()+1,0)];
     const first = new Date(a.getFullYear(),a.getMonth(),1), last = new Date(a.getFullYear(),a.getMonth()+1,0);
@@ -1776,19 +1798,20 @@ window.QEO_PAL = (() => {
     else if (S.view==="week") { const end = S.weekend ? to : addDays(from,4); title = "Semaine "+isoWeek(from); sub = "Du "+from.getDate()+(from.getMonth()!==end.getMonth()?" "+MON[from.getMonth()]:"")+" au "+end.getDate()+" "+MON_L[end.getMonth()]+" "+end.getFullYear(); }
     else if (yr) { title = CAL.label; sub = "Rotations, vacances et jours fériés"; }
     else if (S.view==="ecoles") { title = "Écoles et lieux"; sub = "Qui y est passé, qui y passera · "+CAL.label; }
+    else if (S.view==="salle" && S.roomMode==="year") { const n = S.room.filter(r => r.date >= iso(from) && r.date <= iso(to)).length; title = "Salle de réunion"; sub = CAL.label+" · "+(n ? n+" réservation"+(n>1?"s":"") : "aucune réservation"); }
     else if (S.view==="salle" && S.roomMode==="month") { const n = S.room.filter(r => r.date.slice(0,7)===iso(a).slice(0,7)).length; title = "Salle de réunion"; sub = cap(MON_L[a.getMonth()])+" "+a.getFullYear()+" · "+(n ? n+" réservation"+(n>1?"s":"") : "aucune réservation"); }
     else if (S.view==="salle") { const end = S.weekend ? to : addDays(from,4); title = "Salle de réunion"; sub = "Semaine "+isoWeek(from)+" · du "+from.getDate()+(from.getMonth()!==end.getMonth()?" "+MON[from.getMonth()]:"")+" au "+end.getDate()+" "+MON_L[end.getMonth()]+" "+end.getFullYear(); }
     else if (S.view==="synth") { title = "Synthèse"; sub = S.synth==="week" ? "Semaine "+isoWeek(from)+" · du "+from.getDate()+" "+MON[from.getMonth()]+" au "+to.getDate()+" "+MON[to.getMonth()]+" "+to.getFullYear() : S.synth==="year" ? CAL.label : cap(MON_L[a.getMonth()])+" "+a.getFullYear(); }
     else { title = cap(MON_L[a.getMonth()])+" "+a.getFullYear(); sub = "Semaines "+isoWeek(from)+" à "+isoWeek(to); }
     $("rangelabel").textContent = title; $("rangesub").textContent = sub;
     const rp = $("rotpill"); rp.textContent = "";
-    if (S.view==="week" || (S.view==="salle" && S.roomMode!=="month")) { const w = weekRot(from); if (w) rp.append(w); }
+    if (S.view==="week" || (S.view==="salle" && (S.roomMode||"week")==="week")) { const w = weekRot(from); if (w) rp.append(w); }
     if (S.view==="day") rp.append(...tagsFor(dayInfo(a)));
     const sy = S.view==="synth", ec = S.view==="ecoles", sa = S.view==="salle";
     $("filters").hidden = yr || sa; $("legend").hidden = yr || sy || ec || sa;
     $("we-wrap").hidden = S.view==="day" || sy || ec || sa;
     $("weektools").hidden = S.view!=="week" || S.readOnly || !S.me;
-    $("prev").disabled = $("next").disabled = yr || ec || (sy && S.synth==="year");
+    $("prev").disabled = $("next").disabled = yr || ec || (sy && S.synth==="year") || (sa && S.roomMode==="year");
     $("newbtn").hidden = S.readOnly || !S.me;
     renderChips(); renderMe(); renderMini(); renderNow(); renderRoomNow();
     const v = $("view"); v.textContent = "";
@@ -1797,7 +1820,7 @@ window.QEO_PAL = (() => {
     else if (yr) v.append(yearView());
     else if (sy) v.append(synthView(from, to));
     else if (ec) v.append(ecolesView(from, to));
-    else if (sa) v.append(S.roomMode==="month" ? roomMonthView(a, from, to) : roomView(from));
+    else if (sa) v.append(S.roomMode==="month" ? roomMonthView(a, from, to) : S.roomMode==="year" ? roomYearView(from, to) : roomView(from));
     else v.append(monthView(a, from, to));
     renderLegend(); renderLists(); renderAnnonces();
   }
@@ -2733,7 +2756,7 @@ window.QEO_PAL = (() => {
   // Sélecteur de période de la page Salle
   function roomSeg(){
     const g = el("div","seg rm-seg"); g.setAttribute("role","group"); g.setAttribute("aria-label","Période affichée");
-    [["week","Semaine"],["month","Mois"]].forEach(([k,l]) => {
+    [["week","Semaine"],["month","Mois"],["year","Année"]].forEach(([k,l]) => {
       const b = el("button",null,l); b.type = "button"; b.dataset.rm = k; b.setAttribute("aria-pressed", String((S.roomMode||"week")===k));
       b.onclick = () => { if ((S.roomMode||"week")===k) return; S.roomMode = k; if (k==="week" && S.roomDay) S.anchor = parse(S.roomDay); subscribe(); };
       g.append(b);
@@ -2765,6 +2788,42 @@ window.QEO_PAL = (() => {
     if (all.length > 8) { const mb = el("button","btn round rm-more", S.roomAll ? "Afficher moins" : "Voir toutes les réservations à venir ("+all.length+")"); mb.type = "button"; mb.onclick = () => { S.roomAll = !S.roomAll; render(); }; uc.append(mb); }
     side.append(uc);
     return side;
+  }
+  // Vue Année : les 12 mois de l'année scolaire, chaque jour coloré selon l'occupation de la salle
+  function roomYearView(from, to){
+    const todayK = iso(new Date()), can = !!S.me && !S.readOnly, span = ROOM_CLOSE - ROOM_OPEN;
+    const wrap = el("div","rm"), main = el("section","rm-main");
+    const top = el("div","rm-top"); top.append(roomSeg());
+    const lg = el("div","ry-leg"); lg.append(el("span",null,"Libre")); [0,1,2,3].forEach(i => { const b = el("i"); b.style.setProperty("--o", [6,30,55,85][i]+"%"); lg.append(b); }); lg.append(el("span",null,"Très occupée"));
+    top.append(lg);
+    if (can) { const nb = el("button","btn primary round","+ Réserver la salle"); nb.type = "button"; nb.id = "room-new"; nb.onclick = () => openResa({ date: todayK }); top.append(nb); }
+    main.append(top);
+    const grid = el("div","ry"), days = [];
+    for (let m = new Date(from.getFullYear(), from.getMonth(), 1); m <= to; m = new Date(m.getFullYear(), m.getMonth()+1, 1)) {
+      const y = m.getFullYear(), mo = m.getMonth(), last = new Date(y, mo+1, 0), key = iso(m).slice(0,7);
+      const list = S.room.filter(r => r.date.slice(0,7)===key), mins = list.reduce((t,r) => t + toMin(r.end) - toMin(r.start), 0);
+      const card = el("div","ry-m"+(key===todayK.slice(0,7)?" now":""));
+      const h = el("button","ry-h"); h.type = "button"; h.title = "Voir "+MON_L[mo]+" en détail";
+      h.append(el("b",null,cap(MON_L[mo])+" "+y), el("span",null, list.length ? list.length+" résa. · "+fmtH(mins) : "Aucune réservation"));
+      h.onclick = () => { S.roomMode = "month"; S.anchor = new Date(y, mo, 1); subscribe(); };
+      card.append(h);
+      const g = el("div","ry-g"); ["L","M","M","J","V","S","D"].forEach(x => g.append(el("span","ry-dn",x)));
+      for (let i = 0; i < dowIdx(new Date(y, mo, 1)); i++) g.append(el("span"));
+      for (let d = 1; d <= last.getDate(); d++) {
+        const dt = new Date(y, mo, d), k = iso(dt), inf = dayInfo(dt), dl = resaOf(k), occ = dl.reduce((t,r) => t + toMin(r.end) - toMin(r.start), 0);
+        if (!inf.we && !inf.ferie) days.push(dt);
+        const c = el("button","ry-d"+(inf.we||inf.ferie?" off":inf.vac?" vac":"")+(k===todayK?" today":"")+(dl.length?" has":"")); c.type = "button";
+        c.textContent = d; if (dl.length) { const o = Math.min(90, 22 + occ/span*80); c.style.setProperty("--o", o+"%"); if (o > 55) c.classList.add("hi"); if (dl.length > 1) c.append(el("sup",null,String(dl.length))); }
+        c.title = longDate(dt)+(inf.ferie ? " · férié" : inf.we ? "" : " · "+(dl.length ? dl.map(r => resaLabel(r)+" "+r.objet).join(" ; ") : "salle libre"));
+        c.onclick = () => { S.roomMode = "week"; S.anchor = dt; S.roomDay = k; subscribe(); };
+        g.append(c);
+      }
+      card.append(g); grid.append(card);
+    }
+    const gw = el("div","rm-tlwrap rm-mwrap"); gw.append(grid); main.append(gw);
+    main.append(el("p","rm-hint","Un clic sur un jour ouvre sa journée ; un clic sur le nom d'un mois ouvre le mois en détail."));
+    wrap.append(main, roomSide(main, days, can, "Sur l'année scolaire"));
+    return wrap;
   }
   // Vue Mois : chaque jour avec ses réservations ; un clic ouvre la journée
   function roomMonthView(a, from, to){
@@ -3558,8 +3617,8 @@ window.QEO_PAL = (() => {
   function setView(v){ S.view = v; subscribe(); }
   document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => setView(b.dataset.view));
   const step = n => {
-    if (S.view==="year" || S.view==="ecoles" || (S.view==="synth" && S.synth==="year")) return;
-    const a = S.anchor, wk = S.view==="week" || (S.view==="salle" && S.roomMode!=="month") || (S.view==="synth" && S.synth==="week");
+    if (S.view==="year" || S.view==="ecoles" || (S.view==="salle" && S.roomMode==="year") || (S.view==="synth" && S.synth==="year")) return;
+    const a = S.anchor, wk = S.view==="week" || (S.view==="salle" && (S.roomMode||"week")==="week") || (S.view==="synth" && S.synth==="week");
     S.anchor = S.view==="day" ? addDays(a,n) : wk ? addDays(a,7*n) : new Date(a.getFullYear(), a.getMonth()+n, 1);
     subscribe();
   };
@@ -3774,7 +3833,7 @@ window.QEO_PAL = (() => {
       S.ann = snap.docs.map(d => ({ id: d.id, ...d.data() }));
       refresh();
     }, () => {});
-    db.collection("salle").where("date", ">=", iso(addDays(new Date(), -120))).onSnapshot(snap => { S.room = snap.docs.map(d => ({ id: d.id, ...d.data() })).filter(r => r.start && r.end); if (!$("room-ed").hidden) checkResa(); refresh(); }, () => {});
+    db.collection("salle").where("date", ">=", [iso(new Date(CAL.first[0], CAL.first[1], 1)), iso(addDays(new Date(), -120))].sort()[0]).onSnapshot(snap => { S.room = snap.docs.map(d => ({ id: d.id, ...d.data() })).filter(r => r.start && r.end); if (!$("room-ed").hidden) checkResa(); refresh(); }, () => {});
     startChat();
     subscribeToday();
     subscribe();

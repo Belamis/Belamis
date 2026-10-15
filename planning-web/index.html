@@ -897,6 +897,13 @@ fieldset.field{border:0;margin:0;padding:0}
 .card .w{display:block;font-size:11.5px;font-weight:700;color:var(--muted)}
 .chip.dispo{--c:var(--st-on);background:transparent;box-shadow:inset 0 0 0 1px var(--st-on)}
 .withlist{display:flex;flex-wrap:wrap;gap:6px}
+#room-with{max-height:150px;overflow:auto}
+.withlist label:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.withlist label:has(input:disabled){cursor:default;opacity:.85}
+.avs{display:inline-flex;flex:none}
+.avs .av{box-shadow:0 0 0 2px var(--surface)}
+.avs .av + .av{margin-left:-9px}
+.rm-ev.mine .avs .av{box-shadow:0 0 0 2px var(--p-reunion)}
 .withlist label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 3px;font-size:12.5px;font-weight:700;cursor:pointer}
 .withlist label .av{width:24px;height:24px;font-size:9.5px}
 .withlist input{position:absolute;opacity:0;pointer-events:none}
@@ -1551,6 +1558,12 @@ window.QEO_PAL = (() => {
       </div>
       <div class="frow"><label for="room-objet">Objet</label><input type="text" id="room-objet" maxlength="80" placeholder="Ex. Réunion des CPC, conseil de cycle, entretien…"></div>
       <p class="room-conflict" id="room-conflict" hidden role="alert"></p>
+      <div class="frow" id="room-with-row"><span class="lab">Avec</span>
+        <div>
+          <div class="withlist" id="room-with" role="group" aria-label="Co-organisateurs de la réunion"></div>
+          <p class="hint">Réunion menée à plusieurs : cochez les collègues qui l'animent avec vous. Ils apparaissent sur la réservation et peuvent aussi la modifier.</p>
+        </div>
+      </div>
       <p class="hint" id="room-who" hidden></p>
     </div>
     <div class="modal-f">
@@ -2449,7 +2462,7 @@ window.QEO_PAL = (() => {
     ];
     S.room = [
       { id:"s1", by:"d1", date: iso(new Date()), start:"08:00", end:"09:00", objet:"Point hebdomadaire IEN", at: t },
-      { id:"s2", by:"d2", date: iso(new Date()), start:"09:30", end:"11:30", objet:"Réunion des conseillers pédagogiques", at: t },
+      { id:"s2", by:"d2", with:["d0"], date: iso(new Date()), start:"09:30", end:"11:30", objet:"Réunion des conseillers pédagogiques", at: t },
       { id:"s3", by:"d7", date: iso(new Date()), start:"14:00", end:"15:30", objet:"Formation numérique ENT", at: t },
       { id:"s4", by:"d2", date: iso(addDays(new Date(),1)), start:"13:30", end:"16:00", objet:"Conseil de cycle 3", at: t },
       ...[[8,"08:30","10:00","d1","Équipe de circonscription"],[15,"14:00","16:30","d3","Réunion RASED"],[22,"09:00","12:00","d7","Formation numérique ENT"],[29,"13:30","15:00","d2","Animation pédagogique maths"],[36,"08:00","09:30","d1","Préparation des évaluations"],[43,"10:00","11:30","d4","Réunion UPE2A"]]
@@ -2648,6 +2661,12 @@ window.QEO_PAL = (() => {
   const resaOf = k => S.room.filter(r => r.date===k).sort((a,b) => a.start.localeCompare(b.start));
   function roomConflicts(date, start, end, skipId){ return S.room.filter(r => r.date===date && r.id!==skipId && r.start < end && start < r.end); }
   const resaLabel = r => r.start+" – "+r.end;
+  // Organisateurs : la personne qui a réservé, puis les collègues « avec » elle
+  const resaPeople = r => [r.by, ...(Array.isArray(r.with) ? r.with.filter(u => u && u!==r.by) : [])];
+  const resaMine = r => resaPeople(r).includes(S.me);
+  const resaWhoRaw = r => { const ps = resaPeople(r).map(u => u===S.me ? "vous" : fullName(u)); return ps.length > 1 ? ps.slice(0,-1).join(", ")+" et "+ps[ps.length-1] : ps[0]; };
+  const resaWho = r => { const t = resaWhoRaw(r); return t.startsWith("vous") ? "V"+t.slice(1) : t; };
+  function avStack(r, max){ const w = el("span","avs"); resaPeople(r).slice(0, max||3).forEach(u => w.append(avatar(u, true))); return w; }
   // État de la salle à l'instant : ouverte ou non, réservation en cours, prochaine, fin du créneau libre
   function roomState(){
     const k = iso(new Date()), now = nowMin(), list = resaOf(k), inf = dayInfo(new Date());
@@ -2657,7 +2676,7 @@ window.QEO_PAL = (() => {
   function renderRoomNow(){
     const b = $("room-now"); if (!b) return; b.textContent = "";
     const st = roomState(), t = el("span"); b.classList.toggle("busy", !!st.cur);
-    if (st.cur) t.append(el("b",null,"Salle occupée jusqu'à "+hLabel(st.cur.end)), el("span",null,st.cur.objet+" · "+fullName(st.cur.by)));
+    if (st.cur) t.append(el("b",null,"Salle occupée jusqu'à "+hLabel(st.cur.end)), el("span",null,st.cur.objet+" · "+resaWho(st.cur)));
     else if (st.closed) t.append(el("b",null,"Salle fermée"), el("span",null, st.inf.we || st.inf.ferie ? "Ouverte du lundi au vendredi, 6 h 50 – 18 h 30" : "Réouverture demain à 6 h 50"));
     else t.append(el("b",null,"Salle de réunion libre"), el("span",null, st.next ? "Prochaine réservation à "+hLabel(st.next.start)+" · "+st.next.objet : "Libre jusqu'à 18 h 30"));
     b.append(el("span","rn-ic","🚪"), t, el("i"));
@@ -2669,15 +2688,15 @@ window.QEO_PAL = (() => {
     if (st.cur) {
       const a = toMin(st.cur.start), z = toMin(st.cur.end);
       c.append(el("h3",null,"Occupée"), el("p",null,"Se libère à "+hLabel(st.cur.end)+" · dans "+durLabel(z - st.now)));
-      const w = el("div","who"); const tx = el("div"); tx.append(el("b",null,st.cur.objet), el("small",null,(st.cur.by===S.me ? "Vous" : fullName(st.cur.by))+" · "+resaLabel(st.cur)));
-      w.append(avatar(st.cur.by, true), tx); c.append(w);
+      const w = el("div","who"); const tx = el("div"); tx.append(el("b",null,st.cur.objet), el("small",null,resaWho(st.cur)+" · "+resaLabel(st.cur)));
+      w.append(avStack(st.cur), tx); c.append(w);
       const bar = el("div","bar"), i = el("i"); i.style.width = Math.round((st.now - a)/(z - a)*100)+"%"; bar.append(i); c.append(bar);
     } else if (st.closed) {
       c.append(el("h3",null,"Fermée"), el("p",null, st.inf.we || st.inf.ferie ? "La salle est ouverte du lundi au vendredi, de 6 h 50 à 18 h 30." : "Réouverture demain à 6 h 50."));
     } else {
       const from = Math.max(st.now, ROOM_OPEN), until = st.next ? toMin(st.next.start) : ROOM_CLOSE;
       c.append(el("h3",null,"Libre"), el("p",null, st.early ? "Ouverture à 6 h 50 · libre jusqu'à "+hLabel(m2s(until)) : "Jusqu'à "+hLabel(m2s(until))+" · encore "+durLabel(until - st.now)));
-      if (st.next) { const w = el("div","who"); const tx = el("div"); tx.append(el("b",null,"Ensuite : "+st.next.objet), el("small",null,(st.next.by===S.me ? "Vous" : fullName(st.next.by))+" · "+resaLabel(st.next))); w.append(avatar(st.next.by, true), tx); c.append(w); }
+      if (st.next) { const w = el("div","who"); const tx = el("div"); tx.append(el("b",null,"Ensuite : "+st.next.objet), el("small",null,resaWho(st.next)+" · "+resaLabel(st.next))); w.append(avStack(st.next), tx); c.append(w); }
       if (can) {
         const q = el("div","quick"), start = Math.ceil(from/5)*5;
         [[30,"30 min"],[60,"1 h"],[120,"2 h"]].forEach(([d,l], i) => {
@@ -2690,11 +2709,11 @@ window.QEO_PAL = (() => {
     return c;
   }
   function evBlock(r, top, h){
-    const mine = r.by===S.me, short = h < 46, x = el("button","rm-ev"+(mine?" mine":"")+(short?" short":"")); x.type = "button";
+    const mine = resaMine(r), short = h < 46, x = el("button","rm-ev"+(mine?" mine":"")+(short?" short":"")); x.type = "button";
     x.style.top = top+"px"; x.style.height = Math.max(h - 3, 22)+"px";
-    const tx = el("div","tx"); tx.append(el("span","t",resaLabel(r)), el("b",null,r.objet)); if (!short) tx.append(el("span","who", mine ? "Vous" : fullName(r.by)));
-    x.append(avatar(r.by, true), tx);
-    x.title = resaLabel(r)+" · "+r.objet+" · réservée par "+(mine ? "vous" : fullName(r.by));
+    const tx = el("div","tx"); tx.append(el("span","t",resaLabel(r)), el("b",null,r.objet)); if (!short) tx.append(el("span","who", resaWho(r)));
+    x.append(avStack(r, short ? 2 : 3), tx);
+    x.title = resaLabel(r)+" · "+r.objet+" · "+resaWho(r);
     x.onclick = e => { e.stopPropagation(); openResa(r); };
     return x;
   }
@@ -2712,7 +2731,7 @@ window.QEO_PAL = (() => {
       b.append(el("span","dn",DOW[dowIdx(d)]+(k===todayK?" · auj.":"")), el("span","dd",d.getDate()+" "+MON[d.getMonth()]));
       const occ = el("div","occ"); list.forEach(r => { const i = el("i"), a = Math.max(0,(toMin(r.start)-ROOM_OPEN)/span*100), z = Math.min(100,(toMin(r.end)-ROOM_OPEN)/span*100); i.style.left = a+"%"; i.style.width = Math.max(z-a,2)+"%"; occ.append(i); });
       const ph = phoneMQ.matches;
-      b.append(occ, el("small",null, inf.ferie ? "Férié" : list.length ? list.length+(ph ? " résa." : " réservation"+(list.length>1?"s":"")) : ph ? "Libre" : inf.vac ? "Vacances · libre" : "Libre toute la journée"));
+      b.append(occ, el("small",null, inf.ferie ? "Férié" : list.length ? list.length+(ph ? " résa." : " réservation"+(list.length>1?"s":"")) : inf.vac && !ph ? "Vacances · libre" : "Libre"));
       b.onclick = () => { S.roomDay = k; render(); };
       days.append(b);
     });
@@ -2780,8 +2799,8 @@ window.QEO_PAL = (() => {
     up.forEach(r => {
       if (r.date!==day) { day = r.date; ul.append(el("p","rm-up-d", r.date===todayK ? "Aujourd'hui" : longDate(parse(r.date)))); }
       const it = el("button","rm-up-item"); it.type = "button";
-      const tx = el("div","tx"); tx.append(el("b",null,r.objet), el("small",null, resaLabel(r)+" · "+(r.by===S.me ? "vous" : fullName(r.by))));
-      it.append(avatar(r.by, true), tx); if (r.by===S.me) it.append(el("span","mine-tag","Moi"));
+      const tx = el("div","tx"); tx.append(el("b",null,r.objet), el("small",null, resaLabel(r)+" · "+resaWho(r)));
+      it.append(avStack(r, 2), tx); if (resaMine(r)) it.append(el("span","mine-tag","Moi"));
       it.onclick = () => { S.roomDay = r.date; S.anchor = parse(r.date); openResa(r); }; ul.append(it);
     });
     uc.append(ul);
@@ -2842,7 +2861,7 @@ window.QEO_PAL = (() => {
       const h = el("div","mc-h"); h.append(el("b",null,String(d.getDate()))); if (list.length) h.append(el("span","mc-n",String(list.length)));
       c.append(h);
       const ls = el("div","mc-list");
-      list.slice(0,3).forEach(r => { const ch = el("span","mc-chip"+(r.by===S.me?" mine":"")); ch.append(el("em",null,r.start.replace(":","h")), r.objet); ch.title = resaLabel(r)+" · "+r.objet+" · "+(r.by===S.me ? "vous" : fullName(r.by)); ls.append(ch); });
+      list.slice(0,3).forEach(r => { const ch = el("span","mc-chip"+(resaMine(r)?" mine":"")); ch.append(el("em",null,r.start.replace(":","h")), r.objet); ch.title = resaLabel(r)+" · "+r.objet+" · "+resaWho(r); ls.append(ch); });
       if (list.length > 3) ls.append(el("span","mc-more","+ "+(list.length-3)+" autre"+(list.length>4?"s":"")));
       if (!list.length && inf.ferie && !out) ls.append(el("span","mc-more","Férié"));
       c.append(ls);
@@ -2859,24 +2878,38 @@ window.QEO_PAL = (() => {
   let resaEd = null;
   function openResa(r){
     resaEd = { ...r };
-    const mine = !r.id || r.by===S.me, ro = !mine || S.readOnly || !S.me;
-    $("room-title").textContent = !r.id ? "Réserver la salle de réunion" : ro ? "Réservation de la salle" : "Modifier ma réservation";
+    const mine = !r.id || resaMine(r), ro = !mine || S.readOnly || !S.me;
+    $("room-title").textContent = !r.id ? "Réserver la salle de réunion" : ro ? "Réservation de la salle" : "Modifier la réservation";
+    fillRoomWith(r, ro);
     $("room-date").value = r.date || iso(new Date()); $("room-start").value = r.start || "09:00"; $("room-end").value = r.end || "10:00"; $("room-objet").value = r.objet || "";
     ["room-date","room-start","room-end","room-objet"].forEach(id => $(id).disabled = ro);
     document.querySelectorAll("#room-form .preset").forEach(b => b.hidden = ro);
     $("room-save").hidden = ro; $("room-save").textContent = r.id ? "Enregistrer" : "Réserver";
     $("room-del").hidden = !r.id || ro; $("room-cancel").textContent = ro ? "Fermer" : "Annuler";
-    $("room-who").hidden = !r.id; if (r.id) $("room-who").textContent = "Réservée par "+(r.by===S.me ? "vous" : fullName(r.by))+".";
+    $("room-who").hidden = !r.id; if (r.id) $("room-who").textContent = "Réservée par "+(r.by===S.me ? "vous" : fullName(r.by))+(resaPeople(r).length > 1 ? " · animée par "+resaWhoRaw(r) : "")+".";
     $("room-ed").hidden = false; (ro ? $("room-cancel") : $("room-objet")).focus();
     checkResa();
   }
   function closeResa(){ $("room-ed").hidden = true; resaEd = null; }
+  function fillRoomWith(r, ro){
+    const box = $("room-with"); box.textContent = "";
+    const owner = r.id ? r.by : S.me, chosen = new Set(Array.isArray(r.with) ? r.with : []);
+    const ids = allIds([]).filter(u => u!==owner && S.people.has(u));
+    $("room-with-row").hidden = !ids.length || (ro && !chosen.size);
+    ids.forEach((u,i) => {
+      if (ro && !chosen.has(u)) return;
+      const l = el("label"), c = el("input"); c.type = "checkbox"; c.value = u; c.id = "rw-"+i; c.checked = chosen.has(u); c.disabled = ro;
+      c.onchange = () => { if (box.querySelectorAll("input:checked").length > 6) { c.checked = false; toast("6 collègues au maximum par réservation"); } };
+      l.append(c, avatar(u, true), fullName(u)); box.append(l);
+    });
+  }
+  const roomWithVal = () => [...$("room-with").querySelectorAll("input:checked")].map(c => c.value).slice(0,6);
   function checkResa(){
     const d = $("room-date").value, a = $("room-start").value, z = $("room-end").value, box = $("room-conflict");
     if (!resaEd || !d || !a || !z || $("room-save").hidden) { box.hidden = true; return []; }
     const c = roomConflicts(d, a, z, resaEd.id);
     box.hidden = !c.length;
-    if (c.length) box.textContent = "⚠ La salle est déjà prise : " + c.map(r => resaLabel(r)+" · "+r.objet+" ("+(r.by===S.me ? "vous" : fullName(r.by))+")").join(" ; ") + ". Choisissez un autre horaire.";
+    if (c.length) box.textContent = "⚠ La salle est déjà prise : " + c.map(r => resaLabel(r)+" · "+r.objet+" ("+resaWho(r)+")").join(" ; ") + ". Choisissez un autre horaire.";
     return c;
   }
   ["room-date","room-start","room-end"].forEach(id => $(id).addEventListener("input", checkResa));
@@ -2884,7 +2917,13 @@ window.QEO_PAL = (() => {
   $("room-x").onclick = closeResa; $("room-cancel").onclick = closeResa;
   $("room-ed").addEventListener("mousedown", e => { if (e.target.id==="room-ed") closeResa(); });
   async function putResa(id, data){
-    if (S.demo) { if (id) S.room = S.room.map(r => r.id===id ? { ...r, ...data } : r); else S.room.push({ id: "r"+Date.now()+Math.random().toString(36).slice(2,5), ...data }); render(); return; }
+    if (S.demo) { if (id) S.room = S.room.map(r => r.id===id ? { id, ...data } : r); else S.room.push({ id: "r"+Date.now()+Math.random().toString(36).slice(2,5), ...data }); render(); return; }
+    // Dernière vérification sur le serveur juste avant d'écrire : un collègue a peut-être réservé entre-temps.
+    try {
+      const snap = await db.collection("salle").where("date","==",data.date).get({ source: "server" });
+      const clash = snap.docs.map(d => ({ id: d.id, ...d.data() })).filter(r => r.id!==id && r.start < data.end && data.start < r.end);
+      if (clash.length) { const e = new Error("conflict"); e.code = "conflict"; e.clash = clash; throw e; }
+    } catch(e) { if (e.code==="conflict") throw e; }
     if (id) await db.doc("salle/"+id).set(data); else await db.collection("salle").add(data);
   }
   $("room-form").addEventListener("submit", async e => {
@@ -2898,8 +2937,10 @@ window.QEO_PAL = (() => {
     if (!objet) { $("room-objet").focus(); return err("Indiquez l'objet de la réservation (ex. réunion des CPC)."); }
     if (checkResa().length) return;
     $("room-save").disabled = true;
-    try { await putResa(id, { by: S.me, date, start, end, objet, at: Date.now() }); closeResa(); sfx("reunion"); S.roomDay = date; toast(id ? "Réservation modifiée" : "Salle réservée le "+longDate(parse(date)).toLowerCase()+" de "+hLabel(start)+" à "+hLabel(end)); }
-    catch(e2) { err("La réservation n'a pas pu être enregistrée. Vérifiez votre connexion et réessayez."); }
+    const data = { by: id ? resaEd.by : S.me, date, start, end, objet, at: Date.now() }, w = roomWithVal().filter(u => u!==data.by);
+    if (w.length) data.with = w;
+    try { await putResa(id, data); closeResa(); sfx("reunion"); S.roomDay = date; toast(id ? "Réservation modifiée" : "Salle réservée le "+longDate(parse(date)).toLowerCase()+" de "+hLabel(start)+" à "+hLabel(end)+(w.length ? " avec "+w.map(fullName).join(", ") : "")); }
+    catch(e2) { err(e2 && e2.code==="conflict" ? "⚠ Un collègue vient de réserver ce créneau : "+e2.clash.map(r => resaLabel(r)+" · "+r.objet).join(" ; ")+". Choisissez un autre horaire." : "La réservation n'a pas pu être enregistrée. Vérifiez votre connexion et réessayez."); }
     finally { $("room-save").disabled = false; }
   });
   $("room-del").onclick = async () => {
@@ -2915,7 +2956,7 @@ window.QEO_PAL = (() => {
     if (!body.start || !body.end) return " · salle non réservée : indiquez un horaire";
     if (body.start < ROOM_OPEN_S || body.end > ROOM_CLOSE_S) return " · salle non réservée : elle est ouverte de 6 h 50 à 18 h 30";
     const objet = (posteOf(body.poste).name + (body.note ? " · "+body.note : "")).slice(0,80), ok = [], ko = [];
-    for (const date of dates) { const di = dayInfo(parse(date)); if (di.we || di.ferie || roomConflicts(date, body.start, body.end).length) ko.push(date); else { await putResa(null, { by: S.me, date, start: body.start, end: body.end, objet, at: Date.now() }); ok.push(date); } }
+    for (const date of dates) { const di = dayInfo(parse(date)); if (di.we || di.ferie || roomConflicts(date, body.start, body.end).length) ko.push(date); else { const d = { by: S.me, date, start: body.start, end: body.end, objet, at: Date.now() }; if (Array.isArray(body.with) && body.with.length) d.with = body.with.slice(0,6); try { await putResa(null, d); ok.push(date); } catch(e) { if (e.code==="conflict") ko.push(date); else throw e; } } }
     return ko.length ? " · salle non disponible le "+ko.map(d => { const x = parse(d); return x.getDate()+" "+MON[x.getMonth()]; }).join(", ") : ok.length ? " · salle réservée" : "";
   }
 

@@ -204,6 +204,14 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 .rm-up-item .mine-tag{font-size:10.5px;font-weight:800;color:var(--p-reunion);border:1px solid currentColor;border-radius:99px;padding:1px 7px}
 .rm-empty{color:var(--muted);font-weight:700;font-size:13px;margin:0}
 .rm-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.rm-nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.rm-nav .rn-btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;height:40px;min-width:40px;padding:0 14px;font-weight:800;font-size:14px;color:var(--ink)}
+.rm-nav .rn-btn:hover{border-color:var(--accent);color:var(--accent)}
+.rm-nav .rn-next{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.rm-nav .rn-next:hover{color:var(--accent-ink);filter:brightness(1.08)}
+.rm-nav .rn-lab{font-weight:800;font-size:14px;padding:0 6px;white-space:nowrap}
+.rm-nav .rn-today{border:0;background:transparent;color:var(--accent);font-weight:800;font-size:13px;text-decoration:underline;padding:6px}
+@media (max-width:700px){.rm-nav{width:100%;justify-content:space-between}.rm-nav .rn-lab{flex:1;text-align:center;font-size:13px}.rm-nav .rn-today{width:100%;text-align:center}}
 .rm-more{margin-top:10px;width:100%;justify-content:center;font-size:13px}
 .rm-hint{margin:0;font-size:12.5px;color:var(--muted);font-weight:700}
 .rm-mwrap{padding:12px}
@@ -2723,7 +2731,7 @@ window.QEO_PAL = (() => {
     const span = ROOM_CLOSE - ROOM_OPEN, wrap = el("div","rm");
     // ----- colonne principale : jours, puis frise du jour choisi
     const main = el("section","rm-main");
-    const top = el("div","rm-top"); top.append(roomSeg()); main.append(top);
+    const top = el("div","rm-top"); top.append(roomSeg(), roomNav(mon)); main.append(top);
     const days = el("div","rm-days"); days.style.setProperty("--n", n);
     ds.forEach(d => {
       const k = iso(d), inf = dayInfo(d), list = resaOf(k);
@@ -2773,6 +2781,22 @@ window.QEO_PAL = (() => {
     return wrap;
   }
   // Sélecteur de période de la page Salle
+  // Navigation dans la page Salle : semaine (ou mois) précédente / suivante, retour à aujourd'hui
+  function roomNav(ref){
+    const month = S.roomMode==="month", nav = el("div","rm-nav"), now = new Date();
+    const cur = month ? ref.getFullYear()===now.getFullYear() && ref.getMonth()===now.getMonth() : iso(monday(ref))===iso(monday(now));
+    const mk = (cls, txt, lab, fn) => { const b = el("button", cls, txt); b.type = "button"; b.setAttribute("aria-label", lab); b.onclick = fn; return b; };
+    let label;
+    if (month) label = cap(MON_L[ref.getMonth()])+" "+ref.getFullYear();
+    else { const m = monday(ref), f = addDays(m, S.weekend ? 6 : 4); label = "Semaine "+isoWeek(m)+" · "+m.getDate()+(m.getMonth()!==f.getMonth() ? " "+MON[m.getMonth()] : "")+" – "+f.getDate()+" "+MON[f.getMonth()]; }
+    nav.append(
+      mk("rn-btn", "‹", month ? "Mois précédent" : "Semaine précédente", () => step(-1)),
+      el("span","rn-lab",label),
+      mk("rn-btn rn-next", month ? "Mois suivant ›" : "Semaine suivante ›", month ? "Mois suivant" : "Semaine suivante", () => step(1))
+    );
+    if (!cur) nav.append(mk("rn-today", month ? "Ce mois-ci" : "Cette semaine", "Revenir à aujourd'hui", () => { S.anchor = new Date(); S.roomDay = iso(new Date()); subscribe(); }));
+    return nav;
+  }
   function roomSeg(){
     const g = el("div","seg rm-seg"); g.setAttribute("role","group"); g.setAttribute("aria-label","Période affichée");
     [["week","Semaine"],["month","Mois"],["year","Année"]].forEach(([k,l]) => {
@@ -2848,7 +2872,7 @@ window.QEO_PAL = (() => {
   function roomMonthView(a, from, to){
     const n = S.weekend ? 7 : 5, todayK = iso(new Date()), can = !!S.me && !S.readOnly, mo = a.getMonth();
     const wrap = el("div","rm"), main = el("section","rm-main");
-    const top = el("div","rm-top"); top.append(roomSeg());
+    const top = el("div","rm-top"); top.append(roomSeg(), roomNav(a));
     if (can) { const nb = el("button","btn primary round","+ Réserver la salle"); nb.type = "button"; nb.id = "room-new"; nb.onclick = () => openResa({ date: todayK >= iso(from) && todayK <= iso(to) ? todayK : iso(new Date(a.getFullYear(), mo, 1)) }); top.append(nb); }
     main.append(top);
     const grid = el("div","rm-month"); grid.style.setProperty("--n", n);

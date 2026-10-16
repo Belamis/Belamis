@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'IA dans ma classe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+  :root{
+    --page:#dfe7e6; --page-ink:#33484c;
+    --lagon:#0d2c34; --lagon-2:#123b45; --lagon-3:#1b4f5b;
+    --sable:#f4f1ea; --sable-dim:#c9d6d4; --muted:#93aeb1;
+    --corail:#ff6b4a; --corail-ink:#1a0d08;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --page:#071a1f; --page-ink:#93aeb1; }
+  }
+  :root[data-theme="dark"]{ --page:#071a1f; --page-ink:#93aeb1; }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--page);color:var(--page-ink)}
+  body{font-family:"Figtree",system-ui,sans-serif;min-height:100dvh;display:grid;place-items:center;padding:32px 16px}
+
+  .wrap{width:min(100%,880px);container-type:inline-size}
+  .poster{
+    position:relative;overflow:hidden;
+    aspect-ratio:297/420;width:100%;
+    background:var(--lagon);color:var(--sable);
+    border-radius:clamp(6px,1cqw,12px);
+    box-shadow:0 30px 80px -30px rgb(7 26 31 / .55);
+    display:grid;grid-template-rows:auto auto 1fr auto auto;
+    padding:5.4cqw 6.4cqw 0;
+  }
+  /* courbes de lagon en fond */
+  .poster::before{
+    content:"";position:absolute;inset:auto -20cqw -30cqw auto;width:90cqw;height:90cqw;border-radius:50%;
+    background:radial-gradient(circle at 40% 40%, var(--lagon-3), transparent 62%);opacity:.55;pointer-events:none;
+  }
+
+  .top{display:flex;justify-content:space-between;align-items:center;font-size:1.55cqw;font-weight:600;letter-spacing:.02em;color:var(--sable-dim);position:relative}
+  .top .mark{display:flex;align-items:center;gap:1.2cqw}
+  .top .mark i{font-size:2.6cqw;color:var(--corail)}
+
+  .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:4cqw;margin-top:4.4cqw;position:relative;align-items:end}
+  .tag{display:inline-block;background:var(--corail);color:var(--corail-ink);font-weight:700;font-size:1.7cqw;letter-spacing:.14em;text-transform:uppercase;padding:1cqw 2cqw;border-radius:999px}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:10cqw;line-height:.92;letter-spacing:-.035em;margin-top:3cqw}
+  h1 .ap{margin:0 .04em 0 .02em}
+  h1 em{font-style:normal;color:var(--corail)}
+  .lede{font-size:2.55cqw;line-height:1.4;color:var(--sable-dim);margin-top:3.6cqw;max-width:42cqw}
+  .lede strong{color:var(--sable);font-weight:600}
+  .photo{position:relative;border-radius:2cqw;overflow:hidden;aspect-ratio:464/600;margin-bottom:.6cqw}
+  .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+
+  .learn{margin-top:5cqw;position:relative}
+  h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:4cqw;letter-spacing:-.025em;line-height:1}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:2.8cqw 4cqw;margin-top:3.2cqw}
+  .item{display:grid;grid-template-columns:auto 1fr;gap:2cqw;align-items:start}
+  .ico{width:6.4cqw;height:6.4cqw;border-radius:1.6cqw;background:var(--lagon-2);border:1px solid var(--lagon-3);display:grid;place-items:center}
+  .ico i{font-size:3.4cqw;color:var(--corail)}
+  .item h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:2.55cqw;letter-spacing:-.01em;line-height:1.15}
+  .item p{font-size:1.95cqw;line-height:1.42;color:var(--sable-dim);margin-top:.7cqw}
+
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:4cqw;margin-top:4cqw;padding-top:3.2cqw;border-top:1px solid var(--lagon-3);position:relative;align-self:start;padding-bottom:3.6cqw}
+  .fact b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:2.4cqw;font-weight:700;margin-bottom:.8cqw}
+  .fact span{font-size:1.95cqw;line-height:1.42;color:var(--sable-dim)}
+
+  .cta{
+    position:relative;margin:0 -6.4cqw;background:var(--sable);color:var(--lagon);
+    padding:3.6cqw 6.4cqw;display:grid;grid-template-columns:auto 1fr;gap:4cqw;align-items:center
+  }
+  .cta .btn{display:inline-flex;align-items:center;gap:1.6cqw;background:var(--corail);color:var(--corail-ink);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:3cqw;letter-spacing:-.02em;padding:2cqw 3.2cqw;border-radius:999px;white-space:nowrap}
+  .cta .btn i{font-size:3.2cqw}
+  .fields{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:2.6cqw}
+  .field{white-space:nowrap;font-size:1.5cqw;font-weight:600;letter-spacing:.04em;color:#45625f}
+  .field .line{display:block;border-bottom:2px solid var(--lagon);height:4.2cqw;margin-top:.4cqw}
+
+  .foot{margin:0 -6.4cqw;background:var(--lagon-2);padding:2.4cqw 6.4cqw;display:flex;justify-content:space-between;align-items:center;font-size:1.6cqw;color:var(--muted);gap:3cqw}
+  .foot strong{color:var(--sable);font-weight:600}
+
+  @media (max-width:560px){ body{padding:16px} }
+  @media print{
+    @page{size:A3 portrait;margin:0}
+    html,body{background:#fff;padding:0;display:block}
+    .wrap{width:297mm}
+    .poster{border-radius:0;box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <article class="poster" aria-label="Affiche : appel à volontaires, formation L'IA dans ma classe">
+    <header class="top">
+      <span class="mark"><i class="ph ph-graduation-cap" aria-hidden="true"></i>Circonscription de Koungou Nord</span>
+      <span>Académie de Mayotte</span>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="tag">Appel à volontaires</span>
+        <h1>L<span class="ap">’</span>IA dans<br>ma <em>classe.</em></h1>
+        <p class="lede"><strong>Une formation pour les enseignants volontaires</strong> : des usages concrets, responsables et adaptés à nos élèves.</p>
+      </div>
+      <figure class="photo"><img src="photo.jpg" alt="Un enseignant accompagne trois élèves qui travaillent ensemble sur une tablette en classe."></figure>
+    </section>
+
+    <section class="learn">
+      <h2>Ce que vous allez apprendre</h2>
+      <div class="grid">
+        <div class="item">
+          <span class="ico"><i class="ph ph-lightning" aria-hidden="true"></i></span>
+          <div><h3>Préparer plus vite</h3><p>Séquences, différenciation et supports adaptés aux élèves allophones.</p></div>
+        </div>
+        <div class="item">
+          <span class="ico"><i class="ph ph-music-notes" aria-hidden="true"></i></span>
+          <div><h3>Créer avec les élèves</h3><p>De l'écriture à la chanson, comme l'hymne d'école mis en musique avec l'IA.</p></div>
+        </div>
+        <div class="item">
+          <span class="ico"><i class="ph ph-chat-circle-text" aria-hidden="true"></i></span>
+          <div><h3>Faire progresser le français</h3><p>Oral, lecture, vocabulaire : des activités prêtes pour la classe.</p></div>
+        </div>
+        <div class="item">
+          <span class="ico"><i class="ph ph-shield-check" aria-hidden="true"></i></span>
+          <div><h3>Garder un usage éthique</h3><p>Pas de compte élève, données protégées, esprit critique développé.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts">
+      <div class="fact"><b>Pour qui ?</b><span>Enseignants du 1<sup>er</sup> degré, cycles 1 à 3. Débutants bienvenus, aucun prérequis technique.</span></div>
+      <div class="fact"><b>Comment ?</b><span>Ateliers pratiques en petits groupes. Venez avec votre ordinateur ou votre téléphone.</span></div>
+    </section>
+
+    <section class="cta">
+      <span class="btn"><i class="ph ph-hand-waving" aria-hidden="true"></i>Je me porte volontaire</span>
+      <div class="fields">
+        <div class="field">DATE<span class="line"></span></div>
+        <div class="field">LIEU<span class="line"></span></div>
+        <div class="field">INSCRIPTION AVANT LE<span class="line"></span></div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span><strong>L'IA est un outil.</strong> La pédagogie reste la vôtre.</span>
+      <span>Contact : ____________________</span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

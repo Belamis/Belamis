@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'IA dans ma classe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Allura&family=Oswald:wght@300;600&family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --page:#d9dde3; --nuit:#07121c; --blanc:#f3efe6; --or:#ffd21f;
+  }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --page:#05090e; } }
+  :root[data-theme="dark"]{ --page:#05090e; }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--page)}
+  body{min-height:100dvh;display:grid;place-items:center;padding:32px 16px;font-family:"Archivo",sans-serif}
+  .wrap{width:min(100%,860px);container-type:inline-size}
+
+  .poster{
+    position:relative;overflow:hidden;aspect-ratio:297/420;width:100%;
+    background:var(--nuit) url("bg.jpg") center 30%/cover no-repeat;color:var(--blanc);
+    box-shadow:0 30px 80px -30px rgb(5 9 14 / .7);
+  }
+  /* assombrissement cinéma : haut pour les noms, bas pour le titre */
+  .poster::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(180deg, rgb(7 18 28 / .72) 0%, rgb(7 18 28 / .15) 22%, rgb(7 18 28 / 0) 40%, rgb(7 18 28 / .55) 58%, rgb(7 18 28 / .94) 76%, rgb(7 18 28 / .98) 100%);}
+  /* grain argentique */
+  .poster::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");}
+  .layer{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;padding:7cqw 8.6cqw 6cqw}
+
+  .serif{font-family:"Cormorant",serif;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+  .names{display:grid;grid-template-columns:1fr 1fr;text-align:center;font-size:2.6cqw;white-space:nowrap}
+
+  .laurels{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2cqw;margin:4cqw -3cqw 0}
+  .laurel{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.6cqw}
+  .laurel svg{width:6.4cqw;height:10cqw;color:var(--blanc)}
+  .laurel p{text-align:center;font-size:1.5cqw;line-height:1.3;letter-spacing:.06em;text-transform:uppercase}
+  .laurel b{display:block;font-weight:700}
+
+  .bottom{margin-top:auto;display:flex;flex-direction:column;align-items:flex-end;text-align:right}
+  .by{font-size:2.5cqw}
+  h1{font-family:"Allura",cursive;font-weight:400;color:var(--or);line-height:.82;margin-top:.6cqw;
+     font-size:15.6cqw;letter-spacing:0;white-space:nowrap;padding-bottom:1.2cqw;text-shadow:0 .4cqw 3cqw rgb(0 0 0 / .35)}
+  h1 > span{display:block}
+  h1 .ap{font-family:"Cormorant",serif;font-style:italic;font-size:.7em;font-weight:600;vertical-align:.18em;margin:0 .1em 0 .12em}
+  h1 .l1{margin-right:17cqw}
+  .tagline{font-size:2.15cqw;margin-top:1.4cqw;letter-spacing:.12em;white-space:nowrap}
+
+  .credits{margin-top:4cqw;text-align:center;align-self:stretch;font-family:"Oswald",sans-serif;font-weight:300;
+    text-transform:uppercase;font-size:1.72cqw;line-height:1.32;letter-spacing:-.005em;color:#e6e2d8;text-wrap:balance}
+  .credits b{font-weight:600;color:var(--blanc)}
+
+  .foot{margin-top:3.4cqw;align-self:stretch;display:flex;justify-content:space-between;align-items:center}
+  .cta{display:flex;align-items:center;gap:1.6cqw;font-family:"Archivo",sans-serif;font-size:1.9cqw;line-height:1.15;text-transform:uppercase;letter-spacing:.04em}
+  .cta .sq{width:4.4cqw;height:4.4cqw;border:.35cqw solid var(--blanc);display:grid;place-items:center;font-weight:700;font-size:2.4cqw}
+  .cta b{display:block;font-weight:700}
+  .date{font-size:2.6cqw;letter-spacing:.14em}
+  .date .blank{display:inline-block;width:15cqw;border-bottom:.25cqw solid var(--blanc);margin-left:.8cqw;transform:translateY(-.6cqw)}
+
+  @media print{
+    @page{size:A3 portrait;margin:0}
+    html,body{background:#fff;padding:0;display:block}
+    .wrap{width:297mm}
+    .poster{box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <article class="poster" aria-label="Affiche style cinéma : appel à volontaires, formation L'IA dans ma classe">
+    <div class="layer">
+      <header class="names serif"><span>Koungou Nord</span><span>Académie de Mayotte</span></header>
+
+      <section class="laurels" aria-label="En bref">
+        <div class="laurel"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M9.246 6.611c-.213 1.642 1.104 3.166 1.104 3.166s1.663-1.138 1.876-2.78c.213-1.643-1.104-3.167-1.104-3.167S9.46 4.97 9.246 6.611ZM7.683 12.13c.696 1.503 2.624 2.093 2.624 2.093s.8-1.847.104-3.35s-2.624-2.094-2.624-2.094s-.8 1.848-.104 3.351Zm.821 5.285c1.328.993 3.306.599 3.306.599s-.176-2.005-1.504-2.998S7 14.417 7 14.417s.176 2.005 1.504 2.998Zm3.609 4.298c1.505.698 3.359-.095 3.359-.095s-.587-1.925-2.092-2.624c-1.505-.698-3.358.096-3.358.096s.586 1.925 2.091 2.623Zm1.668-18.745c-1.21 1.133-1.164 3.144-1.164 3.144s2.01.176 3.22-.957s1.164-3.145 1.164-3.145s-2.01-.175-3.22.958Z"/></svg><p><b>Appel à<br>volontaires</b>Enseignants du 1<sup>er</sup> degré</p><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M16.756 6.611c.213 1.642-1.104 3.166-1.104 3.166s-1.663-1.138-1.877-2.78C13.562 5.353 14.88 3.83 14.88 3.83s1.663 1.139 1.877 2.781Zm1.561 5.519c-.696 1.503-2.624 2.093-2.624 2.093s-.8-1.847-.104-3.35s2.625-2.094 2.625-2.094s.8 1.848.103 3.351Zm-.82 5.285c-1.328.993-3.306.599-3.306.599s.176-2.005 1.504-2.998s3.306-.599 3.306-.599s-.176 2.005-1.504 2.998Zm-3.609 4.298c-1.505.698-3.359-.095-3.359-.095s.587-1.925 2.092-2.624c1.505-.698 3.358.096 3.358.096s-.586 1.925-2.091 2.623ZM12.22 2.968c1.21 1.133 1.164 3.144 1.164 3.144s-2.01.176-3.22-.957S9 2.01 9 2.01s2.01-.175 3.22.958Z"/></svg></div>
+        <div class="laurel"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M9.246 6.611c-.213 1.642 1.104 3.166 1.104 3.166s1.663-1.138 1.876-2.78c.213-1.643-1.104-3.167-1.104-3.167S9.46 4.97 9.246 6.611ZM7.683 12.13c.696 1.503 2.624 2.093 2.624 2.093s.8-1.847.104-3.35s-2.624-2.094-2.624-2.094s-.8 1.848-.104 3.351Zm.821 5.285c1.328.993 3.306.599 3.306.599s-.176-2.005-1.504-2.998S7 14.417 7 14.417s.176 2.005 1.504 2.998Zm3.609 4.298c1.505.698 3.359-.095 3.359-.095s-.587-1.925-2.092-2.624c-1.505-.698-3.358.096-3.358.096s.586 1.925 2.091 2.623Zm1.668-18.745c-1.21 1.133-1.164 3.144-1.164 3.144s2.01.176 3.22-.957s1.164-3.145 1.164-3.145s-2.01-.175-3.22.958Z"/></svg><p><b>Ateliers<br>pratiques</b>En petits groupes</p><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M16.756 6.611c.213 1.642-1.104 3.166-1.104 3.166s-1.663-1.138-1.877-2.78C13.562 5.353 14.88 3.83 14.88 3.83s1.663 1.139 1.877 2.781Zm1.561 5.519c-.696 1.503-2.624 2.093-2.624 2.093s-.8-1.847-.104-3.35s2.625-2.094 2.625-2.094s.8 1.848.103 3.351Zm-.82 5.285c-1.328.993-3.306.599-3.306.599s.176-2.005 1.504-2.998s3.306-.599 3.306-.599s-.176 2.005-1.504 2.998Zm-3.609 4.298c-1.505.698-3.359-.095-3.359-.095s.587-1.925 2.092-2.624c1.505-.698 3.358.096 3.358.096s-.586 1.925-2.091 2.623ZM12.22 2.968c1.21 1.133 1.164 3.144 1.164 3.144s-2.01.176-3.22-.957S9 2.01 9 2.01s2.01-.175 3.22.958Z"/></svg></div>
+        <div class="laurel"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M9.246 6.611c-.213 1.642 1.104 3.166 1.104 3.166s1.663-1.138 1.876-2.78c.213-1.643-1.104-3.167-1.104-3.167S9.46 4.97 9.246 6.611ZM7.683 12.13c.696 1.503 2.624 2.093 2.624 2.093s.8-1.847.104-3.35s-2.624-2.094-2.624-2.094s-.8 1.848-.104 3.351Zm.821 5.285c1.328.993 3.306.599 3.306.599s-.176-2.005-1.504-2.998S7 14.417 7 14.417s.176 2.005 1.504 2.998Zm3.609 4.298c1.505.698 3.359-.095 3.359-.095s-.587-1.925-2.092-2.624c-1.505-.698-3.358.096-3.358.096s.586 1.925 2.091 2.623Zm1.668-18.745c-1.21 1.133-1.164 3.144-1.164 3.144s2.01.176 3.22-.957s1.164-3.145 1.164-3.145s-2.01-.175-3.22.958Z"/></svg><p><b>Usage<br>éthique</b>Sans compte élève</p><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M16.756 6.611c.213 1.642-1.104 3.166-1.104 3.166s-1.663-1.138-1.877-2.78C13.562 5.353 14.88 3.83 14.88 3.83s1.663 1.139 1.877 2.781Zm1.561 5.519c-.696 1.503-2.624 2.093-2.624 2.093s-.8-1.847-.104-3.35s2.625-2.094 2.625-2.094s.8 1.848.103 3.351Zm-.82 5.285c-1.328.993-3.306.599-3.306.599s.176-2.005 1.504-2.998s3.306-.599 3.306-.599s-.176 2.005-1.504 2.998Zm-3.609 4.298c-1.505.698-3.359-.095-3.359-.095s.587-1.925 2.092-2.624c1.505-.698 3.358.096 3.358.096s-.586 1.925-2.091 2.623ZM12.22 2.968c1.21 1.133 1.164 3.144 1.164 3.144s-2.01.176-3.22-.957S9 2.01 9 2.01s2.01-.175 3.22.958Z"/></svg></div>
+      </section>
+
+      <section class="bottom">
+        <p class="by serif">Une formation de la circonscription</p>
+        <h1><span class="l1">L<span class="ap">’</span>IA dans</span><span>ma classe</span></h1>
+        <p class="tagline serif">Quand la pédagogie rencontre l’intelligence artificielle</p>
+
+        <p class="credits">
+          <b>La circonscription de Koungou Nord</b> présente <b>L’IA dans ma classe</b> avec <b>les enseignants volontaires des cycles 1 à 3</b>
+          au programme <b>préparer ses séquences</b> plus vite, <b>différencier</b> pour les élèves allophones,
+          <b>créer avec les élèves</b> de l’écriture à la chanson, <b>faire progresser le français</b> à l’oral et en lecture,
+          <b>éthique et protection des données</b> format <b>ateliers pratiques</b> matériel <b>votre ordinateur ou téléphone</b>
+          prérequis <b>aucun, débutants bienvenus</b>
+        </p>
+
+        <footer class="foot">
+          <div class="cta"><span class="sq" aria-hidden="true">IA</span><span><b>Je me porte</b>volontaire</span></div>
+          <p class="date serif">Inscriptions avant le<span class="blank"></span></p>
+        </footer>
+      </section>
+    </div>
+  </article>
+</main>
+</body>
+</html>

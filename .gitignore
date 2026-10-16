@@ -10,3 +10,6 @@
 *.apk
 *.aab
 *.keystore
+
+__pycache__/
+*.pyc

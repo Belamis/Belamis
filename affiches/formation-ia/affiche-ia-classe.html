@@ -7,7 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <style>
   :root{
     --page:#dfe7e6; --page-ink:#33484c;
@@ -42,7 +41,7 @@
 
   .top{display:flex;justify-content:space-between;align-items:center;font-size:1.55cqw;font-weight:600;letter-spacing:.02em;color:var(--sable-dim);position:relative}
   .top .mark{display:flex;align-items:center;gap:1.2cqw}
-  .top .mark i{font-size:2.6cqw;color:var(--corail)}
+  .top .mark .i{width:2.6cqw;height:2.6cqw;font-size:2.6cqw;color:var(--corail)}
 
   .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:4cqw;margin-top:4.4cqw;position:relative;align-items:end}
   .tag{display:inline-block;background:var(--corail);color:var(--corail-ink);font-weight:700;font-size:1.7cqw;letter-spacing:.14em;text-transform:uppercase;padding:1cqw 2cqw;border-radius:999px}
@@ -59,7 +58,7 @@
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:2.8cqw 4cqw;margin-top:3.2cqw}
   .item{display:grid;grid-template-columns:auto 1fr;gap:2cqw;align-items:start}
   .ico{width:6.4cqw;height:6.4cqw;border-radius:1.6cqw;background:var(--lagon-2);border:1px solid var(--lagon-3);display:grid;place-items:center}
-  .ico i{font-size:3.4cqw;color:var(--corail)}
+  .ico .i{width:3.4cqw;height:3.4cqw;font-size:3.4cqw;color:var(--corail)}
   .item h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:2.55cqw;letter-spacing:-.01em;line-height:1.15}
   .item p{font-size:1.95cqw;line-height:1.42;color:var(--sable-dim);margin-top:.7cqw}
 
@@ -72,7 +71,7 @@
     padding:3.6cqw 6.4cqw;display:grid;grid-template-columns:auto 1fr;gap:4cqw;align-items:center
   }
   .cta .btn{display:inline-flex;align-items:center;gap:1.6cqw;background:var(--corail);color:var(--corail-ink);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:3cqw;letter-spacing:-.02em;padding:2cqw 3.2cqw;border-radius:999px;white-space:nowrap}
-  .cta .btn i{font-size:3.2cqw}
+  .cta .btn .i{width:3.2cqw;height:3.2cqw;font-size:3.2cqw}
   .fields{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:2.6cqw}
   .field{white-space:nowrap;font-size:1.5cqw;font-weight:600;letter-spacing:.04em;color:#45625f}
   .field .line{display:block;border-bottom:2px solid var(--lagon);height:4.2cqw;margin-top:.4cqw}
@@ -93,7 +92,7 @@
 <main class="wrap">
   <article class="poster" aria-label="Affiche : appel à volontaires, formation L'IA dans ma classe">
     <header class="top">
-      <span class="mark"><i class="ph ph-graduation-cap" aria-hidden="true"></i>Circonscription de Koungou Nord</span>
+      <span class="mark"><svg class="i" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"/></svg>Circonscription de Koungou Nord</span>
       <span>Académie de Mayotte</span>
     </header>
 
@@ -110,19 +109,19 @@
       <h2>Ce que vous allez apprendre</h2>
       <div class="grid">
         <div class="item">
-          <span class="ico"><i class="ph ph-lightning" aria-hidden="true"></i></span>
+          <span class="ico"><svg class="i" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg></span>
           <div><h3>Préparer plus vite</h3><p>Séquences, différenciation et supports adaptés aux élèves allophones.</p></div>
         </div>
         <div class="item">
-          <span class="ico"><i class="ph ph-music-notes" aria-hidden="true"></i></span>
+          <span class="ico"><svg class="i" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M212.92,17.69a8,8,0,0,0-6.86-1.45l-128,32A8,8,0,0,0,72,56V166.08A36,36,0,1,0,88,196V110.25l112-28v51.83A36,36,0,1,0,216,164V24A8,8,0,0,0,212.92,17.69ZM52,216a20,20,0,1,1,20-20A20,20,0,0,1,52,216ZM88,93.75V62.25l112-28v31.5ZM180,184a20,20,0,1,1,20-20A20,20,0,0,1,180,184Z"/></svg></span>
           <div><h3>Créer avec les élèves</h3><p>De l'écriture à la chanson, comme l'hymne d'école mis en musique avec l'IA.</p></div>
         </div>
         <div class="item">
-          <span class="ico"><i class="ph ph-chat-circle-text" aria-hidden="true"></i></span>
+          <span class="ico"><svg class="i" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg></span>
           <div><h3>Faire progresser le français</h3><p>Oral, lecture, vocabulaire : des activités prêtes pour la classe.</p></div>
         </div>
         <div class="item">
-          <span class="ico"><i class="ph ph-shield-check" aria-hidden="true"></i></span>
+          <span class="ico"><svg class="i" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg></span>
           <div><h3>Garder un usage éthique</h3><p>Pas de compte élève, données protégées, esprit critique développé.</p></div>
         </div>
       </div>
@@ -134,7 +133,7 @@
     </section>
 
     <section class="cta">
-      <span class="btn"><i class="ph ph-hand-waving" aria-hidden="true"></i>Je me porte volontaire</span>
+      <span class="btn"><svg class="i" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M220.17,100,202.86,70a28,28,0,0,0-38.24-10.25,27.69,27.69,0,0,0-9,8.34L138.2,38a28,28,0,0,0-48.48,0A28,28,0,0,0,48.15,74l1.59,2.76A27.67,27.67,0,0,0,38,80.41a28,28,0,0,0-10.24,38.25l40,69.32a87.47,87.47,0,0,0,53.43,41,88.56,88.56,0,0,0,22.92,3,88,88,0,0,0,76.06-132Zm-6.66,62.64A72,72,0,0,1,81.62,180l-40-69.32a12,12,0,0,1,20.78-12L81.63,132a8,8,0,1,0,13.85-8L62,66A12,12,0,1,1,82.78,54L114,108a8,8,0,1,0,13.85-8L103.57,58h0a12,12,0,1,1,20.78-12l33.42,57.9a48,48,0,0,0-5.54,60.6,8,8,0,0,0,13.24-9A32,32,0,0,1,172.78,112a8,8,0,0,0,2.13-10.4L168.23,90A12,12,0,1,1,189,78l17.31,30A71.56,71.56,0,0,1,213.51,162.62ZM184.25,31.71A8,8,0,0,1,194,26a59.62,59.62,0,0,1,36.53,28l.33.57a8,8,0,1,1-13.85,8l-.33-.57a43.67,43.67,0,0,0-26.8-20.5A8,8,0,0,1,184.25,31.71ZM80.89,237a8,8,0,0,1-11.23,1.33A119.56,119.56,0,0,1,40.06,204a8,8,0,0,1,13.86-8,103.67,103.67,0,0,0,25.64,29.72A8,8,0,0,1,80.89,237Z"/></svg>Je me porte volontaire</span>
       <div class="fields">
         <div class="field">DATE<span class="line"></span></div>
         <div class="field">LIEU<span class="line"></span></div>

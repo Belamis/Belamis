@@ -1344,7 +1344,7 @@ window.QEO_PAL = (() => {
       <div class="scroller" id="view"></div>
       <div class="legend" id="legend"></div>
     </section>
-    <div class="status"><span id="status"></span><span>Astuce : cliquez dans une case vide pour ajouter un créneau ; glissez un créneau sur un autre jour pour le déplacer (Ctrl : le copier).</span></div>
+    <div class="status"><span id="status"></span><span>Astuce : cliquez dans une case vide pour ajouter un créneau ; glissez un créneau sur un autre jour pour le recopier (Alt : le déplacer).</span></div>
   </main>
 </div>
 
@@ -1951,7 +1951,7 @@ window.QEO_PAL = (() => {
   function card(s, editable, compact){
     editable = editable && !s.linked;
     const c = el(editable?"button":"div","card"+(s.kind==="absence"?" abs":s.kind==="dispo"?" dispo":"")+(s.linked?" linked":""));
-    if (editable) { c.type = "button"; c.onclick = e => { e.stopPropagation(); openEditor({ ...s }); }; c.title = "Modifier ce créneau · glisser pour changer de jour (Ctrl : copier)"; c.dataset.id = s.id; if (!phoneMQ.matches) c.draggable = true; }
+    if (editable) { c.type = "button"; c.onclick = e => { e.stopPropagation(); openEditor({ ...s }); }; c.title = "Modifier ce créneau · glisser sur un autre jour pour le recopier (Alt : le déplacer)"; c.dataset.id = s.id; if (!phoneMQ.matches) c.draggable = true; }
     if (s.kind==="absence") {
       c.append(el("span","p",absLabel(s.absence)));
       c.append(el("span","h", s.start && s.end ? s.start+" – "+s.end : "Journée"));
@@ -2067,8 +2067,8 @@ window.QEO_PAL = (() => {
     return t;
   }
 
-  // Glisser-déposer : un créneau change de jour en gardant ses horaires et ses informations.
-  // Avec Ctrl (ou Alt, ou Cmd sur Mac) enfoncé, il est copié au lieu d'être déplacé.
+  // Glisser-déposer : le créneau est recopié sur le jour choisi (mêmes horaires et informations).
+  // Avec la touche Alt enfoncée (Option sur Mac), il est déplacé au lieu d'être copié.
   let dragS = null;
   function dndCells(){ document.querySelectorAll(".drop-ok,.drop-copy").forEach(x => x.classList.remove("drop-ok","drop-copy")); }
   document.addEventListener("dragstart", e => {
@@ -2081,18 +2081,18 @@ window.QEO_PAL = (() => {
   document.addEventListener("dragover", e => {
     if (!dragS) return; const td = e.target.closest && e.target.closest("td[data-date]");
     dndCells(); if (!td || td.dataset.uid!==dragS.uid) return;
-    const copy = e.ctrlKey || e.altKey || e.metaKey; if (!copy && td.dataset.date===dragS.date) return;
+    const copy = !e.altKey; if (td.dataset.date===dragS.date) return;
     e.preventDefault(); e.dataTransfer.dropEffect = copy ? "copy" : "move"; td.classList.add(copy ? "drop-copy" : "drop-ok");
   });
   document.addEventListener("drop", async e => {
     if (!dragS) return; const td = e.target.closest && e.target.closest("td[data-date]");
     if (!td || td.dataset.uid!==dragS.uid) return; e.preventDefault();
-    const s = dragS, k = td.dataset.date, copy = e.ctrlKey || e.altKey || e.metaKey; dragS = null; dndCells();
-    if (!copy && k===s.date) return;
+    const s = dragS, k = td.dataset.date, copy = !e.altKey; dragS = null; dndCells();
+    if (k===s.date) return;
     const { id, linked, ...rest } = s, data = { ...rest, date: k, updatedBy: S.me, updatedAt: Date.now() };
     const inf = dayInfo(parse(k)), note = inf.off ? " (attention : "+(inf.ferie ? "jour férié" : "vacances")+")" : "", lab = cap(DOW_L[dowIdx(parse(k))])+" "+parse(k).getDate()+" "+MON[parse(k).getMonth()];
     try {
-      if (copy) { await putShift(null, data); sfx("success"); toast("Créneau copié sur "+lab.toLowerCase()+note); }
+      if (copy) { const nid = await putShift(null, data); sfx("success"); toast("Créneau recopié le "+lab.toLowerCase()+note, "Annuler", async () => { try { await deleteShiftId(s.uid, nid); toast("Copie supprimée"); } catch(err) { writeError(err); } }); }
       else { await putShift(id, data); sfx("success"); toast("Créneau déplacé au "+lab.toLowerCase()+note, "Annuler", async () => { try { await putShift(id, { ...data, date: s.date }); toast("Créneau remis à sa place"); } catch(err) { writeError(err); } }); }
     } catch(err) { writeError(err); }
   });
@@ -2433,7 +2433,7 @@ window.QEO_PAL = (() => {
   $("chat-back").onclick = () => { $("chat-body").classList.remove("in-conv"); renderChatList(); };
   $("chat").addEventListener("mousedown", e => { if (e.target.id==="chat") closeChat(); });
   $("chat-input").addEventListener("input", e => { const t = e.target; t.style.height = "auto"; t.style.height = Math.min(120, t.scrollHeight)+"px"; });
-  $("chat-input").addEventListener("keydown", e => { if (e.key==="Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); $("chat-form").requestSubmit(); } });
+  $("chat-input").addEventListener("keydown", e => { if (e.key==="Enter" && !e.altKey && !e.isComposing) { e.preventDefault(); $("chat-form").requestSubmit(); } });
   $("chat-form").addEventListener("submit", async e => {
     e.preventDefault();
     const inp = $("chat-input"), text = inp.value.trim().slice(0,1000); if (!text) return;
@@ -3377,7 +3377,7 @@ window.QEO_PAL = (() => {
   // Une absence est enregistrée en deux parties : la partie visible par l'équipe (motif « Absent »
   // pour un arrêt maladie, sans précision) et la partie privée, lisible par la seule personne concernée.
   async function putShift(id, data){
-    if (S.demo) { const ex = id && S.demoBase.find(s=>s.id===id); if (ex) { Object.keys(ex).forEach(k => { if (k!=="id") delete ex[k]; }); Object.assign(ex, data); } else S.demoBase.push({ id: id || "x"+Math.random().toString(36).slice(2), ...data }); demoToday(); render(); return; }
+    if (S.demo) { const ex = id && S.demoBase.find(s=>s.id===id); const nid = id || "x"+Math.random().toString(36).slice(2); if (ex) { Object.keys(ex).forEach(k => { if (k!=="id") delete ex[k]; }); Object.assign(ex, data); } else S.demoBase.push({ id: nid, ...data }); demoToday(); render(); return nid; }
     if (data.uid !== S.me) throw { code: "invalid_argument" };
     const ref = id ? planning(data.uid).doc(id) : planning(data.uid).doc();
     if (data.kind==="absence") {
@@ -3388,6 +3388,11 @@ window.QEO_PAL = (() => {
       await ref.set(data);
       if (id && S.prive.has(id)) await privee(data.uid).doc(id).delete();
     }
+    return ref.id;
+  }
+  async function deleteShiftId(uid, id){
+    if (S.demo) { S.demoBase = S.demoBase.filter(x => x.id!==id); demoToday(); render(); return; }
+    await planning(uid).doc(id).delete(); try { await privee(uid).doc(id).delete(); } catch(e) {}
   }
   async function removeShift(s){
     const { id, ...data } = s;

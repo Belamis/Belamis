@@ -693,10 +693,17 @@ input[type=number]{width:90px}
 .swatches label:has(input:checked){border-color:var(--ink)}
 .swatches label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
 .days{display:flex;flex-wrap:wrap;gap:6px}
+button.card[draggable="true"]{cursor:grab}
+button.card.dragging{opacity:.45;transform:scale(.97)}
+.dnd .week td[data-date]{transition:background .12s}
+.week td.drop-ok{background:color-mix(in srgb,var(--accent) 14%,var(--surface))!important;box-shadow:inset 0 0 0 2px var(--accent)}
+.week td.drop-copy{background:color-mix(in srgb,var(--st-on) 16%,var(--surface))!important;box-shadow:inset 0 0 0 2px var(--st-on)}
 .days label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:12.5px;font-weight:700;cursor:pointer}
 .days label:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
 .days label:has(input:disabled){opacity:.65;cursor:default}
 .days label.off{opacity:.5}
+.rep-quick{display:flex;gap:14px;margin-top:4px}
+.rep-quick .btn.link{font-size:13px}
 .hint{margin:6px 0 0;color:var(--muted);font-size:12px}
 .modal-f{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 22px;border-top:1px solid var(--line);flex-wrap:wrap;background:var(--surface-2)}
 .modal-f .right{display:flex;gap:8px;margin-left:auto}
@@ -1337,7 +1344,7 @@ window.QEO_PAL = (() => {
       <div class="scroller" id="view"></div>
       <div class="legend" id="legend"></div>
     </section>
-    <div class="status"><span id="status"></span><span>Astuce : cliquez dans une case vide pour ajouter un créneau.</span></div>
+    <div class="status"><span id="status"></span><span>Astuce : cliquez dans une case vide pour ajouter un créneau ; glissez un créneau sur un autre jour pour le déplacer (Ctrl : le copier).</span></div>
   </main>
 </div>
 
@@ -1369,12 +1376,30 @@ window.QEO_PAL = (() => {
             <span class="dur" id="ed-dur"></span>
           </div>
           <div class="presets" id="ed-presets">
-            <button type="button" class="preset" data-s="08:30" data-e="12:00" data-p="0">Matin</button>
-            <button type="button" class="preset" data-s="13:30" data-e="16:30" data-p="0">Après-midi</button>
-            <button type="button" class="preset" data-s="08:30" data-e="16:30" data-p="60">Journée</button>
+            <button type="button" class="preset" data-s="07:00" data-e="12:00" data-p="0">Matin</button>
+            <button type="button" class="preset" data-s="13:00" data-e="17:00" data-p="0">Après-midi</button>
+            <button type="button" class="preset" data-s="07:00" data-e="17:00" data-p="60">Journée</button>
           </div>
           <p class="hint" id="free-hint">Horaires libres. Sans horaire, le créneau vaut pour la journée.</p>
           <label class="inline" id="row-allday" hidden style="margin-top:10px;font-weight:700"><input type="checkbox" id="ed-allday"> Toute la journée</label>
+        </div>
+      </div>
+      <div class="frow" id="row-repeat">
+        <span class="lab" id="ed-rep-lab">Répéter aussi le</span>
+        <div>
+          <div class="days" id="ed-days"></div>
+          <div class="rep-quick"><button type="button" class="btn link" id="ed-allweek">Toute la semaine</button><button type="button" class="btn link" id="ed-noweek" hidden>Seulement ce jour</button></div>
+          <div class="repweeks" id="ed-repweeks">
+            <select id="ed-freq" aria-label="Répéter sur plusieurs semaines">
+              <option value="0">Cette semaine seulement</option>
+              <option value="1">Chaque semaine</option>
+              <option value="2">Toutes les 2 semaines</option>
+              <option value="A">Les semaines A</option>
+              <option value="B">Les semaines B</option>
+            </select>
+            <label id="ed-until-wrap" hidden>jusqu'au <input type="date" id="ed-until"></label>
+          </div>
+          <p class="hint" id="ed-rep-hint">Cochez d'autres jours pour y mettre la même activité, aux mêmes horaires. Les jours fériés et de vacances sont grisés, et sautés automatiquement pour les semaines suivantes.</p>
         </div>
       </div>
       <div class="frow" id="row-poste">
@@ -1427,23 +1452,6 @@ window.QEO_PAL = (() => {
         <div>
           <div class="withlist" id="ed-with" role="group" aria-label="Collègues associés au créneau"></div>
           <p class="hint">Visite en binôme ou co-animation : le créneau apparaît aussi sur la ligne des collègues choisis.</p>
-        </div>
-      </div>
-      <div class="frow" id="row-repeat">
-        <span class="lab">Répéter</span>
-        <div>
-          <div class="days" id="ed-days"></div>
-          <div class="repweeks">
-            <select id="ed-freq" aria-label="Répéter sur plusieurs semaines">
-              <option value="0">Cette semaine seulement</option>
-              <option value="1">Chaque semaine</option>
-              <option value="2">Toutes les 2 semaines</option>
-              <option value="A">Les semaines A</option>
-              <option value="B">Les semaines B</option>
-            </select>
-            <label id="ed-until-wrap" hidden>jusqu'au <input type="date" id="ed-until"></label>
-          </div>
-          <p class="hint">Les jours fériés et de vacances sont grisés, et sautés automatiquement pour les semaines suivantes.</p>
         </div>
       </div>
       </details>
@@ -1943,7 +1951,7 @@ window.QEO_PAL = (() => {
   function card(s, editable, compact){
     editable = editable && !s.linked;
     const c = el(editable?"button":"div","card"+(s.kind==="absence"?" abs":s.kind==="dispo"?" dispo":"")+(s.linked?" linked":""));
-    if (editable) { c.type = "button"; c.onclick = e => { e.stopPropagation(); openEditor({ ...s }); }; c.title = "Modifier ce créneau"; }
+    if (editable) { c.type = "button"; c.onclick = e => { e.stopPropagation(); openEditor({ ...s }); }; c.title = "Modifier ce créneau · glisser pour changer de jour (Ctrl : copier)"; c.dataset.id = s.id; if (!phoneMQ.matches) c.draggable = true; }
     if (s.kind==="absence") {
       c.append(el("span","p",absLabel(s.absence)));
       c.append(el("span","h", s.start && s.end ? s.start+" – "+s.end : "Journée"));
@@ -2039,6 +2047,7 @@ window.QEO_PAL = (() => {
           if (!list.length && uid===S.me && !inf.off && !inf.we) cell.classList.add("empty-mine");
           const b = el("button","add","+ Ajouter"); b.type="button"; b.setAttribute("aria-label","Ajouter un créneau pour "+fullName(uid)+" le "+DOW_L[i]+" "+d.getDate()); b.onclick = () => openEditor({ uid, date:k }); cell.append(b);
         }
+        td.dataset.date = k; td.dataset.uid = uid;
         td.append(cell);
       });
       const tt = tr.insertCell(); tt.className = "tot"; tt.append(el("b",null,fmtH(tot)), el("small",null,nb+" créneau"+(nb>1?"x":"")));
@@ -2058,6 +2067,35 @@ window.QEO_PAL = (() => {
     return t;
   }
 
+  // Glisser-déposer : un créneau change de jour en gardant ses horaires et ses informations.
+  // Avec Ctrl (ou Alt, ou Cmd sur Mac) enfoncé, il est copié au lieu d'être déplacé.
+  let dragS = null;
+  function dndCells(){ document.querySelectorAll(".drop-ok,.drop-copy").forEach(x => x.classList.remove("drop-ok","drop-copy")); }
+  document.addEventListener("dragstart", e => {
+    const c = e.target.closest && e.target.closest("button.card[data-id]"); if (!c) return;
+    dragS = S.shifts.find(x => x.id===c.dataset.id && !x.linked); if (!dragS) return;
+    e.dataTransfer.effectAllowed = "copyMove"; e.dataTransfer.setData("text/plain", c.dataset.id);
+    c.classList.add("dragging"); document.body.classList.add("dnd");
+  });
+  document.addEventListener("dragend", () => { dragS = null; dndCells(); document.body.classList.remove("dnd"); document.querySelectorAll(".card.dragging").forEach(x => x.classList.remove("dragging")); });
+  document.addEventListener("dragover", e => {
+    if (!dragS) return; const td = e.target.closest && e.target.closest("td[data-date]");
+    dndCells(); if (!td || td.dataset.uid!==dragS.uid) return;
+    const copy = e.ctrlKey || e.altKey || e.metaKey; if (!copy && td.dataset.date===dragS.date) return;
+    e.preventDefault(); e.dataTransfer.dropEffect = copy ? "copy" : "move"; td.classList.add(copy ? "drop-copy" : "drop-ok");
+  });
+  document.addEventListener("drop", async e => {
+    if (!dragS) return; const td = e.target.closest && e.target.closest("td[data-date]");
+    if (!td || td.dataset.uid!==dragS.uid) return; e.preventDefault();
+    const s = dragS, k = td.dataset.date, copy = e.ctrlKey || e.altKey || e.metaKey; dragS = null; dndCells();
+    if (!copy && k===s.date) return;
+    const { id, linked, ...rest } = s, data = { ...rest, date: k, updatedBy: S.me, updatedAt: Date.now() };
+    const inf = dayInfo(parse(k)), note = inf.off ? " (attention : "+(inf.ferie ? "jour férié" : "vacances")+")" : "", lab = cap(DOW_L[dowIdx(parse(k))])+" "+parse(k).getDate()+" "+MON[parse(k).getMonth()];
+    try {
+      if (copy) { await putShift(null, data); sfx("success"); toast("Créneau copié sur "+lab.toLowerCase()+note); }
+      else { await putShift(id, data); sfx("success"); toast("Créneau déplacé au "+lab.toLowerCase()+note, "Annuler", async () => { try { await putShift(id, { ...data, date: s.date }); toast("Créneau remis à sa place"); } catch(err) { writeError(err); } }); }
+    } catch(err) { writeError(err); }
+  });
   function dayView(d){
     const k = iso(d), idx = index(S.shifts), ids = rows(), isToday = k===iso(new Date());
     const wrap = el("div","day");
@@ -3177,7 +3215,6 @@ window.QEO_PAL = (() => {
     $("ed-date").textContent = longDate(d)+" "+d.getFullYear()+(inf.text ? " · "+inf.text : "");
     const dz = $("ed-days"); dz.textContent = "";
     resetWarn();
-    if (ed.id) return;
     $("ed-until").min = ed.date;
     if (!$("ed-until").value || $("ed-until").value < ed.date) { const nv = CAL.vac.find(v => v[0] > ed.date); $("ed-until").value = nv ? iso(addDays(parse(nv[0]),-1)) : iso(new Date(CAL.last[0],CAL.last[1]+1,0)); }
     const m = monday(d), n = S.weekend || dowIdx(d) > 4 ? 7 : 5;
@@ -3186,15 +3223,22 @@ window.QEO_PAL = (() => {
       const lab = el("label", xi.off ? "off" : ""); const c = el("input"); c.type = "checkbox"; c.value = k; c.id = "rep-"+i;
       if (k===ed.date) { c.checked = true; c.disabled = true; }
       lab.title = xi.text || "";
-      lab.append(c, DOW[i]+" "+x.getDate()); dz.append(lab);
+      c.onchange = syncWeekBtns; lab.append(c, DOW[i]+" "+x.getDate()); dz.append(lab);
     }
+    syncWeekBtns();
   }
+  function syncWeekBtns(){
+    const all = [...$("ed-days").querySelectorAll("input:not(:disabled)")], free = all.filter(c => !c.closest("label").classList.contains("off"));
+    $("ed-allweek").hidden = !free.length || free.every(c => c.checked); $("ed-noweek").hidden = !all.some(c => c.checked); resetWarn();
+  }
+  $("ed-allweek").onclick = () => { $("ed-days").querySelectorAll("label:not(.off) input:not(:disabled)").forEach(c => c.checked = true); syncWeekBtns(); };
+  $("ed-noweek").onclick = () => { $("ed-days").querySelectorAll("input:not(:disabled)").forEach(c => c.checked = false); syncWeekBtns(); };
   function openEditor(s){
     $("ed-salle").checked = false;
     ed = { ...s, kind: s.kind || "shift" };
     const isNew = !s.id;
     $("ed-title").textContent = isNew ? (s.uid===S.me ? "Nouveau créneau" : "Nouveau créneau pour "+fullName(s.uid)) : (s.uid===S.me ? "Modifier mon créneau" : "Modifier le créneau de "+fullName(s.uid));
-    $("row-date").hidden = !isNew; $("ed-day").value = s.date;
+    $("row-date").hidden = false; $("ed-day").value = s.date;
     fillPostes(s.poste); fillMotifs(s.absence); fillWith(s.with);
     $("ed-freq").value = "0"; $("ed-until").value = ""; $("ed-until-wrap").hidden = true;
     $("ed-more").open = !!((+s.pause||0) > 0 || (Array.isArray(s.with) && s.with.length));
@@ -3202,7 +3246,8 @@ window.QEO_PAL = (() => {
     $("ed-pause").value = s.pause || 0; $("ed-lieu").value = s.lieu || ""; $("ed-note").value = s.note || "";
     $("ed-allday").checked = s.kind==="absence" ? !s.start : true;
     closeBox("np"); closeBox("nm");
-    $("row-repeat").hidden = !isNew;
+    $("row-repeat").hidden = false; $("ed-repweeks").hidden = !isNew;
+    $("ed-rep-lab").textContent = isNew ? "Répéter aussi le" : "Copier aussi sur";
     syncDate();
     const del = $("ed-del"); del.textContent = "";
     if (!isNew) { const b = el("button","btn danger","Supprimer"); b.type="button"; b.onclick = () => { del.textContent=""; const w = el("span","confirm","Supprimer ce créneau ?"); const y = el("button","btn danger","Oui, supprimer"); y.type="button"; y.onclick = () => removeShift(s); w.append(y); del.append(w); y.focus(); }; del.append(b); }
@@ -3228,9 +3273,9 @@ window.QEO_PAL = (() => {
   function resetWarn(){ if (!ed) return; ed.forced = false; $("ed-warn").hidden = true; $("ed-save").textContent = ed.id ? "Enregistrer" : "Créer le créneau"; }
   // Dates concernées par l'enregistrement (jours cochés, éventuellement répétés sur plusieurs semaines)
   function targetDates(){
-    if (ed.id) return [ed.date];
-    const base = [...$("ed-days").querySelectorAll("input:checked")].map(c => c.value);
-    if (!base.includes(ed.date)) base.unshift(ed.date);
+    const base = [...$("ed-days").querySelectorAll("input:checked")].map(c => c.value).filter(d => d!==ed.date);
+    base.unshift(ed.date);
+    if (ed.id) return base;
     const f = $("ed-freq").value, until = $("ed-until").value;
     if (f==="0" || !until) return base;
     const out = [...base], mon0 = monday(parse(ed.date));
@@ -3318,10 +3363,10 @@ window.QEO_PAL = (() => {
     }
     const btn = $("ed-save"); btn.disabled = true;
     try {
-      if (ed.id) await putShift(ed.id, { ...body, date: ed.date });
+      if (ed.id) { await putShift(ed.id, { ...body, date: dates[0] }); for (const date of dates.slice(1)) await putShift(null, { ...body, date }); }
       else for (const date of dates) await putShift(null, { ...body, date });
       const n = dates.length, room = (!ed.id && body.kind==="shift") ? await bookFromShift(body, dates) : "";
-      closeEditor(); sfx(body.kind==="shift" && body.poste==="reunion" ? "reunion" : "success"); toast((n > 1 ? n+" créneaux enregistrés" : body.poste==="reunion" && body.kind==="shift" ? "Réunion enregistrée" : "Créneau enregistré") + room);
+      closeEditor(); sfx(body.kind==="shift" && body.poste==="reunion" ? "reunion" : "success"); toast((n > 1 ? (ed && ed.id ? "Créneau modifié et copié sur "+(n-1)+" autre"+(n>2?"s":"")+" jour"+(n>2?"s":"") : n+" créneaux enregistrés") : body.poste==="reunion" && body.kind==="shift" ? "Réunion enregistrée" : "Créneau enregistré") + room);
     } catch(err) { writeError(err); }
     finally { btn.disabled = false; }
   });

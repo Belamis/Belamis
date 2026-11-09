@@ -459,7 +459,8 @@ kbd{font:700 10.5px/1 var(--font);border:1px solid currentColor;border-radius:5p
 /* ===== Panneau ===== */
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
 .scroller{overflow-x:auto}
-.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted);padding:12px 16px;border-top:1px solid var(--line);font-weight:700}
+.legend{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;font-size:11.5px;color:var(--muted);padding:10px 16px;border-top:1px solid var(--line);font-weight:700}
+.legend .lg-t{font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:10.5px;margin-right:4px}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend .sep{flex:1}
 .dot{width:10px;height:10px;border-radius:3px;background:var(--c);flex:none;display:inline-block}
@@ -953,9 +954,9 @@ fieldset.field{border:0;margin:0;padding:0}
   body{padding-block:16px}
   .shell{height:calc(100vh - 32px)}
   .main{height:100%;min-height:0}
-  .panel{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
+  .main{overflow-y:auto;overscroll-behavior:contain}
+  .panel{flex:1 0 auto;min-height:max(440px,62vh);height:0;display:flex;flex-direction:column}
   .panel>.scroller{flex:1 1 auto;min-height:0;overflow:auto}
-  .panel>.legend{flex:none}
   .week thead th{position:sticky;top:0;z-index:3}
   .week thead th.who-h{z-index:4}
   .week tfoot th,.week tfoot td{position:sticky;bottom:0;z-index:3}
@@ -1341,8 +1342,10 @@ window.QEO_PAL = (() => {
     <section class="annonces" id="annonces" aria-label="Annonces de l'équipe"></section>
 
     <section class="panel">
-      <div class="scroller" id="view"></div>
-      <div class="legend" id="legend"></div>
+      <div class="scroller" id="scroll">
+        <div id="view"></div>
+        <div class="legend" id="legend" aria-label="Légende"></div>
+      </div>
     </section>
     <div class="status"><span id="status"></span><span>Astuce : cliquez dans une case vide pour ajouter un créneau ; glissez un créneau sur un autre jour pour le recopier (Alt : le déplacer).</span></div>
   </main>
@@ -1935,7 +1938,10 @@ window.QEO_PAL = (() => {
   }
   function renderLegend(){
     const lg = $("legend"); lg.textContent = "";
-    for (const [id,p] of S.postes){ const s = el("span"); const d = el("i","dot"); d.style.setProperty("--c",p.color); s.append(d,(ICONS[id] ? ICONS[id]+" " : "")+p.name); lg.append(s); }
+    lg.append(el("span","lg-t","Légende"));
+    // seulement les activités présentes dans la période affichée (sinon la légende devient énorme)
+    const used = new Set(S.shifts.filter(s => s.kind!=="absence" && s.kind!=="dispo" && s.poste).map(s => s.poste));
+    for (const [id,p] of S.postes){ if (!used.has(id)) continue; const s = el("span"); const d = el("i","dot"); d.style.setProperty("--c",p.color); s.append(d,(ICONS[id] ? ICONS[id]+" " : "")+p.name); lg.append(s); }
     const s = el("span"); const d = el("i","dot"); d.style.setProperty("--c","var(--absence)"); s.append(d,"Absence"); lg.append(s);
     const s2 = el("span"); const d2 = el("i","dot"); d2.style.setProperty("--c","var(--st-on)"); s2.append(d2,"Disponible"); lg.append(s2);
     lg.append(el("span","sep"));
@@ -1951,7 +1957,7 @@ window.QEO_PAL = (() => {
   function card(s, editable, compact){
     editable = editable && !s.linked;
     const c = el(editable?"button":"div","card"+(s.kind==="absence"?" abs":s.kind==="dispo"?" dispo":"")+(s.linked?" linked":""));
-    if (editable) { c.type = "button"; c.onclick = e => { e.stopPropagation(); openEditor({ ...s }); }; c.title = "Modifier ce créneau · glisser sur un autre jour pour le recopier (Alt : le déplacer)"; c.dataset.id = s.id; if (!phoneMQ.matches) c.draggable = true; }
+    if (editable) { c.type = "button"; c.onclick = e => { e.stopPropagation(); openEditor({ ...s }); }; c.title = "Modifier ce créneau · glisser sur un autre jour pour le recopier (Alt : le déplacer)"; c.dataset.id = s.id; if (!phoneMQ.matches && !touchMQ.matches) c.draggable = true; }
     if (s.kind==="absence") {
       c.append(el("span","p",absLabel(s.absence)));
       c.append(el("span","h", s.start && s.end ? s.start+" – "+s.end : "Journée"));
@@ -1978,6 +1984,7 @@ window.QEO_PAL = (() => {
   }
 
   const phoneMQ = matchMedia("(max-width:700px)");
+  const touchMQ = matchMedia("(hover: none) and (pointer: coarse)"); // tablettes : le doigt sert à faire défiler, pas à glisser
   phoneMQ.addEventListener && phoneMQ.addEventListener("change", () => { if ($("welcome").hidden) render(); });
   function agendaWeek(mon){
     const n = S.weekend ? 7 : 5, todayK = iso(new Date()), idx = index(S.shifts), ids = rows();
@@ -3720,6 +3727,19 @@ window.QEO_PAL = (() => {
     } finally { $("w-save").disabled = false; }
   });
 
+  // Deux comptes au même nom (souvent : inscription avec deux adresses) → on prévient la personne concernée
+  let doublonSeen = false;
+  function checkDoublon(){
+    const me = S.me && S.people.get(S.me); if (!me || doublonSeen) return;
+    const norm = x => String(x||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/\s+/g," ").trim();
+    const key = norm(me.firstName)+"|"+norm(me.lastName);
+    if (!norm(me.firstName) && !norm(me.lastName)) return;
+    const twin = [...S.people].some(([id,p]) => id!==S.me && norm(p.firstName)+"|"+norm(p.lastName)===key);
+    if (!twin) return;
+    doublonSeen = true;
+    banner("Un autre compte porte déjà votre nom (« "+me.firstName+" "+me.lastName+" ») : vous apparaissez en double dans le planning. Si vous avez créé deux comptes, connectez-vous avec celui que vous n'utilisez pas, puis Mon profil → « Supprimer mon compte et mes données ». Si c'est une autre personne, ignorez ce message.", "Compris", () => { $("banner").hidden = true; });
+  }
+
   // ---------- navigation ----------
   function banner(text, label, fn){ const b = $("banner"); b.textContent = ""; b.append(el("p",null,text)); if (label) { const x = el("button","btn primary",label); x.onclick = fn; b.append(x); } b.hidden = false; }
   let tt;
@@ -3923,7 +3943,7 @@ window.QEO_PAL = (() => {
     if (started) return; started = true;
     db.collection("people").onSnapshot(snap => {
       S.people = new Map(snap.docs.map(d => [d.id, d.data()]));
-      syncPrefs(); syncSubs(); if (started && !S.demo) presenceChanged();
+      syncPrefs(); syncSubs(); if (started && !S.demo) presenceChanged(); checkDoublon();
       if (!S.peopleReady && !(snap.metadata.fromCache && !S.people.has(S.me))) {
         S.peopleReady = true;
         if (S.me && !S.people.has(S.me)) { showWelcome(false); return; }

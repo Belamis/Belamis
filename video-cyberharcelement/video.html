@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Cyberharcèlement</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Outfit:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+:root{
+  --ink:#16143A; --ink-2:#221F55; --ink-3:#2E2A6B;
+  --mist:#EEF2FF; --mist-2:#DDE3FB; --soft:#B9BEE8;
+  --accent:#F97316; --accent-deep:#C2410C;
+  --kid-text:#1E1B4B; --kid-muted:#4B4F7A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--ink)}
+body{font-family:'Outfit',sans-serif;color:var(--mist)}
+.scene{position:absolute;inset:0;opacity:0;padding:90px 150px 150px;display:flex;flex-direction:column;justify-content:center}
+.dark{background:var(--ink)}
+.dark.alt{background:radial-gradient(ellipse 80% 90% at 85% 50%, var(--ink-2), var(--ink) 70%)}
+.light{background:var(--mist);color:var(--kid-text)}
+.light.alt{background:radial-gradient(ellipse 80% 90% at 85% 40%, #FFFFFF, var(--mist) 70%)}
+h1,h2,.big{font-family:'Baloo 2',sans-serif;font-weight:800;letter-spacing:-0.01em;line-height:1.02}
+h1{font-size:132px}
+h2{font-size:92px;max-width:1150px}
+p.lead{font-size:46px;line-height:1.35;max-width:1050px;color:var(--soft);margin-top:36px;font-weight:400}
+.light p.lead{color:var(--kid-muted)}
+.acc{color:var(--accent)}
+.light .acc{color:var(--accent-deep)}
+.kicker{font-size:30px;font-weight:600;color:var(--accent);margin-bottom:28px;letter-spacing:.06em;text-transform:uppercase}
+.light .kicker{color:var(--accent-deep)}
+.split{display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:80px;height:100%}
+.split.rev{grid-template-columns:.65fr 1.35fr}
+.icon-xl{font-size:420px;color:var(--accent);justify-self:center;line-height:1}
+.light .split.rev{grid-template-columns:.65fr 1.35fr}
+.icon-xl{color:var(--accent-deep)}
+/* chapter */
+.chap{align-items:flex-start}
+.chap .num{font-family:'Baloo 2';font-weight:800;font-size:300px;line-height:.8;color:var(--accent)}
+.chap h1{margin-top:20px}
+.chap p{font-size:44px;color:var(--soft);margin-top:24px}
+.light.chap p{color:var(--kid-muted)}
+/* bubbles */
+.bubbles{display:flex;flex-direction:column;gap:26px;align-items:flex-start}
+.bubble{background:var(--ink-3);color:var(--mist);font-size:44px;padding:26px 40px;border-radius:36px 36px 36px 10px;font-weight:500;display:flex;gap:22px;align-items:center}
+.bubble i{color:var(--accent);font-size:44px}
+.bubble:nth-child(2){margin-left:120px}
+.bubble:nth-child(4){margin-left:60px}
+.intro .bubble{font-size:58px;padding:32px 52px}
+.intro .bubble i{font-size:56px}
+.intro-cap{position:absolute;right:150px;top:470px;width:660px;font-family:'Baloo 2';font-weight:700;font-size:60px;line-height:1.1;text-align:right}
+.notif{position:absolute;top:190px;right:200px;width:230px;height:230px;border-radius:50%;background:var(--accent);color:var(--ink);font-family:'Baloo 2';font-weight:800;font-size:130px;display:flex;align-items:center;justify-content:center}
+/* lists */
+.list{display:grid;gap:30px;margin-top:56px}
+.list.two{grid-template-columns:1fr 1fr;column-gap:70px;row-gap:40px}
+.item{display:flex;gap:30px;align-items:flex-start;font-size:42px;line-height:1.25;font-weight:500}
+.item i{flex:none;font-size:58px;color:var(--accent);margin-top:-2px}
+.light .item i{color:var(--accent-deep)}
+.item small{display:block;font-size:32px;color:var(--soft);font-weight:400;margin-top:8px}
+.light .item small{color:var(--kid-muted)}
+/* steps kids */
+.steps{display:grid;grid-template-columns:1fr 1.15fr 1.3fr;gap:44px;margin-top:70px;align-items:end}
+.step{background:#FFFFFF;border-radius:40px;padding:50px 46px;box-shadow:0 24px 60px rgba(30,27,75,.10)}
+.step:nth-child(2){transform-origin:bottom}
+.step i{font-size:120px;color:var(--accent-deep)}
+.step .big{font-size:60px;margin-top:20px;color:var(--kid-text)}
+.step:nth-child(3){background:var(--kid-text)}
+.step:nth-child(3) .big{color:#FFFFFF}
+.step:nth-child(3) i{color:var(--accent)}
+/* 3018 */
+.hotline .big{font-size:400px;line-height:.85;color:var(--accent)}
+.hotline .row{display:flex;gap:60px;margin-top:40px;font-size:42px;color:var(--soft)}
+.hotline .row span{display:flex;align-items:center;gap:16px}
+.hotline .row i{color:var(--accent)}
+/* law card */
+.law{margin-top:60px;border-left:10px solid var(--accent);padding:10px 0 10px 44px;font-size:42px;max-width:1150px;line-height:1.35}
+/* quote kids */
+.huge{font-size:120px}
+/* chrome */
+#chrome{position:absolute;left:150px;right:150px;bottom:56px;height:40px;display:flex;align-items:center;gap:30px;font-size:24px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;z-index:5}
+#chapLabel{color:var(--soft);min-width:240px}
+#bar{flex:1;height:6px;border-radius:3px;position:relative}
+#fill{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--accent)}
+</style>
+</head>
+<body>
+
+<!-- ===== INTRO ===== -->
+<section class="scene dark intro" data-dur="9">
+  <div>
+    <div>
+      <div class="bubbles">
+        <div class="bubble a" data-d="0.4"><i class="ph-fill ph-chat-circle"></i>T'es trop nul, personne veut jouer avec toi</div>
+        <div class="bubble a" data-d="1.4"><i class="ph-fill ph-chat-circle"></i>On a tous vu ta photo</div>
+        <div class="bubble a" data-d="2.4"><i class="ph-fill ph-chat-circle"></i>Viens plus à l'école demain</div>
+        <div class="bubble a" data-d="3.4"><i class="ph-fill ph-chat-circle"></i>Tu sers à rien</div>
+      </div>
+    </div>
+  </div>
+  <div class="notif a" data-d="0.5" data-fx="pop"><span id="count">1</span></div>
+  <p class="intro-cap a" data-d="5">Ces messages, certains enfants les reçoivent <span class="acc">chaque soir.</span></p>
+</section>
+
+<section class="scene dark alt" data-dur="8">
+  <h1 class="a" data-d="0.2">Le cyber<span class="acc">harcèlement</span></h1>
+  <p class="lead a" data-d="0.9">Il ne s'arrête pas à la sortie de l'école. Il continue à la maison, dans la poche de nos enfants.</p>
+</section>
+
+<!-- ===== PARTIE 1 : PARENTS ===== -->
+<section class="scene dark chap" data-dur="5" data-chap="Partie 1 : Parents">
+  <div class="num a" data-d="0.1" data-fx="pop">1</div>
+  <h1 class="a" data-d="0.5">Pour les parents</h1>
+  <p class="a" data-d="1">Repérer, réagir, prévenir.</p>
+</section>
+
+<section class="scene dark alt" data-dur="12" data-chap="Partie 1 : Parents">
+  <div class="split">
+    <div>
+      <div class="kicker a" data-d="0.1">De quoi parle-t-on&nbsp;?</div>
+      <h2 class="a" data-d="0.3">Des attaques <span class="acc">répétées</span>, envoyées par écran.</h2>
+      <p class="lead a" data-d="1.2">Moqueries, insultes, menaces, rumeurs, photos partagées sans accord, mise à l'écart d'un groupe.</p>
+    </div>
+    <i class="ph-bold ph-device-mobile icon-xl a" data-d="0.6" data-fx="pop"></i>
+  </div>
+</section>
+
+<section class="scene dark" data-dur="11" data-chap="Partie 1 : Parents">
+  <div class="split rev">
+    <i class="ph-bold ph-game-controller icon-xl a" data-d="0.5" data-fx="pop"></i>
+    <div>
+      <h2 class="a" data-d="0.2">Ça commence <span class="acc">dès le primaire.</span></h2>
+      <p class="lead a" data-d="1">Jeux en ligne, messageries, groupes de classe créés sur le téléphone d'un parent. Les plus jeunes y sont souvent seuls.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene dark alt" data-dur="10" data-chap="Partie 1 : Parents">
+  <div class="kicker a" data-d="0.1">Bon à savoir</div>
+  <h2 class="a" data-d="0.3">Les réseaux sociaux, c'est <span class="acc">13 ans minimum.</span></h2>
+  <p class="lead a" data-d="1.1">TikTok, Snapchat, Instagram&nbsp;: la plupart l'exigent dans leurs conditions d'utilisation. Avant cet âge, votre enfant n'a rien à y faire seul.</p>
+</section>
+
+<section class="scene dark" data-dur="20" data-chap="Partie 1 : Parents">
+  <h2 class="a" data-d="0.2">Les signaux qui doivent <span class="acc">vous alerter</span></h2>
+  <div class="list two">
+    <div class="item a" data-d="1.4" data-fx="left"><i class="ph-bold ph-eye-slash"></i><div>Il cache son écran<small>ou sursaute à chaque notification</small></div></div>
+    <div class="item a" data-d="3.6" data-fx="left"><i class="ph-bold ph-backpack"></i><div>Il ne veut plus aller à l'école<small>ou trouve des excuses le matin</small></div></div>
+    <div class="item a" data-d="5.8" data-fx="left"><i class="ph-bold ph-moon-stars"></i><div>Il dort mal, a mal au ventre<small>sans raison médicale</small></div></div>
+    <div class="item a" data-d="8.0" data-fx="left"><i class="ph-bold ph-user-minus"></i><div>Il s'isole, change d'humeur<small>tristesse, colère, repli</small></div></div>
+    <div class="item a" data-d="10.2" data-fx="left"><i class="ph-bold ph-prohibit"></i><div>Il abandonne un jeu qu'il aimait<small>ou supprime une application</small></div></div>
+    <div class="item a" data-d="12.4" data-fx="left"><i class="ph-bold ph-chart-line-down"></i><div>Ses notes baissent<small>il a du mal à se concentrer</small></div></div>
+  </div>
+</section>
+
+<section class="scene dark alt" data-dur="24" data-chap="Partie 1 : Parents">
+  <h2 class="a" data-d="0.2">Si votre enfant en est <span class="acc">victime</span></h2>
+  <div class="list">
+    <div class="item a" data-d="1.5" data-fx="left"><i class="ph-bold ph-ear"></i><div>Écoutez-le, sans juger ni gronder.<small>Dites-lui qu'il a eu raison de parler et que ce n'est pas sa faute.</small></div></div>
+    <div class="item a" data-d="5.5" data-fx="left"><i class="ph-bold ph-hand-palm"></i><div>Ne confisquez pas l'écran.<small>Sinon, la prochaine fois, il ne dira plus rien.</small></div></div>
+    <div class="item a" data-d="9.5" data-fx="left"><i class="ph-bold ph-camera"></i><div>Gardez les preuves.<small>Captures d'écran des messages, des pseudos, des dates.</small></div></div>
+    <div class="item a" data-d="13.5" data-fx="left"><i class="ph-bold ph-chat-circle-slash"></i><div>Ne répondez pas au harceleur.<small>Bloquez le compte et signalez-le sur la plateforme.</small></div></div>
+    <div class="item a" data-d="17.5" data-fx="left"><i class="ph-bold ph-buildings"></i><div>Prévenez l'école rapidement.<small>Enseignant, directeur&nbsp;: on agit ensemble.</small></div></div>
+  </div>
+</section>
+
+<section class="scene dark" data-dur="17" data-chap="Partie 1 : Parents">
+  <h2 class="a" data-d="0.2">Au quotidien, <span class="acc">les bons réflexes</span></h2>
+  <div class="list two" style="margin-top:70px">
+    <div class="item a" data-d="1.5" data-fx="left"><i class="ph-bold ph-house-line"></i><div>Écrans dans les pièces communes<small>pas dans la chambre, surtout le soir</small></div></div>
+    <div class="item a" data-d="4.5" data-fx="left"><i class="ph-bold ph-shield-check"></i><div>Contrôle parental activé<small>adapté à son âge, expliqué à l'enfant</small></div></div>
+    <div class="item a" data-d="7.5" data-fx="left"><i class="ph-bold ph-chats-circle"></i><div>Parlez de sa vie en ligne<small>comme de sa journée d'école</small></div></div>
+    <div class="item a" data-d="10.5" data-fx="left"><i class="ph-bold ph-users-three"></i><div>Montrez l'exemple<small>ce que vous publiez, comment vous parlez</small></div></div>
+  </div>
+</section>
+
+<section class="scene dark alt" data-dur="13" data-chap="Partie 1 : Parents">
+  <div class="split">
+    <div>
+      <h2 class="a" data-d="0.2">Et s'il était <span class="acc">de l'autre côté&nbsp;?</span></h2>
+      <p class="lead a" data-d="1">Votre enfant peut aussi être celui qui envoie les messages, ou celui qui regarde et qui rit. Parlez-en avec lui aussi.</p>
+      <div class="law a" data-d="4">En France, le harcèlement scolaire est un <span class="acc">délit</span> depuis la loi du 2 mars 2022.</div>
+    </div>
+    <i class="ph-bold ph-scales icon-xl a" data-d="0.7" data-fx="pop"></i>
+  </div>
+</section>
+
+<section class="scene dark hotline" data-dur="10" data-chap="Partie 1 : Parents">
+  <div class="kicker a" data-d="0.1">Un doute, une question&nbsp;? Appelez le</div>
+  <div class="big a" data-d="0.4" data-fx="pop">3018</div>
+  <div class="row">
+    <span class="a" data-d="1.4"><i class="ph-bold ph-check-circle"></i>Gratuit</span>
+    <span class="a" data-d="1.8"><i class="ph-bold ph-check-circle"></i>Anonyme</span>
+    <span class="a" data-d="2.2"><i class="ph-bold ph-check-circle"></i>Confidentiel</span>
+    <span class="a" data-d="2.6"><i class="ph-bold ph-check-circle"></i>Appli et 3018.fr</span>
+  </div>
+  <p class="lead a" data-d="3.4">Le numéro national contre le cyberharcèlement, pour les parents comme pour les enfants.</p>
+</section>
+
+<!-- ===== PARTIE 2 : ELEVES ===== -->
+<section class="scene light chap" data-dur="5" data-chap="Partie 2 : Élèves">
+  <div class="num a" data-d="0.1" data-fx="pop" style="color:var(--accent-deep)">2</div>
+  <h1 class="a" data-d="0.5">Pour les élèves</h1>
+  <p class="a" data-d="1">À regarder ensemble, en classe ou à la maison.</p>
+</section>
+
+<section class="scene light alt" data-dur="9" data-chap="Partie 2 : Élèves">
+  <div class="split">
+    <div>
+      <h2 class="a huge" data-d="0.2">Sur un écran, les mots font <span class="acc">aussi mal.</span></h2>
+      <p class="lead a" data-d="1.4">Se moquer, insulter, exclure quelqu'un d'un groupe&nbsp;: même en ligne, ça blesse pour de vrai.</p>
+    </div>
+    <i class="ph-fill ph-heart-break icon-xl a" data-d="0.8" data-fx="pop"></i>
+  </div>
+</section>
+
+<section class="scene light" data-dur="14" data-chap="Partie 2 : Élèves">
+  <h2 class="a" data-d="0.2">Quelqu'un est méchant avec toi en ligne&nbsp;?</h2>
+  <div class="steps">
+    <div class="step a" data-d="1.6" data-fx="pop"><i class="ph-bold ph-chat-circle-slash"></i><div class="big">Je ne réponds pas.</div></div>
+    <div class="step a" data-d="4.6" data-fx="pop"><i class="ph-bold ph-camera"></i><div class="big">Je fais une capture d'écran.</div></div>
+    <div class="step a" data-d="7.6" data-fx="pop"><i class="ph-bold ph-hand-heart"></i><div class="big">J'en parle à un adulte de confiance.</div></div>
+  </div>
+</section>
+
+<section class="scene light alt" data-dur="13" data-chap="Partie 2 : Élèves">
+  <div class="split rev">
+    <i class="ph-bold ph-shield-star icon-xl a" data-d="0.6" data-fx="pop"></i>
+    <div>
+      <h2 class="a" data-d="0.2">Tu vois un copain se faire <span class="acc">embêter&nbsp;?</span></h2>
+      <div class="list">
+        <div class="item a" data-d="1.8" data-fx="left"><i class="ph-bold ph-thumbs-down"></i><div>Je ne like pas, je ne partage pas.</div></div>
+        <div class="item a" data-d="4.2" data-fx="left"><i class="ph-bold ph-handshake"></i><div>Je le soutiens et je préviens un adulte.</div></div>
+        <div class="item a" data-d="6.6" data-fx="left"><i class="ph-bold ph-smiley-sad"></i><div>Rire avec les autres, c'est aussi faire du mal.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scene light" data-dur="9" data-chap="Partie 2 : Élèves">
+  <div class="kicker a" data-d="0.1">Avant d'envoyer un message</div>
+  <h2 class="a huge" data-d="0.4" style="max-width:1500px">Est-ce que je le dirais <span class="acc">en face&nbsp;?</span></h2>
+  <p class="lead a" data-d="2">Si la réponse est non, je ne l'envoie pas.</p>
+</section>
+
+<section class="scene light alt" data-dur="9" data-chap="Partie 2 : Élèves">
+  <h2 class="a huge" data-d="0.2" style="max-width:1500px">Ce n'est <span class="acc">jamais</span> ta faute.</h2>
+  <p class="lead a" data-d="1.4" style="font-size:58px;color:var(--kid-text);font-weight:600">Parler, ce n'est pas rapporter. C'est se protéger.</p>
+</section>
+
+<!-- ===== OUTRO ===== -->
+<section class="scene dark alt hotline" data-dur="10" data-chap="Ensemble">
+  <h2 class="a" data-d="0.2" style="max-width:1500px">Parents, élèves, école&nbsp;: <span class="acc">on en parle ensemble.</span></h2>
+  <div class="row" style="margin-top:80px;align-items:center">
+    <span class="a" data-d="1.6" style="font-size:150px;font-family:'Baloo 2';font-weight:800;color:var(--accent)"><i class="ph-bold ph-phone-call" style="font-size:130px"></i>3018</span>
+    <span class="a" data-d="2.2" style="font-size:42px;max-width:620px;line-height:1.3">Gratuit, anonyme, confidentiel.<br>Pour les enfants et les parents.</span>
+  </div>
+</section>
+
+<div id="chrome"><div id="chapLabel"></div><div id="bar"><div id="fill"></div></div></div>
+
+<script>
+const scenes=[...document.querySelectorAll('.scene')];
+let acc=0;
+scenes.forEach(s=>{s._start=acc;s._dur=+s.dataset.dur;acc+=s._dur;});
+window.TOTAL=acc;
+const FADE=0.45;
+const clamp=x=>Math.max(0,Math.min(1,x));
+const easeOut=x=>1-Math.pow(1-x,4);
+const backOut=x=>{const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2);};
+const chrome=document.getElementById('chrome'),label=document.getElementById('chapLabel'),fill=document.getElementById('fill');
+window.render=function(t){
+  let cur=null;
+  scenes.forEach((s,i)=>{
+    const lt=t-s._start;
+    if(lt<0||lt>s._dur){s.style.opacity=0;s.style.visibility='hidden';return;}
+    cur=s;
+    const last=i===scenes.length-1;
+    const fi=i===0?1:clamp(lt/FADE);
+    const fo=last?clamp((s._dur-lt)/1.2):clamp((s._dur-lt)/FADE);
+    s.style.visibility='visible';
+    s.style.opacity=Math.min(fi,fo);
+    s.querySelectorAll('.a').forEach(el=>{
+      const d=+el.dataset.d||0, fx=el.dataset.fx||'up';
+      const raw=clamp((lt-d)/(fx==='pop'?0.6:0.75));
+      const p=easeOut(raw);
+      el.style.opacity=p;
+      let tr='';
+      if(fx==='pop'){const b=raw===0?0:backOut(raw);tr=`scale(${0.6+0.4*b})`;}
+      else if(fx==='left'){tr=`translateX(${(1-p)*-50}px)`;}
+      else tr=`translateY(${(1-p)*40}px)`;
+      el.style.transform=tr;
+    });
+    // gentle float on large icons once settled (keeps static frames alive)
+    s.querySelectorAll('.icon-xl').forEach(el=>{
+      const d=+el.dataset.d||0; if(lt>d+0.6){el.style.transform=`translateY(${Math.sin((lt-d)*1.4)*10}px)`;}
+    });
+  });
+  // notification counter in intro
+  const c=document.getElementById('count');
+  if(c){const lt=t; c.textContent=String(Math.max(1,Math.min(27,Math.floor(1+Math.max(0,lt-0.5)*3.2))));}
+  // chrome
+  const chap=cur&&cur.dataset.chap;
+  chrome.style.opacity=chap?1:0;
+  label.textContent=chap||'';
+  const light=cur&&cur.classList.contains('light');
+  label.style.color=light?'#4B4F7A':'#B9BEE8';
+  fill.style.background=light?'#C2410C':'#F97316';
+  fill.style.width=(t/window.TOTAL*100)+'%';
+};
+render(0);
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Vidéo : le cyberharcèlement (réunion parents et élèves, primaire)
 
-Fichier : `cyberharcelement-parents-eleves.mp4` (1920x1080, 25 i/s, environ 3 min 30, sans son).
+Fichier : `cyberharcelement-parents-eleves.mp4` (1920x1080, 25 i/s, 3 min 28, sans son).
 
 La vidéo est muette pour que l'intervenant puisse commenter en direct.
 Tous les textes restent à l'écran assez longtemps pour être lus.

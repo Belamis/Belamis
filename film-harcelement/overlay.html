@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Film harcèlement overlay</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,300;0,400;0,600;0,700&display=swap">
+<style>
+:root{--mist:#F3F5FF;--soft:#C9CDEA;--accent:#FB8A3C}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:transparent}
+body{font-family:'Outfit',sans-serif;color:var(--mist)}
+.c{position:absolute;opacity:0}
+/* intertitles */
+.title{left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-weight:300;font-size:64px;letter-spacing:.04em}
+.title b{font-weight:600}
+/* subtitles in the lower letterbox */
+.sub{left:0;right:0;bottom:44px;text-align:center;font-size:40px;font-weight:400;font-style:italic;color:#FFFFFF;text-shadow:0 2px 10px rgba(0,0,0,.9)}
+/* phone notifications */
+.notif{right:220px;width:620px;background:rgba(240,242,255,.94);color:#1E1B4B;border-radius:26px;padding:22px 30px;font-size:30px;line-height:1.3;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.notif small{display:block;font-size:20px;font-weight:600;color:#5B5F8A;margin-bottom:6px;letter-spacing:.04em;text-transform:uppercase}
+/* end card */
+.end1{left:0;right:0;top:330px;text-align:center;font-size:84px;font-weight:600;letter-spacing:.02em}
+.end2{left:0;right:0;top:520px;text-align:center;font-size:46px;font-weight:300}
+.end2 b{font-weight:700;color:var(--accent);font-size:120px;display:block;line-height:1;margin-top:18px;letter-spacing:.02em}
+.credit{left:0;right:0;bottom:170px;text-align:center;font-size:22px;color:var(--soft);opacity:.75}
+</style>
+</head>
+<body>
+<!-- intertitles -->
+<div class="c title" data-in="0.8" data-out="5.4">Chaque jour, dans une cour d'école.</div>
+<div class="c title" data-in="90.6" data-out="97.2" style="top:auto;bottom:190px;transform:none">Il ne vous le dira peut-être pas.</div>
+<div class="c title" data-in="98.4" data-out="105.4" style="top:auto;bottom:190px;transform:none"><b>Mais il vous le montre.</b></div>
+
+<!-- voices (subtitles) -->
+<div class="c sub" data-in="13.4" data-out="16.4">«&nbsp;Personne veut jouer avec toi&nbsp;!&nbsp;»</div>
+<div class="c sub" data-in="30" data-out="33.6">«&nbsp;Regardez-le... il va pleurer&nbsp;!&nbsp;»</div>
+<div class="c sub" data-in="45.8" data-out="49">«&nbsp;T'es trop nulle, dégage&nbsp;!&nbsp;»</div>
+<div class="c sub" data-in="50" data-out="54.4">«&nbsp;Arrêtez... arrêtez, s'il vous plaît...&nbsp;»</div>
+<div class="c sub" data-in="74" data-out="78.2">«&nbsp;Non maman... ça va. Tout va bien.&nbsp;»</div>
+<div class="c sub" data-in="83.5" data-out="88">«&nbsp;Aidez-moi... s'il vous plaît... aidez-moi.&nbsp;»</div>
+
+<!-- notifications -->
+<div class="c notif" data-in="56" data-out="70.6" style="top:190px"><small>Groupe CM2 B</small>On a tous vu ta photo</div>
+<div class="c notif" data-in="57.6" data-out="70.6" style="top:330px"><small>Groupe CM2 B</small>Personne veut de toi ici</div>
+<div class="c notif" data-in="59.7" data-out="70.6" style="top:470px"><small>Message</small>T'as qu'à pas venir demain</div>
+<div class="c notif" data-in="61.5" data-out="70.6" style="top:610px"><small>Groupe CM2 B</small>Tout le monde se moque de toi</div>
+
+<!-- end card -->
+<div class="c end1" data-in="107" data-out="121">Regardez. Écoutez. Agissez.</div>
+<div class="c end2" data-in="109" data-out="121">Harcèlement&nbsp;: un numéro gratuit, anonyme, confidentiel<b>3018</b></div>
+<div class="c credit" data-in="111" data-out="121">Images, sons et musiques&nbsp;: Mixkit. Voix d'enfants synthétiques. Les personnes filmées sont des acteurs.</div>
+
+<script>
+const els=[...document.querySelectorAll('.c')];
+window.TOTAL=120;
+const clamp=x=>Math.max(0,Math.min(1,x));
+window.render=function(t){
+  els.forEach(el=>{
+    const a=+el.dataset.in,b=+el.dataset.out;
+    const f=el.classList.contains('notif')?0.25:0.7;
+    let o=Math.min(clamp((t-a)/f),clamp((b-t)/0.6));
+    el.style.opacity=o;
+    if(el.classList.contains('notif')){const p=clamp((t-a)/0.35);el.style.transform=`translateY(${(1-p)*-24}px) scale(${0.96+0.04*p})`;}
+  });
+};
+render(0);
+</script>
+</body>
+</html>
